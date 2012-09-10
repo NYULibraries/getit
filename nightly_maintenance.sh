@@ -32,7 +32,7 @@ $rake_cmd --trace --verbose umlaut:nightly_maintenance RAILS_ENV=$umlaut_environ
 if [ $? -ne 0 ]; then
         date >> $log_file
         mail_file=$umlaut_directory/tmp/tmp.letter
-        echo "Below are the contents of the log from the failed nightly maintenance:" >> $mail_file
+        echo "Below are the contents of the log from the failed nightly maintenance:" > $mail_file
         echo "-------------------------------------------------------" >> $mail_file
         cat $log_file >> $mail_file
         /bin/mail -s "Umlaut nightly maintenance failed" web.services@library.nyu.edu < $mail_file

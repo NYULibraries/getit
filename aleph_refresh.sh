@@ -41,7 +41,7 @@ $rake_cmd --trace --verbose exlibris:aleph:refresh RAILS_ENV=$umlaut_environment
 if [ $? -ne 0 ]; then
         date >> $log_file
         mail_file=$umlaut_directory/tmp/tmp.letter
-        echo "Below are the contents of the log from the failed Aleph refresh:" >> $mail_file
+        echo "Below are the contents of the log from the failed Aleph refresh:" > $mail_file
         echo "-------------------------------------------------------" >> $mail_file
         cat $log_file >> $mail_file
         $mail_cmd -s "Umlaut Aleph refresh failed" web.services@library.nyu.edu < $mail_file
