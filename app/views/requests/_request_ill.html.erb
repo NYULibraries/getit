@@ -1,0 +1,11 @@
+<li>
+	<div class="section">
+		<%#= "OR\n" if (request_available? or request_recall? or request_in_processing? or request_offsite?)%>
+		<%= link_to("Request this item from another library via Interlibrary Loan (ILL)", 
+		  send_ill_requests_url(params[:id]),
+			:target => "_blank" ) %>.<br />
+		Most requests arrive within two weeks. Due dates and renewals are determined by the lending library.
+		Article/chapter requests are typically delivered electronically in 3-5 days.
+	</div>
+</li>
+	

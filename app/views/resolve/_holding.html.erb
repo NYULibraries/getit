@@ -1,0 +1,151 @@
+<% 
+=begin
+  sdalton's alternative partial for displaying holdings. Displays more
+  information to deal with the more information we need to display from
+  our Primo instance. Customized for NYU's needs, but should
+  be usable by anyone. 
+=end
+%>
+<style type="text/css">
+	.holding_heading_row {
+		border-top: 1px solid #E9E9E9; 
+		padding-right: 5px;
+		padding-top: 4px;
+		padding-bottom: 0px;
+	}
+	tr:first-child > td.holding_heading_row {
+		border-top: none;
+		padding-top: 0px;
+	}
+</style>
+<div class="section_content_indent"><%	
+	holdings = get_service_type('holding') # Get all holdings for display.
+	unless holdings.empty? %>
+		<p style="margin-bottom: 1em;"><%=
+			link_to("View Maps and Call Number Locations",
+				"http://library.nyu.edu/bobcat/callno/", 
+				:target=>"_blank") %></p>
+		<!-- holdings table -->
+		<table style="width: 100%;"><%
+			holdings.each do |holding_service|
+				view_data = holding_service.view_data
+				unless view_data[:expired] == true # Only display holdings that aren't expired.
+					# Set status class
+					status_class = (view_data[:status] == "Available" or 
+						view_data[:status] == "Check Availability" or 
+						view_data[:status] == "Offsite Available") ? 
+							'available' : '' %>
+					<!-- holding row: location information -->
+					<tr>
+						<!-- Collection string -->
+						<td class="holding_heading_row"><h4><%= 
+							view_data[:collection_str] %></h4></td>
+						<!-- Call number -->
+						<td class="holding_heading_row"><span style="white-space: nowrap;"><%= 
+							view_data[:call_number] %></span></td>
+						<!-- Availability information -->
+						<td class="holding_heading_row"><span class="<%= status_class %>"><%= 
+							view_data[:status] %></span></td>
+						<!-- More info and request link -->
+						<td class="holding_heading_row"><%= 
+							link_to(image_tag("more_info.gif", "border" => 0, "alt" => 'more info'), 
+								{ :controller=>"link_router", 
+									:id => holding_service.id }, 
+								{ :target => "_blank" }) %><%
+							# Request link
+							if RequestsHelper.link_to_request?(view_data, current_user_session)
+								link_to_request = "<br style=\"margin-bottom: 2px;\" />"
+					  			# Generate a hyperlink for standard service action with 
+					  			# class "ajax_window" for unobtrusive JS.
+								if current_user and view_data[:request_link_supports_ajax_call]
+					  				link_to_request << link_to(image_tag("request.gif", "border" => "0", "alt" => "request"), 
+										requests_url(holding_service.id), 
+					  					{ :id => "#{view_data[:source_data][:aleph_item_id]}", 
+					  						:target => "_blank", 
+					  						:class => "ajax_window" })
+								elsif current_user # Ordinary href link to request_url (without ajax_window class).
+									link_to_request << link_to(image_tag("request.gif", "border" => "0", "alt" => "request"), 
+										requests_url(holding_service.id), 
+										{ :id => "#{view_data[:source_data][:aleph_item_id]}", 
+											:target => "_blank" })
+								else #Send to login screen.
+									link_to_request << link_to(image_tag("request.gif", "border" => "0", "alt" => "request"), 
+										login_url({ :return_url => current_permalink_url, 
+											:request_id => view_data[:source_data][:aleph_item_id] }),
+										{ :id => "#{view_data[:source_data][:aleph_item_id]}" })
+								# End request link generation
+								end %><%=
+								link_to_request.html_safe %><%
+							# End request link decision
+							end %></td></tr><%
+					# Match reliability
+					if not view_data[:match_reliability].blank? and 
+						view_data[:match_reliability] != ServiceResponse::MatchExact %>
+						<!-- holding row: match reliability -->
+						<tr><td colspan="4">
+							<div class="section_content_indent match_reliability_warning">
+								<em>Please <%= 
+									link_to("check more info", 
+										{ :controller=>"link_router", 
+											:id=>holding_service.id }, 
+											:target => "_blank") %> 
+									to ensure that this is an appropriate copy.</em></div></td></tr><%
+					end # match reliability blank? or exact?
+					# Notes
+					unless view_data[:notes].blank? %>
+						<!-- holding row: notes -->
+						<tr><td colspan="4"><div class="section_content_indent"><%= 
+						view_data[:notes] %></div></td></tr><%
+					end # notes blank?
+					# Coverage
+					unless view_data[:coverage].blank? %>
+						<!-- holding row: coverage -->
+						<tr><td colspan="4"><ul><%
+						hidden_div_id = "copies_#{holding_service.id}"
+						# Adds "More" link for greater than 5 holdings.
+						# Actual method signature is:
+						# list_with_limit(id, list, options = {}, &block)
+						# with options taking a :limit parameter.  Default
+						# limit is 5.
+						list_with_limit(hidden_div_id, view_data[:coverage]) do |holding, index| %>
+							<li><%= holding %></li><%
+						end # more link block 
+						%></ul></td></tr><%
+					end # coverage blank?
+				end # expired == true ?
+			end # each holding block 
+			%></table><!-- holdings table --><%
+		# In order to make sure we always get the freshest
+		# holdings data we expire old holdings.
+		# Similar to RTA in Primo.
+		NyuResolveHelper.expire_old_holdings(@user_request, holdings)
+	else # holdings are not empty
+	# if holdings.empty?
+		# Holding search
+		holding_searches = get_service_type('holding_search')
+		holding_searches.each do | holding_search | %>
+			<p><%= link_to(
+				holding_search.view_data[:display_text], 
+				{ :controller => 'link_router', :id => holding_search.id }, 
+				{ :target => "_blank" }) %></p><% 
+		end # each holding search block
+	end
+	# Not available
+	if (holdings.blank? and 
+		holding_searches.blank? and 
+		not service_types_in_progress?(['holding', 'holding_search'])) %>
+		<p class="notAvailable">Not Available</p><%
+	end # not available check
+	# COINS
+	unless session[:coins].nil? %>
+		<p>&nbsp;</p><p><strong>Check for holdings:</strong></p>
+		<p><ul><%
+		session[:coins].each do | coins |
+			coins_label = (coins[:text].nil?) ? 
+				image_tag(coins[:icon], :border=>0) : coins[:text] 
+			coins_url = "#{coins[:host]}?#{@user_request.referent.to_context_object.kev}" %>
+			<li><%= link_to(coins_label, coins_url, :target=>"_blank") %></li><%
+		end # each coins block %></ul></p><%
+	end # coins nil? 
+	%>
+</div>

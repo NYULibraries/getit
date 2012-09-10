@@ -1,0 +1,2 @@
+module NyuSearchHelper
+end

@@ -1,0 +1,778 @@
+scot:
+  username: scot
+  email: scot.dalton@gmail.com
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("std5" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  user_attributes: <%= {
+    :nyuidn => "N12162279", 
+    :primary_institution => "NYU",
+    :institutions => ["NYU"],
+    :bor_status => "51",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+
+ba36:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("ba36" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: ba36
+  email: barnaby.alter@nyu.edu
+  firstname: Barnaby
+  lastname: Alter
+  user_attributes: <%= {
+    :nyuidn => "N18158418", 
+    :verification => "6EAF453D8B01E5AC27D9",
+    :primary_institution => "NYU",
+    :institutions => ["NYU"],
+    :bor_status => "51",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+
+st75:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("ba36" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: st75
+  email: sydney.thompson@nyu.edu
+  firstname: Sydney Leigh
+  lastname: Thompson
+  user_attributes: <%= {
+    :nyuidn => "N10450419", 
+    :primary_institution => "CU",
+    :institutions => ["CU"],
+    :verification => "A64C45148D130E78D8AA",
+    :bor_status => "50",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+
+DS03D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS03D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS03D
+  firstname: TEST-RECORD
+  lastname: DS03D
+  user_attributes: <%= {
+    :nyuidn => "DS03D",
+    :verification => "TEST",
+    :bor_status => "03",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS04D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS04D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS04D
+  firstname: TEST-RECORD
+  lastname: DS04D
+  user_attributes: <%= {
+    :nyuidn => "DS04D",
+    :verification => "TEST",
+    :bor_status => "04",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS05D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS05D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS05D
+  firstname: TEST-RECORD
+  lastname: DS05D
+  user_attributes: <%= {
+    :nyuidn => "DS05D",
+    :verification => "TEST",
+    :bor_status => "05",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS06D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS06D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS06D
+  firstname: TEST-RECORD
+  lastname: DS06D
+  user_attributes: <%= {
+    :nyuidn => "DS06D",
+    :verification => "TEST",
+    :bor_status => "06",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS07D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS07D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS07D
+  firstname: TEST-RECORD
+  lastname: DS07D
+  user_attributes: <%= {
+    :nyuidn => "DS07D",
+    :verification => "TEST",
+    :bor_status => "07",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS10D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS10D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS10D
+  firstname: TEST-RECORD
+  lastname: DS10D
+  user_attributes: <%= {
+    :nyuidn => "DS10D",
+    :verification => "TEST",
+    :bor_status => "10",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS11D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS11D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS11D
+  firstname: TEST-RECORD
+  lastname: DS11D
+  user_attributes: <%= {
+    :nyuidn => "DS11D",
+    :verification => "TEST",
+    :bor_status => "11",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS12D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS12D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS12D
+  firstname: TEST-RECORD
+  lastname: DS12D
+  user_attributes: <%= {
+    :nyuidn => "DS12D",
+    :verification => "TEST",
+    :bor_status => "12",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS15D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS15D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS15D
+  firstname: TEST-RECORD
+  lastname: DS15D
+  user_attributes: <%= {
+    :nyuidn => "DS15D",
+    :verification => "TEST",
+    :bor_status => "15",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS16D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS16D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS16D
+  firstname: TEST-RECORD
+  lastname: DS16D
+  user_attributes: <%= {
+    :nyuidn => "DS16D",
+    :verification => "TEST",
+    :bor_status => "16",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS17D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS17D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS17D
+  firstname: TEST-RECORD
+  lastname: DS17D
+  user_attributes: <%= {
+    :nyuidn => "DS17D",
+    :verification => "TEST",
+    :bor_status => "17",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS18D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS18D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS18D
+  firstname: TEST-RECORD
+  lastname: DS18D
+  user_attributes: <%= {
+    :nyuidn => "DS18D",
+    :verification => "TEST",
+    :bor_status => "18",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS20D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS20D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS20D
+  firstname: TEST-RECORD
+  lastname: DS20D
+  user_attributes: <%= {
+    :nyuidn => "DS20D",
+    :verification => "TEST",
+    :bor_status => "20",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS30D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS30D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS30D
+  firstname: TEST-RECORD
+  lastname: DS30D
+  user_attributes: <%= {
+    :nyuidn => "DS30D",
+    :verification => "TEST",
+    :bor_status => "30",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS31D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS31D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS31D
+  firstname: TEST-RECORD
+  lastname: DS31D
+  user_attributes: <%= {
+    :nyuidn => "DS31D",
+    :verification => "TEST",
+    :bor_status => "31",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS32D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS32D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS32D
+  firstname: TEST-RECORD
+  lastname: DS32D
+  user_attributes: <%= {
+    :nyuidn => "DS32D",
+    :verification => "TEST",
+    :bor_status => "32",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS33D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS33D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS33D
+  firstname: TEST-RECORD
+  lastname: DS33D
+  user_attributes: <%= {
+    :nyuidn => "DS33D",
+    :verification => "TEST",
+    :bor_status => "33",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS34D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS34D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS34D
+  firstname: TEST-RECORD
+  lastname: DS34D
+  user_attributes: <%= {
+    :nyuidn => "DS34D",
+    :verification => "TEST",
+    :bor_status => "34",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS35D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS35D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS35D
+  firstname: TEST-RECORD
+  lastname: DS35D
+  user_attributes: <%= {
+    :nyuidn => "DS35D",
+    :verification => "TEST",
+    :bor_status => "35",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS36D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS36D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS36D
+  firstname: TEST-RECORD
+  lastname: DS36D
+  user_attributes: <%= {
+    :nyuidn => "DS36D",
+    :verification => "TEST",
+    :bor_status => "36",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS37D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS37D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS37D
+  firstname: TEST-RECORD
+  lastname: DS37D
+  user_attributes: <%= {
+    :nyuidn => "DS37D",
+    :verification => "TEST",
+    :bor_status => "37",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS38D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS38D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS38D
+  firstname: TEST-RECORD
+  lastname: DS38D
+  user_attributes: <%= {
+    :nyuidn => "DS38D",
+    :verification => "TEST",
+    :bor_status => "38",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS40D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS40D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS40D
+  firstname: TEST-RECORD
+  lastname: DS40D
+  user_attributes: <%= {
+    :nyuidn => "DS40D",
+    :verification => "TEST",
+    :bor_status => "40",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS41D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS41D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS41D
+  firstname: TEST-RECORD
+  lastname: DS41D
+  user_attributes: <%= {
+    :nyuidn => "DS41D",
+    :verification => "TEST",
+    :bor_status => "41",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS42D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS42D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS42D
+  firstname: TEST-RECORD
+  lastname: DS42D
+  user_attributes: <%= {
+    :nyuidn => "DS42D",
+    :verification => "TEST",
+    :bor_status => "42",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS43D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS43D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS43D
+  firstname: TEST-RECORD
+  lastname: DS43D
+  user_attributes: <%= {
+    :nyuidn => "DS43D",
+    :verification => "TEST",
+    :bor_status => "43",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS50D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS50D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS50D
+  firstname: TEST-RECORD
+  lastname: DS50D
+  user_attributes: <%= {
+    :nyuidn => "DS50D",
+    :verification => "TEST",
+    :bor_status => "50",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS51D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS51D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS51D
+  firstname: TEST-RECORD
+  lastname: DS51D
+  user_attributes: <%= {
+    :nyuidn => "DS51D",
+    :verification => "TEST",
+    :bor_status => "51",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS52D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS52D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS52D
+  firstname: TEST-RECORD
+  lastname: DS52D
+  user_attributes: <%= {
+    :nyuidn => "DS52D",
+    :verification => "TEST",
+    :bor_status => "52",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS53D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS53D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS53D
+  firstname: TEST-RECORD
+  lastname: DS53D
+  user_attributes: <%= {
+    :nyuidn => "DS53D",
+    :verification => "TEST",
+    :bor_status => "53",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS54D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS54D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS54D
+  firstname: TEST-RECORD
+  lastname: DS54D
+  user_attributes: <%= {
+    :nyuidn => "DS54D",
+    :verification => "TEST",
+    :bor_status => "54",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS55D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS55D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS55D
+  firstname: TEST-RECORD
+  lastname: DS55D
+  user_attributes: <%= {
+    :nyuidn => "DS55D",
+    :verification => "TEST",
+    :bor_status => "55",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS56D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS56D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS56D
+  firstname: TEST-RECORD
+  lastname: DS56D
+  user_attributes: <%= {
+    :nyuidn => "DS56D",
+    :verification => "TEST",
+    :bor_status => "56",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS57D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS57D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS57D
+  firstname: TEST-RECORD
+  lastname: DS57D
+  user_attributes: <%= {
+    :nyuidn => "DS57D",
+    :verification => "TEST",
+    :bor_status => "57",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS58D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS58D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS58D
+  firstname: TEST-RECORD
+  lastname: DS58D
+  user_attributes: <%= {
+    :nyuidn => "DS58D",
+    :verification => "TEST",
+    :bor_status => "58",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS59D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS59D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS59D
+  firstname: TEST-RECORD
+  lastname: DS59D
+  user_attributes: <%= {
+    :nyuidn => "DS59D",
+    :verification => "TEST",
+    :bor_status => "59",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS60D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS60D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS60D
+  firstname: TEST-RECORD
+  lastname: DS60D
+  user_attributes: <%= {
+    :nyuidn => "DS60D",
+    :verification => "TEST",
+    :bor_status => "60",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS61D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS61D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS61D
+  firstname: TEST-RECORD
+  lastname: DS61D
+  user_attributes: <%= {
+    :nyuidn => "DS61D",
+    :verification => "TEST",
+    :bor_status => "61",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS62D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS62D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS62D
+  firstname: TEST-RECORD
+  lastname: DS62D
+  user_attributes: <%= {
+    :nyuidn => "DS62D",
+    :verification => "TEST",
+    :bor_status => "62",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS63D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS63D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS63D
+  firstname: TEST-RECORD
+  lastname: DS63D
+  user_attributes: <%= {
+    :nyuidn => "DS63D",
+    :verification => "TEST",
+    :bor_status => "63",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS64D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS64D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS64D
+  firstname: TEST-RECORD
+  lastname: DS64D
+  user_attributes: <%= {
+    :nyuidn => "DS64D",
+    :verification => "TEST",
+    :bor_status => "64",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS65D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS65D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS65D
+  firstname: TEST-RECORD
+  lastname: DS65D
+  user_attributes: <%= {
+    :nyuidn => "DS65D",
+    :verification => "TEST",
+    :bor_status => "65",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS66D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS66D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS66D
+  firstname: TEST-RECORD
+  lastname: DS66D
+  user_attributes: <%= {
+    :nyuidn => "DS66D",
+    :verification => "TEST",
+    :bor_status => "66",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS67D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS67D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS67D
+  firstname: TEST-RECORD
+  lastname: DS67D
+  user_attributes: <%= {
+    :nyuidn => "DS67D",
+    :verification => "TEST",
+    :bor_status => "67",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS68D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS68D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS68D
+  firstname: TEST-RECORD
+  lastname: DS68D
+  user_attributes: <%= {
+    :nyuidn => "DS68D",
+    :verification => "TEST",
+    :bor_status => "68",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS69D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS69D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS69D
+  firstname: TEST-RECORD
+  lastname: DS69D
+  user_attributes: <%= {
+    :nyuidn => "DS69D",
+    :verification => "TEST",
+    :bor_status => "69",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS70D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS70D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS70D
+  firstname: TEST-RECORD
+  lastname: DS70D
+  user_attributes: <%= {
+    :nyuidn => "DS70D",
+    :verification => "TEST",
+    :bor_status => "70",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS72D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS72D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS72D
+  firstname: TEST-RECORD
+  lastname: DS72D
+  user_attributes: <%= {
+    :nyuidn => "DS72D",
+    :verification => "TEST",
+    :bor_status => "72",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS74D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS74D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS74D
+  firstname: TEST-RECORD
+  lastname: DS74D
+  user_attributes: <%= {
+    :nyuidn => "DS74D",
+    :verification => "TEST",
+    :bor_status => "74",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS76D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS76D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS76D
+  firstname: TEST-RECORD
+  lastname: DS76D
+  user_attributes: <%= {
+    :nyuidn => "DS76D",
+    :verification => "TEST",
+    :bor_status => "76",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS77D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS77D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS77D
+  firstname: TEST-RECORD
+  lastname: DS77D
+  user_attributes: <%= {
+    :nyuidn => "DS77D",
+    :verification => "TEST",
+    :bor_status => "77",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS80D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS80D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS80D
+  firstname: TEST-RECORD
+  lastname: DS80D
+  user_attributes: <%= {
+    :nyuidn => "DS80D",
+    :verification => "TEST",
+    :bor_status => "80",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS81D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS81D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS81D
+  firstname: TEST-RECORD
+  lastname: DS81D
+  user_attributes: <%= {
+    :nyuidn => "DS81D",
+    :verification => "TEST",
+    :bor_status => "81",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS82D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS82D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS82D
+  firstname: TEST-RECORD
+  lastname: DS82D
+  user_attributes: <%= {
+    :nyuidn => "DS82D",
+    :verification => "TEST",
+    :bor_status => "82",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS84D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS84D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS84D
+  firstname: TEST-RECORD
+  lastname: DS84D
+  user_attributes: <%= {
+    :nyuidn => "DS84D",
+    :verification => "TEST",
+    :bor_status => "84",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS85D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS85D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS85D
+  firstname: TEST-RECORD
+  lastname: DS85D
+  user_attributes: <%= {
+    :nyuidn => "DS85D",
+    :verification => "TEST",
+    :bor_status => "85",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS86D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS86D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS86D
+  firstname: TEST-RECORD
+  lastname: DS86D
+  user_attributes: <%= {
+    :nyuidn => "DS86D",
+    :verification => "TEST",
+    :bor_status => "86",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS90D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS90D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS90D
+  firstname: TEST-RECORD
+  lastname: DS90D
+  user_attributes: <%= {
+    :nyuidn => "DS90D",
+    :verification => "TEST",
+    :bor_status => "90",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS95D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS95D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS95D
+  firstname: TEST-RECORD
+  lastname: DS95D
+  user_attributes: <%= {
+    :nyuidn => "DS95D",
+    :verification => "TEST",
+    :bor_status => "95",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS96D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS96D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS96D
+  firstname: TEST-RECORD
+  lastname: DS96D
+  user_attributes: <%= {
+    :nyuidn => "DS96D",
+    :verification => "TEST",
+    :bor_status => "96",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS97D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS97D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS97D
+  firstname: TEST-RECORD
+  lastname: DS97D
+  user_attributes: <%= {
+    :nyuidn => "DS97D",
+    :verification => "TEST",
+    :bor_status => "97",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+  

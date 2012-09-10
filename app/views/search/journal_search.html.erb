@@ -1,0 +1,76 @@
+<div id="search_container" class="search_container">
+	<%= render :partial=> current_primary_institution.views["tabs_partial"] unless 
+		(current_primary_institution.nil? or current_primary_institution.views.nil? or 
+			current_primary_institution.views.nil? or 
+				current_primary_institution.views["tabs_partial"].nil?) %>
+	<%= form_tag({:controller=>'search', :action=>'journal_search'}, {:method=>'get', :name=>'OpenURL', :id=>'OpenURL'})  %>
+		<div id="search_basic" class="search">                                      
+			<fieldset>
+				<input type="hidden" name="umlaut.institution" value="<%= (current_primary_institution.nil?) ? "NYU" : current_primary_institution.name %>" /> 
+				<input type="hidden" name="umlaut.institution" value="NYU" /> 
+				<input type="hidden" name="rfr_id" value="info:sid/sfxit.com:citation" /> 
+				<!-- <input type=hidden name="rfr_id" value="info:sid/umlaut.code4lib.org:citation"> -->
+				<input type="hidden" id="rft_title" name="rft.title" />
+				<input type="hidden" id="rft_object_id" name="rft.object_id" />
+				<input type="hidden" id="date" name="rft.date" />
+				<label>Journal Title</label>
+				<%= text_field :journal, :title, {:name=>'rft.jtitle', :autocomplete=>'off', :size=>'40', :value=>params['rft.jtitle'], :class=>"title_search"} %>
+				<select name="umlaut.title_search_type" class="sfx_title_search">
+					<option value="contains" <%= "SELECTED" if params["umlaut.title_search_type"] == "contains" %>>contains</option>
+					<option value="begins" <%= "SELECTED" if params["umlaut.title_search_type"] == "begins" %> >begins with</option>
+					<option value="exact">exact match</option>
+				</select>
+				<input type="hidden" name="rft.issn" />
+				<input type="submit" name="Generate_OpenURL2" value="Search" />
+			</fieldset>
+			<%= link_to('More search options', :controller=>'search') %>
+		</div>
+	</form>
+	<%
+	if params["action"] == "journal_list" %> 
+		<div id="browse" class="search">
+			<h2>Browse Journal Titles</h2>
+			<%= render :partial=>"a_to_z" %>
+		</div>
+	<%
+	end %>
+</div>
+<div id="results">
+	<div id="results_headers" class="results_header">
+		<%
+		unless @hits == 0
+			if (params["action"] == "journal_list")
+				@page_title = "journal titles: <strong>#{params['id']}</strong>"
+			else
+				@page_title = 'journal titles '
+				@page_title += (params["umlaut.title_search_type"] == "begins") ? 'beginning with ' : 'containing '
+				@page_title += "<strong>'" + params['rft.jtitle'] + "'</strong>"
+			end
+			%>
+			<div id="count">
+				Results <span class="range"><%= @start_result_num %>-<%= @end_result_num %></span> of <span class="total"><%= @hits %></span> for <%= @page_title.html_safe %>
+			</div>
+		<%
+		end
+		if params["rft.jtitle"] %>
+			<div class="note"><em><strong>Note:</strong> Alternate titles might have matched your search terms</em></div>
+		<% 
+		end %>
+		<div class='pagination'>
+			<%= render :partial=>'pager' %>
+		</div>
+	</div> 
+	<ul id="resultsList">
+		<%
+		@display_results.each_index do | co_index | 
+			@current_index = ((@page-1)*20) + co_index + 1
+			@current_context_object = @display_results[co_index]
+			partial_name = @citation_partial || 'citation' %>
+			<%= render :partial=>partial_name %>
+		<%
+		end %>
+	</ul>
+	<div class='pagination'>
+		<%= render :partial=>'pager' %>
+	</div>
+</div>

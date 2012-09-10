@@ -1,0 +1,30 @@
+<div id="tabs" class="tabs">
+	<ul>
+		<li id="all">
+			<a href="http://bobcatdev.library.nyu.edu/cooper" 
+				title="Books & e-books, journals & e-journals, scripts, scores, archival materials, videos, sound recordings, and other materials in the Consortium libraries"
+				class="tip-delayed">
+				Consortium Catalog
+			</a>
+		</li>
+		<li id="cu">
+			<a href="http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cu" 
+				title="Books & e-books, journals & e-journals, videos, and other materials in the Cooper Union Library"
+				class="tip-delayed">
+				Cooper Library Catalog
+			</a>
+		</li>
+		<li id="journals" class="selected">
+			<%= link_to('E-Journals', {:controller=>'search', "umlaut.institution" => "CU"}, {
+					:title => "Browse e-journals by title or search for a specific article",
+					:class => "tip-delayed"}) %>
+		</li>
+		<li id="reserves" class="">
+			<a href="http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cucr" 
+				title="Search course reserves by instructor, course name or number, author, title, and other terms"
+				class="tip-delayed">
+				Course Reserves
+			</a>
+		</li>
+	</ul>
+</div>

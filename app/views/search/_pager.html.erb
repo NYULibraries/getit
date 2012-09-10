@@ -1,0 +1,17 @@
+<%
+# much of this paging code adopted from will_paginate plugin for view
+total_pages = (@hits / @batch_size)
+total_pages += 1 unless (@hits % @batch_size == 0)
+pagination_html = "<div>"
+# Arguments for paging actions, just add 'page'
+args= params.clone
+# Need to take out that annoying legacy journal key, sorry.
+args.delete('journal')
+pagination_html += (@page > 1) ? link_to('Previous', args.merge({'page' => @page -1 }), {:class => "previous"}):'<span class="previous">Previous</span>'
+pagination_html += "\n"
+pagination_html += '<span class="separator">|</span>'
+pagination_html += "\n"
+pagination_html += (@page < total_pages) ? link_to('Next', args.merge({'page' => @page +1 }), {:class => "next"}):'<span class="next">Next</span>'
+pagination_html += "</div>" %>
+<%= pagination_html.html_safe %>
+

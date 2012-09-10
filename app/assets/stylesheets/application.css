@@ -1,0 +1,29 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self 
+ *         
+ * The base Umlaut styles:
+ *= require 'umlaut'
+ *
+ *= require_tree .
+*/
+
+          
+  /*  Umlaut needs a jquery-ui theme CSS. Here's an easy way to get one,
+   *  you can replace with another theme. 
+   *   
+   *  Note, CSS @import needs to be the first line in a CSS file. This will
+   *  become so if 'require_self' is included above, as the FIRST sprockets
+   *  require, and this @import line is the first non-comment line in this
+   *  file.      
+   */
+   @import url(//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css);
+          

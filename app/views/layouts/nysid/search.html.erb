@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>BobCat</title>
+		<!--title>GetIt |
+			<% 
+			#if @action_name != "journals" and @action_name != "index" %> 
+				<% #= (@page_title != "Journals") ? @page_title : " E-Journals" %> 
+			<%
+			#end
+			%>
+		</title-->
+		<link href="https://library.nyu.edu/css/common/bobcat.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="https://library.nyu.edu/css/common/bobcat/nysid/bobcat.css" media="screen" rel="stylesheet" type="text/css" />
+		<%= render_javascript_behaviors(:search_complete) %>
+		<script src="https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.libraryhelp.js" type="text/javascript"></script>
+		<script src="https://library.nyu.edu/scripts/jquery/plugins/jquery.poshytip.min.js" type="text/javascript"></script>
+		<script src="https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.popuptip.js" type="text/javascript"></script>
+		<!-- open search auto-discovery -->
+		<link rel="search" type="application/opensearchdescription+xml" title="<%= AppConfig.param('opensearch_short_name', 'Find Journals') %>" href="<%= url_for(:controller=>'open_search', :only_path=>false) %>" ></link>
+		<script type="text/javascript">
+			//After the DOM is ready, process the various elements
+			jQuery(document).ready(function() {
+				//Feedback links
+				//Handle default text in search boxes
+				jQuery(".defaultText").live("focus", function(event) {
+					if (jQuery(this).val() == jQuery(this).attr("title")) {
+						jQuery(this).removeClass("defaultTextActive");
+						jQuery(this).val("");
+					}
+				});
+				jQuery(".defaultText").live("blur", function(event) {
+					if (jQuery(this).val() == "") {
+						jQuery(this).addClass("defaultTextActive");
+						jQuery(this).val(jQuery(this).attr("title"));
+					}
+				});
+				//Handle search for default text
+				jQuery("form").live("submit", function(event){ if (jQuery(this).find(".defaultText").length == 1 && jQuery(this).find(".defaultText").val() == jQuery(this).find(".defaultText").attr("title")) event.preventDefault();});
+				//Initialize default text
+				jQuery(".defaultText").blur();
+				jQuery(".toggle_options").live("click", function(event) {event.preventDefault(); jQuery(".toggle_options").toggle(); jQuery("#search_advanced").toggle();});
+				jQuery("#core_submit").append(jQuery('<a style="display: none;" class="toggle_options less_options" href="#">Fewer search options</a>'));
+				jQuery("#core_submit").append(jQuery('<a style="display: none;" class="toggle_options more_options" href="#">More search options</a>'));
+				jQuery(".less_options").show();
+				jQuery(".nyulibrary_help").nyulibrary_popup_tip("init");
+				jQuery(".tip-delayed").nyulibrary_popup_tip("init");
+				jQuery(".tip").nyulibrary_popup_tip("init", {'floatIt': true });
+			});
+		</script>
+		<style type="text/css">
+			.toggle_options {
+				display: block;
+				margin-top: .5em;
+			}
+			
+			.outlineBox {
+				border:1px solid #653d24;
+			}
+
+			.search div.data {
+				margin-bottom: 1em;
+				clear: both;
+			}
+
+			.search div.data .left {
+				width: 18em;
+				display: block;
+				float: left;
+				text-align: right;
+				margin-right: 1em;
+				line-height: 26px;
+			}
+
+			.search div.data .center {
+				width: 26em;
+			}
+
+			.search div.data .right {
+				width: 10em;
+			}
+
+			.azNav {
+				text-align: left;
+				font-size: 16px;
+			}
+
+			.azNav a {
+				color: #0000ee;
+				font-size: 1em !important;
+				line-height: 1.7em;
+			}
+
+			.azNav a:hover {
+				text-decoration: none;
+			}
+
+			.nyulibrary_icons_information:hover {
+				text-decoration: none;
+			}
+
+			.nyulibrary_icons_information span {
+				display: none;
+			}
+
+			#search_advanced,
+			#browse {
+				border-top: #ccc 2px solid;
+			}
+
+			.keepTogether {
+				white-space:nowrap;
+			}
+
+			#browse .azNav {
+				margin: 0 0 30px 0  !important;
+				padding: 10px 0px 0px 0px !important;
+				border: 0;
+			}
+
+			#browse .azNav {
+				text-align: left;
+				font-size: 14px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			#browse .azNav a {
+				font-weight: bold;
+				padding:.15em .3em .15em .3em;
+				border: 1px solid #bbb;
+				text-decoration: none;
+				color : #0000ee;
+				background-color: #fff;
+				line-height: 1.7em;
+			}
+
+			#browse .azNav a:hover {
+				background-color: #eee;
+			}
+
+			.delivery a {
+				color: green;
+				text-decoration: underline;
+			}
+
+			.delivery a {
+				color: green;
+				text-decoration: underline;
+			}
+
+			#count {
+				float: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="header"><span>GetIt @ NYSID Library</span> <div id="bobcat_logo"><span>BobCat</span></div></div>
+			<div id="nav1">
+				<ul class="floatLeft">
+					<%
+					unless params["controller"] == "export_email"
+						breadcrumbs = "<li>"+ link_to('New York School of Interior Design Library', 'http://nysidlibrary.org')+ " &gt;</li>"
+						breadcrumbs += "<li> "+ link_to('BobCat', 'http://bobcat.library.nyu.edu/nysid')+ "</li>"
+					end
+					%>
+					<%= breadcrumbs %>
+				</ul>
+				<ul class="floatRight">
+					<li>
+						<% 
+						if current_user %> 
+							<%= link_to "Log-out " + current_user.firstname, logout_url, :class=>"nyulibrary_icons_logout" %> 
+						<%
+						else %> 
+							<%= link_to "Login", login_url({"umlaut.institution" => current_primary_institution.name}), :class=>"nyulibrary_icons_login" %> 
+						<%
+						end %>
+					</li>
+				</ul>
+			</div>
+			<div id="maincontent">
+				<div id="sidebar" class="sidebar">
+					<div id="account" class="box">
+						<h2><a href="http://library.nyu.edu/info/myworkspace.html" class="nyulibrary_icons_help nyulibrary_help" style="text-decoration:none;">&nbsp;</a>My Workspace</h2>
+						<ul>
+							<% if current_user %>
+								<li><a href="http://nysidlibrary.org/logging-into-bobcat/" target="_blank">How to renew your books</a></li>
+								<li><a href="https://webdev1.library.nyu.edu/eshelf?institution=NS">My e-shelf</a></li>
+								<li><a href="https://webdev1.library.nyu.edu/eshelf/account?institution=NS">My library account</a></li>
+								<li><%= link_to "Log-out " + current_user.firstname, logout_url, :class=>"logout" %></li>
+							<% else %>
+					    	<li>
+									<a class="login" href="https://webdev1.library.nyu.edu/eshelf/login?institution=NYSID">Log in to My Account</a><br />
+									(NYSID patrons' user name includes a "d" before the ID number, ex. D12345)
+								</li>
+								<li><a href="http://nysidlibrary.org/logging-into-bobcat/" target="_blank">How to renew your books</a></li>
+								<li><a href="https://webdev1.library.nyu.edu/eshelf?institution=NS">Guest e-shelf (log in for more options)</a></li>
+							<% end %>
+						</ul>
+					</div>
+					<div id="additional_options" class="box">
+						<h2>Additional Options</h2>
+						<ul>
+							<li><a href="http://nysidlibrary.org" target="_blank">NYSID Library Website</a></li>
+							<li><a href="http://nysidlibrary.org/articles/" target="_blank">Find Articles &amp; Databases</a></li>
+							<li><a href="http://nysidlibrary.org/images/" target="_blank">Find Images</a></li>
+							<li><a href="http://aleph.library.nyu.edu" target="_blank">BobCat Standard</a></li>
+						</ul>
+					</div>
+					<div id="help" class="box">
+						<h2>Need help?</h2>
+						<ul>
+							<li><a href="http://nysidlibrary.org/contact-us/" target="_blank">Contact NYSID Library</a></li>
+							<li><a href="http://nysidlibrary.org/research-subjects/" target="_blank">NYSID Subject &amp; Resource Guides</a></li>
+							<li><object width="190" height="275" ><param name="movie" value="http://widget.meebo.com/mm.swf?RFaKRvfKoL"/><embed src="http://widget.meebo.com/mm.swf?RFaKRvfKoL" type="application/x-shockwave-flash" width="190" height="275"></embed></object></li>
+						</ul>					
+					</div>
+				</div>
+				<div id="container">
+					<h2>Searching is not available for NYSID.</h2>
+					<h2>Alternatively, you can search <%= link_to('NYU E-Journals A-Z', :controller=>'search', "umlaut.institution"=>"NYU") %>.</h2>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
