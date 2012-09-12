@@ -1,31 +1,38 @@
+﻿---
 "03":
   available: false
   recall: false
   ill: true
   in_processing: false
 
+
 "04":
   available: false
   recall: false
   ill: true
+  in_processing: false
+
 
 "05":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "06":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "07":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "10":
   available: false
@@ -33,11 +40,13 @@
   ill: true
   in_processing: true
 
+
 "11":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "12":
   available: false
@@ -45,11 +54,13 @@
   ill: true
   in_processing: true
 
+
 "15":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "16":
   available: false
@@ -57,23 +68,13 @@
   ill: true
   in_processing: true
 
+
 "17":
   available: false
   recall: true
   ill: true
   in_processing: true
 
-"18":
- available: false
- recall: true
- ill: true
- in_processing: true
-
-"20":
-  available: false
-  recall: true
-  ill: true
-  in_processing: true
 
 "30":
   available: false
@@ -81,11 +82,13 @@
   ill: true
   in_processing: true
 
+
 "31":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "32":
   available: false
@@ -93,11 +96,13 @@
   ill: true
   in_processing: true
 
+
 "33":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "34":
   available: false
@@ -105,11 +110,13 @@
   ill: true
   in_processing: true
 
+
 "35":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "36":
   available: false
@@ -117,11 +124,13 @@
   ill: true
   in_processing: false
 
+
 "37":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "38":
   available: false
@@ -129,11 +138,13 @@
   ill: true
   in_processing: false
 
+
 "40":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "41":
   available: false
@@ -141,11 +152,13 @@
   ill: true
   in_processing: false
 
+
 "42":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "43":
   available: false
@@ -153,11 +166,13 @@
   ill: true
   in_processing: false
 
+
 "50":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "51":
   available: false
@@ -165,11 +180,13 @@
   ill: true
   in_processing: false
 
+
 "52":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "53":
   available: false
@@ -177,11 +194,13 @@
   ill: true
   in_processing: false
 
+
 "54":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "55":
   available: false
@@ -189,11 +208,13 @@
   ill: true
   in_processing: true
 
+
 "56":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "57":
   available: false
@@ -201,11 +222,13 @@
   ill: true
   in_processing: true
 
+
 "58":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "59":
   available: false
@@ -213,11 +236,13 @@
   ill: true
   in_processing: false
 
+
 "60":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "61":
   available: false
@@ -225,11 +250,13 @@
   ill: true
   in_processing: true
 
+
 "62":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "63":
   available: false
@@ -237,11 +264,13 @@
   ill: true
   in_processing: false
 
+
 "64":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "65":
   available: false
@@ -249,11 +278,13 @@
   ill: true
   in_processing: false
 
+
 "66":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "67":
   available: false
@@ -261,11 +292,13 @@
   ill: true
   in_processing: false
 
+
 "68":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "69":
   available: false
@@ -273,11 +306,13 @@
   ill: true
   in_processing: false
 
+
 "70":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "72":
   available: false
@@ -285,11 +320,13 @@
   ill: true
   in_processing: true
 
+
 "74":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "76":
   available: false
@@ -297,11 +334,13 @@
   ill: true
   in_processing: false
 
+
 "77":
   available: false
   recall: true
   ill: true
   in_processing: true
+
 
 "80":
   available: false
@@ -309,11 +348,13 @@
   ill: true
   in_processing: false
 
+
 "81":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "82":
   available: false
@@ -321,11 +362,13 @@
   ill: true
   in_processing: false
 
+
 "84":
   available: false
   recall: false
   ill: true
   in_processing: false
+
 
 "85":
   available: false
@@ -333,32 +376,44 @@
   ill: true
   in_processing: false
 
+
 "86":
   available: false
   recall: false
   ill: true
   in_processing: false
 
+
+"89":
+  available: false
+  recall: true
+  ill: true
+  in_processing: true
+
+
 "90":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "95":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "96":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
+
 
 "97":
   available: false
   recall: false
-  ill: true
+  ill: false
   in_processing: false
