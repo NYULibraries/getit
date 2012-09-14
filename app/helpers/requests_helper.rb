@@ -4,7 +4,7 @@ module RequestsHelper
   RequestableDeferred = 'deferred'
   RequestableNo = 'no'
   RequestableUnknown = 'unknown'
-  
+  # Define various configuration options
   @@request_types = ["available", "ill", "in_processing", "offsite", "on_order", "recall"]
   @@requestable_available_states = { :status => ["Available"] }
   @@requestable_offsite_states = { :status => ["Offsite Available"] }
@@ -14,7 +14,10 @@ module RequestsHelper
   @@requestable_ill_states = {
     :status => ["Request ILL", "Requested", "On Order", "In Processing", "In Transit"],
     :status_code => ["checked_out", "billed_as_lost"] }
-  
+
+  # Creates instance methods for the defined request types based on the class 
+  # methods of the same name, with the current @view_data instance variable
+  # and current_user_session as the arguments.
   def self.included(klass)
     @@request_types.each do |type|
       klass.send(:define_method, "request_#{type}?") {
@@ -23,65 +26,68 @@ module RequestsHelper
     end
   end
 
+  # Returns types that are requestable
   def self.request_types
     @@request_types
   end
   
-  def self.link_to_request?(view_data, current_user_session)
-    # Conditions for request link are:
-    # ILL OR 
-    #   :request url AND 1 of:
-    #     available, recall, in processing, on_order, offsite
-		return  (request_ill?(view_data, current_user_session) or 
-		        request_available?(view_data, current_user_session) or 
-          	request_recall?(view_data, current_user_session) or 
-          	request_in_processing?(view_data, current_user_session) or 
-          	request_on_order?(view_data, current_user_session) or 
-          	request_offsite?(view_data, current_user_session))
-	end # method link_to_request
+  # Returns a boolean indicating whether a request link should be displayed
+  # for the given view data and user session.
+  # Conditions for request link are:
+  # ILL OR available OR recall OR in processing OR on_order OR offsite
+  def self.link_to_request?(view_data, user_session)
+		return  (request_ill?(view_data, user_session) or 
+      request_available?(view_data, user_session) or 
+      request_recall?(view_data, user_session) or 
+      request_in_processing?(view_data, user_session) or 
+      request_on_order?(view_data, user_session) or 
+      request_offsite?(view_data, user_session))
+	end
 
-  def self.request_available?(view_data, current_user_session)
+  # Returns a boolean indicating whether the the given view data
+  # is available and requestable for the given user session
+  def self.request_available?(view_data, user_session)
     return requestable?(
       view_data, 
       @@requestable_available_states, 
-      current_user_session, 
+      user_session, 
       { :hold_on_shelf => "Y", :hold_permission => "Y" } )
   end
 
-  def self.request_recall?(view_data, current_user_session)
+  def self.request_recall?(view_data, user_session)
     return requestable?(
       view_data, 
       @@requestable_recall_states, 
-      current_user_session, 
+      user_session, 
       {:hold_permission => "Y"} )
   end
 
-  def self.request_in_processing?(view_data, current_user_session)
+  def self.request_in_processing?(view_data, user_session)
     return requestable?(
       view_data, 
       @@requestable_in_processing_states, 
-      current_user_session, 
+      user_session, 
       {:hold_permission => "Y"} )
   end
 
-  def self.request_offsite?(view_data, current_user_session)
+  def self.request_offsite?(view_data, user_session)
     return requestable?(
       view_data, 
       @@requestable_offsite_states, 
-      current_user_session, 
+      user_session, 
       {:hold_permission => "Y"} )
   end
 
-  def self.request_on_order?(view_data, current_user_session)
+  def self.request_on_order?(view_data, user_session)
     return requestable?(
       view_data, 
       @@requestable_on_order_states, 
-      current_user_session, 
+      user_session, 
       {:hold_permission => "Y"} )
   end
 
   # We don't care about user permissions when we're dealing with ILL.
-  def self.request_ill?(view_data, current_user_session)
+  def self.request_ill?(view_data, user_session)
     return item_state_requestable?(view_data, @@requestable_ill_states)
   end
   
@@ -91,13 +97,13 @@ module RequestsHelper
   # In order to determine which state we are in we need a combination of 
   #   1. item data and requestable states for that item data
   #   2. current user permissions and requestable states for those user permissions
-  def self.requestable?(item, item_requestable_states, current_user_session, user_permissions_requestable_states)
+  def self.requestable?(item, item_requestable_states, user_session, user_permissions_requestable_states)
     # Determine if the item is in a requestable state for the type of request we're making.
     return false unless item_state_requestable?(item, item_requestable_states)
     # If always requestable, we can return true if user session is nil
-    return true if (item_requestability(item).eql?(RequestableYes) and current_user_session.nil?)
+    return true if (item_requestability(item).eql?(RequestableYes) and user_session.nil?)
     # TODO: Abstract out deferral logic.
-    user_permissions_for_item = user_permissions_for_item(current_user_session, item)
+    user_permissions_for_item = user_permissions_for_item(user_session, item)
     return (item_requestable?(item) and 
       user_permissions_state_requestable?(user_permissions_for_item, user_permissions_requestable_states))
   end
@@ -135,9 +141,9 @@ module RequestsHelper
     aleph_item_requestability(item)
   end
   
-  def self.user_permissions_for_item(current_user_session, item)
+  def self.user_permissions_for_item(user_session, item)
     # TODO: Make this configurable per item type (e.g. Aleph, SomeOtherTrickedOutSystem)
-    aleph_user_permissions_for_item(current_user_session, item)
+    aleph_user_permissions_for_item(user_session, item)
   end
   
   # Aleph methods
@@ -175,10 +181,10 @@ module RequestsHelper
       :item_process_status_code => aleph_item[:aleph_item_process_status_code] ) 
   end
   
-  def self.aleph_user_permissions_for_item(current_user_session, item={})
+  def self.aleph_user_permissions_for_item(user_session, item={})
     aleph_item = item[:source_data]
-    return {} if current_user_session.nil? or aleph_item.nil?
-    current_user = current_user_session.user
+    return {} if user_session.nil? or aleph_item.nil?
+    current_user = user_session.user
     aleph_item_sub_library_code = aleph_item[:aleph_item_sub_library_code]
     # Set aleph user permissions for this item if they're already in the DB.
     aleph_user_permissions = current_user.user_attributes[:aleph_permissions]
@@ -186,7 +192,7 @@ module RequestsHelper
     # Get the user permissions from Aleph if they're not in the DB.
     if aleph_user_permissions_for_item.nil?
       current_user.user_attributes[:aleph_permissions][aleph_item_sub_library_code] = 
-        current_user_session.aleph_bor_auth_permissions(
+        user_session.aleph_bor_auth_permissions(
           current_user.user_attributes[:nyuidn],
           current_user.user_attributes[:verification],
           aleph_item[:aleph_item_adm_library],
@@ -203,20 +209,21 @@ module RequestsHelper
 
   def self.permission_error
     rv = ""
-    rv += "<div class=\"validation_errors\">"
-    rv += "<span>You do not have permission to perform this request.  Please contact <a href=\"mailto:access.services@nyu.edu\">access.services@nyu.edu</a> for further information.</span>"
-    rv += "</div>"
+    rv += "<div class=\"validation_errors\">\n"
+    rv += "\t<span>You do not have permission to perform this request.  Please contact <a href=\"mailto:access.services@nyu.edu\">access.services@nyu.edu</a> for further information.</span>\n"
+    rv += "</div>\n"
     return rv
   end
 
   def self.unexpected_error
     rv = ""
-    rv += "<div class=\"validation_errors\">"
-    rv += "<span>An unexpected error has occurred.  Please contact <a href=\"mailto:web.services@librarynyu.edu\">web.services@library.nyu.edu</a> to address this issue.</span>"
-    rv += "</div>"
+    rv += "<div class=\"validation_errors\">\n"
+    rv += "\t<span>An unexpected error has occurred.  Please contact <a href=\"mailto:web.services@librarynyu.edu\">web.services@library.nyu.edu</a> to address this issue.</span>\n"
+    rv += "</div>\n"
     return rv
   end
 
+  # Display header for the given title
   def display_header(title)
     return "<strong>\"#{title}\"</strong> is requested." if @view_data[:status].match(/Requested/)
     return "<strong>\"#{title}\"</strong> is checked out." if request_recall?
@@ -227,6 +234,7 @@ module RequestsHelper
     return "<strong>\"#{title}\"</strong> is currently out of circulation." if request_ill?
   end
 
+  # Display 'available' request options
   def display_available
     nyu_sub_libraries = ["BOBST", "NCOUR"]
     ad_sub_libraries = ["NABUD", "NADEX"]
@@ -265,6 +273,7 @@ module RequestsHelper
     return available_display
   end
 
+  # Display 'recall' request options
   def display_recall
     recall_display = ""
     recall_display +=  (@view_data[:status].match(/Requested/)) ? 
@@ -275,6 +284,7 @@ module RequestsHelper
     return recall_display
   end
 
+  # Display 'recall' request options under normal conditions
   def display_recall_regular
     recall_regular_display = ""
     if (pickup_locations.length == 1)
@@ -291,6 +301,7 @@ module RequestsHelper
     return recall_regular_display
   end
   
+  # Display 'recall' request options if the item is requested
   def display_recall_requested
     recall_requested_display = "\t\t\tThis material has been requested by a fellow library user.\n"
     if (pickup_locations.length == 1)
@@ -304,6 +315,7 @@ module RequestsHelper
     return recall_requested_display
   end
 
+  # Display pickup locations
   def display_pickup_locations
     return (pickup_locations.length > 1) ?
       "#{label("pickup_location", "Select pickup location:")} #{select_tag('pickup_location', options_for_select(pickup_locations))}\n" : 
@@ -312,11 +324,13 @@ module RequestsHelper
         "<strong>Pickup location is #{decode_sub_library(@aleph_item_sub_library_code)}</strong>#{hidden_field_tag("pickup_location", @aleph_item_sub_library_code)}\n"
   end
   
+  # Display delivery times link
   def display_delivery_times_link
     return (pickup_locations.length > 1) ? 
       "<div>(<a href=\"http://library.nyu.edu/services/deliveryservices.html\" target=\"_blank\">See delivery times</a>)</div>\n" : ""
   end
   
+  # Display delivery help link
   def display_delivery_help_link
     return (request_option_count > 1) ? 
       "<p style=\"margin-top: 1em;\"><a class=\"nyulibrary_icons_information\" href=\"http://library.nyu.edu/help/requesthelp.html\" target=\"_blank\">Not sure which option to choose?</a></p>\n" : ""
@@ -333,6 +347,7 @@ module RequestsHelper
     return count
   end
   
+  # Gather and return pickup locations
   def pickup_locations
     return @pickup_locations if defined?(@pickup_locations)
     patron_status = RequestsHelper.user_permissions_for_item(current_user_session, @view_data)[:bor_status]
@@ -356,6 +371,7 @@ module RequestsHelper
     return @pickup_locations
   end
 
+  # Display scan elements
   def display_scan_elements
     rv = ""
     rv += label("sub_author", "Author of part:") + "\n"
@@ -369,11 +385,13 @@ module RequestsHelper
     return rv
   end
 
+  # Display request confirmation
   def display_request_confirmation
     return "Your request has been processed. You will be notified when this item is available to pick up at #{decode_sub_library(@pickup_location)}." unless @is_scan
     return "Your scan request has been processed. You will receive an email when the item is available." if @is_scan
   end
 
+  # Decode sublibrary
   def decode_sub_library(code)
     value = RequestsHelper.aleph_helper.sub_library_text(code)
     return (value.nil?) ? code : value

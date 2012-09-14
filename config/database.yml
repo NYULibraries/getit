@@ -28,7 +28,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3_development
+  database: umlaut3
   pool: 5
   username: umlaut3
   password: 0m!l40t
@@ -64,13 +64,42 @@ production:
 # for this purpose, rather than use one of the full-access existing SFX
 # mysql accounts. 
 #
-sfx_db:
- adapter: mysql2
- host: sfx1.bobst.nyu.edu
- port: 3310 # 3310 is defualt SFX embedded mysql port
- database: sfxlcl41 # or other sfx instance db
- username: umlaut
- password: LLBZMn2qw2n4
- pool: 30
- encoding: utf8
+sfx_nyu:
+  adapter: mysql2
+  host: sfx1.bobst.nyu.edu
+  port: 3310
+  database: sfxlcl41
+  username: umlaut
+  password: LLBZMn2qw2n4
+  pool: 30
+  encoding: utf8
 
+sfx_cu:
+  adapter: mysql2
+  host: sfx1.bobst.nyu.edu
+  port: 3310
+  database: sfxcooper
+  username: umlaut
+  password: LLBZMn2qw2n4
+  pool: 30
+  encoding: utf8
+
+sfx_ns:
+  adapter: mysql2
+  host: sfx4.library.newschool.edu
+  port: 3310
+  database: sfxlcl41
+  username: umlaut
+  password: N0?t&[*$+7*~3HjW[8^
+  pool: 30
+  encoding: utf8
+
+sfx_global:
+  adapter: mysql2
+  host: sfx1.bobst.nyu.edu
+  port: 3310 # 3310 is defualt SFX embedded mysql port
+  database: sfxglb41 # or other sfx instance db
+  username: umlaut
+  password: LLBZMn2qw2n4
+  pool: 30
+  encoding: utf8

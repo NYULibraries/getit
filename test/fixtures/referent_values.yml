@@ -276,7 +276,7 @@ primo_id_rv6:
   private_data: false
 
 primo_check_out_rv1:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
@@ -284,7 +284,7 @@ primo_check_out_rv1:
   private_data: false
 
 primo_check_out_rv2:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
@@ -292,7 +292,7 @@ primo_check_out_rv2:
   private_data: false
 
 primo_check_out_rv3:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "primo"
   value: "nyu_aleph000742457"
   normalized_value: "nyu_aleph000742457"
@@ -300,7 +300,7 @@ primo_check_out_rv3:
   private_data: false
 
 primo_check_out_rv4:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "title"
   value: "Argument realization"
   normalized_value: "Argument realization"
@@ -308,7 +308,7 @@ primo_check_out_rv4:
   private_data: false
 
 primo_check_out_rv5:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "btitle"
   value: "Argument realization"
   normalized_value: "Argument realization"
@@ -316,7 +316,7 @@ primo_check_out_rv5:
   private_data: false
 
 primo_check_out_rv6:
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   key_name: "isbn"
   value: "0521663318"
   normalized_value: "0521663318"
@@ -619,40 +619,40 @@ primo_bobst_available_rv4:
   metadata: true
   private_data: false
   
-primo_bobst_checked_out_rv1:
-  referent: primo_bobst_checked_out_referent
+primo_bobst_recall_rv1:
+  referent: primo_bobst_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bobst_checked_out_rv2:
-  referent: primo_bobst_checked_out_referent
+primo_bobst_recall_rv2:
+  referent: primo_bobst_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bobst_checked_out_rv3:
-  referent: primo_bobst_checked_out_referent
+primo_bobst_recall_rv3:
+  referent: primo_bobst_recall_referent
   key_name: "primo"
   value: "dedupmrg8886306"
   normalized_value: "dedupmrg8886306"
   metadata: true
   private_data: false
 
-primo_bobst_checked_out_rv4:
-  referent: primo_bobst_checked_out_referent
+primo_bobst_recall_rv4:
+  referent: primo_bobst_recall_referent
   key_name: "title"
   value: "Aquinas and Maimonides on the possibility of the knowledge of God : an examination of the Quaestio de attributis"
   normalized_value: "Aquinas and Maimonides on the possibility of the knowledge of God : an examination of the Quaestio de attributis"
   metadata: true
   private_data: false
 
-primo_bobst_checked_out_rv5:
-  referent: primo_bobst_checked_out_referent
+primo_bobst_recall_rv5:
+  referent: primo_bobst_recall_referent
   key_name: "isbn"
   value: "1402047207"
   normalized_value: "1402047207"
@@ -803,32 +803,32 @@ primo_bafc_available_rv4:
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv1:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv1:
+  referent: primo_bafc_recall_referent
   key_name: "format"
   value: "audio"
   normalized_value: "audio"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv2:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv2:
+  referent: primo_bafc_recall_referent
   key_name: "genre"
   value: "audio"
   normalized_value: "audio"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv3:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv3:
+  referent: primo_bafc_recall_referent
   key_name: "primo"
   value: "nyu_aleph002094735"
   normalized_value: "nyu_aleph002094735"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv4:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv4:
+  referent: primo_bafc_recall_referent
   key_name: "title"
   value: "Founder of the Delta blues [sound recording]"
   normalized_value: "Founder of the Delta blues [sound recording]"
@@ -854,8 +854,8 @@ primo_tnsgi_available_rv2:
 primo_tnsgi_available_rv3:
   referent: primo_tnsgi_available_referent
   key_name: "primo"
-  value: "dedupmrg38360277"
-  normalized_value: "dedupmrg38360277"
+  value: "dedupmrg35978172"
+  normalized_value: "dedupmrg35978172"
   metadata: true
   private_data: false
 
@@ -947,40 +947,40 @@ primo_bres_available_rv5:
   metadata: true
   private_data: false
 
-primo_bres_checked_out_rv1:
-  referent: primo_bres_checked_out_referent
+primo_bres_recall_rv1:
+  referent: primo_bres_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bres_checked_out_rv2:
-  referent: primo_bres_checked_out_referent
+primo_bres_recall_rv2:
+  referent: primo_bres_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bres_checked_out_rv3:
-  referent: primo_bres_checked_out_referent
+primo_bres_recall_rv3:
+  referent: primo_bres_recall_referent
   key_name: "primo"
   value: "nyu_aleph002743452"
   normalized_value: "nyu_aleph002743452"
   metadata: true
   private_data: false
 
-primo_bres_checked_out_rv4:
-  referent: primo_bres_checked_out_referent
+primo_bres_recall_rv4:
+  referent: primo_bres_recall_referent
   key_name: "title"
   value: "Cheap amusements : working women and leisure in turn-of-the-century New York"
   normalized_value: "Cheap amusements : working women and leisure in turn-of-the-century New York"
   metadata: true
   private_data: false
 
-primo_bres_checked_out_rv5:
-  referent: primo_bres_checked_out_referent
+primo_bres_recall_rv5:
+  referent: primo_bres_recall_referent
   key_name: "isbn"
   value: "0877223890"
   normalized_value: "0877223890"
@@ -1019,32 +1019,32 @@ primo_bafc_available_rv4:
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv1:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv1:
+  referent: primo_bafc_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv2:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv2:
+  referent: primo_bafc_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv3:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv3:
+  referent: primo_bafc_recall_referent
   key_name: "primo"
   value: "nyu_aleph002094735"
   normalized_value: "nyu_aleph002094735"
   metadata: true
   private_data: false
 
-primo_bafc_checked_out_rv4:
-  referent: primo_bafc_checked_out_referent
+primo_bafc_recall_rv4:
+  referent: primo_bafc_recall_referent
   key_name: "title"
   value: "Founder of the Delta blues [sound recording]"
   normalized_value: "Founder of the Delta blues [sound recording]"
@@ -1163,40 +1163,40 @@ primo_ncour_available_rv5:
   metadata: true
   private_data: false
 
-primo_ncour_checked_out_rv1:
-  referent: primo_ncour_checked_out_referent
+primo_ncour_recall_rv1:
+  referent: primo_ncour_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_ncour_checked_out_rv2:
-  referent: primo_ncour_checked_out_referent
+primo_ncour_recall_rv2:
+  referent: primo_ncour_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_ncour_checked_out_rv3:
-  referent: primo_ncour_checked_out_referent
+primo_ncour_recall_rv3:
+  referent: primo_ncour_recall_referent
   key_name: "primo"
   value: "nyu_aleph002046930"
   normalized_value: "nyu_aleph002046930"
   metadata: true
   private_data: false
 
-primo_ncour_checked_out_rv4:
-  referent: primo_ncour_checked_out_referent
+primo_ncour_recall_rv4:
+  referent: primo_ncour_recall_referent
   key_name: "title"
   value: "Many-valued logics"
   normalized_value: "Many-valued logics"
   metadata: true
   private_data: false
 
-primo_ncour_checked_out_rv5:
-  referent: primo_ncour_checked_out_referent
+primo_ncour_recall_rv5:
+  referent: primo_ncour_recall_referent
   key_name: "isbn"
   value: "0387559264"
   normalized_value: "0387559264"
@@ -1347,40 +1347,40 @@ primo_tnsfo_offsite_rv4:
   metadata: true
   private_data: false
 
-primo_tnsfo_checked_out_rv1:
-  referent: primo_tnsfo_checked_out_referent
+primo_tnsfo_recall_rv1:
+  referent: primo_tnsfo_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_tnsfo_checked_out_rv2:
-  referent: primo_tnsfo_checked_out_referent
+primo_tnsfo_recall_rv2:
+  referent: primo_tnsfo_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_tnsfo_checked_out_rv3:
-  referent: primo_tnsfo_checked_out_referent
+primo_tnsfo_recall_rv3:
+  referent: primo_tnsfo_recall_referent
   key_name: "primo"
   value: "nyu_aleph002660869"
   normalized_value: "nyu_aleph002660869"
   metadata: true
   private_data: false
 
-primo_tnsfo_checked_out_rv4:
-  referent: primo_tnsfo_checked_out_referent
+primo_tnsfo_recall_rv4:
+  referent: primo_tnsfo_recall_referent
   key_name: "title"
   value: "U.S. force structure in NATO: an alternative; a staff paper"
   normalized_value: "U.S. force structure in NATO: an alternative; a staff paper"
   metadata: true
   private_data: false
 
-primo_tnsfo_checked_out_rv5:
-  referent: primo_tnsfo_checked_out_referent
+primo_tnsfo_recall_rv5:
+  referent: primo_tnsfo_recall_referent
   key_name: "isbn"
   value: "0815751710"
   normalized_value: "0815751710"
@@ -1427,40 +1427,40 @@ primo_tnsfo_checked_out_rv5:
 #   metadata: true
 #   private_data: false
 # 
-primo_tnsgi_checked_out_rv1:
-  referent: primo_tnsgi_checked_out_referent
+primo_tnsgi_recall_rv1:
+  referent: primo_tnsgi_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_tnsgi_checked_out_rv2:
-  referent: primo_tnsgi_checked_out_referent
+primo_tnsgi_recall_rv2:
+  referent: primo_tnsgi_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_tnsgi_checked_out_rv3:
-  referent: primo_tnsgi_checked_out_referent
+primo_tnsgi_recall_rv3:
+  referent: primo_tnsgi_recall_referent
   key_name: "primo"
   value: "nyu_aleph001861422"
   normalized_value: "nyu_aleph001861422"
   metadata: true
   private_data: false
 
-primo_tnsgi_checked_out_rv4:
-  referent: primo_tnsgi_checked_out_referent
+primo_tnsgi_recall_rv4:
+  referent: primo_tnsgi_recall_referent
   key_name: "title"
   value: "Flowers : watercolors & monotypes"
   normalized_value: "Flowers : watercolors & monotypes"
   metadata: true
   private_data: false
 
-primo_tnsgi_checked_out_rv5:
-  referent: primo_tnsgi_checked_out_referent
+primo_tnsgi_recall_rv5:
+  referent: primo_tnsgi_recall_referent
   key_name: "isbn"
   value: "0810931052"
   normalized_value: "0810931052"
@@ -1507,72 +1507,72 @@ primo_cu_available_rv5:
   metadata: true
   private_data: false
 
-primo_cu_checked_out_rv1:
-  referent: primo_cu_checked_out_referent
+primo_cu_recall_rv1:
+  referent: primo_cu_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_cu_checked_out_rv2:
-  referent: primo_cu_checked_out_referent
+primo_cu_recall_rv2:
+  referent: primo_cu_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_cu_checked_out_rv3:
-  referent: primo_cu_checked_out_referent
+primo_cu_recall_rv3:
+  referent: primo_cu_recall_referent
   key_name: "primo"
   value: "nyu_aleph001728166"
   normalized_value: "nyu_aleph001728166"
   metadata: true
   private_data: false
 
-primo_cu_checked_out_rv4:
-  referent: primo_cu_checked_out_referent
+primo_cu_recall_rv4:
+  referent: primo_cu_recall_referent
   key_name: "title"
   value: "The poetical works of Matthew Prior : With a life"
   normalized_value: "The poetical works of Matthew Prior : With a life"
   metadata: true
   private_data: false
 
-primo_nysid_checked_out_rv1:
-  referent: primo_nysid_checked_out_referent
+primo_nysid_recall_rv1:
+  referent: primo_nysid_recall_referent
   key_name: "format"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_nysid_checked_out_rv2:
-  referent: primo_nysid_checked_out_referent
+primo_nysid_recall_rv2:
+  referent: primo_nysid_recall_referent
   key_name: "genre"
   value: "book"
   normalized_value: "book"
   metadata: true
   private_data: false
 
-primo_nysid_checked_out_rv3:
-  referent: primo_nysid_checked_out_referent
+primo_nysid_recall_rv3:
+  referent: primo_nysid_recall_referent
   key_name: "primo"
   value: "nyu_aleph001446749"
   normalized_value: "nyu_aleph001446749"
   metadata: true
   private_data: false
 
-primo_nysid_checked_out_rv4:
-  referent: primo_nysid_checked_out_referent
+primo_nysid_recall_rv4:
+  referent: primo_nysid_recall_referent
   key_name: "title"
   value: "Early Mexican houses : a book of photographs & measured drawings"
   normalized_value: "Early Mexican houses : a book of photographs & measured drawings"
   metadata: true
   private_data: false
 
-primo_nysid_checked_out_rv5:
-  referent: primo_nysid_checked_out_referent
+primo_nysid_recall_rv5:
+  referent: primo_nysid_recall_referent
   key_name: "isbn"
   value: "0942655036"
   normalized_value: "0942655036"

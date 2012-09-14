@@ -260,7 +260,7 @@
   recall: true
   ill: true
   in_processing: true
-  offsite: true
+  offsite: false
 
 
 "59":
@@ -332,7 +332,7 @@
   recall: true
   ill: true
   in_processing: true
-  offsite: true
+  offsite: false
 
 
 "68":
@@ -340,7 +340,7 @@
   recall: true
   ill: true
   in_processing: true
-  offsite: true
+  offsite: false
 
 
 "69":
@@ -380,7 +380,7 @@
   recall: true
   ill: true
   in_processing: true
-  offsite: true
+  offsite: false
 
 
 "77":
@@ -444,7 +444,7 @@
   recall: true
   ill: true
   in_processing: true
-  offsite: true
+  offsite: false
 
 
 "90":

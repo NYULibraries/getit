@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
-	serialize :user_attributes  
+	serialize :user_attributes
+
+	searchable do
+	  string :username
+  end
 
 	acts_as_authentic do |c|
 		c.validations_scope = :username

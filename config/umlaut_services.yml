@@ -14,6 +14,7 @@ default:
     search: nyu/search
   login:
     link_code: NYU
+  searcher: SearchMethods::Sfx4Solr::NYU
   views:
     tabs_partial: search/nyu/tabs
     tip1_partial: search/nyu/tip1
@@ -24,7 +25,7 @@ default:
     NYU_Primo:
       type: PrimoService
       priority: 2 # After SFX, to get SFX metadata enhancement
-      base_url: http://bobcat.library.nyu.edu
+      base_url: http://bobcatdev.library.nyu.edu
       vid: NYU
       institution: NYU
       holding_search_institution: NYU
@@ -57,7 +58,7 @@ default:
     NYU_Primo_Source:
       type: PrimoSource
       priority: a
-      base_url: http://bobcat.library.nyu.edu
+      base_url: http://bobcatdev.library.nyu.edu
       vid: NYU
       source_attributes:
         - request_link_supports_ajax_call
@@ -300,6 +301,7 @@ NYUAD:
 
 CU:
   display_name: The Cooper Union Library
+  searcher: SearchMethods::Sfx4Solr::CU
   layouts: 
     resolve: cu/resolve
     search: cu/search
@@ -326,6 +328,7 @@ CU:
 
 NS:
   display_name: New School Libraries
+  searcher: SearchMethods::Sfx4Solr::NS
   layouts: 
     resolve: cu/resolve
     search: cu/search

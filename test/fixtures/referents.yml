@@ -19,7 +19,7 @@ primo_id_referent:
   title: "Travels with my aunt"
   isbn: "0143039008"
 
-primo_checked_out_referent:
+primo_recall_referent:
   title: "Argument realization"
   isbn: "0521663318"
 
@@ -53,7 +53,7 @@ primo_toc_referent:
 primo_bobst_available_referent:
   title: "Parole, personnage et référence dans le théâtre de Jean Racine"
 
-primo_bobst_checked_out_referent:
+primo_bobst_recall_referent:
   title: "Aquinas and Maimonides on the possibility of the knowledge of God : an examination of the Quaestio de attributis"
   isbn: "1402047207"
 
@@ -71,7 +71,7 @@ primo_bobst_offsite_referent:
 primo_bafc_available_referent:
   title: "Shajiabang [sound recording] : model opera of the Cultural Revolution : orchestral highlights"
 
-primo_bafc_checked_out_referent:
+primo_bafc_recall_referent:
   title: "Founder of the Delta blues [sound recording]"
 
 primo_tnsgi_available_referent:
@@ -85,14 +85,14 @@ primo_bres_available_referent:
   title: "Personality and psychopathology : feminist reappraisals"
   isbn: "0898627745"
 
-primo_bres_checked_out_referent:
+primo_bres_recall_referent:
   title: "Cheap amusements : working women and leisure in turn-of-the-century New York"
   isbn: "0877223890"
 
 primo_bafc_available_referent:
   title: "Shajiabang [sound recording] : model opera of the Cultural Revolution : orchestral highlights"
 
-primo_bafc_checked_out_referent:
+primo_bafc_recall_referent:
   title: "Founder of the Delta blues [sound recording]"
 
 primo_bfale_available_referent:
@@ -106,7 +106,7 @@ primo_ncour_available_referent:
   title: "Algorithmic graph theory"
   isbn: "0521246598"
 
-primo_ncour_checked_out_referent:
+primo_ncour_recall_referent:
   title: "Many-valued logics"
   isbn: "0387559264"
 
@@ -124,7 +124,7 @@ primo_tnsfo_available_referent:
 primo_tnsfo_offsite_referent:
   title: "Eugene V. Debs : a biography"
 
-primo_tnsfo_checked_out_referent:
+primo_tnsfo_recall_referent:
   title: "U.S. force structure in NATO: an alternative; a staff paper"
   isbn: "0815751710"
 
@@ -132,7 +132,7 @@ primo_tnsfo_checked_out_referent:
 #   title: "The mediation of ornament"
 #   isbn: "0691040990"
 # 
-primo_tnsgi_checked_out_referent:
+primo_tnsgi_recall_referent:
   title: "Flowers : watercolors & monotypes"
   isbn: "0810931052"
 
@@ -140,10 +140,10 @@ primo_cu_available_referent:
   title: "Varieties of visual experience"
   isbn: "0810939223"
 
-primo_cu_checked_out_referent:
+primo_cu_recall_referent:
   title: "The poetical works of Matthew Prior : With a life"
 
-primo_nysid_checked_out_referent:
+primo_nysid_recall_referent:
   title: "Early Mexican houses : a book of photographs & measured drawings"
   isbn: "0942655036"
 

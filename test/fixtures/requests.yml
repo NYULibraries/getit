@@ -30,9 +30,9 @@ primo_id_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301372" 
 
-primo_checked_out_request:
+primo_recall_request:
   id: 21
-  referent: primo_checked_out_referent
+  referent: primo_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d2"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301372" 
@@ -79,9 +79,9 @@ primo_bobst_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_bobst_checked_out_request:
+primo_bobst_recall_request:
   id: 28
-  referent: primo_bobst_checked_out_referent
+  referent: primo_bobst_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -114,9 +114,9 @@ primo_bafc_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_bafc_checked_out_request:
+primo_bafc_recall_request:
   id: 33
-  referent: primo_bafc_checked_out_referent
+  referent: primo_bafc_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -142,9 +142,9 @@ primo_bres_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_bres_checked_out_request:
+primo_bres_recall_request:
   id: 37
-  referent: primo_bres_checked_out_referent
+  referent: primo_bres_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -156,9 +156,9 @@ primo_bafc_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_bafc_checked_out_request:
+primo_bafc_recall_request:
   id: 39
-  referent: primo_bafc_checked_out_referent
+  referent: primo_bafc_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -184,9 +184,9 @@ primo_ncour_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-# primo_ncour_checked_out_request:
+# primo_ncour_recall_request:
 #   id: 43
-#   referent: primo_ncour_checked_out_referent
+#   referent: primo_ncour_recall_referent
 #   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
 #   client_ip_addr: "127.0.0.1" 
 #   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -219,9 +219,9 @@ primo_tnsfo_offsite_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_tnsfo_checked_out_request:
+primo_tnsfo_recall_request:
   id: 48
-  referent: primo_tnsfo_checked_out_referent
+  referent: primo_tnsfo_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -233,9 +233,9 @@ primo_tnsfo_checked_out_request:
 #   client_ip_addr: "127.0.0.1" 
 #   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 # 
-primo_tnsgi_checked_out_request:
+primo_tnsgi_recall_request:
   id: 50
-  referent: primo_tnsgi_checked_out_referent
+  referent: primo_tnsgi_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
@@ -247,16 +247,16 @@ primo_cu_available_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_cu_checked_out_request:
+primo_cu_recall_request:
   id: 52
-  referent: primo_cu_checked_out_referent
+  referent: primo_cu_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377" 
 
-primo_nysid_checked_out_request:
+primo_nysid_recall_request:
   id: 53
-  referent: primo_nysid_checked_out_referent
+  referent: primo_nysid_recall_referent
   session_id: "f747f4273c1ecb12f1f764cc10c646d7"
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377"

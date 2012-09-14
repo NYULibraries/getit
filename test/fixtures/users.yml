@@ -52,7 +52,7 @@ DS03D:
   lastname: DS03D
   user_attributes: <%= {
     :nyuidn => "DS03D",
-    :verification => "TEST",
+    :verification => "DS03",
     :bor_status => "03",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS04D:
@@ -64,7 +64,7 @@ DS04D:
   lastname: DS04D
   user_attributes: <%= {
     :nyuidn => "DS04D",
-    :verification => "TEST",
+    :verification => "DS04",
     :bor_status => "04",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS05D:
@@ -76,7 +76,7 @@ DS05D:
   lastname: DS05D
   user_attributes: <%= {
     :nyuidn => "DS05D",
-    :verification => "TEST",
+    :verification => "DS05",
     :bor_status => "05",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS06D:
@@ -88,7 +88,7 @@ DS06D:
   lastname: DS06D
   user_attributes: <%= {
     :nyuidn => "DS06D",
-    :verification => "TEST",
+    :verification => "DS06",
     :bor_status => "06",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS07D:
@@ -100,7 +100,7 @@ DS07D:
   lastname: DS07D
   user_attributes: <%= {
     :nyuidn => "DS07D",
-    :verification => "TEST",
+    :verification => "DS07",
     :bor_status => "07",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS10D:
@@ -112,7 +112,7 @@ DS10D:
   lastname: DS10D
   user_attributes: <%= {
     :nyuidn => "DS10D",
-    :verification => "TEST",
+    :verification => "DS10",
     :bor_status => "10",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS11D:
@@ -124,7 +124,7 @@ DS11D:
   lastname: DS11D
   user_attributes: <%= {
     :nyuidn => "DS11D",
-    :verification => "TEST",
+    :verification => "DS11",
     :bor_status => "11",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS12D:
@@ -136,7 +136,7 @@ DS12D:
   lastname: DS12D
   user_attributes: <%= {
     :nyuidn => "DS12D",
-    :verification => "TEST",
+    :verification => "DS12",
     :bor_status => "12",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS15D:
@@ -148,7 +148,7 @@ DS15D:
   lastname: DS15D
   user_attributes: <%= {
     :nyuidn => "DS15D",
-    :verification => "TEST",
+    :verification => "DS15",
     :bor_status => "15",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS16D:
@@ -160,7 +160,7 @@ DS16D:
   lastname: DS16D
   user_attributes: <%= {
     :nyuidn => "DS16D",
-    :verification => "TEST",
+    :verification => "DS16",
     :bor_status => "16",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS17D:
@@ -172,7 +172,7 @@ DS17D:
   lastname: DS17D
   user_attributes: <%= {
     :nyuidn => "DS17D",
-    :verification => "TEST",
+    :verification => "DS17",
     :bor_status => "17",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS18D:
@@ -184,7 +184,7 @@ DS18D:
   lastname: DS18D
   user_attributes: <%= {
     :nyuidn => "DS18D",
-    :verification => "TEST",
+    :verification => "DS18",
     :bor_status => "18",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS20D:
@@ -196,7 +196,7 @@ DS20D:
   lastname: DS20D
   user_attributes: <%= {
     :nyuidn => "DS20D",
-    :verification => "TEST",
+    :verification => "DS20",
     :bor_status => "20",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS30D:
@@ -208,7 +208,7 @@ DS30D:
   lastname: DS30D
   user_attributes: <%= {
     :nyuidn => "DS30D",
-    :verification => "TEST",
+    :verification => "DS30",
     :bor_status => "30",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS31D:
@@ -220,7 +220,7 @@ DS31D:
   lastname: DS31D
   user_attributes: <%= {
     :nyuidn => "DS31D",
-    :verification => "TEST",
+    :verification => "DS31",
     :bor_status => "31",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS32D:
@@ -232,7 +232,7 @@ DS32D:
   lastname: DS32D
   user_attributes: <%= {
     :nyuidn => "DS32D",
-    :verification => "TEST",
+    :verification => "DS32",
     :bor_status => "32",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS33D:
@@ -244,7 +244,7 @@ DS33D:
   lastname: DS33D
   user_attributes: <%= {
     :nyuidn => "DS33D",
-    :verification => "TEST",
+    :verification => "DS33",
     :bor_status => "33",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS34D:
@@ -256,7 +256,7 @@ DS34D:
   lastname: DS34D
   user_attributes: <%= {
     :nyuidn => "DS34D",
-    :verification => "TEST",
+    :verification => "DS34",
     :bor_status => "34",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS35D:
@@ -268,7 +268,7 @@ DS35D:
   lastname: DS35D
   user_attributes: <%= {
     :nyuidn => "DS35D",
-    :verification => "TEST",
+    :verification => "DS35",
     :bor_status => "35",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS36D:
@@ -280,7 +280,7 @@ DS36D:
   lastname: DS36D
   user_attributes: <%= {
     :nyuidn => "DS36D",
-    :verification => "TEST",
+    :verification => "DS36",
     :bor_status => "36",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS37D:
@@ -292,7 +292,7 @@ DS37D:
   lastname: DS37D
   user_attributes: <%= {
     :nyuidn => "DS37D",
-    :verification => "TEST",
+    :verification => "DS37",
     :bor_status => "37",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS38D:
@@ -304,7 +304,7 @@ DS38D:
   lastname: DS38D
   user_attributes: <%= {
     :nyuidn => "DS38D",
-    :verification => "TEST",
+    :verification => "DS38",
     :bor_status => "38",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS40D:
@@ -316,7 +316,7 @@ DS40D:
   lastname: DS40D
   user_attributes: <%= {
     :nyuidn => "DS40D",
-    :verification => "TEST",
+    :verification => "DS40",
     :bor_status => "40",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS41D:
@@ -328,7 +328,7 @@ DS41D:
   lastname: DS41D
   user_attributes: <%= {
     :nyuidn => "DS41D",
-    :verification => "TEST",
+    :verification => "DS41",
     :bor_status => "41",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS42D:
@@ -340,7 +340,7 @@ DS42D:
   lastname: DS42D
   user_attributes: <%= {
     :nyuidn => "DS42D",
-    :verification => "TEST",
+    :verification => "DS42",
     :bor_status => "42",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS43D:
@@ -352,7 +352,7 @@ DS43D:
   lastname: DS43D
   user_attributes: <%= {
     :nyuidn => "DS43D",
-    :verification => "TEST",
+    :verification => "DS43",
     :bor_status => "43",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS50D:
@@ -364,7 +364,7 @@ DS50D:
   lastname: DS50D
   user_attributes: <%= {
     :nyuidn => "DS50D",
-    :verification => "TEST",
+    :verification => "DS50",
     :bor_status => "50",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS51D:
@@ -376,7 +376,7 @@ DS51D:
   lastname: DS51D
   user_attributes: <%= {
     :nyuidn => "DS51D",
-    :verification => "TEST",
+    :verification => "DS51",
     :bor_status => "51",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS52D:
@@ -388,7 +388,7 @@ DS52D:
   lastname: DS52D
   user_attributes: <%= {
     :nyuidn => "DS52D",
-    :verification => "TEST",
+    :verification => "DS52",
     :bor_status => "52",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS53D:
@@ -400,7 +400,7 @@ DS53D:
   lastname: DS53D
   user_attributes: <%= {
     :nyuidn => "DS53D",
-    :verification => "TEST",
+    :verification => "DS53",
     :bor_status => "53",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS54D:
@@ -412,7 +412,7 @@ DS54D:
   lastname: DS54D
   user_attributes: <%= {
     :nyuidn => "DS54D",
-    :verification => "TEST",
+    :verification => "DS54",
     :bor_status => "54",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS55D:
@@ -424,7 +424,7 @@ DS55D:
   lastname: DS55D
   user_attributes: <%= {
     :nyuidn => "DS55D",
-    :verification => "TEST",
+    :verification => "DS55",
     :bor_status => "55",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS56D:
@@ -436,7 +436,7 @@ DS56D:
   lastname: DS56D
   user_attributes: <%= {
     :nyuidn => "DS56D",
-    :verification => "TEST",
+    :verification => "DS56",
     :bor_status => "56",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS57D:
@@ -448,7 +448,7 @@ DS57D:
   lastname: DS57D
   user_attributes: <%= {
     :nyuidn => "DS57D",
-    :verification => "TEST",
+    :verification => "DS57",
     :bor_status => "57",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS58D:
@@ -460,7 +460,7 @@ DS58D:
   lastname: DS58D
   user_attributes: <%= {
     :nyuidn => "DS58D",
-    :verification => "TEST",
+    :verification => "DS58",
     :bor_status => "58",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS59D:
@@ -472,7 +472,7 @@ DS59D:
   lastname: DS59D
   user_attributes: <%= {
     :nyuidn => "DS59D",
-    :verification => "TEST",
+    :verification => "DS59",
     :bor_status => "59",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS60D:
@@ -484,7 +484,7 @@ DS60D:
   lastname: DS60D
   user_attributes: <%= {
     :nyuidn => "DS60D",
-    :verification => "TEST",
+    :verification => "DS60",
     :bor_status => "60",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS61D:
@@ -496,7 +496,7 @@ DS61D:
   lastname: DS61D
   user_attributes: <%= {
     :nyuidn => "DS61D",
-    :verification => "TEST",
+    :verification => "DS61",
     :bor_status => "61",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS62D:
@@ -508,7 +508,7 @@ DS62D:
   lastname: DS62D
   user_attributes: <%= {
     :nyuidn => "DS62D",
-    :verification => "TEST",
+    :verification => "DS62",
     :bor_status => "62",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS63D:
@@ -520,7 +520,7 @@ DS63D:
   lastname: DS63D
   user_attributes: <%= {
     :nyuidn => "DS63D",
-    :verification => "TEST",
+    :verification => "DS63",
     :bor_status => "63",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS64D:
@@ -532,7 +532,7 @@ DS64D:
   lastname: DS64D
   user_attributes: <%= {
     :nyuidn => "DS64D",
-    :verification => "TEST",
+    :verification => "DS64",
     :bor_status => "64",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS65D:
@@ -544,7 +544,7 @@ DS65D:
   lastname: DS65D
   user_attributes: <%= {
     :nyuidn => "DS65D",
-    :verification => "TEST",
+    :verification => "DS65",
     :bor_status => "65",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS66D:
@@ -556,7 +556,7 @@ DS66D:
   lastname: DS66D
   user_attributes: <%= {
     :nyuidn => "DS66D",
-    :verification => "TEST",
+    :verification => "DS66",
     :bor_status => "66",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS67D:
@@ -568,7 +568,7 @@ DS67D:
   lastname: DS67D
   user_attributes: <%= {
     :nyuidn => "DS67D",
-    :verification => "TEST",
+    :verification => "DS67",
     :bor_status => "67",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS68D:
@@ -580,7 +580,7 @@ DS68D:
   lastname: DS68D
   user_attributes: <%= {
     :nyuidn => "DS68D",
-    :verification => "TEST",
+    :verification => "DS68",
     :bor_status => "68",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS69D:
@@ -592,7 +592,7 @@ DS69D:
   lastname: DS69D
   user_attributes: <%= {
     :nyuidn => "DS69D",
-    :verification => "TEST",
+    :verification => "DS69",
     :bor_status => "69",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS70D:
@@ -604,7 +604,7 @@ DS70D:
   lastname: DS70D
   user_attributes: <%= {
     :nyuidn => "DS70D",
-    :verification => "TEST",
+    :verification => "DS70",
     :bor_status => "70",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS72D:
@@ -616,7 +616,7 @@ DS72D:
   lastname: DS72D
   user_attributes: <%= {
     :nyuidn => "DS72D",
-    :verification => "TEST",
+    :verification => "DS72",
     :bor_status => "72",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS74D:
@@ -628,7 +628,7 @@ DS74D:
   lastname: DS74D
   user_attributes: <%= {
     :nyuidn => "DS74D",
-    :verification => "TEST",
+    :verification => "DS74",
     :bor_status => "74",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS76D:
@@ -640,7 +640,7 @@ DS76D:
   lastname: DS76D
   user_attributes: <%= {
     :nyuidn => "DS76D",
-    :verification => "TEST",
+    :verification => "DS76",
     :bor_status => "76",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS77D:
@@ -652,7 +652,7 @@ DS77D:
   lastname: DS77D
   user_attributes: <%= {
     :nyuidn => "DS77D",
-    :verification => "TEST",
+    :verification => "DS77",
     :bor_status => "77",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS80D:
@@ -664,7 +664,7 @@ DS80D:
   lastname: DS80D
   user_attributes: <%= {
     :nyuidn => "DS80D",
-    :verification => "TEST",
+    :verification => "DS80",
     :bor_status => "80",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS81D:
@@ -676,7 +676,7 @@ DS81D:
   lastname: DS81D
   user_attributes: <%= {
     :nyuidn => "DS81D",
-    :verification => "TEST",
+    :verification => "DS81",
     :bor_status => "81",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS82D:
@@ -688,7 +688,7 @@ DS82D:
   lastname: DS82D
   user_attributes: <%= {
     :nyuidn => "DS82D",
-    :verification => "TEST",
+    :verification => "DS82",
     :bor_status => "82",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS84D:
@@ -700,7 +700,7 @@ DS84D:
   lastname: DS84D
   user_attributes: <%= {
     :nyuidn => "DS84D",
-    :verification => "TEST",
+    :verification => "DS84",
     :bor_status => "84",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS85D:
@@ -712,7 +712,7 @@ DS85D:
   lastname: DS85D
   user_attributes: <%= {
     :nyuidn => "DS85D",
-    :verification => "TEST",
+    :verification => "DS85",
     :bor_status => "85",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS86D:
@@ -724,8 +724,20 @@ DS86D:
   lastname: DS86D
   user_attributes: <%= {
     :nyuidn => "DS86D",
-    :verification => "TEST",
+    :verification => "DS86",
     :bor_status => "86",
+		:aleph_permissions => {} }.to_yaml.inspect  %>
+DS89D:
+  password_salt: <%= salt = Authlogic::Random.hex_token %>
+  crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt("DS86D" + salt) %>
+  persistence_token: <%= Authlogic::Random.hex_token %>
+  username: DS89D
+  firstname: TEST-RECORD
+  lastname: DS89D
+  user_attributes: <%= {
+    :nyuidn => "DS89D",
+    :verification => "DS89",
+    :bor_status => "89",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS90D:
   password_salt: <%= salt = Authlogic::Random.hex_token %>
@@ -736,7 +748,7 @@ DS90D:
   lastname: DS90D
   user_attributes: <%= {
     :nyuidn => "DS90D",
-    :verification => "TEST",
+    :verification => "DS90",
     :bor_status => "90",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS95D:
@@ -748,7 +760,7 @@ DS95D:
   lastname: DS95D
   user_attributes: <%= {
     :nyuidn => "DS95D",
-    :verification => "TEST",
+    :verification => "DS95",
     :bor_status => "95",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS96D:
@@ -760,7 +772,7 @@ DS96D:
   lastname: DS96D
   user_attributes: <%= {
     :nyuidn => "DS96D",
-    :verification => "TEST",
+    :verification => "DS96",
     :bor_status => "96",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
 DS97D:
@@ -772,7 +784,7 @@ DS97D:
   lastname: DS97D
   user_attributes: <%= {
     :nyuidn => "DS97D",
-    :verification => "TEST",
+    :verification => "DS97",
     :bor_status => "97",
 		:aleph_permissions => {} }.to_yaml.inspect  %>
   

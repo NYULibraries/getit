@@ -26,8 +26,6 @@ class NyuAlephTest < ActiveSupport::TestCase
     assert_equal("nyu_aleph000655588", nyu_aleph.record_id)
     assert_nil(nyu_aleph.id_two)
     nyu_aleph = nyu_aleph.expand.first
-    puts nyu_aleph.status_code
-    puts nyu_aleph.status
     assert_equal("(HN49.I56 N67 2001)", nyu_aleph.id_two)
     assert_equal("available", nyu_aleph.status_code)
     assert_equal("Available", nyu_aleph.status)
