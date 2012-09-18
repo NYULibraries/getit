@@ -1,8 +1,8 @@
 production:
   solr:
-    hostname: webdev2.bobst.nyu.edu
-    path: /solr/sunspot
-    port: 8080
+    hostname: index.websolr.com
+    path: /solr/f0fdfe03534
+    port: 80
     log_level: WARNING
 
 development:
