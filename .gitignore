@@ -16,3 +16,6 @@
 
 # Ignore generated Aleph config files
 /config/aleph
+
+# Ignore embedded solr app used only for development.
+/solr
