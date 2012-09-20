@@ -19,10 +19,13 @@ gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
+gem 'rvm-capistrano'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-# gem 'umlaut', "~> 3.0.0beta2"
+# Use passenger as the app server
+gem 'passenger'
+# Umlaut
 gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "master"
 gem 'exlibris-aleph', "~> 0.1.1"
 gem 'authpds-nyu', "~> 0.1.2"
