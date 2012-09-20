@@ -35,19 +35,19 @@ module Sfx4
                     :class_name => "#{klass.to_s.sub(klass.to_s.demodulize, "")}AzExtraInfo"
       
           searchable do
-            text :title do
+            text :title, :stored => true do
               [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH})
             end
-            string :object_id do
+            string :object_id, :stored => true do
               self.OBJECT_ID
             end
-            string :az_profile do
+            string :az_profile, :stored => true do
               self.AZ_PROFILE
             end
-            string :title_sort do
+            string :title_sort, :stored => true do
               self.TITLE_SORT
             end
-            string :title_exact, :multiple => true do
+            string :title_exact, :stored => true, :multiple => true do
               [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH})
             end
             string :letter_group, :multiple => true do
@@ -57,13 +57,13 @@ module Sfx4
                     "0-9" : az_letter_group.AZ_LETTER_GROUP_NAME
               }
             end
-            string :issn do
+            string :issn, :stored => true do
               az_extra_info.issn unless az_extra_info.nil?
             end
-            string :isbn do
+            string :isbn, :stored => true do
               az_extra_info.isbn unless az_extra_info.nil?
             end
-            string :lccn do
+            string :lccn, :stored => true do
               az_extra_info.lccn unless az_extra_info.nil?
             end
           end

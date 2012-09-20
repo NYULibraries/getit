@@ -11,44 +11,50 @@ module SearchMethods
       module InstanceMethods
         protected
         def find_by_title
-          _find_by_title(title_query_param, search_type_param, context_object_from_params, param[:page])
+          _find_by_title(title_query_param, search_type_param, context_object_from_params, params[:page])
         end
       
         def find_by_group
-          _find_by_group(__letter_group_param)
+          _find_by_group(_letter_group_param, context_object_from_params, params[:page])
         end
 
         private
         def _find_by_title(query_param, search_type, context_object, page=1)
-          Rails.logger.warn az_title_klass.to_s
           query = az_title_klass.connection.quote_string(query_param)
-          titles = case search_type
+          search = case search_type
             when "contains"
               az_title_klass.search {
-                fulltext query
+                keywords query, :fields => [:title]
+                with(:az_profile, "default")
                 order_by(:title_sort, :asc)
                 paginate(:page => page, :per_page => 20)
-              }.results
+              }
             when "begins"
               az_title_klass.search {
-                with(:title_exact).starts_with(query)
+                with(:az_profile, "default")
+                with(:title_exact).starting_with(query)
                 order_by(:title_sort, :asc)
                 paginate(:page => page, :per_page => 20)
-              }.results
+              }
             else # exact
               az_title_klass.search {
+                with(:az_profile, "default")
                 with(:title_exact, query)
                 order_by(:title_sort, :asc)
                 paginate(:page => page, :per_page => 20)
-              }.results
-            end   
-          return [titles.map{|title| title.to_context_object context_object}, titles.count]
+              }
+            end
+          return [search.results.map{|title| title.to_context_object context_object}, search.total]
         end
 
-        def _find_by_group(query_param)
+        def _find_by_group(query_param, context_object, page=1)
           query = az_title_klass.connection.quote_string(query_param)
-          titles = az_title_klass.search {with(:letter_group, query)}.results
-          return [titles.map{|title| title.to_context_object context_object}, titles.count]
+          search = az_title_klass.search {
+            with(:letter_group, query)
+            order_by(:title_sort, :asc)
+            paginate(:page => page, :per_page => 20)
+          }
+          return [search.results.map{|title| title.to_context_object context_object}, search.total]
         end
     
         def _letter_group_param
