@@ -11,17 +11,18 @@ module SearchMethods
       module InstanceMethods
         protected
         def find_by_title
-          find_by_title(title_query_param)
+          _find_by_title(title_query_param, search_type_param, context_object_from_params)
         end
       
         def find_by_group
-          find_by_title(letter_group_param)
+          _find_by_group(__letter_group_param)
         end
-      
+
         private
-        def find_by_title(query_param)
+        def _find_by_title(query_param, search_type, context_object)
+          Rails.logger.warn az_title_klass.to_s
           query = az_title_klass.connection.quote_string(query_param)
-          titles = case search_type_param
+          titles = case search_type
             when "contains"
               az_title_klass.search {fulltext query}.results
             when "begins"
@@ -29,16 +30,16 @@ module SearchMethods
             else # exact
               az_title_klass.search {with(:title_exact, query)}.results
             end   
-          return [titles.count, titles.map{|title| title.to_context_object}]
+          return [titles.map{|title| title.to_context_object context_object}, titles.count]
         end
 
-        def find_by_group(query_param)
+        def _find_by_group(query_param)
           query = az_title_klass.connection.quote_string(query_param)
           titles = az_title_klass.search {with(:letter_group, query)}.results
-          return [titles.count, titles.map{|title| title.to_context_object}]
+          return [titles.map{|title| title.to_context_object context_object}, titles.count]
         end
     
-        def letter_group_param
+        def _letter_group_param
           case params[:id]
           when /^Other/i
             "Others"
