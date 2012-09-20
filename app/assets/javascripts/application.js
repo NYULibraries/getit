@@ -1,8 +1,5 @@
 
- // Umlaut javascript required for proper functionality. The 'umlaut' file
- // also forces require of jquery and jquery-ui, dependencies. 
- //= require 'umlaut'          
-          // This is a manifest file that'll be compiled into application.js, which will include all the files
+// This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -14,6 +11,8 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
+// Umlaut javascript required for proper functionality. The 'umlaut' file
+// also forces require of jquery and jquery-ui, dependencies. 
+//= require 'umlaut'          
 //= require jquery_ujs
 //= require_tree .
