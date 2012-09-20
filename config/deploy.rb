@@ -20,7 +20,7 @@ set :repository, "git@github.com:NYULibraries/getit.git"
 set :scm, :git
 set :scm_username, "Jenkins-NYULib"
 set :deploy_via, :remote_cache
-set(:branch, 'master') unless exists?(:branch)
+set(:branch, 'development') unless exists?(:branch)
 set :git_enable_submodules, 1
 
 # Environments
