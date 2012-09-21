@@ -32,7 +32,6 @@ gem 'authpds-nyu', "~> 0.1.2"
 gem 'sunspot_rails'
 gem 'dalli'
 group :test, :development do
-  gem 'sunspot_solr'
   gem 'progress_bar'
   gem 'reek'
 end

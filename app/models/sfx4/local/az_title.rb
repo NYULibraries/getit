@@ -34,9 +34,9 @@ module Sfx4
                     :foreign_key => 'OBJECT_ID',
                     :class_name => "#{klass.to_s.sub(klass.to_s.demodulize, "")}AzExtraInfo"
       
-          searchable do
+          searchable :if => :index? do
             text :title, :stored => true do
-              [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH})
+              [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH}).uniq
             end
             string :object_id, :stored => true do
               self.OBJECT_ID
@@ -44,17 +44,19 @@ module Sfx4
             string :az_profile, :stored => true do
               self.AZ_PROFILE
             end
+            string :title_display, :stored => true do
+              self.TITLE_DISPLAY
+            end
             string :title_sort, :stored => true do
               self.TITLE_SORT
             end
             string :title_exact, :stored => true, :multiple => true do
-              [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH})
+              [self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH}).uniq
             end
             string :letter_group, :multiple => true do
               az_letter_groups.map{ |az_letter_group|
-                group = 
-                  (az_letter_group.AZ_LETTER_GROUP_NAME.match(/[0-9]/)) ? 
-                    "0-9" : az_letter_group.AZ_LETTER_GROUP_NAME
+                (az_letter_group.AZ_LETTER_GROUP_NAME.match(/[0-9]/)) ? 
+                  "0-9" : az_letter_group.AZ_LETTER_GROUP_NAME
               }
             end
             string :issn, :stored => true do
@@ -73,6 +75,10 @@ module Sfx4
       end
 
       module InstanceMethods
+        def index?
+          self.AZ_PROFILE.eql? "default"
+        end
+
         def to_context_object(context_object)
           ctx = OpenURL::ContextObject.new
           # Start out wtih everything in search, to preserve date/vol/etc
