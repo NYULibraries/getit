@@ -1,0 +1,11 @@
+.separator {
+  border-top: 1px solid $searchBorderColor;
+  padding: {
+    top: 15px;
+  }
+}
+
+[class^="icons-"],
+[class*=" umlaut_icons-"] {
+  @include icons;
+}

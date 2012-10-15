@@ -1,0 +1,32 @@
+.nav-tabs {
+  margin-bottom: 0px;
+}
+
+.nav-tabs > li > a {
+  background-color: $tabBackgroundColor;
+  color: lighten(black, 20%);
+}
+
+.nav-tabs > li > a:hover {
+  background-color: darken($tabBackgroundColor, 5%);
+}
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+  background-color: $searchBackgroundColor;
+  color: black;
+}
+
+#sidebar_tabs {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+  .nav-tabs {
+    display: none
+  }
+
+  #sidebar_tabs {
+    display: block;
+  }
+}

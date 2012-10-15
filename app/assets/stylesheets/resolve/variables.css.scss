@@ -1,0 +1,42 @@
+// Basic Variables         
+$baseFontSize:                              12px;
+$smallFontSize:                             $baseFontSize - 1;
+$largeFontSize:                             $baseFontSize + 2;
+$baseLineHeight:                            12px;
+$linkColor:                                 #0066CC;
+$nyuLibrariesDarkBrown:                     #653d24;
+$nyuLibrariesLightBrown:                    #E0D8C9;
+$nyuLibrariesAzBlue:                        #0000ee;
+$nyuLibrariesBorderColor:                   #653d24;
+$nyuLibrariesBackgroundColor:               #000000;
+$umlautGrey:                                darken(whiteSmoke, 9%);
+// General Styles                           
+$umlautBorderColor:                         $nyuLibrariesDarkBrown;
+$umlautBackgroundColor:                     #FFFDEA;
+// Permalink                                   
+$umlautResolveNavBorderColor:               $nyuLibrariesDarkBrown;
+$umlautResolveNavBackgroundColor:           $nyuLibrariesLightBrown;
+// Resolve                                   
+$umlautMainBackgroundColor:                 $umlautBackgroundColor;
+$umlautSidebarBorderColor:                  $umlautBorderColor;
+$umlautSidebarBackgroundColor:              $nyuLibrariesLightBrown;
+// Resource Info                               
+$umlautResourceInfoBorderColor:             $umlautGrey;
+$umlautResourceInfoBackgroundColor:         white;
+// Help                                     
+$umlautHelpBorderColor:                     $umlautBorderColor;
+$umlautHelpBackgroundColor:                 $umlautBackgroundColor;
+// Highlighted Sections
+$umlautHighlightedSectionBorderColor:       $umlautGrey;
+$umlautHighlightedSectionBackgroundColor:   white;
+// Holdings
+$umlautHoldingBorderColor:                  $umlautBorderColor;
+$umlautHoldingHighlightBackgroundColor:     $umlautSidebarBackgroundColor;
+// Unavailable
+$umlautUnavailableColor:                     red;
+// Resolve Errors                           
+$umlautResolveErrorBorderColor:             $umlautGrey;
+$umlautResolveErrorBackgroundColor:         white;
+// Debug Info
+$umlautDebugInfoBorderColor:                $umlautGrey;
+$umlautDebugInfoBackgroundColor:            white;

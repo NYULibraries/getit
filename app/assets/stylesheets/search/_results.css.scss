@@ -1,0 +1,23 @@
+.results {
+  @extend .separator;
+ 	background-color: $resultsBackgroundColor;
+}
+
+.result {
+  @extend .well;
+  @extend .well-small;
+  margin: {
+    bottom: $baseLineHeight/2;
+  }
+  padding: {
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+  }
+}
+
+.nyu-pagination {
+  @extend .pagination;
+  font-size: 125%;
+}

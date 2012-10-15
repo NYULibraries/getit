@@ -1,0 +1,21 @@
+.breadcrumb {
+  color: lighten(black, 20%);
+  background-color: $breadcrumbsBackgroundColor;
+  padding: {
+    top: $baseLineHeight/2 + 5;
+    bottom: $baseLineHeight * 1.5 + 5;
+    left: 20px;
+  }
+  ul {
+    margin: {
+      left: 0px;
+    }
+    .divider {
+      color: darken($breadcrumbsBackgroundColor, 50%);
+    }
+  }
+  
+  .login, .logout {
+    margin-left: 5px;
+  }
+}

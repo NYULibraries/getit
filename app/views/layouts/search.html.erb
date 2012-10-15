@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>BobCat</title>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= search_stylesheets %> 
+  <%= search_javascripts %>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <a href="http://library.nyu.edu/"><span>NYU Libraries</a>
+      <span>GetIt @ NYU Libraries</span>
+      <div id="bobcat_title"><span>BobCat</span></div>
+    </header>
+    <nav id="nav1" class="breadcrumb">
+      <div id="breadcrumbs">
+        <%= breadcrumbs.html_safe %>
+      </div>
+      <div id="login" class="pull-right">
+        <%= login.html_safe %>
+      </div>
+    </nav>
+    <div class="nyu-container">
+      <div class="container-fluid nyu-container">
+        <div class="row-fluid">
+          <div class="span8">
+            <%= tabs(["nav", "nav-tabs"]).html_safe %>
+            <%= yield %>
+          </div>
+          <div class="span4">
+            <%= render :partial => "#{current_primary_institution.views["dir"]}/sidebar" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi" %>
+  </body>
+</html>

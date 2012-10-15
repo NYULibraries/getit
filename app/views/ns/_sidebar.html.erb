@@ -1,0 +1,33 @@
+<div id="sidebar" class="sidebar">
+	<div id="account" class="sidebar-section">
+	  <h2><a href="http://library.nyu.edu/info/myworkspace.html" class="nyulibrary_icons_help nyulibrary_help"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
+		<ul>
+			<% if current_user %>
+				<li><a href="https://webdev1.library.nyu.edu/eshelf?institution=NS">My e-shelf</a></li>
+				<li><a href="https://webdev1.library.nyu.edu/eshelf/account?institution=NS">My library account</a></li>
+				<li><%= link_to "Log-out " + current_user.firstname, logout_url, :class=>"logout" %></li>
+			<% else %>
+				<li><a href="https://webdev1.library.nyu.edu/eshelf?institution=NS">Guest e-shelf (log in for more options)</a></li>
+			<% end %>
+		</ul>
+	</div>
+	<div id="additional_options" class="sidebar-section">
+		<h2>Additional Options</h2>
+		<ul>
+			<li><a href="https://webdev1.library.nyu.edu/arch/ns/databases/subject/popular-databases">Popular Databases</a></li>
+			<li><a href="https://webdev1.library.nyu.edu/arch/ns/databases/subject/trial-databases">Trial Databases</a></li>
+		</ul>
+	</div>
+	<div id="help" class="sidebar-section">
+		<h2>Need help?</h2>
+		<ul>
+			<li><a href="http://library.newschool.edu/primo/help/journals.php" target="_blank">Help using the Journals A-Z Tab</a></li>
+			<li><a href="http://library.newschool.edu/primo/tutorials/" target="_blank">Tutorials and Self-Help</a></li>
+			<li><a href="http://guides.library.newschool.edu/" target="_blank">Subject/Research Guides</a></li>
+			<li><a href="http://answers.library.newschool.edu" target="_blank">Ask a Librarian</a></li>
+			<li>Text a Librarian - 646.480.6309</li>
+			<li><a href="http://library.newschool.edu/reference/directory" target="_blank">Librarians By Subject</a></li>
+			<li><a href="http://library.newschool.edu/reference/schedule" target="_blank" title="One-on-One assistance">Schedule an Appointment</a></li>
+		</ul>					
+	</div>
+</div>

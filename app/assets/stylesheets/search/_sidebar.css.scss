@@ -1,0 +1,30 @@
+.sidebar {
+  h2 {
+    @include background-image(linear-gradient(color-stops($sidebarHeaderBackgroundColor, lighten($sidebarHeaderBackgroundColor, 5%))));
+    @include sidebar;
+    font-weight: normal;
+
+    margin: {
+      bottom: 0px;
+    }
+
+    i {
+      vertical-align: baseline;
+    }
+  }
+
+  .sidebar-section {
+    margin-bottom: $baseLineHeight;
+    ul {
+      @include sidebar;
+      @include background-image(linear-gradient(color-stops($sidebarBackgroundColor, darken($sidebarBackgroundColor, 5%))));
+      @extend .unstyled;
+      li {
+        margin: {
+          top: $baseLineHeight;
+          bottom: $baseLineHeight;
+        }
+      }
+    }
+  }
+}

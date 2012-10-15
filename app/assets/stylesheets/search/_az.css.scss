@@ -1,0 +1,18 @@
+.nyu-az {
+  margin-top: $baseLineHeight;
+  margin-bottom: $baseLineHeight;
+  a {
+    white-space: nowrap;
+    font-size: 125%;
+    font-weight: bold;
+    padding:.15em .3em .15em .3em;
+    border: 1px solid $azBorderColor;
+    text-decoration: none;
+    color: $azLinkColor;
+    background-color: $azBackgroundColor;
+    line-height: 2em;
+    &:hover {
+      background-color: $azHoverBackgroundColor;
+    }
+  }
+}

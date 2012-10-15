@@ -1,0 +1,58 @@
+.form-horizontal {
+  fieldset {
+    margin-bottom: $baseLineHeight;
+  }
+
+  label {
+    margin: {
+      bottom: 1px;
+    }
+  }
+
+  .control-group {
+    margin-bottom: 0px;
+  }
+
+  .control-label {
+    width: $maxSearchLabelWidth;
+    padding-top: 1px;
+    text-align: right;
+  }
+
+  .controls {
+    margin-left: $maxSearchLabelWidth + 20;
+    padding-top: 5px;
+
+    label {
+      display: inline;
+    }
+  }
+
+  .submit-group {
+    margin: {
+      top: 5px;
+    }
+  }
+}
+
+input[type="submit"] {
+  padding-top: 3px;
+}
+
+@media (max-width: 480px) {
+  .form-horizontal .controls {
+    margin-left: 0;
+    label {
+      display: block;
+    }
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: {
+      top: 5px;
+      bottom: 10px;
+    }
+  }
+}

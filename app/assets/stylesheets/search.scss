@@ -1,0 +1,82 @@
+@import "compass";
+@import "icons/*.png";
+@include all-icons-sprites;
+@import "search/variables";
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "search/mixins";
+@import "search/reset";
+@import "search/base";
+@import "search/misc";
+@import "search/header";
+@import "search/breadcrumbs";
+@import "search/sidebar";
+@import "search/tabs";
+@import "search/search";
+@import "search/results";
+@import "search/form";
+@import "search/az";
+
+div.rfr_id {
+  margin: {
+    top: 5px;
+  }
+  select {
+    margin: {
+      right: -10px;
+    }
+  }
+}
+
+.umlaut-az {
+  @extend .nyu-az;
+}
+
+.umlaut-pagination {
+  @extend .nyu-pagination;
+}
+
+.umlaut-citation-link {
+  text-align: right;
+  padding: {
+    top: $baseLineHeight;
+  }
+}
+
+@media (max-width: 767px) {
+  .umlaut-citation {
+    font: {
+      size: $baseFontSize*1.25
+    }
+    line-height: $baseLineHeight*2;
+    dl {
+      dt, dd {
+        padding: {
+          top: $baseLineHeight;
+        }
+      }
+    }
+  }
+
+  .umlaut-citation-link {
+    text-align: left;
+    font: {
+      size: $baseFontSize*1.25
+    }
+    line-height: $baseLineHeight*2;
+    padding: {
+      top: $baseLineHeight*2;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  div.rfr_id {
+    select {
+      width: auto;
+      margin: {
+        right: 0px;
+      }
+    }
+  }
+}
