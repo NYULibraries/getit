@@ -36,13 +36,13 @@ module RequestsHelper
   # Conditions for request link are:
   # ILL OR available OR recall OR in processing OR on_order OR offsite
   def self.link_to_request?(view_data, user_session)
-		return  (request_ill?(view_data, user_session) or 
+    return  (request_ill?(view_data, user_session) or 
       request_available?(view_data, user_session) or 
-      request_recall?(view_data, user_session) or 
-      request_in_processing?(view_data, user_session) or 
-      request_on_order?(view_data, user_session) or 
-      request_offsite?(view_data, user_session))
-	end
+        request_recall?(view_data, user_session) or 
+          request_in_processing?(view_data, user_session) or 
+            request_on_order?(view_data, user_session) or 
+              request_offsite?(view_data, user_session))
+  end
 
   # Returns a boolean indicating whether the the given view data
   # is available and requestable for the given user session
@@ -90,7 +90,7 @@ module RequestsHelper
   def self.request_ill?(view_data, user_session)
     return item_state_requestable?(view_data, @@requestable_ill_states)
   end
-  
+
   # We need to determine if the item state is valid for the type of request we're trying to make (e.g. recall, offsite)
   # We need to determine if the user's permissions are in a state that
   # is valid for the type of request we're trying to make (e.g. recall, offsite)
@@ -107,11 +107,11 @@ module RequestsHelper
     return (item_requestable?(item) and 
       user_permissions_state_requestable?(user_permissions_for_item, user_permissions_requestable_states))
   end
-  
+
   def self.item_requestable?(item)
     return [RequestableYes, RequestableDeferred].include?(item_requestability(item))
   end
-  
+
   # TODO: The two functions below are completely inconsistent and need to 
   # abstacted out to fix the inconsistencies.
   # Indicates whether the item is in a requestable state
@@ -122,7 +122,7 @@ module RequestsHelper
     }
     return false
   end
-  
+
   # Indicates whether the user permissions are in a requestable state
   # This is an AND test.
   def self.user_permissions_state_requestable?(user_permissions, requestable_states={})
@@ -131,7 +131,7 @@ module RequestsHelper
     }
     return true
   end
-  
+
   # There are three states of requestability for an item
   #   1. The item is requestable
   #   2. The item is sometimes requestable, but the decision is deferred to another decider
@@ -140,12 +140,12 @@ module RequestsHelper
     # TODO: Make this configurable per item type (e.g. Aleph, SomeOtherTrickedOutSystem)
     aleph_item_requestability(item)
   end
-  
+
   def self.user_permissions_for_item(user_session, item)
     # TODO: Make this configurable per item type (e.g. Aleph, SomeOtherTrickedOutSystem)
     aleph_user_permissions_for_item(user_session, item)
   end
-  
+
   # Aleph methods
   def self.aleph_helper
     Exlibris::Aleph::TabHelper.instance()
@@ -180,7 +180,7 @@ module RequestsHelper
       :item_status_code => aleph_item[:aleph_item_status_code],
       :item_process_status_code => aleph_item[:aleph_item_process_status_code] ) 
   end
-  
+
   def self.aleph_user_permissions_for_item(user_session, item={})
     aleph_item = item[:source_data]
     return {} if user_session.nil? or aleph_item.nil?
@@ -259,8 +259,8 @@ module RequestsHelper
         available_display += "\t\t\tRequest this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE).<br />\n"
       elsif (ad_sub_libraries.include?(@aleph_item_sub_library_code))
         available_display += "\t\t\tRequest this item.\n"
-			  available_display += "\t\t\tIt will be held for you at the specified pickup location.\n"
-			  available_display += "\t\t\tItems are ready for pickup within 2 business days.<br />\n"
+        available_display += "\t\t\tIt will be held for you at the specified pickup location.\n"
+        available_display += "\t\t\tItems are ready for pickup within 2 business days.<br />\n"
       else
         available_display += "\t\t\tRequest this item to be delivered to the pickup location of your choice.<br />\n"
       end
@@ -269,7 +269,7 @@ module RequestsHelper
     end
     available_display += "\t\t</div>\n"
     available_display += "\t</li>\n"
-  	available_display += "\t#{submit_tag('Submit')}\n"
+    available_display += "\t#{submit_tag('Submit')}\n"
     return available_display
   end
 
@@ -278,9 +278,9 @@ module RequestsHelper
     recall_display = ""
     recall_display +=  (@view_data[:status].match(/Requested/)) ? 
       display_recall_requested : display_recall_regular
-  	recall_display += "\t\t\t#{display_pickup_locations}\n"
-  	recall_display += "\t\t\t#{display_delivery_times_link}\n"
-  	recall_display += "\t\t\t#{submit_tag('Submit') if pickup_locations.length > 1}\n"
+    recall_display += "\t\t\t#{display_pickup_locations}\n"
+    recall_display += "\t\t\t#{display_delivery_times_link}\n"
+    recall_display += "\t\t\t#{submit_tag('Submit') if pickup_locations.length > 1}\n"
     return recall_display
   end
 
@@ -288,30 +288,30 @@ module RequestsHelper
   def display_recall_regular
     recall_regular_display = ""
     if (pickup_locations.length == 1)
-		  recall_regular_display += "\t\t\t#{link_to(
-				"Recall this item from a fellow library user", 
-				{:controller => 'requests', :action=>"send_recall_request", :id=>params[:id], :pickup_location => pickup_locations.first.last},
-				{:target => "_blank", :class => "ajax_window"})}.<br />\n"
-		elsif pickup_locations.length > 1
-			recall_regular_display += "\t\t\tRecall this item from a fellow library user.\n"
-	  end
+    recall_regular_display += "\t\t\t#{link_to(
+      "Recall this item from a fellow library user", 
+        {:controller => 'requests', :action=>"send_recall_request", :id=>params[:id], :pickup_location => pickup_locations.first.last},
+          {:target => "_blank", :class => "ajax_window"})}.<br />\n"
+    elsif pickup_locations.length > 1
+      recall_regular_display += "\t\t\tRecall this item from a fellow library user.\n"
+    end
     afc_sub_libraries = ["BAFC"]
     recall_date = (afc_sub_libraries.include?(@aleph_item_sub_library_code)) ? "1 week" : "2 weeks"
     recall_regular_display += "\t\t\tThe item will be available within #{recall_date}.<br />\n"
     return recall_regular_display
   end
-  
+
   # Display 'recall' request options if the item is requested
   def display_recall_requested
     recall_requested_display = "\t\t\tThis material has been requested by a fellow library user.\n"
     if (pickup_locations.length == 1)
-		  recall_requested_display += "\t\t\t#{link_to(
-				"You may also place a request to be added to the queue", 
-				{:controller => 'requests', :action=>"send_recall_request", :id=>params[:id], :pickup_location => pickup_locations.first.last},
-				{:target => "_blank", :class => "ajax_window"})}.<br />\n"
-		elsif pickup_locations.length > 1
-			recall_requested_display += "\t\t\tYou may also place a request to be added to the queue.<br />\n"
-	  end
+      recall_requested_display += "\t\t\t#{link_to(
+        "You may also place a request to be added to the queue", 
+          {:controller => 'requests', :action=>"send_recall_request", :id=>params[:id], :pickup_location => pickup_locations.first.last},
+            {:target => "_blank", :class => "ajax_window"})}.<br />\n"
+    elsif pickup_locations.length > 1
+      recall_requested_display += "\t\t\tYou may also place a request to be added to the queue.<br />\n"
+    end
     return recall_requested_display
   end
 
@@ -321,21 +321,21 @@ module RequestsHelper
       "#{label("pickup_location", "Select pickup location:")} #{select_tag('pickup_location', options_for_select(pickup_locations))}\n" : 
       (pickup_locations.length == 1) ?
         "<strong>Pickup location is #{pickup_locations.first.first}</strong>#{hidden_field_tag("pickup_location", pickup_locations.first.last)}\n" :
-        "<strong>Pickup location is #{decode_sub_library(@aleph_item_sub_library_code)}</strong>#{hidden_field_tag("pickup_location", @aleph_item_sub_library_code)}\n"
+          "<strong>Pickup location is #{decode_sub_library(@aleph_item_sub_library_code)}</strong>#{hidden_field_tag("pickup_location", @aleph_item_sub_library_code)}\n"
   end
-  
+
   # Display delivery times link
   def display_delivery_times_link
     return (pickup_locations.length > 1) ? 
       "<div>(<a href=\"http://library.nyu.edu/services/deliveryservices.html\" target=\"_blank\">See delivery times</a>)</div>\n" : ""
   end
-  
+
   # Display delivery help link
   def display_delivery_help_link
     return (request_option_count > 1) ? 
       "<p style=\"margin-top: 1em;\"><a class=\"nyulibrary_icons_information\" href=\"http://library.nyu.edu/help/requesthelp.html\" target=\"_blank\">Not sure which option to choose?</a></p>\n" : ""
   end
-  
+
   def request_option_count
     count = 0
     count += 1 if request_available?
@@ -346,7 +346,7 @@ module RequestsHelper
     count += 1 if request_ill?
     return count
   end
-  
+
   # Gather and return pickup locations
   def pickup_locations
     return @pickup_locations if defined?(@pickup_locations)

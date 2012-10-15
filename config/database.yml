@@ -64,7 +64,7 @@ production:
 # for this purpose, rather than use one of the full-access existing SFX
 # mysql accounts. 
 #
-sfx_nyu:
+sfx_db:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310
@@ -74,7 +74,7 @@ sfx_nyu:
   pool: 30
   encoding: utf8
 
-sfx_cu:
+sfx4_cu:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310
@@ -84,7 +84,7 @@ sfx_cu:
   pool: 30
   encoding: utf8
 
-sfx_ns:
+sfx4_ns:
   adapter: mysql2
   host: sfx4.library.newschool.edu
   port: 3310
@@ -94,7 +94,7 @@ sfx_ns:
   pool: 30
   encoding: utf8
 
-sfx_global:
+sfx4_global:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310 # 3310 is defualt SFX embedded mysql port

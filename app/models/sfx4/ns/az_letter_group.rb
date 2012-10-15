@@ -1,8 +1,7 @@
 module Sfx4
   module Ns
-    class AzLetterGroup < ActiveRecord::Base
-      # include Sfx4::Local::AzLetterGroup
-      include Sfx4::Ns::Connection
+    class AzLetterGroup < Sfx4::Ns::Base
+      # include Sfx4::Abstract::AzLetterGroup
     end
   end
 end

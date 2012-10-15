@@ -1,4 +1,3 @@
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -15,4 +14,3 @@
 // also forces require of jquery and jquery-ui, dependencies. 
 //= require 'umlaut'          
 //= require jquery_ujs
-//= require_tree .

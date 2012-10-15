@@ -16,113 +16,112 @@ require 'umlaut_configurable'
 # methods from Umlaut::ControllerBehavior if desired. Or add
 # additional helpers to over-ride Umlaut helpers if needed. 
 class UmlautController < ApplicationController
-  # before_filter :init_config
+  before_filter :institutional_config
   include Umlaut::ControllerBehavior
-  
-  def init_config
-    # config_defaults
+
+  # Set the config based on the institutional settings.
+  # TODO: store in cache so we don't process each time.
+  def institutional_config
+    # Insitution for the closure.
+    institution = current_primary_institution
     self.umlaut_config.configure do
-      unless current_primary_institution.nil? or current_primary_institution.layouts.nil?
-        resolve_layout current_primary_institution.layouts["resolve"] unless current_primary_institution.layouts["resolve"].nil?
-        search_layout current_primary_institution.layouts["search"] unless current_primary_institution.layouts["search"].nil?
-      end
-      unless current_primary_institution.nil? or current_primary_institution.search.nil?
-        search do
-          az_search_method current_primary_institution.search["az_search_method"] unless current_primary_institution.search["az_search_method"].nil?
-          sfx_db current_primary_institution.search["sfx_db"] unless current_primary_institution.search["sfx_db"].nil?
+      unless institution.nil? or institution.views.nil?
+        sfx do
+          sfx_base_url institution.views["sfx_base_url"] unless institution.views["sfx_base_url"].nil?
         end
       end
-      unless current_primary_institution.nil? or current_primary_institution.views.nil?
-        sfx do
-          sfx_base_url current_primary_institution.views["sfx_base_url"] unless current_primary_institution.views["sfx_base_url"].nil?
+      unless institution.nil? or institution.controllers.nil?
+        search do
+          az_search_method institution.controllers["searcher"] unless institution.controllers["searcher"].nil?
         end
       end
     end
   end
+
+  umlaut_config.configure do 
+    app_name 'Get It'
   
-  # def config_defaults
-  #   self.umlaut_config.configure do 
-    umlaut_config.configure do 
-      app_name 'Get It'
-    
-      # URL to image to use for link resolver in some self-links, 
-      # OR name of image asset in local app. 
-      link_img_url "http://library.nyu.edu/getit.gif"
-    
-      # Sometimes Umlaut sends out email, what email addr should it be from?
-      from_email_addr 'no-reply@library.nyu.edu'
-    
-      # Local layout for UmlautController's, instead of
-      # built in 'umlaut' layout?
-      # layout "application"
-      resolve_layout "nyu/resolve"
-      search_layout "nyu/search"
-    
-      # A help url used on error page and a few other places.
-      help_url  "http://library.nyu.edu/ask"
-
-      # If OpenURL came from manual entry of title/ISSN, and no match is found in
-      # link resolver knowledge base, display a warning to the user of potential
-      # typo?
-      # entry_not_in_kb_warning true
-    
-      # rfr_ids used for umlaut generated pages.
-      # rfr_ids do
-      #   opensearch  "info:sid/umlaut.code4lib.org:opensearch"
-      #   citation    "info:sid/umlaut.code4lib.org:citation"
-      #   azlist      'info:sid/umlaut.code4lib.org:azlist'
-      # end
-    
-      # Referent filters. Sort of like SFX source parsers.
-      # hash, key is regexp to match a sid, value is filter object
-      # (see lib/referent_filters )        
-      # add_referent_filters!( :match => /.*/, :filter => DissertationCatch.new ) 
+    # URL to image to use for link resolver in some self-links, 
+    # OR name of image asset in local app. 
+    link_img_url "http://library.nyu.edu/getit.gif"
   
-      # How many seconds between updates of the background updater for background
-      # services?
-      # poll_wait_seconds 4
-    
-      # Configuration for the 'search' functions -- A-Z lookup
-      # and citation entry. 
-      search do
-        # Is your SFX database connection, defined in database.yml under
-        # sfx_db and used for A-Z searches, Sfx3 or Sfx4?  Other SearchMethods
-        # in addition to SFX direct db may be provided later. 
-        az_search_method  SearchMethods::Sfx4Solr::Nyu
-      
-        # When talking directly to the SFX A-Z list database, you may
-        # need to set this, if you have multiple A-Z profiles configured
-        # and don't want to use the 'default.
-        # sfx_az_profile "default"    
-              
-        # can set to "_blank" etc. 
-        result_link_target _blank        
-      end
-    
-      # config only relevant to SFX use  
-      sfx do      
-        # base sfx url to use for search actions, error condition backup,
-        # and some other purposes. For search actions (A-Z), direct database
-        # connection to your SFX db also needs to be defined in database.yml
-        sfx_base_url  'http://sfx.library.nyu.edu/sfxlcl41?'
+    # Sometimes Umlaut sends out email, what email addr should it be from?
+    from_email_addr 'no-reply@library.nyu.edu'
+  
+    # Local layout for UmlautController's, instead of
+    # built in 'umlaut' layout?
+    # layout "application"
+    resolve_layout "resolve"
+    search_layout "search"
+  
+    # A help url used on error page and a few other places.
+    help_url  "http://library.nyu.edu/ask"
 
-        # Umlaut tries to figure out from the SFX knowledge base
-        # which hosts are "SFX controlled", to avoid duplicating SFX
-        # urls with urls from catalog. But sometimes it misses some, or
-        # alternate hostnames for some. Regexps matching against
-        # urls can be included here. Eg,
-        # AppConfig::Base.additional_sfx_controlled_urls = [
-        #    %r{^http://([^\.]\.)*pubmedcentral\.com}
-        #  ]    
-        # additional_sfx_controlled_urls = []
-      end
+    # If OpenURL came from manual entry of title/ISSN, and no match is found in
+    # link resolver knowledge base, display a warning to the user of potential
+    # typo?
+    # entry_not_in_kb_warning true
+  
+    # rfr_ids used for umlaut generated pages.
+    # rfr_ids do
+    #   opensearch  "info:sid/umlaut.code4lib.org:opensearch"
+    #   citation    "info:sid/umlaut.code4lib.org:citation"
+    #   azlist      'info:sid/umlaut.code4lib.org:azlist'
+    # end
+  
+    # Referent filters. Sort of like SFX source parsers.
+    # hash, key is regexp to match a sid, value is filter object
+    # (see lib/referent_filters )        
+    # add_referent_filters!( :match => /.*/, :filter => DissertationCatch.new ) 
 
-      # Advanced topic, you can declaratively configure
-      # what sections of the resolve page are output where
-      # and how using resolve_sections and add_resolve_sections!            
+    # How many seconds between updates of the background updater for background
+    # services?
+    # poll_wait_seconds 4
+  
+    # Configuration for the 'search' functions -- A-Z lookup
+    # and citation entry. 
+    search do
+      # Is your SFX database connection, defined in database.yml under
+      # sfx_db and used for A-Z searches, Sfx3 or Sfx4?  Other SearchMethods
+      # in addition to SFX direct db may be provided later. 
+      az_search_method  SearchMethods::Sfx4Solr::Local
+    
+      # When talking directly to the SFX A-Z list database, you may
+      # need to set this, if you have multiple A-Z profiles configured
+      # and don't want to use the 'default.
+      # sfx_az_profile "default"    
+            
+      # can set to "_blank" etc. 
+      result_link_target _blank        
     end
-  # end
   
+    # config only relevant to SFX use  
+    sfx do      
+      # base sfx url to use for search actions, error condition backup,
+      # and some other purposes. For search actions (A-Z), direct database
+      # connection to your SFX db also needs to be defined in database.yml
+      sfx_base_url  'http://sfx.library.nyu.edu/sfxlcl41?'
+
+      # Umlaut tries to figure out from the SFX knowledge base
+      # which hosts are "SFX controlled", to avoid duplicating SFX
+      # urls with urls from catalog. But sometimes it misses some, or
+      # alternate hostnames for some. Regexps matching against
+      # urls can be included here. Eg,
+      # AppConfig::Base.additional_sfx_controlled_urls = [
+      #    %r{^http://([^\.]\.)*pubmedcentral\.com}
+      #  ]    
+      # additional_sfx_controlled_urls = []
+    end
+
+    holdings do
+      available_statuses ["Available", "Check Availability", "Offsite Available"]
+    end
+
+    # Advanced topic, you can declaratively configure
+    # what sections of the resolve page are output where
+    # and how using resolve_sections and add_resolve_sections!            
+  end
+
   protected
   def create_collection    
     return Collection.new(@user_request, services(institutions(params[UserSession.institution_param_key])))
@@ -146,7 +145,7 @@ class UmlautController < ApplicationController
     Rails.logger.info("The following insitutions are in play: #{institutions.collect{|i| i.name}.inspect}")
     return institutions.collect{|i| i.name}
   end
-  
+
   def user_institutions
     user_session = UserSession.find
     user = user_session.record unless user_session.nil?

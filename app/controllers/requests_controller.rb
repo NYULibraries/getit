@@ -20,7 +20,7 @@ class RequestsController < UmlautController
     @aleph_rest_url = @aleph_url+":1891/rest-dlf" unless @aleph_url.nil?
     @illiad_url = "#{@illiad_url}/illiad/illiad.dll/OpenURL?#{@svc_type.request.to_context_object.kev}"
     @pickup_location = params.fetch(:pickup_location, "")
-    @is_scan = (params.fetch(:entire, "yes") == "no")?true:false
+    @is_scan = (params.fetch(:entire, "yes") == "no") ? true : false
     # Set note_2 as entire_yes/entire_no
     params[:note_2] = (@is_scan) ? "entire_no" : "entire_yes"
   end
@@ -30,7 +30,7 @@ class RequestsController < UmlautController
 
   def reset
   end
-  
+
   def send_available
     send_aleph(RequestsHelper.request_available?(@view_data, current_user_session), params)
   end
@@ -66,9 +66,9 @@ class RequestsController < UmlautController
     if request_check and patron
       begin
         patron.place_hold(@aleph_item_adm_library, @aleph_doc_library, @aleph_doc_number, @aleph_item_id, params)
-	      respond_to do |format|
-	        format.html {  render }
-	      end
+        respond_to do |format|
+          format.html {  render }
+        end
       rescue Exception => e
         if patron.error.nil?
           Rails.logger.error("Unexpected error in request controller.")

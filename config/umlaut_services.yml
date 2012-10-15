@@ -9,16 +9,33 @@
 # or source-generated docs for more info.   
 default:
   display_name: NYU Libraries
-  layouts: 
-    resolve: nyu/resolve
-    search: nyu/search
   login:
     link_code: NYU
-  searcher: SearchMethods::Sfx4Solr::NYU
   views:
-    tabs_partial: search/nyu/tabs
-    tip1_partial: search/nyu/tip1
-    tip2_partial: search/nyu/tip2
+    dir: nyu
+    breadcrumbs:
+      title: NYU Libraries
+      url: http://library.nyu.edu
+    tabs:
+      all:
+        display: 'Books & More'
+        url: http://bobcatdev.library.nyu.edu
+        tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, NYU dissertations, videos, sound recordings'
+      remote:
+        display: 'Articles & Databases'
+        url: https://webdev1.library.nyu.edu/arch
+        tip: by Subject and Content Type
+      databases:
+        display: Databases A-Z
+        url: https://webdev1.library.nyu.edu/arch/databases/alphabetical/
+        tip: All databases by title
+      journals:
+        display: E-Journals A-Z
+        tip: Find e-journals by title or locate a known article
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NYU&amp;tab=reserves'
+        tip: 'Search by instructor, course name, course title, etc.'
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
     # Priority 2
@@ -264,13 +281,31 @@ NYU:
 NYUAD:
   display_name: NYU Abu Dhabi Library
   parent_institution: NYU 
-  layouts: 
-    resolve: nyuad/resolve
-    search: nyuad/search
   views:
-    tabs_partial: search/nyuad/tabs
-    tip1_partial: search/nyuad/tip1
-    tip2_partial: search/nyu/tip2
+    dir: nyuad
+    breadcrumbs:
+      title: NYUAD Library
+      url: http://nyuad.nyu.edu/academics/library/index.html
+    tabs:
+      all:
+        display: 'Books & More'
+        url: http://bobcatdev.library.nyu.edu/nyuad
+        tip: 'Books, E-Books, Journal Titles, Audio, Video & More'
+      remote:
+        display: Articles
+        url: https://webdev1.library.nyu.edu/arch/nyuad
+        tip: Sorted by Subject and Content Type
+      databases:
+        display: Databases A-Z
+        url: https://webdev1.library.nyu.edu/arch/nyuad/databases/alphabetical/
+        tip: All Databases by Title
+      journals:
+        display: Journals A-Z
+        tip: Find E-journals by Title or Locate a Known Article
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NYUAD&tab=nyuadcr'
+        tip: 'Search by Course or Professor'
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   ip_addresses:
     - 192.168.224.0/23
@@ -301,15 +336,32 @@ NYUAD:
 
 CU:
   display_name: The Cooper Union Library
-  searcher: SearchMethods::Sfx4Solr::CU
-  layouts: 
-    resolve: cu/resolve
-    search: cu/search
   login:
     link_code: CU
   views:
-    tabs_partial: search/cu/tabs
+    dir: cu
+    breadcrumbs:
+      title: Cooper Union Library
+      url: http://library.cooper.edu
+    tabs:
+      all:
+        display: Consortium Catalog
+        url: http://bobcatdev.library.nyu.edu/cooper
+        tip: 'Books & e-books, journals & e-journals, scripts, scores, archival materials, videos, sound recordings, and other materials in the Consortium libraries'
+      cu:
+        display: Cooper Library Catalog
+        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=CU&tab=cu"
+        tip: 'Books & e-books, journals & e-journals, videos, and other materials in the Cooper Union Library'
+      journals:
+        display: E-Journals
+        tip: Browse e-journals by title or search for a specific article
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=CU&amp;tab=cucr'
+        tip: 'Search course reserves by instructor, course name or number, author, title, and other terms'
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
+  controllers:
+    searcher: SearchMethods::Sfx4Solr::CU
   ip_addresses:
     - 199.98.16.0-199.98.31.255 
   services:
@@ -328,15 +380,40 @@ CU:
 
 NS:
   display_name: New School Libraries
-  searcher: SearchMethods::Sfx4Solr::NS
-  layouts: 
-    resolve: cu/resolve
-    search: cu/search
   login:
     link_code: NS
   views:
-    tabs_partial: search/ns/tabs
+    dir: ns
+    breadcrumbs:
+      title: New School Libraries
+      url: http://library.newschool.edu
+    tabs:
+      all:
+        display: Find resources in All Consortium Libraries
+        url: http://bobcatdev.library.nyu.edu/newschool
+        tip: Find resources in All Consortium Libraries
+      ns:
+        display: New School Resources
+        url: "http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&vid=NS&tab=ns"
+        tip: Find New School Resources
+      remote:
+        display: Articles and Databases
+        url: https://webdev1.library.nyu.edu/arch/ns
+        tip: 'Search for articles, images and media by subject'
+      databases:
+        display: Databases A-Z
+        url: https://webdev1.library.nyu.edu/arch/ns/databases/alphabetical/
+        tip: All databases by title
+      journals:
+        display: Journals A-Z
+        tip: Locate journals by title or citation
+      reserves:
+        display: Course Reserves
+        url: 'http://bobcatdev.library.nyu.edu/primo_library/libweb/action/search.do?mode=Basic&amp;vid=NS&amp;tab=nscr'
+        tip: 'Search for Reserves by title or instructor name'
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
+  controllers:
+    searcher: SearchMethods::Sfx4Solr::NS
   ip_addresses:
     - 149.31.0.0-149.31.255.255
     - 69.64.210.46
@@ -364,9 +441,6 @@ NS:
 NYSID:
   login:
     link_code: NYSID
-  layouts: 
-    resolve: nysid/resolve
-    search: nysid/search
   display_name: New York School of Interior Design Library
   ip_addresses:
     - 128.122.0.1

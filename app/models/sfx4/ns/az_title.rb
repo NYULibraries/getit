@@ -1,8 +1,7 @@
 module Sfx4
   module Ns
-    class AzTitle < ActiveRecord::Base
-      # include Sfx4::Local::AzTitle
-      include Sfx4::Ns::Connection
+    class AzTitle < Sfx4::Ns::Base
+      # include Sfx4::Abstract::AzTitle
     end
   end
 end

@@ -1,8 +1,4 @@
 <div id="search_container" class="search_container">
-	<%= render :partial=> current_primary_institution.views["tabs_partial"] unless 
-		(current_primary_institution.nil? or current_primary_institution.views.nil? or 
-			current_primary_institution.views.nil? or 
-				current_primary_institution.views["tabs_partial"].nil?) %>
 	<%= form_tag({:controller=>'search', :action=>'journal_search'}, {:method=>'get', :name=>'OpenURL', :id=>'OpenURL'})  %>
 		<div id="search_basic" class="search">                                      
 			<fieldset>
