@@ -147,14 +147,16 @@ module Exlibris::Primo::Source
       # Initialize status and status code.
       aleph_status_code, aleph_status = nil, nil
       # Loop through source config for statuses
+      # Note: since aleph_config_status_code is a hash key, it is frozen.
+      # and needs to be dup'ed to fit in with Umlaut's force_encode code.
       aleph_config["statuses"].each { |aleph_config_status_code, aleph_config_status|
         # Set checked out as Aleph status and code
-        aleph_status_code = aleph_config_status_code and 
+        aleph_status_code = aleph_config_status_code.dup and 
           aleph_status = "Due: " + @aleph_item_circulation_status and
-            break if (aleph_config_status_code == "checked_out" and 
+            break if (aleph_config_status_code.dup == "checked_out" and 
               aleph_config_status === @aleph_item_circulation_status)
         # Set circulation statuses like On Shelf, Billed as Lost, as Aleph status and code
-        aleph_status_code = aleph_config_status_code and
+        aleph_status_code = aleph_config_status_code.dup and
           break if (aleph_config_status.instance_of?(Array) and 
             aleph_config_status.include?(@aleph_item_circulation_status))
       } unless aleph_config.nil? or aleph_config["statuses"].nil?
@@ -173,7 +175,7 @@ module Exlibris::Primo::Source
         aleph_status_code = "overridden_by_nyu_aleph" unless aleph_status.nil?
       end
       # Set status code if we have it.
-      status_code = aleph_status_code unless aleph_status_code.nil?
+      status_code = aleph_status_code.dup unless aleph_status_code.nil?
       # Set status based on Primo config.
       status = (aleph_status.nil?) ? @config["statuses"][status_code] : aleph_status
       return status_code, status
