@@ -41,6 +41,6 @@ gem 'passenger'
 gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
 # gem 'umlaut', :path => '/Users/dalton/Documents/workspace/umlaut/umlaut3'
 gem 'sunspot_rails'
-gem 'exlibris-aleph', "~> 0.1.1"
+gem 'exlibris-aleph', "~> 0.1.4"
 gem 'authpds-nyu', "~> 0.1.4"
 gem 'dalli'
