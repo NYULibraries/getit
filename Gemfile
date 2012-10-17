@@ -14,6 +14,7 @@ group :assets do
     gem 'therubyracer'
   end
   gem 'uglifier', '>= 1.0.3'
+  gem 'compass', '~>0.12.2'
 end
 
 platforms :jruby do
@@ -44,3 +45,7 @@ gem 'sunspot_rails'
 gem 'exlibris-aleph', "~> 0.1.4"
 gem 'authpds-nyu', "~> 0.1.4"
 gem 'dalli'
+
+group :development, :test do
+  gem 'progress_bar'
+end

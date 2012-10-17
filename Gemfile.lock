@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: eff547a45bd8ec6f317da0190a204a00894b4252
+  revision: 17a4e0bbc72d05b2c8c550a071d2e7f60d07d486
   branch: bootstrap
   specs:
     umlaut (3.0.3)
@@ -102,6 +102,7 @@ GEM
       nokogiri
       soap4r-ruby1.9
     fastthread (1.0.7)
+    fattr (2.2.1)
     fssm (0.2.9)
     highline (1.6.15)
     hike (1.2.1)
@@ -146,6 +147,8 @@ GEM
     openurl (0.4.2)
       ensure_valid_encoding
       marc
+    options (2.3.0)
+      fattr
     passenger (3.0.17)
       daemon_controller (>= 1.0.0)
       fastthread (>= 1.0.1)
@@ -153,6 +156,9 @@ GEM
       rake (>= 0.8.1)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
+    progress_bar (0.4.0)
+      highline (~> 1.6.1)
+      options (~> 2.3.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -222,6 +228,7 @@ DEPENDENCIES
   authpds-nyu (~> 0.1.4)
   capistrano
   coffee-rails (~> 3.2.1)
+  compass (~> 0.12.2)
   dalli
   exlibris-aleph (~> 0.1.4)
   jdbc-mysql
@@ -230,6 +237,7 @@ DEPENDENCIES
   jruby-rack
   mysql2
   passenger
+  progress_bar
   rails (= 3.2.5)
   rvm-capistrano
   sass-rails (~> 3.2.3)
