@@ -5,7 +5,7 @@ production:
     port: 80
     log_level: WARNING
 
-development:
+staging:
   solr:
     hostname: index.websolr.com
     path: /solr/f0fdfe03534
@@ -13,6 +13,13 @@ development:
     log_level: WARNING
 
 test:
+  solr:
+    hostname: index.websolr.com
+    path: /solr/f0fdfe03534
+    port: 80
+    log_level: WARNING
+
+development:
   solr:
     hostname: index.websolr.com
     path: /solr/f0fdfe03534

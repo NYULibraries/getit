@@ -47,7 +47,7 @@ test:
   password: 0m!l40t
   host: mysqldev.library.nyu.edu
 
-production:
+staging:
   adapter: mysql2
   encoding: utf8
   reconnect: false
@@ -56,6 +56,16 @@ production:
   username: umlaut3
   password: 0m!l40t
   host: mysqldev.library.nyu.edu
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: umlaut3
+  pool: 30
+  username: umlaut3
+  password: 0m!l40tP
+  host: mysql.library.nyu.edu
 
 #
 # UMLAUT: for the 'search' functions (A-Z title lookup) to work, you need
