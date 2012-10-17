@@ -22,21 +22,21 @@
     
     test "fulltext search" do
       query = "New York"
-      results = Sfx4::Nyu::AzTitle.search {fulltext query}.results
+      results = Sfx4::Local::AzTitle.search {fulltext query}.results
       assert_instance_of Array, results
       assert(results.size > 0)
     end
 
     test "starts with search" do
       query = "Journal of"
-      results = Sfx4::Nyu::AzTitle.search {with(:title_exact).starting_with(query)}.results
+      results = Sfx4::Local::AzTitle.search {with(:title_exact).starting_with(query)}.results
       assert_instance_of Array, results
       assert(results.size > 0)
     end
 
     test "exact search" do
       query = "The New Yorker"
-      results = Sfx4::Nyu::AzTitle.search {with(:title_exact, query)}.results
+      results = Sfx4::Local::AzTitle.search {with(:title_exact, query)}.results
       assert_instance_of Array, results
       assert(results.size > 0)
     end
