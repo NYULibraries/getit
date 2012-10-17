@@ -1,4 +1,4 @@
-Umlaut3::Application.routes.draw do
+GetIt::Application.routes.draw do
   Umlaut::Routes.new(self).draw
 
   # The priority is based upon order of creation:
