@@ -1,8 +1,9 @@
 module ApplicationHelper
   def search_stylesheets
     # search_stylesheets += stylesheet_link_tag 'https://library.nyu.edu/css/common/bobcat.css'
-    search_stylesheets = stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
     search_stylesheets = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Muli"
+    search_stylesheets += stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
+    search_stylesheets += stylesheet_link_tag "http://library.nyu.edu/scripts/jquery/css/nyulibraries_gray/jquery-ui.css"
     search_stylesheets += stylesheet_link_tag "search"
   end
 
