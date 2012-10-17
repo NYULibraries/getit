@@ -14,6 +14,7 @@ set :rvm_ruby_string, "1.9.3-p125"
 set :rvm_type, :user
 
 # Bundle vars
+set :bundle_without, [:development, :test]
 
 # Git vars
 set :repository, "git@github.com:NYULibraries/getit.git" 
