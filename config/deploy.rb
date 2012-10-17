@@ -31,6 +31,7 @@ set :keep_releases, 5
 set :use_sudo, false
 
 # Rails specific vars
+set :rails_env, "production"
 set :normalize_asset_timestamps, false
 
 namespace :deploy do
