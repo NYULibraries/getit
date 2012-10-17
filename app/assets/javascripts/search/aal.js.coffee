@@ -1,1 +1,1 @@
-jQuery("#aal").nyulibrary_libraryhelp("init");
+# jQuery("#aal").nyulibrary_libraryhelp("init");
