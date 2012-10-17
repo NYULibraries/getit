@@ -65,4 +65,5 @@ namespace :cache do
 end
 
 before "deploy", "deploy:migrations"
+after 'deploy:update_code', 'deploy:assets:precompile'
 after "deploy", "deploy:cleanup", "deploy:passenger_symlink", "cache:clear", "cache:tmp_clear"
