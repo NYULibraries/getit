@@ -1,6 +1,6 @@
 .results {
   @extend .separator;
- 	background-color: $resultsBackgroundColor;
+  background-color: $resultsBackgroundColor;
 }
 
 .result {
@@ -17,7 +17,105 @@
   }
 }
 
+.nyu-resource {
+  padding: {
+    top: 10px;
+    left: 10px;
+  }
+}
+
 .nyu-pagination {
   @extend .pagination;
   font-size: 125%;
+}
+
+div.appetizer {
+  div.number {
+    @extend .pull-left;
+    margin: {
+      right: $baseLineHeight;
+    }
+  }
+  a.content-type {
+    figure {
+      margin: {
+        top: 0px;
+        left: $baseLineHeight/2;
+        right: $baseLineHeight;
+      }
+    }
+    @extend .pull-left;
+    color: black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+div.entree {
+  h2.title {
+    margin: {
+      top: 0px;
+    }
+  }
+  div.frbr {
+    margin-bottom: $padding_small * .25;
+  }
+  div.fulldetails {
+    margin-top: $padding_small * .75;
+  }
+  div.author {
+    margin-bottom: $padding_small * .25;
+  }
+  div.locations {
+    margin: ($padding_small * .75) 0;
+  }
+  div.delivery {
+    font-size: 125%;
+    margin: ($padding_small * .75) 0;
+    span {
+      font-weight: bold;
+      &.getItText {	font-weight: normal; }
+    }
+  }
+  div.save_record {
+    margin: .5em 0;
+    ul {
+      @include no-padding;
+      @include no-margin;
+      display: inline;
+      li {
+        @include no-padding;
+        @include no-margin;
+        display: inline;
+        &.separator {	margin: 0 ($padding_small * .25); }
+      }
+    }
+  }
+  div.dessert, div.desert {
+    @include float-right;
+    margin-left: $padding_small;
+  }
+}
+
+@media (max-width: 767px) {
+  .nyu-resource {
+    font: {
+      size: $baseFontSize*1.25
+    }
+    line-height: $baseLineHeight*2;
+    dl {
+      dt, dd {
+        padding: {
+          top: $baseLineHeight;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  div.entree {
+    margin-left: 30%;
+  }
 }

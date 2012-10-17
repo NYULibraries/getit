@@ -8,6 +8,7 @@
 @import "search/reset";
 @import "search/base";
 @import "search/misc";
+@import "search/content_types";
 @import "search/header";
 @import "search/breadcrumbs";
 @import "search/sidebar";
@@ -16,6 +17,8 @@
 @import "search/results";
 @import "search/form";
 @import "search/az";
+
+@import "http://library.nyu.edu/scripts/jquery/css/nyulibraries_gray/jquery-ui.css";
 
 div.rfr_id {
   margin: {

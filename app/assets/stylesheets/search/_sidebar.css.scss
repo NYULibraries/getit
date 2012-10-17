@@ -28,3 +28,21 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .sidebar {
+    font: {
+      size: $baseFontSize*1.25;
+    }
+    .sidebar-section {
+      ul {
+        li {
+          margin: {
+            top: $baseLineHeight*1.25;
+            bottom: $baseLineHeight*1.25;
+          }
+        }
+      }
+    }
+  }
+}

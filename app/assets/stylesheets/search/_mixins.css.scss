@@ -22,3 +22,17 @@
   vertical-align: middle;
   margin-top: 1px;
 }
+
+@mixin nyu-content-type-icons {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+@mixin no-margin {
+  margin: 0;
+}
+
+@mixin no-padding {
+  padding: 0;
+}

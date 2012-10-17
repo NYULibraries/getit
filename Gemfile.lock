@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/dalton/Documents/workspace/umlaut/umlaut3
+GIT
+  remote: git://github.com/team-umlaut/umlaut.git
+  revision: 02e0e7eaae40f04b1f0ed51615b5e5eb2e4a8c1d
+  branch: bootstrap
   specs:
     umlaut (3.0.3)
       bootstrap-sass
@@ -94,9 +96,10 @@ GEM
       httparty
       nokogiri
       rails (~> 3.2.0)
-    exlibris-primo (0.1.1)
+    exlibris-primo (0.1.5)
+      activesupport (~> 3.2.0)
+      json
       nokogiri
-      rails (~> 3.2.0)
       soap4r-ruby1.9
     fastthread (1.0.7)
     fssm (0.2.9)
