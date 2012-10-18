@@ -1,3 +1,5 @@
 //= require 'umlaut'          
 //= require jquery_ujs
-//= require ./search
+//= require bootstrap-tooltip
+//= require bootstrap-popover
+//= require_tree ./search

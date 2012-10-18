@@ -1,5 +1,8 @@
-.nyu-login {
+ul.nyu-login {
   @extend .pull-right;
+  li {
+    display: inline;
+  }
 }
 
 .login, .logout {

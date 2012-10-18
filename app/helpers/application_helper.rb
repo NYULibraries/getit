@@ -14,10 +14,10 @@ module ApplicationHelper
   end
 
   def search_javascripts
-    search_javascripts = javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.libraryhelp.js"
-    search_javascripts += javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.poshytip.min.js"
-    search_javascripts += javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.popuptip.js"
-    search_javascripts += javascript_include_tag "search"
+    # search_javascripts = javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.libraryhelp.js"
+    # search_javascripts += javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.poshytip.min.js"
+    # search_javascripts += javascript_include_tag "https://library.nyu.edu/scripts/jquery/plugins/jquery.nyulibrary.popuptip.js"
+    search_javascripts = javascript_include_tag "search"
   end
 
   def resolve_javascripts
@@ -59,10 +59,16 @@ module ApplicationHelper
       institutional_tabs.collect{|id, values|
         content_tag(:li, 
           ((id.eql? "journals") ? 
-            link_to(values["display"], {:controller => "search"}, :title => values["tip"], :class => ["tip-delayed"]) : 
-              link_to(values["display"], values["url"], {:title => values["tip"], :class => "tip-delayed"})),
+            link_to_with_popover(values["display"], {:controller => "search"}, values["tip"]) : 
+              link_to_with_popover(values["display"], values["url"], values["tip"])),
           :id =>id, :class => (id.eql? "journals") ? "active" : "")}.join.html_safe, 
       :class => classes)
+  end
+  
+  def link_to_with_popover(*args)
+    content = args.delete_at 2
+    args[2] = {"title" => args[0], "data-content" => content, :rel => "popover", :class => "tip"}
+    link_to(*args)
   end
 
   def expire_old_holdings(request, holdings)

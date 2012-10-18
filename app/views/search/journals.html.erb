@@ -27,8 +27,7 @@
           <div class="controls">
             <%= text_field :journal, :issn, {:name=>'rft.issn', :max_length => "9", :class=>"issn input-xlarge"} %>
             <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/journal.html", 
-              :class => ["nyulibrary_help", "help-inline"], 
-                :title => "Click for more information.", :target => "_blank")%>
+              :class => ["remote-tip", "help-inline"], :rel => "popover", :title => "What is an ISSN?", :target => "_blank")%>
           </div>
         </div>
         <div class="submit-group">
@@ -92,8 +91,7 @@
           <div class="controls">
             <input id="rft_id_value" name="rft_id_value" type="text" value="<%#= co_param('rft_id_value') %>" />
             <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/article_identifiers.html", 
-              :class => ["nyulibrary_icons_information", "nyulibrary_help", "help-inline"], 
-                :title => "Click for more information.", :target => "_blank")%>
+              :class => ["remote-tip", "help-inline"], :rel => "popover", :title => "What is a DOI or PMID ?", :target => "_blank")%>
           </div>
         </div>
         <div class="submit-group">
