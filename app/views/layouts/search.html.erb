@@ -10,17 +10,13 @@
   </head>
   <body>
     <header id="header" class="header">
-      <a href="http://library.nyu.edu/"><span>NYU Libraries</a>
-      <span>GetIt @ NYU Libraries</span>
+      <div><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
+      <div><span>GetIt @ NYU Libraries</span></div>
       <div id="bobcat_title"><span>BobCat</span></div>
     </header>
     <nav id="nav1" class="breadcrumb">
-      <div id="breadcrumbs">
-        <%= breadcrumbs.html_safe %>
-      </div>
-      <div id="login" class="pull-right">
-        <%= login.html_safe %>
-      </div>
+      <%= breadcrumbs %>
+      <%= login %>
     </nav>
     <div class="nyu-container">
       <div class="container-fluid nyu-container">

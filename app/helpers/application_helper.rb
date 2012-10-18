@@ -26,6 +26,7 @@ module ApplicationHelper
   end
 
   def breadcrumbs
+    breadcrumbs = nil
     unless params["controller"] == "export_email"
       institutional_breadcrumbs = current_primary_institution.views["breadcrumbs"]
       breadcrumbs = 
@@ -39,15 +40,21 @@ module ApplicationHelper
       else
         breadcrumbs += content_tag :li, "E-Journals A-Z"
       end
-      content_tag :ul, breadcrumbs, :class => ["pull-left"] unless breadcrumbs.nil?
+      breadcrumbs = content_tag :ul, breadcrumbs, :class => ["pull-left"] unless breadcrumbs.nil?
     end
+    content_tag(:div, breadcrumbs, :id => "breadcrumbs")
   end
 
   def login
     login = content_tag :li, ((current_user) ? 
       content_tag(:i, nil, :class => "icons-famfamfam-lock") + link_to("Log-out #{current_user.firstname}", logout_url, :class=>"logout") : 
         content_tag(:i, nil, :class => "icons-famfamfam-lock_open") + link_to("Login", login_url({"umlaut.institution" => current_primary_institution.name}), :class=>"login"))
-    content_tag :ul, login, :class => ["unstyled"]
+    login = content_tag :ul, login, :class => ["unstyled"]
+    content_tag(:div, login, :id => "login")
+  end
+
+  def permalink_nav
+    content_tag(:div, "URL: #{link_to current_permalink_url, current_permalink_url}", :id => "permalink") if permalink = current_permalink_url()
   end
 
   def tabs(classes="")
@@ -60,10 +67,6 @@ module ApplicationHelper
               link_to(values["display"], values["url"], {:title => values["tip"], :class => "tip-delayed"})),
           :id =>id, :class => (id.eql? "journals") ? "active" : "")}.join.html_safe, 
       :class => classes)
-  end
-
-  def permalink_nav
-    content_tag(:div, "URL: #{link_to current_permalink_url, current_permalink_url}", :id => "permalink") if permalink = current_permalink_url()
   end
 
   def expire_old_holdings(request, holdings)
