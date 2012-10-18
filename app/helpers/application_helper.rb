@@ -1,16 +1,15 @@
 module ApplicationHelper
   def search_stylesheets
-    # search_stylesheets += stylesheet_link_tag 'https://library.nyu.edu/css/common/bobcat.css'
     search_stylesheets = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Muli"
-    search_stylesheets += stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
+    # search_stylesheets += stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
     search_stylesheets += stylesheet_link_tag "http://library.nyu.edu/scripts/jquery/css/nyulibraries_gray/jquery-ui.css"
     search_stylesheets += stylesheet_link_tag "search"
   end
 
   def resolve_stylesheets
-    resolve_stylesheets = stylesheet_link_tag 'https://library.nyu.edu/css/common/getit.css'
-    resolve_stylesheets += stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/getit.css" unless current_primary_institution.name.eql?("NYU")
-    resolve_stylesheets += stylesheet_link_tag "http://fonts.googleapis.com/css?family=Muli"
+    resolve_stylesheets = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Muli"
+    # resolve_stylesheets = stylesheet_link_tag 'https://library.nyu.edu/css/common/getit.css'
+    # resolve_stylesheets += stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/getit.css" unless current_primary_institution.name.eql?("NYU")
     resolve_stylesheets += stylesheet_link_tag "resolve"
   end
 
@@ -26,31 +25,28 @@ module ApplicationHelper
   end
 
   def breadcrumbs
-    breadcrumbs = nil
     unless params["controller"] == "export_email"
       institutional_breadcrumbs = current_primary_institution.views["breadcrumbs"]
       breadcrumbs = 
-        content_tag :li, link_to(institutional_breadcrumbs["title"], institutional_breadcrumbs["url"]).concat(content_tag(:span, ">", :class => "divider"))
+        content_tag :li, link_to(institutional_breadcrumbs["title"], institutional_breadcrumbs["url"])
       breadcrumbs += 
-        content_tag :li, link_to('BobCat', 'http://bobcat.library.nyu.edu/nyu').concat(content_tag(:span, ">", :class => "divider"))
+        content_tag :li, link_to('BobCat', 'http://bobcat.library.nyu.edu/nyu')
       if params["action"].eql?("journal_list") or params["action"].eql?("journal_search")
         breadcrumbs += 
-          content_tag :li, link_to('E-Jounals', :controller=>'search').concat(content_tag(:span, ">", :class => "divider"))
-        breadcrumbs += content_tag :li, "Results"
+          content_tag :li, link_to('E-Journals', :controller=>'search')
+        breadcrumbs += content_tag :li, "Results", :class => "last"
       else
-        breadcrumbs += content_tag :li, "E-Journals A-Z"
+        breadcrumbs += content_tag :li, "E-Journals A-Z", :class => "last"
       end
-      breadcrumbs = content_tag :ul, breadcrumbs, :class => ["pull-left"] unless breadcrumbs.nil?
+      content_tag :ul, breadcrumbs, :class => ["nyu-breadcrumbs"] unless breadcrumbs.nil?
     end
-    content_tag(:div, breadcrumbs, :id => "breadcrumbs")
   end
 
   def login
     login = content_tag :li, ((current_user) ? 
       content_tag(:i, nil, :class => "icons-famfamfam-lock") + link_to("Log-out #{current_user.firstname}", logout_url, :class=>"logout") : 
         content_tag(:i, nil, :class => "icons-famfamfam-lock_open") + link_to("Login", login_url({"umlaut.institution" => current_primary_institution.name}), :class=>"login"))
-    login = content_tag :ul, login, :class => ["unstyled"]
-    content_tag(:div, login, :id => "login")
+    content_tag :ul, login, :class => ["nyu-login"]
   end
 
   def permalink_nav

@@ -38,21 +38,3 @@
 input[type="submit"] {
   padding-top: 3px;
 }
-
-@media (max-width: 480px) {
-  .form-horizontal .controls {
-    margin-left: 0;
-    label {
-      display: block;
-    }
-  }
-
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin: {
-      top: 5px;
-      bottom: 10px;
-    }
-  }
-}

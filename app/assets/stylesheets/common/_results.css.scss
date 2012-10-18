@@ -97,25 +97,3 @@ div.entree {
     margin-left: $padding_small;
   }
 }
-
-@media (max-width: 767px) {
-  .nyu-resource {
-    font: {
-      size: $baseFontSize*1.25
-    }
-    line-height: $baseLineHeight*2;
-    dl {
-      dt, dd {
-        padding: {
-          top: $baseLineHeight;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  div.entree {
-    margin-left: 30%;
-  }
-}

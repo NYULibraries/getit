@@ -1,7 +1,3 @@
-#breadcrumb {
-  @extend .pull-left
-}
-
 .breadcrumb {
   color: lighten(black, 20%);
   background-color: $breadcrumbsBackgroundColor;
@@ -10,12 +6,21 @@
     bottom: $baseLineHeight * 1.5 + 5;
     left: 20px;
   }
-  ul {
-    margin: {
-      left: 0px;
-    }
-    .divider {
-      color: darken($breadcrumbsBackgroundColor, 50%);
-    }
+}
+
+ul.nyu-breadcrumbs {
+  @extend .pull-left;
+  margin: {
+    left: 0px;
+  }
+  li {
+    display: inline;
+  }
+  li:after {
+    content: " > ";
+    color: darken($breadcrumbsBackgroundColor, 50%);
+  }
+  li.last:after {
+    content: "";
   }
 }

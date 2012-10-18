@@ -36,3 +36,13 @@
 @mixin no-padding {
   padding: 0;
 }
+
+@mixin inline-list {
+  display: inline;
+  &:after {
+    content: "\0000a0\02022\0000a0";
+  }
+  &:last-child:after {
+    content: "";
+  }
+}

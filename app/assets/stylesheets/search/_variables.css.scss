@@ -1,14 +1,15 @@
-$baseFontSize:                              12px;
+$baseFontSize:                              13px;
+$baseFontFamily:                            'Muli';
 $smallFontSize:                             $baseFontSize - 1;
 $largeFontSize:                             $baseFontSize + 2;
-$baseLineHeight:                            12px;
+$baseLineHeight:                            13px;
 $linkColor:                                 blue;
 $nyuLibrariesDarkBrown:                     #653d24 !default;
 $nyuLibrariesLightBrown:                    #E0D8C9 !default;
 $nyuLibrariesAzBlue:                        #0000ee !default;
 $nyuLibrariesBorderColor:                   #653d24 !default;
 $nyuLibrariesBackgroundColor:               #000000 !default;
-$maxSearchLabelWidth:                       80px !default;
+$maxSearchLabelWidth:                       140px !default;
 $searchBackgroundColor:                     darken(whiteSmoke, 5%) !default;
 $resultsBackgroundColor:                    white !default;
 $breadcrumbsBackgroundColor:                $searchBackgroundColor;
