@@ -1,3 +1,7 @@
+#breadcrumb {
+  @extend .pull-left
+}
+
 .breadcrumb {
   color: lighten(black, 20%);
   background-color: $breadcrumbsBackgroundColor;
@@ -13,9 +17,5 @@
     .divider {
       color: darken($breadcrumbsBackgroundColor, 50%);
     }
-  }
-  
-  .login, .logout {
-    margin-left: 5px;
   }
 }

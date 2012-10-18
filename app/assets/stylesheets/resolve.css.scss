@@ -1,2 +1,8 @@
 @import "resolve/variables";
 @import "umlaut";
+@import "common/header";
+@import "common/login";
+
+#permalink {
+  @extend .pull-left;
+}
