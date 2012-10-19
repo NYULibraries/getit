@@ -10,8 +10,7 @@
     <%= hidden_field_tag "rft.object_id", "", {:class => "rft_object_id"} %> 
     <div id="primary-search" class="search-section">
       <h2>Search for a Specific E-Journal or Article</h2>
-      <%= render :partial=> "#{current_primary_institution.views["dir"]}/tip1" if 
-        lookup_context.find_all("#{current_primary_institution.views["dir"]}/tip1").any? %>
+      <%= institutional_partial("tip1") %>
       <fieldset>
         <div class="control-group">
           <%= label :journal, :title, "Journal Title:", :class => "control-label" %>
@@ -27,7 +26,7 @@
           <div class="controls">
             <%= text_field :journal, :issn, {:name=>'rft.issn', :max_length => "9", :class=>"issn input-xlarge"} %>
             <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/journal.html", 
-              :class => ["remote-tip", "help-inline"], :rel => "popover", :title => "What is an ISSN?", "data-class" => "issn", :target => "_blank")%>
+              :class => ["issn-popover", "help-inline"], :rel => "popover", :title => "What is an ISSN?", "data-placement" => "bottom", "data-class" => "issn", :target => "_blank")%>
           </div>
         </div>
         <div class="submit-group">
@@ -39,8 +38,7 @@
     <div id="optional-search" class="search-section">
       <h2>Optional Information: Enter as much as you know of the following:</h2>
       <fieldset>
-        <%= render :partial=> "#{current_primary_institution.views["dir"]}/tip2" if 
-          lookup_context.find_all("#{current_primary_institution.views["dir"]}/tip2").any? %>
+        <%= institutional_partial("tip2") %>
         <div class="control-group">
           <%= label :article, :title, "Article Title:", :class => "control-label" %>
           <div class="controls">
@@ -91,7 +89,7 @@
           <div class="controls">
             <input id="rft_id_value" name="rft_id_value" type="text" value="<%#= co_param('rft_id_value') %>" />
             <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/article_identifiers.html", 
-              :class => ["remote-tip", "help-inline"], :rel => "popover", :title => "What is a DOI or PMID ?", "data-class" => "doi", :target => "_blank")%>
+              :class => ["doi-popover", "help-inline"], :rel => "popover", :title => "What is a DOI or PMID ?", "data-class" => "doi", :target => "_blank")%>
           </div>
         </div>
         <div class="submit-group">

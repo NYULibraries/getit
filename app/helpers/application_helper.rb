@@ -23,6 +23,11 @@ module ApplicationHelper
   def resolve_javascripts
     resolve_javascripts = javascript_include_tag "resolve"
   end
+  
+  def institutional_partial(partial)
+    render :partial=> "#{current_primary_institution.views["dir"]}/#{partial}" if 
+      lookup_context.exists?("#{current_primary_institution.views["dir"]}/#{partial}", [], true)
+  end
 
   def breadcrumbs
     unless params["controller"] == "export_email"
@@ -67,7 +72,15 @@ module ApplicationHelper
   
   def link_to_with_popover(*args)
     content = args.delete_at 2
-    args[2] = {"title" => args[0], "data-content" => "<div class=\"tab\">#{content}</div>", :rel => "popover", :class => "tab", "data-class" => "tab"}
+    args[2] = {"title" => args[0], "data-content" => "<div class=\"tab\">#{content}</div>", :rel => "popover", :class => "tab"}
+    link_to(*args)
+  end
+
+  def link_to_remote_popover(*args)
+    popover_options = args.delete_at 3||{}
+    link_class = args.delete_at 2
+    popover_options["data-class"] = link_class if popover_options["data-class"].nil?
+    args[2] = {"title" => args[0], :rel => "popover", :class => link_class}.merge(popover_options)
     link_to(*args)
   end
 

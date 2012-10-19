@@ -34,6 +34,9 @@
 }
 
 @media (max-width: 979px) {
+  .nyu-tip {
+    float: none;
+  }
   .popover {
     display: none !important;
   }

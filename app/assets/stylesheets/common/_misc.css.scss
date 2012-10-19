@@ -13,3 +13,19 @@
 .popover {
   width: auto;
 }
+
+.nyu-tip {
+  @extend .pull-right;
+  width: 225px;
+  &:before, &:hover:before {
+    @extend .btn;
+    float: left;
+    margin-right: 5px;
+    padding: 5px;
+    content: "Tip";
+    @include background-image(linear-gradient(color-stops(#886EAE, lighten(#886EAE, 5%))));
+    background-color: #886EAE;
+    border-color: #886EAE;
+    color: white;
+  }
+}

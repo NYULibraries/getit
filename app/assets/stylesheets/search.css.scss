@@ -46,8 +46,14 @@ div.rfr_id {
 }
 
 .popover {
+  .article-finding {
+    width: 300px;
+  }
   .issn {
     width: 400px;
+    p {
+      margin-bottom: $baseLineHeight/2;
+    }
   }
   .doi {
     width: 500px;
