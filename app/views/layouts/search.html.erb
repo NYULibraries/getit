@@ -26,7 +26,13 @@
             <%= yield %>
           </div>
           <div class="span4">
-            <%= render :partial => "#{current_primary_institution.views["dir"]}/sidebar" %>
+            <div id="sidebar" class="sidebar">
+              <div id="sidebar_tabs" class="sidebar-section">
+                <h2>BobCat</h2>
+                <%= tabs %>
+              </div>
+              <%= render :partial => "#{current_primary_institution.views["dir"]}/sidebar" %>
+            </div>
           </div>
         </div>
       </div>

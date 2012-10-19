@@ -1,32 +1,26 @@
-<div id="sidebar" class="sidebar">
-  <div id="sidebar_tabs" class="sidebar-section">
-    <h2>BobCat Options</h2>
-    <%= tabs.html_safe %>
-  </div>
-  <div id="account" class="sidebar-section">
-    <h2><a href="http://library.nyu.edu/info/myworkspace.html" class="nyulibrary_icons_help nyulibrary_help"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
-    <ul>
-      <% if current_user %>
-        <li><a href="https://webdev1.library.nyu.edu/eshelf">My e-shelf</a></li>
-        <li><a href="https://webdev1.library.nyu.edu/eshelf/account">My library account</a></li>
-        <li><%= link_to "Log-out #{current_user.firstname}", logout_url, :class=>"logout" %></li>
-      <% else %>
-        <li><a href="https://webdev1.library.nyu.edu/eshelf">Guest e-shelf (log in for more options)</a></li>
-      <% end %>
-    </ul>
-  </div>
-  <div id="help" class="sidebar-section">
-    <h2>Need help?</h2>
-    <ul>
-      <li><a href="http://library.nyu.edu/help/ejournals.html" target="_blank">Help using the E-Journals A-Z tab</a></li>
-      <li><a href="http://library.nyu.edu/research/tutorials/" target="_blank">Tutorials and self help</a></li>
-      <li><a href="http://library.nyu.edu/ask" target="_blank" id="aal">Ask a Librarian</a></li>
-    </ul>
-  </div>
-  <div id="additional_options" class="sidebar-section">
-    <h2>Additional Options</h2>
-    <ul>
-      <li><a href="http://webdev1.library.nyu.edu/arch">Find articles on your topic</a></li>
-    </ul>
-  </div>
+<div id="account" class="sidebar-section">
+  <h2><a href="http://library.nyu.edu/info/myworkspace.html" class="nyulibrary_icons_help nyulibrary_help"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
+  <ul>
+    <% if current_user %>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf">My e-shelf</a></li>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf/account">My library account</a></li>
+      <li><%= link_to "Log-out #{current_user.firstname}", logout_url, :class=>"logout" %></li>
+    <% else %>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf">Guest e-shelf (log in for more options)</a></li>
+    <% end %>
+  </ul>
+</div>
+<div id="help" class="sidebar-section">
+  <h2>Need help?</h2>
+  <ul>
+    <li><a href="http://library.nyu.edu/help/ejournals.html" target="_blank">Help using the E-Journals A-Z tab</a></li>
+    <li><a href="http://library.nyu.edu/research/tutorials/" target="_blank">Tutorials and self help</a></li>
+    <li><a href="http://library.nyu.edu/ask" target="_blank" id="aal">Ask a Librarian</a></li>
+  </ul>
+</div>
+<div id="additional_options" class="sidebar-section">
+  <h2>Additional Options</h2>
+  <ul>
+    <li><a href="http://webdev1.library.nyu.edu/arch">Find articles on your topic</a></li>
+  </ul>
 </div>

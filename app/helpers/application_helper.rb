@@ -67,7 +67,7 @@ module ApplicationHelper
   
   def link_to_with_popover(*args)
     content = args.delete_at 2
-    args[2] = {"title" => args[0], "data-content" => content, :rel => "popover", :class => "tip"}
+    args[2] = {"title" => args[0], "data-content" => "<div class=\"tab\">#{content}</div>", :rel => "popover", :class => "tab", "data-class" => "tab"}
     link_to(*args)
   end
 

@@ -45,6 +45,15 @@ div.rfr_id {
   }
 }
 
+.popover {
+  .issn {
+    width: 400px;
+  }
+  .doi {
+    width: 500px;
+  }
+}
+
 @media (max-width: 767px) {
   .umlaut-citation {
     font: {
