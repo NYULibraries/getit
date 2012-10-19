@@ -41,12 +41,12 @@ $ ->
     constructor: (@selector) ->
 
   class Popover extends Tooltip
-    @_JSON_URL = 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php'
+    _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?full_html=true&callback=?'
     # Callback method for content, returns a function
-    @_CONTENT_CALLBACK: (self) ->
+    @_CONTENT_CALLBACK: (self, json_url) ->
       ()->
         element = $(this)
-        $.getJSON Popover._JSON_URL + "?the_url=" + element.attr("href") + "&full_html=true&callback=?", 
+        $.getJSON json_url + "&the_url=" + element.attr("href"),
           (data)->
             element.attr "data-content", self.wrap_html(data.theHtml, element.attr("data-class"))
             element.popover('show')
@@ -62,7 +62,7 @@ $ ->
 
     # Contructor (obviously)
     constructor: (@selector) ->
-      this.content(Popover._CONTENT_CALLBACK(@))
+      this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
     # Crappy hack to append an extra class
     wrap_html: (html, klass) ->
@@ -80,9 +80,18 @@ $ ->
         .mouseleave (e) ->
           $(this).popover('hide') unless $(e.relatedTarget).parent().hasClass("popover")
 
+  class PartialHoverPopover extends HoverPopover
+    _JSON_URL: 'https://webapps.library.nyu.edu/common/retrieve_file_contents_as_json.php?callback=?'
+    # Contructor (obviously)
+    constructor: (@selector) ->
+      this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
+
+    
+
   # Tabs Tips
   new Popover(".nav-tabs li a").init()
   new HoverPopover('[class*="popover"]').init()
+  new PartialHoverPopover("#account h2 a").init()
   $(document).click (e) -> $(".popover").hide()
   # Hide popover when we leave it's area
   $(".popover").live 'mouseleave', (e) ->
