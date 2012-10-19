@@ -34,9 +34,6 @@
 }
 
 @media (max-width: 979px) {
-  .nyu-tip {
-    float: none;
-  }
   .popover {
     display: none !important;
   }
@@ -50,10 +47,17 @@
   }
 
   .sidebar {
+    h2 {
+      margin: {
+        top: $baseLineHeight;
+      }
+    }
+
     font: {
       size: $baseFontSize*1.25;
     }
     .sidebar-section {
+      margin-bottom: $baseLineHeight;
       ul {
         li {
           margin: {
@@ -92,5 +96,12 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .nyu-tip {
+    float: none;
+    width: auto;
   }
 }
