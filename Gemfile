@@ -3,7 +3,6 @@ gem 'rails', '3.2.5'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sprockets'
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.1'
 
