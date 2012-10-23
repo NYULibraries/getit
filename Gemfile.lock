@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/scotdalton/nyulibraries_assets.git
-  revision: 2cda4a3f337c2337a4f65b317514f73c11ac7a82
+  remote: git://github.com/NYULibraries/nyulibraries_assets.git
+  revision: 320eaa9a652bbf772514d288384b0d0d2c133b22
   specs:
-    nyulibraries_assets (3.0.3)
+    nyulibraries_assets (0.0.1)
       bootstrap-sass
       compass
 
