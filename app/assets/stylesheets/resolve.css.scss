@@ -1,8 +1,8 @@
 @import "resolve/variables";
+// @import "nyulibraries/header";
+// @import "nyulibraries/login";
+// @import "nyulibraries/responsive";
 @import "umlaut";
-@import "nyulibraries/header";
-@import "nyulibraries/login";
-@import "nyulibraries/responsive";
 
 #permalink {
   @extend .pull-left;
