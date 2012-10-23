@@ -1,23 +1,5 @@
-@import "compass";
-@import "icons/*.png";
-@include all-icons-sprites;
-@import "search/variables";
-@import "bootstrap";
-@import "bootstrap-responsive";
-@import "common/mixins";
-@import "common/reset";
-@import "common/misc";
-@import "common/content_types";
-@import "common/header";
-@import "common/breadcrumbs";
-@import "common/login";
-@import "common/sidebar";
-@import "common/tabs";
-@import "common/search";
-@import "common/results";
-@import "common/form";
-@import "common/az";
-@import "common/responsive";
+// @import "search/variables";
+@import "nyulibraries";
 
 div.rfr_id {
   margin: {

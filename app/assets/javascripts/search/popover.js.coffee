@@ -86,8 +86,6 @@ $ ->
     constructor: (@selector) ->
       this.content(Popover._CONTENT_CALLBACK(@, @_JSON_URL))
 
-    
-
   # Tabs Tips
   new Popover(".nav-tabs li a").init()
   new HoverPopover('[class*="popover"]').init()

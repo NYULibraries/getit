@@ -19,6 +19,13 @@ GIT
       rails (~> 3.2.5)
       sass-rails
 
+PATH
+  remote: /Users/dalton/Documents/workspace/nyulibraries_assets
+  specs:
+    nyulibraries_assets (3.0.3)
+      bootstrap-sass
+      compass
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -236,6 +243,7 @@ DEPENDENCIES
   jruby-openssl
   jruby-rack
   mysql2
+  nyulibraries_assets!
   passenger
   progress_bar
   rails (= 3.2.5)

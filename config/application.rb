@@ -11,6 +11,7 @@ end
 
 require 'umlaut'
 require 'sunspot_rails'
+require 'nyulibraries_assets'
 
 module GetIt
   class Application < Rails::Application
