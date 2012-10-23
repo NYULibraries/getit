@@ -250,6 +250,7 @@ DEPENDENCIES
   rails (= 3.2.5)
   rvm-capistrano
   sass-rails (~> 3.2.5)
+  sprockets
   sunspot_rails
   therubyracer
   therubyrhino
