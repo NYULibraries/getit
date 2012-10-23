@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/scotdalton/nyulibraries_assets.git
+  revision: 2cda4a3f337c2337a4f65b317514f73c11ac7a82
+  specs:
+    nyulibraries_assets (3.0.3)
+      bootstrap-sass
+      compass
+
+GIT
   remote: git://github.com/team-umlaut/umlaut.git
   revision: 17a4e0bbc72d05b2c8c550a071d2e7f60d07d486
   branch: bootstrap
@@ -18,13 +26,6 @@ GIT
       openurl (>= 0.4.0)
       rails (~> 3.2.5)
       sass-rails
-
-PATH
-  remote: /Users/dalton/Documents/workspace/nyulibraries_assets
-  specs:
-    nyulibraries_assets (3.0.3)
-      bootstrap-sass
-      compass
 
 GEM
   remote: http://rubygems.org/
@@ -235,7 +236,7 @@ DEPENDENCIES
   authpds-nyu (~> 0.1.4)
   capistrano
   coffee-rails (~> 3.2.1)
-  compass (~> 0.12.2)
+  compass-rails (~> 1.0.3)
   dalli
   exlibris-aleph (~> 0.1.4)
   jdbc-mysql
@@ -248,7 +249,7 @@ DEPENDENCIES
   progress_bar
   rails (= 3.2.5)
   rvm-capistrano
-  sass-rails (~> 3.2.3)
+  sass-rails (~> 3.2.5)
   sunspot_rails
   therubyracer
   therubyrhino

@@ -3,7 +3,7 @@ gem 'rails', '3.2.5'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -14,7 +14,8 @@ group :assets do
     gem 'therubyracer'
   end
   gem 'uglifier', '>= 1.0.3'
-  gem 'compass', '~>0.12.2'
+  gem "compass-rails", "~> 1.0.3"
+  gem 'nyulibraries_assets', :git => "git://github.com/scotdalton/nyulibraries_assets.git"
 end
 
 platforms :jruby do
@@ -41,7 +42,6 @@ gem 'passenger'
 # Umlaut
 gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
 # gem 'umlaut', :path => '/Users/dalton/Documents/workspace/umlaut/umlaut3'
-gem 'nyulibraries_assets', :git => "git://github.com/scotdalton/nyulibraries_assets.git"
 # gem 'nyulibraries_assets', :path => '/Users/dalton/Documents/workspace/nyulibraries_assets'
 gem 'sunspot_rails'
 gem 'exlibris-aleph', "~> 0.1.4"
