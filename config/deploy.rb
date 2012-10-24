@@ -35,7 +35,7 @@ set :use_sudo, false
 set :normalize_asset_timestamps, false
 
 # Rake variables
-# set :rake, "#{rake} --trace"
+set :rake, "#{rake} --trace"
 
 namespace :deploy do
   desc "Start Application"
