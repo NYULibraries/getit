@@ -32,7 +32,7 @@ set :keep_releases, 5
 set :use_sudo, false
 
 # Rails specific vars
-set :normalize_asset_timestamps, false
+# set :normalize_asset_timestamps, false
 
 # Rake variables
 set :rake, "#{rake} --trace"
