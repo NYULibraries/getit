@@ -11,7 +11,7 @@ set :application, "#{app_title}_repos"
 
 # RVM  vars
 # set :rvm_ruby_string, "1.9.3-p125"
-set :rvm_ruby_string, "jruby"
+set :rvm_ruby_string, "jruby-1.7.0"
 set :rvm_type, :user
 
 # Bundle vars
