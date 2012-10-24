@@ -7,6 +7,14 @@ GIT
       compass
 
 GIT
+  remote: git://github.com/scotdalton/compass-rails.git
+  revision: ec20c8b89f2c613cc4daf44cc39baa46fd140254
+  branch: stable
+  specs:
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
+
+GIT
   remote: git://github.com/team-umlaut/umlaut.git
   revision: 17a4e0bbc72d05b2c8c550a071d2e7f60d07d486
   branch: bootstrap
@@ -91,8 +99,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
     confstruct (0.2.4)
     daemon_controller (1.0.0)
     dalli (2.3.0)
@@ -236,7 +242,7 @@ DEPENDENCIES
   authpds-nyu (~> 0.1.4)
   capistrano
   coffee-rails (~> 3.2.1)
-  compass-rails (~> 1.0.3)
+  compass-rails (~> 1.0.3)!
   dalli
   exlibris-aleph (~> 0.1.4)
   jdbc-mysql

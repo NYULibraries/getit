@@ -14,7 +14,7 @@ group :assets do
     gem 'therubyracer'
   end
   gem 'uglifier', '>= 1.0.3'
-  gem "compass-rails", "~> 1.0.3"
+  gem "compass-rails", "~> 1.0.3", :git => "git://github.com/scotdalton/compass-rails.git", :branch => "stable"
   gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
 end
 
