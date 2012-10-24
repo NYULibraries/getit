@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/scotdalton/compass-rails.git
-  revision: dbc91433805fc9537d44b5a627890e24aa46ab0a
+  revision: 90582bbb328766eee3e8c5ecd03787a1b8f672ea
   branch: stable
   specs:
     compass-rails (1.0.3)
