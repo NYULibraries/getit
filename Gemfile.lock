@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 320eaa9a652bbf772514d288384b0d0d2c133b22
+  revision: 5510894e57bab26f7385f4601de4813e89671448
   specs:
     nyulibraries_assets (0.0.1)
       bootstrap-sass
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/scotdalton/compass-rails.git
-  revision: ec20c8b89f2c613cc4daf44cc39baa46fd140254
+  revision: 29acd9eaaa3ed289d1094cb0374350411e51a65f
   branch: stable
   specs:
     compass-rails (1.0.3)
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 17a4e0bbc72d05b2c8c550a071d2e7f60d07d486
+  revision: cdab86bbf33b2c25e39a475c9b8904cce1ca284d
   branch: bootstrap
   specs:
     umlaut (3.0.3)
@@ -59,7 +59,7 @@ GEM
       activesupport (= 3.2.5)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activerecord-jdbc-adapter (1.2.2)
+    activerecord-jdbc-adapter (1.2.2.1)
     activeresource (3.2.5)
       activemodel (= 3.2.5)
       activesupport (= 3.2.5)
@@ -94,7 +94,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.3.3)
+    coffee-script-source (1.4.0)
     compass (0.12.2)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -133,8 +133,6 @@ GEM
       thor (~> 0.14)
     jruby-openssl (0.7.7)
       bouncy-castle-java (>= 1.5.0146.1)
-    jruby-pageant (1.1.1)
-    jruby-pageant (1.1.1-java)
     jruby-rack (1.1.10)
     json (1.7.5)
     json (1.7.5-java)
@@ -152,8 +150,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.6.0)
-      jruby-pageant (>= 1.1.1)
+    net-ssh (2.6.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.0)
