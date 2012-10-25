@@ -1,18 +1,10 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 5510894e57bab26f7385f4601de4813e89671448
+  revision: 973243653811541ecd2bc0bd2f2d4fa18b24bcff
   specs:
     nyulibraries_assets (0.0.1)
       bootstrap-sass
       compass
-
-GIT
-  remote: git://github.com/scotdalton/compass-rails.git
-  revision: 90582bbb328766eee3e8c5ecd03787a1b8f672ea
-  branch: stable
-  specs:
-    compass-rails (1.0.3)
-      compass (>= 0.12.2, < 0.14)
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
@@ -99,6 +91,8 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    compass-rails (1.0.3)
+      compass (>= 0.12.2, < 0.14)
     confstruct (0.2.4)
     daemon_controller (1.0.0)
     dalli (2.3.0)
@@ -239,7 +233,7 @@ DEPENDENCIES
   authpds-nyu (~> 0.1.4)
   capistrano
   coffee-rails (~> 3.2.1)
-  compass-rails (~> 1.0.3)!
+  compass-rails (~> 1.0.3)
   dalli
   exlibris-aleph (~> 0.1.4)
   jdbc-mysql

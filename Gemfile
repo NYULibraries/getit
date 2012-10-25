@@ -14,8 +14,9 @@ group :assets do
     gem 'therubyracer'
   end
   gem 'uglifier', '>= 1.0.3'
-  gem "compass-rails", "~> 1.0.3", :git => "git://github.com/scotdalton/compass-rails.git", :branch => "stable"
+  gem "compass-rails", "~> 1.0.3"
   gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
+  # gem 'nyulibraries_assets', :path => '/Users/dalton/Documents/workspace/nyulibraries_assets'
 end
 
 platforms :jruby do
@@ -42,7 +43,6 @@ gem 'passenger'
 # Umlaut
 gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
 # gem 'umlaut', :path => '/Users/dalton/Documents/workspace/umlaut/umlaut3'
-# gem 'nyulibraries_assets', :path => '/Users/dalton/Documents/workspace/nyulibraries_assets'
 gem 'sunspot_rails'
 gem 'exlibris-aleph', "~> 0.1.4"
 gem 'authpds-nyu', "~> 0.1.4"

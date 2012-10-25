@@ -10,8 +10,8 @@ set :app_title, "getit"
 set :application, "#{app_title}_repos"
 
 # RVM  vars
-# set :rvm_ruby_string, "1.9.3-p125"
-set :rvm_ruby_string, "jruby-1.7.0"
+set :rvm_ruby_string, "1.9.3-p125"
+# set :rvm_ruby_string, "jruby-1.7.0"
 set :rvm_type, :user
 
 # Bundle vars
@@ -35,7 +35,7 @@ set :use_sudo, false
 # set :normalize_asset_timestamps, false
 
 # Rake variables
-set :rake, "#{rake} --trace"
+# set :rake, "#{rake} --trace"
 
 namespace :deploy do
   desc "Start Application"
