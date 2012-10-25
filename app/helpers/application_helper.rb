@@ -1,14 +1,13 @@
 module ApplicationHelper
   def search_stylesheets
-    search_stylesheets = stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
-    search_stylesheets += stylesheet_link_tag "http://library.nyu.edu/scripts/jquery/css/nyulibraries_gray/jquery-ui.css"
-    search_stylesheets += stylesheet_link_tag "search"
+    # search_stylesheets = stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/bobcat.css" unless current_primary_institution.name.eql?("NYU")
+    search_stylesheets = stylesheet_link_tag "search"
   end
 
   def resolve_stylesheets
     # resolve_stylesheets = stylesheet_link_tag 'https://library.nyu.edu/css/common/getit.css'
-    resolve_stylesheets = stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/getit.css" unless current_primary_institution.name.eql?("NYU")
-    resolve_stylesheets += stylesheet_link_tag "resolve"
+    # resolve_stylesheets = stylesheet_link_tag "https://library.nyu.edu/css/common/bobcat/#{current_primary_institution.views["dir"]}/getit.css" unless current_primary_institution.name.eql?("NYU")
+    resolve_stylesheets = stylesheet_link_tag "resolve"
   end
 
   def search_javascripts
