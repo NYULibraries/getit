@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 9594393be48e1aceed7c9466041973fadc7ce44e
-  specs:
-    nyulibraries_assets (0.0.1)
-      bootstrap-sass
-      compass
-
-GIT
   remote: git://github.com/team-umlaut/umlaut.git
   revision: cdab86bbf33b2c25e39a475c9b8904cce1ca284d
   branch: bootstrap
@@ -26,6 +18,13 @@ GIT
       openurl (>= 0.4.0)
       rails (~> 3.2.5)
       sass-rails
+
+PATH
+  remote: /Users/dalton/Documents/workspace/nyulibraries_assets
+  specs:
+    nyulibraries_assets (0.0.1)
+      bootstrap-sass
+      compass
 
 GEM
   remote: http://rubygems.org/
@@ -139,6 +138,10 @@ GEM
     mime-types (1.19)
     multi_json (1.3.6)
     multi_xml (0.5.1)
+    mustache (0.99.4)
+    mustache-rails (0.2.3)
+      actionpack (>= 3.1)
+      mustache (~> 0.99.4)
     mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -240,6 +243,7 @@ DEPENDENCIES
   jquery-rails
   jruby-openssl
   jruby-rack
+  mustache-rails
   mysql2
   nyulibraries_assets!
   passenger

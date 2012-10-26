@@ -52,7 +52,7 @@ class UmlautController < ApplicationController
     # built in 'umlaut' layout?
     # layout "application"
     resolve_layout "resolve"
-    search_layout "search"
+    search_layout "bobcat"
   
     # A help url used on error page and a few other places.
     help_url  "http://library.nyu.edu/ask"

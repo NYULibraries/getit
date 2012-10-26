@@ -33,6 +33,9 @@ end
 # Use jquery
 gem 'jquery-rails'
 
+# Use mustache
+gem 'mustache-rails', :require => 'mustache/railtie'
+
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'rvm-capistrano'
