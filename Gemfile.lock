@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/NYULibraries/nyulibraries_assets.git
+  revision: 11bc836ec8018c0b90d235026a825e20e8102137
+  specs:
+    nyulibraries_assets (0.0.1)
+      bootstrap-sass
+      compass
+
+GIT
   remote: git://github.com/team-umlaut/umlaut.git
   revision: cdab86bbf33b2c25e39a475c9b8904cce1ca284d
   branch: bootstrap
@@ -18,13 +26,6 @@ GIT
       openurl (>= 0.4.0)
       rails (~> 3.2.5)
       sass-rails
-
-PATH
-  remote: /Users/dalton/Documents/workspace/nyulibraries_assets
-  specs:
-    nyulibraries_assets (0.0.1)
-      bootstrap-sass
-      compass
 
 GEM
   remote: http://rubygems.org/
