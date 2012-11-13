@@ -1,10 +1,11 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: a51c659445bc90592f03098b39a6288768ae5866
+  revision: 4ecfb3c27271b8943116ae0ce2c62520e14b072a
   specs:
     nyulibraries_assets (0.0.1)
-      bootstrap-sass
-      compass
+      bootstrap-sass (~> 2.1.1.0)
+      compass (~> 0.12.2)
+      institutions (~> 0.0.4)
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
@@ -62,14 +63,17 @@ GEM
     authlogic (3.1.3)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-    authpds (0.1.2)
-      authlogic
-      nokogiri
+    authpds (0.2.4)
+      authlogic (~> 3.1.3)
+      institutions (~> 0.0.4)
+      nokogiri (~> 1.5.0)
       rails (~> 3.2.0)
-    authpds-nyu (0.1.4)
-      authpds (~> 0.1.2)
+      require_all (~> 1.2.1)
+    authpds-nyu (0.2.4)
+      authpds (~> 0.2.4)
       exlibris-aleph (~> 0.1.0)
       rails (~> 3.2.0)
+      require_all (~> 1.2.1)
     bootstrap-sass (2.1.1.0)
     bouncy-castle-java (1.5.0146.1)
     builder (3.0.4)
@@ -95,7 +99,7 @@ GEM
       compass (>= 0.12.2, < 0.14)
     confstruct (0.2.4)
     daemon_controller (1.1.0)
-    dalli (2.3.0)
+    dalli (2.5.0)
     ensure_valid_encoding (0.5.2)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -112,6 +116,7 @@ GEM
     fastthread (1.0.7)
     fattr (2.2.1)
     fssm (0.2.9)
+    git (1.2.5)
     highline (1.6.15)
     hike (1.2.1)
     htmlentities (4.3.1)
@@ -119,6 +124,13 @@ GEM
       multi_json (~> 1.0)
       multi_xml
     i18n (0.6.1)
+    institutions (0.0.4)
+      git (~> 1.2.5)
+      ipaddr_range_set (~> 0.10.0)
+      rake
+      rdoc
+      require_all (~> 1.2.1)
+    ipaddr_range_set (0.10.0)
     isbn (2.0.7)
     jdbc-mysql (5.1.13)
     journey (1.0.4)
@@ -190,14 +202,15 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (0.9.2.2)
+    rake (10.0.0)
     rdoc (3.12)
       json (~> 1.4)
+    require_all (1.2.1)
     rsolr (1.0.8)
       builder (>= 2.1.2)
     rvm-capistrano (1.2.7)
       capistrano (>= 2.0.0)
-    sass (3.2.2)
+    sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -234,7 +247,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbc-adapter
-  authpds-nyu (~> 0.1.4)
+  authpds-nyu (~> 0.2.4)
   capistrano
   coffee-rails (~> 3.2.1)
   compass-rails (~> 1.0.3)

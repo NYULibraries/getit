@@ -19,3 +19,7 @@
 
 # Ignore embedded solr app used only for development.
 /solr
+
+# Ignore public assets and sprites
+/public/assets
+/app/assets/images/icons-*.png
