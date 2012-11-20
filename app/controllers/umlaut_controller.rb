@@ -143,7 +143,7 @@ class UmlautController < ApplicationController
     institutions += user_institutions
     institutions.uniq!
     Rails.logger.info("The following insitutions are in play: #{institutions.collect{|i| i.name}.inspect}")
-    return institutions.collect{|i| i.name}
+    return institutions.collect{|i| i.code}
   end
 
   def user_institutions
@@ -158,6 +158,8 @@ class UmlautController < ApplicationController
     services = {}
     institutions.each do | institution |
       # trim out ones with disabled:true
+      p institution.inspect
+
       services.merge!(ServiceStore.config["#{institution}"]["services"].reject {|id, hash| hash && hash["disabled"] == true})
     end
     return services

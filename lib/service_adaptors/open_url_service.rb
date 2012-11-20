@@ -24,7 +24,8 @@ class OpenURLService < Service
       { :service => self,
         :display_text => service_data[:display_text],
         :url => service_data[:url],
-        :service_data => service_data }, [ "highlighted_link" ] )
+        :service_data => service_data,
+        :service_type_value => @service_types.first } )
     return request.dispatched(self, true)
   end
 end

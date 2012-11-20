@@ -251,10 +251,18 @@ NYU:
       sfx_requests_expire_crontab: '00 00 * * 00' 
       sfx_timeout: 9
       extra_targets_of_interest:
-        ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
-        REFWORKS_EXPORT_TOOL: export_citation
+        # ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
+        # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
+    NYU_RefWorks:
+      name: To RefWorks
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=refworks&
+      display_text: To RefWorks
+      priority: 4
+      service_types:
+          - export_citation
 
 NYUAD:
   name: NYU Abu Dhabi Library
