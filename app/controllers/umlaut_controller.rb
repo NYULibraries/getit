@@ -131,14 +131,14 @@ class UmlautController < ApplicationController
   def institutions(requested_institution)
     institutions = []
     # Always add default institutions
-    institutions += InstitutionList.instance.defaults
+    institutions += Institutions.defaults
     # Start adding conditional institutions
     if requested_institution
-      requested_institution = InstitutionList.instance.get(requested_institution)
+      requested_institution = Institutions.institutions[requested_institution]
       institutions << requested_institution unless requested_institution.nil?
     end
     # Get all institutions based on IP
-    institutions += InstitutionList.instance.institutions_with_ip(request.remote_ip) unless request.nil?
+    institutions += Institutions.with_ip(request.remote_ip) unless request.nil?
     # Get all user associated institutions
     institutions += user_institutions
     institutions.uniq!
