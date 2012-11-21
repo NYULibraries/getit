@@ -263,6 +263,14 @@ NYU:
       priority: 4
       service_types:
           - export_citation
+    NYU_Endnote:
+      name: To Endnote
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=endnote&
+      display_text: To Endnote
+      priority: 4
+      service_types:
+          - export_citation
 
 NYUAD:
   name: NYU Abu Dhabi Library
