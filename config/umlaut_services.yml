@@ -271,7 +271,30 @@ NYU:
       priority: 4
       service_types:
           - export_citation
-
+    NYU_RIS:
+      name: To RIS
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=ris&
+      display_text: To RIS
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_PNX:
+      name: To PNX
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=pnx&
+      display_text: To PNX
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_BIBTEX:
+      name: To BibTeX
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=bibtex&
+      display_text: To BibTeX
+      priority: 4
+      service_types:
+          - export_citation
 NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU 
