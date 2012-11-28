@@ -295,7 +295,7 @@ NYU:
       priority: 4
       service_types:
           - export_citation
-    NYU_BIBTEX:
+    NYU_EASYBIB:
       name: To Easy Bib
       type: OpenURLService
       base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=easybib&
