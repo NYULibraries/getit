@@ -298,7 +298,7 @@ NYU:
     NYU_EASYBIB:
       name: To Easy Bib
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=easybib&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=pusheasybib&
       display_text: To Easy Bib
       priority: 4
       service_types:
