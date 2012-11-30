@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: ed013e2aaa81e897d1af6288d240f9ec0d13656c
+  revision: 937d457aa063306023e513adf319682b9724cccc
   specs:
     nyulibraries_assets (0.0.1)
       bootstrap-sass (~> 2.1.1.0)
@@ -148,7 +148,7 @@ GEM
       treetop (~> 1.4.8)
     marc (0.5.0)
     mime-types (1.19)
-    multi_json (1.3.7)
+    multi_json (1.4.0)
     multi_xml (0.5.1)
     mustache (0.99.4)
     mustache-rails (0.2.3)
