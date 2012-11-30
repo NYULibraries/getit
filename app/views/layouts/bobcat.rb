@@ -2,10 +2,6 @@
 module Views
   module Layouts
     class Bobcat < ActionView::Mustache
-       def meta
-        csrf_meta_tags
-      end
-
       def stylesheets
         search_stylesheets
       end
