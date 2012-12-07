@@ -2,8 +2,8 @@
 $baseFontSize:                              12px;
 $smallFontSize:                             $baseFontSize - 1;
 $largeFontSize:                             $baseFontSize + 2;
-$baseLineHeight:                            12px;
-$linkColor:                                 #0066CC;
+$baseLineHeight:                            12px !default;
+$linkColor:                                 #0066CC !default;
 $nyuLibrariesDarkBrown:                     #653d24;
 $nyuLibrariesLightBrown:                    #E0D8C9;
 $nyuLibrariesAzBlue:                        #0000ee;
