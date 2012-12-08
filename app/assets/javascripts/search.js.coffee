@@ -1,5 +1,3 @@
-# require umlaut          
-#= require jquery
-#= require jquery_ujs
+#= require umlaut          
 #= require bobcat
 #= require_tree ./search

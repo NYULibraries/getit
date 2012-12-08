@@ -1,5 +1,10 @@
-@import "bobcat";
+@import "nyulibraries/variables";
 @import "resolve/variables";
+@import "nyulibraries/header";
+@import "nyulibraries/login";
+@import "nyulibraries/mixins";
+@import "nyulibraries/tabs";
+@import "nyulibraries/responsive";
 @import "umlaut";
 
 #permalink {
