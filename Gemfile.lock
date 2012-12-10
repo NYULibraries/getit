@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/barnabyalter/nyulibraries_assets.git
-  revision: b32993997bcdf00565c2dfd17cad8a59e1f98cd4
+  revision: c143d6613b0e323752862c235a2466c401c56f5d
   specs:
     nyulibraries_assets (0.0.2)
       bootstrap-sass (~> 2.1.1.0)
