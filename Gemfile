@@ -15,8 +15,7 @@ group :assets do
   end
   gem 'uglifier', '>= 1.0.3'
   gem "compass-rails", "~> 1.0.3"
-  #gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
-  gem 'nyulibraries_assets', :git => "git://github.com/barnabyalter/nyulibraries_assets.git"
+  gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
   # gem 'nyulibraries_assets', :path => '/Users/dalton/Documents/workspace/nyulibraries_assets'
 end
 
