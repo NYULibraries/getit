@@ -1,5 +1,5 @@
 source :rubygems
-gem 'rails', '3.2.5'
+gem 'rails', '3.2.8'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -8,10 +8,10 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   platforms :jruby do
-    gem 'therubyrhino'
+    gem 'therubyrhino', '~> 2.0.0'
   end
   platforms :ruby do
-    gem 'therubyracer'
+    gem 'therubyracer', '~> 0.10.0'
   end
   gem 'uglifier', '>= 1.0.3'
   gem "compass-rails", "~> 1.0.3"
@@ -27,7 +27,7 @@ platforms :jruby do
 end
 
 platforms :ruby do
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.3.11'
 end
 
 # Use jquery
@@ -48,8 +48,8 @@ gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "boo
 # gem 'umlaut', :path => '/Users/dalton/Documents/workspace/umlaut/umlaut3'
 gem 'sunspot_rails'
 gem 'exlibris-aleph', "~> 0.1.4"
-gem 'authpds-nyu', "~> 0.2.4"
-gem 'dalli'
+gem 'authpds-nyu', "~> 0.2.5"
+gem 'dalli', '2.5.0'
 
 group :development, :test do
   gem 'progress_bar'
