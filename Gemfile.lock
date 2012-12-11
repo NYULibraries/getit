@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 75ef0bf75f17a0947a21e786b6432cfd230399b8
+  revision: cd2ca66a98e275c0ab10df0a26874d45cc469053
   specs:
     nyulibraries_assets (0.0.2)
-      bootstrap-sass (~> 2.1.1.0)
+      bootstrap-sass (~> 2.2.0)
       compass (~> 0.12.2)
       institutions (~> 0.0.4)
       rake (~> 10.0.2)
@@ -74,7 +74,8 @@ GEM
       exlibris-aleph (~> 0.1.0)
       rails (~> 3.2.0)
       require_all (~> 1.2.1)
-    bootstrap-sass (2.1.1.0)
+    bootstrap-sass (2.2.1.1)
+      sass (~> 3.2)
     bouncy-castle-java (1.5.0146.1)
     builder (3.0.4)
     capistrano (2.13.5)
