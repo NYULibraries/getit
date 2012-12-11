@@ -23,7 +23,7 @@ platforms :jruby do
   gem 'activerecord-jdbc-adapter', :require => false
   gem 'jdbc-mysql', :require => false
   gem 'jruby-rack'
-  gem 'jruby-openssl'
+  gem 'jruby-openssl', "0.8.1"
 end
 
 platforms :ruby do
