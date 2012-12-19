@@ -4,22 +4,22 @@ $smallFontSize:                             $baseFontSize - 1;
 $largeFontSize:                             $baseFontSize + 2;
 $baseLineHeight:                            12px !default;
 $linkColor:                                 #0066CC !default;
-$nyuLibrariesDarkBrown:                     #653d24;
-$nyuLibrariesLightBrown:                    #E0D8C9;
+$nyuLibrariesDarkGrey:                      #cfcfcf;
+$nyuLibrariesLightGrey:                     #e8e8e8;
 $nyuLibrariesAzBlue:                        #0000ee;
 $nyuLibrariesBorderColor:                   #653d24;
 $nyuLibrariesBackgroundColor:               #000000;
 $umlautGrey:                                darken(whiteSmoke, 9%);
 // General Styles                           
-$umlautBorderColor:                         $nyuLibrariesDarkBrown;
+$umlautBorderColor:                         $nyuLibrariesDarkGrey;
 $umlautBackgroundColor:                     #FFFDEA;
 // Permalink                                   
-$umlautResolveNavBorderColor:               $nyuLibrariesDarkBrown;
-$umlautResolveNavBackgroundColor:           $nyuLibrariesLightBrown;
+$umlautResolveNavBorderColor:               $nyuLibrariesDarkGrey;
+$umlautResolveNavBackgroundColor:           $nyuLibrariesLightGrey;
 // Resolve                                   
 $umlautMainBackgroundColor:                 $umlautBackgroundColor;
 $umlautSidebarBorderColor:                  $umlautBorderColor;
-$umlautSidebarBackgroundColor:              $nyuLibrariesLightBrown;
+$umlautSidebarBackgroundColor:              $nyuLibrariesLightGrey;
 // Resource Info                               
 $umlautResourceInfoBorderColor:             $umlautGrey;
 $umlautResourceInfoBackgroundColor:         white;
