@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: d713d52b2adf8d7426ee003d57c644795584c30c
+  revision: 9d6ed3c90245f2e270a18efcdb533eb011582589
   branch: bootstrap
   specs:
     umlaut (3.0.4)
@@ -138,7 +138,7 @@ GEM
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jruby-openssl (0.8.2)
+    jruby-openssl (0.8.1)
       bouncy-castle-java (>= 1.5.0146.1)
     jruby-rack (1.1.12)
     json (1.7.5)
