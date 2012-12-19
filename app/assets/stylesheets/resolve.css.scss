@@ -9,3 +9,9 @@
 #permalink {
   @extend .pull-left;
 }
+
+.umlaut-container {
+  h1 {
+    visibility: hidden;
+  }
+}

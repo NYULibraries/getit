@@ -7,19 +7,19 @@ $linkColor:                                 #0066CC !default;
 $nyuLibrariesDarkGrey:                      #cfcfcf;
 $nyuLibrariesLightGrey:                     #e8e8e8;
 $nyuLibrariesAzBlue:                        #0000ee;
-$nyuLibrariesBorderColor:                   #653d24;
+$nyuLibrariesBorderColor:                   darken($nyuLibrariesDarkGrey, 10%);
 $nyuLibrariesBackgroundColor:               #000000;
 $umlautGrey:                                darken(whiteSmoke, 9%);
 // General Styles                           
-$umlautBorderColor:                         $nyuLibrariesDarkGrey;
-$umlautBackgroundColor:                     #FFFDEA;
+$umlautBorderColor:                         $nyuLibrariesBorderColor;
+$umlautBackgroundColor:                     $nyuLibrariesLightGrey;
 // Permalink                                   
 $umlautResolveNavBorderColor:               $nyuLibrariesDarkGrey;
 $umlautResolveNavBackgroundColor:           $nyuLibrariesLightGrey;
 // Resolve                                   
 $umlautMainBackgroundColor:                 $umlautBackgroundColor;
 $umlautSidebarBorderColor:                  $umlautBorderColor;
-$umlautSidebarBackgroundColor:              $nyuLibrariesLightGrey;
+$umlautSidebarBackgroundColor:              $nyuLibrariesDarkGrey;
 // Resource Info                               
 $umlautResourceInfoBorderColor:             $umlautGrey;
 $umlautResourceInfoBackgroundColor:         white;
