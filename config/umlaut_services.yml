@@ -279,14 +279,6 @@ NYU:
       priority: 4
       service_types:
           - export_citation
-    NYU_PNX:
-      name: To PNX
-      type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=pnx&
-      display_text: To PNX
-      priority: 4
-      service_types:
-          - export_citation
     NYU_BIBTEX:
       name: To BibTeX
       type: OpenURLService
