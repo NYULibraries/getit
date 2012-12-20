@@ -145,6 +145,7 @@ class RequestsHelperTest < ActiveSupport::TestCase
 
   test "request_offsite?" do
     skip("Need to identify legitimate offsite records.")
+    no_user_assertions = {
       :available => false,
       :recall => false,
       :ill => false,
