@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 9d6ed3c90245f2e270a18efcdb533eb011582589
+  revision: e78a9429f4ca2149002c966b7a1125d51292cb94
   branch: bootstrap
   specs:
     umlaut (3.0.4)
