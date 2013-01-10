@@ -18,8 +18,6 @@ module Exlibris::Primo::Source
   #                                     user     system      total        real
   #       PrimoSource - NyuAleph:   2.130000   0.030000   2.160000 (  3.486879)
   class NyuAleph < Exlibris::Primo::Source::Aleph
-    @attribute_aliases = Exlibris::Primo::Source::Aleph.attribute_aliases
-    @decode_variables = Exlibris::Primo::Source::Aleph.decode_variables
     @source_data_elements = {
       :aleph_url => :source_url,
       :aleph_sub_library_code => :aleph_sub_library_code,
@@ -51,10 +49,10 @@ module Exlibris::Primo::Source
         # make these expensive calls twice.
         # Get Aleph record from REST API
         aleph_record = Exlibris::Aleph::Record.new(
-          aleph_doc_library, 
-          aleph_doc_number, 
-          aleph_config["rest_url"]
-        ) unless aleph_config.nil?
+          original_source_id, 
+          source_record_id, 
+          source_config["rest_url"]
+        ) unless source_config.nil?
         begin
           # Exlibris::Aleph::Record :items will raise an exception if the response isn't valid XML.
           # We'll handle the exception, ignore the Aleph stuff and 
@@ -70,12 +68,6 @@ module Exlibris::Primo::Source
           Rails.logger.error("Error getting data from Aleph REST APIs. #{e.message}")
           @aleph_items = []
           @coverage = []
-          # TODO: Figure out if setting the URL to Primo is the right thing to do.
-          # On the one hand, if Aleph REST APIs are down, Aleph may be down,
-          # so we don't want to send users to a dead link.
-          # On the other hand, if they just came from Primo, they don't want to 
-          # go back and Aleph may not be down, just the REST APIs.
-          @url = primo_url
           @getting_aleph_holdings = false
           @request_link_supports_ajax_call = false
           # Alert the authorities to the problem
@@ -105,7 +97,7 @@ module Exlibris::Primo::Source
         # TODO: Probably should specify the gap so it's clear.  
         # Likely "Billed as Lost" and other circ statuses.
         @request_link_supports_ajax_call = true
-        @source_data[:illiad_url] = aleph_config["illiad_url"]
+        @source_data[:illiad_url] = source_config["illiad_url"]
         @source_data.merge!(item_source_data)
       end
     end
@@ -147,22 +139,22 @@ module Exlibris::Primo::Source
       # Initialize status and status code.
       aleph_status_code, aleph_status = nil, nil
       # Loop through source config for statuses
-      # Note: since aleph_config_status_code is a hash key, it is frozen.
+      # Note: since source_config_status_code is a hash key, it is frozen.
       # and needs to be dup'ed to fit in with Umlaut's force_encode code.
-      aleph_config["statuses"].each { |aleph_config_status_code, aleph_config_status|
+      source_config["statuses"].each { |source_config_status_code, source_config_status|
         # Set checked out as Aleph status and code
-        aleph_status_code = aleph_config_status_code.dup and 
+        aleph_status_code = source_config_status_code.dup and 
           aleph_status = "Due: " + @aleph_item_circulation_status and
-            break if (aleph_config_status_code.dup == "checked_out" and 
-              aleph_config_status === @aleph_item_circulation_status)
+            break if (source_config_status_code.dup == "checked_out" and 
+              source_config_status === @aleph_item_circulation_status)
         # Set circulation statuses like On Shelf, Billed as Lost, as Aleph status and code
-        aleph_status_code = aleph_config_status_code.dup and
-          break if (aleph_config_status.instance_of?(Array) and 
-            aleph_config_status.include?(@aleph_item_circulation_status))
-      } unless aleph_config.nil? or aleph_config["statuses"].nil?
+        aleph_status_code = source_config_status_code.dup and
+          break if (source_config_status.instance_of?(Array) and 
+            source_config_status.include?(@aleph_item_circulation_status))
+      } unless source_config.nil? or source_config["statuses"].nil?
       deferred_statuses = 
-        (aleph_config.nil? or aleph_config["deferred_statuses"].nil?) ? 
-          {} : aleph_config["deferred_statuses"]
+        (source_config.nil? or source_config["deferred_statuses"].nil?) ? 
+          {} : source_config["deferred_statuses"]
       if (aleph_status_code.nil? or deferred_statuses.include?(aleph_status_code))
         # Set Aleph web text as Aleph status if we haven't already gotten the Aleph status
         aleph_status = @tab_helper.item_web_text(
@@ -195,7 +187,7 @@ module Exlibris::Primo::Source
         bib_866_l = bib_866.at(
           "subfield[@code='l']"
         ).inner_text unless bib_866.at("subfield[@code='l']").nil?
-        h = aleph_config["866$l_mappings"]
+        h = source_config["866$l_mappings"]
         next if h[bib_866_l].nil?
         bib_866_sub_library_code = h[bib_866_l]['sub_library']
         if @aleph_sub_library_code.upcase == bib_866_sub_library_code.upcase
@@ -293,7 +285,7 @@ module Exlibris::Primo::Source
           :aleph_item_description => aleph_item["z30"]["z30_description"],
           :aleph_item_hol_doc_number => aleph_item["z30"]["z30_hol_doc_number"],
           :library_code => aleph_item["z30_sub_library_code"].strip,
-          :id_two => process_aleph_call_number(aleph_item).gsub("&nbsp;", " ")
+          :call_number => process_aleph_call_number(aleph_item).gsub("&nbsp;", " ")
         }
         aleph_holdings.push(self.class.new(aleph_item_parameters))
       end
