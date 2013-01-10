@@ -1,56 +1,62 @@
 source :rubygems
-gem 'rails', '3.2.8'
+gem "rails", "~> 3.2.11"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.5'
-  gem 'coffee-rails', '~> 3.2.1'
-
+  gem "sass-rails",   "~> 3.2.5"
+  gem "coffee-rails", "~> 3.2.2"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   platforms :jruby do
-    gem 'therubyrhino', '~> 2.0.0'
+    gem "therubyrhino", "~> 2.0.2"
   end
   platforms :ruby do
-    gem 'therubyracer', '~> 0.10.0'
+    gem "therubyracer", "~> 0.11.1"
   end
-  gem 'uglifier', '>= 1.0.3'
+  gem "uglifier", ">= 1.3.0"
   gem "compass-rails", "~> 1.0.3"
-  gem 'nyulibraries_assets', :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
-  # gem 'nyulibraries_assets', :path => '/Users/dalton/Documents/workspace/nyulibraries_assets'
+  gem "nyulibraries_assets", :git => "git://github.com/NYULibraries/nyulibraries_assets.git"
+  # gem "nyulibraries_assets", :path => "/Users/dalton/Documents/workspace/nyulibraries_assets"
+end
+
+# Testing gems
+group :development, :test do
+  gem "progress_bar", "~> 0.4.0"
+  gem "simplecov", "~> 0.7.1"
+  gem "simplecov-rcov", "~> 0.2.3"
 end
 
 platforms :jruby do
-  gem 'activerecord-jdbc-adapter', :require => false
-  gem 'jdbc-mysql', :require => false
-  gem 'jruby-rack'
-  gem 'jruby-openssl', "0.8.1"
+  gem "activerecord-jdbcmysql-adapter", "~> 1.2.5"
+  gem "jruby-rack", "~> 1.1.12"
+  gem "jruby-openssl", "~> 0.8.2"
 end
 
 platforms :ruby do
-  gem 'mysql2', '~> 0.3.11'
+  gem "mysql2", "~> 0.3.11"
 end
 
 # Use jquery
-gem 'jquery-rails'
+gem "jquery-rails", "~> 2.1.4"
 
 # Use mustache
-gem 'mustache-rails', :require => 'mustache/railtie'
+gem "mustache-rails", "~> 0.2.3", :require => "mustache/railtie"
 
 # Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm-capistrano'
+gem "capistrano", "~> 2.14.1"
+gem "rvm-capistrano", "~> 1.2.7"
 
 # Use passenger as the app server
-gem 'passenger'
+gem "passenger", "~> 3.0.19"
 
 # Umlaut
-gem 'umlaut', :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
-# gem 'umlaut', :path => '/Users/dalton/Documents/workspace/umlaut/umlaut3'
-gem 'sunspot_rails'
-gem 'exlibris-aleph', "~> 0.1.4"
-gem 'authpds-nyu', "~> 0.2.5"
-gem 'dalli', '2.5.0'
+gem "umlaut", :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
+# gem "umlaut", :path => "/Users/dalton/Documents/workspace/umlaut/umlaut3"
+gem "sunspot_rails", "~> 1.3.3"
 
-group :development, :test do
-  gem 'progress_bar'
-end
+# NYU customization gems
+gem "exlibris-aleph", "~> 0.1.4"
+gem "authpds-nyu", "~> 0.2.5"
+
+# Dalli for caching with memcached
+gem "dalli", "~> 2.6.0"
