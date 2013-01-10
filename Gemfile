@@ -55,6 +55,7 @@ gem "umlaut", :git => "git://github.com/team-umlaut/umlaut.git", :branch => "boo
 gem "sunspot_rails", "~> 1.3.3"
 
 # NYU customization gems
+gem "exlibris-primo", :git => "git://github.com/scotdalton/exlibris-primo.git"
 gem "exlibris-aleph", "~> 0.1.4"
 gem "authpds-nyu", "~> 0.2.5"
 
