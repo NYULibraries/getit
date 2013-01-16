@@ -94,15 +94,15 @@ sfx4_cu:
   pool: 30
   encoding: utf8
 
-sfx4_ns:
-  adapter: mysql2
-  host: sfx4.library.newschool.edu
-  port: 3310
-  database: sfxlcl41
-  username: umlaut
-  password: N0?t&[*$+7*~3HjW[8^
-  pool: 30
-  encoding: utf8
+# sfx4_ns:
+#   adapter: mysql2
+#   host: sfx4.library.newschool.edu
+#   port: 3310
+#   database: sfxlcl41
+#   username: umlaut
+#   password: N0?t&[*$+7*~3HjW[8^
+#   pool: 30
+#   encoding: utf8
 
 sfx4_global:
   adapter: mysql2

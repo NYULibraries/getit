@@ -7,14 +7,14 @@ require 'umlaut_configurable'
 # for general umlaut views. And also so local app can over-ride
 # methods here once, and have it apply to all Umlaut controllers.
 # But there's not much magic in here or anything, the
-# common behavior is ordinary methods available to be called, mostly. 
+# common behavior is ordinary methods available to be called, mostly.
 #
 # This class is copied into the local app -- the default implementation
 # does nothing but 'include Umlaut::ControllerBehavior'
 #
 # You will ordinarily set config here, and can also over-ride
 # methods from Umlaut::ControllerBehavior if desired. Or add
-# additional helpers to over-ride Umlaut helpers if needed. 
+# additional helpers to over-ride Umlaut helpers if needed.
 class UmlautController < ApplicationController
   before_filter :institutional_config
   include Umlaut::ControllerBehavior
@@ -38,22 +38,23 @@ class UmlautController < ApplicationController
     end
   end
 
-  umlaut_config.configure do 
+  umlaut_config.configure do
     app_name 'Get It'
-  
-    # URL to image to use for link resolver in some self-links, 
-    # OR name of image asset in local app. 
+
+    # URL to image to use for link resolver in some self-links,
+    # OR name of image asset in local app.
     link_img_url "http://library.nyu.edu/getit.gif"
-  
+
     # Sometimes Umlaut sends out email, what email addr should it be from?
     from_email_addr 'no-reply@library.nyu.edu'
-  
+
     # Local layout for UmlautController's, instead of
     # built in 'umlaut' layout?
     # layout "application"
     resolve_layout "resolve"
     search_layout "bobcat"
-  
+    # search_layout "search"
+
     # A help url used on error page and a few other places.
     help_url  "http://library.nyu.edu/ask"
 
@@ -61,42 +62,42 @@ class UmlautController < ApplicationController
     # link resolver knowledge base, display a warning to the user of potential
     # typo?
     # entry_not_in_kb_warning true
-  
+
     # rfr_ids used for umlaut generated pages.
     # rfr_ids do
     #   opensearch  "info:sid/umlaut.code4lib.org:opensearch"
     #   citation    "info:sid/umlaut.code4lib.org:citation"
     #   azlist      'info:sid/umlaut.code4lib.org:azlist'
     # end
-  
+
     # Referent filters. Sort of like SFX source parsers.
     # hash, key is regexp to match a sid, value is filter object
-    # (see lib/referent_filters )        
-    # add_referent_filters!( :match => /.*/, :filter => DissertationCatch.new ) 
+    # (see lib/referent_filters )
+    # add_referent_filters!( :match => /.*/, :filter => DissertationCatch.new )
 
     # How many seconds between updates of the background updater for background
     # services?
     # poll_wait_seconds 4
-  
+
     # Configuration for the 'search' functions -- A-Z lookup
-    # and citation entry. 
+    # and citation entry.
     search do
       # Is your SFX database connection, defined in database.yml under
       # sfx_db and used for A-Z searches, Sfx3 or Sfx4?  Other SearchMethods
-      # in addition to SFX direct db may be provided later. 
+      # in addition to SFX direct db may be provided later.
       az_search_method  SearchMethods::Sfx4Solr::Local
-    
+
       # When talking directly to the SFX A-Z list database, you may
       # need to set this, if you have multiple A-Z profiles configured
       # and don't want to use the 'default.
-      # sfx_az_profile "default"    
-            
-      # can set to "_blank" etc. 
-      result_link_target _blank        
+      # sfx_az_profile "default"
+
+      # can set to "_blank" etc.
+      result_link_target _blank
     end
-  
-    # config only relevant to SFX use  
-    sfx do      
+
+    # config only relevant to SFX use
+    sfx do
       # base sfx url to use for search actions, error condition backup,
       # and some other purposes. For search actions (A-Z), direct database
       # connection to your SFX db also needs to be defined in database.yml
@@ -109,7 +110,7 @@ class UmlautController < ApplicationController
       # urls can be included here. Eg,
       # AppConfig::Base.additional_sfx_controlled_urls = [
       #    %r{^http://([^\.]\.)*pubmedcentral\.com}
-      #  ]    
+      #  ]
       # additional_sfx_controlled_urls = []
     end
 
@@ -119,11 +120,11 @@ class UmlautController < ApplicationController
 
     # Advanced topic, you can declaratively configure
     # what sections of the resolve page are output where
-    # and how using resolve_sections and add_resolve_sections!            
+    # and how using resolve_sections and add_resolve_sections!
   end
 
   protected
-  def create_collection    
+  def create_collection
     return Collection.new(@user_request, services(institutions(params[UserSession.institution_param_key])))
   end
 
@@ -158,8 +159,6 @@ class UmlautController < ApplicationController
     services = {}
     institutions.each do | institution |
       # trim out ones with disabled:true
-      p institution.inspect
-
       services.merge!(ServiceStore.config["#{institution}"]["services"].reject {|id, hash| hash && hash["disabled"] == true})
     end
     return services

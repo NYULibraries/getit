@@ -146,9 +146,13 @@ module RequestsHelper
     aleph_user_permissions_for_item(user_session, item)
   end
 
-  # Aleph methods
+  # Get the Aleph "tab" helper
   def self.aleph_helper
-    Exlibris::Aleph::TabHelper.instance()
+    @aleph_helper ||= Exlibris::Aleph::TabHelper.instance()
+  end
+
+  def aleph_helper
+    @aleph_helper ||= self.class.aleph_helper
   end
 
   # TODO: Abstract out Aleph methods
@@ -173,12 +177,10 @@ module RequestsHelper
 
   def self.aleph_item_permissions(item={})
     aleph_item = item[:source_data]
-    return {} if aleph_item.nil? or aleph_item[:aleph_item_adm_library].nil?
-    return aleph_helper.item_permissions(
-      :adm_library_code => aleph_item[:aleph_item_adm_library].downcase,
-      :sub_library_code => aleph_item[:aleph_item_sub_library_code],
-      :item_status_code => aleph_item[:aleph_item_status_code],
-      :item_process_status_code => aleph_item[:aleph_item_process_status_code] ) 
+    (aleph_item.nil? or aleph_item[:adm_library].nil?) ? {} :
+      aleph_helper.item_permissions(:adm_library_code => aleph_item[:adm_library].downcase,
+        :sub_library_code => aleph_item[:sub_library_code], :item_status_code => aleph_item[:item_status_code],
+          :item_process_status_code => aleph_item[:item_process_status_code] ) 
   end
 
   def self.aleph_user_permissions_for_item(user_session, item={})

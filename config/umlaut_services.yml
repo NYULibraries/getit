@@ -18,7 +18,7 @@ default:
     NYU_Primo:
       type: PrimoService
       priority: 2 # After SFX, to get SFX metadata enhancement
-      base_url: http://bobcatdev.library.nyu.edu
+      base_url: http://bobcat.library.nyu.edu
       vid: NYU
       institution: NYU
       holding_search_institution: NYU
@@ -46,12 +46,47 @@ default:
       service_types:
         - referent_enhance
         - cover_image
-        
+
+    # Priority 4
+    # Wayfinder to return whence you came
+    Wayfinder:
+      name: NYU Wayfinder
+      type: Wayfinder
+      priority: 4
+      known_rfrs:
+        -
+          name: primo 
+          regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
+          base_url: http://library.nyu.edu/persistent/lcn/
+          display_text: Back to BobCat
+        -
+          name: xerxes
+          regex: !ruby/regexp '/info:sid\/library\.nyu\.edu:xerxes \((.+)\)/'
+          base_url: "https://arch.library.nyu.edu/databases/alphabetical?base=databases&action=find&query="
+          display_text: Back to database search
+        -
+          name: umlaut
+          regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
+          base_url: "https://getit.library.nyu.edu"
+          display_text: Back to e-journal search
+        -
+          name: worldcat1
+          regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
+          base_url: "http://www.worldcat.org"
+          display_text: Back to WorldCat
+        -
+          name: worldcat2
+          regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
+          base_url: "http://www.worldcat.org/search?qt=worldcat_org_all"
+          display_text: Back to WorldCat
+          querystring_metadata:
+            q: title
+
     # Priority a: Background
     NYU_Primo_Source:
       type: PrimoSource
       priority: a
-      base_url: http://bobcatdev.library.nyu.edu
+      base_url: http://bobcat.library.nyu.edu
       vid: NYU
       source_attributes:
         - request_link_supports_ajax_call
@@ -383,8 +418,8 @@ NS:
       extra_targets_of_interest:
         ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
         REFWORKS_EXPORT_TOOL: export_citation
-    #    ISI_WEB_OF_SCIENCE: export_citation
-    #    BX_RECOMMENDER_SERVICE: help
+        # ISI_WEB_OF_SCIENCE: export_citation
+        BX_RECOMMENDER_SERVICE: help
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
 
