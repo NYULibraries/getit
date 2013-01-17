@@ -14,8 +14,9 @@ module Exlibris
       #
       # == Benchmarks
       class NyuAleph < Exlibris::Primo::Source::Aleph
-        attr_accessor :adm_library_code, :collection_code, :item_status_code,
-          :item_process_status_code, :circulation_status, :primo_status_code
+        attr_accessor :adm_library_code, :sub_library_code, :collection_code, 
+          :item_status_code, :item_process_status_code, :circulation_status, 
+            :primo_status_code
         
         # Overwrites Exlibris::Primo::Source::Aleph#new
         def initialize(attributes={})
@@ -128,7 +129,7 @@ module Exlibris
               :description => aleph_item["z30"]["z30_description"],
               :hol_doc_number => aleph_item["z30"]["z30_hol_doc_number"]
             }
-            self.class.new({:holding => self, :source_data => source_data}.merge(source_data))
+            holding = self.class.new({:holding => self, :source_data => source_data}.merge(source_data))
           end
         end
         private :expanded_holdings

@@ -28,6 +28,9 @@ class NyuAlephTest < ActiveSupport::TestCase
     assert_equal("(HN49.I56 N67 2001)", nyu_aleph.call_number)
     assert_equal("available", nyu_aleph.status_code)
     assert_equal("Available", nyu_aleph.status)
+    assert_equal("BOBST", nyu_aleph.sub_library_code)
+    assert_equal("NYU Bobst", nyu_aleph.sub_library)
+    assert_equal("NYU Bobst", nyu_aleph.library)
   end
   
   test "nyu_aleph_expand_book" do
