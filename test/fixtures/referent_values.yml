@@ -1755,4 +1755,20 @@ sfx_multi_obj_request_no_fulltext_rv8:
   metadata: true
   private_data: false
 
+the_new_yorker_rv1:
+  referent: the_new_yorker_referent
+  key_name: title
+  value: The New Yorker
+  normalized_value: The New Yorker
+  metadata: true
+  private_data: false
+
+the_new_yorker_rv2:
+  referent: the_new_yorker_referent
+  key_name: issn
+  value: 0028-792X
+  normalized_value: 0028-792X
+  metadata: true
+  private_data: false
+
 

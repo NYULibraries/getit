@@ -17,9 +17,6 @@ module Exlibris
         attr_accessor :adm_library_code, :collection_code, :item_status_code,
           :item_process_status_code, :circulation_status, :primo_status_code
         
-        attr_reader :expanded
-        alias :expanded? :expanded
-
         # Overwrites Exlibris::Primo::Source::Aleph#new
         def initialize(attributes={})
           super(attributes)
@@ -53,18 +50,21 @@ module Exlibris
 
         # Overrides Exlibris::Primo::Source::Aleph#expand
         def expand
-          @expanded = true
-          (expanded_holdings.empty?) ? super : expanded_holdings
+          (expanding?) ? expanded_holdings : super
         end
 
         # Overrides Exlibris::Primo::Source::Aleph#dedup?
+        # Iff we're expanding are we deduping since we 
+        # if we're not expanding we just want to convert the 
+        # existing Primo sources to holdings 
         def dedup?
-          @dedup ||= expanded_holdings.empty?
+          expanding?
         end
 
         # Does this holding request link support AJAX requests?
+        # Only if we're expanding
         def ajax?
-          (not expanded_holdings.empty?)
+          expanding?
         end
         alias :request_link_supports_ajax_call? :ajax?
         alias :request_link_supports_ajax_call :ajax?
@@ -89,16 +89,29 @@ module Exlibris
                 :sub_library_code => sub_library_code, :collection_code => collection_code)
         end
 
+        # Logic to determine whether we're expanding this holding
+        # Only expand if not a journal
+        def expanding?
+          @expanding ||= (not journal?)
+        end
+        private :expanding?
+
+        # Is this a journal
+        def journal?
+          (display_type.upcase.eql? "JOURNAL")
+        end
+        private :journal?
+
         # Overrides Exlibris::Primo::Holding#coverage to return
         # based on Aleph bib and holdings coverage
+        # Only get coverage for journals
         def coverage
-          return []
-          @coverage ||= (display_type.upcase != "JOURNAL") ? [] : (bib_coverage + holdings_coverage)
+          @coverage ||= (journal?) ? (bib_coverage + holdings_coverage) : []
         end
 
         # Get expanded holdings based on Aleph items.
         def expanded_holdings
-          @expanded_holdings ||= (display_type.upcase == "JOURNAL") ? [] : aleph_items.collect do |aleph_item|
+          @expanded_holdings ||= (not expanding?) ? [] : aleph_items.collect do |aleph_item|
             source_data = {
               :item_id => aleph_item["href"].match(/items\/(.+)$/)[1],
               :adm_library_code => aleph_item["z30"]["translate_change_active_library"],

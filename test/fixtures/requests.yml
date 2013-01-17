@@ -289,3 +289,8 @@ sfx_multi_obj_request_no_fulltext_request:
   client_ip_addr: "127.0.0.1" 
   contextobj_fingerprint: "b75283f6fb365d5901fbdc6726301377"
 
+the_new_yorker_request:
+  id: 58
+  referent: the_new_yorker_referent
+  session_id: "f747f4273c1ecb12f1f764cc10c646d7"
+  client_ip_addr: "127.0.0.1" 

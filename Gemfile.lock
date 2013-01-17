@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 647badc0887469ac9e87915f158d05cd7ed34826
+  revision: 455c99e9d442b2ce42bcfd3451a8f20011779bb1
   specs:
     nyulibraries_assets (0.0.3)
       bootstrap-sass (~> 2.2.0)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: cf7c21e3b67a16af8c5d2c818946dd9a4e9d8cfc
+  revision: 1b964af876909644848344d1b506bc3bca143739
   branch: bootstrap
   specs:
     umlaut (3.0.4)
