@@ -26,3 +26,15 @@
 .wayfinder {
   @extend .help;
 }
+
+.umlaut-section {
+  &.document_delivery {
+    @include iconed-response;
+    .response_item i {
+      background: {
+        image: image-url("icons.png");
+      }
+      @extend .icons-famfamfam-book-go;
+    }
+  }
+}
