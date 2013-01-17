@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: b12b8bc22f9eafe83331c7b523599c220a221511
+  revision: 647badc0887469ac9e87915f158d05cd7ed34826
   specs:
     nyulibraries_assets (0.0.3)
       bootstrap-sass (~> 2.2.0)
