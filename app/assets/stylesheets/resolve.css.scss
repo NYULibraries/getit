@@ -29,11 +29,11 @@
 
 .umlaut-section {
   &.document_delivery {
-    @include iconed-response;
+    a {
+      font-weight: bold;
+    }
     .response_item i {
-      background: {
-        image: image-url("icons.png");
-      }
+      @include icons;
       @extend .icons-famfamfam-book-go;
     }
   }
