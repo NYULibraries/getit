@@ -50,12 +50,13 @@ module ApplicationHelper
       end # destroy dispatched services block
       holdings.each do |holding|
         next unless (holding.service_id == "NYU_Primo_Source")
-        expired = holding.view_data[:expired] and latest = holding.view_data[:latest]
+        expired = holding.view_data[:expired]
+        latest = holding.view_data[:latest]
         next unless not expired or latest
         # :latest determines whether we show the holding in other services, e.g. txt and email.
         # It persists for one more cycle than :expired so services that run after
         # this one, but in the same resolution request have access to the latest holding data.
-        holding.take_key_values(:latest => false) unless not expired
+        holding.take_key_values(:latest => false) if expired
         # :expired determines whether we show the holding in this service
         # Since we are done with this holding, the data has expired.
         holding.take_key_values(:expired => true) unless expired
