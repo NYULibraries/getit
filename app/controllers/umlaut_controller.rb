@@ -121,6 +121,31 @@ class UmlautController < ApplicationController
     # Advanced topic, you can declaratively configure
     # what sections of the resolve page are output where
     # and how using resolve_sections and add_resolve_sections!
+    add_resolve_sections! do
+      div_id "wayfinder"
+      html_area :sidebar
+      bg_update false
+      partial "wayfinder"
+      show_heading false
+      show_spinner false
+      visibility :responses_exist 
+    end
+
+    export_citation = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "export_citation"}]
+    export_citation[:section_title] = "Send/Share"
+    export_citation[:bg_update] = false
+    export_citation[:visibility] = :complete_with_responses
+
+    resolve_sections do
+      ensure_order!("wayfinder", "service_errors")
+      ensure_order!("wayfinder", "highlighted_link")
+      ensure_order!("wayfinder", "related_items")
+      ensure_order!("wayfinder", "export_citation")
+      ensure_order!("wayfinder", "coins")
+      ensure_order!("wayfinder", "help")
+      ensure_order!("export_citation", "highlighted_link")
+      ensure_order!("highlighted_link", "related_items")
+    end
   end
 
   protected

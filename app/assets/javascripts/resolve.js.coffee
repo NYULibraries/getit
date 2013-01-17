@@ -2,4 +2,4 @@
 #  also forces require of jquery and jquery-ui, dependencies. 
 # = require 'umlaut'          
 # = require "nyulibraries"
-# = require ./resolve
+# = require_tree ./resolve

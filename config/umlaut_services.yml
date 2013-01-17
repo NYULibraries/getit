@@ -82,6 +82,15 @@ default:
           querystring_metadata:
             q: title
 
+    # Priority 5
+    EmailExport:
+      type: EmailExport
+      priority: 8
+
+    TxtHoldingExport:
+      type: TxtHoldingExport
+      priority: 9
+
     # Priority a: Background
     NYU_Primo_Source:
       type: PrimoSource
@@ -186,14 +195,6 @@ default:
       #   existing_service: GoogleBookSearch
       #   existing_type: fulltext
 
-    EmailExport:
-      type: EmailExport
-      priority: d
-
-    TxtHoldingExport:
-      type: TxtHoldingExport
-      priority: d
-    
     # Worldcat scraper can be quite slow, move it to wave 'd' to avoid
     # holding up wave 'c'
     Worldcat:
@@ -291,43 +292,43 @@ NYU:
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
     NYU_RefWorks:
-      name: To RefWorks
+      name: RefWorks
       type: OpenURLService
       base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=refworks&
-      display_text: To RefWorks
-      priority: 4
+      display_text: Push to RefWorks
+      priority: 3
       service_types:
           - export_citation
     NYU_Endnote:
-      name: To Endnote
+      name: EndNoteWeb
       type: OpenURLService
       base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=endnote&
-      display_text: To Endnote
-      priority: 4
-      service_types:
-          - export_citation
-    NYU_RIS:
-      name: To RIS
-      type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=ris&
-      display_text: To RIS
-      priority: 4
-      service_types:
-          - export_citation
-    NYU_BIBTEX:
-      name: To BibTeX
-      type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=bibtex&
-      display_text: To BibTeX
+      display_text: Push to EndNote Web
       priority: 4
       service_types:
           - export_citation
     NYU_EASYBIB:
-      name: To Easy Bib
+      name: EasyBib
       type: OpenURLService
       base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=pusheasybib&
-      display_text: To Easy Bib
-      priority: 4
+      display_text: Push to EasyBib
+      priority: 5
+      service_types:
+          - export_citation
+    NYU_RIS:
+      name: RIS
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=ris&
+      display_text: Download as RIS
+      priority: 6
+      service_types:
+          - export_citation
+    NYU_BIBTEX:
+      name: BibTeX
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=bibtex&
+      display_text: Download as BibTeX
+      priority: 7
       service_types:
           - export_citation
 NYUAD:
@@ -336,6 +337,13 @@ NYUAD:
   views:
     dir: nyuad
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?institution=nyuad"
+      xerxes: 
+        url_suffix: "&institution=nyuad"
+      umlaut: 
+        url_suffix: "/nyuad"
   ip_addresses:
     - 192.168.224.0/23
     - 192.168.226.0/24
@@ -371,6 +379,13 @@ CU:
   views:
     dir: cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=cu" 
+        xerxes: 
+          url_suffix: "&institution=cu"
+        umlaut: 
+          url_suffix: "/cu"
   controllers:
     searcher: SearchMethods::Sfx4Solr::CU
   ip_addresses:
@@ -397,6 +412,13 @@ NS:
   views:
     dir: ns
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=ns" 
+        xerxes: 
+          url_suffix: "&institution=ns"
+        umlaut: 
+          url_suffix: "/ns"
   controllers:
     searcher: SearchMethods::Sfx4Solr::NS
   ip_addresses:

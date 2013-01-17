@@ -7,15 +7,16 @@ unless wayfinders.empty? %>
       <li><%
         rfr_name = wayfinder.view_data[:rfr_name] 
         wayfinder_attributes = 
-          (current_primary_institution.view_attributes.nil? or 
-            current_primary_institution.view_attributes["wayfinder_attributes"].nil? or
-              current_primary_institution.view_attributes["wayfinder_attributes"][rfr_name].nil?) ? 
-                {} : current_primary_institution.view_attributes["wayfinder_attributes"][rfr_name]
+          (current_primary_institution.views.nil? or 
+            current_primary_institution.views["wayfinder_attributes"].nil? or
+              current_primary_institution.views["wayfinder_attributes"][rfr_name].nil?) ? 
+                {} : current_primary_institution.views["wayfinder_attributes"][rfr_name]
         display_text = (wayfinder_attributes["display_text"].nil?) ? 
           view_data[:display_text] : wayfinder_attributes["display_text"]
         url = (wayfinder_attributes["url_suffix"].nil?) ? 
-          view_data[:url] : "#{view_data[:url]}#{wayfinder_attributes["url_suffix"]}" %><%= 
-        link_to display_text, url, :class => "nyulibrary_icons_arrow_undo", :target => "_blank" %>
+          view_data[:url] : "#{view_data[:url]}#{wayfinder_attributes["url_suffix"]}" %><%=
+        content_tag "i", nil, :class => "icons-famfamfam-arrow_undo" %><%= 
+        link_to display_text, url, :target => "_blank" %>
         <%#= link_to view_data[:display_text], {:controller=>'link_router', :id=>wayfinder.id}, :class => "nyulibrary_icons_arrow_undo", :target => "_blank", 'id' => "svctype_link_#{wayfinder.id}" %>
       </li><%
     end %>

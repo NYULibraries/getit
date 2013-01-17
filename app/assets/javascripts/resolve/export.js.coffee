@@ -1,0 +1,13 @@
+$ ->
+  dropdown = $("#export_citation .export_citation")
+  heading = dropdown.find(".section_heading").eq(0).remove()
+  content = dropdown.find(".umlaut_section_content").eq(0).remove()
+  dropdown.addClass("dropdown")
+  button_text = heading.find("h3").eq(0).remove().text()
+  button = $("<a><h3>#{button_text}<b class=\"caret\"></h3></a>")
+  button.addClass("dropdown-toggle").attr("id", "dLabel").attr("role", "button").attr("data-toggle", "dropdown")
+  button.attr("data-target", "#").attr("href", "#")
+  menu = content.find(".response_list").eq(0).clone().removeClass("response_list")
+  menu.addClass("dropdown-menu").attr("aria-labelledby", "dLabel").attr("role", "menu")
+  dropdown.append(button).append(menu)
+  $().dropdown('toggle')

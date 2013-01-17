@@ -54,7 +54,6 @@ module Exlibris
         # Overrides Exlibris::Primo::Source::Aleph#expand
         def expand
           @expanded = true
-          p expanded_holdings.inspect
           (expanded_holdings.empty?) ? super : expanded_holdings
         end
 

@@ -1,3 +1,6 @@
+@import "compass";
+@import "icons/*.png";
+@include all-icons-sprites;
 @import "nyulibraries/variables";
 @import "resolve/variables";
 @import "nyulibraries/header";
@@ -5,6 +8,7 @@
 @import "nyulibraries/mixins";
 @import "nyulibraries/responsive";
 @import "umlaut";
+@import "nyulibraries/misc";
 
 #permalink {
   @extend .pull-left;
@@ -17,4 +21,8 @@
   border: {
     top: none;
   }
+}
+
+.wayfinder {
+  @extend .help;
 }
