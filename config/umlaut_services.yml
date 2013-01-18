@@ -9,7 +9,7 @@
 # or source-generated docs for more info.   
 default:
   auth:
-    link_code: NYU
+    code: NYU
   views:
     dir: nyu
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
@@ -375,7 +375,7 @@ CU:
   name: The Cooper Union Library
   active_tab: journals
   auth:
-    link_code: CU
+    code: CU
   views:
     dir: cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
@@ -408,7 +408,7 @@ NS:
   name: New School Libraries
   active_tab: journals
   auth:
-    link_code: NS
+    code: NS
   views:
     dir: ns
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
@@ -447,7 +447,7 @@ NS:
 
 NYSID:
   auth:
-    link_code: NYSID
+    code: NYSID
   display_name: New York School of Interior Design Library
   ip_addresses:
     - 128.122.0.1
