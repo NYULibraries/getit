@@ -100,6 +100,7 @@ class NyuAlephTest < ActiveSupport::TestCase
       assert_equal("BOBST", nyu_aleph.library_code)
       assert_equal("NYU Bobst", nyu_aleph.library)
       assert((not nyu_aleph.coverage.empty?), "Journal coverage is empty.")
+      assert_equal(4, nyu_aleph.coverage.size)
     }
   end
   

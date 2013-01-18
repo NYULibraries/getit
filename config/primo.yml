@@ -132,6 +132,9 @@ sources:
        IFA: 
          sub_library: NIFA
          collection: MAIN
+       ISAW: 
+         sub_library: NISAW
+         collection: MAIN
        Cooper: 
          sub_library: CU
          collection: MAIN
@@ -171,6 +174,9 @@ sources:
        ConservIFA: 
          sub_library: NIFAC
          collection: MAIN
+       ConservIFA Periodicals: 
+         sub_library: NIFAC
+         collection: PERIO
        Bobst REF9: 
          sub_library: BOBST
          collection: REF9
@@ -180,6 +186,9 @@ sources:
        Bobst Offsite: 
          sub_library: BOBST
          collection: MAIN
+       Bobst REF1 Offsite: 
+         sub_library: BOBST
+         collection: REF1
        NYIntDes: 
          sub_library: NYSID
          collection: MAIN
