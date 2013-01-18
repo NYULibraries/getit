@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 2e26b46ee4ffce57af70f2e7e3d2829e84d5e100
+  revision: 05e390cbe928441b8eea23f88c35f1fd51487f60
   branch: development-institutions
   specs:
     nyulibraries_assets (0.0.3)
