@@ -3,7 +3,7 @@ module Views
   module Layouts
     class Bobcat < ActionView::Mustache
       def stylesheets
-        search_stylesheets
+        institutional_stylesheets
       end
 
       def javascripts

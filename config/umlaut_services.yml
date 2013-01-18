@@ -8,10 +8,8 @@
 # all options are neccesarily listed as examples here, see source
 # or source-generated docs for more info.   
 default:
-  auth:
-    code: NYU
   views:
-    dir: nyu
+    css: search
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
     # Priority 2
@@ -269,6 +267,8 @@ NYU:
   name: NYU Libraries
   parent_code: default
   active_tab: journals
+  views:
+    css: search
   ip_addresses:
     - 128.122.0.0-128.122.149.239
     - 172.26.*.*
@@ -335,7 +335,7 @@ NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU 
   views:
-    dir: nyuad
+    css: search_nyuad
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
     wayfinder_attributes:
       primo:
@@ -374,10 +374,8 @@ NYUAD:
 CU:
   name: The Cooper Union Library
   active_tab: journals
-  auth:
-    code: CU
   views:
-    dir: cu
+    css: search_cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
     wayfinder_attributes:
         primo:
@@ -407,10 +405,8 @@ CU:
 NS:
   name: New School Libraries
   active_tab: journals
-  auth:
-    code: NS
   views:
-    dir: ns
+    css: search_ns
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
         primo:
@@ -446,9 +442,9 @@ NS:
         COMMENTS_ABOUT_BOBCAT_LCL: help
 
 NYSID:
-  auth:
-    code: NYSID
   display_name: New York School of Interior Design Library
+  views:
+    css: search
   ip_addresses:
     - 128.122.0.1
   
