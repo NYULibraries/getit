@@ -1,4 +1,5 @@
 @import "bobcat";
+@import "search/az";
 
 div.rfr_id {
   margin: {
@@ -9,14 +10,6 @@ div.rfr_id {
       right: -10px;
     }
   }
-}
-
-.umlaut-az {
-  @extend .nyu-az;
-}
-
-.umlaut-pagination {
-  @extend .nyu-pagination;
 }
 
 .umlaut-citation-link {

@@ -32,7 +32,13 @@ class UmlautController < ApplicationController
       end
       unless institution.nil? or institution.controllers.nil?
         search do
-          az_search_method institution.controllers["searcher"] unless institution.controllers["searcher"].nil?
+          unless institution.controllers["searcher"].nil?
+            az_search_method_const = SearchMethods
+            az_search_method_consts = institution.controllers["searcher"].split("::").each do |const|
+              az_search_method_const = az_search_method_const.const_get(const.to_sym)
+            end
+            az_search_method az_search_method_const 
+          end
         end
       end
     end
