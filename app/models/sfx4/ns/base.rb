@@ -1,6 +1,10 @@
 module Sfx4
   module Ns
     class Base < ActiveRecord::Base
+      # This model is readonly.
+      # Don't whitelist any attributes
+      attr_accessible
+
       # Was a SFX DB connection set in database.yml to connect directly to sfx?
       def self.connection_configured?
         config = ActiveRecord::Base.configurations["sfx4_ns"]
