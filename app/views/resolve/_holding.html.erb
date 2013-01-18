@@ -9,17 +9,17 @@
 holdings = get_service_type('holding')
 unless holdings.empty? %>  
   <div class="container-fluid umlaut-holdings">
-    <p style="margin-bottom: 1em;"><%=
+    <p style="margin-bottom: 1em;"><strong><%=
       link_to("View Maps and Call Number Locations",
         "http://library.nyu.edu/bobcat/callno/", 
-          :target=>"_blank") %></p><%
+          :target=>"_blank") %></strong></p><%
     # Process each holding.
     holdings.each do |p|
       target = p.view_data 
       # Only display holdings that aren't expired. 
       unless target[:expired] == true %>
         <div class="row-fluid umlaut-holding">
-          <div class="span3"><%= target[:collection_str] %></div>
+          <div class="span3"><strong><%= target[:collection_str] %></strong></div>
           <div class="span4"><%= target[:call_number]%></div><%
           # Set status class based on configured available statuses
           status_class = umlaut_config.holdings.available_statuses.include?(target[:status]) ? 'available' : '' %> 
@@ -65,13 +65,13 @@ unless holdings.empty? %>
         # Display notes
         unless target[:notes].blank? %>
           <div class="row-fluid">
-            <div class="span12 umlaut-content-indent"><%= target[:notes] %></div>
+            <div class="span11 offset1"><%= target[:notes] %></div>
           </div><%
         end
         # Display coverage
         unless target[:coverage].blank? %>
           <div class="row-fluid">
-            <div class="span12"><%=              
+            <div class="span11 offset1"><%=              
               list_with_limit("copies_#{p.id}", target[:coverage_str_array]) do |item, index| %>
                 <li><%= item %></li><% 
               end %>
