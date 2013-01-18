@@ -14,10 +14,9 @@ module Exlibris
       #
       # == Benchmarks
       class NyuAleph < Exlibris::Primo::Source::Aleph
-        attr_accessor :adm_library_code, :sub_library_code, :collection_code, 
-          :item_status_code, :item_process_status_code, :circulation_status, 
-            :primo_status_code
-        
+        attr_accessor :adm_library_code, :sub_library_code, :collection_code,
+          :item_status_code, :item_process_status_code, :circulation_status
+
         # Overwrites Exlibris::Primo::Source::Aleph#new
         def initialize(attributes={})
           super(attributes)
@@ -55,9 +54,9 @@ module Exlibris
         end
 
         # Overrides Exlibris::Primo::Source::Aleph#dedup?
-        # Iff we're expanding are we deduping since we 
-        # if we're not expanding we just want to convert the 
-        # existing Primo sources to holdings 
+        # Iff we're expanding are we deduping since we
+        # if we're not expanding we just want to convert the
+        # existing Primo sources to holdings
         def dedup?
           expanding?
         end
@@ -78,28 +77,29 @@ module Exlibris
 
         # Overrides Exlibris::Primo::Holding#library to return sub_library
         def library
-          sub_library
+          (sub_library.nil?) ? super : sub_library
         end
 
         # Overrides Exlibris::Primo::Holding#collection to return
         # based on Aleph table helper
         def collection
-          @collection ||= (adm_library_code.nil? or collection_code.nil?) ?
-            super : aleph_helper.collection_text(
-              :adm_library_code => adm_library_code.downcase,
-                :sub_library_code => sub_library_code, :collection_code => collection_code)
+          @collection ||= 
+            (adm_library_code.nil? or sub_library_code.nil? or collection_code.nil?) ?
+              super : aleph_helper.collection_text(
+                :adm_library_code => adm_library_code.downcase,
+                  :sub_library_code => sub_library_code, :collection_code => collection_code)
         end
 
         # Logic to determine whether we're expanding this holding
         # Only expand if not a journal
         def expanding?
-          @expanding ||= (not journal?)
+          @expanding ||= (display_type and (not journal?))
         end
         private :expanding?
 
         # Is this a journal
         def journal?
-          (display_type.upcase.eql? "JOURNAL")
+          (display_type and display_type.upcase.eql? "JOURNAL")
         end
         private :journal?
 
@@ -107,7 +107,9 @@ module Exlibris
         # based on Aleph bib and holdings coverage
         # Only get coverage for journals
         def coverage
-          @coverage ||= (journal?) ? (bib_coverage + holdings_coverage) : []
+          # HACK ALERT: need to find a better way to do this.
+          return @coverage unless @coverage.nil? or @coverage.empty?
+          @coverage = (journal?) ? (bib_coverage + holdings_coverage) : []
         end
 
         # Get expanded holdings based on Aleph items.
@@ -178,10 +180,10 @@ module Exlibris
         private :illiad_url
 
         # Deferred statuses from config.
-        def deferred_statuses
-          @deferred_statuses ||= source_config["deferred_statuses"] unless source_config.nil?
-        end
-        private :deferred_statuses
+        # def deferred_statuses
+        #   @deferred_statuses ||= source_config["deferred_statuses"] unless source_config.nil?
+        # end
+        # private :deferred_statuses
 
         # Bib 866 subfield l to Aleph sub library map from config.
         def bib_866_subfield_l_map
@@ -196,12 +198,12 @@ module Exlibris
         end
         private :requestable?
 
-        # Circulation status code based on the source statuses 
+        # Circulation status code based on the source statuses
         # mapping of circulation statuses.
         # Returns nil if the circulation status isn't in the statuses.
         def circulation_status_code
           @circulation_status_code ||= aleph_statuses.keys.find { |key|
-            aleph_statuses[key].instance_of?(Array) and 
+            aleph_statuses[key].instance_of?(Array) and
               aleph_statuses[key].include?(circulation_status) }
         end
         private :circulation_status_code
@@ -242,7 +244,7 @@ module Exlibris
             # Get the 866 subfield sub library
             bib_866_sub_library_code = bib_866_subfield_l_mapping['sub_library']
             # If this matches the NyuAleph holding, process it.
-            if sub_library_code.upcase == bib_866_sub_library_code.upcase
+            if library_code.upcase == bib_866_sub_library_code.upcase
               # Get the ADM library from the Aleph helper
               bib_866_adm_library = aleph_helper.sub_library_adm(bib_866_sub_library_code)
               # Next if we've looked at this coverage ADM, sub library combo already
@@ -279,7 +281,7 @@ module Exlibris
               holding_sub_library_code = aleph_holding.at_xpath("//datafield[@tag='852']/subfield[@code='b']").
                 inner_text unless aleph_holding.at_xpath("//datafield[@tag='852']/subfield[@code='b']").nil?
               # If this matches the NyuAleph holding, process it.
-              if sub_library_code.upcase == holding_sub_library_code.upcase
+              if library_code.upcase == holding_sub_library_code.upcase
                 # Get the ADM library from the Aleph helper
                 holding_adm_library = aleph_helper.sub_library_adm(holding_sub_library_code)
                 # Next if we've looked at this coverage ADM, sub library combo already
