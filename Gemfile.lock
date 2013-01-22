@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 237ca534988f210c95ea2dd17a2f1867e844aa3e
+  revision: ad71be206fc7f75d49d4c4b90291331364b2cdcb
   branch: bootstrap
   specs:
     umlaut (3.0.4)
@@ -101,7 +101,7 @@ GEM
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     confstruct (0.2.5)
-    daemon_controller (1.1.0)
+    daemon_controller (1.1.1)
     dalli (2.6.0)
     ensure_valid_encoding (0.5.3)
     erubis (2.7.0)

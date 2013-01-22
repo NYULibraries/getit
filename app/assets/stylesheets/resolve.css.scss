@@ -1,6 +1,4 @@
 @import "compass";
-@import "icons/*.png";
-@include all-icons-sprites;
 @import "nyulibraries/variables";
 @import "resolve/variables";
 @import "nyulibraries/header";
@@ -25,16 +23,4 @@
 
 .wayfinder {
   @extend .help;
-}
-
-.umlaut-section {
-  &.document_delivery {
-    a {
-      font-weight: bold;
-    }
-    .response_item i {
-      @include icons;
-      @extend .icons-famfamfam-book-go;
-    }
-  }
 }
