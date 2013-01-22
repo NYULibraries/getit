@@ -135,11 +135,6 @@ default:
       priority: c        
       api_key: AIzaSyADjP7PRPsGaPYJB9tvfm8ZSpdmhUsCR1w
               
-    Ulrichs:
-      display_name: "Ulrich's Directory"
-      type: UlrichsLink
-      priority: c
-      
     IsbnDb:
       display_name: isbndb.com
       type: IsbnDb
@@ -153,13 +148,6 @@ default:
       # disable audio results? uncomment:
       #num_results_for_types:
       #  audio: 0
-
-    ScopusCitations:
-      type: Scopus
-      priority: c
-      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
-      # partner_id: YOUR_SCOPUS_PARTNER_ID
-      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
     # Web of Knowledge API has no api key, but your
     # IP needs to be registered with them. See source docs
@@ -291,6 +279,19 @@ NYU:
         # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
+    NYUUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: c
+      status: active
+      base_url: https://ezproxy.library.nyu.edu/login?url=http://www.ulrichsweb.com/ulrichsweb/Search/call_fullCitation.asp?/vendor_redirect.asp?oVendor=Umlaut&oIssn=
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
     NYU_RefWorks:
       name: RefWorks
       type: OpenURLService
@@ -401,6 +402,12 @@ CU:
       sfx_timeout: 9
       extra_targets_of_interest:
           CAPTURE_CITATION: export_citation
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
 NS:
   name: New School Libraries
@@ -440,6 +447,28 @@ NS:
         BX_RECOMMENDER_SERVICE: help
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
+    NS_bX:
+      type: Bx
+      display_name: Recommender Services
+      priority: c
+      token: 684258fc2121c50ffbf2e12ae2e41d2a
+      openurl_base: /getit/resolve?umlaut.institution=NS&
+      max_records: 2
+    NYUOpenURL:
+      name: BobCat
+      type: OpenURLService
+      display_name: BobCat
+      display_text: GetIt @ NYU
+      base_url: http://getit.library.nyu.edu/nyu/resolve?
+      priority: c
+      status: active
+    NSUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: c
+      status: active
+      base_url: https://login.libproxy.newschool.edu/login?url=http://www.ulrichsweb.com/ulrichsweb/Search/call_fullCitation.asp?/vendor_redirect.asp?oVendor=Umlaut&oIssn=
 
 NYSID:
   display_name: New York School of Interior Design Library
