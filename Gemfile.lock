@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: f96acff4be33305af4dfaee013f9732dfa2d0bf2
+  revision: 1437069d863e37dbba95b4a2fd9725ee643c9aeb
   branch: bootstrap
   specs:
     umlaut (3.0.4)
@@ -107,7 +107,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    exlibris-aleph (0.1.4)
+    exlibris-aleph (0.1.5)
       httparty
       nokogiri
       rails (~> 3.2.0)
