@@ -1,4 +1,6 @@
 @import "compass";
+@import "icons/*.png";
+@include all-icons-sprites;
 @import "nyulibraries/variables";
 @import "resolve/variables";
 @import "nyulibraries/header";
