@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: 05e390cbe928441b8eea23f88c35f1fd51487f60
+  revision: 40ac77c6f74641fe0801c5131d2ba399b3f4b04c
   branch: development-institutions
   specs:
     nyulibraries_assets (0.0.3)
@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 8986bb92c218acf961ea1207e9976dcc1e61ffd0
+  revision: dfd40f107d73b76cbc02fc726759d964b38ad3ac
   branch: bootstrap
   specs:
     umlaut (3.0.4)

@@ -89,6 +89,24 @@ class RequestsControllerTest < ActionController::TestCase
     assert((not @controller.request_ill?), "ILL requestable.")
   end
 
+  test "layout" do
+    UserSession.create(users(:std5))
+    get(:new, :service_response_id => 1)
+    assert_response :success
+    assert_select "body div.nyu-container", 1
+    assert_select "div.request", 1
+  end
+
+  test "layout xhr" do
+    UserSession.create(users(:std5))
+    xhr :get, :new, :service_response_id => 1
+    assert_response :success
+    # Assert that no layout was included in the request
+    assert_select "body", 0
+    assert_select "div.nyu-container", 0
+    assert_select "div.request", 1
+  end
+
   test "no logged in user" do
     get(:new, {'service_response_id' => "1"})
     assert_response :redirect
@@ -99,7 +117,7 @@ class RequestsControllerTest < ActionController::TestCase
     UserSession.create(users(:std5))
     get(:new, {'service_response_id' => "1"})
     assert_response :success
-    assert_select 'div.request' do |elements|
+    assert_select 'div.request' do
       assert_select 'h2', {:count => 1, 
         :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."}, 
           "Unexpected h2 text."

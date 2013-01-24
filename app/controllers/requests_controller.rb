@@ -1,14 +1,6 @@
 class RequestsController < UmlautController
   before_filter :require_login, :init
-
-  layout Proc.new { |controller|
-    if (controller.request.xhr? ||
-        controller.params["X-Requested-With"] == "XmlHttpRequest")
-      nil
-    else
-      config.search_layout
-    end
-  }
+  layout :search_layout_except_xhr
 
   attr_reader :status, :status_code, :adm_library_code, :sub_library_code, :source_record_id,
     :item_id, :item_status_code, :item_process_status_code, :circulation_status,
