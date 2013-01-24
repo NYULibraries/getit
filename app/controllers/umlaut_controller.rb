@@ -149,8 +149,8 @@ class UmlautController < ApplicationController
 
     export_citation = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "export_citation"}]
     export_citation[:section_title] = "Send/Share"
-    export_citation[:bg_update] = false
-    export_citation[:visibility] = :complete_with_responses
+    # export_citation[:bg_update] = false
+    # export_citation[:visibility] = :complete_with_responses
 
     document_delivery = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "document_delivery"}]
     document_delivery[:section_title] = "Get a copy from Interlibrary Loan (ILL)"

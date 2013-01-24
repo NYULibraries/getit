@@ -80,15 +80,6 @@ default:
           querystring_metadata:
             q: title
 
-    # Priority 5
-    EmailExport:
-      type: EmailExport
-      priority: 8
-
-    TxtHoldingExport:
-      type: TxtHoldingExport
-      priority: 9
-
     # Priority a: Background
     NYU_Primo_Source:
       type: PrimoSource
@@ -250,6 +241,15 @@ default:
       type: SfxBackchannelRecord
       disabled: true
       priority: 6
+
+    # Exports
+    EmailExport:
+      type: EmailExport
+      priority: d
+
+    TxtHoldingExport:
+      type: TxtHoldingExport
+      priority: e
 
 NYU:
   name: NYU Libraries
