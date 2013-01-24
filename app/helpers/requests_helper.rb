@@ -72,7 +72,7 @@ module RequestsHelper
     # Determine if the item is in a requestable state for the type of request we're making.
     return false unless item_state_requestable?(item_requestable_states)
     # If always requestable, we can return true if user session is nil
-    return true if (item_requestability.eql?(RequestableYes) and user_session.nil?)
+    return true if (item_requestability.eql?(RequestableYes) and current_user_session.nil?)
     return (item_requestable? and user_permissions_state_requestable?(user_permissions_requestable_states))
   end
   private :requestable?
@@ -188,46 +188,12 @@ module RequestsHelper
     end
   end
 
-  # Display 'recall' request options
-  def display_recall
-    recall_display = ""
-    recall_display +=  (@status.match(/Requested/)) ? 
-      display_recall_requested : display_recall_regular
-    recall_display += "\t\t\t#{display_pickup_locations}\n"
-    recall_display += "\t\t\t#{display_delivery_times_link}\n"
-    recall_display += "\t\t\t#{submit_tag('Submit') if pickup_locations.length > 1}\n"
-    return recall_display
-  end
-
-  # Display 'recall' request options under normal conditions
-  def display_recall_regular
-    recall_regular_display = ""
-    if (pickup_locations.length == 1)
-    recall_regular_display += "\t\t\t#{link_to(
-      "Recall this item from a fellow library user", 
-        {:controller => 'requests', :action=>"send_recall_request", :id=>params[:service_response_id], :pickup_location => pickup_locations.first.last},
-          {:target => "_blank", :class => "ajax_window"})}.<br />\n"
-    elsif pickup_locations.length > 1
-      recall_regular_display += "\t\t\tRecall this item from a fellow library user.\n"
-    end
-    afc_sub_libraries = ["BAFC"]
-    recall_date = (afc_sub_libraries.include?(sub_library_code)) ? "1 week" : "2 weeks"
-    recall_regular_display += "\t\t\tThe item will be available within #{recall_date}.<br />\n"
-    return recall_regular_display
-  end
-
-  # Display 'recall' request options if the item is requested
-  def display_recall_requested
-    recall_requested_display = "\t\t\tThis material has been requested by a fellow library user.\n"
-    if (pickup_locations.length == 1)
-      recall_requested_display += "\t\t\t#{link_to(
-        "You may also place a request to be added to the queue", 
-          {:controller => 'requests', :action=>"send_recall_request", :id=>params[:service_response_id], :pickup_location => pickup_locations.first.last},
-            {:target => "_blank", :class => "ajax_window"})}.<br />\n"
-    elsif pickup_locations.length > 1
-      recall_requested_display += "\t\t\tYou may also place a request to be added to the queue.<br />\n"
-    end
-    return recall_requested_display
+  def display_request_link_or_text(text, request_type)
+    (pickup_locations.length > 1) ? 
+      "Recall this item from a fellow library user.".html_safe :
+      link_to(text, create_request_url(params[:service_response_id], 
+        request_type, pickup_locations.first.last),
+          {:target => "_blank", :class => "ajax_window"})+ tag(:br)
   end
 
   # Display pickup locations

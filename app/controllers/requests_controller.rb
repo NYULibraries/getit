@@ -57,20 +57,16 @@ class RequestsController < UmlautController
 
   # Create an Aleph request
   def create_aleph_request
-    begin
-      patron.place_hold(adm_library_code, sub_library_code, source_record_id, 
-        item_id, {:pickup_location => pickup_location})
-      respond_to do |format|
+    patron.place_hold(adm_library_code, sub_library_code, source_record_id, 
+      item_id, {:pickup_location => pickup_location})
+    respond_to do |format|
+      if patron.error.nil?
         redirect_to request_path(params[:service_response_id], :scan => scan?, 
           :pickup_location => pickup_location)
-      end
-    rescue Exception => e
-      if patron.error.nil?
-        flash[:alert] = unexpected_error
       else
         flash[:alert] = patron.error
+        redirect_to new_request_path(params[:service_response_id])
       end
-      redirect_to new_request_path(params[:service_response_id])
     end
   end
   private :create_aleph_request

@@ -1,12 +1,9 @@
-<% if pickup_locations.length == 1 %> 
-  <%= link_to(
+<%= display_request_option do %>
+  <%= display_request_link_or_text(
     "Request for this item to be held for you once processed.", 
-      create_request_url(params[:service_response_id], "in_processing", pickup_locations.first.last),
-        {:target => "_blank", :class => "ajax_window"}) %>.
-<% elsif pickup_locations.length > 1 %> 
-  <%= "Request for this item to be held for you once processed." %>
-<% end %><br />
-Items are typically ready for pickup within 5 days.<br />
-<%= display_pickup_locations %>
-<%= display_delivery_times_link %>
+      "in_processing") %>
+  Items are typically ready for pickup within 5 days.<br />
+  <%= display_pickup_locations %>
+  <%= display_delivery_times_link %>
+<% end %>
 <%= submit_tag 'Submit' if pickup_locations.length > 1 %>

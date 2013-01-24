@@ -106,6 +106,14 @@ class RequestsControllerTest < ActionController::TestCase
     assert_select "div.nyu-container", 0
     assert_select "div.request", 1
   end
+  
+  test "routes" do
+    assert_equal "http://test.host/requests/1/ill/BOBST", create_request_url(1, "ill", "BOBST")
+    assert_equal "http://test.host/requests/1/on_order", create_request_url(1, "on_order")
+    assert_equal "http://test.host/requests/1/recall", create_request_url(1, "recall")
+    assert_equal "http://test.host/requests/1/in_processing", create_request_url(1, "in_processing")
+    assert_equal "http://test.host/requests/1/available", create_request_url(1, "available")
+  end
 
   test "no logged in user" do
     get(:new, {'service_response_id' => "1"})
@@ -120,6 +128,42 @@ class RequestsControllerTest < ActionController::TestCase
     assert_select 'div.request' do
       assert_select 'h2', {:count => 1, 
         :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."}, 
+          "Unexpected h2 text."
+      assert_select 'ol.request_options li', 2
+    end
+  end
+
+  test "new offsite" do
+    UserSession.create(users(:std5))
+    get(:new, {'service_response_id' => "3"})
+    assert_response :success
+    assert_select 'div.request' do |elements|
+      assert_select 'h2', {:count => 1, 
+        :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."}, 
+          "Unexpected h2 text."
+      assert_select 'ol.request_options li', 2
+    end
+  end
+
+  test "new recall" do
+    UserSession.create(users(:std5))
+    get(:new, {'service_response_id' => "4"})
+    assert_response :success
+    assert_select 'div.request' do |elements|
+      assert_select 'h2', {:count => 1, 
+        :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."}, 
+          "Unexpected h2 text."
+      assert_select 'ol.request_options li', 2
+    end
+  end
+
+  test "new in processing" do
+    UserSession.create(users(:std5))
+    get(:new, {'service_response_id' => "5"})
+    assert_response :success
+    assert_select 'div.request' do |elements|
+      assert_select 'h2', {:count => 1, 
+        :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."}, 
           "Unexpected h2 text."
       assert_select 'ol.request_options li', 2
     end

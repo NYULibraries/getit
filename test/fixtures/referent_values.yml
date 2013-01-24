@@ -199,6 +199,38 @@ primo_book_virtual_inequality_8:
   value: "Washington, D.C."
   private_data: false
 
+primo_book_pragmatic_ruby_1:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: "programming ruby : the pragmatic programmers' guide"
+  key_name: btitle
+  metadata: true
+  value: "Programming Ruby : the pragmatic programmers' guide"
+  private_data: false
+
+primo_book_pragmatic_ruby_2:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: "0974514055"
+  key_name: isbn
+  metadata: true
+  value: "0974514055"
+  private_data: false
+
+primo_book_pragmatic_ruby_3:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+primo_book_pragmatic_ruby_4:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
 primo_journal_musical_quarterly_1:
   referent: primo_journal_musical_quarterly
   normalized_value: "the musical quarterly"

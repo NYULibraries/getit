@@ -1,8 +1,17 @@
-<li>
-	<% form_tag(send_recall_requests_url(params[:id]), 
-	    :class => "modal_dialog_form request_option" ) do %>
-		<div class="section">
-			<%= display_recall.html_safe %>
-		</div>
-	<% end %>
-</li>
+<%= display_request_option do %>
+  <% if @status.match(/Requested/) %>
+    This material has been requested by a fellow library user.
+    <%= display_request_link_or_text(
+      "You may also place a request to be added to the queue.", 
+        "recall") %>
+  <% else %>
+    <%= display_request_link_or_text(
+      "Recall this item from a fellow library user.", 
+        "recall") %>
+    The item will be available within
+    <%= ["BAFC"].include?(sub_library_code) ? "1 week" : "2 weeks" %>.<br />
+  <% end %>
+  <%= display_pickup_locations %>
+  <%= display_delivery_times_link %>
+<% end %>
+<%= submit_tag 'Submit' if pickup_locations.length > 1 %>

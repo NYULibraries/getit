@@ -30,7 +30,7 @@ GetIt::Application.routes.draw do
   # POST to create a new request
   match 'requests/:service_response_id', :to => 'requests#create', :as => :requests, :via => :post
   # GET to create a new request
-  match 'requests/:service_response_id/:request_type/:pickup_location', :to => 'requests#create', :as => :create_request, :via => :get
+  match 'requests/:service_response_id/:request_type(/:pickup_location)', :to => 'requests#create', :as => :create_request, :via => :get
   # GET a request (confirmation of creation)
   match 'requests/:service_response_id', :to => 'requests#show', :as => :request, :via => :get
 

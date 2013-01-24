@@ -8,6 +8,10 @@ primo_book_virtual_inequality:
   title: "Virtual inequality : beyond the digital divide"
   isbn: "0878409998"
 
+primo_book_pragmatic_ruby:
+  title: "Programming Ruby : the pragmatic programmers' guide"
+  isbn: "0974514055"
+
 primo_journal_musical_quarterly:
   title: The Musical quarterly
   isbn: "0027-4631"

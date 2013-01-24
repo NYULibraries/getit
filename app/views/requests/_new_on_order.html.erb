@@ -1,19 +1,10 @@
-<li>
-	<% form_tag(send_on_order_requests_url(params[:id]),
-	    :class => "modal_dialog_form request_option" ) do  %>
-		<div class="section">
-			<% if pickup_locations.length == 1 %> 
-				<%= link_to("Request for this item to be held for you once processed.", 
-    		  send_on_order_requests_url(params[:id], pickup_locations.first.last),
-					{:target => "_blank", :class => "ajax_window"}) %>.
-			<% elsif pickup_locations.length > 1 %> 
-				<%= "Request for this item to be held for you once processed." %>
-			<% end %><br />
-			With open orders, the library cannot predict or guarantee the date of delivery. 
-			If you have an urgent deadline, it is better to use Interlibrary Loan.<br />
-			<%= display_pickup_locations.html_safe %>
-			<%= display_delivery_times_link.html_safe %>
-			<%= submit_tag 'Submit' if pickup_locations.length > 1 %>
-		</div>
-	<% end %>
-</li>
+<%= display_request_option do %>
+  <%= display_request_link_or_text(
+    "Request for this item to be held for you once processed.", 
+      "on_order") %>
+  With open orders, the library cannot predict or guarantee the date of delivery. 
+  If you have an urgent deadline, it is better to use Interlibrary Loan.<br />
+  <%= display_pickup_locations %>
+  <%= display_delivery_times_link %>
+<% end %>
+<%= submit_tag 'Submit' if pickup_locations.length > 1 %>

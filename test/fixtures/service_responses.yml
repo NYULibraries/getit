@@ -125,3 +125,219 @@ nyu_aleph_journal:
     :coverage_str_array: *70256176813880
     :expired: true
     :latest: true
+
+nyu_aleph_offsite_book:
+  id: 3
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000980206&sub_library=TNSFO"
+  notes: 
+  request: primo_book_virtual_inequality
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000980206
+    :original_id: nyu_aleph000980206
+    :title: ! 'Virtual inequality : beyond the digital divide'
+    :author: Karen  Mossberger
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000980206
+    :ils_api_id: NYU01000980206
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: New School Fogelman Library
+    :collection: Main Collection
+    :call_number: (HN49.I56 M67 2003)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (HN49.I56 M67 2003 )
+      S: available
+      '3': '1'
+      '4': '0'
+      '5': N
+      '6': '1'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: offsite
+    :status: Offsite Available
+    :source_data:
+      :item_id: NYU50000980206000020
+      :adm_library_code: NYU50
+      :call_number: (HN49.I56 M67 2003)
+      :sub_library_code: TNSFO
+      :collection_code: MAIN
+      :source_record_id: 000980206
+      :sequence_number: '2.0'
+      :barcode: '31207039784289'
+      :item_status_code: '01'
+      :item_process_status_code: DP
+      :circulation_status: Offsite Available
+      :z30_callno: HN49.I56 M67 2003
+      :description: 
+      :hol_doc_number: 002945615
+      :doc_library: NYU01
+      :sub_library: New School Fogelman Library
+      :collection: Main Collection
+      :doc_number: 000980206
+      :rest_api_id: NYU01000980206
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: Offsite Available
+      :status_code: offsite
+    :request_link_supports_ajax_call: true
+    :collection_str: New School Fogelman Library Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_recall_book:
+  id: 4
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000007935&sub_library=NCOUR"
+  notes: 
+  request: primo_book_pragmatic_ruby
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000007935
+    :original_id: nyu_aleph000007935
+    :title: ! 'Programming Ruby : the pragmatic programmers'' guide.'
+    :author: David  Thomas  1956-
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000007935
+    :ils_api_id: NYU01000007935
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: COUR
+    :library: NYU Courant
+    :collection: Main Collection
+    :call_number: (QA76.64 .T494 2005)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: COUR
+      '1': Main Collection
+      '2': (QA76.64 .T494 2005 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '9'
+      X: NYU50
+      Y: NCOUR
+      Z: MAIN
+    :status_code: checked_out
+    :status: Due:01/31/13
+    :source_data:
+      :item_id: NYU50000007935000010
+      :adm_library_code: NYU50
+      :call_number: (QA76.64 .T494 2005)
+      :sub_library_code: NCOUR
+      :collection_code: MAIN
+      :source_record_id: 000007935
+      :sequence_number: '1.0'
+      :barcode: '31182021233365'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :circulation_status: 01/31/13
+      :z30_callno: QA76.64 .T494 2005
+      :description: 
+      :hol_doc_number: 003196660
+      :doc_library: NYU01
+      :sub_library: NYU Courant
+      :collection: Main Collection
+      :doc_number: 000007935
+      :rest_api_id: NYU01000007935
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: Due:01/31/13
+      :status_code: checked_out
+    :request_link_supports_ajax_call: true
+    :collection_str: NYU Courant Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_in_processing_book:
+  id: 5
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000007935&sub_library=NABUD"
+  notes: 
+  request: primo_book_pragmatic_ruby
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000007935
+    :original_id: nyu_aleph000007935
+    :title: ! 'Programming Ruby : the pragmatic programmers'' guide.'
+    :author: David  Thomas  1956-
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000007935
+    :ils_api_id: NYU01000007935
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: COUR
+    :library: NYU Abu Dhabi Library (UAE)
+    :collection: Main Collection
+    :call_number: (QA76.64 .T494 2005)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: COUR
+      '1': Main Collection
+      '2': (QA76.64 .T494 2005 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '9'
+      X: NYU50
+      Y: NCOUR
+      Z: MAIN
+    :status_code: processing
+    :status: In Processing
+    :source_data:
+      :item_id: NYU51000007935000010
+      :adm_library_code: NYU51
+      :call_number: (QA76.64 .T494 2005)
+      :sub_library_code: NABUD
+      :collection_code: MAIN
+      :source_record_id: 000007935
+      :sequence_number: '1.0'
+      :barcode: '31122050410872'
+      :item_status_code: '01'
+      :item_process_status_code: LB
+      :circulation_status: In Processing
+      :z30_callno: QA76.64 .T494 2005
+      :description: 
+      :hol_doc_number: 004530885
+      :doc_library: NYU01
+      :sub_library: NYU Abu Dhabi Library (UAE)
+      :collection: Main Collection
+      :doc_number: 000007935
+      :rest_api_id: NYU01000007935
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: In Processing
+      :status_code: processing
+    :request_link_supports_ajax_call: true
+    :collection_str: NYU Abu Dhabi Library (UAE) Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true

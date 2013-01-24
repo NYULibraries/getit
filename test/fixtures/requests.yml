@@ -6,6 +6,10 @@ primo_book_virtual_inequality:
   referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000980206
   referent: primo_book_virtual_inequality
 
+primo_book_pragmatic_ruby:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000007935
+  referent: primo_book_pragmatic_ruby
+
 primo_journal_musical_quarterly:
   referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002895625
   referent: primo_journal_musical_quarterly
