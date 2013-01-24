@@ -1,0 +1,127 @@
+nyu_aleph_available_book:
+  id: 1
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000980206&sub_library=BOBST"
+  notes: 
+  request: primo_book_virtual_inequality
+  service_type_value_name: holding
+  service_data: |
+    --- 
+    :record_id: nyu_aleph000980206
+    :original_id: nyu_aleph000980206
+    :title: ! 'Virtual inequality : beyond the digital divide'
+    :author: Karen  Mossberger
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000980206
+    :ils_api_id: NYU01000980206
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (HN49.I56 M67 2003)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (HN49.I56 M67 2003 )
+      S: available
+      '3': '1'
+      '4': '0'
+      '5': N
+      '6': '1'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: available
+    :status: Available
+    :source_data:
+      :item_id: NYU50000980206000010
+      :adm_library_code: NYU50
+      :call_number: (HN49.I56 M67 2003)
+      :sub_library_code: BOBST
+      :collection_code: MAIN
+      :source_record_id: 000980206
+      :sequence_number: '1.0'
+      :barcode: '31142036269960'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :circulation_status: On Shelf
+      :z30_callno: HN49.I56 M67 2003
+      :description: 
+      :hol_doc_number: 002945614
+      :doc_library: NYU01
+      :sub_library: NYU Bobst
+      :collection: Main Collection
+      :doc_number: 000980206
+      :rest_api_id: NYU01000980206
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status_code: available
+      :status: Available
+    :request_link_supports_ajax_call: true
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_journal:
+  id: 2
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=002895625&sub_library=BOBST"
+  notes: 
+  request: primo_journal_musical_quarterly
+  service_type_value_name: holding
+  service_data: |
+    --- 
+    :record_id: nyu_aleph002895625
+    :original_id: nyu_aleph002895625
+    :title: The Musical quarterly.
+    :author: 
+    :display_type: journal
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 002895625
+    :ils_api_id: NYU01002895625
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (ML1 .M819 )
+    :coverage: &70256176813880
+    - ! 'Available in Main Collection: VOLUMES: 1-89 (YEARS: 1915-2006)'
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (ML1 .M819 )
+      S: check_holdings
+      '5': Y
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: check_holdings
+    :status: Check Availability
+    :source_data:
+      :doc_library: NYU01
+      :sub_library_code: 
+      :sub_library: 
+      :collection: Main Collection
+      :call_number: (ML1 .M819 )
+      :doc_number: 002895625
+      :rest_api_id: NYU01002895625
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+    :request_link_supports_ajax_call: false
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ! 'Available in Main Collection: VOLUMES: 1-89 (YEARS: 1915-2006)'
+    :coverage_str_array: *70256176813880
+    :expired: true
+    :latest: true

@@ -1,213 +1,265 @@
-# Referent_value fixtures
- 
-referent_value_1: 
+# ReferentValue fixtures
+frankenstein_1:
+  referent: frankenstein
   normalized_value: info:oclcnum/33045872
   key_name: identifier
   metadata: false
-  id: 1
   value: info:oclcnum/33045872
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_2: 
+
+frankenstein_2:
+  referent: frankenstein
   normalized_value: book
   key_name: format
   metadata: false
-  id: 2
   value: book
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_3: 
+
+frankenstein_3:
+  referent: frankenstein
   normalized_value: "9780393964585"
   key_name: isbn
   metadata: true
-  id: 3
   value: "9780393964585"
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_4: 
+
+frankenstein_4:
+  referent: frankenstein
   normalized_value: new york
   key_name: place
   metadata: true
-  id: 4
   value: New York
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_5: 
+
+frankenstein_5:
+  referent: frankenstein
   normalized_value: ""
   key_name: atitle
   metadata: true
-  id: 5
   value: ""
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_6: 
+
+frankenstein_6:
+  referent: frankenstein
   normalized_value: ""
   key_name: aucorp
   metadata: true
-  id: 6
   value: ""
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_7: 
+
+frankenstein_7:
+  referent: frankenstein
   normalized_value: "1997"
   key_name: date
   metadata: true
-  id: 7
   value: "1997"
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_8: 
+
+frankenstein_8:
+  referent: frankenstein
   normalized_value: "frankenstein : the 1818 text, contexts, nineteenth-century responses, modern criticism"
   key_name: btitle
   metadata: true
-  id: 8
   value: "Frankenstein : the 1818 text, contexts, nineteenth-century responses, modern criticism"
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_9: 
+
+frankenstein_9:
+  referent: frankenstein
   normalized_value: ""
   key_name: series
   metadata: true
-  id: 9
   value: ""
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_10: 
+
+frankenstein_10:
+  referent: frankenstein
   normalized_value: w.w. norton
   key_name: pub
   metadata: true
-  id: 10
   value: W.W. Norton
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_11: 
+
+frankenstein_11:
+  referent: frankenstein
   normalized_value: book
   key_name: genre
   metadata: true
-  id: 11
   value: book
-  referent_id: 1
-  created_at: 2008-06-28 16:15:27 -04:00
   private_data: false
- 
-referent_value_12: 
+
+frankenstein_12:
+  referent: frankenstein
   normalized_value: 1st ed.
   key_name: edition
   metadata: true
-  id: 12
   value: 1st ed.
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
   private_data: false
- 
-referent_value_13: 
+
+frankenstein_13:
+  referent: frankenstein
   normalized_value: wollstonecraft
   key_name: auinitm
   metadata: true
-  id: 13
   value: Wollstonecraft
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
   private_data: false
- 
-referent_value_14: 
+
+frankenstein_14:
+  referent: frankenstein
   normalized_value: ""
   key_name: tpages
   metadata: true
-  id: 14
   value: ""
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
   private_data: false
- 
-referent_value_15: 
+
+frankenstein_15:
+  referent: frankenstein
   normalized_value: mary
   key_name: aufirst
   metadata: true
-  id: 15
   value: Mary
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
   private_data: false
- 
-referent_value_16: 
+
+frankenstein_16:
+  referent: frankenstein
   normalized_value: shelley
   key_name: aulast
   metadata: true
-  id: 16
   value: Shelley
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
   private_data: false
- 
-referent_value_17: 
-  normalized_value: tag:gpc,2008-6-28:1
+
+frankenstein_17:
+  referent: frankenstein
+  normalized_value: "tag:gpc,2008-6-28:1"
   key_name: identifier
   metadata: false
-  id: 17
-  value: tag:gpc,2008-6-28:1
-  referent_id: 1
-  created_at: 2008-06-28 16:15:28 -04:00
+  value: "tag:gpc,2008-6-28:1"
   private_data: false
-  
-  
-simp_rv1:
- referent: simple_referent
- key_name: "format" 
+
+primo_book_virtual_inequality_1:
+  referent: primo_book_virtual_inequality
+  normalized_value: "virtual inequality : beyond the digital divide"
+  key_name: btitle
+  metadata: true
+  value: "Virtual inequality : beyond the digital divide"
+  private_data: false
+
+primo_book_virtual_inequality_2:
+  referent: primo_book_virtual_inequality
+  normalized_value: mossberger
+  key_name: aulast
+  metadata: true
+  value: Mossberger
+  private_data: false
+
+primo_book_virtual_inequality_3:
+  referent: primo_book_virtual_inequality
+  normalized_value: karen
+  key_name: aufirst
+  metadata: true
+  value: Karen
+  private_data: false
+
+primo_book_virtual_inequality_4:
+  referent: primo_book_virtual_inequality
+  normalized_value: "9780393964585"
+  key_name: isbn
+  metadata: true
+  value: "9780393964585"
+  private_data: false
+
+primo_book_virtual_inequality_5:
+  referent: primo_book_virtual_inequality
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+primo_book_virtual_inequality_6:
+  referent: primo_book_virtual_inequality
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+primo_book_virtual_inequality_7:
+  referent: primo_book_virtual_inequality
+  normalized_value: georgetown university press
+  key_name: pub
+  metadata: true
+  value: Georgetown University Press
+  private_data: false
+
+primo_book_virtual_inequality_8:
+  referent: primo_book_virtual_inequality
+  normalized_value: "washington, d.c."
+  key_name: place
+  metadata: true
+  value: "Washington, D.C."
+  private_data: false
+
+primo_journal_musical_quarterly_1:
+  referent: primo_journal_musical_quarterly
+  normalized_value: "the musical quarterly"
+  key_name: btitle
+  metadata: true
+  value: "The Musical quarterly"
+  private_data: false
+
+primo_journal_musical_quarterly_2:
+  referent: primo_journal_musical_quarterly
+  normalized_value: journal
+  key_name: format
+  metadata: false
+  value: journal
+  private_data: false
+
+primo_journal_musical_quarterly_3:
+  referent: primo_journal_musical_quarterly
+  normalized_value: "0027-4631"
+  key_name: issn
+  metadata: true
+  value: "0027-4631"
+  private_data: false
+
+primo_journal_musical_quarterly_4:
+ referent: primo_journal_musical_quarterly
+ key_name: "genre"
  value: "journal"
- normalized_value: "journal" 
- metadata: false 
- private_data: false
- 
-simp_rv2:
- referent: simple_referent
- key_name: "genre" 
- value: "journal" 
- normalized_value: "journal" 
+ normalized_value: "journal"
  metadata: true
  private_data: false
 
-simp_rv3:
- referent: simple_referent
- key_name: "issn"
- value: "0098-7484"
- normalized_value: "0098-7484"
+primo_journal_musical_quarterly_5:
+ referent: primo_journal_musical_quarterly
+ normalized_value: g. schirmer
+ key_name: pub
  metadata: true
+ value: G. Schirmer
+ private_data: false
+
+primo_journal_musical_quarterly_6:
+ referent: primo_journal_musical_quarterly
+ normalized_value: "new york etc"
+ key_name: place
+ metadata: true
+ value: "New York [etc"
  private_data: false
 
 cu_ip_rv1:
  referent: cu_ip_referent
- key_name: "format" 
+ key_name: "format"
  value: "journal"
- normalized_value: "journal" 
- metadata: false 
+ normalized_value: "journal"
+ metadata: false
  private_data: false
 
 cu_ip_rv2:
  referent: cu_ip_referent
- key_name: "genre" 
- value: "journal" 
- normalized_value: "journal" 
+ key_name: "genre"
+ value: "journal"
+ normalized_value: "journal"
  metadata: true
  private_data: false
 
@@ -234,14 +286,6 @@ primo_id_rv2:
   normalized_value: "book"
   metadata: true
   private_data: false
-
-# primo_id_rv3:
-#   referent: primo_id_referent
-#   key_name: identifier
-#   metadata: false
-#   value: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000062856
-#   normalized_value: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000062856
-#   private_data: false
 
 primo_id_rv3:
   referent: primo_id_referent
@@ -322,7 +366,7 @@ primo_check_out_rv6:
   normalized_value: "0521663318"
   metadata: true
   private_data: false
-  
+
 primo_journal1_rv1:
   referent: primo_journal1_referent
   key_name: "format"
@@ -354,7 +398,7 @@ primo_journal1_rv4:
   normalized_value: "The Musical quarterly."
   metadata: true
   private_data: false
-  
+
 primo_journal1_rv5:
   referent: primo_journal1_referent
   key_name: "issn"
@@ -618,7 +662,7 @@ primo_bobst_available_rv4:
   normalized_value: "Parole, personnage et référence dans le théâtre de Jean Racine"
   metadata: true
   private_data: false
-  
+
 primo_bobst_recall_rv1:
   referent: primo_bobst_recall_referent
   key_name: "format"
@@ -698,7 +742,7 @@ primo_bobst_ill_rv5:
   normalized_value: "0729302156"
   metadata: true
   private_data: false
-  
+
 primo_bobst_in_processing_rv1:
   referent: primo_bobst_in_processing_referent
   key_name: "format"
@@ -834,7 +878,7 @@ primo_bafc_recall_rv4:
   normalized_value: "Founder of the Delta blues [sound recording]"
   metadata: true
   private_data: false
-  
+
 primo_tnsgi_available_rv1:
   referent: primo_tnsgi_available_referent
   key_name: "format"
@@ -874,7 +918,7 @@ primo_tnsgi_available_rv5:
   normalized_value: "0714844012"
   metadata: true
   private_data: false
-  
+
 primo_bobst_problem1_rv1:
   referent: primo_bobst_problem1_referent
   key_name: "format"
@@ -1394,7 +1438,7 @@ primo_tnsfo_recall_rv5:
 #   normalized_value: "book"
 #   metadata: true
 #   private_data: false
-# 
+#
 # primo_tnsgi_available_rv2:
 #   referent: primo_tnsgi_available_referent
 #   key_name: "genre"
@@ -1402,7 +1446,7 @@ primo_tnsfo_recall_rv5:
 #   normalized_value: "book"
 #   metadata: true
 #   private_data: false
-# 
+#
 # primo_tnsgi_available_rv3:
 #   referent: primo_tnsgi_available_referent
 #   key_name: "primo"
@@ -1410,7 +1454,7 @@ primo_tnsfo_recall_rv5:
 #   normalized_value: "nyu_aleph002046560"
 #   metadata: true
 #   private_data: false
-# 
+#
 # primo_tnsgi_available_rv4:
 #   referent: primo_tnsgi_available_referent
 #   key_name: "title"
@@ -1418,7 +1462,7 @@ primo_tnsfo_recall_rv5:
 #   normalized_value: "The mediation of ornament"
 #   metadata: true
 #   private_data: false
-# 
+#
 # primo_tnsgi_available_rv5:
 #   referent: primo_tnsgi_available_referent
 #   key_name: "isbn"
@@ -1426,7 +1470,7 @@ primo_tnsfo_recall_rv5:
 #   normalized_value: "0691040990"
 #   metadata: true
 #   private_data: false
-# 
+#
 primo_tnsgi_recall_rv1:
   referent: primo_tnsgi_recall_referent
   key_name: "format"
@@ -1666,7 +1710,7 @@ critical_inquiry_rv11:
   normalized_value: "The Aesthetic Dimension: Aesthetics, Politics, Knowledge"
   metadata: true
   private_data: false
-  
+
 critical_inquiry_rv12:
   referent: critical_inquiry_referent
   key_name: "format"

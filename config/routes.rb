@@ -17,12 +17,22 @@ GetIt::Application.routes.draw do
   match 'validate', :to => 'user_sessions#validate', :as => :validate
   resources :user_sessions
 
-  match 'requests/reset/:id', :to => 'requests#reset', :as => :reset_requests
-  RequestsHelper.request_types.each do |type|
-    match "requests/send_#{type}/:id/:pickup_location", :to => "requests#send_#{type}", :as => "send_#{type}_requests".to_sym
-    match "requests/send_#{type}/:id", :to => "requests#send_#{type}", :as => "send_#{type}_requests".to_sym
-  end
-  match 'requests/:id', :to => 'requests#index', :as => :requests
+  # match 'requests/reset/:id', :to => 'requests#reset', :as => :reset_requests
+  # match 'requests/send/:id/:pickup_location', :to => 
+  # RequestsHelper.request_types.each do |type|
+  #   match "requests/send_#{type}/:id/:pickup_location", :to => "requests#send_#{type}", :as => "send_#{type}_requests".to_sym
+  #   match "requests/send_#{type}/:id", :to => "requests#send_#{type}", :as => "send_#{type}_requests".to_sym
+  # end
+  # match 'requests', :to => 'requests#create', :as => :new_requests, :via => :get
+  # match 'requests/:id', :to => 'requests#show', :as => :request, :via => :get
+  # GET a new request form
+  match 'requests/new/:service_response_id', :to => 'requests#new', :as => :new_request, :via => :get
+  # POST to create a new request
+  match 'requests/:service_response_id', :to => 'requests#create', :as => :requests, :via => :post
+  # GET to create a new request
+  match 'requests/:service_response_id/:request_type/:pickup_location', :to => 'requests#create', :as => :create_request, :via => :get
+  # GET a request (confirmation of creation)
+  match 'requests/:service_response_id', :to => 'requests#show', :as => :request, :via => :get
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

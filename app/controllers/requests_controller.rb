@@ -1,6 +1,7 @@
 class RequestsController < UmlautController
-  before_filter :load_objects
-  layout Proc.new { |controller|         
+  before_filter :require_login, :init
+
+  layout Proc.new { |controller|
     if (controller.request.xhr? ||
         controller.params["X-Requested-With"] == "XmlHttpRequest")
       nil
@@ -9,86 +10,82 @@ class RequestsController < UmlautController
     end
   }
 
-  def load_objects
-    @svc_type = ServiceResponse.find(params[:id])
-    @view_data = @svc_type.view_data
-    # Refer to Exlibris::Primo::Source::Local::NyuAleph to see which source data elements are available.
-    @view_data[:source_data].each { |key, value| 
-      instance_variable_set("@#{key}".to_sym,  value)
-    } unless @view_data.nil?
-    @user_request = @svc_type.request if @svc_type
-    @aleph_rest_url = @aleph_url+":1891/rest-dlf" unless @aleph_url.nil?
-    @illiad_url = "#{@illiad_url}/illiad/illiad.dll/OpenURL?#{@svc_type.request.to_context_object.kev}"
+  attr_reader :status, :status_code, :adm_library_code, :sub_library_code, :source_record_id,
+    :item_id, :item_status_code, :item_process_status_code, :circulation_status,
+      :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
+
+  helper_method :status, :status_code, :adm_library_code, :sub_library_code, :source_record_id,
+    :item_id, :item_status_code, :item_process_status_code, :circulation_status,
+     :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
+
+  def init
+    @service_response = ServiceResponse.find(params[:service_response_id])
+    @view_data = @service_response.view_data if @service_response
+    @user_request = @service_response.request if @service_response
+    request_instance_attributes_set @view_data[:source_data]
+    @illiad_url = @view_data[:source_data][:illiad_url]
+    @aleph_rest_url = @view_data[:source_data][:aleph_rest_url]
+    @ill_url = "#{illiad_url}/illiad/illiad.dll/OpenURL?#{@user_request.to_context_object.kev}"
+  end
+
+  # Create a new request based on request type
+  def create
+    @request_type = params[:request_type]
+    @scan = (params.fetch(:entire, "yes") == "no") ? true : false
     @pickup_location = params.fetch(:pickup_location, "")
-    @is_scan = (params.fetch(:entire, "yes") == "no") ? true : false
     # Set note_2 as entire_yes/entire_no
-    params[:note_2] = (@is_scan) ? "entire_no" : "entire_yes"
-  end
-
-  def index
-  end 
-
-  def reset
-  end
-
-  def send_available
-    send_aleph(RequestsHelper.request_available?(@view_data, current_user_session), params)
-  end
-
-  def send_ill
-    if RequestsHelper.request_ill?(@view_data, current_user_session)
-      redirect_to @illiad_url and return
-    else
-      flash[:error] = RequestsHelper.permission_error
-      redirect_to params.merge(:action => "index")        
-    end
-  end
-
-  def send_in_processing
-    send_aleph(RequestsHelper.request_in_processing?(@view_data, current_user_session), params)
-  end
-
-  def send_on_order
-    send_aleph(RequestsHelper.request_on_order?(@view_data, current_user_session), params)
-  end
-
-  def send_offsite
-    send_aleph(RequestsHelper.request_offsite?(@view_data, current_user_session), params)
-  end
-
-  def send_recall
-    send_aleph(RequestsHelper.request_recall?(@view_data, current_user_session), params)
-  end
-
-  private
-  # TODO: Wrap patron call in begin/rescue
-  def send_aleph(request_check=false, params=nil)
-    if request_check and patron
-      begin
-        patron.place_hold(@aleph_item_adm_library, @aleph_doc_library, @aleph_doc_number, @aleph_item_id, params)
-        respond_to do |format|
-          format.html {  render }
-        end
-      rescue Exception => e
-        if patron.error.nil?
-          Rails.logger.error("Unexpected error in request controller.")
-          flash[:error] = RequestsHelper.unexpected_error
+    params[:note_2] = (scan?) ? "entire_no" : "entire_yes"
+    if request_types.include?(request_type)
+      if send("request_#{request_type}?".to_sym, @view_data)
+        if request_type.eql? "ill"
+          redirect_to ill_url
         else
-          flash[:error] = "<div class=\"validation_errors\"><span>#{patron.error}</span></div>"
+          create_aleph_request
         end
-        redirect_to params_preserve_xhr(params.merge(:action => "index"))        
+      else
+        redirect_to new_request_path(params[:service_response_id]), 
+          :flash => { :alert => permission_error }
       end
-    elsif !request_check
-      flash[:error] = RequestsHelper.permission_error
-      redirect_to params_preserve_xhr(params.merge(:action => "index"))        
     else
-      Rails.logger.error("Unexpected error in request controller.")
-      flash[:error] = RequestsHelper.unexpected_error
-      redirect_to params_preserve_xhr(params.merge(:action => "index"))        
+      redirect_to new_request_path(params[:service_response_id]), 
+        :flash => { :alert => unexpected_error }
     end
   end
 
-  def patron
-    @patron ||= Exlibris::Aleph::Patron.new(current_user.user_attributes[:nyuidn], @aleph_rest_url)
+  # Show the confirmation page for the request
+  def show
+    @scan = params.fetch(:scan, false)
+    @pickup_location = params.fetch(:pickup_location, "")
   end
+
+  def scan?
+    @scan
+  end
+  helper_method :scan?
+
+  # Create an Aleph request
+  def create_aleph_request
+    begin
+      patron.place_hold(adm_library_code, sub_library_code, source_record_id, 
+        item_id, {:pickup_location => pickup_location})
+      respond_to do |format|
+        redirect_to request_path(params[:service_response_id], :scan => scan?, 
+          :pickup_location => pickup_location)
+      end
+    rescue Exception => e
+      if patron.error.nil?
+        flash[:alert] = unexpected_error
+      else
+        flash[:alert] = patron.error
+      end
+      redirect_to new_request_path(params[:service_response_id])
+    end
+  end
+  private :create_aleph_request
+
+  # Aleph Patron for placing holds
+  def patron
+    Exlibris::Aleph::Patron.new(current_user.user_attributes[:nyuidn], aleph_rest_url)
+  end
+  private :patron
 end

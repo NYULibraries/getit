@@ -18,6 +18,7 @@ require 'umlaut_configurable'
 class UmlautController < ApplicationController
   before_filter :institutional_config
   include Umlaut::ControllerBehavior
+  include RequestsHelper
 
   # Set the config based on the institutional settings.
   # TODO: store in cache so we don't process each time.
@@ -43,6 +44,15 @@ class UmlautController < ApplicationController
       end
     end
   end
+
+  # Require a logged in user
+  def require_login
+    unless current_user
+      redirect_to login_url({:return_url => current_permalink_url, :service_response_id => params[:service_response_id]}) 
+      return false
+    end
+  end
+  protected :require_login
 
   umlaut_config.configure do
     app_name 'Get It'
@@ -158,12 +168,11 @@ class UmlautController < ApplicationController
     end
   end
 
-  protected
   def create_collection
     return Collection.new(@user_request, services(institutions(params[UserSession.institution_param_key])))
   end
+  protected :create_collection
 
-  private
   def institutions(requested_institution)
     institutions = []
     # Always add default institutions
@@ -181,6 +190,7 @@ class UmlautController < ApplicationController
     Rails.logger.info("The following insitutions are in play: #{institutions.collect{|i| i.name}.inspect}")
     return institutions.collect{|i| i.code}
   end
+  private :institutions
 
   def user_institutions
     user_session = UserSession.find
@@ -188,6 +198,7 @@ class UmlautController < ApplicationController
     return [user.primary_institution] unless user.nil? or user.primary_institution.nil?
     return []
   end
+  private :user_institutions
 
   # Add services belonging to institutions
   def services(institutions)
@@ -198,4 +209,5 @@ class UmlautController < ApplicationController
     end
     return services
   end
+  private :services
 end

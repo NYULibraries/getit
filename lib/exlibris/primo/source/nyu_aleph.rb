@@ -20,7 +20,11 @@ module Exlibris
         # Overwrites Exlibris::Primo::Source::Aleph#new
         def initialize(attributes={})
           super(attributes)
+          @source_data[:sub_library] = sub_library
           @source_data[:illiad_url] = illiad_url
+          @source_data[:aleph_rest_url] = aleph_rest_url
+          @source_data[:status] = status
+          @source_data[:status_code] = status_code
         end
 
         # Overrides Exlibris::Primo::Holding#availability_status_code
@@ -190,13 +194,6 @@ module Exlibris
           @bib_866_subfield_l_map ||= source_config["866$l_mappings"] unless source_config.nil?
         end
         private :bib_866_subfield_l_map
-
-        # Is the holding requestable?
-        def requestable?
-          @requestable ||= (adm_library.nil?) ? super :
-            RequestsHelper.item_requestable?({ :source_data => source_data })
-        end
-        private :requestable?
 
         # Circulation status code based on the source statuses
         # mapping of circulation statuses.
