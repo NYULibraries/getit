@@ -1,0 +1,6 @@
+<div class="umlaut-az">
+  <% group_list.each do |letter| %>
+  <%= link_to letter, :action=>"journal_list", :id=>letter, 
+    "umlaut.institution" => current_primary_institution.code %>
+  <% end %>
+</div>

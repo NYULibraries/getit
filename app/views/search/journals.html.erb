@@ -3,7 +3,7 @@
     <div id="error" class="notice citationLinker"><strong>(!) Problems:</strong> <%= flash[:error] %></div>
   <% end %>
   <%= form_tag(@submit_hash, {:method => "get", :class => "OpenURL form-horizontal", :name => "OpenURL", :id=>"OpenURL"})  %>
-    <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.name}" %> 
+    <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.code}" %> 
     <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %> 
     <%= hidden_field_tag "rft.date", "" %> 
     <%= hidden_field_tag "rft.title", "", {:class => "rft_title"} %> 
