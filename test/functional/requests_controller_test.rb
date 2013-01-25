@@ -130,6 +130,7 @@ class RequestsControllerTest < ActionController::TestCase
         :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."}, 
           "Unexpected h2 text."
       assert_select 'ol.request_options li', 2
+      assert_select 'form.request_available input[name="request_type"]', {:count => 1, :value => "available"}
     end
   end
 
@@ -142,6 +143,7 @@ class RequestsControllerTest < ActionController::TestCase
         :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."}, 
           "Unexpected h2 text."
       assert_select 'ol.request_options li', 2
+      assert_select 'form.request_offsite input[name="request_type"]', {:count => 1, :value => "offsite"}
     end
   end
 
@@ -154,18 +156,27 @@ class RequestsControllerTest < ActionController::TestCase
         :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."}, 
           "Unexpected h2 text."
       assert_select 'ol.request_options li', 2
+      assert_select 'form.request_recall input[name="request_type"]', {:count => 1, :value => "recall"}
     end
   end
 
   test "new in processing" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "5"})
+    get(:new, {:service_response_id => 5})
     assert_response :success
     assert_select 'div.request' do |elements|
       assert_select 'h2', {:count => 1, 
         :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."}, 
           "Unexpected h2 text."
       assert_select 'ol.request_options li', 2
+      assert_select 'form.request_in_processing input[name="request_type"]', {:count => 1, :value => "in_processing"}
     end
+  end
+
+  test "create ill" do
+    UserSession.create(users(:std5))
+    get(:create, {:service_response_id => 5, :request_type => "ill"})
+    assert_response :redirect
+    assert @response.location.starts_with?("http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&")
   end
 end

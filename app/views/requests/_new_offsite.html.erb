@@ -1,3 +1,4 @@
+<%= display_request_form("offsite") do %>
 <%= # Whole item
 display_request_option {
   radio_button_tag("entire",  "yes", :checked => true) +
@@ -16,3 +17,4 @@ display_request_option {
     }
 } %>
 <%= submit_tag 'Submit' %>
+<% end %>

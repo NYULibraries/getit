@@ -28,7 +28,7 @@ class RequestsController < UmlautController
     # Set note_2 as entire_yes/entire_no
     params[:note_2] = (scan?) ? "entire_no" : "entire_yes"
     if request_types.include?(request_type)
-      if send("request_#{request_type}?".to_sym, @view_data)
+      if send("request_#{request_type}?".to_sym)
         if request_type.eql? "ill"
           redirect_to ill_url
         else

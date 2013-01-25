@@ -164,9 +164,9 @@ module RequestsHelper
 
   # Display header for the given title
   def display_header(title)
-    return (title + " is requested.") if @status.match(/Requested/)
-    return (title + " is checked out.") if request_recall?
-    return (title + " is available at #{@sub_library}.") if request_available?
+    return title + " is requested." if @status.match(/Requested/)
+    return title + " is checked out." if request_recall?
+    return title + " is available at #{@sub_library}." if request_available?
     return title + " is available from the #{@sub_library} offsite storage facility." if request_offsite?
     return title + " is currently being processed by library staff." if request_in_processing?
     return title + " is on order." if request_on_order?
@@ -174,9 +174,12 @@ module RequestsHelper
   end
 
   def display_request_form(request_type, &block)
-    form_tag(request_url(params[:service_response_id]), :class => "modal_dialog_form request_option" ) do
-      hidden_field_tag('request_type', request_type) +
-      yield
+    form_tag(request_url(params[:service_response_id]), :class => "modal_dialog_form request_#{request_type}" ) do
+      request_type_field = hidden_field_tag(:request_type, request_type)
+      content = capture(&block)
+      output = ActiveSupport::SafeBuffer.new
+      output.safe_concat(content_tag(:div, request_type_field, :style => 'margin:0;padding:0;display:inline'))
+      output << content
     end
   end
 
