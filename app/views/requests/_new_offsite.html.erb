@@ -4,7 +4,7 @@ display_request_option {
   radio_button_tag("entire",  "yes", :checked => true) +
     content_tag(:p, "Request this item to be delivered to an NYU Library of your choice.") +
       display_pickup_locations + display_delivery_times_link
-} %><br /><br />
+} %><br />
 <%= # Scan portion
 display_request_option {
   radio_button_tag("entire",  "no") + 
