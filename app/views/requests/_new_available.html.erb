@@ -13,8 +13,8 @@
     display_request_option do
       radio_button_tag("entire",  "no") + 
         content_tag(:p) {
-          "Request that portions of the item be scanned and delivered electronically.
-          (Requests must be within <a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>.)".html_safe +
+          "Request that portions of the item be scanned and delivered electronically.<br />
+          (Requests must be within <a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>.)<br />".html_safe +
           display_scan_elements
         }
     end %><%
