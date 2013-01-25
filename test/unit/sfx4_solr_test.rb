@@ -20,24 +20,30 @@
       @object_ids = ["2670000000038116", "1000000000237151"]
     end
     
-    test "fulltext search" do
-      query = "New York"
-      results = Sfx4::Local::AzTitle.search {fulltext query}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    test "sfx4solr fulltext search" do
+      VCR.use_cassette('sfx4solr fulltext search') do
+        query = "New York"
+        results = Sfx4::Local::AzTitle.search {fulltext query}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
 
-    test "starts with search" do
-      query = "Journal of"
-      results = Sfx4::Local::AzTitle.search {with(:title_exact).starting_with(query)}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    test "sfx4solr starts with search" do
+      VCR.use_cassette('sfx4solr starts with search') do
+        query = "Journal of"
+        results = Sfx4::Local::AzTitle.search {with(:title_exact).starting_with(query)}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
 
-    test "exact search" do
-      query = "The New Yorker"
-      results = Sfx4::Local::AzTitle.search {with(:title_exact, query)}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    test "sfx4solr exact search" do
+      VCR.use_cassette('sfx4solr exact search') do
+        query = "The New Yorker"
+        results = Sfx4::Local::AzTitle.search {with(:title_exact, query)}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
   end

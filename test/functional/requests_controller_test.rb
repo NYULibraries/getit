@@ -18,31 +18,33 @@ class RequestsControllerTest < ActionController::TestCase
     assert_nil(@controller.scan?)
     assert_nil(@controller.pickup_location)
     assert_nil(@controller.request_type)
-    get(:new, {'service_response_id' => "1"})
-    assert_response :success
-    assert_equal("NYU50", @controller.adm_library_code)
-    assert_equal("BOBST", @controller.sub_library_code)
-    assert_equal("000980206", @controller.source_record_id)
-    assert_equal("NYU50000980206000010", @controller.item_id)
-    assert_equal("01", @controller.item_status_code)
-    assert_nil(@controller.item_process_status_code)
-    assert_equal("On Shelf", @controller.circulation_status)
-    assert_equal("http://ill.library.nyu.edu", @controller.illiad_url)
-    assert_equal("http://aleph.library.nyu.edu:1891/rest-dlf", @controller.aleph_rest_url)
-    assert((not @controller.ill_url.nil?))
-    assert_nil(@controller.scan?)
-    assert_nil(@controller.pickup_location)
-    assert_nil(@controller.request_type)
+    VCR.use_cassette('controller source data test') do
+      get(:new, {'service_response_id' => "1"})
+      assert_response :success
+      assert_equal("NYU50", @controller.adm_library_code)
+      assert_equal("BOBST", @controller.sub_library_code)
+      assert_equal("000980206", @controller.source_record_id)
+      assert_equal("NYU50000980206000010", @controller.item_id)
+      assert_equal("01", @controller.item_status_code)
+      assert_nil(@controller.item_process_status_code)
+      assert_equal("On Shelf", @controller.circulation_status)
+      assert_equal("http://ill.library.nyu.edu", @controller.illiad_url)
+      assert_equal("http://aleph.library.nyu.edu:1891/rest-dlf", @controller.aleph_rest_url)
+      assert((not @controller.ill_url.nil?))
+      assert_nil(@controller.scan?)
+      assert_nil(@controller.pickup_location)
+      assert_nil(@controller.request_type)
+    end
   end
 
   test "request types" do
-    assert_equal(["available", "ill", "in_processing", "offsite", "on_order", "recall"], 
+    assert_equal(["available", "ill", "in_processing", "offsite", "on_order", "recall"],
       @controller.request_types)
   end
 
   test "request attributes" do
-    assert_equal([:status, :status_code, :adm_library_code, :sub_library, :sub_library_code, 
-      :source_record_id, :item_id, :item_status_code, :item_process_status_code, 
+    assert_equal([:status, :status_code, :adm_library_code, :sub_library, :sub_library_code,
+      :source_record_id, :item_id, :item_status_code, :item_process_status_code,
         :circulation_status], @controller.send(:request_attributes))
   end
 
@@ -67,46 +69,56 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "user permissions" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "1"})
-    assert((not @controller.send(:user_permissions).nil?))
-    assert((not @controller.send(:user_permissions).empty?))
+    VCR.use_cassette('user permissions') do
+      get(:new, {'service_response_id' => "1"})
+      assert((not @controller.send(:user_permissions).nil?))
+      assert((not @controller.send(:user_permissions).empty?))
+    end
   end
 
   test "request" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "1"})
-    assert @controller.request?, "Not requestable."
+    VCR.use_cassette('request') do
+      get(:new, {'service_response_id' => "1"})
+      assert @controller.request?, "Not requestable."
+    end
   end
 
   test "request available" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "1"})
-    assert @controller.request_available?, "Not requestable available."
-    assert((not @controller.request_recall?), "Recall requestable.")
-    assert((not @controller.request_in_processing?), "In processing requestable.")
-    assert((not @controller.request_on_order?), "On order requestable.")
-    assert((not @controller.request_offsite?), "Offsite requestable.")
-    assert((not @controller.request_ill?), "ILL requestable.")
+    VCR.use_cassette('request available') do
+      get(:new, {'service_response_id' => "1"})
+      assert @controller.request_available?, "Not requestable available."
+      assert((not @controller.request_recall?), "Recall requestable.")
+      assert((not @controller.request_in_processing?), "In processing requestable.")
+      assert((not @controller.request_on_order?), "On order requestable.")
+      assert((not @controller.request_offsite?), "Offsite requestable.")
+      assert((not @controller.request_ill?), "ILL requestable.")
+    end
   end
 
   test "layout" do
     UserSession.create(users(:std5))
-    get(:new, :service_response_id => 1)
-    assert_response :success
-    assert_select "body div.nyu-container", 1
-    assert_select "div.request", 1
+    VCR.use_cassette('layout') do
+      get(:new, :service_response_id => 1)
+      assert_response :success
+      assert_select "body div.nyu-container", 1
+      assert_select "div.request", 1
+    end
   end
 
   test "layout xhr" do
     UserSession.create(users(:std5))
-    xhr :get, :new, :service_response_id => 1
-    assert_response :success
-    # Assert that no layout was included in the request
-    assert_select "body", 0
-    assert_select "div.nyu-container", 0
-    assert_select "div.request", 1
+    VCR.use_cassette('layout xhr') do
+      xhr :get, :new, :service_response_id => 1
+      assert_response :success
+      # Assert that no layout was included in the request
+      assert_select "body", 0
+      assert_select "div.nyu-container", 0
+      assert_select "div.request", 1
+    end
   end
-  
+
   test "routes" do
     assert_equal "http://test.host/requests/1/ill/BOBST", create_request_url(1, "ill", "BOBST")
     assert_equal "http://test.host/requests/1/on_order", create_request_url(1, "on_order")
@@ -117,61 +129,113 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "no logged in user" do
     get(:new, {'service_response_id' => "1"})
-    assert_response :redirect
-    assert_redirected_to "http://test.host/login?service_response_id=1"
+    assert_response :unauthorized
   end
 
   test "new available" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "1"})
-    assert_response :success
-    assert_select 'div.request' do
-      assert_select 'h2', {:count => 1, 
-        :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."}, 
-          "Unexpected h2 text."
-      assert_select 'ol.request_options li', 2
-      assert_select 'form.request_available input[name="request_type"]', {:count => 1, :value => "available"}
+    VCR.use_cassette('new available') do
+      get(:new, {'service_response_id' => "1"})
+      assert_response :success
+      assert_select 'div.request' do
+        assert_select 'h2', {:count => 1,
+          :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."},
+            "Unexpected h2 text."
+        assert_select 'ol.request_options li', 2
+        assert_select 'form.request_available input[name="request_type"]', {:count => 1, :value => "available"}
+      end
     end
   end
 
   test "new offsite" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "3"})
-    assert_response :success
-    assert_select 'div.request' do |elements|
-      assert_select 'h2', {:count => 1, 
-        :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."}, 
-          "Unexpected h2 text."
-      assert_select 'ol.request_options li', 2
-      assert_select 'form.request_offsite input[name="request_type"]', {:count => 1, :value => "offsite"}
+    VCR.use_cassette('new offsite') do
+      get(:new, {'service_response_id' => "3"})
+      assert_response :success
+      assert_select 'div.request' do |elements|
+        assert_select 'h2', {:count => 1,
+          :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."},
+            "Unexpected h2 text."
+        assert_select 'ol.request_options li', 2
+        assert_select 'form.request_offsite input[name="request_type"]', {:count => 1, :value => "offsite"}
+      end
     end
   end
 
   test "new recall" do
     UserSession.create(users(:std5))
-    get(:new, {'service_response_id' => "4"})
-    assert_response :success
-    assert_select 'div.request' do |elements|
-      assert_select 'h2', {:count => 1, 
-        :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."}, 
-          "Unexpected h2 text."
-      assert_select 'ol.request_options li', 2
-      assert_select 'form.request_recall input[name="request_type"]', {:count => 1, :value => "recall"}
+    VCR.use_cassette('new recall') do
+      get(:new, {'service_response_id' => "4"})
+      assert_response :success
+      assert_select 'div.request' do |elements|
+        assert_select 'h2', {:count => 1,
+          :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."},
+            "Unexpected h2 text."
+        assert_select 'ol.request_options li', 2
+        assert_select 'form.request_recall input[name="request_type"]', {:count => 1, :value => "recall"}
+      end
     end
   end
 
   test "new in processing" do
     UserSession.create(users(:std5))
-    get(:new, {:service_response_id => 5})
-    assert_response :success
-    assert_select 'div.request' do |elements|
-      assert_select 'h2', {:count => 1, 
-        :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."}, 
-          "Unexpected h2 text."
-      assert_select 'ol.request_options li', 2
-      assert_select 'form.request_in_processing input[name="request_type"]', {:count => 1, :value => "in_processing"}
+    VCR.use_cassette('new in processing') do
+      get(:new, {:service_response_id => 5})
+      assert_response :success
+      assert_select 'div.request' do |elements|
+        assert_select 'h2', {:count => 1,
+          :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."},
+            "Unexpected h2 text."
+        assert_select 'ol.request_options li', 2
+        assert_select 'form.request_in_processing input[name="request_type"]', {:count => 1, :value => "in_processing"}
+      end
     end
   end
+
+  # test "create available" do
+  #   UserSession.create(users(:std5))
+  #   VCR.use_cassette('create available') do
+  #     get(:create, {:service_response_id => 1, :request_type => "available"})
+  #     assert_response :redirect
+  #     assert_redirected_to ""
+  #   end
+  # end
+  # 
+  # test "create available journal" do
+  #   UserSession.create(users(:std5))
+  #   VCR.use_cassette('create available journal') do
+  #     get(:create, {:service_response_id => 2, :request_type => "available"})
+  #     assert_response :redirect
+  #     assert_redirected_to ""
+  #   end
+  # end
+  # 
+  # test "create offsite" do
+  #   UserSession.create(users(:std5))
+  #   VCR.use_cassette('create offsite') do
+  #     get(:create, {:service_response_id => 3, :request_type => "offsite"})
+  #     assert_response :redirect
+  #     assert_redirected_to ""
+  #   end
+  # end
+  # 
+  # test "create recall" do
+  #   UserSession.create(users(:std5))
+  #   VCR.use_cassette('create recall') do
+  #     get(:create, {:service_response_id => 4, :request_type => "recall"})
+  #     assert_response :redirect
+  #     assert_redirected_to ""
+  #   end
+  # end
+  # 
+  # test "create in processing" do
+  #   UserSession.create(users(:std5))
+  #   VCR.use_cassette('create in processing') do
+  #     get(:create, {:service_response_id => 5, :request_type => "in processing"})
+  #     assert_response :redirect
+  #     assert_redirected_to ""
+  #   end
+  # end
 
   test "create ill" do
     UserSession.create(users(:std5))

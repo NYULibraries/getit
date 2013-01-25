@@ -45,15 +45,6 @@ class UmlautController < ApplicationController
     end
   end
 
-  # Require a logged in user
-  def require_login
-    unless current_user
-      redirect_to login_url({:return_url => current_permalink_url, :service_response_id => params[:service_response_id]}) 
-      return false
-    end
-  end
-  protected :require_login
-
   umlaut_config.configure do
     app_name 'Get It'
 

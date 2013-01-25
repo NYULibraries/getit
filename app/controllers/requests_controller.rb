@@ -1,19 +1,20 @@
 class RequestsController < UmlautController
-  before_filter :require_login, :init
+  before_filter :restrict_access, :init
   layout :search_layout_except_xhr
 
-  attr_reader :status, :status_code, :adm_library_code, :sub_library_code, :source_record_id,
-    :item_id, :item_status_code, :item_process_status_code, :circulation_status,
+  attr_reader :status, :status_code, :adm_library_code, :sub_library_code, :original_source_id,
+    :source_record_id, :item_id, :item_status_code, :item_process_status_code, :circulation_status,
       :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
 
-  helper_method :status, :status_code, :adm_library_code, :sub_library_code, :source_record_id,
-    :item_id, :item_status_code, :item_process_status_code, :circulation_status,
+  helper_method :status, :status_code, :adm_library_code, :sub_library_code, :original_source_id, 
+    :source_record_id, :item_id, :item_status_code, :item_process_status_code, :circulation_status,
      :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
 
   def init
     @service_response = ServiceResponse.find(params[:service_response_id])
     @view_data = @service_response.view_data if @service_response
     @user_request = @service_response.request if @service_response
+    @original_source_id = @view_data[:original_source_id]
     request_instance_attributes_set @view_data[:source_data]
     @illiad_url = @view_data[:source_data][:illiad_url]
     @aleph_rest_url = @view_data[:source_data][:aleph_rest_url]
@@ -55,9 +56,15 @@ class RequestsController < UmlautController
   end
   helper_method :scan?
 
+  # Restrict access to logged in users.
+  def restrict_access
+    head :unauthorized and return false unless current_user
+  end
+  private :restrict_access
+
   # Create an Aleph request
   def create_aleph_request
-    patron.place_hold(adm_library_code, sub_library_code, source_record_id, 
+    patron.place_hold(adm_library_code, original_source_id, source_record_id, 
       item_id, {:pickup_location => pickup_location})
     respond_to do |format|
       if patron.error.nil?

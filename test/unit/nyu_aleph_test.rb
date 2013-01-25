@@ -11,7 +11,7 @@ class NyuAlephTest < ActiveSupport::TestCase
     @primo_source_service = ServiceStore.instantiate_service!("NYU_Primo_Source", nil)
   end
   
-  test "nyu_aleph_new_book" do
+  test "nyu_aleph new book" do
     assert_nothing_raised {
       holding = Exlibris::Primo::Holding.new()
       assert_not_nil(holding)
@@ -39,25 +39,27 @@ class NyuAlephTest < ActiveSupport::TestCase
       assert_equal("BREF", holding.library_code)
       assert_equal("NYU Bobst Reference", holding.library)
       assert(holding.coverage.empty?)
-      nyu_aleph = holding.to_source.expand.first
-      assert_equal("(HN49.I56 N67 2001)", nyu_aleph.call_number)
-      assert_equal("available", nyu_aleph.status_code)
-      assert_equal("Available", nyu_aleph.status)
-      assert_equal("NYU50", nyu_aleph.adm_library_code)
-      assert_equal("BOBST", nyu_aleph.sub_library_code)
-      assert_equal("NYU Bobst", nyu_aleph.sub_library)
-      assert_equal("MAIN", nyu_aleph.collection_code)
-      assert_equal("Main Collection", nyu_aleph.collection)
-      assert_equal("01", nyu_aleph.item_status_code)
-      assert_nil(nyu_aleph.item_process_status_code)
-      assert_equal("On Shelf", nyu_aleph.circulation_status)
-      assert_equal("BREF", nyu_aleph.library_code)
-      assert_equal("NYU Bobst", nyu_aleph.library)
-      assert(nyu_aleph.coverage.empty?)
+      VCR.use_cassette('nyu_aleph new book') do
+        nyu_aleph = holding.to_source.expand.first
+        assert_equal("(HN49.I56 N67 2001)", nyu_aleph.call_number)
+        assert_equal("available", nyu_aleph.status_code)
+        assert_equal("Available", nyu_aleph.status)
+        assert_equal("NYU50", nyu_aleph.adm_library_code)
+        assert_equal("BOBST", nyu_aleph.sub_library_code)
+        assert_equal("NYU Bobst", nyu_aleph.sub_library)
+        assert_equal("MAIN", nyu_aleph.collection_code)
+        assert_equal("Main Collection", nyu_aleph.collection)
+        assert_equal("01", nyu_aleph.item_status_code)
+        assert_nil(nyu_aleph.item_process_status_code)
+        assert_equal("On Shelf", nyu_aleph.circulation_status)
+        assert_equal("BREF", nyu_aleph.library_code)
+        assert_equal("NYU Bobst", nyu_aleph.library)
+        assert(nyu_aleph.coverage.empty?)
+      end
     }
   end
   
-  test "nyu_aleph_new_journal" do
+  test "nyu_aleph new journal" do
     assert_nothing_raised {
       holding = Exlibris::Primo::Holding.new()
       assert_not_nil(holding)
@@ -85,26 +87,28 @@ class NyuAlephTest < ActiveSupport::TestCase
       assert_equal("BOBST", holding.library_code)
       assert_equal("NYU Bobst", holding.library)
       assert(holding.coverage.empty?)
-      nyu_aleph = holding.to_source.expand.first
-      assert_nil(nyu_aleph.call_number)
-      assert_nil(nyu_aleph.status_code)
-      assert_nil(nyu_aleph.status)
-      assert_nil(nyu_aleph.adm_library_code)
-      assert_nil(nyu_aleph.sub_library_code)
-      assert_nil(nyu_aleph.sub_library)
-      assert_nil(nyu_aleph.collection_code)
-      assert_nil(nyu_aleph.collection)
-      assert_nil(nyu_aleph.item_status_code)
-      assert_nil(nyu_aleph.item_process_status_code)
-      assert_nil(nyu_aleph.circulation_status)
-      assert_equal("BOBST", nyu_aleph.library_code)
-      assert_equal("NYU Bobst", nyu_aleph.library)
-      assert((not nyu_aleph.coverage.empty?), "Journal coverage is empty.")
-      assert_equal(4, nyu_aleph.coverage.size)
+      VCR.use_cassette('nyu_aleph new journal') do
+        nyu_aleph = holding.to_source.expand.first
+        assert_nil(nyu_aleph.call_number)
+        assert_nil(nyu_aleph.status_code)
+        assert_nil(nyu_aleph.status)
+        assert_nil(nyu_aleph.adm_library_code)
+        assert_nil(nyu_aleph.sub_library_code)
+        assert_nil(nyu_aleph.sub_library)
+        assert_nil(nyu_aleph.collection_code)
+        assert_nil(nyu_aleph.collection)
+        assert_nil(nyu_aleph.item_status_code)
+        assert_nil(nyu_aleph.item_process_status_code)
+        assert_nil(nyu_aleph.circulation_status)
+        assert_equal("BOBST", nyu_aleph.library_code)
+        assert_equal("NYU Bobst", nyu_aleph.library)
+        assert((not nyu_aleph.coverage.empty?), "Journal coverage is empty.")
+        assert_equal(4, nyu_aleph.coverage.size)
+      end
     }
   end
   
-  test "nyu_aleph_expand_book" do
+  test "nyu_aleph expand book" do
     assert_nothing_raised {
       holding = Exlibris::Primo::Holding.new({
         :display_type => "book",
@@ -116,11 +120,13 @@ class NyuAlephTest < ActiveSupport::TestCase
       assert_not_nil(holding)
       assert_equal("nyu_aleph000655588", holding.record_id)
       assert_nil(holding.call_number)
-      nyu_alephs = holding.to_source.expand
+      VCR.use_cassette('nyu_aleph expand book') do
+        nyu_alephs = holding.to_source.expand
+      end
     }
   end
   
-  test "nyu_aleph_expand_journal" do
+  test "nyu_aleph expand journal" do
     assert_nothing_raised {
       holding = Exlibris::Primo::Holding.new({
         :display_type => "journal",
@@ -132,57 +138,63 @@ class NyuAlephTest < ActiveSupport::TestCase
       assert_not_nil(holding)
       assert_equal("nyu_aleph002904404", holding.record_id)
       assert_nil(holding.call_number)
-      nyu_alephs = holding.to_source.expand
+      VCR.use_cassette('nyu_aleph expand journal') do
+        nyu_alephs = holding.to_source.expand
+      end
     }
   end
   
-  test "nyu_aleph_primo_book_source" do
+  test "nyu_aleph primo book source" do
     assert_nothing_raised {
-      request = requests(:frankenstein)
-      @primo_service.handle(request)
-      request.dispatched_services.reload
-      request.service_responses.reload
-      holdings = request.get_service_type('holding', {:refresh => true})
-      assert(holdings.empty?, "Holdings not empty.")
-      primo_sources = request.get_service_type('primo_source', {:refresh => true})
-      primo_sources.each do |primo_source|
-        nyu_aleph = primo_source.view_data
-        # This is a journal, so we shouldn't be expanding
-        # or deduping.
-        assert(nyu_aleph.send(:expanding?), "Not expanding book.")
-        assert(nyu_aleph.dedup?, "Not deduping book.")
+      VCR.use_cassette('nyu_aleph primo book source') do
+        request = requests(:frankenstein)
+        @primo_service.handle(request)
+        request.dispatched_services.reload
+        request.service_responses.reload
+        holdings = request.get_service_type('holding', {:refresh => true})
+        assert(holdings.empty?, "Holdings not empty.")
+        primo_sources = request.get_service_type('primo_source', {:refresh => true})
+        primo_sources.each do |primo_source|
+          nyu_aleph = primo_source.view_data
+          # This is a journal, so we shouldn't be expanding
+          # or deduping.
+          assert(nyu_aleph.send(:expanding?), "Not expanding book.")
+          assert(nyu_aleph.dedup?, "Not deduping book.")
+        end
+        assert_equal(3, primo_sources.size, "Primo sources size mismatch.")
+        @primo_source_service.handle(request)
+        request.dispatched_services.reload
+        request.service_responses.reload
+        holdings = request.get_service_type('holding', {:refresh => true})
+        assert_equal(6, holdings.size)
       end
-      assert_equal(3, primo_sources.size, "Primo sources size mismatch.")
-      @primo_source_service.handle(request)
-      request.dispatched_services.reload
-      request.service_responses.reload
-      holdings = request.get_service_type('holding', {:refresh => true})
-      assert_equal(6, holdings.size)
     }
   end
   
-  test "nyu_aleph_primo_journal_source" do
-    # assert_nothing_raised {
-      request = requests(:the_new_yorker_request)
-      @primo_service.handle(request)
-      request.dispatched_services.reload
-      request.service_responses.reload
-      holdings = request.get_service_type('holding', {:refresh => true})
-      assert(holdings.empty?, "Holdings not empty.")
-      primo_sources = request.get_service_type('primo_source', {:refresh => true})
-      primo_sources.each do |primo_source|
-        nyu_aleph = primo_source.view_data
-        # This is a journal, so we shouldn't be expanding
-        # or deduping.
-        assert((not nyu_aleph.send(:expanding?)), "Expanding journal.")
-        assert((not nyu_aleph.dedup?), "Deduping journal.")
+  test "nyu_aleph primo journal source" do
+    assert_nothing_raised {
+      VCR.use_cassette('nyu_aleph primo journal source') do
+        request = requests(:the_new_yorker)
+        @primo_service.handle(request)
+        request.dispatched_services.reload
+        request.service_responses.reload
+        holdings = request.get_service_type('holding', {:refresh => true})
+        assert(holdings.empty?, "Holdings not empty.")
+        primo_sources = request.get_service_type('primo_source', {:refresh => true})
+        primo_sources.each do |primo_source|
+          nyu_aleph = primo_source.view_data
+          # This is a journal, so we shouldn't be expanding
+          # or deduping.
+          assert((not nyu_aleph.send(:expanding?)), "Expanding journal.")
+          assert((not nyu_aleph.dedup?), "Deduping journal.")
+        end
+        assert_equal(6, primo_sources.size, "Primo sources not size mismatch.")
+        @primo_source_service.handle(request)
+        request.dispatched_services.reload
+        request.service_responses.reload
+        holdings = request.get_service_type('holding', {:refresh => true})
+        assert_equal(6, holdings.size)
       end
-      assert_equal(6, primo_sources.size, "Primo sources not size mismatch.")
-      @primo_source_service.handle(request)
-      request.dispatched_services.reload
-      request.service_responses.reload
-      holdings = request.get_service_type('holding', {:refresh => true})
-      assert_equal(6, holdings.size)
-    # }
+    }
   end
 end

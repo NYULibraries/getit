@@ -24,6 +24,8 @@ group :development, :test do
   gem "progress_bar", "~> 0.4.0"
   gem "simplecov", "~> 0.7.1"
   gem "simplecov-rcov", "~> 0.2.3"
+  gem "vcr", "~> 2.4.0"
+  gem "webmock", "~> 1.9.0"
 end
 
 platforms :jruby do
