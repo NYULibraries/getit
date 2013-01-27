@@ -19,11 +19,15 @@ group :assets do
   # gem "nyulibraries_assets", :path => "/Users/dalton/Documents/workspace/nyulibraries_assets"
 end
 
-# Testing gems
+# Development and testing gems
 group :development, :test do
   gem "progress_bar", "~> 0.4.0"
   gem "simplecov", "~> 0.7.1"
   gem "simplecov-rcov", "~> 0.2.3"
+end
+
+# Testing gems
+group :test do
   gem "vcr", "~> 2.4.0"
   gem "webmock", "~> 1.9.0"
 end
