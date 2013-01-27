@@ -28,10 +28,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3
+  database: getit
   pool: 5
-  username: umlaut3
-  password: 0m!l40t
+  username: getit
+  password: g0G3T1t!
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -41,27 +41,27 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3_test
+  database: getit_test
   pool: 5
-  username: umlaut3
-  password: 0m!l40t
+  username: getit
+  password: M6I0ntSTGKqRW8cD
   host: mysqldev.library.nyu.edu
 
 staging:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3
+  database: getit
   pool: 30
-  username: umlaut3
-  password: 0m!l40t
+  username: getit
+  password: M6I0ntSTGKqRW8cD
   host: mysqldev.library.nyu.edu
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3
+  database: getit
   pool: 30
   username: umlaut3
   password: 0m!l40tP

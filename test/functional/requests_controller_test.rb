@@ -3,7 +3,7 @@ require 'test_helper'
 class RequestsControllerTest < ActionController::TestCase
   setup :activate_authlogic
 
-  test "controller source data test" do
+  test "requests source data test" do
     UserSession.create(users(:std5))
     assert_nil(@controller.adm_library_code)
     assert_nil(@controller.sub_library_code)
@@ -18,7 +18,7 @@ class RequestsControllerTest < ActionController::TestCase
     assert_nil(@controller.scan?)
     assert_nil(@controller.pickup_location)
     assert_nil(@controller.request_type)
-    VCR.use_cassette('controller source data test') do
+    VCR.use_cassette('requests source data test') do
       get(:new, {'service_response_id' => "1"})
       assert_response :success
       assert_equal("NYU50", @controller.adm_library_code)
@@ -37,56 +37,65 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "request types" do
+  test "requests request types" do
     assert_equal(["available", "ill", "in_processing", "offsite", "on_order", "recall"],
       @controller.request_types)
   end
 
-  test "request attributes" do
+  test "requests request attributes" do
     assert_equal([:status, :status_code, :adm_library_code, :sub_library, :sub_library_code,
       :source_record_id, :item_id, :item_status_code, :item_process_status_code,
         :circulation_status], @controller.send(:request_attributes))
   end
 
-  test "item permissions" do
-    get(:new, {'service_response_id' => "1"})
-    @controller.send(:init)
-    assert((not @controller.send(:item_permissions).nil?))
-    assert((not @controller.send(:item_permissions).empty?))
+  test "requests item permissions" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests item permissions') do
+      get(:new, {'service_response_id' => "1"})
+      @controller.send(:init)
+      assert((not @controller.send(:item_permissions).nil?))
+      assert((not @controller.send(:item_permissions).empty?))
+    end
   end
 
-  test "item requestability" do
-    get(:new, {'service_response_id' => "1"})
-    @controller.send(:init)
-    assert_equal(RequestsHelper::RequestableDeferred, @controller.send(:item_requestability))
+  test "requests item requestability" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests item requestability') do
+      get(:new, {'service_response_id' => "1"})
+      @controller.send(:init)
+      assert_equal(RequestsHelper::RequestableDeferred, @controller.send(:item_requestability))
+    end
   end
 
-  test "item requestable" do
-    get(:new, {'service_response_id' => "1"})
-    @controller.send(:init)
-    assert(@controller.send(:item_requestable?))
+  test "requests item requestable" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests item requestable') do
+      get(:new, {'service_response_id' => "1"})
+      @controller.send(:init)
+      assert(@controller.send(:item_requestable?))
+    end
   end
 
   test "user permissions" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('user permissions') do
+    VCR.use_cassette('requests user permissions') do
       get(:new, {'service_response_id' => "1"})
       assert((not @controller.send(:user_permissions).nil?))
       assert((not @controller.send(:user_permissions).empty?))
     end
   end
 
-  test "request" do
+  test "requests new request" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('request') do
+    VCR.use_cassette('requests new request') do
       get(:new, {'service_response_id' => "1"})
       assert @controller.request?, "Not requestable."
     end
   end
 
-  test "request available" do
+  test "requests new request available" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('request available') do
+    VCR.use_cassette('requests request available') do
       get(:new, {'service_response_id' => "1"})
       assert @controller.request_available?, "Not requestable available."
       assert((not @controller.request_recall?), "Recall requestable.")
@@ -97,9 +106,9 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "layout" do
+  test "requests layout" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('layout') do
+    VCR.use_cassette('requests layout') do
       get(:new, :service_response_id => 1)
       assert_response :success
       assert_select "body div.nyu-container", 1
@@ -107,9 +116,9 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "layout xhr" do
+  test "requests layout xhr" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('layout xhr') do
+    VCR.use_cassette('requests layout xhr') do
       xhr :get, :new, :service_response_id => 1
       assert_response :success
       # Assert that no layout was included in the request
@@ -119,7 +128,7 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "routes" do
+  test "requests routes" do
     assert_equal "http://test.host/requests/1/ill/BOBST", create_request_url(1, "ill", "BOBST")
     assert_equal "http://test.host/requests/1/on_order", create_request_url(1, "on_order")
     assert_equal "http://test.host/requests/1/recall", create_request_url(1, "recall")
@@ -127,14 +136,16 @@ class RequestsControllerTest < ActionController::TestCase
     assert_equal "http://test.host/requests/1/available", create_request_url(1, "available")
   end
 
-  test "no logged in user" do
-    get(:new, {'service_response_id' => "1"})
-    assert_response :unauthorized
+  test "requests not logged in" do
+    VCR.use_cassette('requests not logged in') do
+      get(:new, {'service_response_id' => "1"})
+      assert_response :unauthorized
+    end
   end
 
-  test "new available" do
+  test "requests new available" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('new available') do
+    VCR.use_cassette('requests new available') do
       get(:new, {'service_response_id' => "1"})
       assert_response :success
       assert_select 'div.request' do
@@ -147,9 +158,9 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "new offsite" do
+  test "requests new offsite" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('new offsite') do
+    VCR.use_cassette('requests new offsite') do
       get(:new, {'service_response_id' => "3"})
       assert_response :success
       assert_select 'div.request' do |elements|
@@ -162,9 +173,9 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "new recall" do
+  test "requests new recall" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('new recall') do
+    VCR.use_cassette('requests new recall') do
       get(:new, {'service_response_id' => "4"})
       assert_response :success
       assert_select 'div.request' do |elements|
@@ -177,9 +188,9 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  test "new in processing" do
+  test "requests new in processing" do
     UserSession.create(users(:std5))
-    VCR.use_cassette('new in processing') do
+    VCR.use_cassette('requests new in processing') do
       get(:new, {:service_response_id => 5})
       assert_response :success
       assert_select 'div.request' do |elements|
@@ -192,52 +203,69 @@ class RequestsControllerTest < ActionController::TestCase
     end
   end
 
-  # test "create available" do
-  #   UserSession.create(users(:std5))
-  #   VCR.use_cassette('create available') do
-  #     get(:create, {:service_response_id => 1, :request_type => "available"})
-  #     assert_response :redirect
-  #     assert_redirected_to ""
-  #   end
-  # end
-  # 
-  # test "create available journal" do
-  #   UserSession.create(users(:std5))
-  #   VCR.use_cassette('create available journal') do
-  #     get(:create, {:service_response_id => 2, :request_type => "available"})
-  #     assert_response :redirect
-  #     assert_redirected_to ""
-  #   end
-  # end
-  # 
-  # test "create offsite" do
-  #   UserSession.create(users(:std5))
-  #   VCR.use_cassette('create offsite') do
-  #     get(:create, {:service_response_id => 3, :request_type => "offsite"})
-  #     assert_response :redirect
-  #     assert_redirected_to ""
-  #   end
-  # end
-  # 
-  # test "create recall" do
-  #   UserSession.create(users(:std5))
-  #   VCR.use_cassette('create recall') do
-  #     get(:create, {:service_response_id => 4, :request_type => "recall"})
-  #     assert_response :redirect
-  #     assert_redirected_to ""
-  #   end
-  # end
-  # 
-  # test "create in processing" do
-  #   UserSession.create(users(:std5))
-  #   VCR.use_cassette('create in processing') do
-  #     get(:create, {:service_response_id => 5, :request_type => "in processing"})
-  #     assert_response :redirect
-  #     assert_redirected_to ""
-  #   end
-  # end
+  test "requests create available journal" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create available journal') do
+      get(:create, {:service_response_id => 2, :request_type => "available"})
+      assert_response :unauthorized
+    end
+  end
 
-  test "create ill" do
+  test "requests create nonexistent type" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create available journal') do
+      get(:create, {:service_response_id => 2, :request_type => "nonexistent"})
+      assert_response :bad_request
+    end
+  end
+
+  test "requests create aleph error" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create aleph error') do
+      get(:create, {:service_response_id => 1, :request_type => "available"})
+      assert_response :redirect
+      assert_redirected_to "http://test.host/requests/new/1"
+      assert_equal "Failed to create request: Patron has already requested this item.", flash[:alert]
+    end
+  end
+  
+  test "requests create available" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create available') do
+      get(:create, {:service_response_id => 1, :request_type => "available"})
+      assert_response :redirect
+      assert_redirected_to "http://test.host/requests/1?pickup_location=BOBST&scan=false"
+    end
+  end
+  
+  test "requests create offsite" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create offsite') do
+      get(:create, {:service_response_id => 3, :request_type => "offsite"})
+      assert_response :redirect
+      assert_redirected_to "http://test.host/requests/3?pickup_location=TNSFO&scan=false"
+    end
+  end
+  
+  test "requests create recall" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create recall') do
+      get(:create, {:service_response_id => 4, :request_type => "recall"})
+      assert_response :redirect
+      assert_redirected_to "http://test.host/requests/4?pickup_location=NCOUR&scan=false"
+    end
+  end
+  
+  test "requests create in processing" do
+    UserSession.create(users(:std5))
+    VCR.use_cassette('requests create in processing') do
+      get(:create, {:service_response_id => 5, :request_type => "in_processing"})
+      assert_response :redirect
+      assert_redirected_to "http://test.host/requests/5?pickup_location=NABUD&scan=false"
+    end
+  end
+
+  test "requests create ill" do
     UserSession.create(users(:std5))
     get(:create, {:service_response_id => 5, :request_type => "ill"})
     assert_response :redirect

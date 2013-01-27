@@ -108,7 +108,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    exlibris-aleph (0.1.5)
+    exlibris-aleph (0.1.6)
       httparty
       nokogiri
       rails (~> 3.2.0)
@@ -122,16 +122,16 @@ GEM
       savon (~> 1.2.0)
     fastthread (1.0.7)
     fattr (2.2.1)
-    fssm (0.2.9)
+    fssm (0.2.10)
     git (1.2.5)
     gyoku (0.4.6)
       builder (>= 2.1.2)
     highline (1.6.15)
     hike (1.2.1)
     htmlentities (4.3.1)
-    httparty (0.10.0)
+    httparty (0.10.2)
       multi_json (~> 1.0)
-      multi_xml
+      multi_xml (>= 0.5.2)
     httpi (1.1.1)
       rack
     i18n (0.6.1)
@@ -278,7 +278,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   compass-rails (~> 1.0.3)
   dalli (~> 2.6.0)
-  exlibris-aleph (~> 0.1.4)
+  exlibris-aleph (~> 0.1.6)
   jquery-rails (~> 2.1.4)
   jruby-openssl (~> 0.8.2)
   jruby-rack (~> 1.1.12)

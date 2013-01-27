@@ -21,7 +21,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 25 Jan 2013 20:44:40 GMT
+      - Sun, 27 Jan 2013 17:50:35 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
@@ -45,5 +45,5 @@ http_interactions:
         York : Cambridge University Press, 2001.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0521807514</z13-isbn-issn></z13><status>On
         Shelf</status></item></items></get-item-list> '
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:44:40 GMT
+  recorded_at: Sun, 27 Jan 2013 17:50:35 GMT
 recorded_with: VCR 2.4.0

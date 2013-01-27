@@ -4,12 +4,14 @@ class RequestsController < UmlautController
 
   attr_reader :status, :status_code, :adm_library_code, :sub_library_code, :original_source_id,
     :source_record_id, :item_id, :item_status_code, :item_process_status_code, :circulation_status,
-      :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
+      :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :note_2, :request_type
 
   helper_method :status, :status_code, :adm_library_code, :sub_library_code, :original_source_id, 
     :source_record_id, :item_id, :item_status_code, :item_process_status_code, :circulation_status,
-     :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :request_type
+     :illiad_url, :aleph_rest_url, :ill_url, :pickup_location, :note_2, :request_type
 
+  # Initialize the instance variables needed in
+  # the controller
   def init
     @service_response = ServiceResponse.find(params[:service_response_id])
     @view_data = @service_response.view_data if @service_response
@@ -25,10 +27,12 @@ class RequestsController < UmlautController
   def create
     @request_type = params[:request_type]
     @scan = (params.fetch(:entire, "yes") == "no") ? true : false
-    @pickup_location = params.fetch(:pickup_location, "")
+    @pickup_location = params.fetch(:pickup_location, sub_library_code)
     # Set note_2 as entire_yes/entire_no
-    params[:note_2] = (scan?) ? "entire_no" : "entire_yes"
+    @note_2 = (scan?) ? "entire_no" : "entire_yes"
+    # Is this a valid request type?
     if request_types.include?(request_type)
+      # Can the user/item combo make the request
       if send("request_#{request_type}?".to_sym)
         if request_type.eql? "ill"
           redirect_to ill_url
@@ -36,12 +40,14 @@ class RequestsController < UmlautController
           create_aleph_request
         end
       else
-        redirect_to new_request_path(params[:service_response_id]), 
-          :flash => { :alert => permission_error }
+        # If the user/item combo can't make the request
+        # tell the user this is an unauthorized request
+        head :unauthorized
       end
     else
-      redirect_to new_request_path(params[:service_response_id]), 
-        :flash => { :alert => unexpected_error }
+      # If not valid request type
+      # tell the user this is a bad request
+      head :bad_request
     end
   end
 
@@ -64,23 +70,23 @@ class RequestsController < UmlautController
 
   # Create an Aleph request
   def create_aleph_request
-    patron.place_hold(adm_library_code, original_source_id, source_record_id, 
-      item_id, {:pickup_location => pickup_location})
-    respond_to do |format|
-      if patron.error.nil?
-        redirect_to request_path(params[:service_response_id], :scan => scan?, 
-          :pickup_location => pickup_location)
-      else
-        flash[:alert] = patron.error
-        redirect_to new_request_path(params[:service_response_id])
-      end
+    begin
+      patron.place_hold(adm_library_code, original_source_id, source_record_id, 
+        item_id, {:pickup_location => pickup_location, :note_2 => note_2})
+      redirect_to(request_path(params[:service_response_id], :scan => scan?, 
+        :pickup_location => pickup_location))
+    # rescue VCR::Errors::UnhandledHTTPRequestError => e
+    #   raise e
+    rescue
+      flash[:alert] = patron.error
+      redirect_to new_request_path(params[:service_response_id])
     end
   end
   private :create_aleph_request
 
   # Aleph Patron for placing holds
   def patron
-    Exlibris::Aleph::Patron.new(current_user.user_attributes[:nyuidn], aleph_rest_url)
+    @patron ||= Exlibris::Aleph::Patron.new(current_user.user_attributes[:nyuidn], aleph_rest_url)
   end
   private :patron
 end

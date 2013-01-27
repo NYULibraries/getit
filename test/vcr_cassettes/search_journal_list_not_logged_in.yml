@@ -21,12 +21,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 25 Jan 2013 20:41:46 GMT
+      - Sun, 27 Jan 2013 17:52:33 GMT
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>1,''params''=>{''sort''=>''title_sort_s
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''sort''=>''title_sort_s
         asc'',''wt''=>''ruby'',''rows''=>''20'',''start''=>''0'',''q''=>''*:*'',''fq''=>[''type:Sfx4\\:\\:Local\\:\\:AzTitle'',''letter_group_sm:A'']}},''response''=>{''numFound''=>10825,''start''=>0,''docs''=>[{''id''=>''Sfx4::Local::AzTitle
         94682'',''object_id_ss''=>''3460000000080718'',''title_display_ss''=>''A.A.H.P.S.S.S.
         news and information'',''issn_ss''=>''0158-9040'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Local::AzTitle
@@ -69,7 +69,7 @@ http_interactions:
         108876'',''object_id_ss''=>''991042744299716'',''title_display_ss''=>''A.M.A.
         archives of surgery'',''issn_ss''=>''0096-6908'',''isbn_ss''=>'''',''lccn_ss''=>''22011929''}]}}'
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:41:46 GMT
+  recorded_at: Sun, 27 Jan 2013 17:52:34 GMT
 - request:
     method: get
     uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
@@ -93,12 +93,12 @@ http_interactions:
       Content-Length:
       - '27'
       Date:
-      - Fri, 25 Jan 2013 20:41:46 GMT
+      - Sun, 27 Jan 2013 17:52:33 GMT
     body:
       encoding: US-ASCII
       string: ! 'string=iPlanetDirectoryPro
 
 '
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:41:46 GMT
+  recorded_at: Sun, 27 Jan 2013 17:52:34 GMT
 recorded_with: VCR 2.4.0

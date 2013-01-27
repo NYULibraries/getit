@@ -2,7 +2,100 @@
 http_interactions:
 - request:
     method: get
-    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=1ZQ8VEWY2A7VSJ93CW82&AssociateTag=nyli0a-20&ItemId=0393964582&Operation=ItemLookup&ResponseGroup=Large&Service=AWSECommerceService&Signature=hTZ71GtCNzQqZHqdDVshvhKkr9ld5fs5t8f5QdcSmDQ=&Timestamp=2013-01-25T15:23:10-05:00
+    uri: http://isbndb.com/api/books.xml?access_key=9FAOAU2Z&index1=isbn&results=details,prices&value1=9780393964585
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:22 GMT
+      Server:
+      - Apache/2.2.3 (CentOS)
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="CAO DSP COR CURa ADMa DEVa OUR IND PHY ONL UNI
+        COM NAV INT DEM PRE"
+      Expires:
+      - Sun, 27 Jan 2013 17:52:22 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=utf-8
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0" encoding="UTF-8"?>
+
+
+        <ISBNdb server_time="2013-01-27T17:52:22Z">
+
+        <ErrorMessage>Access key error</ErrorMessage>
+
+        </ISBNdb>
+
+'
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:22 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Mossberger,%20Karen%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:25 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '1592'
+      Content-Type:
+      - text/xml
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<?xml-stylesheet type=\"text/xsl\"
+        href=\"/identities/NameFinderResponse.xsl\"?>\n<searchRetrieveResponse xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &quot;Mossberger, Karen&quot;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">Mossberger, Karen</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns3:extraDataType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns4=\"http://oclc.org/srw/extraData\"><ns4:databaseTitle>WorldCat
+        Personal Identity Records</ns4:databaseTitle></ns4:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:25 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2003004571
     body:
       encoding: US-ASCII
       string: ''
@@ -17,310 +110,21 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 25 Jan 2013 20:23:10 GMT
+      - Sun, 27 Jan 2013 17:52:25 GMT
       Server:
-      - Server
+      - Apache/2.2.17 (Unix) mod_fastcgi/2.4.6
+      Content-Length:
+      - '45'
       Content-Type:
-      - text/xml;charset=UTF-8
-      Vary:
-      - Accept-Encoding,User-Agent
-      Nncoection:
-      - close
-      Transfer-Encoding:
-      - chunked
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_cbcfm=ffffffff854c63d445525d5f4f58455e445a4a423660;expires=Sun, 27-Jan-2013
+        18:02:25 GMT;path=/;httponly
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxJdGVtTG9va3VwUmVzcG9uc2UgeG1s
-        bnM9Imh0dHA6Ly93ZWJzZXJ2aWNlcy5hbWF6b24uY29tL0FXU0VDb21tZXJj
-        ZVNlcnZpY2UvMjAxMS0wOC0wMSI+PE9wZXJhdGlvblJlcXVlc3Q+PEhUVFBI
-        ZWFkZXJzPjxIZWFkZXIgTmFtZT0iVXNlckFnZW50IiBWYWx1ZT0iUnVieSI+
-        PC9IZWFkZXI+PC9IVFRQSGVhZGVycz48UmVxdWVzdElkPjQyYWY2MmNmLTdi
-        ZTctNDhiMy1iODExLWQ4NDI0YTljZjdiMjwvUmVxdWVzdElkPjxBcmd1bWVu
-        dHM+PEFyZ3VtZW50IE5hbWU9IlNlcnZpY2UiIFZhbHVlPSJBV1NFQ29tbWVy
-        Y2VTZXJ2aWNlIj48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJPcGVyYXRp
-        b24iIFZhbHVlPSJJdGVtTG9va3VwIj48L0FyZ3VtZW50PjxBcmd1bWVudCBO
-        YW1lPSJTaWduYXR1cmUiIFZhbHVlPSJoVFo3MUd0Q056UXFaSHFkRFZzaHZo
-        S2tyOWxkNWZzNXQ4ZjVRZGNTbURRPSI+PC9Bcmd1bWVudD48QXJndW1lbnQg
-        TmFtZT0iQXNzb2NpYXRlVGFnIiBWYWx1ZT0ibnlsaTBhLTIwIj48L0FyZ3Vt
-        ZW50PjxBcmd1bWVudCBOYW1lPSJJdGVtSWQiIFZhbHVlPSIwMzkzOTY0NTgy
-        Ij48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJBV1NBY2Nlc3NLZXlJZCIg
-        VmFsdWU9IjFaUThWRVdZMkE3VlNKOTNDVzgyIj48L0FyZ3VtZW50PjxBcmd1
-        bWVudCBOYW1lPSJUaW1lc3RhbXAiIFZhbHVlPSIyMDEzLTAxLTI1VDE1OjIz
-        OjEwLTA1OjAwIj48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJSZXNwb25z
-        ZUdyb3VwIiBWYWx1ZT0iTGFyZ2UiPjwvQXJndW1lbnQ+PC9Bcmd1bWVudHM+
-        PFJlcXVlc3RQcm9jZXNzaW5nVGltZT4wLjE1MDQyMTAwMDAwMDAwMDA8L1Jl
-        cXVlc3RQcm9jZXNzaW5nVGltZT48L09wZXJhdGlvblJlcXVlc3Q+PEl0ZW1z
-        PjxSZXF1ZXN0PjxJc1ZhbGlkPlRydWU8L0lzVmFsaWQ+PEl0ZW1Mb29rdXBS
-        ZXF1ZXN0PjxJZFR5cGU+QVNJTjwvSWRUeXBlPjxJdGVtSWQ+MDM5Mzk2NDU4
-        MjwvSXRlbUlkPjxSZXNwb25zZUdyb3VwPkxhcmdlPC9SZXNwb25zZUdyb3Vw
-        PjxWYXJpYXRpb25QYWdlPkFsbDwvVmFyaWF0aW9uUGFnZT48L0l0ZW1Mb29r
-        dXBSZXF1ZXN0PjwvUmVxdWVzdD48SXRlbT48QVNJTj4wMzkzOTY0NTgyPC9B
-        U0lOPjxEZXRhaWxQYWdlVVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9GcmFu
-        a2Vuc3RlaW4tQ3JpdGljYWwtRWRpdGlvbnMtV29sbHN0b25lY3JhZnQtU2hl
-        bGxleS9kcC8wMzkzOTY0NTgyJTNGU3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVX
-        WTJBN1ZTSjkzQ1c4MiUyNnRhZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNE
-        eG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDE2NTk1MyUyNmNyZWF0
-        aXZlQVNJTiUzRDAzOTM5NjQ1ODI8L0RldGFpbFBhZ2VVUkw+PEl0ZW1MaW5r
-        cz48SXRlbUxpbms+PERlc2NyaXB0aW9uPlRlY2huaWNhbCBEZXRhaWxzPC9E
-        ZXNjcmlwdGlvbj48VVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9GcmFua2Vu
-        c3RlaW4tQ3JpdGljYWwtRWRpdGlvbnMtV29sbHN0b25lY3JhZnQtU2hlbGxl
-        eS9kcC90ZWNoLWRhdGEvMDM5Mzk2NDU4MiUzRlN1YnNjcmlwdGlvbklkJTNE
-        MVpROFZFV1kyQTdWU0o5M0NXODIlMjZ0YWclM0RueWxpMGEtMjAlMjZsaW5r
-        Q29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QzODYwMDEl
-        MjZjcmVhdGl2ZUFTSU4lM0QwMzkzOTY0NTgyPC9VUkw+PC9JdGVtTGluaz48
-        SXRlbUxpbms+PERlc2NyaXB0aW9uPkFkZCBUbyBCYWJ5IFJlZ2lzdHJ5PC9E
-        ZXNjcmlwdGlvbj48VVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9yZWdp
-        c3RyeS9iYWJ5L2FkZC1pdGVtLmh0bWwlM0Zhc2luLjAlM0QwMzkzOTY0NTgy
-        JTI2U3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRh
-        ZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUl
-        MjZjcmVhdGl2ZSUzRDM4NjAwMSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1
-        ODI8L1VSTD48L0l0ZW1MaW5rPjxJdGVtTGluaz48RGVzY3JpcHRpb24+QWRk
-        IFRvIFdlZGRpbmcgUmVnaXN0cnk8L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDov
-        L3d3dy5hbWF6b24uY29tL2dwL3JlZ2lzdHJ5L3dlZGRpbmcvYWRkLWl0ZW0u
-        aHRtbCUzRmFzaW4uMCUzRDAzOTM5NjQ1ODIlMjZTdWJzY3JpcHRpb25JZCUz
-        RDFaUThWRVdZMkE3VlNKOTNDVzgyJTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlu
-        a0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAx
-        JTI2Y3JlYXRpdmVBU0lOJTNEMDM5Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+
-        PEl0ZW1MaW5rPjxEZXNjcmlwdGlvbj5BZGQgVG8gV2lzaGxpc3Q8L0Rlc2Ny
-        aXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3JlZ2lzdHJ5
-        L3dpc2hsaXN0L2FkZC1pdGVtLmh0bWwlM0Zhc2luLjAlM0QwMzkzOTY0NTgy
-        JTI2U3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRh
-        ZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUl
-        MjZjcmVhdGl2ZSUzRDM4NjAwMSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1
-        ODI8L1VSTD48L0l0ZW1MaW5rPjxJdGVtTGluaz48RGVzY3JpcHRpb24+VGVs
-        bCBBIEZyaWVuZDwvRGVzY3JpcHRpb24+PFVSTD5odHRwOi8vd3d3LmFtYXpv
-        bi5jb20vZ3AvcGRwL3RhZi8wMzkzOTY0NTgyJTNGU3Vic2NyaXB0aW9uSWQl
-        M0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRhZyUzRG55bGkwYS0yMCUyNmxp
-        bmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDM4NjAw
-        MSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1ODI8L1VSTD48L0l0ZW1MaW5r
-        PjxJdGVtTGluaz48RGVzY3JpcHRpb24+QWxsIEN1c3RvbWVyIFJldmlld3M8
-        L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29tL3Jldmll
-        dy9wcm9kdWN0LzAzOTM5NjQ1ODIlM0ZTdWJzY3JpcHRpb25JZCUzRDFaUThW
-        RVdZMkE3VlNKOTNDVzgyJTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlua0NvZGUl
-        M0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3Jl
-        YXRpdmVBU0lOJTNEMDM5Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+PEl0ZW1M
-        aW5rPjxEZXNjcmlwdGlvbj5BbGwgT2ZmZXJzPC9EZXNjcmlwdGlvbj48VVJM
-        Pmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9vZmZlci1saXN0aW5nLzAzOTM5
-        NjQ1ODIlM0ZTdWJzY3JpcHRpb25JZCUzRDFaUThWRVdZMkE3VlNKOTNDVzgy
-        JTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNE
-        MjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3JlYXRpdmVBU0lOJTNEMDM5
-        Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+PC9JdGVtTGlua3M+PFNhbGVzUmFu
-        az42MTM3PC9TYWxlc1Jhbms+PFNtYWxsSW1hZ2U+PFVSTD5odHRwOi8vZWN4
-        LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzQxTXJsUjZvVm9MLl9TTDc1
-        Xy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjc1PC9IZWlnaHQ+
-        PFdpZHRoIFVuaXRzPSJwaXhlbHMiPjQ2PC9XaWR0aD48L1NtYWxsSW1hZ2U+
-        PE1lZGl1bUltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMtYW1hem9uLmNv
-        bS9pbWFnZXMvSS80MU1ybFI2b1ZvTC5fU0wxNjBfLmpwZzwvVVJMPjxIZWln
-        aHQgVW5pdHM9InBpeGVscyI+MTYwPC9IZWlnaHQ+PFdpZHRoIFVuaXRzPSJw
-        aXhlbHMiPjk4PC9XaWR0aD48L01lZGl1bUltYWdlPjxMYXJnZUltYWdlPjxV
-        Ukw+aHR0cDovL2VjeC5pbWFnZXMtYW1hem9uLmNvbS9pbWFnZXMvSS80MU1y
-        bFI2b1ZvTC5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjQyMDwv
-        SGVpZ2h0PjxXaWR0aCBVbml0cz0icGl4ZWxzIj4yNTc8L1dpZHRoPjwvTGFy
-        Z2VJbWFnZT48SW1hZ2VTZXRzPjxJbWFnZVNldCBDYXRlZ29yeT0icHJpbWFy
-        eSI+PFN3YXRjaEltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMtYW1hem9u
-        LmNvbS9pbWFnZXMvSS80MU1ybFI2b1ZvTC5fU0wzMF8uanBnPC9VUkw+PEhl
-        aWdodCBVbml0cz0icGl4ZWxzIj4zMDwvSGVpZ2h0PjxXaWR0aCBVbml0cz0i
-        cGl4ZWxzIj4xODwvV2lkdGg+PC9Td2F0Y2hJbWFnZT48U21hbGxJbWFnZT48
-        VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDFN
-        cmxSNm9Wb0wuX1NMNzVfLmpwZzwvVVJMPjxIZWlnaHQgVW5pdHM9InBpeGVs
-        cyI+NzU8L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+NDY8L1dpZHRo
-        PjwvU21hbGxJbWFnZT48VGh1bWJuYWlsSW1hZ2U+PFVSTD5odHRwOi8vZWN4
-        LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzQxTXJsUjZvVm9MLl9TTDc1
-        Xy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjc1PC9IZWlnaHQ+
-        PFdpZHRoIFVuaXRzPSJwaXhlbHMiPjQ2PC9XaWR0aD48L1RodW1ibmFpbElt
-        YWdlPjxUaW55SW1hZ2U+PFVSTD5odHRwOi8vZWN4LmltYWdlcy1hbWF6b24u
-        Y29tL2ltYWdlcy9JLzQxTXJsUjZvVm9MLl9TTDExMF8uanBnPC9VUkw+PEhl
-        aWdodCBVbml0cz0icGl4ZWxzIj4xMTA8L0hlaWdodD48V2lkdGggVW5pdHM9
-        InBpeGVscyI+Njc8L1dpZHRoPjwvVGlueUltYWdlPjxNZWRpdW1JbWFnZT48
-        VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDFN
-        cmxSNm9Wb0wuX1NMMTYwXy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhl
-        bHMiPjE2MDwvSGVpZ2h0PjxXaWR0aCBVbml0cz0icGl4ZWxzIj45ODwvV2lk
-        dGg+PC9NZWRpdW1JbWFnZT48TGFyZ2VJbWFnZT48VVJMPmh0dHA6Ly9lY3gu
-        aW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDFNcmxSNm9Wb0wuanBnPC9V
-        Ukw+PEhlaWdodCBVbml0cz0icGl4ZWxzIj40MjA8L0hlaWdodD48V2lkdGgg
-        VW5pdHM9InBpeGVscyI+MjU3PC9XaWR0aD48L0xhcmdlSW1hZ2U+PC9JbWFn
-        ZVNldD48L0ltYWdlU2V0cz48SXRlbUF0dHJpYnV0ZXM+PEF1dGhvcj5NYXJ5
-        IFdvbGxzdG9uZWNyYWZ0IFNoZWxsZXk8L0F1dGhvcj48QmluZGluZz5QYXBl
-        cmJhY2s8L0JpbmRpbmc+PENyZWF0b3IgUm9sZT0iRWRpdG9yIj5KLiBQYXVs
-        IEh1bnRlcjwvQ3JlYXRvcj48RUFOPjk3ODAzOTM5NjQ1ODU8L0VBTj48RUFO
-        TGlzdD48RUFOTGlzdEVsZW1lbnQ+OTc4MDM5Mzk2NDU4NTwvRUFOTGlzdEVs
-        ZW1lbnQ+PC9FQU5MaXN0PjxFZGl0aW9uPjFyc3Q8L0VkaXRpb24+PEZlYXR1
-        cmU+Q29tcHJlaGVuc2l2ZSBzdHVkeSBvZiB0aGUgYm9vayBGcmFua2Vuc3Rl
-        aW48L0ZlYXR1cmU+PEZlYXR1cmU+UHJlc2VudHMgdGhlIGZ1bGwgb3JpZ2lu
-        YWwgMTgxOCB0ZXh0PC9GZWF0dXJlPjxGZWF0dXJlPlByZXNlbnRzIHZhcmlv
-        dXMgY29udGV4dHMgYnkgdGhlIGF1dGhvciBhbmQgb3RoZXJzIG9mIHRoZSBk
-        YXk8L0ZlYXR1cmU+PEZlYXR1cmU+UHJlc2VudHMgMTl0aCBjZW50dXJ5IHJl
-        c3BvbnNlcyBhbmQgd2l0aCBleGVycHRzIGZyb20gbWFnYXppbmVzPC9GZWF0
-        dXJlPjxGZWF0dXJlPlByZXNlbnRzIG1vZGVybiBkYXkgY3JpdGljaXNtIGFu
-        ZCBhdXRob3IgY2hyb25vbG9naWNhbCBiaW9ncmFwaHk8L0ZlYXR1cmU+PElT
-        Qk4+MDM5Mzk2NDU4MjwvSVNCTj48SXRlbURpbWVuc2lvbnM+PEhlaWdodCBV
-        bml0cz0iaHVuZHJlZHRocy1pbmNoZXMiPjQ3PC9IZWlnaHQ+PExlbmd0aCBV
-        bml0cz0iaHVuZHJlZHRocy1pbmNoZXMiPjgzOTwvTGVuZ3RoPjxXZWlnaHQg
-        VW5pdHM9Imh1bmRyZWR0aHMtcG91bmRzIj43MzwvV2VpZ2h0PjxXaWR0aCBV
-        bml0cz0iaHVuZHJlZHRocy1pbmNoZXMiPjUyNDwvV2lkdGg+PC9JdGVtRGlt
-        ZW5zaW9ucz48TGFiZWw+Vy4gVy4gTm9ydG9uICZhbXA7IENvbXBhbnk8L0xh
-        YmVsPjxMYW5ndWFnZXM+PExhbmd1YWdlPjxOYW1lPkVuZ2xpc2g8L05hbWU+
-        PFR5cGU+VW5rbm93bjwvVHlwZT48L0xhbmd1YWdlPjxMYW5ndWFnZT48TmFt
-        ZT5FbmdsaXNoPC9OYW1lPjxUeXBlPk9yaWdpbmFsIExhbmd1YWdlPC9UeXBl
-        PjwvTGFuZ3VhZ2U+PExhbmd1YWdlPjxOYW1lPkVuZ2xpc2g8L05hbWU+PFR5
-        cGU+UHVibGlzaGVkPC9UeXBlPjwvTGFuZ3VhZ2U+PC9MYW5ndWFnZXM+PExp
-        c3RQcmljZT48QW1vdW50PjE5OTU8L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVT
-        RDwvQ3VycmVuY3lDb2RlPjxGb3JtYXR0ZWRQcmljZT4kMTkuOTU8L0Zvcm1h
-        dHRlZFByaWNlPjwvTGlzdFByaWNlPjxNYW51ZmFjdHVyZXI+Vy4gVy4gTm9y
-        dG9uICZhbXA7IENvbXBhbnk8L01hbnVmYWN0dXJlcj48TnVtYmVyT2ZJdGVt
-        cz4xPC9OdW1iZXJPZkl0ZW1zPjxOdW1iZXJPZlBhZ2VzPjM1MjwvTnVtYmVy
-        T2ZQYWdlcz48UGFja2FnZURpbWVuc2lvbnM+PEhlaWdodCBVbml0cz0iaHVu
-        ZHJlZHRocy1pbmNoZXMiPjc5PC9IZWlnaHQ+PExlbmd0aCBVbml0cz0iaHVu
-        ZHJlZHRocy1pbmNoZXMiPjgyNzwvTGVuZ3RoPjxXZWlnaHQgVW5pdHM9Imh1
-        bmRyZWR0aHMtcG91bmRzIj43NTwvV2VpZ2h0PjxXaWR0aCBVbml0cz0iaHVu
-        ZHJlZHRocy1pbmNoZXMiPjUwNDwvV2lkdGg+PC9QYWNrYWdlRGltZW5zaW9u
-        cz48UGFja2FnZVF1YW50aXR5PjE8L1BhY2thZ2VRdWFudGl0eT48UHJvZHVj
-        dEdyb3VwPkJvb2s8L1Byb2R1Y3RHcm91cD48UHJvZHVjdFR5cGVOYW1lPkFC
-        SVNfQk9PSzwvUHJvZHVjdFR5cGVOYW1lPjxQdWJsaWNhdGlvbkRhdGU+MTk5
-        NS0xMi0xNzwvUHVibGljYXRpb25EYXRlPjxQdWJsaXNoZXI+Vy4gVy4gTm9y
-        dG9uICZhbXA7IENvbXBhbnk8L1B1Ymxpc2hlcj48U0tVPjkwNDA5Njg0Mzwv
-        U0tVPjxTdHVkaW8+Vy4gVy4gTm9ydG9uICZhbXA7IENvbXBhbnk8L1N0dWRp
-        bz48VGl0bGU+RnJhbmtlbnN0ZWluIChOb3J0b24gQ3JpdGljYWwgRWRpdGlv
-        bnMpPC9UaXRsZT48L0l0ZW1BdHRyaWJ1dGVzPjxPZmZlclN1bW1hcnk+PExv
-        d2VzdE5ld1ByaWNlPjxBbW91bnQ+ODAwPC9BbW91bnQ+PEN1cnJlbmN5Q29k
-        ZT5VU0Q8L0N1cnJlbmN5Q29kZT48Rm9ybWF0dGVkUHJpY2U+JDguMDA8L0Zv
-        cm1hdHRlZFByaWNlPjwvTG93ZXN0TmV3UHJpY2U+PExvd2VzdFVzZWRQcmlj
-        ZT48QW1vdW50PjMzNTwvQW1vdW50PjxDdXJyZW5jeUNvZGU+VVNEPC9DdXJy
-        ZW5jeUNvZGU+PEZvcm1hdHRlZFByaWNlPiQzLjM1PC9Gb3JtYXR0ZWRQcmlj
-        ZT48L0xvd2VzdFVzZWRQcmljZT48VG90YWxOZXc+MTE8L1RvdGFsTmV3PjxU
-        b3RhbFVzZWQ+MjQxPC9Ub3RhbFVzZWQ+PFRvdGFsQ29sbGVjdGlibGU+MDwv
-        VG90YWxDb2xsZWN0aWJsZT48VG90YWxSZWZ1cmJpc2hlZD4wPC9Ub3RhbFJl
-        ZnVyYmlzaGVkPjwvT2ZmZXJTdW1tYXJ5PjxPZmZlcnM+PFRvdGFsT2ZmZXJz
-        PjA8L1RvdGFsT2ZmZXJzPjxUb3RhbE9mZmVyUGFnZXM+MDwvVG90YWxPZmZl
-        clBhZ2VzPjxNb3JlT2ZmZXJzVXJsPjA8L01vcmVPZmZlcnNVcmw+PC9PZmZl
-        cnM+PEN1c3RvbWVyUmV2aWV3cz48SUZyYW1lVVJMPmh0dHA6Ly93d3cuYW1h
-        em9uLmNvbS9yZXZpZXdzL2lmcmFtZT9ha2lkPTFaUThWRVdZMkE3VlNKOTND
-        VzgyJmFtcDthbGlua0NvZGU9eG0yJmFtcDthc2luPTAzOTM5NjQ1ODImYW1w
-        O2F0YWc9bnlsaTBhLTIwJmFtcDtleHA9MjAxMy0wMS0yNlQyMCUzQTIzJTNB
-        MTBaJmFtcDt2PTImYW1wO3NpZz1OZnRhVTh5S2lxWk5YcWxwUHMwYzVKZFgw
-        NzU5UGE5Ylh5SUQ4MFdHOHRNJTNEPC9JRnJhbWVVUkw+PEhhc1Jldmlld3M+
-        dHJ1ZTwvSGFzUmV2aWV3cz48L0N1c3RvbWVyUmV2aWV3cz48RWRpdG9yaWFs
-        UmV2aWV3cz48RWRpdG9yaWFsUmV2aWV3PjxTb3VyY2U+UHJvZHVjdCBEZXNj
-        cmlwdGlvbjwvU291cmNlPjxDb250ZW50PiZsdDtwJmd0OyZsdDtzdHJvbmcm
-        Z3Q7VGhlIHRleHQgb2YgdGhpcyBOb3J0b24gQ3JpdGljYWwgRWRpdGlvbiBp
-        cyB0aGF0IG9mIHRoZSAxODE4IGZpcnN0IGVkaXRpb24sIHB1Ymxpc2hlZCBp
-        biB0aHJlZSB2b2x1bWVzIGJ5IExhY2tpbmd0b24sIEh1Z2hlcywgSGFyZGlu
-        ZywgTWF2b3IsIGFuZCBKb25lcywgaW4gd2hpY2ggb25seSBvYnZpb3VzIHR5
-        cG9ncmFwaGljYWwgZXJyb3JzIGhhdmUgYmVlbiBjb3JyZWN0ZWQuIFRoaXMg
-        dGV4dCByZXByZXNlbnRzIHdoYXQgJmx0O2VtJmd0O0ZyYW5rZW5zdGVpbiZs
-        dDsvZW0mZ3Q7J3MgZmlyc3QgcmVhZGVycyBlbmNvdW50ZXJlZCBhbmQgaXMg
-        dGhlIHRleHQgZmF2b3JlZCBieSBzY2hvbGFycy4gQSBzcGVjaWFsIGNyaXRp
-        Y2FsIHNlY3Rpb24sIENvbXBvc2l0aW9uIGFuZCBSZXZpc2lvbiwgaW5jbHVk
-        ZXMgZXNzYXlzIGJ5IE0uIEsuIEpvc2VwaCBhbmQgQW5uZSBNZWxsb3IgdGhh
-        dCBhZGRyZXNzIHRoZSBpc3N1ZXMgc3Vycm91bmRpbmcgdGVhY2hlcnMnIGNo
-        b2ljZSBvZiB0ZXh0LiZsdDsvc3Ryb25nJmd0OyZsdDsvcCZndDtDb250ZW1w
-        b3JhcnkgcGVyc3BlY3RpdmVzIG9mIHRoZSB0ZXh0IGFyZSBwcm92aWRlZCBp
-        biB0d28gc2VjdGlvbnM6IENvbnRleHRzIGhlbHBzIHBsYWNlIHRoZSBub3Zl
-        bCBpbiByZWxhdGlvbiB0byB0aGUgbWluZCBvZiBpdHMgY3JlYXRvciB0aHJv
-        dWdoIHdyaXRpbmdzIGJ5IE1hcnkgU2hlbGxleSwgUGVyY3kgQnlzc2hlIFNo
-        ZWxsZXksIExvcmQgQnlyb24sIGFuZCBKb2huIFdpbGxpYW0gUG9saWRvcmk7
-        IE5pbmV0ZWVudGgtQ2VudHVyeSBSZXNwb25zZXMgY29sbGVjdHMgc2l4IHJl
-        YWN0aW9ucyB0byB0aGUgYm9vayBmcm9tIHRoZSB5ZWFycyAxODE4IHRvIDE4
-        ODYuJmx0O2JyIC8mZ3Q7ICZsdDticiAvJmd0OyBDcml0aWNpc20gYnJpbmdz
-        IHRvZ2V0aGVyIHR3ZWx2ZSBzZW1pbmFsIGVzc2F5cy4gVGhlIGVtcGhhc2lz
-        IGlzIG9uIHJhbmdl4oCUYm90aCBjcml0aWNhbCAocHN5Y2hvYW5hbHl0aWMs
-        IG15dGhpYywgbmV3IGhpc3RvcmljaXN0LCBhbmQgZmVtaW5pc3QgZXNzYXlz
-        IGFyZSBpbmNsdWRlZCkgYW5kIGNocm9ub2xvZ2ljYWwgKGVzc2F5cyBzcGFu
-        IHRoZSBsYXN0IHRoaXJ0eSB5ZWFycykuIENocmlzdG9waGVyIFNtYWxsLCBH
-        ZW9yZ2UgTGViaW5lLCBFbGxlbiBNb2VycywgU2FuZHJhIE0uIEdpbGJlcnQg
-        YW5kIFN1c2FuIEd1YmFyLCBCYXJiYXJhIEpvaG5zb24sIE1hcnkgUG9vdmV5
-        LCBHYXlhdHJpIENoYWtyYXZvcnR5IFNwaXZhaywgV2lsbGlhbSBWZWVkZXIs
-        IEFubmUgSy4gTWVsbG9yLCBTdXNhbiBXaW5uZXR0LCBNYXJpbHluIEJ1dGxl
-        ciwgYW5kIExhd3JlbmNlIExpcGtpbmcgcHJvdmlkZSBkaXZlcnNlIHBlcnNw
-        ZWN0aXZlcy4mbHQ7YnIgLyZndDsgJmx0O2JyIC8mZ3Q7IEEgQ2hyb25vbG9n
-        eSBhbmQgU2VsZWN0ZWQgQmlibGlvZ3JhcGh5IGFyZSBhbHNvIGluY2x1ZGVk
-        LjwvQ29udGVudD48SXNMaW5rU3VwcHJlc3NlZD4wPC9Jc0xpbmtTdXBwcmVz
-        c2VkPjwvRWRpdG9yaWFsUmV2aWV3PjwvRWRpdG9yaWFsUmV2aWV3cz48U2lt
-        aWxhclByb2R1Y3RzPjxTaW1pbGFyUHJvZHVjdD48QVNJTj4wMzkzOTcwMTI0
-        PC9BU0lOPjxUaXRsZT5EcmFjdWxhIChOb3J0b24gQ3JpdGljYWwgRWRpdGlv
-        bnMpPC9UaXRsZT48L1NpbWlsYXJQcm9kdWN0PjxTaW1pbGFyUHJvZHVjdD48
-        QVNJTj4wNjcxMDA0NjQ2PC9BU0lOPjxUaXRsZT5PdXIgQW1lcmljYTogTGlm
-        ZSBhbmQgRGVhdGggb24gdGhlIFNvdXRoIFNpZGUgb2YgQ2hpY2FnbzwvVGl0
-        bGU+PC9TaW1pbGFyUHJvZHVjdD48U2ltaWxhclByb2R1Y3Q+PEFTSU4+MDM5
-        Mzk1NjUxMjwvQVNJTj48VGl0bGU+Um91c3NlYXUncyBQb2xpdGljYWwgV3Jp
-        dGluZ3M6IERpc2NvdXJzZSBvbiBJbmVxdWFsaXR5LCBEaXNjb3Vyc2Ugb24g
-        UG9saXRpY2FsIEVjb25vbXksICBPbiBTb2NpYWwgQ29udHJhY3QgKE5vcnRv
-        biBDcml0aWNhbCBFZGl0aW9ucyk8L1RpdGxlPjwvU2ltaWxhclByb2R1Y3Q+
-        PFNpbWlsYXJQcm9kdWN0PjxBU0lOPjAzOTM5MjgzMjI8L0FTSU4+PFRpdGxl
-        PlRoZSBOb3J0b24gQW50aG9sb2d5IG9mIEVuZ2xpc2ggTGl0ZXJhdHVyZSwg
-        Vm9sdW1lIEEgYW5kIEI6IFRoZSBNaWRkbGUgQWdlcyB0aHJvdWdoIHRoZSBU
-        d2VudGlldGggQ2VudHVyeSBhbmQgQWZ0ZXI8L1RpdGxlPjwvU2ltaWxhclBy
-        b2R1Y3Q+PFNpbWlsYXJQcm9kdWN0PjxBU0lOPjAzOTM5NTYxNjQ8L0FTSU4+
-        PFRpdGxlPlRoZSBDb21tdW5pc3QgTWFuaWZlc3RvIChOb3J0b24gQ3JpdGlj
-        YWwgRWRpdGlvbnMpPC9UaXRsZT48L1NpbWlsYXJQcm9kdWN0PjwvU2ltaWxh
-        clByb2R1Y3RzPjxCcm93c2VOb2Rlcz48QnJvd3NlTm9kZT48QnJvd3NlTm9k
-        ZUlkPjQ5ODI8L0Jyb3dzZU5vZGVJZD48TmFtZT5XYWxlczwvTmFtZT48QW5j
-        ZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+NDkzNTwvQnJvd3Nl
-        Tm9kZUlkPjxOYW1lPkV1cm9wZTwvTmFtZT48QW5jZXN0b3JzPjxCcm93c2VO
-        b2RlPjxCcm93c2VOb2RlSWQ+OTwvQnJvd3NlTm9kZUlkPjxOYW1lPkhpc3Rv
-        cnk8L05hbWU+PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlk
-        PjEwMDA8L0Jyb3dzZU5vZGVJZD48TmFtZT5TdWJqZWN0czwvTmFtZT48SXND
-        YXRlZ29yeVJvb3Q+MTwvSXNDYXRlZ29yeVJvb3Q+PEFuY2VzdG9ycz48QnJv
-        d3NlTm9kZT48QnJvd3NlTm9kZUlkPjI4MzE1NTwvQnJvd3NlTm9kZUlkPjxO
-        YW1lPkJvb2tzPC9OYW1lPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jy
-        b3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3Jz
-        PjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PEJyb3dz
-        ZU5vZGU+PEJyb3dzZU5vZGVJZD4xMDAxNjwvQnJvd3NlTm9kZUlkPjxOYW1l
-        PkJyaXRpc2g8L05hbWU+PENoaWxkcmVuPjxCcm93c2VOb2RlPjxCcm93c2VO
-        b2RlSWQ+MTAwODg8L0Jyb3dzZU5vZGVJZD48TmFtZT5Db250ZW1wb3Jhcnk8
-        L05hbWU+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+
-        MTAwOTA8L0Jyb3dzZU5vZGVJZD48TmFtZT5IaXN0b3JpY2FsPC9OYW1lPjwv
-        QnJvd3NlTm9kZT48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjE2MDA0NjYx
-        PC9Ccm93c2VOb2RlSWQ+PE5hbWU+SHVtb3IgJmFtcDsgU2F0aXJlPC9OYW1l
-        PjwvQnJvd3NlTm9kZT48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjEwMDk2
-        PC9Ccm93c2VOb2RlSWQ+PE5hbWU+UG9ldHJ5PC9OYW1lPjwvQnJvd3NlTm9k
-        ZT48L0NoaWxkcmVuPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5v
-        ZGVJZD4xNzwvQnJvd3NlTm9kZUlkPjxOYW1lPkxpdGVyYXR1cmUgJmFtcDsg
-        RmljdGlvbjwvTmFtZT48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VO
-        b2RlSWQ+MTAwMDwvQnJvd3NlTm9kZUlkPjxOYW1lPlN1YmplY3RzPC9OYW1l
-        PjxJc0NhdGVnb3J5Um9vdD4xPC9Jc0NhdGVnb3J5Um9vdD48QW5jZXN0b3Jz
-        PjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MjgzMTU1PC9Ccm93c2VOb2Rl
-        SWQ+PE5hbWU+Qm9va3M8L05hbWU+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3Jz
-        PjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PC9BbmNl
-        c3RvcnM+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+
-        MTAxMjk8L0Jyb3dzZU5vZGVJZD48TmFtZT5Db250ZW1wb3Jhcnk8L05hbWU+
-        PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjE3PC9Ccm93
-        c2VOb2RlSWQ+PE5hbWU+TGl0ZXJhdHVyZSAmYW1wOyBGaWN0aW9uPC9OYW1l
-        PjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD4xMDAwPC9C
-        cm93c2VOb2RlSWQ+PE5hbWU+U3ViamVjdHM8L05hbWU+PElzQ2F0ZWdvcnlS
-        b290PjE8L0lzQ2F0ZWdvcnlSb290PjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+
-        PEJyb3dzZU5vZGVJZD4yODMxNTU8L0Jyb3dzZU5vZGVJZD48TmFtZT5Cb29r
-        czwvTmFtZT48L0Jyb3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2Rl
-        PjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dz
-        ZU5vZGU+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD4xMDEzMjwvQnJvd3Nl
-        Tm9kZUlkPjxOYW1lPkxpdGVyYXJ5PC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dz
-        ZU5vZGU+PEJyb3dzZU5vZGVJZD4xNzwvQnJvd3NlTm9kZUlkPjxOYW1lPkxp
-        dGVyYXR1cmUgJmFtcDsgRmljdGlvbjwvTmFtZT48QW5jZXN0b3JzPjxCcm93
-        c2VOb2RlPjxCcm93c2VOb2RlSWQ+MTAwMDwvQnJvd3NlTm9kZUlkPjxOYW1l
-        PlN1YmplY3RzPC9OYW1lPjxJc0NhdGVnb3J5Um9vdD4xPC9Jc0NhdGVnb3J5
-        Um9vdD48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+Mjgz
-        MTU1PC9Ccm93c2VOb2RlSWQ+PE5hbWU+Qm9va3M8L05hbWU+PC9Ccm93c2VO
-        b2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jy
-        b3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2Rl
-        PjxCcm93c2VOb2RlSWQ+NDkxNDA4PC9Ccm93c2VOb2RlSWQ+PE5hbWU+RW5n
-        bGlzaCBMaXRlcmF0dXJlPC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+
-        PEJyb3dzZU5vZGVJZD40NjgyMzY8L0Jyb3dzZU5vZGVJZD48TmFtZT5MaXRl
-        cmF0dXJlPC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5v
-        ZGVJZD40NjgyMDY8L0Jyb3dzZU5vZGVJZD48TmFtZT5IdW1hbml0aWVzPC9O
-        YW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD40NjU2
-        MDA8L0Jyb3dzZU5vZGVJZD48TmFtZT5OZXcsIFVzZWQgJmFtcDsgUmVudGFs
-        IFRleHRib29rczwvTmFtZT48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93
-        c2VOb2RlSWQ+MjM0OTAzMDAxMTwvQnJvd3NlTm9kZUlkPjxOYW1lPlNwZWNp
-        YWx0eSBCb3V0aXF1ZTwvTmFtZT48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxC
-        cm93c2VOb2RlSWQ+MjgzMTU1PC9Ccm93c2VOb2RlSWQ+PE5hbWU+Qm9va3M8
-        L05hbWU+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48
-        L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VO
-        b2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jy
-        b3dzZU5vZGU+PC9Ccm93c2VOb2Rlcz48L0l0ZW0+PC9JdGVtcz48L0l0ZW1M
-        b29rdXBSZXNwb25zZT4=
+      encoding: US-ASCII
+      string: ! '{"lccn:2003004571":{"records":[],"items":[]}}'
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
+  recorded_at: Sun, 27 Jan 2013 17:52:25 GMT
 - request:
     method: get
     uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
@@ -344,280 +148,12 @@ http_interactions:
       Content-Length:
       - '27'
       Date:
-      - Fri, 25 Jan 2013 20:23:10 GMT
+      - Sun, 27 Jan 2013 17:52:27 GMT
     body:
       encoding: US-ASCII
       string: ! 'string=iPlanetDirectoryPro
 
 '
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
-- request:
-    method: get
-    uri: http://isbndb.com/api/books.xml?access_key=9FAOAU2Z&index1=isbn&results=details,prices&value1=9780393964585
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Server:
-      - Apache/2.2.3 (CentOS)
-      P3p:
-      - policyref="/w3c/p3p.xml", CP="CAO DSP COR CURa ADMa DEVa OUR IND PHY ONL UNI
-        COM NAV INT DEM PRE"
-      Expires:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Cache-Control:
-      - no-cache
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=utf-8
-    body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0" encoding="UTF-8"?>
-
-
-        <ISBNdb server_time="2013-01-25T20:23:11Z">
-
-        <ErrorMessage>Access key error</ErrorMessage>
-
-        </ISBNdb>
-
-'
-    http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/books/v1/volumes?key=AIzaSyADjP7PRPsGaPYJB9tvfm8ZSpdmhUsCR1w&printType=books&q=isbn:9780393964585
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Expires:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Date:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Cache-Control:
-      - private, max-age=0, must-revalidate, no-transform
-      Etag:
-      - ! '"oJJnsPwmwzPHUK-6EQKPiLmyEMg/5S_PjC6yYuBOtQ-AxM3z6Dr1E6c"'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Server:
-      - GSE
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: US-ASCII
-      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1,\n \"items\":
-        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"3hmSQwAACAAJ\",\n   \"etag\":
-        \"mf7yLH2ETNY\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/3hmSQwAACAAJ\",\n
-        \  \"volumeInfo\": {\n    \"title\": \"Frankenstein\",\n    \"subtitle\":
-        \"The 1818 Text Contexts, Nineteenth-Century Responses, Modern Criticism\",\n
-        \   \"authors\": [\n     \"Mary Wollstonecraft Shelley\",\n     \"James Paul
-        Hunter\"\n    ],\n    \"publisher\": \"W W Norton & Company Incorporated\",\n
-        \   \"publishedDate\": \"1996\",\n    \"description\": \"Presents the novel
-        with annotations, related writings, and nineteenth- and twentieth-century
-        criticism\",\n    \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n
-        \     \"identifier\": \"0393964582\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n
-        \     \"identifier\": \"9780393964585\"\n     }\n    ],\n    \"pageCount\":
-        339,\n    \"printType\": \"BOOK\",\n    \"contentVersion\": \"preview-1.0.0\",\n
-        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=3hmSQwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n
-        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=3hmSQwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n
-        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=3hmSQwAACAAJ&dq=isbn:9780393964585&as_pt=BOOKS&hl=&cd=1&source=gbs_api\",\n
-        \   \"infoLink\": \"http://books.google.com/books?id=3hmSQwAACAAJ&dq=isbn:9780393964585&as_pt=BOOKS&hl=&source=gbs_api\",\n
-        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Frankenstein.html?hl=&id=3hmSQwAACAAJ\"\n
-        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
-        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
-        \"US\",\n    \"viewability\": \"NO_PAGES\",\n    \"embeddable\": false,\n
-        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED\",\n
-        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
-        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=3hmSQwAACAAJ&as_pt=BOOKS&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
-        \   \"accessViewStatus\": \"NONE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
-        \"Presents the novel with annotations, related writings, and nineteenth- and
-        twentieth-century criticism\"\n   }\n  }\n ]\n}\n"
-    http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
-- request:
-    method: get
-    uri: http://www.scopus.com/scsearchapi/search.url?callback=findit_callback&devId=yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ&fields=title,doctype,citedbycount,inwardurl,sourcetitle,issn,vol,issue,page,pubdate,eid,scp,doi,firstAuth,authlist,affiliations,abstract&search=ISBN(%229780393964585%22)
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 301
-      message: Moved Permanently
-    headers:
-      Date:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Server:
-      - www.scopus.com  9999
-      Location:
-      - http://searchapi.scopus.com/search.url?devId=yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ&search=ISBN%28%229780393964585%22%29&callback=findit_callback&fields=title,doctype,citedbycount,inwardurl,sourcetitle,issn,vol,issue,page,pubdate,eid,scp,doi,firstAuth,authlist,affiliations,abstract
-      Cache-Control:
-      - max-age=1
-      Expires:
-      - Fri, 25 Jan 2013 20:23:12 GMT
-      Vary:
-      - Accept-Encoding, User-Agent
-      Content-Length:
-      - '494'
-      Content-Type:
-      - text/html; charset=iso-8859-1
-      X-Re-Ref:
-      - 1 -1304495894
-      P3p:
-      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
-        OTC"
-    body:
-      encoding: US-ASCII
-      string: ! '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-
-        <html><head>
-
-        <title>301 Moved Permanently</title>
-
-        </head><body>
-
-        <h1>Moved Permanently</h1>
-
-        <p>The document has moved <a href="http://searchapi.scopus.com/search.url?devId=yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ&amp;search=ISBN%28%229780393964585%22%29&amp;callback=findit_callback&amp;fields=title,doctype,citedbycount,inwardurl,sourcetitle,issn,vol,issue,page,pubdate,eid,scp,doi,firstAuth,authlist,affiliations,abstract">here</a>.</p>
-
-        </body></html>
-
-'
-    http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
-- request:
-    method: get
-    uri: http://www.amazon.com/gp/reader/0393964582
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 301
-      message: MovedPermanently
-    headers:
-      Date:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Server:
-      - Server
-      Pragma:
-      - no-cache
-      X-Amz-Id-1:
-      - 1N16JQGJHN5BD08RNPC1
-      P3p:
-      - policyref="http://www.amazon.com/w3c/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
-        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
-        CNT STA HEA PRE LOC GOV OTC "
-      X-Sap-Pg:
-      - book_display_on_website
-      Cache-Control:
-      - no-cache
-      X-Frame-Options:
-      - SAMEORIGIN
-      Expires:
-      - '-1'
-      X-Amz-Id-2:
-      - ScmQVlI+T5puKChlrJfUFpmzvc/KG5lwhKHfBlVV3QH3QLtpm8ynrlEoc4sGVInf
-      Location:
-      - http://www.amazon.com/Frankenstein-Critical-Editions-Wollstonecraft-Shelley/dp/0393964582
-      Vary:
-      - Accept-Encoding,User-Agent
-      Content-Type:
-      - text/html; charset=ISO-8859-1
-      Set-Cookie:
-      - session-id-time=2082787201l; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036
-        08:00:01 GMT
-      - session-id=000-0000000-0000000; path=/; domain=.amazon.com; expires=Tue, 01-Jan-2036
-        08:00:01 GMT
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: US-ASCII
-      string: ! '
-
-'
-    http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22virtual%20inequality%22%20AND%20creator:(mossberger)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/0.8.54
-      Date:
-      - Fri, 25 Jan 2013 20:23:11 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '161'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22virtual+inequality%22+AND+creator:%28mossberger%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Sat, 26 Jan 2013 02:23:11 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: US-ASCII
-      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/0.8.54</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:23:11 GMT
+  recorded_at: Sun, 27 Jan 2013 17:52:27 GMT
 recorded_with: VCR 2.4.0

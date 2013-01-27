@@ -150,18 +150,6 @@ module RequestsHelper
   end
   private :aleph_helper
 
-  def permission_error
-    "You do not have permission to perform this request.".html_safe +
-      "Please contact <a href=\"mailto:access.services@nyu.edu\">access.services@nyu.edu</a> for further information.".html_safe
-  end
-  protected :permission_error
-
-  def unexpected_error
-    "An unexpected error has occurred.".html_safe +
-      "Please contact <a href=\"mailto:web.services@nyu.edu\">web.services@nyu.edu</a> to address this issue.".html_safe
-  end
-  protected :unexpected_error
-
   # Display header for the given title
   def display_header(title)
     return title + " is requested." if @status.match(/Requested/)

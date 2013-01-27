@@ -51,6 +51,3 @@ VCR.configure do |c|
   c.filter_sensitive_data("primo.library.edu") { @@primo_url }
   c.filter_sensitive_data("solr.library.edu") { @@solr_url }
 end
-
-VCR.configure do |c|
-end

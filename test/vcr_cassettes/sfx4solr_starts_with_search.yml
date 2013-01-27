@@ -21,7 +21,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 25 Jan 2013 20:44:42 GMT
+      - Sun, 27 Jan 2013 17:50:50 GMT
       Connection:
       - close
     body:
@@ -89,5 +89,5 @@ http_interactions:
         687'',''object_id_ss''=>''110978984349935'',''title_display_ss''=>''Journal
         of transnational law & policy'',''issn_ss''=>''1067-8182'',''isbn_ss''=>'''',''lccn_ss''=>''93641906''}]}}'
     http_version: 
-  recorded_at: Fri, 25 Jan 2013 20:44:42 GMT
+  recorded_at: Sun, 27 Jan 2013 17:50:51 GMT
 recorded_with: VCR 2.4.0
