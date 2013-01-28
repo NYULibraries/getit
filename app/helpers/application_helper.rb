@@ -17,7 +17,8 @@ module ApplicationHelper
   end
 
   def permalink_nav
-    content_tag(:div, :id => "permalink") {content_tag(:span, "URL: ")+ link_to(current_permalink_url, current_permalink_url)}if permalink = current_permalink_url()
+    content_tag(:div, :id => "permalink") { content_tag(:span, "URL: ") + 
+      link_to(current_permalink_url, current_permalink_url) } if current_permalink_url()
   end
 
   def link_to_remote_popover(*args)

@@ -132,8 +132,15 @@ module RequestsHelper
 
   # Get the user's permissions
   def user_permissions
+    # Return empty hash if we don't have a current user
     return {} unless current_user
+    # Set aleph permission attribute if it wasn't set previously.
+    # This is probably an invalid state, but worth ensuring so we
+    # don't unexpectedly fail.
+    current_user.user_attributes[:aleph_permissions] = {} if current_user.user_attributes[:aleph_permissions].nil?
+    # Get the user permissions for the current sub library
     @user_permissions = current_user.user_attributes[:aleph_permissions][@sub_library_code]
+    # If we didn't get the permissions previously, go get them now.
     unless @user_permissions
       current_user.user_attributes[:aleph_permissions][@sub_library_code] = 
         current_user_session.aleph_bor_auth_permissions(current_user.user_attributes[:nyuidn],

@@ -1,7 +1,7 @@
 std5:
   username: <%= username = "std5" %>
   email: scot.dalton@nyu.edu
-  firstname: Scot
+  firstname: Scot Thomas
   lastname: Dalton
   password_salt: <%= salt = Authlogic::Random.hex_token %>
   crypted_password: <%= Authlogic::CryptoProviders::Sha512.encrypt(username + salt) %>
@@ -11,5 +11,4 @@ std5:
     :verification => "d4465aacaa645f2164908cd4184c09f0",
     :primary_institution => "NYU",
     :institutions => ["NYU"],
-    :bor_status => "51",
-    :aleph_permissions => {} }.to_yaml.inspect  %>
+    :bor_status => "51" }.to_yaml.inspect  %>

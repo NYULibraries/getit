@@ -15,10 +15,10 @@
         <div><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
         <h1><%= umlaut_config.app_name %></h1>
       </header>
-      <% if permalink = current_permalink_url() %>
+      <% if current_permalink_url %>
         <nav class="umlaut-resolve-nav">
           <%= permalink_nav %>
-          <%= login %>
+          <%= login(:return_url => current_permalink_url, "umlaut.institution" => institution.code ) %>
         </nav>
       <% end %>
       <div class="container-fluid <%= "umlaut-#{params[:controller]}-container" %>">
