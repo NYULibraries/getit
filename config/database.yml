@@ -63,8 +63,8 @@ production:
   reconnect: false
   database: getit
   pool: 30
-  username: umlaut3
-  password: 0m!l40tP
+  username: getit
+  password: sViBjJ0XSQVj1Rmf
   host: mysql.library.nyu.edu
 
 #
