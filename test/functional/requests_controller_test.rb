@@ -236,6 +236,9 @@ class RequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/requests/1?pickup_location=BOBST&scan=false"
     end
+    get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => false})
+    assert_select("div.text-success", {:count => 1, 
+      :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
   
   test "requests create offsite" do
@@ -245,6 +248,9 @@ class RequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/requests/3?pickup_location=TNSFO&scan=false"
     end
+    get(:show, {:service_response_id => 3, :pickup_location => "TNSFO", :scan => false})
+    assert_select("div.text-success", {:count => 1, 
+      :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
   
   test "requests create recall" do
@@ -254,6 +260,9 @@ class RequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/requests/4?pickup_location=NCOUR&scan=false"
     end
+    get(:show, {:service_response_id => 4, :pickup_location => "NCOUR", :scan => false})
+    assert_select("div.text-success", {:count => 1, 
+      :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
   
   test "requests create in processing" do
@@ -263,6 +272,9 @@ class RequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/requests/5?pickup_location=NABUD&scan=false"
     end
+    get(:show, {:service_response_id => 5, :pickup_location => "NABUD", :scan => false})
+    assert_select("div.text-success", {:count => 1, 
+      :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
 
   test "requests create ill" do
