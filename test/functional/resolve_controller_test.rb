@@ -40,4 +40,26 @@ class ResolveControllerTest < ActionController::TestCase
       end
     end
   end
+
+  # test "expire old holdings" do
+  #   umlaut_request = requests(:primo_book_virtual_inequality)
+  #   VCR.use_cassette('expire old holdings') do
+  #     get(:index, {'umlaut.request_id' => umlaut_request.id})
+  #     service_id = "NYU_Primo_Source"
+  #     while umlaut_request.service_type_in_progress?("holding") do
+  #       p umlaut_request.dispatched_services.find(:first, :conditions=>{:service_id => service_id}).status
+  #       # Wait for services to finish
+  #       # so sleep a second and check again
+  #       sleep 1
+  #     end
+  #     assert((not umlaut_request.service_type_in_progress?("holding")), "Holding services are in progress")
+  #     assert((not umlaut_request.dispatched_services.find(:all, :conditions => {:service_id => service_id}).empty?),
+  #       "Dispatched NYU_Primo_Sources are empty")
+  #     holdings = get_service_type('holding')
+  #     assert((not holdings.empty?), "Holdings are empty.")
+  #     @controller.expire_old_holdings(umlaut_request, holdings)
+  #     assert(umlaut_request.dispatched_services.find(:all, :conditions => {:service_id => service_id}).empty?,
+  #       "Dispatched NYU_Primo_Sources are not empty after expire_old_holdings")
+  #   end
+  # end
 end

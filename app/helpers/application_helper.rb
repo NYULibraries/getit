@@ -32,15 +32,17 @@ module ApplicationHelper
   def expire_old_holdings(request, holdings)
     # Delete NYU_Primo_Source responses in order to force a refresh
     # Only do this after all services have finished.
-    if request.services_in_progress.empty?
-      dispatched_services = request.dispatched_services.find(:all, :conditions => ['service_id = "NYU_Primo_Source"'])
-        dispatched_services.each do |dispatched_service|
+    service_id = "NYU_Primo_Source"
+    unless service_type_in_progress?("holding")
+      dispatched_services = 
+        request.dispatched_services.find(:all, :conditions => {:service_id => service_id})
+      dispatched_services.each do |dispatched_service|
         # Destroy dispatched service 
         # to force the service to run again.
         dispatched_service.destroy unless dispatched_service.status != DispatchedService::Successful
       end # destroy dispatched services block
       holdings.each do |holding|
-        next unless (holding.service_id == "NYU_Primo_Source")
+        next unless (holding.service_id == service_id)
         expired = holding.view_data[:expired]
         latest = holding.view_data[:latest]
         next unless not expired or latest

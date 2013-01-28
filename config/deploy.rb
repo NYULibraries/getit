@@ -26,7 +26,7 @@ set(:branch, 'development') unless exists?(:branch)
 set :git_enable_submodules, 1
 
 # Environments
-set :stages, ["staging", "production"]
+set :stages, ["staging", "qa", "production"]
 set :default_stage, "staging"
 set :keep_releases, 5
 set :use_sudo, false

@@ -21,6 +21,26 @@ class SearchControllerTest < ActionController::TestCase
     end
   end
 
+  test "index not logged in NS" do
+    # Need to wrap since there is a check for the OpenSSO cookie name.
+    VCR.use_cassette('search index logged in NS') do
+      get :index, "umlaut.institution" => "NS"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 3
+    end
+  end
+
+  test "index not logged in CU" do
+    # Need to wrap since there is a check for the OpenSSO cookie name.
+    VCR.use_cassette('search index logged in CU') do
+      get :index, "umlaut.institution" => "CU"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 3
+    end
+  end
+
   test "journal search logged in" do
     UserSession.create(users(:std5))
     VCR.use_cassette('search journal search logged in') do
@@ -44,6 +64,28 @@ class SearchControllerTest < ActionController::TestCase
     end
   end
 
+  test "journal search not logged in NS" do
+    VCR.use_cassette('search journal search not logged in NS') do
+      get :journal_search, "rft.jtitle"=>"New York", "umlaut.title_search_type"=>"contains", "umlaut.institution" => "NS"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 2
+      assert_select 'div.nyu-pagination', 2
+      assert_select 'div.results div.result', 20
+    end
+  end
+
+  test "journal search not logged in CU" do
+    VCR.use_cassette('search journal search not logged in CU') do
+      get :journal_search, "rft.jtitle"=>"New York", "umlaut.title_search_type"=>"contains", "umlaut.institution" => "CU"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 2
+      assert_select 'div.nyu-pagination', 2
+      assert_select 'div.results div.result', 20
+    end
+  end
+
   test "journal list logged in" do
     UserSession.create(users(:std5))
     VCR.use_cassette('search journal list logged in') do
@@ -59,6 +101,28 @@ class SearchControllerTest < ActionController::TestCase
   test "journal list not logged in" do
     VCR.use_cassette('search journal list not logged in') do
       get :journal_list, :id => "A"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 2
+      assert_select 'div.nyu-pagination', 2
+      assert_select 'div.results div.result', 20
+    end
+  end
+
+  test "journal list not logged in NS" do
+    VCR.use_cassette('search journal list not logged in NS') do
+      get :journal_list, :id => "A", "umlaut.institution" => "NS"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select 'div.search div.search-section', 2
+      assert_select 'div.nyu-pagination', 2
+      assert_select 'div.results div.result', 20
+    end
+  end
+
+  test "journal list not logged in CU" do
+    VCR.use_cassette('search journal list not logged in CU') do
+      get :journal_list, :id => "A", "umlaut.institution" => "CU"
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'div.search div.search-section', 2
