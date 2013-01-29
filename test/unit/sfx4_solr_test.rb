@@ -28,29 +28,35 @@ class Sfx4NyuTest < ActiveSupport::TestCase
   end
 
   test "sfx4solr fulltext search NS" do
-    VCR.use_cassette('sfx4solr fulltext search NS') do
-      query = "New York"
-      results = Sfx4::Ns::AzTitle.search {fulltext query}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    if Sfx4::Ns::AzTitle.connection_configured?
+      VCR.use_cassette('sfx4solr fulltext search NS') do
+        query = "New York"
+        results = Sfx4::Ns::AzTitle.search {fulltext query}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
   end
   
   test "sfx4solr starts with search NS" do
-    VCR.use_cassette('sfx4solr starts with search NS') do
-      query = "Journal of"
-      results = Sfx4::Ns::AzTitle.search {with(:title_exact).starting_with(query)}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    if Sfx4::Ns::AzTitle.connection_configured?
+      VCR.use_cassette('sfx4solr starts with search NS') do
+        query = "Journal of"
+        results = Sfx4::Ns::AzTitle.search {with(:title_exact).starting_with(query)}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
   end
   
   test "sfx4solr exact search NS" do
-    VCR.use_cassette('sfx4solr exact search NS') do
-      query = "The New Yorker"
-      results = Sfx4::Ns::AzTitle.search {with(:title_exact, query)}.results
-      assert_instance_of Array, results
-      assert(results.size > 0)
+    if Sfx4::Ns::AzTitle.connection_configured?
+      VCR.use_cassette('sfx4solr exact search NS') do
+        query = "The New Yorker"
+        results = Sfx4::Ns::AzTitle.search {with(:title_exact, query)}.results
+        assert_instance_of Array, results
+        assert(results.size > 0)
+      end
     end
   end
   

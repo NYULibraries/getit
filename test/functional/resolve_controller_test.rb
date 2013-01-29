@@ -29,7 +29,8 @@ class ResolveControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
       assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1, 
-        :text => "http://test.host/go/#{umlaut_request.id}", :href => "http://test.host/go/#{umlaut_request.referent.id}"}
+        :text => "http://test.host/go/#{umlaut_request.id}", 
+          :href => "http://test.host/go/#{umlaut_request.referent.id}"}
       assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
       assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login", 
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=NYU"}
@@ -48,7 +49,8 @@ class ResolveControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
       assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1, 
-        :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=NS", :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=NS"}
+        :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=NS", 
+          :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=NS"}
       assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
       assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login", 
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=NS"}
@@ -67,7 +69,8 @@ class ResolveControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
       assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1, 
-        :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=CU", :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=CU"}
+        :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=CU", 
+          :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=CU"}
       assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
       assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login", 
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=CU"}
