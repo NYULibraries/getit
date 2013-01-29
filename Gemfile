@@ -69,3 +69,6 @@ gem "authpds-nyu", "~> 0.2.5"
 
 # Dalli for caching with memcached
 gem "dalli", "~> 2.6.0"
+
+# New Relic performance monitoring
+gem "newrelic_rpm", "~> 3.5.5"
