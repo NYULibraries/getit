@@ -490,3 +490,13 @@ HSL:
     resolve_css: resolve_hsl
   ip_addresses:
     - 128.122.0.1
+  services:
+    HSL_SFX:
+      name: Get It @ NYU Health Sciences Libraries
+      display_name: Get It @ NYU Health Sciences Libraries
+      type: Sfx
+      base_url: http://sfx.med.nyu.edu/sfxlcl3
+      priority: 1
+      click_passthrough: true
+      sfx_requests_expire_crontab: '00 00 * * 00' 
+      sfx_timeout: 9
