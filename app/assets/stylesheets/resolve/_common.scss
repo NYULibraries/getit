@@ -15,3 +15,8 @@
 .wayfinder {
   @extend .help;
 }
+
+.request_options.form input[name='entire'] {
+  float: left;
+  margin-right: .5em;
+}
