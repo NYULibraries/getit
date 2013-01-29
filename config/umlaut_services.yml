@@ -390,7 +390,8 @@ CU:
         umlaut: 
           url_suffix: "/cu"
   controllers:
-    searcher: Sfx4Solr::Cu
+    # searcher: Sfx4Solr::Cu
+    searcher: Sfx4Cu
   ip_addresses:
     - 199.98.16.0-199.98.31.255 
   services:
@@ -428,7 +429,8 @@ NS:
         umlaut: 
           url_suffix: "/ns"
   controllers:
-    searcher: Sfx4Solr::Ns
+    # searcher: Sfx4Solr::Ns
+    searcher: Sfx4Ns
   ip_addresses:
     - 149.31.0.0-149.31.255.255
     - 69.64.210.46

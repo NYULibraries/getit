@@ -92,7 +92,7 @@ class UmlautController < ApplicationController
       # Is your SFX database connection, defined in database.yml under
       # sfx_db and used for A-Z searches, Sfx3 or Sfx4?  Other SearchMethods
       # in addition to SFX direct db may be provided later.
-      az_search_method  SearchMethods::Sfx4::Local
+      az_search_method  SearchMethods::Sfx4
       # az_search_method  SearchMethods::Sfx4Solr::Local
 
       # When talking directly to the SFX A-Z list database, you may
