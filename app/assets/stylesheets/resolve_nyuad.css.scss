@@ -3,10 +3,16 @@
 @include all-icons-sprites;
 @import "nyulibraries/variables";
 @import "resolve/variables";
+@import "nyulibraries/nyuad/variables";
 @import "nyulibraries/header";
+@import "nyulibraries/nyuad/header";
 @import "nyulibraries/login";
 @import "nyulibraries/mixins";
 @import "nyulibraries/responsive";
 @import "umlaut";
 @import "nyulibraries/misc";
 @import "resolve/common";
+
+header {
+  margin-top: 0 !important;
+}

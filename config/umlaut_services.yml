@@ -10,6 +10,7 @@
 default:
   views:
     css: search
+    resolve_css: resolve
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
     # Priority 2
@@ -257,6 +258,7 @@ NYU:
   active_tab: journals
   views:
     css: search
+    resolve_css: resolve
   ip_addresses:
     - 128.122.0.0-128.122.149.239
     - 172.26.*.*
@@ -337,6 +339,7 @@ NYUAD:
   parent_code: NYU 
   views:
     css: search_nyuad
+    resolve_css: resolve_nyuad
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
     wayfinder_attributes:
       primo:
@@ -377,6 +380,7 @@ CU:
   active_tab: journals
   views:
     css: search_cu
+    resolve_css: resolve_cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
     wayfinder_attributes:
         primo:
@@ -414,6 +418,7 @@ NS:
   active_tab: journals
   views:
     css: search_ns
+    resolve_css: resolve_ns
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
         primo:
@@ -474,6 +479,14 @@ NYSID:
   display_name: New York School of Interior Design Library
   views:
     css: search
+    resolve_css: resolve
   ip_addresses:
     - 128.122.0.1
-  
+
+HSL:
+  active_tab: journals
+  views:
+    css: search_hsl
+    resolve_css: resolve_hsl
+  ip_addresses:
+    - 128.122.0.1

@@ -1,14 +1,14 @@
 module ApplicationHelper
   def resolve_stylesheets
-    resolve_stylesheets = stylesheet_link_tag "resolve"
+    stylesheet_link_tag (current_primary_institution.views["resolve_css"] || "resolve")
   end
 
   def search_javascripts
-    search_javascripts = javascript_include_tag "search"
+    javascript_include_tag "search"
   end
 
   def resolve_javascripts
-    resolve_javascripts = javascript_include_tag "resolve"
+    javascript_include_tag "resolve"
   end
   
   def institutional_partial(partial)
