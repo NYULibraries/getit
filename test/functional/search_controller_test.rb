@@ -109,6 +109,19 @@ class SearchControllerTest < ActionController::TestCase
     end
   end
 
+
+  test "index not logged in HSL" do
+    # Need to wrap since there is a check for the OpenSSO cookie name.
+    VCR.use_cassette('search index logged in HSL') do
+      get :index, "umlaut.institution" => "HSL"
+      assert_response :success
+      assert_select "title", "BobCat"
+      assert_select "head link", {:count => 1, :href => "/assets/search_hsl.css"}
+      assert_select 'div.search div.search-section', 3
+      assert_template :partial => 'hsl/_sidebar', :count => 1
+    end
+  end
+
   test "journal search logged in" do
     UserSession.create(users(:std5))
     VCR.use_cassette('search journal search logged in') do
