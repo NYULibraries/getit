@@ -21,14 +21,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sun, 27 Jan 2013 17:50:50 GMT
+      - Tue, 29 Jan 2013 14:06:48 GMT
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''fl''=>''*
-        score'',''fq''=>''type:Sfx4\\:\\:Local\\:\\:AzTitle'',''qf''=>''title_text'',''wt''=>''ruby'',''defType''=>''dismax'',''rows''=>''30'',''start''=>''0'',''q''=>''New
-        York''}},''response''=>{''numFound''=>458,''start''=>0,''maxScore''=>5.6278496,''docs''=>[{''id''=>''Sfx4::Local::AzTitle
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>287,''params''=>{''qf''=>''title_text'',''wt''=>''ruby'',''defType''=>''dismax'',''rows''=>''30'',''fl''=>''*
+        score'',''start''=>''0'',''q''=>''New York'',''fq''=>''type:Sfx4\\:\\:Local\\:\\:AzTitle''}},''response''=>{''numFound''=>458,''start''=>0,''maxScore''=>5.6278496,''docs''=>[{''id''=>''Sfx4::Local::AzTitle
         121542'',''object_id_ss''=>''110975413975942'',''title_display_ss''=>''New
         York'',''issn_ss''=>''0028-7369'',''isbn_ss''=>'''',''lccn_ss''=>''76012785'',''score''=>5.6278496},{''id''=>''Sfx4::Local::AzTitle
         70540'',''object_id_ss''=>''110978977285242'',''title_display_ss''=>''Western
@@ -90,5 +89,5 @@ http_interactions:
         86632'',''object_id_ss''=>''1000000000292680'',''title_display_ss''=>''New
         York Herald'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>4.5951195}]}}'
     http_version: 
-  recorded_at: Sun, 27 Jan 2013 17:50:50 GMT
+  recorded_at: Tue, 29 Jan 2013 14:06:48 GMT
 recorded_with: VCR 2.4.0

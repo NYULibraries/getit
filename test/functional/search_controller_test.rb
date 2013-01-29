@@ -103,6 +103,7 @@ class SearchControllerTest < ActionController::TestCase
       get :journal_list, :id => "A"
       assert_response :success
       assert_select "title", "BobCat"
+      p response.body
       assert_select 'div.search div.search-section', 2
       assert_select 'div.nyu-pagination', 2
       assert_select 'div.results div.result', 20

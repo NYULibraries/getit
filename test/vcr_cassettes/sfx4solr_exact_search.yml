@@ -21,7 +21,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sun, 27 Jan 2013 17:50:49 GMT
+      - Tue, 29 Jan 2013 14:06:47 GMT
       Connection:
       - close
     body:
@@ -31,5 +31,5 @@ http_interactions:
         39343'',''object_id_ss''=>''110975413975944'',''title_display_ss''=>''The
         New Yorker'',''issn_ss''=>''0028-792X'',''isbn_ss''=>'''',''lccn_ss''=>''2011201780''}]}}'
     http_version: 
-  recorded_at: Sun, 27 Jan 2013 17:50:49 GMT
+  recorded_at: Tue, 29 Jan 2013 14:06:48 GMT
 recorded_with: VCR 2.4.0
