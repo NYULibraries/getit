@@ -170,7 +170,7 @@ class UmlautController < ApplicationController
     institutions += Institutions.defaults
     # Start adding conditional institutions
     if requested_institution
-      requested_institution = Institutions.institutions[requested_institution]
+      requested_institution = Institutions.institutions[requested_institution.to_sym]
       institutions << requested_institution unless requested_institution.nil?
     end
     # Get all institutions based on IP
@@ -178,8 +178,8 @@ class UmlautController < ApplicationController
     # Get all user associated institutions
     institutions += user_institutions
     institutions.uniq!
-    Rails.logger.info("The following insitutions are in play: #{institutions.collect{|i| i.name}.inspect}")
-    return institutions.collect{|i| i.code}
+    Rails.logger.info("The following institutions are in play: #{institutions.collect{|i| i.name}.inspect}")
+    return institutions.collect{|i| i}
   end
   private :institutions
 
@@ -196,7 +196,8 @@ class UmlautController < ApplicationController
     services = {}
     institutions.each do | institution |
       # trim out ones with disabled:true
-      services.merge!(ServiceStore.config["#{institution}"]["services"].reject {|id, hash| hash && hash["disabled"] == true})
+      services.merge!(institution.services.reject {|id, hash| hash && hash["disabled"] == true})
+      # services.merge!(ServiceStore.config["#{institution}"]["services"].reject {|id, hash| hash && hash["disabled"] == true})
     end
     return services
   end
