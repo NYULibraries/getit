@@ -82,6 +82,19 @@ class ResolveControllerTest < ActionController::TestCase
     end
   end
 
+  test "get services" do
+    institutions = [Institutions.institutions[:default], Institutions.institutions[:NYU]]
+    services = @controller.send(:services, institutions)
+    assert(services.has_key? "NYU_Primo")
+    assert(services.has_key? "NYU_SFX")
+    assert((not services.has_key? "NS_SFX"))
+    institutions << Institutions.institutions[:NS]
+    services = @controller.send(:services, institutions)
+    assert(services.has_key? "NYU_Primo")
+    assert(services.has_key? "NYU_SFX")
+    assert(services.has_key? "NS_SFX")
+  end
+
   # test "expire old holdings" do
   #   umlaut_request = requests(:primo_book_virtual_inequality)
   #   VCR.use_cassette('expire old holdings') do
