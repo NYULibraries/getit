@@ -313,7 +313,7 @@ NYU:
     NYU_EASYBIB:
       name: EasyBib
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=pusheasybib&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=easybibpush&
       display_text: Push to EasyBib
       priority: 5
       service_types:
