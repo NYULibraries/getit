@@ -3,7 +3,7 @@
 # filter since we may need params to determine current primary institution.
 # We can't extend at initialization since we don't have the request
 # params at that point.
-class SearchController
+SearchController.class_eval do
   before_filter :extend_with_institutional_search_module
 
   # Override core Umlaut initialize
