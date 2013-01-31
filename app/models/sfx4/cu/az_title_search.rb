@@ -1,8 +1,7 @@
 module Sfx4
   module Cu
-    class AzTitleSearch < ActiveRecord::Base
-      include Sfx4::Local::AzTitleSearch
-      include Sfx4::Cu::Connection
+    class AzTitleSearch < Sfx4::Cu::Base
+      include Sfx4::Abstract::AzTitleSearch
     end
   end
 end

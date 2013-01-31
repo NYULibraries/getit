@@ -1,8 +1,7 @@
 module Sfx4
   module Ns
-    class AzExtraInfo < ActiveRecord::Base
-      # include Sfx4::Local::AzExtraInfo
-      include Sfx4::Ns::Connection
+    class AzExtraInfo < Sfx4::Ns::Base
+      include Sfx4::Abstract::AzExtraInfo
     end
   end
 end

@@ -1,8 +1,7 @@
 module Sfx4
   module Cu
-    class AzLetterGroup < ActiveRecord::Base
-      include Sfx4::Local::AzLetterGroup
-      include Sfx4::Cu::Connection
+    class AzLetterGroup < Sfx4::Cu::Base
+      include Sfx4::Abstract::AzLetterGroup
     end
   end
 end

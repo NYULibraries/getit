@@ -1,4 +1,4 @@
-Umlaut3::Application.configure do
+GetIt::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -31,7 +31,7 @@ Umlaut3::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -46,7 +46,8 @@ Umlaut3::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+  config.assets.precompile += %w( search.js resolve.js search.css search_cu.css search_nyuad.css 
+    search_ns.css search_hsl.css resolve.css resolve_cu.css resolve_nyuad.css resolve_ns.css resolve_hsl.css )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

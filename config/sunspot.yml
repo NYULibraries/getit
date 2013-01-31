@@ -5,14 +5,23 @@ production:
     port: 80
     log_level: WARNING
 
-development:
+staging:
   solr:
-    hostname: localhost
-    port: 8982
-    log_level: INFO
+    hostname: index.websolr.com
+    path: /solr/f0fdfe03534
+    port: 80
+    log_level: WARNING
 
 test:
   solr:
-    hostname: localhost
-    port: 8981
+    hostname: index.websolr.com
+    path: /solr/f0fdfe03534
+    port: 80
+    log_level: WARNING
+
+development:
+  solr:
+    hostname: index.websolr.com
+    path: /solr/f0fdfe03534
+    port: 80
     log_level: WARNING

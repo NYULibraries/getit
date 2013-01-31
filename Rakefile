@@ -3,5 +3,4 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-
-Umlaut3::Application.load_tasks
+GetIt::Application.load_tasks

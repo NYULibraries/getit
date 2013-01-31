@@ -28,10 +28,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3
+  database: getit
   pool: 5
-  username: umlaut3
-  password: 0m!l40t
+  username: getit
+  password: g0G3T1t!
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -41,21 +41,31 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3_test
+  database: getit_test
   pool: 5
-  username: umlaut3
-  password: 0m!l40t
+  username: getit
+  password: M6I0ntSTGKqRW8cD
+  host: mysqldev.library.nyu.edu
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: getit
+  pool: 10
+  username: getit
+  password: M6I0ntSTGKqRW8cD
   host: mysqldev.library.nyu.edu
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: umlaut3
-  pool: 30
-  username: umlaut3
-  password: 0m!l40t
-  host: mysqldev.library.nyu.edu
+  database: getit
+  pool: 10
+  username: getit
+  password: sViBjJ0XSQVj1Rmf
+  host: mysql.library.nyu.edu
 
 #
 # UMLAUT: for the 'search' functions (A-Z title lookup) to work, you need
@@ -64,42 +74,50 @@ production:
 # for this purpose, rather than use one of the full-access existing SFX
 # mysql accounts. 
 #
-sfx_nyu:
+umlaut2_source:
+  adapter: mysql2
+  database: umlaut
+  username: umlaut
+  password: 0m!l40tP
+  encoding: utf8
+  host: mysql.library.nyu.edu
+
+sfx_db:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310
   database: sfxlcl41
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8
 
-sfx_cu:
+sfx4_cu:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310
   database: sfxcooper
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8
 
-sfx_ns:
+sfx4_ns:
   adapter: mysql2
   host: sfx4.library.newschool.edu
   port: 3310
   database: sfxlcl41
   username: umlaut
   password: N0?t&[*$+7*~3HjW[8^
-  pool: 30
+  pool: 10
   encoding: utf8
 
-sfx_global:
+sfx4_global:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
   port: 3310 # 3310 is defualt SFX embedded mysql port
   database: sfxglb41 # or other sfx instance db
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8

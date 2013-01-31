@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
+      encoding: US-ASCII
+      string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&sort=title_sort_s+asc&q=New+York&fl=%2A+score&qf=title_text&defType=dismax&start=0&rows=20
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 31 Jan 2013 04:28:21 GMT
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''sort''=>''title_sort_s
+        asc'',''fl''=>''* score'',''fq''=>''type:Sfx4\\:\\:Ns\\:\\:AzTitle'',''qf''=>''title_text'',''wt''=>''ruby'',''defType''=>''dismax'',''rows''=>''20'',''start''=>''0'',''q''=>''New
+        York''}},''response''=>{''numFound''=>379,''start''=>0,''maxScore''=>5.6279926,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
+        44433'',''object_id_ss''=>''3310000000007470'',''title_display_ss''=>''The
+        Advocate (Times Union (Albany, New York)'',''score''=>3.0634913},{''id''=>''Sfx4::Ns::AzTitle
+        53763'',''object_id_ss''=>''110979839329349'',''title_display_ss''=>''Afro-Americans
+        in New York life and history'',''score''=>2.344997},{''id''=>''Sfx4::Ns::AzTitle
+        77381'',''object_id_ss''=>''2670000000038116'',''title_display_ss''=>''AM
+        New York'',''score''=>4.595237},{''id''=>''Sfx4::Ns::AzTitle 20831'',''object_id_ss''=>''962824838001'',''title_display_ss''=>''America'',''score''=>3.2493231},{''id''=>''Sfx4::Ns::AzTitle
+        13586'',''object_id_ss''=>''2320000000016006'',''title_display_ss''=>''American
+        educational monthly, and New York teacher'',''score''=>3.0634913},{''id''=>''Sfx4::Ns::AzTitle
+        8023'',''object_id_ss''=>''3360000000001762'',''title_display_ss''=>''American
+        Geographical Society of New York. Bulletin of the American Geographical and
+        Statistical Society'',''score''=>2.2976184},{''id''=>''Sfx4::Ns::AzTitle 1937'',''object_id_ss''=>''110984073530338'',''title_display_ss''=>''American
+        health'',''score''=>2.1662154},{''id''=>''Sfx4::Ns::AzTitle 25683'',''object_id_ss''=>''991042729541854'',''title_display_ss''=>''American
+        journal of public health (1912)'',''score''=>1.3538846},{''id''=>''Sfx4::Ns::AzTitle
+        75073'',''object_id_ss''=>''1000000000321362'',''title_display_ss''=>''American
+        magazine'',''score''=>1.0831077},{''id''=>''Sfx4::Ns::AzTitle 18618'',''object_id_ss''=>''2550000000092462'',''title_display_ss''=>''American
+        Medical Monthly and New York Review'',''score''=>3.0634913},{''id''=>''Sfx4::Ns::AzTitle
+        61417'',''object_id_ss''=>''1000000000237467'',''title_display_ss''=>''The
+        American Millenarian and Prophetic Review, A Monthly Periodical, Published
+        in the City of New York'',''score''=>1.8759975},{''id''=>''Sfx4::Ns::AzTitle
+        74466'',''object_id_ss''=>''1000000000523340'',''title_display_ss''=>''amNewYork
+        (New York, NY)'',''score''=>3.8293638},{''id''=>''Sfx4::Ns::AzTitle 4730'',''object_id_ss''=>''954922644005'',''title_display_ss''=>''Annals
+        of physics'',''score''=>1.8954386},{''id''=>''Sfx4::Ns::AzTitle 63053'',''object_id_ss''=>''2470000000034047'',''title_display_ss''=>''Annals
+        of the Lyceum of Natural History of New-York'',''score''=>2.6805549},{''id''=>''Sfx4::Ns::AzTitle
+        65392'',''object_id_ss''=>''954926958894'',''title_display_ss''=>''Annals
+        of the New York Academy of Sciences'',''score''=>2.7077692},{''id''=>''Sfx4::Ns::AzTitle
+        54929'',''object_id_ss''=>''2550000000092492'',''title_display_ss''=>''Annual
+        Meeting of the New-York City Maternal Association, February 28, 1838'',''score''=>2.2976184},{''id''=>''Sfx4::Ns::AzTitle
+        63206'',''object_id_ss''=>''110992357345372'',''title_display_ss''=>''Annual
+        report of the Trustees - Metropolitan Museum of Art (New York, N.Y.). Board
+        of Trustees'',''score''=>1.5317457},{''id''=>''Sfx4::Ns::AzTitle 1891'',''object_id_ss''=>''1000000000237474'',''title_display_ss''=>''The
+        Anti - Masonic Review, and Magazine; Pub. Monthly in the City of New York.
+        Intended to Take Note of the Origin and History, of the Pretensions and Character,
+        and of the Standard Works and Productions, of Free Masonry'',''score''=>1.1724985},{''id''=>''Sfx4::Ns::AzTitle
+        66179'',''object_id_ss''=>''963017872357'',''title_display_ss''=>''Back stage(New
+        York)'',''score''=>3.0634913},{''id''=>''Sfx4::Ns::AzTitle 43558'',''object_id_ss''=>''1000000000577677'',''title_display_ss''=>''Banking
+        New York'',''score''=>4.595237}]}}'
+    http_version: 
+  recorded_at: Thu, 31 Jan 2013 04:28:22 GMT
+- request:
+    method: get
+    uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Content-Length:
+      - '27'
+      Date:
+      - Thu, 31 Jan 2013 04:28:21 GMT
+    body:
+      encoding: US-ASCII
+      string: ! 'string=iPlanetDirectoryPro
+
+'
+    http_version: 
+  recorded_at: Thu, 31 Jan 2013 04:28:22 GMT
+recorded_with: VCR 2.4.0

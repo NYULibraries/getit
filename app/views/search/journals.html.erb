@@ -1,165 +1,103 @@
-<div id="search_container" class="search_container">
-	<%= render :partial=> current_primary_institution.views["tabs_partial"] unless 
-		(current_primary_institution.nil? or current_primary_institution.views.nil? or 
-			current_primary_institution.views.nil? or 
-				current_primary_institution.views["tabs_partial"].nil?) %>
-	<%= form_tag(@submit_hash, {:method=>'get', :class=>'OpenURL', :name=>'OpenURL', :id=>'OpenURL'})  %>
-	  <div id="search_basic" class="search">                                      
-		<%= render :partial=> current_primary_institution.views["tip1_partial"] unless 
-			(current_primary_institution.nil? or current_primary_institution.views.nil? or 
-				current_primary_institution.views.nil? or 
-					current_primary_institution.views["tip1_partial"].nil?) %>
-	    <% if flash[:error] %>
-	      <div id="error" class="error"><strong>(!) Problems:</strong> <%= flash[:error] %></div>
-	    <% end %>
-	    <h2>Search for a Specific E-Journal or Article</h2>
-	    <fieldset>
-	      <input type="hidden" name="umlaut.institution" value="<%= (current_primary_institution.nil?) ? "NYU" : current_primary_institution.name %>" /> 
-	      <input type="hidden" name="umlaut.institution" value="NYU" /> 
-	      <input type="hidden" name="rfr_id" value="info:sid/sfxit.com:citation" /> 
-	      <!-- <input type=hidden name="rfr_id" value="info:sid/umlaut"> -->
-	      <input type="hidden" id="rft_title" name="rft.title" />
-	      <input type="hidden" id="rft_object_id" name="rft.object_id" />
-	      <div class="data">
-	        <div class="left">
-	          <label for="journal_title">Journal Title:</label>
-	          <select name="umlaut.title_search_type" class="sfx_title_search">
-	            <option value="contains" <%#= "selected=\"selected\"" if co_param('umlaut.title_search_type') == "contains" %>>contains</option>
-	            <option value="begins" <%#= "selected=\"selected\"" if co_param('umlaut.title_search_type') == "contains" %>>begins with</option>
-	            <option value="exact" <%#= "selected=\"selected\"" if co_param('umlaut.title_search_type') == "contains" %>>exact match</option>
-	          </select>
-	        </div>
-	        <%= text_field :journal, :title, {:name=>'rft.jtitle', :autocomplete=>'off', :size=>'40', :class=>"title_search"} %>
-	      </div>
-	      <div class="data">
-	        <label for="issn" class="left"><strong style="padding-right: .5em;">OR</strong> ISSN:</label>
-	        <input id="issn" type="text" class="center" name="rft.issn" size="10" maxlength="9" value="<%#= co_param('rft.issn') %>" />
-	        <a href="http://library.nyu.edu/info/umlaut/journal.html" title="Click for more information." class="nyulibrary_icons_information right nyulibrary_help" target="_blank">&nbsp;<span>info</span></a>
-	      </div>
-	      <div id="core_submit">
-	        <input type="submit" name="Generate_OpenURL2" value="Search" />
-	        <%= link_to "New Search", {:controller => "search", :action => "new_search"}, {:class => "new_search"}  %>
-	      </div>
-	    </fieldset>
-	  </div>
-	  <div id="search_advanced" class="search">                                      
-		<%= render :partial=> current_primary_institution.views["tip2_partial"] unless 
-			(current_primary_institution.nil? or current_primary_institution.views.nil? or 
-				current_primary_institution.views.nil? or 
-					current_primary_institution.views["tip2_partial"].nil?) %>
-	    <h3><strong style="padding-right: .5em;">Optional Information:</strong> Enter as much as you know of the following:</h3>
-	    <fieldset>
-	      <div class="data">
-	        <label for="article_title" class="left">Article Title:</label>
-	        <input id="article_title" class="center" name="rft.atitle" size="50" type="text" value="<%#= co_param('rft.atitle') %>" />
-	      </div>
-	      <div class="data">
-	        <label for="aulast" class="left">Author Last Name:</label>
-	        <input id="aulast" class="center" name="rft.aulast" size="40" type="text" value="<%#= co_param('rft.aulast') %>" />
-	      </div>
-	      <div class="data">
-	        <label for="aufirst" class="left">Author First Name:</label>
-	        <input id="aufirst" class="center" name="rft.aufirst" size="30" type="text" value="<%#= co_param('rft.aufirst') %>" />
-	      </div>
-	    </fieldset>
-	    <fieldset>
-	      <div class="data">
-	        <label for="date" class="left">Date:</label>
-	        <span class="center">
-	        <input id="date" style="width: 7em;" type="text" name="rft.date" size="20" value="<%#= co_param('rft.date') %>" />
-	        <select name="__year">
-	          <option value="" selected="selected">Year</option>
-	          <% (-1*Time.now.year..-1*1950).each do |year| %>
-	            <option value="<%= year.abs.to_s %>"><%= year.abs.to_s %></option>
-	          <% end %>
-	        </select>
-	        <select name="__month">
-	          <option value="" selected="selected">Month</option>
-	          <option value="01">Jan</option>
-	          <option value="02">Feb</option>
-	          <option value="03">Mar</option>
-	          <option value="04">Apr</option>
-	          <option value="05">May</option>
-	          <option value="06">Jun</option>
-	          <option value="07">Jul</option>
-	          <option value="08">Aug</option>
-	          <option value="09">Sep</option>
-	          <option value="10">Oct</option>
-	          <option value="11">Nov</option>
-	          <option value="12">Dec</option>
-	        </select>
-	        <select name="__day">
-	          <option value="" selected="selected">Day</option>
-	          <option value="01">01</option>
-	          <option value="02">02</option>
-	          <option value="03">03</option>
-	          <option value="04">04</option>
-	          <option value="05">05</option>
-	          <option value="06">06</option>
-	          <option value="07">07</option>
-	          <option value="08">08</option>
-	          <option value="09">09</option>
-	          <option value="10">10</option>
-	          <option value="11">11</option>
-	          <option value="12">12</option>
-	          <option value="13">13</option>
-	          <option value="14">14</option>
-	          <option value="15">15</option>
-	          <option value="16">16</option>
-	          <option value="17">17</option>
-	          <option value="18">18</option>
-	          <option value="19">19</option>
-	          <option value="20">20</option>
-	          <option value="21">21</option>
-	          <option value="22">22</option>
-	          <option value="23">23</option>
-	          <option value="24">24</option>
-	          <option value="25">25</option>
-	          <option value="26">26</option>
-	          <option value="27">27</option>
-	          <option value="28">28</option>
-	          <option value="29">29</option>
-	          <option value="30">30</option>
-	        </select>
-	        </span>
-	      </div>
-	      <div class="data">
-	          <label for="volume" class="left">Volume:</label>
-	          <span class="center">
-	            <input id="volume" style="width: 7em; margin-right: 1em;" type="text" name="rft.volume" size="5" maxlength="5" value="<%#= co_param('rft.volume') %>" />
-	            <label for="issue">Issue:</label>
-	            <input id="issue" style="width: 7em;" type="text" name="rft.issue" size="5" value="<%#= co_param('rft.issue') %>" />
-	          </span>
-	      </div>
-	      <div class="data">
-	        <label for="spage" class="left">Start page:</label>
-	        <span class="center">
-	          <input id="spage" style="width: 7em; margin-right: 1em;" type="text" name="rft.spage" size="5" value="<%#= co_param('rft.spage') %>" />
-	          <label for="epage">End page:</label>
-	          <input id="epage" style="width: 7em;" type="text" name="rft.epage" size="5" value="<%#= co_param('rft.epage') %>" />
-	        </span>
-	      </div>
-	    </fieldset>
-	    <fieldset>
-	      <div class="data">
-	        <span class="left">
-	          <select name="rft_id_type">
-	            <option value='doi' <%#= "selected=\"selected\"" if co_param('rft_id_type') == "doi" %>>DOI:</option>
-	            <option value='pmid' <%#= "selected=\"selected\"" if co_param('rft_id_type') == "pmid" %>>PMID:</option>
-	          </select>
-	        </span>
-	        <input id="rft_id_value" class="center" name="rft_id_value" type="text" value="<%#= co_param('rft_id_value') %>" size="25" />
-	        <a href="http://library.nyu.edu/info/umlaut/article_identifiers.html" title="Click for more information." class="nyulibrary_icons_information right nyulibrary_help" target="_blank">&nbsp;<span>info</span></a>
-	      </div>
-	    </fieldset>
-	    <fieldset>
-	      <input type="submit" name="Generate_OpenURL2" value="Search" />
-	      <%= link_to "New Search", {:controller => "search", :action => "new_search"}, {:class => "new_search"}  %>
-	    </fieldset>
-	  </div>
-	</form>
-	<div id="browse" class="search">
-	  <h2>Browse E-Journal Titles</h2>
-	  <%= render :partial=>"a_to_z" %>
-	</div>
+<div class="search">
+  <% if flash[:error] %>
+    <div id="error" class="notice citationLinker"><strong>(!) Problems:</strong> <%= flash[:error] %></div>
+  <% end %>
+  <%= form_tag(@submit_hash, {:method => "get", :class => "OpenURL form-horizontal", :name => "OpenURL", :id=>"OpenURL"})  %>
+    <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.code}" %> 
+    <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %> 
+    <%= hidden_field_tag "rft.date", "" %> 
+    <%= hidden_field_tag "rft.title", "", {:class => "rft_title"} %> 
+    <%= hidden_field_tag "rft.object_id", "", {:class => "rft_object_id"} %> 
+    <div id="primary-search" class="search-section">
+      <h2>Search for a Specific E-Journal or Article</h2>
+      <%= institutional_partial("tip1") %>
+      <fieldset>
+        <div class="control-group">
+          <%= label :journal, :title, "Journal Title:", :class => "control-label" %>
+          <div class="controls">
+            <select name="umlaut.title_search_type" class="title_search_type input-medium">
+              <%= options_for_select({"contains" => "contains", "begins with" => "begins", "exact match" => "exact"}, params["umlaut.title_search_type"])  %>
+            </select>
+            <%= text_field :journal, :title, {:name=>'rft.jtitle', :class=>"title_search input-xlarge"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label :journal, :issn, content_tag(:strong, "OR").concat(" ISSN:"), :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :journal, :issn, {:name=>'rft.issn', :max_length => "9", :class=>"issn input-xlarge"} %>
+            <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/journal.html", 
+              :class => ["issn-popover", "help-inline"], :rel => "popover", :title => "What is an ISSN?", "data-placement" => "bottom", "data-class" => "issn", :target => "_blank")%>
+          </div>
+        </div>
+        <div class="submit-group">
+          <%= submit_tag "Search", {:name=>"Generate_OpenURL2"} %>
+          <%= link_to "New Search", {:controller => "search", :action => "new_search"}, {:class => "new_search"}  %>
+        </div>
+      </fieldset>
+    </div>
+    <div id="optional-search" class="search-section">
+      <h2>Optional Information: Enter as much as you know of the following:</h2>
+      <fieldset>
+        <%= institutional_partial("tip2") %>
+        <div class="control-group">
+          <%= label :article, :title, "Article Title:", :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :article, :title, {:name=>'rft.atitle', :class=>"article_title input-xlarge"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label :article, :aulast, "Author Last Name:", :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :article, :aulast, {:name=>'rft.aulast', :class=>"article_aulast input-xlarge"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label :article, :aufirst, "Author First Name:", :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :article, :aufirst, {:name=>'rft.aufirst', :class=>"article_aufirst input-xlarge"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <label for="year" class="control-label">Date:</label>
+          <div class="controls">
+            <%= date %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label :article, :volume, "Volume:", :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :article, :volume, {:name=>'rft.volume', :max_length => "5", :class=>"volume input-small"} %>
+            <%= label :article, :issue, "Issue:" %>
+            <%= text_field :article, :issue, {:name=>'rft.issue', :class=>"issue input-small"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label :article, :spage, "Start page:", :class => "control-label" %>
+          <div class="controls">
+            <%= text_field :article, :spage, {:name=>'rft.spage', :class=>"spage input-small"} %>
+            <%= label :article, :epage, "End page:" %>
+            <%= text_field :article, :epage, {:name=>'rft.epage', :class=>"epage input-small"} %>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="control-label rfr_id">
+            <select name="rft_id_type" class="input-small">
+              <option value='doi' <%#= "selected=\"selected\"" if co_param('rft_id_type') == "doi" %>>DOI:</option>
+              <option value='pmid' <%#= "selected=\"selected\"" if co_param('rft_id_type') == "pmid" %>>PMID:</option>
+            </select>
+          </div>
+          <div class="controls">
+            <input id="rft_id_value" name="rft_id_value" type="text" value="<%#= co_param('rft_id_value') %>" />
+            <%= link_to(content_tag(:i, "", :class=>"icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/article_identifiers.html", 
+              :class => ["doi-popover", "help-inline"], :rel => "popover", :title => "What is a DOI or PMID ?", "data-class" => "doi", :target => "_blank")%>
+          </div>
+        </div>
+        <div class="submit-group">
+          <%= submit_tag "Search", {:name=>"Generate_OpenURL2"} %>
+          <%= link_to "New Search", {:controller => "search", :action => "new_search"}, {:class => "new_search"}  %>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+  <%= render :partial=>"browse" %>
 </div>

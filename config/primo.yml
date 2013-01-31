@@ -80,7 +80,7 @@ aleph_sub_library_codes:
   "NYHSPR": "NYHS"
   "NYHSREF": "NYHS"
   "REI": "NREI"
-statuses:
+availability_statuses:
   "available": "Available"
   "requested": "Requested"
   "unavailable": "Check Availability"
@@ -101,9 +101,9 @@ statuses:
   
 sources:
   nyu_aleph:
-     base_url: "http://alephstage.library.nyu.edu"
-     rest_url: "http://alephstage.library.nyu.edu:1891/rest-dlf"
-     illiad_url: "http://illdev.library.nyu.edu"
+     base_url: "http://aleph.library.nyu.edu"
+     rest_url: "http://aleph.library.nyu.edu:1891/rest-dlf"
+     illiad_url: "http://ill.library.nyu.edu"
      type: aleph
      class_name: NyuAleph
      local_base: "PRIMOCOMMON"
@@ -131,6 +131,9 @@ sources:
          collection: FDOWN
        IFA: 
          sub_library: NIFA
+         collection: MAIN
+       ISAW: 
+         sub_library: NISAW
          collection: MAIN
        Cooper: 
          sub_library: CU
@@ -171,6 +174,9 @@ sources:
        ConservIFA: 
          sub_library: NIFAC
          collection: MAIN
+       ConservIFA Periodicals: 
+         sub_library: NIFAC
+         collection: PERIO
        Bobst REF9: 
          sub_library: BOBST
          collection: REF9
@@ -180,6 +186,9 @@ sources:
        Bobst Offsite: 
          sub_library: BOBST
          collection: MAIN
+       Bobst REF1 Offsite: 
+         sub_library: BOBST
+         collection: REF1
        NYIntDes: 
          sub_library: NYSID
          collection: MAIN
@@ -255,14 +264,14 @@ sources:
   COURSES:
      base_url: "http://aleph.library.nyu.edu"
      rest_url: "http://aleph.library.nyu.edu:1891/rest-dlf"
-     illiad_url: "http://illdev.library.nyu.edu"
+     illiad_url: "http://ill.library.nyu.edu"
      type: aleph
      class_name: NyuAleph
      local_base: "PRIMOCOMMON"
   ADCOURSES:
-     base_url: "http://alephstage.library.nyu.edu"
-     rest_url: "http://alephstage.library.nyu.edu:1891/rest-dlf"
-     illiad_url: "http://illdev.library.nyu.edu"
+     base_url: "http://aleph.library.nyu.edu"
+     rest_url: "http://aleph.library.nyu.edu:1891/rest-dlf"
+     illiad_url: "http://ill.library.nyu.edu"
      type: aleph
      class_name: NyuAleph
      local_base: "PRIMOCOMMON"

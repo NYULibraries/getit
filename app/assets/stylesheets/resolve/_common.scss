@@ -1,0 +1,22 @@
+#permalink {
+  @extend .pull-left;
+}
+
+.umlaut-container {
+  h1 {
+    visibility: hidden;
+    margin-top: 0;
+  }
+  border: {
+    top: none;
+  }
+}
+
+.wayfinder {
+  @extend .help;
+}
+
+.request_options.form input[name='entire'] {
+  float: left;
+  margin-right: .5em;
+}

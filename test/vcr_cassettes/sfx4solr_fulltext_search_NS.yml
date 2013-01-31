@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
+      encoding: US-ASCII
+      string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&q=New+York&fl=%2A+score&qf=title_text&defType=dismax&start=0&rows=30
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 29 Jan 2013 14:07:43 GMT
+      Connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''qf''=>''title_text'',''wt''=>''ruby'',''defType''=>''dismax'',''rows''=>''30'',''fl''=>''*
+        score'',''start''=>''0'',''q''=>''New York'',''fq''=>''type:Sfx4\\:\\:Ns\\:\\:AzTitle''}},''response''=>{''numFound''=>379,''start''=>0,''maxScore''=>5.6278496,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
+        81524'',''object_id_ss''=>''110975413975942'',''title_display_ss''=>''New
+        York'',''score''=>5.6278496},{''id''=>''Sfx4::Ns::AzTitle 47331'',''object_id_ss''=>''110978977285242'',''title_display_ss''=>''Western
+        New York'',''score''=>4.6898746},{''id''=>''Sfx4::Ns::AzTitle 3020'',''object_id_ss''=>''2550000000094250'',''title_display_ss''=>''The
+        New York Dissector'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 5571'',''object_id_ss''=>''2550000000094261'',''title_display_ss''=>''The
+        New York Organ'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 5835'',''object_id_ss''=>''2490000000004227'',''title_display_ss''=>''New
+        York Business'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 6175'',''object_id_ss''=>''991042748347254'',''title_display_ss''=>''New
+        York lancet'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 6549'',''object_id_ss''=>''2550000000093226'',''title_display_ss''=>''New
+        York Fireman'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 6963'',''object_id_ss''=>''1000000000575857'',''title_display_ss''=>''New
+        York Beacon'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 8982'',''object_id_ss''=>''2550000000020897'',''title_display_ss''=>''Research
+        (New York)'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 11803'',''object_id_ss''=>''991042749838974'',''title_display_ss''=>''New
+        York press'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 12432'',''object_id_ss''=>''1000000000236990'',''title_display_ss''=>''New
+        York Farmer'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 13061'',''object_id_ss''=>''2550000000094246'',''title_display_ss''=>''The
+        New York Cabinet'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 15023'',''object_id_ss''=>''954921394032'',''title_display_ss''=>''World;
+        New York'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 21212'',''object_id_ss''=>''2550000000093244'',''title_display_ss''=>''New
+        York Tickler'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 28103'',''object_id_ss''=>''111038323492012'',''title_display_ss''=>''New
+        York Diamonds'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 34223'',''object_id_ss''=>''1000000000388175'',''title_display_ss''=>''New
+        York Blade'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 37682'',''object_id_ss''=>''1000000000237700'',''title_display_ss''=>''The
+        New York Review'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 43558'',''object_id_ss''=>''1000000000577677'',''title_display_ss''=>''Banking
+        New York'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 49400'',''object_id_ss''=>''1000000000236954'',''title_display_ss''=>''New
+        York Telescope'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 53402'',''object_id_ss''=>''991042745996012'',''title_display_ss''=>''New
+        York post'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 57206'',''object_id_ss''=>''954925474423'',''title_display_ss''=>''New
+        York history'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 58187'',''object_id_ss''=>''1000000000292680'',''title_display_ss''=>''New
+        York Herald'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 61441'',''object_id_ss''=>''2550000000094254'',''title_display_ss''=>''The
+        New York Magnet'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 64930'',''object_id_ss''=>''2550000000093239'',''title_display_ss''=>''New
+        York Pioneer'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 69318'',''object_id_ss''=>''1000000000236762'',''title_display_ss''=>''New
+        York Evangelist'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 73415'',''object_id_ss''=>''2550000000094269'',''title_display_ss''=>''The
+        New York Thomsonian'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 73645'',''object_id_ss''=>''1000000000390911'',''title_display_ss''=>''New-York
+        tribune'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 74601'',''object_id_ss''=>''1000000000292985'',''title_display_ss''=>''New-York
+        Spy'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 77381'',''object_id_ss''=>''2670000000038116'',''title_display_ss''=>''AM
+        New York'',''score''=>4.5951195},{''id''=>''Sfx4::Ns::AzTitle 80243'',''object_id_ss''=>''2550000000094245'',''title_display_ss''=>''The
+        New York Bee'',''score''=>4.5951195}]}}'
+    http_version: 
+  recorded_at: Tue, 29 Jan 2013 14:07:43 GMT
+recorded_with: VCR 2.4.0

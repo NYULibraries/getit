@@ -8,24 +8,16 @@
 # all options are neccesarily listed as examples here, see source
 # or source-generated docs for more info.   
 default:
-  display_name: NYU Libraries
-  layouts: 
-    resolve: nyu/resolve
-    search: nyu/search
-  login:
-    link_code: NYU
-  searcher: SearchMethods::Sfx4Solr::NYU
   views:
-    tabs_partial: search/nyu/tabs
-    tip1_partial: search/nyu/tip1
-    tip2_partial: search/nyu/tip2
+    css: search
+    resolve_css: resolve
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
     # Priority 2
     NYU_Primo:
       type: PrimoService
       priority: 2 # After SFX, to get SFX metadata enhancement
-      base_url: http://bobcatdev.library.nyu.edu
+      base_url: http://bobcat.library.nyu.edu
       vid: NYU
       institution: NYU
       holding_search_institution: NYU
@@ -53,12 +45,47 @@ default:
       service_types:
         - referent_enhance
         - cover_image
-        
+
+    # Priority 4
+    # Wayfinder to return whence you came
+    Wayfinder:
+      name: NYU Wayfinder
+      type: Wayfinder
+      priority: 4
+      known_rfrs:
+        -
+          name: primo 
+          regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
+          base_url: http://library.nyu.edu/persistent/lcn/
+          display_text: Back to BobCat
+        -
+          name: xerxes
+          regex: !ruby/regexp '/info:sid\/library\.nyu\.edu:xerxes \((.+)\)/'
+          base_url: "https://arch.library.nyu.edu/databases/alphabetical?base=databases&action=find&query="
+          display_text: Back to database search
+        -
+          name: umlaut
+          regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
+          base_url: "https://getit.library.nyu.edu"
+          display_text: Back to e-journal search
+        -
+          name: worldcat1
+          regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
+          base_url: "http://www.worldcat.org"
+          display_text: Back to WorldCat
+        -
+          name: worldcat2
+          regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
+          base_url: "http://www.worldcat.org/search?qt=worldcat_org_all"
+          display_text: Back to WorldCat
+          querystring_metadata:
+            q: title
+
     # Priority a: Background
     NYU_Primo_Source:
       type: PrimoSource
       priority: a
-      base_url: http://bobcatdev.library.nyu.edu
+      base_url: http://bobcat.library.nyu.edu
       vid: NYU
       source_attributes:
         - request_link_supports_ajax_call
@@ -100,11 +127,6 @@ default:
       priority: c        
       api_key: AIzaSyADjP7PRPsGaPYJB9tvfm8ZSpdmhUsCR1w
               
-    Ulrichs:
-      display_name: "Ulrich's Directory"
-      type: UlrichsLink
-      priority: c
-      
     IsbnDb:
       display_name: isbndb.com
       type: IsbnDb
@@ -118,13 +140,6 @@ default:
       # disable audio results? uncomment:
       #num_results_for_types:
       #  audio: 0
-
-    ScopusCitations:
-      type: Scopus
-      priority: c
-      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
-      # partner_id: YOUR_SCOPUS_PARTNER_ID
-      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
     # Web of Knowledge API has no api key, but your
     # IP needs to be registered with them. See source docs
@@ -158,14 +173,6 @@ default:
       #   existing_service: GoogleBookSearch
       #   existing_type: fulltext
 
-    EmailExport:
-      type: EmailExport
-      priority: d
-
-    TxtHoldingExport:
-      type: TxtHoldingExport
-      priority: d
-    
     # Worldcat scraper can be quite slow, move it to wave 'd' to avoid
     # holding up wave 'c'
     Worldcat:
@@ -236,8 +243,22 @@ default:
       disabled: true
       priority: 6
 
+    # Exports
+    EmailExport:
+      type: EmailExport
+      priority: d
+
+    TxtHoldingExport:
+      type: TxtHoldingExport
+      priority: e
+
 NYU:
-  parent_institution: default
+  name: NYU Libraries
+  parent_code: default
+  active_tab: journals
+  views:
+    css: search
+    resolve_css: resolve
   ip_addresses:
     - 128.122.0.0-128.122.149.239
     - 172.26.*.*
@@ -256,22 +277,76 @@ NYU:
       sfx_requests_expire_crontab: '00 00 * * 00' 
       sfx_timeout: 9
       extra_targets_of_interest:
-        ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
-        REFWORKS_EXPORT_TOOL: export_citation
+        # ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
+        # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
-
+    NYUUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: c
+      status: active
+      base_url: https://ezproxy.library.nyu.edu/login?url=http://www.ulrichsweb.com/ulrichsweb/Search/call_fullCitation.asp?/vendor_redirect.asp?oVendor=Umlaut&oIssn=
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
+    NYU_RefWorks:
+      name: RefWorks
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=refworks&
+      display_text: Push to RefWorks
+      priority: 3
+      service_types:
+          - export_citation
+    NYU_Endnote:
+      name: EndNoteWeb
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=endnote&
+      display_text: Push to EndNote Web
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_EASYBIB:
+      name: EasyBib
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=pusheasybib&
+      display_text: Push to EasyBib
+      priority: 5
+      service_types:
+          - export_citation
+    NYU_RIS:
+      name: RIS
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=ris&
+      display_text: Download as RIS
+      priority: 6
+      service_types:
+          - export_citation
+    NYU_BIBTEX:
+      name: BibTeX
+      type: OpenURLService
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=bibtex&
+      display_text: Download as BibTeX
+      priority: 7
+      service_types:
+          - export_citation
 NYUAD:
-  display_name: NYU Abu Dhabi Library
-  parent_institution: NYU 
-  layouts: 
-    resolve: nyuad/resolve
-    search: nyuad/search
+  name: NYU Abu Dhabi Library
+  parent_code: NYU 
   views:
-    tabs_partial: search/nyuad/tabs
-    tip1_partial: search/nyuad/tip1
-    tip2_partial: search/nyu/tip2
-    sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
+    css: search_nyuad
+    resolve_css: resolve_nyuad
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?institution=nyuad"
+      xerxes: 
+        url_suffix: "&institution=nyuad"
+      umlaut: 
+        url_suffix: "/nyuad"
   ip_addresses:
     - 192.168.224.0/23
     - 192.168.226.0/24
@@ -300,16 +375,22 @@ NYUAD:
     - 172.29.118.0/23
 
 CU:
-  display_name: The Cooper Union Library
-  searcher: SearchMethods::Sfx4Solr::CU
-  layouts: 
-    resolve: cu/resolve
-    search: cu/search
-  login:
-    link_code: CU
+  name: The Cooper Union Library
+  active_tab: journals
   views:
-    tabs_partial: search/cu/tabs
+    css: search_cu
+    resolve_css: resolve_cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=cu" 
+        xerxes: 
+          url_suffix: "&institution=cu"
+        umlaut: 
+          url_suffix: "/cu"
+  controllers:
+    searcher: Sfx4Solr::Cu
+    # searcher: Sfx4Cu
   ip_addresses:
     - 199.98.16.0-199.98.31.255 
   services:
@@ -325,18 +406,30 @@ CU:
       sfx_timeout: 9
       extra_targets_of_interest:
           CAPTURE_CITATION: export_citation
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: yI7GR2aKR1n9ZvMd36rrd1zASdGJYJ
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
 NS:
-  display_name: New School Libraries
-  searcher: SearchMethods::Sfx4Solr::NS
-  layouts: 
-    resolve: cu/resolve
-    search: cu/search
-  login:
-    link_code: NS
+  name: New School Libraries
+  active_tab: journals
   views:
-    tabs_partial: search/ns/tabs
+    css: search_ns
+    resolve_css: resolve_ns
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=ns" 
+        xerxes: 
+          url_suffix: "&institution=ns"
+        umlaut: 
+          url_suffix: "/ns"
+  controllers:
+    searcher: Sfx4Solr::Ns
+    # searcher: Sfx4Ns
   ip_addresses:
     - 149.31.0.0-149.31.255.255
     - 69.64.210.46
@@ -356,18 +449,55 @@ NS:
       extra_targets_of_interest:
         ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
         REFWORKS_EXPORT_TOOL: export_citation
-    #    ISI_WEB_OF_SCIENCE: export_citation
-    #    BX_RECOMMENDER_SERVICE: help
+        # ISI_WEB_OF_SCIENCE: export_citation
+        BX_RECOMMENDER_SERVICE: help
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
+    NS_bX:
+      type: Bx
+      display_name: Recommender Services
+      priority: c
+      token: 684258fc2121c50ffbf2e12ae2e41d2a
+      openurl_base: /getit/resolve?umlaut.institution=NS&
+      max_records: 2
+    NYUOpenURL:
+      name: BobCat
+      type: OpenURLService
+      display_name: BobCat
+      display_text: GetIt @ NYU
+      base_url: http://getit.library.nyu.edu/nyu/resolve?
+      priority: c
+      status: active
+    NSUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: c
+      status: active
+      base_url: https://login.libproxy.newschool.edu/login?url=http://www.ulrichsweb.com/ulrichsweb/Search/call_fullCitation.asp?/vendor_redirect.asp?oVendor=Umlaut&oIssn=
 
 NYSID:
-  login:
-    link_code: NYSID
-  layouts: 
-    resolve: nysid/resolve
-    search: nysid/search
   display_name: New York School of Interior Design Library
+  views:
+    css: search
+    resolve_css: resolve
   ip_addresses:
     - 128.122.0.1
-  
+
+HSL:
+  active_tab: journals
+  views:
+    css: search_hsl
+    resolve_css: resolve_hsl
+  ip_addresses:
+    - 128.122.0.1
+  services:
+    HSL_SFX:
+      name: Get It @ NYU Health Sciences Libraries
+      display_name: Get It @ NYU Health Sciences Libraries
+      type: Sfx
+      base_url: http://sfx.med.nyu.edu/sfxlcl3
+      priority: 1
+      click_passthrough: true
+      sfx_requests_expire_crontab: '00 00 * * 00' 
+      sfx_timeout: 9

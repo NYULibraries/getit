@@ -1,0 +1,790 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2013-01-27T12:52:03-05:00&ctx_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000980206&rft.aufirst=Karen&rft.aulast=Mossberger&rft.btitle=Virtual%20inequality%20:%20beyond%20the%20digital%20divide&rft.genre=book&rft.isbn=9780393964585&rft.place=Washington,%20D.C.&rft.pub=Georgetown%20University%20Press&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:04 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;K&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2013-01-27T12:52:03-05:00&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.isbn\"&gt;0-393-96458-2&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000980206&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000980206&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.place\"&gt;Washington,
+        D.C.&lt;/item&gt;\n  &lt;item key=\"@rft.auinitm\"&gt;\n   &lt;array&gt;\n
+        \   &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s42824522-68AA-11E2-A3FA-DF6DFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        \ &lt;item key=\"rft.isbn_13\"&gt;978-0-393-96458-5&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;3495947&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
+        key=\"rft.pub\"&gt;Georgetown University Press&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph000980206&lt;/item&gt;\n
+        \ \n  &lt;item key=\"rft.title\"&gt;Virtual inequality : beyond the digital
+        divide&lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft.aufirst\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Karen&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.isbn_10\"&gt;0-393-96458-2&lt;/item&gt;\n
+        \ &lt;item key=\"@rft.aulast\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Mossberger&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;book&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111069357678001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;1000000000002414&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;1000000000002415&lt;/item&gt;\n    &lt;item key=\"4\"&gt;111076678899001&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;111000155328001&lt;/item&gt;\n    &lt;item key=\"6\"&gt;111032274555001&lt;/item&gt;\n
+        \   &lt;item key=\"7\"&gt;20430000000000002&lt;/item&gt;\n    &lt;item key=\"8\"&gt;1000000000000009&lt;/item&gt;\n
+        \   &lt;item key=\"9\"&gt;20430000000000000&lt;/item&gt;\n    &lt;item key=\"10\"&gt;110974985005474&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph000980206&lt;/item&gt;\n
+        \ &lt;item key=\"@rft.au\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Mossberger,
+        Karen&lt;/item&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@sfx.searched_by_identifier\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;\n     &lt;hash&gt;\n      &lt;item
+        key=\"VALUE\"&gt;\n       &lt;array&gt;\n        &lt;item key=\"0\"&gt;0-393-96458-2&lt;/item&gt;\n
+        \      &lt;/array&gt;\n      &lt;/item&gt;\n      &lt;item key=\"TYPE\"&gt;ISBN&lt;/item&gt;\n
+        \     &lt;item key=\"SUBTYPE\"&gt;&lt;/item&gt;\n     &lt;/hash&gt;\n    &lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rft.auinit1\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;K&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"rft.btitle\"&gt;Virtual inequality : beyond
+        the digital divide&lt;/item&gt;\n &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n
+        \ <ctx_obj_targets>\n   <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n
+        \   <target_public_name>NYU Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>UNION_CATALOGUE_OCLC_WORLDCAT</target_name>\n
+        \   <target_public_name>WorldCat (OCLC)</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111032274555000</target_id>\n    <target_service_id>111032274555001</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>FirstSearch::WORLDCAT</parser>\n
+        \   <parse_param>url=http://www.worldcat.org/search &amp;\r\npartner_key_code=exlibris
+        &amp;\r\nwcautho=100-195-964</parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
+        \   <displayer>Worldcat::Worldcat</displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://www.worldcat.org/search?q=isbn%3A0393964582</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=\r\n</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph000980206%20(Via%20SFX)&amp;isbn=0-393-96458-2&amp;aulast=Mossberger&amp;genre=book&amp;title=Virtual%20inequality%20%3A%20beyond%20the%20digital%20divide&amp;aufirst=Karen</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_BOOK_SEARCH</target_name>\n
+        \   <target_public_name>Search Google Books by</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>1000000000001761</target_id>\n    <target_service_id>1000000000002414</target_service_id>\n
+        \   <service_type>getCitedBook</service_type>\n    <parser>GoogleBookSearch::Isbn</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>GoogleBookSearch::Reference</displayer>\n    <target_url>http://books.google.com/books</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>REFWORKS_EXPORT_TOOL</target_name>\n
+        \   <target_public_name>to RefWorks </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111069357678000</target_id>\n    <target_service_id>111069357678001</target_service_id>\n
+        \   <service_type>getReference</service_type>\n    <parser>REFWORKS::REFWORKS</parser>\n
+        \   <parse_param>refworksurl=http://www.refworks.com/express/ExpressImport.asp
+        &amp;\r\nproviderid = $$PROVIDERID &amp;\r\n&amp; exporturl=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/refworks.cgi</parse_param>\n
+        \   <proxy>no</proxy>\n    <crossref>yes</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://www.refworks.com/express/ExpressImport.asp?filter=RefWorks+Tagged+Format&amp;vendor=SFX&amp;url=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%2Fcgi%2Fpublic%2Frefworks.cgi%3FRT%3DBook%2C%2BWhole%26PB%3DGeorgetown%2BUniversity%2BPress%26PP%3DWashington%2C%2BD.C.%26A1%3DMossberger%2C%2BKaren%5E%26T1%3DVirtual%2Binequality%2B%3A%2Bbeyond%2Bthe%2Bdigital%2Bdivide%26SN%3D0-393-96458-2&amp;database=&amp;providerid=%24%24PROVIDERID</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ISI_RESEARCHSOFT_EXPORT_TOOL</target_name>\n
+        \   <target_public_name>to EndNote </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111000155328000</target_id>\n    <target_service_id>111000155328001</target_service_id>\n
+        \   <service_type>getReference</service_type>\n    <parser>SAVE_CITATION::SAVE_CITATION</parser>\n
+        \   <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/save_citation.cgi
+        &amp; text_version = $$TEXT_VERSION \r\n</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://sfx.library.nyu.edu/sfxlcl41/cgi/public/save_citation.cgi?Book=Virtual+inequality+%3A+beyond+the+digital+divide&amp;Type=BOOK&amp;ISBN=0-393-96458-2&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2013-01-27T12%253A52%253A03-05%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft.aufirst%3DKaren%26rft.aulast%3DMossberger%26rft.btitle%3DVirtual%2520inequality%2520%253A%2520beyond%2520the%2520digital%2520divide%26rft.genre%3Dbook%26rft.isbn%3D9780393964585%26rft.place%3DWashington%252C%2520D.C.%26rft.pub%3DGeorgetown%2520University%2520Press%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Abook%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph000980206%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1&amp;Author=Mossberger%2CKaren</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph000980206+(Via+SFX)&amp;auinitm=%7C&amp;auinit1=K%7C&amp;isbn=0-393-96458-2&amp;publisher=Georgetown+University+Press&amp;aulast=Mossberger%7C&amp;genre=book&amp;booktitle=Virtual+inequality+%3A+beyond+the+digital+divide&amp;publiplace=Washington%2C+D.C.&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2013-01-27T12%253A52%253A03-05%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft.aufirst%3DKaren%26rft.aulast%3DMossberger%26rft.btitle%3DVirtual%2520inequality%2520%253A%2520beyond%2520the%2520digital%2520divide%26rft.genre%3Dbook%26rft.isbn%3D9780393964585%26rft.place%3DWashington%252C%2520D.C.%26rft.pub%3DGeorgetown%2520University%2520Press%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Abook%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph000980206%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1&amp;auinit=K%7C&amp;aufirst=Karen%7C</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask-A-Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>WWW_SEARCH_ENGINES_FREE</target_name>\n
+        \   <target_public_name>Search</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>110974985005473</target_id>\n    <target_service_id>110974985005474</target_service_id>\n
+        \   <service_type>getWebSearch</service_type>\n    <parser>WWW::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>WWW::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_BOOK_SEARCH</target_name>\n
+        \   <target_public_name>Search Google Books by</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>1000000000001761</target_id>\n    <target_service_id>1000000000002415</target_service_id>\n
+        \   <service_type>getWebSearch</service_type>\n    <parser>GoogleBookSearch::TitleIsbn</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>GoogleBookSearch::Search</displayer>\n    <target_url>http://books.google.com/books?q=</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_SCHOLAR_FREE</target_name>\n
+        \   <target_public_name>Search Google Scholar by </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>1000000000000009</target_id>\n    <target_service_id>1000000000000009</target_service_id>\n
+        \   <service_type>getWebSearch</service_type>\n    <parser>GoogleScholar::Search</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>GoogleScholar::Search</displayer>\n    <target_url></target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:04 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph000980206</docId></fullViewRequest>]]></request></getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '833'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - ! 'Servlet 2.4; Tomcat-5.0.28/JBoss-4.0.1 (build: CVSTag=JBoss_4_0_1 date=200412230944)'
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sun, 27 Jan 2013 17:52:06 GMT
+      Server:
+      - Apache-Coyote/1.1
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;sear:DOC
+        LOCAL=&quot;true&quot; xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;
+        xmlns:sear=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n
+        \         &lt;PrimoNMBib&gt;\n            &lt;record&gt;\n              &lt;control&gt;\n
+        \               &lt;sourcerecordid&gt;000980206&lt;/sourcerecordid&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph000980206&lt;/recordid&gt;\n                &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n
+        \               &lt;ilsapiid&gt;NYU01000980206&lt;/ilsapiid&gt;\n                &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n
+        \               &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n              &lt;/control&gt;\n
+        \             &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;Virtual inequality : beyond the digital divide&lt;/title&gt;\n
+        \               &lt;creator&gt;Karen  Mossberger&lt;/creator&gt;\n                &lt;contributor&gt;Caroline
+        J Tolbert; Mary Stansbury 1957-&lt;/contributor&gt;\n                &lt;publisher&gt;Washington,
+        D.C. : Georgetown University Press&lt;/publisher&gt;\n                &lt;creationdate&gt;c2003&lt;/creationdate&gt;\n
+        \               &lt;format&gt;xvi, 192 p. ; 22 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cisbn$$V0878409998
+        (pbk. : alk. paper); $$Cisbn$$V9780878409990&lt;/identifier&gt;\n                &lt;subject&gt;Digital
+        divide&lt;/subject&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;relation&gt;$$Cseries $$VAmerican governance and public
+        policy.&lt;/relation&gt;\n                &lt;source&gt;nyu_aleph&lt;/source&gt;\n
+        \               &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(HN49.I56
+        M67 2003 )$$Sunavailable$$31$$41$$5N$$61$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$INS$$LNSFO$$1Main Collection$$2(HN49.I56
+        M67 2003 )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YTNSFO$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph000980206&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;lds01&gt;NS&lt;/lds01&gt;\n                &lt;availinstitution&gt;$$INS$$Sunavailable&lt;/availinstitution&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;unavailable&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
+        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;Karen
+        \ Mossberger&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Mossberger,
+        Karen.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Mossberger,
+        K&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Karen Mossberger,
+        Caroline J. Tolbert, Mary Stansbury.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Caroline
+        J.  Tolbert&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Mary,
+        \ Stansbury  1957-&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Tolbert,
+        C&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Stansbury,
+        M&lt;/creatorcontrib&gt;\n                &lt;title&gt;Virtual inequality
+        : beyond the digital divide /&lt;/title&gt;\n                &lt;subject&gt;Digital
+        divide&lt;/subject&gt;\n                &lt;subject&gt;Divide, Digital&lt;/subject&gt;\n
+        \               &lt;subject&gt;Global digital divide&lt;/subject&gt;\n                &lt;subject&gt;GDD
+        (Global digital divide)&lt;/subject&gt;\n                &lt;general&gt;Georgetown
+        University Press,&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph000980206&lt;/recordid&gt;\n                &lt;isbn&gt;0878409998&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780878409990&lt;/isbn&gt;\n                &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2003&lt;/creationdate&gt;\n                &lt;addtitle&gt;American
+        governance and public policy series&lt;/addtitle&gt;\n                &lt;addtitle&gt;American
+        governance and public policy.&lt;/addtitle&gt;\n                &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;TNSFO&lt;/searchscope&gt;\n                &lt;searchscope&gt;TNSFO
+        Main Collection&lt;/searchscope&gt;\n                &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n                &lt;searchscope&gt;NS&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NSFO&lt;/searchscope&gt;\n                &lt;scope&gt;BOBST&lt;/scope&gt;\n
+        \               &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;\n                &lt;scope&gt;TNSFO&lt;/scope&gt;\n
+        \               &lt;scope&gt;TNSFO Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;scope&gt;NS&lt;/scope&gt;\n
+        \               &lt;scope&gt;NSFO&lt;/scope&gt;\n                &lt;lsr01&gt;HN49.I56
+        M67 2003&lt;/lsr01&gt;\n                &lt;lsr01&gt;HN49 .I56 M67 2003&lt;/lsr01&gt;\n
+        \               &lt;lsr02&gt;Georgetown University Press,&lt;/lsr02&gt;\n
+        \             &lt;/search&gt;\n              &lt;sort&gt;\n                &lt;title&gt;Virtual
+        inequality : beyond the digital divide /&lt;/title&gt;\n                &lt;creationdate&gt;2003&lt;/creationdate&gt;\n
+        \               &lt;author&gt;Mossberger, Karen.&lt;/author&gt;\n                &lt;lso01&gt;2003&lt;/lso01&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2003&lt;/creationdate&gt;\n                &lt;topic&gt;Digital
+        divide&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
+        \               &lt;collection&gt;NSFO&lt;/collection&gt;\n                &lt;prefilter&gt;books&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n                &lt;creatorcontrib&gt;Mossberger,
+        K&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Tolbert, C&lt;/creatorcontrib&gt;\n
+        \               &lt;creatorcontrib&gt;Stansbury, M&lt;/creatorcontrib&gt;\n
+        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;library&gt;NSFO&lt;/library&gt;\n
+        \               &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;\n                &lt;classificationlcc&gt;H
+        - Social sciences.&#x2013;Social history and conditions. Social problems.
+        Social reform&lt;/classificationlcc&gt;\n                &lt;frbrgroupid&gt;60293520&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c1&gt;2003004571&lt;/c1&gt;\n
+        \               &lt;c2&gt;0878409998;9780878409990&lt;/c2&gt;\n                &lt;c3&gt;virtualinequalitybeyitaldivide&lt;/c3&gt;\n
+        \               &lt;c4&gt;2003&lt;/c4&gt;\n                &lt;f1&gt;2003004571&lt;/f1&gt;\n
+        \               &lt;f3&gt;0878409998;9780878409990&lt;/f3&gt;\n                &lt;f5&gt;virtualinequalitybeyitaldivide&lt;/f5&gt;\n
+        \               &lt;f6&gt;2003&lt;/f6&gt;\n                &lt;f7&gt;virtual
+        inequality beyond the digital divide&lt;/f7&gt;\n                &lt;f8&gt;dcu&lt;/f8&gt;\n
+        \               &lt;f9&gt;xvi, 192 p. ;&lt;/f9&gt;\n                &lt;f10&gt;georgetown
+        university press&lt;/f10&gt;\n                &lt;f11&gt;mossberger karen&lt;/f11&gt;\n
+        \             &lt;/dedup&gt;\n              &lt;frbr&gt;\n                &lt;t&gt;1&lt;/t&gt;\n
+        \               &lt;k1&gt;$$Kmossberger karen$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookvirtual
+        inequality beyond the digital divide$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;institution&gt;NYU&lt;/institution&gt;\n
+        \               &lt;institution&gt;NS&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
+        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;HN49.I56&lt;/classificationlcc&gt;\n
+        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Mossberger&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Karen&lt;/aufirst&gt;\n                &lt;au&gt;Mossberger,
+        Karen&lt;/au&gt;\n                &lt;addau&gt;Tolbert, Caroline J&lt;/addau&gt;\n
+        \               &lt;addau&gt;Stansbury, Mary, 1957-&lt;/addau&gt;\n                &lt;btitle&gt;Virtual
+        inequality : beyond the digital divide&lt;/btitle&gt;\n                &lt;seriestitle&gt;American
+        governance and public policy&lt;/seriestitle&gt;\n                &lt;date&gt;2003&lt;/date&gt;\n
+        \               &lt;risdate&gt;c2003.&lt;/risdate&gt;\n                &lt;isbn&gt;0878409998&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780878409990&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;notes&gt;Includes bibliographical references (p. [171]-183)
+        and index.&lt;/notes&gt;\n                &lt;cop&gt;Washington, D.C.&lt;/cop&gt;\n
+        \               &lt;pub&gt;Georgetown University Press&lt;/pub&gt;\n                &lt;lccn&gt;2003004571&lt;/lccn&gt;\n
+        \               &lt;lad01&gt;BOBSTTNSFO&lt;/lad01&gt;\n                &lt;lad01&gt;Physical
+        Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n            &lt;/record&gt;\n
+        \         &lt;/PrimoNMBib&gt;\n        &lt;/sear:DOC&gt;\n      &lt;/DOCSET&gt;\n
+        \   &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;\n</getRecordReturn></getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:06 GMT
+- request:
+    method: get
+    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=1ZQ8VEWY2A7VSJ93CW82&AssociateTag=nyli0a-20&ItemId=0393964582&Operation=ItemLookup&ResponseGroup=Large&Service=AWSECommerceService&Signature=bIu/V1WiryxlzZ1q50NDNBO5DJkWBJvFR+nquv7QSVQ=&Timestamp=2013-01-27T12:52:08-05:00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:08 GMT
+      Server:
+      - Server
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Vary:
+      - Accept-Encoding,User-Agent
+      Nncoection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxJdGVtTG9va3VwUmVzcG9uc2UgeG1s
+        bnM9Imh0dHA6Ly93ZWJzZXJ2aWNlcy5hbWF6b24uY29tL0FXU0VDb21tZXJj
+        ZVNlcnZpY2UvMjAxMS0wOC0wMSI+PE9wZXJhdGlvblJlcXVlc3Q+PEhUVFBI
+        ZWFkZXJzPjxIZWFkZXIgTmFtZT0iVXNlckFnZW50IiBWYWx1ZT0iUnVieSI+
+        PC9IZWFkZXI+PC9IVFRQSGVhZGVycz48UmVxdWVzdElkPmY4MGI2ZTRiLTc2
+        YTAtNGZjNS1hOWNhLWMzZmNlYzUwNGU0ZDwvUmVxdWVzdElkPjxBcmd1bWVu
+        dHM+PEFyZ3VtZW50IE5hbWU9IlNlcnZpY2UiIFZhbHVlPSJBV1NFQ29tbWVy
+        Y2VTZXJ2aWNlIj48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJPcGVyYXRp
+        b24iIFZhbHVlPSJJdGVtTG9va3VwIj48L0FyZ3VtZW50PjxBcmd1bWVudCBO
+        YW1lPSJTaWduYXR1cmUiIFZhbHVlPSJiSXUvVjFXaXJ5eGx6WjFxNTBORE5C
+        TzVESmtXQkp2RlIrbnF1djdRU1ZRPSI+PC9Bcmd1bWVudD48QXJndW1lbnQg
+        TmFtZT0iQXNzb2NpYXRlVGFnIiBWYWx1ZT0ibnlsaTBhLTIwIj48L0FyZ3Vt
+        ZW50PjxBcmd1bWVudCBOYW1lPSJJdGVtSWQiIFZhbHVlPSIwMzkzOTY0NTgy
+        Ij48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJBV1NBY2Nlc3NLZXlJZCIg
+        VmFsdWU9IjFaUThWRVdZMkE3VlNKOTNDVzgyIj48L0FyZ3VtZW50PjxBcmd1
+        bWVudCBOYW1lPSJUaW1lc3RhbXAiIFZhbHVlPSIyMDEzLTAxLTI3VDEyOjUy
+        OjA4LTA1OjAwIj48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJSZXNwb25z
+        ZUdyb3VwIiBWYWx1ZT0iTGFyZ2UiPjwvQXJndW1lbnQ+PC9Bcmd1bWVudHM+
+        PFJlcXVlc3RQcm9jZXNzaW5nVGltZT4wLjE2MTQzOTAwMDAwMDAwMDA8L1Jl
+        cXVlc3RQcm9jZXNzaW5nVGltZT48L09wZXJhdGlvblJlcXVlc3Q+PEl0ZW1z
+        PjxSZXF1ZXN0PjxJc1ZhbGlkPlRydWU8L0lzVmFsaWQ+PEl0ZW1Mb29rdXBS
+        ZXF1ZXN0PjxJZFR5cGU+QVNJTjwvSWRUeXBlPjxJdGVtSWQ+MDM5Mzk2NDU4
+        MjwvSXRlbUlkPjxSZXNwb25zZUdyb3VwPkxhcmdlPC9SZXNwb25zZUdyb3Vw
+        PjxWYXJpYXRpb25QYWdlPkFsbDwvVmFyaWF0aW9uUGFnZT48L0l0ZW1Mb29r
+        dXBSZXF1ZXN0PjwvUmVxdWVzdD48SXRlbT48QVNJTj4wMzkzOTY0NTgyPC9B
+        U0lOPjxEZXRhaWxQYWdlVVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9GcmFu
+        a2Vuc3RlaW4tQ3JpdGljYWwtRWRpdGlvbnMtV29sbHN0b25lY3JhZnQtU2hl
+        bGxleS9kcC8wMzkzOTY0NTgyJTNGU3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVX
+        WTJBN1ZTSjkzQ1c4MiUyNnRhZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNE
+        eG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDE2NTk1MyUyNmNyZWF0
+        aXZlQVNJTiUzRDAzOTM5NjQ1ODI8L0RldGFpbFBhZ2VVUkw+PEl0ZW1MaW5r
+        cz48SXRlbUxpbms+PERlc2NyaXB0aW9uPlRlY2huaWNhbCBEZXRhaWxzPC9E
+        ZXNjcmlwdGlvbj48VVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9GcmFua2Vu
+        c3RlaW4tQ3JpdGljYWwtRWRpdGlvbnMtV29sbHN0b25lY3JhZnQtU2hlbGxl
+        eS9kcC90ZWNoLWRhdGEvMDM5Mzk2NDU4MiUzRlN1YnNjcmlwdGlvbklkJTNE
+        MVpROFZFV1kyQTdWU0o5M0NXODIlMjZ0YWclM0RueWxpMGEtMjAlMjZsaW5r
+        Q29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRpdmUlM0QzODYwMDEl
+        MjZjcmVhdGl2ZUFTSU4lM0QwMzkzOTY0NTgyPC9VUkw+PC9JdGVtTGluaz48
+        SXRlbUxpbms+PERlc2NyaXB0aW9uPkFkZCBUbyBCYWJ5IFJlZ2lzdHJ5PC9E
+        ZXNjcmlwdGlvbj48VVJMPmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9yZWdp
+        c3RyeS9iYWJ5L2FkZC1pdGVtLmh0bWwlM0Zhc2luLjAlM0QwMzkzOTY0NTgy
+        JTI2U3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRh
+        ZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUl
+        MjZjcmVhdGl2ZSUzRDM4NjAwMSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1
+        ODI8L1VSTD48L0l0ZW1MaW5rPjxJdGVtTGluaz48RGVzY3JpcHRpb24+QWRk
+        IFRvIFdlZGRpbmcgUmVnaXN0cnk8L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDov
+        L3d3dy5hbWF6b24uY29tL2dwL3JlZ2lzdHJ5L3dlZGRpbmcvYWRkLWl0ZW0u
+        aHRtbCUzRmFzaW4uMCUzRDAzOTM5NjQ1ODIlMjZTdWJzY3JpcHRpb25JZCUz
+        RDFaUThWRVdZMkE3VlNKOTNDVzgyJTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlu
+        a0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAx
+        JTI2Y3JlYXRpdmVBU0lOJTNEMDM5Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+
+        PEl0ZW1MaW5rPjxEZXNjcmlwdGlvbj5BZGQgVG8gV2lzaGxpc3Q8L0Rlc2Ny
+        aXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3JlZ2lzdHJ5
+        L3dpc2hsaXN0L2FkZC1pdGVtLmh0bWwlM0Zhc2luLjAlM0QwMzkzOTY0NTgy
+        JTI2U3Vic2NyaXB0aW9uSWQlM0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRh
+        ZyUzRG55bGkwYS0yMCUyNmxpbmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUl
+        MjZjcmVhdGl2ZSUzRDM4NjAwMSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1
+        ODI8L1VSTD48L0l0ZW1MaW5rPjxJdGVtTGluaz48RGVzY3JpcHRpb24+VGVs
+        bCBBIEZyaWVuZDwvRGVzY3JpcHRpb24+PFVSTD5odHRwOi8vd3d3LmFtYXpv
+        bi5jb20vZ3AvcGRwL3RhZi8wMzkzOTY0NTgyJTNGU3Vic2NyaXB0aW9uSWQl
+        M0QxWlE4VkVXWTJBN1ZTSjkzQ1c4MiUyNnRhZyUzRG55bGkwYS0yMCUyNmxp
+        bmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDM4NjAw
+        MSUyNmNyZWF0aXZlQVNJTiUzRDAzOTM5NjQ1ODI8L1VSTD48L0l0ZW1MaW5r
+        PjxJdGVtTGluaz48RGVzY3JpcHRpb24+QWxsIEN1c3RvbWVyIFJldmlld3M8
+        L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29tL3Jldmll
+        dy9wcm9kdWN0LzAzOTM5NjQ1ODIlM0ZTdWJzY3JpcHRpb25JZCUzRDFaUThW
+        RVdZMkE3VlNKOTNDVzgyJTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlua0NvZGUl
+        M0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3Jl
+        YXRpdmVBU0lOJTNEMDM5Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+PEl0ZW1M
+        aW5rPjxEZXNjcmlwdGlvbj5BbGwgT2ZmZXJzPC9EZXNjcmlwdGlvbj48VVJM
+        Pmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9vZmZlci1saXN0aW5nLzAzOTM5
+        NjQ1ODIlM0ZTdWJzY3JpcHRpb25JZCUzRDFaUThWRVdZMkE3VlNKOTNDVzgy
+        JTI2dGFnJTNEbnlsaTBhLTIwJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNE
+        MjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3JlYXRpdmVBU0lOJTNEMDM5
+        Mzk2NDU4MjwvVVJMPjwvSXRlbUxpbms+PC9JdGVtTGlua3M+PFNhbGVzUmFu
+        az4xMDg0MjwvU2FsZXNSYW5rPjxTbWFsbEltYWdlPjxVUkw+aHR0cDovL2Vj
+        eC5pbWFnZXMtYW1hem9uLmNvbS9pbWFnZXMvSS80MU1ybFI2b1ZvTC5fU0w3
+        NV8uanBnPC9VUkw+PEhlaWdodCBVbml0cz0icGl4ZWxzIj43NTwvSGVpZ2h0
+        PjxXaWR0aCBVbml0cz0icGl4ZWxzIj40NjwvV2lkdGg+PC9TbWFsbEltYWdl
+        PjxNZWRpdW1JbWFnZT48VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5j
+        b20vaW1hZ2VzL0kvNDFNcmxSNm9Wb0wuX1NMMTYwXy5qcGc8L1VSTD48SGVp
+        Z2h0IFVuaXRzPSJwaXhlbHMiPjE2MDwvSGVpZ2h0PjxXaWR0aCBVbml0cz0i
+        cGl4ZWxzIj45ODwvV2lkdGg+PC9NZWRpdW1JbWFnZT48TGFyZ2VJbWFnZT48
+        VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDFN
+        cmxSNm9Wb0wuanBnPC9VUkw+PEhlaWdodCBVbml0cz0icGl4ZWxzIj40MjA8
+        L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+MjU3PC9XaWR0aD48L0xh
+        cmdlSW1hZ2U+PEltYWdlU2V0cz48SW1hZ2VTZXQgQ2F0ZWdvcnk9InByaW1h
+        cnkiPjxTd2F0Y2hJbWFnZT48VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpv
+        bi5jb20vaW1hZ2VzL0kvNDFNcmxSNm9Wb0wuX1NMMzBfLmpwZzwvVVJMPjxI
+        ZWlnaHQgVW5pdHM9InBpeGVscyI+MzA8L0hlaWdodD48V2lkdGggVW5pdHM9
+        InBpeGVscyI+MTg8L1dpZHRoPjwvU3dhdGNoSW1hZ2U+PFNtYWxsSW1hZ2U+
+        PFVSTD5odHRwOi8vZWN4LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzQx
+        TXJsUjZvVm9MLl9TTDc1Xy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhl
+        bHMiPjc1PC9IZWlnaHQ+PFdpZHRoIFVuaXRzPSJwaXhlbHMiPjQ2PC9XaWR0
+        aD48L1NtYWxsSW1hZ2U+PFRodW1ibmFpbEltYWdlPjxVUkw+aHR0cDovL2Vj
+        eC5pbWFnZXMtYW1hem9uLmNvbS9pbWFnZXMvSS80MU1ybFI2b1ZvTC5fU0w3
+        NV8uanBnPC9VUkw+PEhlaWdodCBVbml0cz0icGl4ZWxzIj43NTwvSGVpZ2h0
+        PjxXaWR0aCBVbml0cz0icGl4ZWxzIj40NjwvV2lkdGg+PC9UaHVtYm5haWxJ
+        bWFnZT48VGlueUltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMtYW1hem9u
+        LmNvbS9pbWFnZXMvSS80MU1ybFI2b1ZvTC5fU0wxMTBfLmpwZzwvVVJMPjxI
+        ZWlnaHQgVW5pdHM9InBpeGVscyI+MTEwPC9IZWlnaHQ+PFdpZHRoIFVuaXRz
+        PSJwaXhlbHMiPjY3PC9XaWR0aD48L1RpbnlJbWFnZT48TWVkaXVtSW1hZ2U+
+        PFVSTD5odHRwOi8vZWN4LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzQx
+        TXJsUjZvVm9MLl9TTDE2MF8uanBnPC9VUkw+PEhlaWdodCBVbml0cz0icGl4
+        ZWxzIj4xNjA8L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+OTg8L1dp
+        ZHRoPjwvTWVkaXVtSW1hZ2U+PExhcmdlSW1hZ2U+PFVSTD5odHRwOi8vZWN4
+        LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzQxTXJsUjZvVm9MLmpwZzwv
+        VVJMPjxIZWlnaHQgVW5pdHM9InBpeGVscyI+NDIwPC9IZWlnaHQ+PFdpZHRo
+        IFVuaXRzPSJwaXhlbHMiPjI1NzwvV2lkdGg+PC9MYXJnZUltYWdlPjwvSW1h
+        Z2VTZXQ+PC9JbWFnZVNldHM+PEl0ZW1BdHRyaWJ1dGVzPjxBdXRob3I+TWFy
+        eSBXb2xsc3RvbmVjcmFmdCBTaGVsbGV5PC9BdXRob3I+PEJpbmRpbmc+UGFw
+        ZXJiYWNrPC9CaW5kaW5nPjxDcmVhdG9yIFJvbGU9IkVkaXRvciI+Si4gUGF1
+        bCBIdW50ZXI8L0NyZWF0b3I+PEVBTj45NzgwMzkzOTY0NTg1PC9FQU4+PEVB
+        Tkxpc3Q+PEVBTkxpc3RFbGVtZW50Pjk3ODAzOTM5NjQ1ODU8L0VBTkxpc3RF
+        bGVtZW50PjwvRUFOTGlzdD48RWRpdGlvbj4xcnN0PC9FZGl0aW9uPjxGZWF0
+        dXJlPkNvbXByZWhlbnNpdmUgc3R1ZHkgb2YgdGhlIGJvb2sgRnJhbmtlbnN0
+        ZWluPC9GZWF0dXJlPjxGZWF0dXJlPlByZXNlbnRzIHRoZSBmdWxsIG9yaWdp
+        bmFsIDE4MTggdGV4dDwvRmVhdHVyZT48RmVhdHVyZT5QcmVzZW50cyB2YXJp
+        b3VzIGNvbnRleHRzIGJ5IHRoZSBhdXRob3IgYW5kIG90aGVycyBvZiB0aGUg
+        ZGF5PC9GZWF0dXJlPjxGZWF0dXJlPlByZXNlbnRzIDE5dGggY2VudHVyeSBy
+        ZXNwb25zZXMgYW5kIHdpdGggZXhlcnB0cyBmcm9tIG1hZ2F6aW5lczwvRmVh
+        dHVyZT48RmVhdHVyZT5QcmVzZW50cyBtb2Rlcm4gZGF5IGNyaXRpY2lzbSBh
+        bmQgYXV0aG9yIGNocm9ub2xvZ2ljYWwgYmlvZ3JhcGh5PC9GZWF0dXJlPjxJ
+        U0JOPjAzOTM5NjQ1ODI8L0lTQk4+PEl0ZW1EaW1lbnNpb25zPjxIZWlnaHQg
+        VW5pdHM9Imh1bmRyZWR0aHMtaW5jaGVzIj40NzwvSGVpZ2h0PjxMZW5ndGgg
+        VW5pdHM9Imh1bmRyZWR0aHMtaW5jaGVzIj44Mzk8L0xlbmd0aD48V2VpZ2h0
+        IFVuaXRzPSJodW5kcmVkdGhzLXBvdW5kcyI+NzM8L1dlaWdodD48V2lkdGgg
+        VW5pdHM9Imh1bmRyZWR0aHMtaW5jaGVzIj41MjQ8L1dpZHRoPjwvSXRlbURp
+        bWVuc2lvbnM+PExhYmVsPlcuIFcuIE5vcnRvbiAmYW1wOyBDb21wYW55PC9M
+        YWJlbD48TGFuZ3VhZ2VzPjxMYW5ndWFnZT48TmFtZT5FbmdsaXNoPC9OYW1l
+        PjxUeXBlPlVua25vd248L1R5cGU+PC9MYW5ndWFnZT48TGFuZ3VhZ2U+PE5h
+        bWU+RW5nbGlzaDwvTmFtZT48VHlwZT5PcmlnaW5hbCBMYW5ndWFnZTwvVHlw
+        ZT48L0xhbmd1YWdlPjxMYW5ndWFnZT48TmFtZT5FbmdsaXNoPC9OYW1lPjxU
+        eXBlPlB1Ymxpc2hlZDwvVHlwZT48L0xhbmd1YWdlPjwvTGFuZ3VhZ2VzPjxM
+        aXN0UHJpY2U+PEFtb3VudD4xOTk1PC9BbW91bnQ+PEN1cnJlbmN5Q29kZT5V
+        U0Q8L0N1cnJlbmN5Q29kZT48Rm9ybWF0dGVkUHJpY2U+JDE5Ljk1PC9Gb3Jt
+        YXR0ZWRQcmljZT48L0xpc3RQcmljZT48TWFudWZhY3R1cmVyPlcuIFcuIE5v
+        cnRvbiAmYW1wOyBDb21wYW55PC9NYW51ZmFjdHVyZXI+PE51bWJlck9mSXRl
+        bXM+MTwvTnVtYmVyT2ZJdGVtcz48TnVtYmVyT2ZQYWdlcz4zNTI8L051bWJl
+        ck9mUGFnZXM+PFBhY2thZ2VEaW1lbnNpb25zPjxIZWlnaHQgVW5pdHM9Imh1
+        bmRyZWR0aHMtaW5jaGVzIj43OTwvSGVpZ2h0PjxMZW5ndGggVW5pdHM9Imh1
+        bmRyZWR0aHMtaW5jaGVzIj44Mjc8L0xlbmd0aD48V2VpZ2h0IFVuaXRzPSJo
+        dW5kcmVkdGhzLXBvdW5kcyI+NzU8L1dlaWdodD48V2lkdGggVW5pdHM9Imh1
+        bmRyZWR0aHMtaW5jaGVzIj41MDQ8L1dpZHRoPjwvUGFja2FnZURpbWVuc2lv
+        bnM+PFBhY2thZ2VRdWFudGl0eT4xPC9QYWNrYWdlUXVhbnRpdHk+PFByb2R1
+        Y3RHcm91cD5Cb29rPC9Qcm9kdWN0R3JvdXA+PFByb2R1Y3RUeXBlTmFtZT5B
+        QklTX0JPT0s8L1Byb2R1Y3RUeXBlTmFtZT48UHVibGljYXRpb25EYXRlPjE5
+        OTUtMTItMTc8L1B1YmxpY2F0aW9uRGF0ZT48UHVibGlzaGVyPlcuIFcuIE5v
+        cnRvbiAmYW1wOyBDb21wYW55PC9QdWJsaXNoZXI+PFNLVT45MDQwOTY4NDM8
+        L1NLVT48U3R1ZGlvPlcuIFcuIE5vcnRvbiAmYW1wOyBDb21wYW55PC9TdHVk
+        aW8+PFRpdGxlPkZyYW5rZW5zdGVpbiAoTm9ydG9uIENyaXRpY2FsIEVkaXRp
+        b25zKTwvVGl0bGU+PC9JdGVtQXR0cmlidXRlcz48T2ZmZXJTdW1tYXJ5PjxM
+        b3dlc3ROZXdQcmljZT48QW1vdW50PjgwMDwvQW1vdW50PjxDdXJyZW5jeUNv
+        ZGU+VVNEPC9DdXJyZW5jeUNvZGU+PEZvcm1hdHRlZFByaWNlPiQ4LjAwPC9G
+        b3JtYXR0ZWRQcmljZT48L0xvd2VzdE5ld1ByaWNlPjxMb3dlc3RVc2VkUHJp
+        Y2U+PEFtb3VudD4yMDA8L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVTRDwvQ3Vy
+        cmVuY3lDb2RlPjxGb3JtYXR0ZWRQcmljZT4kMi4wMDwvRm9ybWF0dGVkUHJp
+        Y2U+PC9Mb3dlc3RVc2VkUHJpY2U+PFRvdGFsTmV3PjEyPC9Ub3RhbE5ldz48
+        VG90YWxVc2VkPjI0ODwvVG90YWxVc2VkPjxUb3RhbENvbGxlY3RpYmxlPjA8
+        L1RvdGFsQ29sbGVjdGlibGU+PFRvdGFsUmVmdXJiaXNoZWQ+MDwvVG90YWxS
+        ZWZ1cmJpc2hlZD48L09mZmVyU3VtbWFyeT48T2ZmZXJzPjxUb3RhbE9mZmVy
+        cz4wPC9Ub3RhbE9mZmVycz48VG90YWxPZmZlclBhZ2VzPjA8L1RvdGFsT2Zm
+        ZXJQYWdlcz48TW9yZU9mZmVyc1VybD4wPC9Nb3JlT2ZmZXJzVXJsPjwvT2Zm
+        ZXJzPjxDdXN0b21lclJldmlld3M+PElGcmFtZVVSTD5odHRwOi8vd3d3LmFt
+        YXpvbi5jb20vcmV2aWV3cy9pZnJhbWU/YWtpZD0xWlE4VkVXWTJBN1ZTSjkz
+        Q1c4MiZhbXA7YWxpbmtDb2RlPXhtMiZhbXA7YXNpbj0wMzkzOTY0NTgyJmFt
+        cDthdGFnPW55bGkwYS0yMCZhbXA7ZXhwPTIwMTMtMDEtMjhUMTclM0E1MiUz
+        QTA4WiZhbXA7dj0yJmFtcDtzaWc9ZE94RnJhR2IwbCUyQktNaUZzdlB0NHhV
+        SEVZM3IlMkZnUlVNY2FEZGhwdzQ5Y00lM0Q8L0lGcmFtZVVSTD48SGFzUmV2
+        aWV3cz50cnVlPC9IYXNSZXZpZXdzPjwvQ3VzdG9tZXJSZXZpZXdzPjxFZGl0
+        b3JpYWxSZXZpZXdzPjxFZGl0b3JpYWxSZXZpZXc+PFNvdXJjZT5Qcm9kdWN0
+        IERlc2NyaXB0aW9uPC9Tb3VyY2U+PENvbnRlbnQ+Jmx0O3AmZ3Q7Jmx0O3N0
+        cm9uZyZndDtUaGUgdGV4dCBvZiB0aGlzIE5vcnRvbiBDcml0aWNhbCBFZGl0
+        aW9uIGlzIHRoYXQgb2YgdGhlIDE4MTggZmlyc3QgZWRpdGlvbiwgcHVibGlz
+        aGVkIGluIHRocmVlIHZvbHVtZXMgYnkgTGFja2luZ3RvbiwgSHVnaGVzLCBI
+        YXJkaW5nLCBNYXZvciwgYW5kIEpvbmVzLCBpbiB3aGljaCBvbmx5IG9idmlv
+        dXMgdHlwb2dyYXBoaWNhbCBlcnJvcnMgaGF2ZSBiZWVuIGNvcnJlY3RlZC4g
+        VGhpcyB0ZXh0IHJlcHJlc2VudHMgd2hhdCAmbHQ7ZW0mZ3Q7RnJhbmtlbnN0
+        ZWluJmx0Oy9lbSZndDsncyBmaXJzdCByZWFkZXJzIGVuY291bnRlcmVkIGFu
+        ZCBpcyB0aGUgdGV4dCBmYXZvcmVkIGJ5IHNjaG9sYXJzLiBBIHNwZWNpYWwg
+        Y3JpdGljYWwgc2VjdGlvbiwgQ29tcG9zaXRpb24gYW5kIFJldmlzaW9uLCBp
+        bmNsdWRlcyBlc3NheXMgYnkgTS4gSy4gSm9zZXBoIGFuZCBBbm5lIE1lbGxv
+        ciB0aGF0IGFkZHJlc3MgdGhlIGlzc3VlcyBzdXJyb3VuZGluZyB0ZWFjaGVy
+        cycgY2hvaWNlIG9mIHRleHQuJmx0Oy9zdHJvbmcmZ3Q7Jmx0Oy9wJmd0O0Nv
+        bnRlbXBvcmFyeSBwZXJzcGVjdGl2ZXMgb2YgdGhlIHRleHQgYXJlIHByb3Zp
+        ZGVkIGluIHR3byBzZWN0aW9uczogQ29udGV4dHMgaGVscHMgcGxhY2UgdGhl
+        IG5vdmVsIGluIHJlbGF0aW9uIHRvIHRoZSBtaW5kIG9mIGl0cyBjcmVhdG9y
+        IHRocm91Z2ggd3JpdGluZ3MgYnkgTWFyeSBTaGVsbGV5LCBQZXJjeSBCeXNz
+        aGUgU2hlbGxleSwgTG9yZCBCeXJvbiwgYW5kIEpvaG4gV2lsbGlhbSBQb2xp
+        ZG9yaTsgTmluZXRlZW50aC1DZW50dXJ5IFJlc3BvbnNlcyBjb2xsZWN0cyBz
+        aXggcmVhY3Rpb25zIHRvIHRoZSBib29rIGZyb20gdGhlIHllYXJzIDE4MTgg
+        dG8gMTg4Ni4mbHQ7YnIgLyZndDsgJmx0O2JyIC8mZ3Q7IENyaXRpY2lzbSBi
+        cmluZ3MgdG9nZXRoZXIgdHdlbHZlIHNlbWluYWwgZXNzYXlzLiBUaGUgZW1w
+        aGFzaXMgaXMgb24gcmFuZ2XigJRib3RoIGNyaXRpY2FsIChwc3ljaG9hbmFs
+        eXRpYywgbXl0aGljLCBuZXcgaGlzdG9yaWNpc3QsIGFuZCBmZW1pbmlzdCBl
+        c3NheXMgYXJlIGluY2x1ZGVkKSBhbmQgY2hyb25vbG9naWNhbCAoZXNzYXlz
+        IHNwYW4gdGhlIGxhc3QgdGhpcnR5IHllYXJzKS4gQ2hyaXN0b3BoZXIgU21h
+        bGwsIEdlb3JnZSBMZWJpbmUsIEVsbGVuIE1vZXJzLCBTYW5kcmEgTS4gR2ls
+        YmVydCBhbmQgU3VzYW4gR3ViYXIsIEJhcmJhcmEgSm9obnNvbiwgTWFyeSBQ
+        b292ZXksIEdheWF0cmkgQ2hha3Jhdm9ydHkgU3BpdmFrLCBXaWxsaWFtIFZl
+        ZWRlciwgQW5uZSBLLiBNZWxsb3IsIFN1c2FuIFdpbm5ldHQsIE1hcmlseW4g
+        QnV0bGVyLCBhbmQgTGF3cmVuY2UgTGlwa2luZyBwcm92aWRlIGRpdmVyc2Ug
+        cGVyc3BlY3RpdmVzLiZsdDticiAvJmd0OyAmbHQ7YnIgLyZndDsgQSBDaHJv
+        bm9sb2d5IGFuZCBTZWxlY3RlZCBCaWJsaW9ncmFwaHkgYXJlIGFsc28gaW5j
+        bHVkZWQuPC9Db250ZW50PjxJc0xpbmtTdXBwcmVzc2VkPjA8L0lzTGlua1N1
+        cHByZXNzZWQ+PC9FZGl0b3JpYWxSZXZpZXc+PC9FZGl0b3JpYWxSZXZpZXdz
+        PjxTaW1pbGFyUHJvZHVjdHM+PFNpbWlsYXJQcm9kdWN0PjxBU0lOPjAzOTM5
+        NzAxMjQ8L0FTSU4+PFRpdGxlPkRyYWN1bGEgKE5vcnRvbiBDcml0aWNhbCBF
+        ZGl0aW9ucyk8L1RpdGxlPjwvU2ltaWxhclByb2R1Y3Q+PFNpbWlsYXJQcm9k
+        dWN0PjxBU0lOPjA2NzEwMDQ2NDY8L0FTSU4+PFRpdGxlPk91ciBBbWVyaWNh
+        OiBMaWZlIGFuZCBEZWF0aCBvbiB0aGUgU291dGggU2lkZSBvZiBDaGljYWdv
+        PC9UaXRsZT48L1NpbWlsYXJQcm9kdWN0PjxTaW1pbGFyUHJvZHVjdD48QVNJ
+        Tj4wMzkzOTU2NTEyPC9BU0lOPjxUaXRsZT5Sb3Vzc2VhdSdzIFBvbGl0aWNh
+        bCBXcml0aW5nczogRGlzY291cnNlIG9uIEluZXF1YWxpdHksIERpc2NvdXJz
+        ZSBvbiBQb2xpdGljYWwgRWNvbm9teSwgIE9uIFNvY2lhbCBDb250cmFjdCAo
+        Tm9ydG9uIENyaXRpY2FsIEVkaXRpb25zKTwvVGl0bGU+PC9TaW1pbGFyUHJv
+        ZHVjdD48U2ltaWxhclByb2R1Y3Q+PEFTSU4+MDM5MzkyODMyMjwvQVNJTj48
+        VGl0bGU+VGhlIE5vcnRvbiBBbnRob2xvZ3kgb2YgRW5nbGlzaCBMaXRlcmF0
+        dXJlLCBWb2x1bWUgQSBhbmQgQjogVGhlIE1pZGRsZSBBZ2VzIHRocm91Z2gg
+        dGhlIFR3ZW50aWV0aCBDZW50dXJ5IGFuZCBBZnRlcjwvVGl0bGU+PC9TaW1p
+        bGFyUHJvZHVjdD48U2ltaWxhclByb2R1Y3Q+PEFTSU4+MDM5Mzk1NjE2NDwv
+        QVNJTj48VGl0bGU+VGhlIENvbW11bmlzdCBNYW5pZmVzdG8gKE5vcnRvbiBD
+        cml0aWNhbCBFZGl0aW9ucyk8L1RpdGxlPjwvU2ltaWxhclByb2R1Y3Q+PC9T
+        aW1pbGFyUHJvZHVjdHM+PEJyb3dzZU5vZGVzPjxCcm93c2VOb2RlPjxCcm93
+        c2VOb2RlSWQ+NDk4MjwvQnJvd3NlTm9kZUlkPjxOYW1lPldhbGVzPC9OYW1l
+        PjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD40OTM1PC9C
+        cm93c2VOb2RlSWQ+PE5hbWU+RXVyb3BlPC9OYW1lPjxBbmNlc3RvcnM+PEJy
+        b3dzZU5vZGU+PEJyb3dzZU5vZGVJZD45PC9Ccm93c2VOb2RlSWQ+PE5hbWU+
+        SGlzdG9yeTwvTmFtZT48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VO
+        b2RlSWQ+MTAwMDwvQnJvd3NlTm9kZUlkPjxOYW1lPlN1YmplY3RzPC9OYW1l
+        PjxJc0NhdGVnb3J5Um9vdD4xPC9Jc0NhdGVnb3J5Um9vdD48QW5jZXN0b3Jz
+        PjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MjgzMTU1PC9Ccm93c2VOb2Rl
+        SWQ+PE5hbWU+Qm9va3M8L05hbWU+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3Jz
+        PjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PC9BbmNl
+        c3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48
+        QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjEwMDE2PC9Ccm93c2VOb2RlSWQ+
+        PE5hbWU+QnJpdGlzaDwvTmFtZT48Q2hpbGRyZW4+PEJyb3dzZU5vZGU+PEJy
+        b3dzZU5vZGVJZD4xMDA4ODwvQnJvd3NlTm9kZUlkPjxOYW1lPkNvbnRlbXBv
+        cmFyeTwvTmFtZT48L0Jyb3dzZU5vZGU+PEJyb3dzZU5vZGU+PEJyb3dzZU5v
+        ZGVJZD4xMDA5MDwvQnJvd3NlTm9kZUlkPjxOYW1lPkhpc3RvcmljYWw8L05h
+        bWU+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MTYw
+        MDQ2NjE8L0Jyb3dzZU5vZGVJZD48TmFtZT5IdW1vciAmYW1wOyBTYXRpcmU8
+        L05hbWU+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+
+        MTAwOTY8L0Jyb3dzZU5vZGVJZD48TmFtZT5Qb2V0cnk8L05hbWU+PC9Ccm93
+        c2VOb2RlPjwvQ2hpbGRyZW4+PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJv
+        d3NlTm9kZUlkPjE3PC9Ccm93c2VOb2RlSWQ+PE5hbWU+TGl0ZXJhdHVyZSAm
+        YW1wOyBGaWN0aW9uPC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJy
+        b3dzZU5vZGVJZD4xMDAwPC9Ccm93c2VOb2RlSWQ+PE5hbWU+U3ViamVjdHM8
+        L05hbWU+PElzQ2F0ZWdvcnlSb290PjE8L0lzQ2F0ZWdvcnlSb290PjxBbmNl
+        c3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD4yODMxNTU8L0Jyb3dz
+        ZU5vZGVJZD48TmFtZT5Cb29rczwvTmFtZT48L0Jyb3dzZU5vZGU+PC9BbmNl
+        c3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48
+        L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PEJyb3dzZU5vZGU+PEJyb3dzZU5v
+        ZGVJZD4xMDEyOTwvQnJvd3NlTm9kZUlkPjxOYW1lPkNvbnRlbXBvcmFyeTwv
+        TmFtZT48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MTc8
+        L0Jyb3dzZU5vZGVJZD48TmFtZT5MaXRlcmF0dXJlICZhbXA7IEZpY3Rpb248
+        L05hbWU+PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjEw
+        MDA8L0Jyb3dzZU5vZGVJZD48TmFtZT5TdWJqZWN0czwvTmFtZT48SXNDYXRl
+        Z29yeVJvb3Q+MTwvSXNDYXRlZ29yeVJvb3Q+PEFuY2VzdG9ycz48QnJvd3Nl
+        Tm9kZT48QnJvd3NlTm9kZUlkPjI4MzE1NTwvQnJvd3NlTm9kZUlkPjxOYW1l
+        PkJvb2tzPC9OYW1lPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dz
+        ZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3JzPjwv
+        QnJvd3NlTm9kZT48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjEwMTMyPC9C
+        cm93c2VOb2RlSWQ+PE5hbWU+TGl0ZXJhcnk8L05hbWU+PEFuY2VzdG9ycz48
+        QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlkPjE3PC9Ccm93c2VOb2RlSWQ+PE5h
+        bWU+TGl0ZXJhdHVyZSAmYW1wOyBGaWN0aW9uPC9OYW1lPjxBbmNlc3RvcnM+
+        PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD4xMDAwPC9Ccm93c2VOb2RlSWQ+
+        PE5hbWU+U3ViamVjdHM8L05hbWU+PElzQ2F0ZWdvcnlSb290PjE8L0lzQ2F0
+        ZWdvcnlSb290PjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJ
+        ZD4yODMxNTU8L0Jyb3dzZU5vZGVJZD48TmFtZT5Cb29rczwvTmFtZT48L0Jy
+        b3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3Jz
+        PjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jyb3dzZU5vZGU+PEJyb3dz
+        ZU5vZGU+PEJyb3dzZU5vZGVJZD40OTE0MDg8L0Jyb3dzZU5vZGVJZD48TmFt
+        ZT5FbmdsaXNoIExpdGVyYXR1cmU8L05hbWU+PEFuY2VzdG9ycz48QnJvd3Nl
+        Tm9kZT48QnJvd3NlTm9kZUlkPjQ2ODIzNjwvQnJvd3NlTm9kZUlkPjxOYW1l
+        PkxpdGVyYXR1cmU8L05hbWU+PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJv
+        d3NlTm9kZUlkPjQ2ODIwNjwvQnJvd3NlTm9kZUlkPjxOYW1lPkh1bWFuaXRp
+        ZXM8L05hbWU+PEFuY2VzdG9ycz48QnJvd3NlTm9kZT48QnJvd3NlTm9kZUlk
+        PjQ2NTYwMDwvQnJvd3NlTm9kZUlkPjxOYW1lPk5ldywgVXNlZCAmYW1wOyBS
+        ZW50YWwgVGV4dGJvb2tzPC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+
+        PEJyb3dzZU5vZGVJZD4yMzQ5MDMwMDExPC9Ccm93c2VOb2RlSWQ+PE5hbWU+
+        U3BlY2lhbHR5IEJvdXRpcXVlPC9OYW1lPjxBbmNlc3RvcnM+PEJyb3dzZU5v
+        ZGU+PEJyb3dzZU5vZGVJZD4yODMxNTU8L0Jyb3dzZU5vZGVJZD48TmFtZT5C
+        b29rczwvTmFtZT48L0Jyb3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VO
+        b2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9ycz48L0Jy
+        b3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5jZXN0b3Jz
+        PjwvQnJvd3NlTm9kZT48L0Jyb3dzZU5vZGVzPjwvSXRlbT48L0l0ZW1zPjwv
+        SXRlbUxvb2t1cFJlc3BvbnNlPg==
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:08 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01000980206/items?view=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sun, 27 Jan 2013 17:52:14 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01000980206/items/NYU50000980206000010"><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>000980206</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142036269960</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20031027</z30-open-date><z30-update-date>20031113</z30-update-date><z30-cataloger>FISHERC</z30-cataloger><z30-date-last-return>20120831</z30-date-last-return><z30-hour-last-return>1314</z30-hour-last-return><z30-ip-last-return>128.122.88.170</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HN49.I56
+        M67 2003</z30-call-no><z30-call-no-key>0 hn!49 i56 m67 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>16.36</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>002945614</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>001</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000980206</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HN49.I56</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Mossberger,
+        Karen.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Virtual
+        inequality :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Washington,
+        D.C. : Georgetown University Press, c2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0878409998
+        (pbk. : alk. paper)</z13-isbn-issn></z13><status>On Shelf</status></item><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01000980206/items/NYU50000980206000020"><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>000980206</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207039784289</z30-barcode><z30-sub-library>New
+        School Fogelman Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20040105</z30-open-date><z30-update-date>20080806</z30-update-date><z30-cataloger>TEREFENK</z30-cataloger><z30-date-last-return>20050908</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HN49.I56
+        M67 2003</z30-call-no><z30-call-no-key>0 hn!49 i56 m67 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>002945615</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000980206</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HN49.I56</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Mossberger,
+        Karen.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Virtual
+        inequality :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Washington,
+        D.C. : Georgetown University Press, c2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0878409998
+        (pbk. : alk. paper)</z13-isbn-issn></z13><status>Offsite Available</status></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:14 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu/X?bor_id=BOR_ID&library=NYU50&op=bor-auth&sub_library=BOBST&translate=N&verification=VERIFICATION
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:14 GMT
+      Server:
+      - ALEPH/5.20
+      Content-Type:
+      - text/xml
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 01:00:00 GMT
+      Content-Length:
+      - '4963'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version = \"1.0\" encoding = \"UTF-8\"?>\n<bor-auth>\n<z303>\n<z303-id>BOR_ID</z303-id>\n<z303-proxy-for-id></z303-proxy-for-id>\n<z303-primary-id></z303-primary-id>\n<z303-name-key>dalton
+        scot thomas                    BOR_ID</z303-name-key>\n<z303-user-type></z303-user-type>\n<z303-user-library></z303-user-library>\n<z303-open-date>20041119</z303-open-date>\n<z303-update-date>20130127</z303-update-date>\n<z303-con-lng>ENG</z303-con-lng>\n<z303-alpha>L</z303-alpha>\n<z303-name>DALTON,SCOT
+        THOMAS</z303-name>\n<z303-title></z303-title>\n<z303-delinq-1>00</z303-delinq-1>\n<z303-delinq-n-1></z303-delinq-n-1>\n<z303-delinq-1-update-date>00000000</z303-delinq-1-update-date>\n<z303-delinq-1-cat-name></z303-delinq-1-cat-name>\n<z303-delinq-2>00</z303-delinq-2>\n<z303-delinq-n-2></z303-delinq-n-2>\n<z303-delinq-2-update-date>20120731</z303-delinq-2-update-date>\n<z303-delinq-2-cat-name>CROWEC</z303-delinq-2-cat-name>\n<z303-delinq-3>00</z303-delinq-3>\n<z303-delinq-n-3></z303-delinq-n-3>\n<z303-delinq-3-update-date>00000000</z303-delinq-3-update-date>\n<z303-delinq-3-cat-name></z303-delinq-3-cat-name>\n<z303-budget></z303-budget>\n<z303-profile-id></z303-profile-id>\n<z303-ill-library></z303-ill-library>\n<z303-home-library>BOBST</z303-home-library>\n<z303-field-1></z303-field-1>\n<z303-field-2></z303-field-2>\n<z303-field-3></z303-field-3>\n<z303-note-1>See
+        Local Bobst Notes for NYU ATA History</z303-note-1>\n<z303-note-2></z303-note-2>\n<z303-salutation></z303-salutation>\n<z303-ill-total-limit>0000</z303-ill-total-limit>\n<z303-ill-active-limit>0000</z303-ill-active-limit>\n<z303-dispatch-library></z303-dispatch-library>\n<z303-birth-date>00000000</z303-birth-date>\n<z303-export-consent>Y</z303-export-consent>\n<z303-proxy-id-type>00</z303-proxy-id-type>\n<z303-send-all-letters>Y</z303-send-all-letters>\n<z303-plain-html>P</z303-plain-html>\n<z303-want-sms>N</z303-want-sms>\n<z303-plif-modification></z303-plif-modification>\n<z303-title-req-limit>0000</z303-title-req-limit>\n<z303-gender></z303-gender>\n<z303-birthplace>PLIF
+        LOADED</z303-birthplace>\n</z303>\n<z304>\n<z304-id>BOR_ID</z304-id>\n<z304-sequence>01</z304-sequence>\n<z304-address-0>DALTON,SCOT
+        THOMAS</z304-address-0>\n<z304-address-1>274 PROSPECT PARK WEST, #2L</z304-address-1>\n<z304-address-2>BROOKLYN</z304-address-2>\n<z304-address-3>NY</z304-address-3>\n<z304-address-4>NY</z304-address-4>\n<z304-zip>11215</z304-zip>\n<z304-email-address>std5@nyu.edu</z304-email-address>\n<z304-telephone></z304-telephone>\n<z304-date-from>20130127</z304-date-from>\n<z304-date-to>20200101</z304-date-to>\n<z304-address-type>02</z304-address-type>\n<z304-telephone-2></z304-telephone-2>\n<z304-telephone-3></z304-telephone-3>\n<z304-telephone-4></z304-telephone-4>\n<z304-sms-number></z304-sms-number>\n<z304-update-date>20130127</z304-update-date>\n<z304-cat-name>CONV</z304-cat-name>\n</z304>\n<z305>\n<z305-id>BOR_ID</z305-id>\n<z305-sub-library>BOBST</z305-sub-library>\n<z305-open-date>20041119</z305-open-date>\n<z305-update-date>20130127</z305-update-date>\n<z305-bor-type>CB</z305-bor-type>\n<z305-bor-status>51</z305-bor-status>\n<z305-registration-date>00000000</z305-registration-date>\n<z305-expiry-date>20131031</z305-expiry-date>\n<z305-note></z305-note>\n<z305-loan-permission>Y</z305-loan-permission>\n<z305-photo-permission>Y</z305-photo-permission>\n<z305-over-permission>Y</z305-over-permission>\n<z305-multi-hold>N</z305-multi-hold>\n<z305-loan-check>Y</z305-loan-check>\n<z305-hold-permission>Y</z305-hold-permission>\n<z305-renew-permission>Y</z305-renew-permission>\n<z305-rr-permission>N</z305-rr-permission>\n<z305-ignore-late-return>N</z305-ignore-late-return>\n<z305-last-activity-date>20111205</z305-last-activity-date>\n<z305-photo-charge>F</z305-photo-charge>\n<z305-no-loan>0000</z305-no-loan>\n<z305-no-hold>0000</z305-no-hold>\n<z305-no-photo>0000</z305-no-photo>\n<z305-no-cash>0000</z305-no-cash>\n<z305-cash-limit>5.00</z305-cash-limit>\n<z305-credit-debit></z305-credit-debit>\n<z305-sum>0.00</z305-sum>\n<z305-delinq-1>00</z305-delinq-1>\n<z305-delinq-n-1></z305-delinq-n-1>\n<z305-delinq-1-update-date>00000000</z305-delinq-1-update-date>\n<z305-delinq-1-cat-name></z305-delinq-1-cat-name>\n<z305-delinq-2>00</z305-delinq-2>\n<z305-delinq-n-2></z305-delinq-n-2>\n<z305-delinq-2-update-date>00000000</z305-delinq-2-update-date>\n<z305-delinq-2-cat-name></z305-delinq-2-cat-name>\n<z305-delinq-3>00</z305-delinq-3>\n<z305-delinq-n-3></z305-delinq-n-3>\n<z305-delinq-3-update-date>00000000</z305-delinq-3-update-date>\n<z305-delinq-3-cat-name></z305-delinq-3-cat-name>\n<z305-field-1></z305-field-1>\n<z305-field-2>ATA
+        6/19/12 (Rslvd 7/31/12)</z305-field-2>\n<z305-field-3></z305-field-3>\n<z305-hold-on-shelf>Y</z305-hold-on-shelf>\n<z305-end-block-date>00000000</z305-end-block-date>\n<z305-booking-permission>N</z305-booking-permission>\n<z305-booking-ignore-hours>N</z305-booking-ignore-hours>\n<z305-rush-cat-request>N</z305-rush-cat-request>\n</z305>\n<session-id>A3R6J4JSA9DD9BDSAQQU2A9L979TL3EBYKR6KLBIQECBFR2CDS</session-id>\n</bor-auth>\n "
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:14 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu/X?bor_id=BOR_ID&library=NYU50&op=bor-auth&sub_library=TNSFO&translate=N&verification=VERIFICATION
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 27 Jan 2013 17:52:18 GMT
+      Server:
+      - ALEPH/5.20
+      Content-Type:
+      - text/xml
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Expires:
+      - Sat, 01 Jan 2000 01:00:00 GMT
+      Content-Length:
+      - '4936'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version = \"1.0\" encoding = \"UTF-8\"?>\n<bor-auth>\n<z303>\n<z303-id>BOR_ID</z303-id>\n<z303-proxy-for-id></z303-proxy-for-id>\n<z303-primary-id></z303-primary-id>\n<z303-name-key>dalton
+        scot thomas                    BOR_ID</z303-name-key>\n<z303-user-type></z303-user-type>\n<z303-user-library></z303-user-library>\n<z303-open-date>20041119</z303-open-date>\n<z303-update-date>20130127</z303-update-date>\n<z303-con-lng>ENG</z303-con-lng>\n<z303-alpha>L</z303-alpha>\n<z303-name>DALTON,SCOT
+        THOMAS</z303-name>\n<z303-title></z303-title>\n<z303-delinq-1>00</z303-delinq-1>\n<z303-delinq-n-1></z303-delinq-n-1>\n<z303-delinq-1-update-date>00000000</z303-delinq-1-update-date>\n<z303-delinq-1-cat-name></z303-delinq-1-cat-name>\n<z303-delinq-2>00</z303-delinq-2>\n<z303-delinq-n-2></z303-delinq-n-2>\n<z303-delinq-2-update-date>20120731</z303-delinq-2-update-date>\n<z303-delinq-2-cat-name>CROWEC</z303-delinq-2-cat-name>\n<z303-delinq-3>00</z303-delinq-3>\n<z303-delinq-n-3></z303-delinq-n-3>\n<z303-delinq-3-update-date>00000000</z303-delinq-3-update-date>\n<z303-delinq-3-cat-name></z303-delinq-3-cat-name>\n<z303-budget></z303-budget>\n<z303-profile-id></z303-profile-id>\n<z303-ill-library></z303-ill-library>\n<z303-home-library>BOBST</z303-home-library>\n<z303-field-1></z303-field-1>\n<z303-field-2></z303-field-2>\n<z303-field-3></z303-field-3>\n<z303-note-1>See
+        Local Bobst Notes for NYU ATA History</z303-note-1>\n<z303-note-2></z303-note-2>\n<z303-salutation></z303-salutation>\n<z303-ill-total-limit>0000</z303-ill-total-limit>\n<z303-ill-active-limit>0000</z303-ill-active-limit>\n<z303-dispatch-library></z303-dispatch-library>\n<z303-birth-date>00000000</z303-birth-date>\n<z303-export-consent>Y</z303-export-consent>\n<z303-proxy-id-type>00</z303-proxy-id-type>\n<z303-send-all-letters>Y</z303-send-all-letters>\n<z303-plain-html>P</z303-plain-html>\n<z303-want-sms>N</z303-want-sms>\n<z303-plif-modification></z303-plif-modification>\n<z303-title-req-limit>0000</z303-title-req-limit>\n<z303-gender></z303-gender>\n<z303-birthplace>PLIF
+        LOADED</z303-birthplace>\n</z303>\n<z304>\n<z304-id>BOR_ID</z304-id>\n<z304-sequence>01</z304-sequence>\n<z304-address-0>DALTON,SCOT
+        THOMAS</z304-address-0>\n<z304-address-1>274 PROSPECT PARK WEST, #2L</z304-address-1>\n<z304-address-2>BROOKLYN</z304-address-2>\n<z304-address-3>NY</z304-address-3>\n<z304-address-4>NY</z304-address-4>\n<z304-zip>11215</z304-zip>\n<z304-email-address>std5@nyu.edu</z304-email-address>\n<z304-telephone></z304-telephone>\n<z304-date-from>20130127</z304-date-from>\n<z304-date-to>20200101</z304-date-to>\n<z304-address-type>02</z304-address-type>\n<z304-telephone-2></z304-telephone-2>\n<z304-telephone-3></z304-telephone-3>\n<z304-telephone-4></z304-telephone-4>\n<z304-sms-number></z304-sms-number>\n<z304-update-date>20130127</z304-update-date>\n<z304-cat-name>CONV</z304-cat-name>\n</z304>\n<z305>\n<z305-id>BOR_ID</z305-id>\n<z305-sub-library>TNSFO</z305-sub-library>\n<z305-open-date>20041119</z305-open-date>\n<z305-update-date>20130127</z305-update-date>\n<z305-bor-type>CB</z305-bor-type>\n<z305-bor-status>51</z305-bor-status>\n<z305-registration-date>00000000</z305-registration-date>\n<z305-expiry-date>20131031</z305-expiry-date>\n<z305-note></z305-note>\n<z305-loan-permission>Y</z305-loan-permission>\n<z305-photo-permission>Y</z305-photo-permission>\n<z305-over-permission>Y</z305-over-permission>\n<z305-multi-hold>Y</z305-multi-hold>\n<z305-loan-check>Y</z305-loan-check>\n<z305-hold-permission>Y</z305-hold-permission>\n<z305-renew-permission>Y</z305-renew-permission>\n<z305-rr-permission>N</z305-rr-permission>\n<z305-ignore-late-return>N</z305-ignore-late-return>\n<z305-last-activity-date>00000000</z305-last-activity-date>\n<z305-photo-charge>F</z305-photo-charge>\n<z305-no-loan>0000</z305-no-loan>\n<z305-no-hold>0000</z305-no-hold>\n<z305-no-photo>0000</z305-no-photo>\n<z305-no-cash>0000</z305-no-cash>\n<z305-cash-limit>5.00</z305-cash-limit>\n<z305-credit-debit></z305-credit-debit>\n<z305-sum>0.00</z305-sum>\n<z305-delinq-1>00</z305-delinq-1>\n<z305-delinq-n-1></z305-delinq-n-1>\n<z305-delinq-1-update-date>00000000</z305-delinq-1-update-date>\n<z305-delinq-1-cat-name></z305-delinq-1-cat-name>\n<z305-delinq-2>00</z305-delinq-2>\n<z305-delinq-n-2></z305-delinq-n-2>\n<z305-delinq-2-update-date>00000000</z305-delinq-2-update-date>\n<z305-delinq-2-cat-name></z305-delinq-2-cat-name>\n<z305-delinq-3>00</z305-delinq-3>\n<z305-delinq-n-3></z305-delinq-n-3>\n<z305-delinq-3-update-date>00000000</z305-delinq-3-update-date>\n<z305-delinq-3-cat-name></z305-delinq-3-cat-name>\n<z305-field-1></z305-field-1>\n<z305-field-2></z305-field-2>\n<z305-field-3></z305-field-3>\n<z305-hold-on-shelf>N</z305-hold-on-shelf>\n<z305-end-block-date>00000000</z305-end-block-date>\n<z305-booking-permission>N</z305-booking-permission>\n<z305-booking-ignore-hours>N</z305-booking-ignore-hours>\n<z305-rush-cat-request>N</z305-rush-cat-request>\n</z305>\n<session-id>N3KUP8T2SVM189H6I8L2GRIQCIS3MBXEIXREN6YPNILNDPC7M3</session-id>\n</bor-auth>\n "
+    http_version: 
+  recorded_at: Sun, 27 Jan 2013 17:52:18 GMT
+recorded_with: VCR 2.4.0

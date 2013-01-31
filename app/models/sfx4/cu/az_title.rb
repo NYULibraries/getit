@@ -1,8 +1,7 @@
 module Sfx4
   module Cu
-    class AzTitle < ActiveRecord::Base
-      include Sfx4::Local::AzTitle
-      include Sfx4::Cu::Connection
+    class AzTitle < Sfx4::Cu::Base
+      include Sfx4::Abstract::AzTitle
     end
   end
 end

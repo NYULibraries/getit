@@ -1,0 +1,29 @@
+<div id="account" class="sidebar-section">
+  <h2><a href="http://library.nyu.edu/info/myworkspace.html" title="What is My Workspace?" data-placement="left"><i class="icons-famfamfam-help"></i></a> My Workspace</h2>
+  <ul>
+    <% if current_user %>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf?institution=CU">My e-shelf</a></li>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf/account?institution=CU">My library account</a></li>
+      <li><%= link_to "Log-out " + current_user.firstname, logout_url, :class=>"logout" %></li>
+    <% else %>
+      <li><a href="https://webdev1.library.nyu.edu/eshelf?institution=CU">Guest e-shelf (log in for more options)</a></li>
+    <% end %>
+  </ul>
+</div>
+<div id="additional_options" class="sidebar-section">
+  <h2>Additional Options</h2>
+  <ul>
+    <li><a href="http://sfx.library.nyu.edu/sfxcooper/az/?param_perform_value=searchCategories" target="_blank">Browse Cooper E-Journals by Category</a></li>
+    <li><%= link_to('E-Journals at NYU', url_for(:controller=>'search', 'umlaut.institution'=>"NYU"), {:target => "_blank"}) %></li>
+    <li><%= link_to('E-Journals at The New School', {:controller=>'search', "umlaut.institution"=>"NS"}, {:target => "_blank"}) %></li>
+  </ul>
+</div>
+<div id="help" class="sidebar-section">
+  <h2>Need help?</h2>
+  <ul>
+    <li><a href="http://library.cooper.edu/primo/side_ejournals_using.html" target="_blank">Using E-Journals</a></li>
+    <li><a href="http://library.cooper.edu/primo/side_contact.html" target="_blank">Contact Us</a></li>
+    <li><a href="http://library.cooper.edu/library_info_page.html#A" target="_blank">Cooper Library Access &amp; Hours</a></li>
+    <li><a href="http://library.cooper.edu" target="_blank">Cooper Library Home Page</a></li>
+  </ul>
+</div>

@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
+      encoding: US-ASCII
+      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&fq=letter_group_sm%3AA&sort=title_sort_s+asc&start=0&rows=20&q=%2A%3A%2A
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 31 Jan 2013 04:28:15 GMT
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eydyZXNwb25zZUhlYWRlcic9Pnsnc3RhdHVzJz0+MCwnUVRpbWUnPT4wLCdw
+        YXJhbXMnPT57J3NvcnQnPT4ndGl0bGVfc29ydF9zIGFzYycsJ3d0Jz0+J3J1
+        YnknLCdyb3dzJz0+JzIwJywnc3RhcnQnPT4nMCcsJ3EnPT4nKjoqJywnZnEn
+        PT5bJ3R5cGU6U2Z4NFxcOlxcOkN1XFw6XFw6QXpUaXRsZScsJ2xldHRlcl9n
+        cm91cF9zbTpBJ119fSwncmVzcG9uc2UnPT57J251bUZvdW5kJz0+NTUyOCwn
+        c3RhcnQnPT4wLCdkb2NzJz0+W3snaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUg
+        NDI5MzInLCdvYmplY3RfaWRfc3MnPT4nMTExMDc3ODIwNjQ5MDk4JywndGl0
+        bGVfZGlzcGxheV9zcyc9PidBLkEuTy4gbmV3c2xldHRlcid9LHsnaWQnPT4n
+        U2Z4NDo6Q3U6OkF6VGl0bGUgMTkxMDknLCdvYmplY3RfaWRfc3MnPT4nMTAw
+        MDAwMDAwMDcxNTU2MycsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQSZHIEluZm9y
+        bWF0aW9uIFNlcnZpY2VzJ30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSA2
+        MjMnLCdvYmplY3RfaWRfc3MnPT4nMTEwOTg1ODIyNDUwODM4JywndGl0bGVf
+        ZGlzcGxheV9zcyc9PidBLkkuQi5TLiBidWxsZXRpbid9LHsnaWQnPT4nU2Z4
+        NDo6Q3U6OkF6VGl0bGUgMzM1OTknLCdvYmplY3RfaWRfc3MnPT4nOTkxMDQy
+        NzQyOTQ3MTE2JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJjaGl2
+        ZXMgb2YgZGVybWF0b2xvZ3knfSx7J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxl
+        IDEwNDM0Jywnb2JqZWN0X2lkX3NzJz0+Jzk5MTA0Mjc0MjA1ODc5NicsJ3Rp
+        dGxlX2Rpc3BsYXlfc3MnPT4nQS5NLkEuIGFyY2hpdmVzIG9mIGdlbmVyYWwg
+        cHN5Y2hpYXRyeSd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUgMTQwOTMn
+        LCdvYmplY3RfaWRfc3MnPT4nOTkxMDQyNzQ0NDg5MTY4JywndGl0bGVfZGlz
+        cGxheV9zcyc9PidBLk0uQS4gYXJjaGl2ZXMgb2YgaW5kdXN0cmlhbCBoZWFs
+        dGgnfSx7J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxlIDIyOTk5Jywnb2JqZWN0
+        X2lkX3NzJz0+Jzk5MTA0Mjc0MjA1ODc5OCcsJ3RpdGxlX2Rpc3BsYXlfc3Mn
+        PT4nQS5NLkEuIGFyY2hpdmVzIG9mIG5ldXJvbG9neSd9LHsnaWQnPT4nU2Z4
+        NDo6Q3U6OkF6VGl0bGUgNTI5MDEnLCdvYmplY3RfaWRfc3MnPT4nOTkxMDQy
+        NzIzMzg5MzQ2JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJjaGl2
+        ZXMgb2Ygb3BodGhhbG1vbG9neSd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0
+        bGUgNDM1MjInLCdvYmplY3RfaWRfc3MnPT4nOTkxMDQyNzQ0Mjk5NzE2Jywn
+        dGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJjaGl2ZXMgb2Ygc3VyZ2Vy
+        eSd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUgNTA4NzMnLCdvYmplY3Rf
+        aWRfc3MnPT4nMTAwMDAwMDAwMDI5MDEzNScsJ3RpdGxlX2Rpc3BsYXlfc3Mn
+        PT4nQS5NLiBCZXN0IE5ld3N3aXJlJ30seydpZCc9PidTZng0OjpDdTo6QXpU
+        aXRsZSAyMTI5MScsJ29iamVjdF9pZF9zcyc9Pic5OTEwNDI3NDMxNDIzNjAn
+        LCd0aXRsZV9kaXNwbGF5X3NzJz0+J0EuTS5HLkkuIHJhcHBvcnQgYW5udWVs
+        J30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSAyNTM2Jywnb2JqZWN0X2lk
+        X3NzJz0+JzEwMDAwMDAwMDA1MzIyNzQnLCd0aXRsZV9kaXNwbGF5X3NzJz0+
+        J8OBIG1vcmd1bid9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUgNTE5ODAn
+        LCdvYmplY3RfaWRfc3MnPT4nMTEwOTc4OTg0NTY2MzQ5JywndGl0bGVfZGlz
+        cGxheV9zcyc9PidBIHBhcnRlIHJlaSd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6
+        VGl0bGUgMzIyNTEnLCdvYmplY3RfaWRfc3MnPT4nMTEwOTg1ODIyNDYwMDc2
+        JywndGl0bGVfZGlzcGxheV9zcyc9PidBLiBzcC4gQW5nbGFpcyBkZSBzcMOp
+        Y2lhbGl0w6knfSx7J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxlIDgxNzEnLCdv
+        YmplY3RfaWRfc3MnPT4nMTAwMDAwMDAwMDUzMTEyOCcsJ3RpdGxlX2Rpc3Bs
+        YXlfc3MnPT4nQS1aOiBMdXhlbWJ1cmdlciBpbGx1c3RyaWVydGUgV29jaGVu
+        c2NocmlmdCd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUgMTU3NTQnLCdv
+        YmplY3RfaWRfc3MnPT4nOTkxMDQyNzQ4Mjc2NjAwJywndGl0bGVfZGlzcGxh
+        eV9zcyc9PidUaGUgQUFBUyBvYnNlcnZlcid9LHsnaWQnPT4nU2Z4NDo6Q3U6
+        OkF6VGl0bGUgMzExMTgnLCdvYmplY3RfaWRfc3MnPT4nMTEwOTc4OTc4OTU3
+        ODc0JywndGl0bGVfZGlzcGxheV9zcyc9PidBQUFTIHJlcG9ydCAuLi4gcmVz
+        ZWFyY2ggJiBkZXZlbG9wbWVudCd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0
+        bGUgMjE4NDMnLCdvYmplY3RfaWRfc3MnPT4nOTkxMDQyNzMwOTA4NzM2Jywn
+        dGl0bGVfZGlzcGxheV9zcyc9PidBQUFTIHNjaWVuY2UgYW5kIHRlY2hub2xv
+        Z3kgcG9saWN5IHllYXJib29rJ30seydpZCc9PidTZng0OjpDdTo6QXpUaXRs
+        ZSA1NDY1MCcsJ29iamVjdF9pZF9zcyc9PicxMTEwMjc2MTgzOTcwMDAnLCd0
+        aXRsZV9kaXNwbGF5X3NzJz0+J0FBQyZVIHBlZXIgcmV2aWV3J30seydpZCc9
+        PidTZng0OjpDdTo6QXpUaXRsZSA0ODk1NycsJ29iamVjdF9pZF9zcyc9Picy
+        NDgwMDAwMDAwMDA0MjY0JywndGl0bGVfZGlzcGxheV9zcyc9PidBQUNBIGRp
+        Z2l0YWwnfV19fQ==
+    http_version: 
+  recorded_at: Thu, 31 Jan 2013 04:28:16 GMT
+- request:
+    method: get
+    uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Content-Length:
+      - '27'
+      Date:
+      - Thu, 31 Jan 2013 04:28:16 GMT
+    body:
+      encoding: US-ASCII
+      string: ! 'string=iPlanetDirectoryPro
+
+'
+    http_version: 
+  recorded_at: Thu, 31 Jan 2013 04:28:16 GMT
+recorded_with: VCR 2.4.0
