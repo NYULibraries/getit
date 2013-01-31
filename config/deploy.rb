@@ -65,5 +65,14 @@ namespace :cache do
   end
 end
 
+namespace :exlibris do
+  namespace :aleph do
+    desc "Refresh Aleph tables"
+    task :refresh, :roles => :app do
+      run "cd #{current_release} && rake exlibris:aleph:refresh RAILS_ENV=#{rails_env}"
+    end
+  end
+end
+
 before "deploy", "deploy:migrations"
 after "deploy", "deploy:cleanup", "deploy:passenger_symlink", "cache:clear", "cache:tmp_clear"
