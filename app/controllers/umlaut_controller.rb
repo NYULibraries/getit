@@ -26,20 +26,9 @@ class UmlautController < ApplicationController
     # Insitution for the closure.
     institution = current_primary_institution
     self.umlaut_config.configure do
-      unless institution.nil? or institution.views.nil?
+      if institution and institution.views and institution.views["sfx_base_url"]
         sfx do
-          sfx_base_url institution.views["sfx_base_url"] unless institution.views["sfx_base_url"].nil?
-        end
-      end
-      unless institution.nil? or institution.controllers.nil?
-        search do
-          unless institution.controllers["searcher"].nil?
-            az_search_method_const = SearchMethods
-            az_search_method_consts = institution.controllers["searcher"].split("::").each do |const|
-              az_search_method_const = az_search_method_const.const_get(const.to_sym)
-            end
-            az_search_method az_search_method_const 
-          end
+          sfx_base_url institution.views["sfx_base_url"]
         end
       end
     end

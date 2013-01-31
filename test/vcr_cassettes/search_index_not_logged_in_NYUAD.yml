@@ -23,12 +23,12 @@ http_interactions:
       Content-Length:
       - '27'
       Date:
-      - Sun, 27 Jan 2013 17:52:30 GMT
+      - Thu, 31 Jan 2013 04:28:11 GMT
     body:
       encoding: US-ASCII
       string: ! 'string=iPlanetDirectoryPro
 
 '
     http_version: 
-  recorded_at: Sun, 27 Jan 2013 17:52:30 GMT
+  recorded_at: Thu, 31 Jan 2013 04:28:12 GMT
 recorded_with: VCR 2.4.0

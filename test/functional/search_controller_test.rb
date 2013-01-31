@@ -2,6 +2,60 @@ require 'test_helper'
 
 class SearchControllerTest < ActionController::TestCase
   setup :activate_authlogic
+  
+  test "search institutional config" do
+    # UserSession.create(users(:std5))
+    # get :index
+    # assert_equal "http://sfx.library.nyu.edu/sfxlcl41?", 
+    #   @controller.umlaut_config.sfx.sfx_base_url
+    # assert_equal SearchMethods::Sfx4Solr::Local, 
+    #   @controller.umlaut_config.search.az_search_method
+  end
+
+  test "search institutional config NYU" do
+    # UserSession.create(users(:std5))
+    # @controller.instance_variable_set(:@current_primary_institution, 
+    #   Institutions.institutions[:NYU])
+    # get :index
+    # assert_equal "http://sfx.library.nyu.edu/sfxlcl41?", 
+    #   @controller.umlaut_config.sfx.sfx_base_url
+    # assert_equal SearchMethods::Sfx4Solr::Local, 
+    #   @controller.umlaut_config.search.az_search_method
+  end
+
+  test "search institutional config NS" do
+    # UserSession.create(users(:std5))
+    # @controller.instance_variable_set(:@current_primary_institution, 
+    #   Institutions.institutions[:NS])
+    # get :index
+    # assert_equal "http://sfx4.library.newschool.edu/ns?", 
+    #   @controller.umlaut_config.sfx.sfx_base_url
+    # assert_equal SearchMethods::Sfx4Solr::Ns, 
+    #   @controller.umlaut_config.search.az_search_method
+  end
+
+  test "search institutional config CU" do
+    # UserSession.create(users(:std5))
+    # @controller.instance_variable_set(:@current_primary_institution, 
+    #   Institutions.institutions[:CU])
+    # get :index
+    # assert_equal "http://sfx.library.nyu.edu/sfxcooper?", 
+    #   @controller.umlaut_config.sfx.sfx_base_url
+    # @controller.class.ancestors
+    # assert_equal SearchMethods::Sfx4Solr::Cu, 
+    #   @controller.class.ancestors.first
+  end
+
+  test "search institutional config NYUAD" do
+    # UserSession.create(users(:std5))
+    # @controller.instance_variable_set(:@current_primary_institution, 
+    #   Institutions.institutions[:NYUAD])
+    # get :index
+    # assert_equal "http://sfx.library.nyu.edu/sfxlcl41?", 
+    #   @controller.umlaut_config.sfx.sfx_base_url
+    # assert_equal SearchMethods::Sfx4Solr::Local, 
+    #   @controller.umlaut_config.search.az_search_method
+  end
 
   test "search index logged in" do
     UserSession.create(users(:std5))
@@ -60,7 +114,7 @@ class SearchControllerTest < ActionController::TestCase
 
   test "index not logged in" do
     # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index logged in') do
+    VCR.use_cassette('search index not logged in') do
       get :index
       assert_response :success
       assert_select "title", "BobCat"
@@ -74,7 +128,7 @@ class SearchControllerTest < ActionController::TestCase
 
   test "index not logged in NS" do
     # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index logged in NS') do
+    VCR.use_cassette('search index not logged in NS') do
       get :index, "umlaut.institution" => "NS"
       assert_response :success
       assert_select "title", "BobCat"
@@ -86,7 +140,7 @@ class SearchControllerTest < ActionController::TestCase
 
   test "index not logged in CU" do
     # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index logged in CU') do
+    VCR.use_cassette('search index not logged in CU') do
       get :index, "umlaut.institution" => "CU"
       assert_response :success
       assert_select "title", "BobCat"
@@ -98,7 +152,7 @@ class SearchControllerTest < ActionController::TestCase
 
   test "index not logged in NYUAD" do
     # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index logged in NYUAD') do
+    VCR.use_cassette('search index not logged in NYUAD') do
       get :index, "umlaut.institution" => "NYUAD"
       assert_response :success
       assert_select "title", "BobCat"
@@ -112,7 +166,7 @@ class SearchControllerTest < ActionController::TestCase
 
   test "index not logged in HSL" do
     # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index logged in HSL') do
+    VCR.use_cassette('search index not logged in HSL') do
       get :index, "umlaut.institution" => "HSL"
       assert_response :success
       assert_select "title", "BobCat"

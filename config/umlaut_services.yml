@@ -340,7 +340,6 @@ NYUAD:
   views:
     css: search_nyuad
     resolve_css: resolve_nyuad
-    sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
     wayfinder_attributes:
       primo:
         url_suffix: "?institution=nyuad"

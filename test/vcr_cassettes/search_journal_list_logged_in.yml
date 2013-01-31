@@ -21,13 +21,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sun, 27 Jan 2013 17:52:31 GMT
+      - Thu, 31 Jan 2013 04:28:14 GMT
       Connection:
       - close
     body:
       encoding: US-ASCII
       string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''sort''=>''title_sort_s
-        asc'',''fq''=>[''type:Sfx4\\:\\:Local\\:\\:AzTitle'',''letter_group_sm:A''],''wt''=>''ruby'',''rows''=>''20'',''start''=>''0'',''q''=>''*:*''}},''response''=>{''numFound''=>10825,''start''=>0,''docs''=>[{''id''=>''Sfx4::Local::AzTitle
+        asc'',''wt''=>''ruby'',''rows''=>''20'',''start''=>''0'',''q''=>''*:*'',''fq''=>[''type:Sfx4\\:\\:Local\\:\\:AzTitle'',''letter_group_sm:A'']}},''response''=>{''numFound''=>10825,''start''=>0,''docs''=>[{''id''=>''Sfx4::Local::AzTitle
         94682'',''object_id_ss''=>''3460000000080718'',''title_display_ss''=>''A.A.H.P.S.S.S.
         news and information'',''issn_ss''=>''0158-9040'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Local::AzTitle
         47044'',''object_id_ss''=>''111077820649098'',''title_display_ss''=>''A.A.O.
@@ -69,5 +69,5 @@ http_interactions:
         108876'',''object_id_ss''=>''991042744299716'',''title_display_ss''=>''A.M.A.
         archives of surgery'',''issn_ss''=>''0096-6908'',''isbn_ss''=>'''',''lccn_ss''=>''22011929''}]}}'
     http_version: 
-  recorded_at: Sun, 27 Jan 2013 17:52:32 GMT
+  recorded_at: Thu, 31 Jan 2013 04:28:14 GMT
 recorded_with: VCR 2.4.0

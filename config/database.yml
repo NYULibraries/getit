@@ -52,7 +52,7 @@ staging:
   encoding: utf8
   reconnect: false
   database: getit
-  pool: 30
+  pool: 10
   username: getit
   password: M6I0ntSTGKqRW8cD
   host: mysqldev.library.nyu.edu
@@ -62,7 +62,7 @@ production:
   encoding: utf8
   reconnect: false
   database: getit
-  pool: 30
+  pool: 10
   username: getit
   password: sViBjJ0XSQVj1Rmf
   host: mysql.library.nyu.edu
@@ -81,7 +81,7 @@ sfx_db:
   database: sfxlcl41
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8
 
 sfx4_cu:
@@ -91,7 +91,7 @@ sfx4_cu:
   database: sfxcooper
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8
 
 sfx4_ns:
@@ -101,7 +101,7 @@ sfx4_ns:
   database: sfxlcl41
   username: umlaut
   password: N0?t&[*$+7*~3HjW[8^
-  pool: 30
+  pool: 10
   encoding: utf8
 
 sfx4_global:
@@ -111,5 +111,5 @@ sfx4_global:
   database: sfxglb41 # or other sfx instance db
   username: umlaut
   password: LLBZMn2qw2n4
-  pool: 30
+  pool: 10
   encoding: utf8
