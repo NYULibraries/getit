@@ -297,7 +297,7 @@ NYU:
     NYU_RefWorks:
       name: RefWorks
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=refworks&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=refworks&
       display_text: Push to RefWorks
       priority: 3
       service_types:
@@ -305,7 +305,7 @@ NYU:
     NYU_Endnote:
       name: EndNoteWeb
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=endnote&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=endnote&
       display_text: Push to EndNote Web
       priority: 4
       service_types:
@@ -313,7 +313,7 @@ NYU:
     NYU_EASYBIB:
       name: EasyBib
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=pusheasybib&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=pusheasybib&
       display_text: Push to EasyBib
       priority: 5
       service_types:
@@ -321,7 +321,7 @@ NYU:
     NYU_RIS:
       name: RIS
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=ris&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=ris&
       display_text: Download as RIS
       priority: 6
       service_types:
@@ -329,7 +329,7 @@ NYU:
     NYU_BIBTEX:
       name: BibTeX
       type: OpenURLService
-      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?format=bibtex&
+      base_url: http://webdev2.bobst.nyu.edu:8080/citation/cite?to_format=bibtex&
       display_text: Download as BibTeX
       priority: 7
       service_types:
