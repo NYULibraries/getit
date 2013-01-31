@@ -52,6 +52,8 @@ GEM
       activesupport (= 3.2.11)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-import (0.3.0)
+      activerecord (~> 3.0)
     activeresource (3.2.11)
       activemodel (= 3.2.11)
       activesupport (= 3.2.11)
@@ -273,6 +275,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import
   activerecord-jdbcmysql-adapter (~> 1.2.5)
   authpds-nyu (~> 0.2.5)
   capistrano (~> 2.14.1)

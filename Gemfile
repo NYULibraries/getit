@@ -72,3 +72,5 @@ gem "dalli", "~> 2.6.0"
 
 # New Relic performance monitoring
 gem "newrelic_rpm", "~> 3.5.5"
+
+gem "activerecord-import"

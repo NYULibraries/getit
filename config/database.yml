@@ -74,6 +74,14 @@ production:
 # for this purpose, rather than use one of the full-access existing SFX
 # mysql accounts. 
 #
+umlaut2_source:
+  adapter: mysql2
+  database: umlaut
+  username: umlaut
+  password: 0m!l40tP
+  encoding: utf8
+  host: mysql.library.nyu.edu
+
 sfx_db:
   adapter: mysql2
   host: sfx1.bobst.nyu.edu
