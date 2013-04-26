@@ -1,7 +1,7 @@
 # Default Settings
 databases:
   host: localhost
-  database: getit_test
+  database: nyu_getit_test
   username: root
   password:
 
