@@ -63,7 +63,30 @@ institutions:
         base_url: "http://sfx.library.nyu.edu/sfxlcl41"
       ScopusCitations:
         json_api_key: json_api_key
+      NYUUlrichsLink:
+        base_url: ""
+      NYU_RefWorks:
+        base_url: ""
+      NYU_Endnote:
+        base_url: ""
+      NYU_EASYBIB:
+        base_url: ""
+      NYU_RIS:
+        base_url: ""
+      NYU_BIBTEX:
+        base_url: ""
+      NYU_ILLiad:
+        base_url: ""
+  NYUAD:
+    ip_addresses: []
+  NYSID:
+    ip_addresses: []
+  HSL:
+    ip_addresses: []
+  CU:
+    ip_addresses: []
   NS:
+    ip_addresses: []
     services:
       NS_bX:
         token: token
