@@ -56,6 +56,8 @@ institutions:
       IsbnDb:
         access_key: access_key
   NYU:
+    ip_addresses:
+      - 127.0.0.1
     services:
       NYU_SFX:
         base_url: "http://sfx.library.nyu.edu/sfxlcl41"
