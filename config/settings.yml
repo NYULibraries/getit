@@ -36,7 +36,25 @@ databases:
 #
 sfx_databases: {}
 
-institutions: {}
+institutions:
+  default:
+    views:
+      sfx_base_url: "http://sfx.library.nyu.edu/sfxlcl41?"
+    services:
+      NYU_Primo:
+        base_url: "http://primo.library.edu"
+      Amazon:
+        api_key: api_key
+        secret_key: secret_key
+        associate_tag: associate_tag
+      NYU_Primo_Source:
+        base_url: "http://primo.library.nyu.edu"
+      CoverThing:
+        developer_key: developer_key
+      GoogleBookSearch:
+        api_key: api_key
+      IsbnDb:
+        access_key: access_key
 
 capistrano:
   servers: []
