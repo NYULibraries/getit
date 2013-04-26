@@ -57,6 +57,8 @@ institutions:
         access_key: access_key
   NYU:
     services:
+      NYU_SFX:
+        base_url: "http://sfx.library.nyu.edu/sfxlcl41"
       ScopusCitations:
         json_api_key: json_api_key
   NS:
