@@ -55,6 +55,10 @@ institutions:
         api_key: api_key
       IsbnDb:
         access_key: access_key
+  NYU:
+    services:
+      ScopusCitations:
+        json_api_key: json_api_key
 
 capistrano:
   servers: []
