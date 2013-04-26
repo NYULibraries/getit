@@ -1,0 +1,9 @@
+<div class="nyu-az">
+  <% group_list.each do |letter| %>
+    <% if params[:id] == letter %>
+      <%= content_tag "span", letter, class: "active" %>
+    <% else %>
+      <%= link_to letter, {action: "journal_list", id: letter, "umlaut.institution" => current_primary_institution.code } %>
+    <% end %>
+  <% end %>
+</div>

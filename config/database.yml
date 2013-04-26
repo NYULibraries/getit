@@ -1,0 +1,99 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#
+# UMLAUT: mysql db with mysql2 adapter strongly recommended for Umlaut, in both
+# production and development. sqlite3 has unclear semantics under threaded
+# concurrency which umlaut uses, and in many cases simply does not work.
+#
+# A high (connection) pool setting is also, sadly, generally
+# required at present.
+#
+# development:
+#   adapter: mysql2
+#   host:
+#   username:
+#   password:
+#   database:
+#   pool: 30
+#
+development: &development
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 12
+  checkout_timeout: 2
+  host: <%= Settings.databases.host %>
+  database: <%= Settings.databases.database %>
+  username: <%= Settings.databases.username %>
+  password: <%= Settings.databases.password %>
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *development
+
+staging:
+  <<: *development
+
+qa:
+  <<: *development
+
+production:
+  <<: *development
+
+<% if Settings.sfx_databases.sfx_db %>
+sfx_db:
+  adapter: mysql2
+  pool: 5
+  encoding: utf8
+  host: <%= Settings.sfx_databases.sfx_db.host %>
+  port: <%= Settings.sfx_databases.sfx_db.port %>
+  database: <%= Settings.sfx_databases.sfx_db.database %>
+  username: <%= Settings.sfx_databases.sfx_db.username %>
+  password: <%= Settings.sfx_databases.sfx_db.password %>
+<% end %>
+
+<% if Settings.sfx_databases.sfx4_cu %>
+sfx4_cu:
+  adapter: mysql2
+  pool: 5
+  encoding: utf8
+  host: <%= Settings.sfx_databases.sfx4_cu.host %>
+  port: <%= Settings.sfx_databases.sfx4_cu.port %>
+  database: <%= Settings.sfx_databases.sfx4_cu.database %>
+  username: <%= Settings.sfx_databases.sfx4_cu.username %>
+  password: <%= Settings.sfx_databases.sfx4_cu.password %>
+<% end %>
+
+<% if Settings.sfx_databases.sfx4_ns %>
+sfx4_ns:
+  adapter: mysql2
+  pool: 5
+  encoding: utf8
+  host: <%= Settings.sfx_databases.sfx4_ns.host %>
+  port: <%= Settings.sfx_databases.sfx4_ns.port %>
+  database: <%= Settings.sfx_databases.sfx4_ns.database %>
+  username: <%= Settings.sfx_databases.sfx4_ns.username %>
+  password: <%= Settings.sfx_databases.sfx4_ns.password %>
+<% end %>
+
+<% if Settings.sfx_databases.sfx4_global %>
+sfx4_global:
+  adapter: mysql2
+  pool: 5
+  encoding: utf8
+  host: <%= Settings.sfx_databases.sfx4_global.host %>
+  port: <%= Settings.sfx_databases.sfx4_global.port %>
+  database: <%= Settings.sfx_databases.sfx4_global.database %>
+  username: <%= Settings.sfx_databases.sfx4_global.username %>
+  password: <%= Settings.sfx_databases.sfx4_global.password %>
+<% end %>

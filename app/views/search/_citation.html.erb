@@ -1,0 +1,80 @@
+<%
+# save the conversion to hash on every call!
+ref_meta = @current_context_object.referent.metadata %>
+<div class="nyu-resource">
+  <div class="type appetizer">
+    <div class="number"><%= @current_index %></div>
+    <%= link_to(url_for_with_co( {:controller=>'resolve'}, @current_context_object), :class => "content-type") do
+      content_tag(:figure) do
+        content_tag(:i, nil, :class => "icons-nyu-content-type-#{(ref_meta["genre"].nil?) ? "journal" : ref_meta["genre"]}") +
+          content_tag(:figcaption, (ref_meta["genre"].nil?)? "Journal" : ref_meta["genre"].capitalize)
+      end
+    end %>
+  </div>
+  <div class="entree">
+    <%= # Article Title
+    if ref_meta.has_key?("atitle") and (not ref_meta["atitle"].blank?)
+      content_tag(:h2, ref_meta["atitle"], :class => "title")
+    # Journal/Book Title if no Article Title
+    elsif ref_meta.has_key?("jtitle")  or ref_meta.has_key?("title") or ref_meta.has_key?("btitle")
+      content_tag(:h2, :class => "title") {
+        link_to(ref_meta["title"] || ref_meta["btitle"] || ref_meta["jtitle"], 
+          url_for_with_co({:controller => 'resolve'}, @current_context_object), 
+            {:target => "_blank"}) }
+    end %>
+    <%= # Author
+    if ref_meta.has_key?("au") or ref_meta.has_key?("aulast")
+      author = (ref_meta["au"] || ref_meta["aulast"])
+      if ref_meta["aufirst"] || ref_meta["auinit"] || ref_meta["auinit1"]
+        author << ", #{(ref_meta["aufirst"] || ref_meta["auinit"] || ref_meta["auinit1"])}"
+      end
+      content_tag(:div, author, :class => "author")
+    end %>
+    <%= # Journal/Book Title if Article Title
+    if ref_meta.has_key?("atitle") and (not ref_meta["atitle"].blank?)
+      if ref_meta.has_key?("jtitle")  or ref_meta.has_key?("title") or ref_meta.has_key?("btitle")
+        content_tag(:div, ref_meta["title"] || ref_meta["btitle"] || ref_meta["jtitle"], :class => "title")
+      end
+    end %>
+    <%= # ISSN
+    if ref_meta.has_key?("issn") and (not ref_meta["issn"].blank?)
+      content_tag(:div, "ISSN: #{ref_meta["issn"]}", :class => "issn")
+    end %>
+    <%= # ISBN
+    if ref_meta.has_key?("isbn") and (not ref_meta["isbn"].blank?)
+      content_tag(:div, "ISBN: #{ref_meta["isbn"]}", :class => "isbn")
+    end %>
+    <%= # Publishing info, etc.
+    if ref_meta.has_key?("date") and (not ref_meta["date"].blank?)
+      content_tag(:div, "Published: #{date_format(ref_meta["date"])}", :class => "published")
+    end %>
+    <%= # Volume
+    if ref_meta.has_key?("volume")
+      content_tag(:div, "Volume: #{ref_meta["volume"]}", :class => "volume")
+    end %>
+    <%= # Issue
+    if ref_meta.has_key?("issue")
+      content_tag(:div, "Issue: #{ref_meta["issue"]}", :class => "issue")
+    end %>
+    <%= # Pages
+    if ref_meta.has_key?("spage")
+      page = ref_meta["spage"]
+      page << " - #{ref_meta["epage"]}" if ref_meta.has_key?("epage")
+      content_tag(:div, "Page: #{pages}", :class => "details")
+    end %>
+    <%= # Publisher
+    if ref_meta.has_key?("pub") and (not ref_meta["pub"].blank?)
+      publisher = (ref_meta.has_key?("place") and (not ref_meta["place"].blank?)) ? "#{ref_meta['place']} : " : ""
+      publisher << ref_meta["pub"]
+      content_tag(:div, "Publisher: #{publisher}", :class => "publisher")
+    end %>
+    <% available_text = (current_primary_institution.nil? or current_primary_institution.views.nil? or 
+      current_primary_institution.views.nil? or current_primary_institution.views["availability_text"].nil?) ? 
+        "Available @ GetIt" : current_primary_institution.views["availability_text"] %>
+    <div class="delivery">
+      <%= link_to(available_text, url_for_with_co( 
+        {:controller=>'resolve'}, @current_context_object), 
+          {:target => "_blank", :class => "text-success"}) %>
+    </div>
+  </div>
+</div>

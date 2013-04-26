@@ -1,0 +1,10 @@
+<%
+metadata = record.referent.metadata
+content_type = (metadata["genre"].nil?) ? "journal" : metadata["genre"]
+object_id = metadata["object_id"]
+%>
+<label class="checkbox inline">
+  <%#= check_box_tag("id[]", object_id, false, class: "js") %>
+  <%= content_tag :strong, "#{record_idx}.", class: "pull-left" %>
+</label>
+<%= content_type_tag(content_type) %>

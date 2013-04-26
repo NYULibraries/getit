@@ -1,0 +1,27 @@
+<% 
+export_citation_url = "http://webdev2.library.nyu.edu/xCite/cite"
+export_options = [ link_to(t('record.collection.export.options.refworks'), "#{export_citation_url}/refworks", id: :refworks, target: :_blank),
+  link_to(t('record.collection.export.options.endnote'), "#{export_citation_url}/endnote", id: :endnote, target: :_blank),
+  link_to(t('record.collection.export.options.easybib'), "#{export_citation_url}/easybibpush", id: :easybib, target: :_blank),
+  link_to(t('record.ris'), "#{export_citation_url}/ris", id: :ris, target: :_blank),
+  link_to(t('record.bibtex'), "#{export_citation_url}/bibtex", id: :bibtex, target: :_blank) ]
+modal_options = {class: "email", "data-toggle" => "modal", "data-target" => "#modal"}
+email_options = [ link_to(t('record.collection.email.options.brief'), root_url, modal_options),
+  link_to(t('record.collection.email.options.medium'), root_url, modal_options),
+  link_to(t('record.collection.email.options.full'), root_url, modal_options) ]
+print_options = [ link_to(t('record.collection.print.options.brief'), root_url, class: :print, target: :_blank),
+  link_to(t('record.collection.print.options.medium'), root_url, class: :print, target: :_blank),
+  link_to(t('record.collection.print.options.full'), root_url, class: :print, target: :_blank) ]
+per_page_options = [ link_to(10, root_url(per: 10)), link_to(20, root_url(per: 20)),
+  link_to(50, root_url(per: 50)), link_to(100, root_url(per: 100)) ]
+sort_options = [ link_to(t('record.collection.sort.options.title'), root_url),
+  link_to(t('record.collection.sort.options.author'), root_url) ]
+%>
+<div class="btn-toolbar js">
+  <div class="btn-group"><%= link_to(t('record.collection.eshelf.add_html'), root_url, id: "eshelf", class: "btn") %></div>
+  <%= button_dropdown(t('record.collection.email.title_html'), email_options) %>
+  <%= button_dropdown(t('record.collection.print.title_html'), print_options) %>
+  <%= button_dropdown(t('record.collection.export.title_html'), export_options) %>
+  <%= right_button_dropdown(t('record.collection.sort.title_html'), sort_options)%>
+  <%= right_button_dropdown(content_tag(:span, "20 ") + t('record.collection.per_page.title_html'), per_page_options)%>
+</div>

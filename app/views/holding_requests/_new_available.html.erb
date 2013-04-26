@@ -1,0 +1,39 @@
+<%= display_request_form("available") do %><%
+  nyu_sub_libraries = ["BOBST", "NCOUR"]
+  ad_sub_libraries = ["NABUD", "NADEX"]
+  afc_sub_libraries = ["BAFC"]
+  if (nyu_sub_libraries.include?(sub_library_code)) %>
+    <%= # Whole item
+    display_request_option do
+      radio_button_tag("entire",  "yes", :checked => true) +
+        content_tag(:p, "Request this item to be delivered to an NYU Library of your choice.") +
+          display_pickup_locations + display_delivery_times_link
+    end %><br />
+    <%= # Scan portion
+    display_request_option do
+      radio_button_tag("entire",  "no") + 
+        content_tag(:p) {
+          "Request that portions of the item be scanned and delivered electronically.<br />
+          (Requests must be within <a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>.)<br />".html_safe +
+          display_scan_elements
+        }
+    end %><%
+  else
+    request_text = ""
+    if (afc_sub_libraries.include?(sub_library_code))
+      request_text += "Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE)."
+    elsif (ad_sub_libraries.include?(sub_library_code))
+      request_text += "Request this item."
+      request_text += "It will be held for you at the specified pickup location."
+      request_text += "Items are ready for pickup within 2 business days."
+    else
+      request_text += "Request this item to be delivered to the pickup location of your choice."
+    end %>
+    <%= # Whole item
+    display_request_option do
+        content_tag(:p, request_text) +
+          display_pickup_locations + display_delivery_times_link
+    end %><%
+  end %>
+  <%= submit_tag 'Submit' %>
+<% end %>

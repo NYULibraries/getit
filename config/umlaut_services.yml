@@ -1,0 +1,525 @@
+# Configure what service plugins are used by Umlaut. This skeleton file
+# has been generated into your app to help you get started.
+#
+# If a service has "disabled:true", it's currently turned off.
+#
+# Some services require local api key or connection details as config.
+# Most services take other options for custom configuration too, not
+# all options are neccesarily listed as examples here, see source
+# or source-generated docs for more info.
+default:
+  views:
+    css: search
+    resolve_css: resolve
+    sfx_base_url: "<%= Settings.institutions.default.views.sfx_base_url %>"
+  services:
+    # Priority 2
+    NYU_Primo:
+      type: PrimoService
+      priority: 2 # After SFX, to get SFX metadata enhancement
+      base_url: "<%= Settings.institutions.default.services.NYU_Primo.base_url %>"
+      vid: NYU
+      institution: NYU
+      holding_search_institution: NYU
+      holding_search_text: Search for this title in BobCat.
+      suppress_holdings: [ !ruby/regexp '/\$\$LBWEB/', !ruby/regexp '/\$\$LNWEB/', !ruby/regexp '/\$\$LTWEB/', !ruby/regexp '/\$\$LWEB/', !ruby/regexp '/\$\$ONSMARCIT/', !ruby/regexp '/\$\$Onyumarcit/', !ruby/regexp '/\$\$1Restricted Internet Resources/' ]
+      ez_proxy: !ruby/regexp '/https\:\/\/ezproxy\.library\.nyu\.edu\/login\?url=/'
+      service_types:
+        - primo_source
+        - holding_search
+        - fulltext
+        - table_of_contents
+        - referent_enhance
+        - cover_image
+
+    # Priority 3
+    # First half of Amazon, run in foreground, get metadata and cover images.
+    Amazon:
+      display_name: Amazon.com
+      type: Amazon
+      url: http://webservices.amazon.com/onca/xml
+      api_key: <%= Settings.institutions.default.services.Amazon.api_key %>
+      secret_key: <%= Settings.institutions.default.services.Amazon.secret_key %>
+      associate_tag: <%= Settings.institutions.default.services.Amazon.associate_tag %>
+      priority: 3
+      service_types:
+        - referent_enhance
+        - cover_image
+
+    # Priority 5
+    # Wayfinder to return whence you came
+    Wayfinder:
+      name: NYU Wayfinder
+      type: Wayfinder
+      priority: 5
+      known_rfrs:
+        -
+          name: primo
+          regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
+          base_url: "http://library.nyu.edu/persistent/lcn/"
+          display_text: Back to BobCat
+        -
+          name: xerxes
+          regex: !ruby/regexp '/info:sid\/library\.nyu\.edu:xerxes \((.+)\)/'
+          base_url: "https://arch.library.nyu.edu/databases/alphabetical?base=databases&action=find&query="
+          display_text: Back to database search
+        -
+          name: umlaut
+          regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
+          base_url: "https://getit.library.nyu.edu"
+          display_text: Back to e-journal search
+        -
+          name: worldcat1
+          regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
+          base_url: "http://www.worldcat.org"
+          display_text: Back to WorldCat
+        -
+          name: worldcat2
+          regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
+          base_url: "http://www.worldcat.org/search?qt=worldcat_org_all"
+          display_text: Back to WorldCat
+          querystring_metadata:
+            q: title
+
+    # Priority a: Background
+    NYU_Primo_Source:
+      type: PrimoSource
+      priority: a
+      base_url: <%= Settings.institutions.default.services.NYU_Primo_Source.base_url %>
+      vid: NYU
+      source_attributes:
+        - request_link_supports_ajax_call
+        - requestability
+
+    # Priority b: Background
+    # Second half of Amazon. It's Slow to lookup highlighted_link and search_inside
+    # availability, so we do it in a bg wave.
+    Amazon_bg:
+      type: Amazon
+      api_key: <%= Settings.institutions.default.services.Amazon.api_key %>
+      secret_key: <%= Settings.institutions.default.services.Amazon.secret_key %>
+      associate_tag: <%= Settings.institutions.default.services.Amazon.associate_tag %>
+      priority: b
+      service_types:
+        - abstract
+        - highlighted_link
+        - search_inside
+        - excerpts
+
+    CoverThing:
+      type: CoverThing
+      developer_key: <%= Settings.institutions.default.services.CoverThing.developer_key %>
+      priority: b
+      # Pre-empted by says if we already have a cover_image response
+      # from somewhere else that runs earlier, don't run this.
+      preempted_by:
+        existing_type: cover_image
+
+    ElsevierCover:
+      type: ElsevierCover
+      priority: b
+
+    UlrichsCover:
+      type: UlrichsCover
+      priority: b
+
+    GoogleBookSearch:
+      type: GoogleBookSearch
+      priority: b
+      api_key: <%= Settings.institutions.default.services.GoogleBookSearch.api_key %>
+
+    # Priority c: Background
+    # Web of Knowledge API has no api key, but your
+    # IP needs to be registered with them. See source docs
+    # for how.
+    IsiCitations:
+      type: Isi
+      priority: c
+
+    # Thomson JCR LAMR api has no api key, but your
+    # IP needs to be registered with them. Same registraiton
+    # as for ISI WoK generally.
+    Jcr:
+      type: Jcr
+      priority: c
+
+    # Priority d: Background
+    # Email Export
+    EmailExport:
+      type: EmailExport
+      priority: d
+
+    HathiTrust:
+      type: HathiTrust
+      priority: d
+      # Uncomment to link through this 'internal' URL instead
+      # of following permalinks. jrochkind does this to use
+      # a WAYFless shibboleth login with EZProxy.
+      #direct_link_base: 'https://babel.hathitrust.org/shcgi/'
+      #
+      # This next says:
+      # Don't add HathiTrust fulltext if there's already a
+      # GoogleBookSearch fulltext. Still add other HT response
+      # types.
+      # preempted_by:
+      #   self_type: fulltext
+      #   existing_service: GoogleBookSearch
+      #   existing_type: fulltext
+
+    IsbnDb:
+      display_name: isbndb.com
+      type: IsbnDb
+      priority: d
+      access_key: <%= Settings.institutions.default.services.IsbnDb.access_key %>
+
+    InternetArchive:
+      display_name: the Internet Archive
+      type: InternetArchive
+      priority: d
+      # disable audio results? uncomment:
+      #num_results_for_types:
+      #  audio: 0
+
+    # Priority e: Background
+    # Text Export
+    TxtHoldingExport:
+      type: TxtHoldingExport
+      priority: e
+
+    # GPO is kind of experimental, it doesn't work great, but IF an
+    # OpenURL includes a sudoc call number or other GPO identifiers,
+    # will try to link to full text via GPO catalog scrape.
+    Gpo:
+      type: Gpo
+      disabled: true
+      priority: e
+      #preempted_by:
+      #  - existing_type: fulltext
+      #  - existing_type: fulltext_title_level
+
+    # Worldcat scraper can be quite slow, move it to wave 'e' to avoid
+    # holding up wave 'c'
+    Worldcat:
+      display_name: OCLC Worldcat.org
+      type: Worldcat
+      priority: e
+      # suppress_precheck says don't actually screen-scrape to
+      # see if the link is good, just link blindly. Mostly works
+      # for WorldCat, avoids the performance hit.
+      suppress_precheck: true
+
+    WorldcatIdentities:
+      type: WorldcatIdentities
+      priority: e
+      # Turn off certain response types:
+      #note_types: false
+      #wikipedia_link: false
+      #openurl_widely_held: false
+      #require_identifier: true
+
+    ####
+    # Link out filters: Effect what happens when a user clicks
+    # on an Umlaut link to a third party source. Link out filters
+    # can operate to change where link goes or execute side effects
+    # on click.
+    ####
+
+    # Redirect outgoing links through EZProxy
+    EZProxy:
+      type: Ezproxy
+      disabled: true
+      task: link_out_filter
+      proxy_server:  HOSTNAME_OF_YOUR_EZPROXY
+      # By default, will pre-check with EZProxy api and
+      # only send links through EZProxy that are proxyable.
+      # requires proxy_password to be set.
+      # optionally, set precheck_with_api false, and the EZProxy
+      # api won't be used, ALL links go through EZProxy. You may
+      # have EZProxy itself set to transparently redirect non-proxyable
+      # URLs back to non-proxied version.
+      #
+      #precheck_with_api: false
+      priority: 5
+      proxy_password: YOUR_EZPROXY_API_PWD
+      # Want to exclude certain hostnames from being directed through EZProxy?
+      # list them in array here:
+      #exclude: [ host.unversity.edu, otherhost.somewhere.com]
+
+    # Use of SFX api means that SFX can no longer keep statistics on
+    # clickthroughs. This link out filter will attempt to fake SFX into
+    # thinking a direct click happened when user clicks on an SFX link
+    # via Umlaut.  This is VERY fragile logic, required reverse engineering
+    # SFX and faking it out, still doesn't work all the time. But works
+    # much of the time.
+    SFX_backchannel_record:
+      type: SfxBackchannelRecord
+      disabled: true
+      priority: 6
+
+NYU:
+  name: NYU Libraries
+  parent_code: default
+  active_tab: journals
+  views:
+    css: search
+    resolve_css: resolve
+  ip_addresses: <%= Settings.institutions.NYU.ip_addresses %>
+  services:
+    NYU_SFX:
+      name: SFX @ NYU
+      display_name: SFX @ NYU
+      type: Sfx
+      base_url: "<%= Settings.institutions.NYU.services.NYU_SFX.base_url %>"
+      priority: 1
+      click_passthrough: false
+      sfx_requests_expire_crontab: '00 00 * * 00'
+      sfx_timeout: 30
+      roll_up_prefixes:
+        - 'EBSCOHOST_'
+        - 'JSTOR_'
+        - 'PROQUEST_'
+        - 'SPRINGER_LINK_'
+        - 'ELSEVIER_SD_'
+        - 'HIGHWIRE_'
+        - 'GALEGROUP_'
+      services_of_interest:
+        getFullTxt: fulltext
+        getSelectedFullTxt: fulltext
+        getDOI: highlighted_link
+        getAbstract: abstract
+        getTOC: table_of_contents
+      extra_targets_of_interest:
+        # ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
+        # REFWORKS_EXPORT_TOOL: export_citation
+        ASK_A_LIBRARIAN_LCL: help
+        COMMENTS_ABOUT_BOBCAT_LCL: help
+    NYUUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: c
+      status: active
+      base_url: "<%= Settings.institutions.NYU.services.NYUUlrichsLink.base_url %>"
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: <%= Settings.institutions.NYU.services.ScopusCitations.json_api_key %>
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
+    NYU_RefWorks:
+      name: RefWorks
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_RefWorks.base_url %>"
+      display_text: Push to RefWorks
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_Endnote:
+      name: EndNoteWeb
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_Endnote.base_url %>"
+      display_text: Push to EndNote Web
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_EASYBIB:
+      name: EasyBib
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_EASYBIB.base_url %>"
+      display_text: Push to EasyBib
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_RIS:
+      name: RIS
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_RIS.base_url %>"
+      display_text: Download as RIS
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_BIBTEX:
+      name: BibTeX
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_BIBTEX.base_url %>"
+      display_text: Download as BibTeX
+      priority: 4
+      service_types:
+          - export_citation
+    NYU_ILLiad:
+      name: ILLiad
+      type: OpenURLService
+      base_url: "<%= Settings.institutions.NYU.services.NYU_ILLiad.base_url %>"
+      display_text: Bobst Library Interlibrary Loan
+      priority: c
+      preempted_by:
+        -
+          existing_service: NYU_Primo_Source
+          existing_type: holding
+        -
+          existing_service: NYU_SFX
+          existing_type: fulltext
+      service_types:
+          - document_delivery
+NYUAD:
+  name: NYU Abu Dhabi Library
+  parent_code: NYU
+  views:
+    css: search_nyuad
+    resolve_css: resolve_nyuad
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?institution=nyuad"
+      xerxes:
+        url_suffix: "&institution=nyuad"
+      umlaut:
+        url_suffix: "/nyuad"
+  ip_addresses: <%= Settings.institutions.NYUAD.ip_addresses %>
+CU:
+  name: The Cooper Union Library
+  active_tab: journals
+  views:
+    css: search_cu
+    resolve_css: resolve_cu
+    sfx_base_url: "http://sfx.library.nyu.edu/sfxcooper?"
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=cu"
+        xerxes:
+          url_suffix: "&institution=cu"
+        umlaut:
+          url_suffix: "/cu"
+  controllers:
+    searcher: Sfx4Solr::Cu
+    # searcher: Sfx4Cu
+  ip_addresses: <%= Settings.institutions.CU.ip_addresses %>
+  services:
+    # CU SFX service.
+    CU_SFX:
+      name: SFX @ Cooper Union
+      display_name: SFX @ Cooper Union
+      type: Sfx
+      base_url: "http://sfx.library.nyu.edu/sfxcooper"
+      priority: 1
+      click_passthrough: false
+      sfx_requests_expire_crontab: '00 00 * * 00'
+      sfx_timeout: 9
+      roll_up_prefixes:
+        - 'EBSCOHOST_'
+        - 'JSTOR_'
+        - 'PROQUEST_'
+        - 'SPRINGER_LINK_'
+        - 'ELSEVIER_SD_'
+        - 'HIGHWIRE_'
+        - 'GALEGROUP_'
+      extra_targets_of_interest:
+          CAPTURE_CITATION: export_citation
+    ScopusCitations:
+      type: Scopus
+      priority: c
+      json_api_key: <%= Settings.institutions.NYU.services.ScopusCitations.json_api_key %>
+      # partner_id: YOUR_SCOPUS_PARTNER_ID
+      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
+
+NS:
+  name: New School Libraries
+  active_tab: journals
+  views:
+    css: search_ns
+    resolve_css: resolve_ns
+    sfx_base_url: "http://sfx4.library.newschool.edu/ns?"
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?institution=ns"
+        xerxes:
+          url_suffix: "&institution=ns"
+        umlaut:
+          url_suffix: "/ns"
+  controllers:
+    searcher: Sfx4Solr::Ns
+    # searcher: Sfx4Ns
+  ip_addresses: <%= Settings.institutions.NS.ip_addresses %>
+  services:
+    NS_SFX:
+      name: SFX @ New School Libraries
+      display_name: SFX @ New School Libraries
+      type: Sfx
+      base_url: http://sfx4.library.newschool.edu/ns
+      priority: 1
+      click_passthrough: true
+      sfx_requests_expire_crontab: '00 00 * * 00'
+      sfx_timeout: 9
+      roll_up_prefixes:
+        - 'EBSCOHOST_'
+        - 'JSTOR_'
+        - 'PROQUEST_'
+        - 'SPRINGER_LINK_'
+        - 'ELSEVIER_SD_'
+        - 'HIGHWIRE_'
+        - 'GALEGROUP_'
+      extra_targets_of_interest:
+        ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
+        REFWORKS_EXPORT_TOOL: export_citation
+        # ISI_WEB_OF_SCIENCE: export_citation
+        BX_RECOMMENDER_SERVICE: help
+        ASK_A_LIBRARIAN_LCL: help
+        COMMENTS_ABOUT_BOBCAT_LCL: help
+    NYUOpenURL:
+      name: BobCat
+      type: OpenURLService
+      display_name: BobCat
+      display_text: GetIt @ NYU
+      base_url: "http://getit.library.nyu.edu/nyu/resolve?"
+      priority: 5
+      status: active
+    NS_bX:
+      type: Bx
+      display_name: Recommender Services
+      priority: c
+      token: <%= Settings.institutions.NS.services.NS_bX.token %>
+      openurl_base: "/getit/resolve?umlaut.institution=NS&"
+      max_records: 2
+    NSUlrichsLink:
+      type: UlrichsLink
+      display_name: Ulrich's Directory
+      link_name: Periodical Information
+      priority: d
+      status: active
+      base_url: "https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn="
+
+NYSID:
+  display_name: New York School of Interior Design Library
+  views:
+    css: search
+    resolve_css: resolve
+  ip_addresses: <%= Settings.institutions.NYSID.ip_addresses %>
+
+HSL:
+  active_tab: journals
+  views:
+    css: search_hsl
+    resolve_css: resolve_hsl
+  ip_addresses: <%= Settings.institutions.HSL.ip_addresses %>
+  wayfinder_attributes:
+      primo:
+        url_suffix: "?institution=hsl"
+      umlaut:
+        url_suffix: "/hsl"
+  services:
+    HSL_SFX:
+      name: SFX @ NYU Health Sciences Libraries
+      display_name: SFX @ NYU Health Sciences Libraries
+      type: Sfx
+      base_url: http://sfx.med.nyu.edu/sfxlcl3
+      priority: 1
+      click_passthrough: true
+      sfx_requests_expire_crontab: '00 00 * * 00'
+      sfx_timeout: 9
+      roll_up_prefixes:
+        - 'EBSCOHOST_'
+        - 'JSTOR_'
+        - 'PROQUEST_'
+        - 'SPRINGER_LINK_'
+        - 'ELSEVIER_SD_'
+        - 'HIGHWIRE_'
+        - 'GALEGROUP_'

@@ -1,0 +1,18 @@
+<% cite = @user_request.referent.to_citation %>
+<div class="request">
+  <h2><%= display_header(cite[:title], @sub_library) %></h2>
+  <div class="text-error">
+    <%= @error || flash[:alert] %>
+  </div>
+  <p>You may:</p>
+  <ol class="request_options">
+    <%= render "new_available", :sub_library_code => @sub_library_code if available? %>
+    <%= render "new_recall", :sub_library_code => @sub_library_code, :status => @status if recall? %>
+    <%= render "new_offsite" if offsite? %>
+    <%= render "new_in_processing" if in_processing? %>
+    <%= render "new_on_order" if on_order? %>
+    <%= render "new_ill" if ill? %>
+  </ol>
+  <p style="margin-top: 1em;"><strong>You will be notified by email when your item is ready or en route.</strong></p>
+  <%= display_delivery_help_link %>
+</div>

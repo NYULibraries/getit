@@ -1,0 +1,7 @@
+<div class="search with-tabs">
+  <% if flash[:error] %>
+    <div id="error" class="notice citationLinker"><strong>(!) Problems:</strong> <%= flash[:error] %></div>
+  <% end %>
+  <%= render 'form' %>
+  <%= render 'browse' %>
+</div>

@@ -1,0 +1,15 @@
+<%= sidebar_section("additional_options", content_tag(:h2, "Additional Options")) do %>
+  <ul class="nav-list">
+    <li><a href="http://sfx.library.nyu.edu/sfxcooper/az/?param_perform_value=searchCategories" target="_blank">Browse Cooper E-Journals by Category</a></li>
+    <li><%= link_to('E-Journals at NYU', url_for(:controller=>'search', 'umlaut.institution'=>"NYU"), {:target => "_blank"}) %></li>
+    <li><%= link_to('E-Journals at The New School', {:controller=>'search', "umlaut.institution"=>"NS"}, {:target => "_blank"}) %></li>
+  </ul>
+<% end %>
+<%= sidebar_section("help", content_tag(:h2, "Need help?")) do %>
+  <ul class="nav-list">
+    <li><a href="http://library.cooper.edu/primo/side_ejournals_using.html" target="_blank">Using E-Journals</a></li>
+    <li><a href="http://library.cooper.edu/primo/side_contact.html" target="_blank">Contact Us</a></li>
+    <li><a href="http://library.cooper.edu/library_info_page.html#A" target="_blank">Cooper Library Access &amp; Hours</a></li>
+    <li><a href="http://library.cooper.edu" target="_blank">Cooper Library Home Page</a></li>
+  </ul>
+<% end %>

@@ -1,0 +1,28 @@
+<%= form_tag({:controller=>'search', :action=>'journal_search'}, {:method => "get", :class => "form-inline form-very-inline", :name => "OpenURL", :id=>"OpenURL"}) do %>
+  <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %> 
+  <%= hidden_field_tag "rft.title", "", {:class => "rft_title"} %> 
+  <%= hidden_field_tag "rft.object_id", "", {:class => "rft_object_id"} %> 
+  <%= hidden_field_tag "rft.issn", "" %> 
+  <%-
+  # specific article fields from prior form may be present, if the user is now choosing from
+  # amongst serveral possible title matches. Preserve them on refinement of search terms.  
+  -%>
+  <% params.slice("rft.date", "__year", "__month", "__day", "rft.volume", "rft.issue", "rft.spage").each_pair do |key, value| %>
+    <%= hidden_field_tag key, value %>
+  <% end %>
+  <div id="primary-search" class="search-section">
+    <fieldset>
+      <div class="control-group">
+        <%= label :journal, :title, "Journal Title:" %>
+        <%= text_field :journal, :title, {:name=>'rft.jtitle', :value=>params['rft.jtitle'], :class=>"title_search input-xlarge", :autocomplete => "off"} %>
+        <select name="umlaut.title_search_type" class="title_search_type input-medium">
+          <%= options_for_select({"contains" => "contains", "begins with" => "begins", "exact match" => "exact"}, params["umlaut.title_search_type"]) %>
+        </select>
+      </div>
+      <div class="control-group">
+        <%= submit_tag "Search", {:name=>"Generate_OpenURL2", :class => "btn"} %>
+        <%= content_tag(:span, link_to('More search options', {controller: 'search'}), class: "help-inline")%>
+      </div>
+    </fieldset>
+  </div>
+<% end %>

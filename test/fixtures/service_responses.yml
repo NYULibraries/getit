@@ -1,0 +1,545 @@
+# encoding: UTF-8
+nyu_aleph_available_book:
+  id: 1
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000980206&sub_library=BOBST"
+  notes: 
+  request: primo_book_virtual_inequality
+  service_type_value_name: holding
+  service_data: |
+    --- 
+    :record_id: nyu_aleph000980206
+    :original_id: nyu_aleph000980206
+    :title: ! 'Virtual inequality : beyond the digital divide'
+    :author: Karen  Mossberger
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000980206
+    :ils_api_id: NYU01000980206
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (HN49.I56 M67 2003)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (HN49.I56 M67 2003 )
+      S: available
+      '3': '1'
+      '4': '0'
+      '5': N
+      '6': '1'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: available
+    :status: Available
+    :source_data:
+      :item_id: NYU50000980206000010
+      :adm_library_code: NYU50
+      :call_number: (HN49.I56 M67 2003)
+      :sub_library_code: BOBST
+      :collection_code: MAIN
+      :source_record_id: 000980206
+      :sequence_number: '1.0'
+      :barcode: '31142036269960'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :circulation_status: On Shelf
+      :z30_callno: HN49.I56 M67 2003
+      :description: 
+      :hol_doc_number: 002945614
+      :doc_library: NYU01
+      :sub_library: NYU Bobst
+      :collection: Main Collection
+      :doc_number: 000980206
+      :rest_api_id: NYU01000980206
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status_code: available
+      :status: Available
+    :request_link_supports_ajax_call: true
+    :requestability: deferred
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_journal:
+  id: 2
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=002895625&sub_library=BOBST"
+  notes: 
+  request: primo_journal_musical_quarterly
+  service_type_value_name: holding
+  service_data: |
+    --- 
+    :record_id: nyu_aleph002895625
+    :original_id: nyu_aleph002895625
+    :title: The Musical quarterly.
+    :author: 
+    :display_type: journal
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 002895625
+    :ils_api_id: NYU01002895625
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (ML1 .M819 )
+    :coverage: &70256176813880
+    - ! 'Available in Main Collection: VOLUMES: 1-89 (YEARS: 1915-2006)'
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (ML1 .M819 )
+      S: check_holdings
+      '5': Y
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: check_holdings
+    :status: Check Availability
+    :source_data:
+      :doc_library: NYU01
+      :sub_library_code: 
+      :sub_library: 
+      :collection: Main Collection
+      :call_number: (ML1 .M819 )
+      :doc_number: 002895625
+      :rest_api_id: NYU01002895625
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+    :request_link_supports_ajax_call: false
+    :requestability: no
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ! 'Available in Main Collection: VOLUMES: 1-89 (YEARS: 1915-2006)'
+    :coverage_str_array: *70256176813880
+    :expired: true
+    :latest: true
+
+nyu_aleph_offsite_book:
+  id: 3
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000980206&sub_library=TNSFO"
+  notes: 
+  request: primo_book_virtual_inequality
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000980206
+    :original_id: nyu_aleph000980206
+    :title: ! 'Virtual inequality : beyond the digital divide'
+    :author: Karen  Mossberger
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000980206
+    :ils_api_id: NYU01000980206
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: New School Fogelman Library
+    :collection: Main Collection
+    :call_number: (HN49.I56 M67 2003)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (HN49.I56 M67 2003 )
+      S: available
+      '3': '1'
+      '4': '0'
+      '5': N
+      '6': '1'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: offsite
+    :status: Offsite Available
+    :source_data:
+      :item_id: NYU50000980206000020
+      :adm_library_code: NYU50
+      :call_number: (HN49.I56 M67 2003)
+      :sub_library_code: TNSFO
+      :collection_code: MAIN
+      :source_record_id: 000980206
+      :sequence_number: '2.0'
+      :barcode: '31207039784289'
+      :item_status_code: '01'
+      :item_process_status_code: DP
+      :circulation_status: Offsite Available
+      :z30_callno: HN49.I56 M67 2003
+      :description: 
+      :hol_doc_number: 002945615
+      :doc_library: NYU01
+      :sub_library: New School Fogelman Library
+      :collection: Main Collection
+      :doc_number: 000980206
+      :rest_api_id: NYU01000980206
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: Offsite Available
+      :status_code: offsite
+    :request_link_supports_ajax_call: true
+    :requestability: 'yes'
+    :collection_str: New School Fogelman Library Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_recall_book:
+  id: 4
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000007935&sub_library=NCOUR"
+  notes: 
+  request: primo_book_pragmatic_ruby
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000007935
+    :original_id: nyu_aleph000007935
+    :title: ! 'Programming Ruby : the pragmatic programmers'' guide.'
+    :author: David  Thomas  1956-
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000007935
+    :ils_api_id: NYU01000007935
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: COUR
+    :library: NYU Courant
+    :collection: Main Collection
+    :call_number: (QA76.64 .T494 2005)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: COUR
+      '1': Main Collection
+      '2': (QA76.64 .T494 2005 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '9'
+      X: NYU50
+      Y: NCOUR
+      Z: MAIN
+    :status_code: checked_out
+    :status: Due:01/31/13
+    :source_data:
+      :item_id: NYU50000007935000010
+      :adm_library_code: NYU50
+      :call_number: (QA76.64 .T494 2005)
+      :sub_library_code: NCOUR
+      :collection_code: MAIN
+      :source_record_id: 000007935
+      :sequence_number: '1.0'
+      :barcode: '31182021233365'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :circulation_status: 01/31/13
+      :z30_callno: QA76.64 .T494 2005
+      :description: 
+      :hol_doc_number: 003196660
+      :doc_library: NYU01
+      :sub_library: NYU Courant
+      :collection: Main Collection
+      :doc_number: 000007935
+      :rest_api_id: NYU01000007935
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: Due:01/31/13
+      :status_code: checked_out
+    :request_link_supports_ajax_call: true
+    :requestability: 'yes'
+    :collection_str: NYU Courant Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_in_processing_book:
+  id: 5
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=000007935&sub_library=NABUD"
+  notes: 
+  request: primo_book_pragmatic_ruby
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph000007935
+    :original_id: nyu_aleph000007935
+    :title: ! 'Programming Ruby : the pragmatic programmers'' guide.'
+    :author: David  Thomas  1956-
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 000007935
+    :ils_api_id: NYU01000007935
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: COUR
+    :library: NYU Abu Dhabi Library (UAE)
+    :collection: Main Collection
+    :call_number: (QA76.64 .T494 2005)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: COUR
+      '1': Main Collection
+      '2': (QA76.64 .T494 2005 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '9'
+      X: NYU50
+      Y: NCOUR
+      Z: MAIN
+    :status_code: processing
+    :status: In Processing
+    :requestability: deferred
+    :source_data:
+      :item_id: NYU51000007935000010
+      :adm_library_code: NYU51
+      :call_number: (QA76.64 .T494 2005)
+      :sub_library_code: NABUD
+      :collection_code: MAIN
+      :source_record_id: 000007935
+      :sequence_number: '1.0'
+      :barcode: '31122050410872'
+      :item_status_code: '01'
+      :item_process_status_code: LB
+      :circulation_status: In Processing
+      :z30_callno: QA76.64 .T494 2005
+      :description: 
+      :hol_doc_number: 004530885
+      :doc_library: NYU01
+      :sub_library: NYU Abu Dhabi Library (UAE)
+      :collection: Main Collection
+      :doc_number: 000007935
+      :rest_api_id: NYU01000007935
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+      :status: In Processing
+      :status_code: processing
+    :request_link_supports_ajax_call: true
+    :requestability: 'yes'
+    :collection_str: NYU Abu Dhabi Library (UAE) Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+nyu_aleph_item_bsn_mismatch:
+  id: 6
+  service_id: NYU_Primo_Source
+  display_text: 
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=003079903&sub_library=BOBST"
+  notes: 
+  request: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph003079903
+    :original_id: nyu_aleph003079903
+    :title: ! 'Chemistry : the molecular nature of matter and change'
+    :author: Martin S.  Silberberg  (Martin Stuart), 1945-
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 003079903
+    :ils_api_id: NYU01003079903
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (QD33.2 .S55 2009)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (QD33.2 .S55 2009 )
+      S: available
+      '3': '5'
+      '4': '3'
+      '5': N
+      '6': '3369'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: available
+    :status: Available
+    :source_data:
+      :item_id: NYU50003087986000010
+      :adm_library_code: NYU50
+      :call_number: (QD33.2 .S55 2009)
+      :sub_library_code: BOBST
+      :collection_code: MAIN
+      :source_record_id: 003079903
+      :sequence_number: '1.0'
+      :barcode: '31142047405942'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :circulation_status: On Shelf
+      :z30_callno: QD33.2 .S55 2009
+      :description: 
+      :hol_doc_number: '003651733'
+      :doc_library: NYU01
+      :sub_library: NYU Bobst
+      :collection: Main Collection
+      :doc_number: 003079903
+      :rest_api_id: NYU01003079903
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+    :request_link_supports_ajax_call: true
+    :requestability: deferred
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: false
+    :latest: true
+
+internet_archive_with_edition_str:
+  id: 7
+  service_id: InternetArchive
+  display_text: "the Internet Archive: Open Source Book"
+  url: "http://archive.org/details/MomoOvveroLarcanaStoriaDeiLadriDiTempoEDellaBambinaCheRestitu"
+  notes: 
+  request: momo
+  service_type_value_name: fulltext
+  service_data: |
+    ---
+    :match_reliability: unsure
+    :edition_str: Momo, ovvero l'arcana storia dei ladri di tempo e della bambina che
+      restituÃ¬ agli uomini il tempo trafugato
+
+nyu_sfx_advocate:
+  id: 8
+  service_id: NYU_SFX
+  display_text: Gale Cengage Newsstand
+  url: "https://ezproxy.library.nyu.edu/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ASTND&rft.issn=1832-9373&req_dat=info%3Asid%2Fgale%3Augnid%3Anysl_me_newyorku&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_enc=info%3Aofi%3Aenc%3AUTF-8&url_ver=Z39.88-2004&rft.jtitle=Advocate+(Western+Australia,+Australia)"
+  notes: 
+  request: advocate
+  service_type_value_name: fulltext
+  service_data: |
+    ---
+    :authentication: ''
+    :source: SFX/
+    :coverage: ! 'Available from 2009.'
+    :sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41
+    :sfx_obj_index: 1
+    :sfx_target_index: 1
+    :sfx_request_id: '3766609'
+    :sfx_target_service_id: '1000000000003344'
+    :sfx_target_name: GALEGROUP_IT_NEWSSTAND
+    :citation_volume: 
+    :citation_issue: 
+    :citation_spage: 
+    :debug_info: ! ' Target: GALEGROUP_IT_NEWSSTAND ; SFX object ID: 2670000000017711'
+
+nyu_primo_advocate:
+  id: 9
+  service_id: NYU_Primo
+  display_text: Search for this title in BobCat.
+  url: "http://bobcat.library.nyu.edu/primo_library/libweb/action/dlSearch.do?institution=NYU&vid=NYU&onCampus=false&query=title%2Cexact%2CAdvocate&indx=1&bulkSize=10&group=GUEST"
+  notes: 
+  request: advocate
+  service_type_value_name: holding_search
+  service_data: |
+    ---
+    :type: link_to_search
+    :note: ''
+
+nyu_primo_naked_statistics:
+  id: 10
+  service_id: NYU_Primo_Source
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=003710159&sub_library=BOBST"
+  notes: 
+  request: naked_statistics
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph003710159
+    :original_id: nyu_aleph003710159
+    :title: ! 'Naked statistics : stripping the dread from the data'
+    :author: Charles J.  Wheelan
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 003710159
+    :ils_api_id: NYU01003710159
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (QA276 .W458 2013)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (QA276 .W458 2013 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '2'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: requested
+    :status: ! 'On Hold; Requested'
+    :source_data:
+      :item_id: NYU50003710159000010
+      :adm_library_code: NYU50
+      :call_number: (QA276 .W458 2013)
+      :sub_library_code: BOBST
+      :collection_code: MAIN
+      :source_record_id: 003710159
+      :sequence_number: '1.0'
+      :barcode: '31142055184439'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :item_status: Regular loan
+      :item_process_status: Not in Process
+      :circulation_status: ! 'On Hold; Requested'
+      :queue: 4 request(s) of 1 items.
+      :z30_callno: QA276 .W458 2013
+      :description: 
+      :hol_doc_number: 004537956
+      :doc_library: NYU01
+      :sub_library: NYU Bobst
+      :collection: Main Collection
+      :doc_number: 003710159
+      :rest_api_id: NYU01003710159
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+    :request_link_supports_ajax_call: true
+    :requestability: deferred
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: true
+    :latest: true

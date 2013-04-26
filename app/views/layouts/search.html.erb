@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BobCat</title>
+    <%= csrf_meta_tags %>
+    <%= search_stylesheets %> 
+    <%= search_javascripts %>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
+      <div><span>GetIt @ NYU Libraries</span></div>
+      <div id="bobcat_title"><span>BobCat</span></div>
+    </header>
+    <nav id="nav1" class="breadcrumb">
+      <%= breadcrumbs %>
+      <%= login %>
+    </nav>
+    <div class="nyu-container">
+      <div class="container-fluid nyu-container">
+        <div class="row-fluid">
+          <div class="span8">
+            <%= tabs(["nav", "nav-tabs"]).html_safe %>
+            <%= yield %>
+          </div>
+          <div class="span4">
+            <div id="sidebar" class="sidebar">
+              <div id="sidebar_tabs" class="sidebar-section">
+                <h2>BobCat</h2>
+                <%= tabs %>
+              </div>
+              <%= render :partial => "#{current_primary_institution.views["dir"]}/sidebar" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag "https://libraryh3lp.com/js/libraryh3lp.js?multi" %>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<%= display_request_form("on_order") do %>
+  <%= display_request_option do %>
+    <%= display_request_link_or_text(
+      "Request for this item to be held for you once processed.", 
+        "on_order") %>
+    With open orders, the library cannot predict or guarantee the date of delivery. 
+    If you have an urgent deadline, it is better to use Interlibrary Loan.<br />
+    <%= display_pickup_locations %>
+    <%= display_delivery_times_link %>
+  <% end %>
+  <%= submit_tag 'Submit' if pickup_locations.length > 1 %>
+<% end %>

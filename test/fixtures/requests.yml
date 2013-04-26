@@ -1,0 +1,42 @@
+# Request fixtures
+frankenstein:
+  referent: frankenstein
+
+primo_book_virtual_inequality:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000980206
+  referent: primo_book_virtual_inequality
+
+primo_book_pragmatic_ruby:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000007935
+  referent: primo_book_pragmatic_ruby
+
+primo_journal_musical_quarterly:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002895625
+  referent: primo_journal_musical_quarterly
+
+the_new_yorker:
+  referent: the_new_yorker
+
+primo_book_temple_of_deir_el_bahari:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002626473
+  referent: primo_book_temple_of_deir_el_bahari
+
+primo_book_chemistry_the_molecular_nature_of_matter_and_change:
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003079903
+  referent: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+
+momo:
+  referent: momo
+
+advocate:
+  referent: advocate
+  referrer_id: info:sid/sfxit.com:citation
+
+reserves_microeconomics:
+  referent: reserves_microeconomics
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-COURSES000193032
+
+naked_statistics: 
+  referrer_id: info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003710159
+  referent: naked_statistics
+  

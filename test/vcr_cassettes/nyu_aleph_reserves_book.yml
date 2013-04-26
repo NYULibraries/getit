@@ -1,0 +1,164 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>COURSES000193032</docId></fullViewRequest>]]></request></getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '831'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - ! 'Servlet 2.4; Tomcat-5.0.28/JBoss-4.0.1 (build: CVSTag=JBoss_4_0_1 date=200412230944)'
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 21 Feb 2013 20:04:18 GMT
+      Server:
+      - Apache-Coyote/1.1
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;sear:DOC
+        LOCAL=&quot;true&quot; xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;
+        xmlns:sear=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n
+        \         &lt;PrimoNMBib&gt;\n            &lt;record&gt;\n              &lt;control&gt;\n
+        \               &lt;sourcerecordid&gt;000193032&lt;/sourcerecordid&gt;\n                &lt;sourceid&gt;COURSES&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;COURSES000193032&lt;/recordid&gt;\n                &lt;originalsourceid&gt;NYU30&lt;/originalsourceid&gt;\n
+        \               &lt;ilsapiid&gt;NYU30000193032&lt;/ilsapiid&gt;\n                &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n
+        \               &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n              &lt;/control&gt;\n
+        \             &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;Microeconomics: Principles and applications (6th
+        edt.)&lt;/title&gt;\n                &lt;creator&gt;Hall &amp;amp; Leiberman&lt;/creator&gt;\n
+        \               &lt;language&gt;eng&lt;/language&gt;\n                &lt;source&gt;COURSES&lt;/source&gt;\n
+        \               &lt;availlibrary&gt;$$INYU$$LBRES$$1Reserve Collection$$2(XLM0002.E01
+        )$$Savailable$$33$$40$$5N$$62$$XNYU50$$YBRES$$ZBRES&lt;/availlibrary&gt;\n
+        \               &lt;lds01&gt;ECON-UA0002 -- Economic Principles II -- Lieberman,
+        Marc -- Spring -- Economics&lt;/lds01&gt;\n                &lt;lds02&gt;COURSES000193032&lt;/lds02&gt;\n
+        \               &lt;lds03&gt;ECON-UA0002 -- Economic Principles II -- Lieberman,
+        Marc&lt;/lds03&gt;\n                &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;available&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Treserves_backlink$$DReserves processing
+        information&lt;/backlink&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Treserves_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DClick here for a persistent
+        link&lt;/linktoreview&gt;\n              &lt;/links&gt;\n              &lt;search&gt;\n
+        \               &lt;creatorcontrib&gt;Hall &amp;amp; Leiberman&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;Microeconomics: Principles and applications (6th
+        edt.)&lt;/title&gt;\n                &lt;sourceid&gt;COURSES&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;COURSES000193032&lt;/recordid&gt;\n                &lt;toc&gt;ECON-UA0002
+        BOBST - Economic Principles II - Lieberman, Marc&lt;/toc&gt;\n                &lt;toc&gt;ECON-UA0002
+        BOBST Economic Principles II Lieberman, Marc Spring Economics&lt;/toc&gt;\n
+        \               &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n                &lt;searchscope&gt;BOBSTCR&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;COURSES&lt;/searchscope&gt;\n                &lt;scope&gt;BOBSTCR&lt;/scope&gt;\n
+        \               &lt;scope&gt;COURSES&lt;/scope&gt;\n                &lt;lsr03&gt;Economic
+        Principles II&lt;/lsr03&gt;\n                &lt;lsr04&gt;Lieberman, Marc&lt;/lsr04&gt;\n
+        \             &lt;/search&gt;\n              &lt;sort&gt;\n                &lt;title&gt;Microeconomics:
+        Principles and applications (6th edt.)&lt;/title&gt;\n                &lt;author&gt;Hall
+        &amp;amp; Leiberman&lt;/author&gt;\n              &lt;/sort&gt;\n              &lt;facets&gt;\n
+        \               &lt;collection&gt;BRES&lt;/collection&gt;\n                &lt;toplevel&gt;available&lt;/toplevel&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Hall &amp;amp; Leiberman&lt;/creatorcontrib&gt;\n
+        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;lfc01&gt;Reserve
+        Collection&lt;/lfc01&gt;\n                &lt;lfc02&gt;ECON-UA0002&lt;/lfc02&gt;\n
+        \               &lt;lfc03&gt;Lieberman, Marc&lt;/lfc03&gt;\n                &lt;lfc05&gt;Lieberman,
+        Marc&lt;/lfc05&gt;\n                &lt;lfc06&gt;Economic Principles II&lt;/lfc06&gt;\n
+        \               &lt;frbrgroupid&gt;96567710&lt;/frbrgroupid&gt;\n                &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n
+        \             &lt;/facets&gt;\n              &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n
+        \               &lt;c3&gt;microeconomicsprinciions6thedt&lt;/c3&gt;\n                &lt;f5&gt;microeconomicsprinciions6thedt&lt;/f5&gt;\n
+        \               &lt;f7&gt;microeconomics principles and applications 6th edt&lt;/f7&gt;\n
+        \               &lt;f11&gt;hall leiberman&lt;/f11&gt;\n              &lt;/dedup&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Khall
+        &amp;amp; leiberman$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookmicroeconomics
+        principles and applications 6th edt$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;institution&gt;NYU&lt;/institution&gt;\n
+        \               &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n
+        \             &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Hall &amp;amp;
+        Leiberman&lt;/aulast&gt;\n                &lt;au&gt;Hall &amp;amp; Leiberman&lt;/au&gt;\n
+        \               &lt;btitle&gt;Microeconomics: Principles and applications
+        (6th edt.)&lt;/btitle&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
+        \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/sear:DOC&gt;\n
+        \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;\n</getRecordReturn></getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Thu, 21 Feb 2013 20:04:18 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU30000193032/items?view=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 21 Feb 2013 20:04:26 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU30000193032/items/NYU50100285680000010"><z30-sub-library-code>BRES</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>20</z30-item-status-code><z30-collection-code>BRES</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>100285680</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142051608357</z30-barcode><z30-sub-library>NYU
+        Bobst Reserve Collection</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Reserve
+        2 hour loan</z30-item-status><z30-open-date>20130130</z30-open-date><z30-update-date>20130130</z30-update-date><z30-cataloger>NYEIM</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Reserve
+        Collection</z30-collection><z30-call-no-type>8</z30-call-no-type><z30-call-no>XLM0002.E01</z30-call-no><z30-call-no-key>8
+        xlm0002.e01</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>000000000</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20130130</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000193031</z13-doc-number><z13-year>0000</z13-year><z13-open-date>20130130</z13-open-date><z13-update-date>20130130</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC8</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Hall
+        &amp; Leiberman</z13-author><z13-title-code>245</z13-title-code><z13-title>Microeconomics:
+        Principles and applications (6th edt.)</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn></z13><status>On
+        Shelf</status></item><item href="http://aleph.library.edu:1891/rest-dlf/record/NYU30000193032/items/NYU50100285680000020"><z30-sub-library-code>BRES</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>20</z30-item-status-code><z30-collection-code>BRES</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>100285680</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142051608365</z30-barcode><z30-sub-library>NYU
+        Bobst Reserve Collection</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Reserve
+        2 hour loan</z30-item-status><z30-open-date>20130130</z30-open-date><z30-update-date>20130130</z30-update-date><z30-cataloger>NYEIM</z30-cataloger><z30-date-last-return>20130214</z30-date-last-return><z30-hour-last-return>1029</z30-hour-last-return><z30-ip-last-return>128.122.88.46</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Reserve
+        Collection</z30-collection><z30-call-no-type>8</z30-call-no-type><z30-call-no>XLM0002.E01</z30-call-no><z30-call-no-key>8
+        xlm0002.e01</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>000000000</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>004</z30-maintenance-count><z30-process-status-date>20130130</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000193031</z13-doc-number><z13-year>0000</z13-year><z13-open-date>20130130</z13-open-date><z13-update-date>20130130</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC8</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Hall
+        &amp; Leiberman</z13-author><z13-title-code>245</z13-title-code><z13-title>Microeconomics:
+        Principles and applications (6th edt.)</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn></z13><status>On
+        Shelf</status></item><item href="http://aleph.library.edu:1891/rest-dlf/record/NYU30000193032/items/NYU50100285680000030"><z30-sub-library-code>BRES</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>20</z30-item-status-code><z30-collection-code>BRES</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>100285680</z30-doc-number><z30-item-sequence>    3.0</z30-item-sequence><z30-barcode>31142054052728</z30-barcode><z30-sub-library>NYU
+        Bobst Reserve Collection</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Reserve
+        2 hour loan</z30-item-status><z30-open-date>20130205</z30-open-date><z30-update-date>20130205</z30-update-date><z30-cataloger>MUHAMMADA</z30-cataloger><z30-date-last-return>20130214</z30-date-last-return><z30-hour-last-return>1904</z30-hour-last-return><z30-ip-last-return>128.122.88.46</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Reserve
+        Collection</z30-collection><z30-call-no-type></z30-call-no-type><z30-call-no>XLM0002.E01</z30-call-no><z30-call-no-key>xlm0002.e01</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>000000000</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>20130205</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000193031</z13-doc-number><z13-year>0000</z13-year><z13-open-date>20130130</z13-open-date><z13-update-date>20130130</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC8</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Hall
+        &amp; Leiberman</z13-author><z13-title-code>245</z13-title-code><z13-title>Microeconomics:
+        Principles and applications (6th edt.)</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn></z13><status>On
+        Shelf</status></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Thu, 21 Feb 2013 20:04:26 GMT
+recorded_with: VCR 2.4.0

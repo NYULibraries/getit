@@ -1,0 +1,24 @@
+<div class="search with-tabs">
+  <%= render 'short_form' %>
+  <%= render 'browse' %>
+</div>
+<%= form_tag root_url, remote: true, class: "form-inline", target: :_blank do %>
+  <%#= render 'controls' %>
+  <div class="results">
+    <% unless @hits == 0 %>
+      <p>Displaying results <strong><%= @start_result_num %> - <%= @end_result_num %></strong> of <strong><%= @hits %></strong> in total</p>
+    <% end %>
+    <% if params["rft.jtitle"] %>
+      <div class="note"><em><strong>Note:</strong> Alternate titles might have matched your search terms</em></div>
+    <% end %>
+    <div class='pagination'>
+      <%= render 'pager' %>
+    </div>
+    <% @display_results.each_index do | record_idx | %>
+      <%= render "record", record: @display_results[record_idx], record_idx: ((@page-1)*20) + record_idx + 1 %>
+    <% end %>
+    <div class='pagination'>
+      <%= render 'pager' %>
+    </div>
+  </div>
+<% end %>

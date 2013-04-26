@@ -1,0 +1,504 @@
+# ReferentValue fixtures
+frankenstein_1:
+  referent: frankenstein
+  normalized_value: info:oclcnum/33045872
+  key_name: identifier
+  metadata: false
+  value: info:oclcnum/33045872
+  private_data: false
+
+frankenstein_2:
+  referent: frankenstein
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+frankenstein_3:
+  referent: frankenstein
+  normalized_value: "9780393964585"
+  key_name: isbn
+  metadata: true
+  value: "9780393964585"
+  private_data: false
+
+frankenstein_4:
+  referent: frankenstein
+  normalized_value: new york
+  key_name: place
+  metadata: true
+  value: New York
+  private_data: false
+
+frankenstein_5:
+  referent: frankenstein
+  normalized_value: ""
+  key_name: atitle
+  metadata: true
+  value: ""
+  private_data: false
+
+frankenstein_6:
+  referent: frankenstein
+  normalized_value: ""
+  key_name: aucorp
+  metadata: true
+  value: ""
+  private_data: false
+
+frankenstein_7:
+  referent: frankenstein
+  normalized_value: "1997"
+  key_name: date
+  metadata: true
+  value: "1997"
+  private_data: false
+
+frankenstein_8:
+  referent: frankenstein
+  normalized_value: "frankenstein : the 1818 text, contexts, nineteenth-century responses, modern criticism"
+  key_name: btitle
+  metadata: true
+  value: "Frankenstein : the 1818 text, contexts, nineteenth-century responses, modern criticism"
+  private_data: false
+
+frankenstein_9:
+  referent: frankenstein
+  normalized_value: ""
+  key_name: series
+  metadata: true
+  value: ""
+  private_data: false
+
+frankenstein_10:
+  referent: frankenstein
+  normalized_value: w.w. norton
+  key_name: pub
+  metadata: true
+  value: W.W. Norton
+  private_data: false
+
+frankenstein_11:
+  referent: frankenstein
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+frankenstein_12:
+  referent: frankenstein
+  normalized_value: 1st ed.
+  key_name: edition
+  metadata: true
+  value: 1st ed.
+  private_data: false
+
+frankenstein_13:
+  referent: frankenstein
+  normalized_value: wollstonecraft
+  key_name: auinitm
+  metadata: true
+  value: Wollstonecraft
+  private_data: false
+
+frankenstein_14:
+  referent: frankenstein
+  normalized_value: ""
+  key_name: tpages
+  metadata: true
+  value: ""
+  private_data: false
+
+frankenstein_15:
+  referent: frankenstein
+  normalized_value: mary
+  key_name: aufirst
+  metadata: true
+  value: Mary
+  private_data: false
+
+frankenstein_16:
+  referent: frankenstein
+  normalized_value: shelley
+  key_name: aulast
+  metadata: true
+  value: Shelley
+  private_data: false
+
+frankenstein_17:
+  referent: frankenstein
+  normalized_value: "tag:gpc,2008-6-28:1"
+  key_name: identifier
+  metadata: false
+  value: "tag:gpc,2008-6-28:1"
+  private_data: false
+
+primo_book_virtual_inequality_1:
+  referent: primo_book_virtual_inequality
+  normalized_value: "virtual inequality : beyond the digital divide"
+  key_name: btitle
+  metadata: true
+  value: "Virtual inequality : beyond the digital divide"
+  private_data: false
+
+primo_book_virtual_inequality_2:
+  referent: primo_book_virtual_inequality
+  normalized_value: mossberger
+  key_name: aulast
+  metadata: true
+  value: Mossberger
+  private_data: false
+
+primo_book_virtual_inequality_3:
+  referent: primo_book_virtual_inequality
+  normalized_value: karen
+  key_name: aufirst
+  metadata: true
+  value: Karen
+  private_data: false
+
+primo_book_virtual_inequality_4:
+  referent: primo_book_virtual_inequality
+  normalized_value: "9780393964585"
+  key_name: isbn
+  metadata: true
+  value: "9780393964585"
+  private_data: false
+
+primo_book_virtual_inequality_5:
+  referent: primo_book_virtual_inequality
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+primo_book_virtual_inequality_6:
+  referent: primo_book_virtual_inequality
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+primo_book_virtual_inequality_7:
+  referent: primo_book_virtual_inequality
+  normalized_value: georgetown university press
+  key_name: pub
+  metadata: true
+  value: Georgetown University Press
+  private_data: false
+
+primo_book_virtual_inequality_8:
+  referent: primo_book_virtual_inequality
+  normalized_value: "washington, d.c."
+  key_name: place
+  metadata: true
+  value: "Washington, D.C."
+  private_data: false
+
+primo_book_pragmatic_ruby_1:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: "programming ruby : the pragmatic programmers' guide"
+  key_name: btitle
+  metadata: true
+  value: "Programming Ruby : the pragmatic programmers' guide"
+  private_data: false
+
+primo_book_pragmatic_ruby_2:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: "0974514055"
+  key_name: isbn
+  metadata: true
+  value: "0974514055"
+  private_data: false
+
+primo_book_pragmatic_ruby_3:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+primo_book_pragmatic_ruby_4:
+  referent: primo_book_pragmatic_ruby
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+primo_journal_musical_quarterly_1:
+  referent: primo_journal_musical_quarterly
+  normalized_value: "the musical quarterly"
+  key_name: jtitle
+  metadata: true
+  value: "The Musical quarterly"
+  private_data: false
+
+primo_journal_musical_quarterly_2:
+  referent: primo_journal_musical_quarterly
+  normalized_value: journal
+  key_name: format
+  metadata: false
+  value: journal
+  private_data: false
+
+primo_journal_musical_quarterly_3:
+  referent: primo_journal_musical_quarterly
+  normalized_value: "0027-4631"
+  key_name: issn
+  metadata: true
+  value: "0027-4631"
+  private_data: false
+
+primo_journal_musical_quarterly_4:
+ referent: primo_journal_musical_quarterly
+ key_name: "genre"
+ value: "journal"
+ normalized_value: "journal"
+ metadata: true
+ private_data: false
+
+primo_journal_musical_quarterly_5:
+ referent: primo_journal_musical_quarterly
+ normalized_value: g. schirmer
+ key_name: pub
+ metadata: true
+ value: G. Schirmer
+ private_data: false
+
+primo_journal_musical_quarterly_6:
+ referent: primo_journal_musical_quarterly
+ normalized_value: "new york etc"
+ key_name: place
+ metadata: true
+ value: "New York [etc"
+ private_data: false
+
+the_new_yorker_1:
+ referent: the_new_yorker
+ key_name: title
+ value: The New Yorker
+ normalized_value: The New Yorker
+ metadata: true
+ private_data: false
+
+the_new_yorker_2:
+ referent: the_new_yorker
+ key_name: issn
+ value: 0028-792X
+ normalized_value: 0028-792X
+ metadata: true
+ private_data: false
+
+primo_book_temple_of_deir_el_bahari_1:
+ referent: primo_book_temple_of_deir_el_bahari
+ normalized_value: "the temple of deir el bahari"
+ key_name: btitle
+ metadata: true
+ value: "The temple of Deir el Bahari"
+ private_data: false
+
+primo_book_temple_of_deir_el_bahari_2:
+ referent: primo_book_temple_of_deir_el_bahari
+ normalized_value: book
+ key_name: genre
+ metadata: true
+ value: book
+ private_data: false
+
+primo_book_temple_of_deir_el_bahari_3:
+ referent: primo_book_temple_of_deir_el_bahari
+ normalized_value: book
+ key_name: format
+ metadata: false
+ value: book
+ private_data: false
+
+primo_book_chemistry_the_molecular_nature_of_matter_and_change_1:
+  referent: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+  normalized_value: "chemistry : the molecular nature of matter and change"
+  key_name: btitle
+  metadata: true
+  value: "Chemistry : the molecular nature of matter and change"
+  private_data: false
+
+primo_book_chemistry_the_molecular_nature_of_matter_and_change_2:
+  referent: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+primo_book_chemistry_the_molecular_nature_of_matter_and_change_3:
+  referent: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+primo_book_chemistry_the_molecular_nature_of_matter_and_change_4:
+  referent: primo_book_chemistry_the_molecular_nature_of_matter_and_change
+  normalized_value: "9780073048598"
+  key_name: isbn
+  metadata: true
+  value: "9780073048598"
+  private_data: false
+
+momo1:
+  referent: momo
+  normalized_value: momo
+  key_name: btitle
+  metadata: true
+  value: Momo
+  private_data: false
+
+momo2:
+  referent: momo
+  normalized_value: 038519093X
+  key_name: isbn
+  metadata: true
+  value: 038519093X
+  private_data: false
+
+momo3:
+  referent: momo
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+momo4:
+  referent: momo
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+momo5:
+  referent: momo
+  normalized_value: doubleday
+  key_name: pub
+  metadata: true
+  value: Doubleday
+  private_data: false
+
+momo6:
+  referent: momo
+  normalized_value: michael
+  key_name: aufirst
+  metadata: true
+  value: Michael
+  private_data: false
+
+momo7:
+  referent: momo
+  normalized_value: ende
+  key_name: aulast
+  metadata: true
+  value: Ende
+  private_data: false
+
+advocate1:
+  referent: advocate
+  normalized_value: advocate
+  key_name: jtitle
+  metadata: true
+  value: Advocate
+  private_data: false
+
+advocate2:
+  referent: advocate
+  normalized_value: 1832-9373
+  key_name: issn
+  metadata: true
+  value: 1832-9373
+  private_data: false
+
+advocate3:
+  referent: advocate
+  normalized_value: journal
+  key_name: format
+  metadata: false
+  value: journal
+  private_data: false
+
+advocate4:
+  referent: advocate
+  normalized_value: 2670000000017711
+  key_name: object_id
+  metadata: true
+  value: 2670000000017711
+  private_data: false
+
+reserves_microeconomics1:
+  referent: reserves_microeconomics
+  normalized_value: "microeconomics: principles and applications (6th edt.)"
+  key_name: btitle
+  metadata: true
+  value: "Microeconomics: Principles and applications (6th edt.)"
+  private_data: false
+
+reserves_microeconomics2:
+  referent: reserves_microeconomics
+  normalized_value: "hall & leiberman"
+  key_name: au
+  metadata: true
+  value: "Hall & Leiberman"
+  private_data: false
+
+reserves_microeconomics3:
+  referent: reserves_microeconomics
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+reserves_microeconomics4:
+  referent: reserves_microeconomics
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
+
+naked_statistics1:
+  referent: naked_statistics
+  normalized_value: "naked statistics : stripping the dread from the data"
+  key_name: btitle
+  metadata: true
+  value: "Naked statistics : stripping the dread from the data"
+  private_data: false
+
+naked_statistics2:
+  referent: naked_statistics
+  normalized_value: 9780393071955
+  key_name: isbn
+  metadata: true
+  value: 9780393071955
+  private_data: false
+
+naked_statistics3:
+  referent: naked_statistics
+  normalized_value: book
+  key_name: format
+  metadata: false
+  value: book
+  private_data: false
+
+naked_statistics4:
+  referent: naked_statistics
+  normalized_value: book
+  key_name: genre
+  metadata: true
+  value: book
+  private_data: false
