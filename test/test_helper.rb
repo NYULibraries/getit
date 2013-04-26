@@ -84,3 +84,9 @@ VCR.configure do |c|
   c.filter_sensitive_data("DUMMY_NYU_SCOPUS_API_KEY") { @@nyu_scopus_api_key }
   c.filter_sensitive_data("DUMMY_NS_BX_TOKEN") { @@ns_bx_token }
 end
+
+# Use the included testmnt for testing.
+Exlibris::Aleph.configure do |config|
+  config.tab_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab" if ENV['TRAVIS']
+  config.yml_path = "#{File.dirname(__FILE__)}/../test/config/aleph" if ENV['TRAVIS']
+end
