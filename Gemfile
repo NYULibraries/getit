@@ -25,15 +25,17 @@ end
 group :development do
   gem "progress_bar", "~> 0.4.0"
   gem "better_errors", "~> 0.7.2"
-  gem "binding_of_caller", "~> 0.7.1"
-  gem "debugger", "~> 1.5.0"
+  platforms :ruby do
+    gem "binding_of_caller", "~> 0.7.1"
+    gem "debugger", "~> 1.5.0"
+  end
 end
 
 # Testing gems
 group :test do
   gem "simplecov", "~> 0.7.1"
   gem "simplecov-rcov", "~> 0.2.3"
-  gem 'coveralls', "~> 0.6.7", :require => false
+  gem 'coveralls', "~> 0.6.7", require: false
   gem "vcr", "~> 2.4.0"
   gem "webmock", "~> 1.9.0"
 end
