@@ -1,6 +1,4 @@
 == GetIt @ NYU
-{<img src="http://jenkins1.bobst.nyu.edu/job/GetIt%20Production/badge/icon" alt="Build Status">}[http://jenkins1.bobst.nyu.edu:8080/job/GetIt%20Production/]
-
 The GetIt application at NYU leverages Umlaut to provide just in time OpenURL resolution (I'm not sure what that means though).
 
 Umlaut aggregates services for a requested citation represented by an Open URL.  That's a little better, but you should probably
