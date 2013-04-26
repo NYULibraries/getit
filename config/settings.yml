@@ -59,6 +59,10 @@ institutions:
     services:
       ScopusCitations:
         json_api_key: json_api_key
+  NS:
+    services:
+      NS_bX:
+        token: token
 
 capistrano:
   servers: []

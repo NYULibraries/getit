@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: ba6df65a514af87d8a7cb09d9ef42f2554fa5126
+  revision: 9789cf33a5d95eccb821837fa7ae0906924bfe2c
   specs:
     nyulibraries_assets (1.0.9)
-      bootstrap-sass (~> 2.3.1.0)
+      bootstrap-sass (= 2.3.1.0)
       compass (~> 0.12.2)
       institutions (~> 0.0.5)
       rake (~> 10.0.2)
@@ -104,7 +104,7 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.1.1)
+    bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
     capistrano (2.15.3)
