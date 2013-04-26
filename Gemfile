@@ -25,10 +25,8 @@ end
 group :development do
   gem "progress_bar", "~> 0.4.0"
   gem "better_errors", "~> 0.7.2"
-  platforms :ruby do
-    gem "binding_of_caller", "~> 0.7.1"
-    gem "debugger", "~> 1.5.0"
-  end
+  gem "binding_of_caller", "~> 0.7.1", platform: :ruby
+  gem "debugger", "~> 1.5.0", platform: :mri
 end
 
 # Testing gems
