@@ -1,19 +1,27 @@
 # GetIt @ NYU
 
 [![Build Status](https://travis-ci.org/NYULibraries/getit.png?branch=master)](https://travis-ci.org/NYULibraries/getit)
-[![Dependency Status](https://gemnasium.com/NYULibraries/getit.png)](https://gemnasium.com/NYULibraries/getit)
+<!-- [![Dependency Status](https://gemnasium.com/NYULibraries/getit.png)](https://gemnasium.com/NYULibraries/getit) -->
 [![Code Climate](https://codeclimate.com/github/NYULibraries/getit.png)](https://codeclimate.com/github/NYULibraries/getit)
 [![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/getit)
 
-The GetIt application at NYU leverages Umlaut to provide just in time OpenURL resolution (I'm not sure what that means though).
-
-Umlaut aggregates services for a requested citation represented by an Open URL.  That's a little better, but you should probably
-just check out [Umlaut](http://github.com/team-umlaut/umlaut).
+The GetIt application at NYU leverages `[Umlaut](http://github.com/team-umlaut/umlaut)` to provide just in time OpenURL resolution. 
+This means that GetIt should only display services that will result in useful delivery options based on the context of the current request.
+Umlaut aggregates services for the requested citation represented by an Open URL and presents those options in clear categories based on 
+the nature of the service.
+For more info check out `[Umlaut](http://github.com/team-umlaut/umlaut)`.
 
 ## NYU Customizations
 At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic Umlaut application.
 
-1. Aleph Integration: we've included some Aleph functionality, most notably the ability to request Aleph items
-2. SFX Solr Indexing: we've indexed SFX titles in Solr for quick retrieval using [Sunspot](http://sunspot.github.com/)
-3. User Login: we've included the ability for users to login via PDS, using [Authlogic](http://github.com/binarylogic/authlogic), [authpds](http://github.com/scotdalton/authpds) and [authpds-nyu](http://github.com/scotdalton/authpds)
-4. UI: we've customized the UI to our liking leveraging [Twitter Bootstrap](http://twitter.github.com/bootstrap) where appropriate.
+1.  Primo Integration: we use the `[Umlaut Primo](https://github.com/team-umlaut/umlaut-primo)` gem to add Primo support
+2.  Aleph Integration: we've included some Aleph functionality, most notably the ability to request Aleph items
+3.  SFX Solr Indexing: we've indexed SFX titles in Solr for quick retrieval using `[Sunspot](http://sunspot.github.com/)` and 
+    `[Umlaut's Sfx4Solr](https://github.com/team-umlaut/umlaut/tree/master/app/controllers/search_methods/sfx4_solr)`
+4.  User Login: we've included the ability for users to login via PDS, using `[Authlogic](http://github.com/binarylogic/authlogic)`, `[authpds](http://github.com/scotdalton/authpds)` and `[authpds-nyu](http://github.com/scotdalton/authpds)`
+5.  UI: we've customized the search UI to leverage [NYU Libraries' common layouts and assets](https://github.com/NYULibraries/nyulibraries_assets)
+6.  Institutional support: we've included support for different institutions for both [searching](https://github.com/NYULibraries/getit/blob/master/config/initializers/search_controller.rb)
+    and [resolving](https://github.com/NYULibraries/getit/blob/master/app/controllers/umlaut_controller.rb#L157)
+
+## Services
+Check out our wiki [page on services](https://github.com/NYULibraries/getit/wiki/Services).
