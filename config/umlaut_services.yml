@@ -1,5 +1,4 @@
-# Configure what service plugins are used by Umlaut. This skeleton file
-# has been generated into your app to help you get started.
+# Configure what service plugins are used by Umlaut.
 #
 # If a service has "disabled:true", it's currently turned off.
 #
@@ -30,7 +29,6 @@ default:
         - fulltext
         - table_of_contents
         - referent_enhance
-        - cover_image
 
     # Priority 3
     # First half of Amazon, run in foreground, get metadata and cover images.
@@ -186,17 +184,6 @@ default:
       type: TxtHoldingExport
       priority: e
 
-    # GPO is kind of experimental, it doesn't work great, but IF an
-    # OpenURL includes a sudoc call number or other GPO identifiers,
-    # will try to link to full text via GPO catalog scrape.
-    Gpo:
-      type: Gpo
-      disabled: true
-      priority: e
-      #preempted_by:
-      #  - existing_type: fulltext
-      #  - existing_type: fulltext_title_level
-
     # Worldcat scraper can be quite slow, move it to wave 'e' to avoid
     # holding up wave 'c'
     Worldcat:
@@ -216,45 +203,6 @@ default:
       #wikipedia_link: false
       #openurl_widely_held: false
       #require_identifier: true
-
-    ####
-    # Link out filters: Effect what happens when a user clicks
-    # on an Umlaut link to a third party source. Link out filters
-    # can operate to change where link goes or execute side effects
-    # on click.
-    ####
-
-    # Redirect outgoing links through EZProxy
-    EZProxy:
-      type: Ezproxy
-      disabled: true
-      task: link_out_filter
-      proxy_server:  HOSTNAME_OF_YOUR_EZPROXY
-      # By default, will pre-check with EZProxy api and
-      # only send links through EZProxy that are proxyable.
-      # requires proxy_password to be set.
-      # optionally, set precheck_with_api false, and the EZProxy
-      # api won't be used, ALL links go through EZProxy. You may
-      # have EZProxy itself set to transparently redirect non-proxyable
-      # URLs back to non-proxied version.
-      #
-      #precheck_with_api: false
-      priority: 5
-      proxy_password: YOUR_EZPROXY_API_PWD
-      # Want to exclude certain hostnames from being directed through EZProxy?
-      # list them in array here:
-      #exclude: [ host.unversity.edu, otherhost.somewhere.com]
-
-    # Use of SFX api means that SFX can no longer keep statistics on
-    # clickthroughs. This link out filter will attempt to fake SFX into
-    # thinking a direct click happened when user clicks on an SFX link
-    # via Umlaut.  This is VERY fragile logic, required reverse engineering
-    # SFX and faking it out, still doesn't work all the time. But works
-    # much of the time.
-    SFX_backchannel_record:
-      type: SfxBackchannelRecord
-      disabled: true
-      priority: 6
 
 NYU:
   name: NYU Libraries
