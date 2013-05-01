@@ -436,8 +436,8 @@ NS:
         umlaut:
           url_suffix: "/ns"
   controllers:
-    searcher: Sfx4Solr::Ns
-    # searcher: Sfx4Ns
+    # searcher: Sfx4Solr::Ns
+    searcher: Sfx4Ns
   ip_addresses: <%= Settings.institutions.NS.ip_addresses %>
   services:
     NS_SFX:
