@@ -9,7 +9,7 @@ The GetIt application at NYU leverages [`Umlaut`](http://github.com/team-umlaut/
 This means that GetIt should only display services that will result in useful delivery options based on the context of the current request.
 Umlaut aggregates services for the requested citation represented by an Open URL and presents those options in clear categories based on 
 the nature of the service.
-For more info check out the [GetIt wiki](http://github.com/NYULibraries/wiki/Home) and/or 
+For more info check out the [GetIt wiki](http://github.com/NYULibraries/getit/wiki/Home) and/or 
 [Umlaut](http://github.com/team-umlaut/umlaut#umlaut).
 
 ## NYU Customizations
