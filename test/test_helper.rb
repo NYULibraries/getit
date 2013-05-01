@@ -87,6 +87,6 @@ end
 
 # Use the included testmnt for testing.
 Exlibris::Aleph.configure do |config|
-  config.tab_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab" if ENV['TRAVIS']
-  config.yml_path = "#{File.dirname(__FILE__)}/../test/config/aleph" if ENV['TRAVIS']
+  config.tab_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
+  config.yml_path = "#{File.dirname(__FILE__)}/../test/config/aleph"
 end
