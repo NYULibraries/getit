@@ -24,4 +24,4 @@ At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic
     and [resolving](https://github.com/NYULibraries/getit/blob/master/app/controllers/umlaut_controller.rb#L157)
 
 ## Enabled Services
-Check out our wiki [page on services](https://github.com/NYULibraries/getit/wiki/Services).
+Check out our wiki [page on services](wiki/Services).
