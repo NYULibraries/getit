@@ -16,8 +16,8 @@ At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic
 
 1.  Primo Integration: we use the [`Umlaut Primo`](https://github.com/team-umlaut/umlaut-primo) gem to add Primo support
 2.  Aleph Integration: we've included some Aleph functionality, most notably the ability to request Aleph items
-3.  SFX Solr Indexing: we've indexed SFX titles in Solr for quick retrieval using [`Sunspot`](http://sunspot.github.com/) and 
-    [Umlaut's Sfx4Solr](https://github.com/team-umlaut/umlaut/tree/master/app/controllers/search_methods/sfx4_solr)
+3.  SFX Solr Indexing: we've indexed SFX titles in Solr for quick retrieval using [`Sunspot`](http://sunspot.github.com/) and Umlaut's
+    [`Sfx4Solr`](https://github.com/team-umlaut/umlaut/tree/master/app/controllers/search_methods/sfx4_solr)
 4.  User Login: we've included the ability for users to login via PDS, using [`Authlogic`](http://github.com/binarylogic/authlogic), [`authpds`](http://github.com/scotdalton/authpds) and [`authpds-nyu`](http://github.com/scotdalton/authpds)
 5.  UI: we've customized the search UI to leverage [NYU Libraries' common layouts and assets](https://github.com/NYULibraries/nyulibraries_assets)
 6.  Institutional support: we've included support for different institutions for both [searching](https://github.com/NYULibraries/getit/blob/master/config/initializers/search_controller.rb)
