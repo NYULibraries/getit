@@ -1,6 +1,5 @@
 GetIt::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.action_controller.relative_url_root = '/getit'
 
   # Code is not reloaded between requests
   config.cache_classes = true
