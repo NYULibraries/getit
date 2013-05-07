@@ -22,5 +22,5 @@ $ ->
     fit_modal_body($("#modal"))
 
   # Bind show event with the modal resize
-  $(document).on 'shown', '#modal', ->
+  $(document).on 'change', '.modal-body', ->
     fit_modal_body($("#modal"))
