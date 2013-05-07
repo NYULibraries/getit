@@ -13,7 +13,7 @@ window.fit_modal_body = (modal) ->
   headerheight = parseInt(header.css("height")) + parseInt(header.css("padding-top")) + parseInt(header.css("padding-bottom"))
   bodypaddings = parseInt(body.css("padding-top")) + parseInt(body.css("padding-bottom"))
   footerheight = parseInt(footer.css("height")) + parseInt(footer.css("padding-top")) + parseInt(footer.css("padding-bottom"))
-  height = windowheight - headerheight - bodypaddings - footerheight - 40 # Top and bottom spacings
+  height = windowheight - headerheight - bodypaddings - footerheight - parseInt(modal.css("top")) - 40 # Top and bottom spacings
   body.css("max-height", "#{height}px")
 
 $ ->
@@ -22,5 +22,5 @@ $ ->
     fit_modal_body($("#modal"))
 
   # Bind show event with the modal resize
-  $(document).on 'change', '.modal-body', ->
+  $(document).on 'shown', '#modal', ->
     fit_modal_body($("#modal"))
