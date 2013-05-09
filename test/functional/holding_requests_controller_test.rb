@@ -8,52 +8,17 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       HoldingRequestsController::WHITELISTED_HOLDING_REQUEST_TYPES)
   end
 
-  test "holding requests item requestable" do
-    UserSession.create(users(:uid))
-    VCR.use_cassette('requests item requestable') do
-      get(:new, {'service_response_id' => "1"})
-      @controller.send(:init)
-      assert(@controller.send(:item_requestable?, "deferred"))
-    end
-  end
-
-  test "holding requests user permissions" do
-    UserSession.create(users(:uid))
-    VCR.use_cassette('requests user permissions') do
-      get(:new, {'service_response_id' => "1"})
-      assert((not @controller.send(:user_permissions, "NYU50", "BOBST").nil?))
-      assert((not @controller.send(:user_permissions, "NYU50", "BOBST").empty?))
-    end
-  end
-
-  test "holding requests pickup locations" do
-    UserSession.create(users(:uid))
-    VCR.use_cassette('requests user permissions') do
-      get(:new, {'service_response_id' => "1"})
-      assert((not @controller.send(:pickup_locations).nil?))
-      assert((not @controller.send(:pickup_locations).empty?))
-      assert(@controller.send(:pickup_locations).size > 1, "Multiple pickup locations expected")
-    end
-  end
-
-  test "holding requests new request" do
-    UserSession.create(users(:uid))
-    VCR.use_cassette('requests new request') do
-      get(:new, {'service_response_id' => "1"})
-      assert @controller.holding_request?, "Not requestable."
-    end
-  end
-
   test "holding requests new request available" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests request available') do
       get(:new, {'service_response_id' => "1"})
-      assert @controller.available?, "Not requestable available."
-      assert((not @controller.recall?), "Recall requestable.")
-      assert((not @controller.in_processing?), "In processing requestable.")
-      assert((not @controller.on_order?), "On order requestable.")
-      assert((not @controller.offsite?), "Offsite requestable.")
-      assert((not @controller.ill?), "ILL requestable.")
+      authorizer = @controller.instance_variable_get(:@authorizer)
+      assert authorizer.available?, "Not requestable available."
+      assert((not authorizer.recall?), "Recall requestable.")
+      assert((not authorizer.in_processing?), "In processing requestable.")
+      assert((not authorizer.on_order?), "On order requestable.")
+      assert((not authorizer.offsite?), "Offsite requestable.")
+      assert((not authorizer.ill?), "ILL requestable.")
     end
   end
 
@@ -61,12 +26,13 @@ class HoldingRequestsControllerTest < ActionController::TestCase
     UserSession.create(users(:uid))
     VCR.use_cassette('requests request available no on shelf permission') do
       get(:new, {'service_response_id' => "1"})
-      assert((not @controller.available?), "Available requestable.")
-      assert((not @controller.recall?), "Recall requestable.")
-      assert((not @controller.in_processing?), "In processing requestable.")
-      assert((not @controller.on_order?), "On order requestable.")
-      assert((not @controller.offsite?), "Offsite requestable.")
-      assert((not @controller.ill?), "ILL requestable.")
+      authorizer = @controller.instance_variable_get(:@authorizer)
+      assert((not authorizer.available?), "Available requestable.")
+      assert((not authorizer.recall?), "Recall requestable.")
+      assert((not authorizer.in_processing?), "In processing requestable.")
+      assert((not authorizer.on_order?), "On order requestable.")
+      assert((not authorizer.offsite?), "Offsite requestable.")
+      assert((not authorizer.ill?), "ILL requestable.")
     end
   end
 
@@ -116,7 +82,11 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."},
             "Unexpected h2 text."
-        assert_select 'ol.request_options li', 2
+        assert_select 'ol.request_options li' do |elements|
+          assert_equal(2, elements.length, "Problem with request options")
+          assert_entire_option(elements.first)
+          assert_scan_option(elements.last)
+        end
         assert_select 'form.request_available input[name="holding_request_type"]', {:count => 1, :value => "available"}
       end
     end
@@ -131,7 +101,11 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."},
             "Unexpected h2 text."
-        assert_select 'ol.request_options li', 2
+        assert_select 'ol.request_options li' do |elements|
+          assert_equal(2, elements.length, "Problem with request options")
+          assert_entire_option(elements.first)
+          assert_scan_option(elements.last)
+        end
         assert_select 'form.request_offsite input[name="holding_request_type"]', {:count => 1, :value => "offsite"}
       end
     end
@@ -146,8 +120,11 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."},
             "Unexpected h2 text."
-        assert_select 'ol.request_options li', 2
         assert_select 'form.request_recall input[name="holding_request_type"]', {:count => 1, :value => "recall"}
+        assert_select("ol.request_options li") do |elements|
+          assert_equal(2, elements.length, "Problem with request options")
+          assert_ill_option(elements.last)
+        end
       end
     end
   end
@@ -161,8 +138,25 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."},
             "Unexpected h2 text."
-        assert_select 'ol.request_options li', 2
         assert_select 'form.request_in_processing input[name="holding_request_type"]', {:count => 1, :value => "in_processing"}
+        assert_select("ol.request_options li") do |elements|
+          assert_equal(2, elements.length, "Problem with request options")
+          assert_ill_option(elements.last)
+        end
+      end
+    end
+  end
+
+  test "new ill holding request" do
+    UserSession.create(users(:uid))
+    VCR.use_cassette('requests new ill') do
+      get(:new, {'service_response_id' => "11"})
+      assert_select 'h2', {:count => 1,
+        :text => "Naked statistics : stripping the dread from the data is currently out of circulation."},
+          "Unexpected h2 text."
+      assert_select("ol.request_options li") do |elements|
+        assert_equal(1, elements.length, "Problem with request options")
+        assert_ill_option(elements.first)
       end
     end
   end
@@ -222,7 +216,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_equal "Failed to create request: Patron has already requested this item.", flash[:alert]
     end
   end
-  
+
   test "holding requests create available" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create available') do
@@ -231,10 +225,10 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=false"
     end
     get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => false})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Bobst."})
   end
-  
+
   test "holding requests create available scan" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create available scan') do
@@ -243,10 +237,10 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=true"
     end
     get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => true})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
-  
+
   test "holding requests create offsite" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create offsite') do
@@ -255,10 +249,10 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/3?pickup_location=TNSFO&scan=false"
     end
     get(:show, {:service_response_id => 3, :pickup_location => "TNSFO", :scan => false})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at New School Fogelman Library."})
   end
-  
+
   test "holding requests create recall" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create recall') do
@@ -267,10 +261,10 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/4?pickup_location=NCOUR&scan=false"
     end
     get(:show, {:service_response_id => 4, :pickup_location => "NCOUR", :scan => false})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Courant."})
   end
-  
+
   test "holding requests create in processing" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create in processing') do
@@ -279,7 +273,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/5?pickup_location=NABUD&scan=false"
     end
     get(:show, {:service_response_id => 5, :pickup_location => "NABUD", :scan => false})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Abu Dhabi Library (UAE)."})
   end
 
@@ -298,7 +292,23 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_redirected_to "http://test.host/holding_requests/6?pickup_location=BOBST&scan=false"
     end
     get(:show, {:service_response_id => 5, :pickup_location => "BOBST", :scan => false})
-    assert_select("div.text-success", {:count => 1, 
+    assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Bobst."})
+  end
+
+  def assert_entire_option(candidate)
+    assert_select(candidate, 'label.radio input[type="radio"]',
+      { count: 1, id: "entire_yes", name: "entire", value: "yes" })
+  end
+
+  def assert_scan_option(candidate)
+    assert_select(candidate, 'label.radio input[type="radio"]',
+      { count: 1, id: "entire_no", name: "entire", value: "no" })
+    assert_select(candidate, 'label.radio fieldset', 1)
+  end
+
+  def assert_ill_option(candidate)
+    assert_select(candidate, "div.section a",
+      { count: 1, text: "Request this item from another library via Interlibrary Loan (ILL)" })
   end
 end

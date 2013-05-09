@@ -28,6 +28,7 @@ class HoldingRequestAuthorizer
   def recallable?
     (holding.recallable? and combo_requestable?(RECALLABLE_REQUIRED_PERMISSIONS))
   end
+  alias :recall? :recallable?
 
   # Is an in processing request available for the holding/user combo?
   def in_processing?

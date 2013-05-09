@@ -3,7 +3,7 @@ module HoldingRequestsHelper
   # Display header for the given holding
   def request_header(title)
     return "#{title} is requested." if @holding.requested?
-    return "#{title} is checked out." if @holding.recallable?
+    return "#{title} is checked out." if @holding.checked_out?
     return "#{title} is available at #{@holding.sub_library}." if @holding.available?
     return "#{title} is available from the #{@holding.sub_library} offsite storage facility." if @holding.offsite?
     return "#{title} is currently being processed by library staff." if @holding.in_processing?
@@ -33,7 +33,7 @@ module HoldingRequestsHelper
 
   # Request option the entire item (with radio button).
   # Request for the entire item to be delivered to a pickup location
-  def entire_item_request_option
+  def entire_request_option
     request_option do
       label_tag(:entire_yes, class: "radio") {
         radio_button_tag("entire",  "yes", :checked => true) +
@@ -70,14 +70,14 @@ module HoldingRequestsHelper
   # location with a hidden field is rendered.
   def pickup_locations_fields
     field_set_tag do
-      if pickup_locations.length > 0
+      if pickup_locations.length > 1
         label_tag("pickup_location", "Select pickup location:") +
          select_tag('pickup_location', options_for_select(pickup_locations))
       else
         pickup_location = (pickup_locations.length == 1) ?
-          pickup_locations.first.first : sub_library
+          pickup_locations.first.first : @holding.sub_library
         pickup_location_code = (pickup_locations.length == 1) ?
-          pickup_locations.first.last : sub_library_code
+          pickup_locations.first.last : @holding.sub_library_code
         content_tag(:strong, "Pickup location is #{pickup_location}") +
           hidden_field_tag("pickup_location", pickup_location_code)
       end
@@ -108,7 +108,7 @@ module HoldingRequestsHelper
   # for the request.
   # Only display delivery times if mulitple pickup locations
   def delivery_times
-    content_tag(:p, link_to_delivery_times) if pickup_locations.length > 0
+    content_tag(:p, link_to_delivery_times) if pickup_locations.length > 1
   end
 
   # Fair user disclaimer for scanned resources.
@@ -182,7 +182,7 @@ module HoldingRequestsHelper
     @aleph_helper_pickup_locations ||= aleph_helper.item_pickup_locations(
       adm_library_code: @holding.adm_library_code.downcase, sub_library_code: @holding.sub_library_code,
         item_status_code: @holding.item_status_code, item_process_status_code: @holding.item_process_status_code,
-          bor_status: => bor_status, availability_status: @holding.availability_status)
+          availability_status: @holding.availability_status, bor_status: bor_status)
   end
   private :aleph_helper_pickup_locations
 

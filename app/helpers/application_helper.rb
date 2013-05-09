@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def ill_url
+    @ill_url ||= current_primary_institution.views["ill"]["url"]
+  end
+
   def resolve_stylesheets
     stylesheet_link_tag (current_primary_institution.views["resolve_css"] || "resolve")
   end

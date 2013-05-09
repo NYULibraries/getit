@@ -1,6 +1,9 @@
+<%
+# The 'recall' request option
+%>
 <%= request_form("recall") do %>
   <%= request_option do %>
-    <% if status.match(/Requested/) %>
+    <% if holding.requested? %>
       This material has been requested by a fellow library user.
       <%= request_link_or_text(
         "You may also place a request to be added to the queue.", 
@@ -10,7 +13,7 @@
         "Recall this item from a fellow library user.", 
           "recall") %>
       The item will be available within
-      <%= ["BAFC"].include?(sub_library_code) ? "1 week" : "2 weeks" %>.<br />
+      <%= ["BAFC"].include?(holding.sub_library_code) ? "1 week" : "2 weeks" %>.<br />
     <% end %>
     <%= pickup_locations_fields %>
     <%= delivery_times %>

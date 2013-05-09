@@ -30,7 +30,7 @@ class HoldingRequestsController < UmlautController
     # Get the pickup location if sent, otherwise set it from the holding
     @pickup_location = params.fetch(:pickup_location, @holding.sub_library_code)
     # Set note_2 as entire_yes/entire_no
-    @note_2 = (scan?) ? "entire_no" : "entire_yes"
+    @note_2 = (@scan) ? "entire_no" : "entire_yes"
     if @scan
       @sub_author = params[:sub_author].to_s
       @sub_title = params[:sub_author].to_s
@@ -42,7 +42,7 @@ class HoldingRequestsController < UmlautController
       if @authorizer.send("#{valid_holding_request_type}?".to_sym)
         if valid_holding_request_type.eql? "ill"
           # If we're ILLing, send them to ILLiad
-          redirect_to "#{@holding.illiad_url}/illiad/illiad.dll/OpenURL?#{user_request.to_context_object.kev}"
+          redirect_to "#{@holding.illiad_url}/illiad/illiad.dll/OpenURL?#{@user_request.to_context_object.kev}"
         else
           # Otherwise, create a hold
           begin
@@ -52,7 +52,7 @@ class HoldingRequestsController < UmlautController
             current_user.create_hold(@holding, hold_options)
             redirect_to(holding_request_path(service_response, scan: @scan, pickup_location: @pickup_location))
           rescue
-            flash[:alert] = patron.error
+            flash[:alert] = current_user.error
             redirect_to new_holding_request_path(service_response)
           end
         end

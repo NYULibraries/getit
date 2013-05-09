@@ -7,7 +7,7 @@
   <p>You may:</p>
   <ol class="request_options">
     <%= render "new_available", sub_library_code: @holding.sub_library_code if @authorizer.available? %>
-    <%= render "new_recall", sub_library_code: @holding.sub_library_code, status: @holding.status if @authorizer.recallable? %>
+    <%= render "new_recall", holding: @holding if @authorizer.recallable? %>
     <%= render "new_offsite" if @authorizer.offsite? %>
     <%= render "new_in_processing" if @authorizer.in_processing? %>
     <%= render "new_on_order" if @authorizer.on_order? %>

@@ -543,3 +543,75 @@ nyu_primo_naked_statistics:
     :coverage_str_array: []
     :expired: true
     :latest: true
+nyu_aleph_ill_holding:
+  id: 11
+  service_id: NYU_Primo_Source
+  url: "http://aleph.library.nyu.edu/F?func=item-global&doc_library=NYU01&local_base=PRIMOCOMMON&doc_number=003710159&sub_library=BOBST"
+  notes: 
+  request: naked_statistics
+  service_type_value_name: holding
+  service_data: |
+    ---
+    :record_id: nyu_aleph003710159
+    :original_id: nyu_aleph003710159
+    :title: ! 'Naked statistics : stripping the dread from the data'
+    :author: Charles J.  Wheelan
+    :display_type: book
+    :source_id: nyu_aleph
+    :original_source_id: NYU01
+    :source_record_id: 003710159
+    :ils_api_id: NYU01003710159
+    :institution_code: NYU
+    :institution: NYU
+    :library_code: BOBST
+    :library: NYU Bobst
+    :collection: Main Collection
+    :call_number: (QA276 .W458 2013)
+    :coverage: []
+    :subfields:
+      I: NYU
+      L: BOBST
+      '1': Main Collection
+      '2': (QA276 .W458 2013 )
+      S: unavailable
+      '3': '1'
+      '4': '1'
+      '5': N
+      '6': '2'
+      X: NYU50
+      Y: BOBST
+      Z: MAIN
+    :status_code: request_ill
+    :status: ! 'Request ILL'
+    :source_data:
+      :item_id: NYU50003710159000010
+      :adm_library_code: NYU50
+      :call_number: (QA276 .W458 2013)
+      :sub_library_code: BOBST
+      :collection_code: MAIN
+      :source_record_id: 003710159
+      :sequence_number: '1.0'
+      :barcode: '31142055184439'
+      :item_status_code: '01'
+      :item_process_status_code: 
+      :item_status: Regular loan
+      :item_process_status: Not in Process
+      :circulation_status: ! 'On Hold; Requested'
+      :queue: 4 request(s) of 1 items.
+      :z30_callno: QA276 .W458 2013
+      :description: 
+      :hol_doc_number: 004537956
+      :doc_library: NYU01
+      :sub_library: NYU Bobst
+      :collection: Main Collection
+      :doc_number: 003710159
+      :rest_api_id: NYU01003710159
+      :illiad_url: http://ill.library.nyu.edu
+      :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
+    :request_link_supports_ajax_call: true
+    :requestability: deferred
+    :collection_str: NYU Bobst Main Collection
+    :coverage_str: ''
+    :coverage_str_array: []
+    :expired: true
+    :latest: true

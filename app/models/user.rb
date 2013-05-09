@@ -19,6 +19,11 @@ class User < ActiveRecord::Base
       holding.source_record_id, holding.item_id, hold_options)
   end
 
+  # Return the error from the Aleph patron.
+  def error
+    patron.error
+  end
+
   # Aleph Patron for placing holds
   def patron
     @patron ||= Exlibris::Aleph::Patron.new(patron_id: user_attributes[:nyuidn])

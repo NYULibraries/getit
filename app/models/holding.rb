@@ -54,6 +54,11 @@ class Holding
       ILL_STATUS_CODES.include?(status_code)
   end
 
+  # Is this holding checked_out?
+  def checked_out?
+    status_code.eql?("checked_out")
+  end
+
   # Is this holding requested?
   def requested?
     status.match(/Requested/)

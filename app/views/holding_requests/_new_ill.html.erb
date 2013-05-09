@@ -1,3 +1,6 @@
+<%
+# The 'ILL' request option
+%>
 <%= request_option do %>
   <%= link_to("Request this item from another library via Interlibrary Loan (ILL)", 
     create_holding_request_url(params[:service_response_id], "ill"), :target => "_blank" ) %>.<br />
