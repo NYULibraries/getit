@@ -1,4 +1,7 @@
 class HoldingRequestsController < UmlautController
+  # For now, a constanst for the ILLiad URL
+  ILLIAD_URL = "http://ill.library.nyu.edu"
+
   # Valid holding request types
   WHITELISTED_HOLDING_REQUEST_TYPES = ["available", "ill", "in_processing", "offsite", "on_order", "recall"]
 
@@ -42,7 +45,7 @@ class HoldingRequestsController < UmlautController
       if @authorizer.send("#{valid_holding_request_type}?".to_sym)
         if valid_holding_request_type.eql? "ill"
           # If we're ILLing, send them to ILLiad
-          redirect_to "#{@holding.illiad_url}/illiad/illiad.dll/OpenURL?#{@user_request.to_context_object.kev}"
+          redirect_to "#{ill_url}/illiad/illiad.dll/OpenURL?#{@user_request.to_context_object.kev}"
         else
           # Otherwise, create a hold
           begin
@@ -92,4 +95,10 @@ class HoldingRequestsController < UmlautController
     WHITELISTED_HOLDING_REQUEST_TYPES.find{ |holding_request_type| holding_request_type == candidate }
   end
   private :whitelist_holding_request_type
+
+  def ill_url
+    return ILLIAD_URL
+    # @ill_url ||= current_primary_institution.views["ill"]["url"]
+  end
+  private :ill_url
 end
