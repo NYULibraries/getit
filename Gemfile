@@ -65,7 +65,7 @@ gem "passenger", "~> 3.0.19"
 gem "umlaut", :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
 # gem "umlaut-primo", "~> 0.1.0"
 gem "umlaut-primo", :git => "git://github.com/team-umlaut/umlaut-primo.git"
-gem "sunspot_rails", "~> 2.0.0"
+gem "sunspot_rails", "~> 1.3.3"
 
 # NYU customization gems
 gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :tag => 'v1.0.6'
