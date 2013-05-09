@@ -14,15 +14,15 @@ group :assets do
   platforms :ruby do
     gem "therubyracer", "~> 0.11.1"
   end
-  gem "uglifier", ">= 1.3.0"
+  gem "uglifier", "~> 2.1.0"
   gem "compass-rails", "~> 1.0.3"
   gem "nyulibraries_assets", :git => "git://github.com/NYULibraries/nyulibraries_assets.git", :tag => "v1.0.10"
 end
 
 # Development gems
 group :development do
-  gem "progress_bar", "~> 0.4.0"
-  gem "better_errors", "~> 0.7.2"
+  gem "progress_bar", "~> 1.0.0"
+  gem "better_errors", "~> 0.8.0"
   gem "binding_of_caller", "~> 0.7.1", platform: :ruby
   gem "debugger", "~> 1.5.0", platform: :mri
 end
