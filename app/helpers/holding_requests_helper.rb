@@ -1,143 +1,18 @@
 module HoldingRequestsHelper
 
-  # Is a holding_request available for the item/user combo?
-  # e.g. holding_request?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  def holding_request?(*args)
-    (ill?(*args) or available?(*args) or 
-      recall?(*args) or in_processing?(*args) or 
-        on_order?(*args) or offsite?(*args))
-  end
-
-  # Is an available request available for the item/user combo?
-  # e.g. available?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  # If args are missing, defaults to instance variables
-  def available?(*args)
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    (["Available"].include?(status) and 
-      requestable?({:hold_permission => "Y", :hold_on_shelf => "Y"}, 
-        holding_requestability, adm_library_code, sub_library_code))
-  end
-
-  # Is a recall request available for the item/user combo?
-  # e.g. recall?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  # If args are missing, defaults to instance variables
-  def recall?(*args)
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    ((["Requested"].include?(status) or
-      ["checked_out", "requested"].include?(status_code)) and
-        requestable?({:hold_permission => "Y"}, holding_requestability, 
-          adm_library_code, sub_library_code))
-  end
-
-  # Is an in processing request available for the item/user combo?
-  # e.g. in_processing?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  # If args are missing, defaults to instance variables
-  def in_processing?(*args)
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    (["In Processing", "In Transit"].include?(status) and 
-      requestable?({:hold_permission => "Y"}, holding_requestability, 
-        adm_library_code, sub_library_code))
-  end
-
-  # Is an offsite request available for the item/user combo?
-  # e.g. offsite?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  # If args are missing, defaults to instance variables
-  def offsite?(*args)
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    (["Offsite Available"].include?(status) and 
-      requestable?({:hold_permission => "Y"}, holding_requestability, 
-        adm_library_code, sub_library_code))
-  end
-
-  # Is an on order request available for the item/user combo?
-  # e.g. on_order?(status, status_code, holding_requestability, adm_library_code, sub_library_code)
-  # If args are missing, defaults to instance variables
-  def on_order?(*args)
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    (["On Order"].include?(status) and 
-      requestable?({:hold_permission => "Y"}, holding_requestability, 
-        adm_library_code, sub_library_code))
-  end
-
-  # Is an ILL request available for the item combo?
-  # e.g. ill?(status, status_code, holding_requestability)
-  # If args are missing, defaults to instance variables
-  def ill?(*args)
-    # We don't care about user permissions when we're dealing with ILL.
-    (status, status_code, holding_requestability, 
-      adm_library_code, sub_library_code) = defaults(*args)
-    (["Request ILL", "Requested", "On Order", "In Processing", "In Transit"].include?(status) or
-       ["checked_out", "billed_as_lost", "requested"].include?(status_code))
-  end
-
-  def defaults(*args)
-    [ args.fetch(0, @status), args.fetch(1, @status_code), 
-        args.fetch(2, @requestability), args.fetch(3, @adm_library_code),
-          args.fetch(4, @sub_library_code) ]
-  end
-  private :defaults
-
-  # We need to determine if the item state is valid for the type of request we're 
-  # trying to make (e.g. recall, offsite)
-  # We need to determine if the user's permissions are in a state that
-  # is valid for the type of request we're trying to make (e.g. recall, offsite)
-  # In order to determine which state we are in we need a combination of 
-  #   1. item data and requestable states for that item data
-  #   2. current user permissions and requestable states for those user permissions
-  def requestable?(user_permissions_requestable_states, holding_requestability, adm_library_code, sub_library_code)
-    # If always requestable, we can return true even if user session is nil
-    return true if (holding_requestability.eql?(Exlibris::Primo::Source::NyuAleph::RequestableYes) and 
-      current_user_session.nil?)
-    return (item_requestable?(holding_requestability) and 
-      user_permissions_state_requestable?(user_permissions_requestable_states, adm_library_code, sub_library_code))
-  end
-  private :requestable?
-
-  # Is the item requestable (possibly deferring the decision to whether the user can request)
-  def item_requestable?(holding_requestability)
-    return [Exlibris::Primo::Source::NyuAleph::RequestableYes,
-      Exlibris::Primo::Source::NyuAleph::RequestableDeferred].include?(holding_requestability)
-  end
-  private :item_requestable?
-
-  # Indicates whether the user permissions are in a requestable state
-  # This is an AND test.
-  def user_permissions_state_requestable?(requestable_states={}, adm_library_code, sub_library_code)
-    user_permissions = user_permissions(adm_library_code, sub_library_code)
-    requestable_states.each_pair { |key, value|
-      return false unless value.eql?(user_permissions[key]) }
-    return true
-  end
-  private :user_permissions_state_requestable?
-
-  def user_permissions(adm_library_code, sub_library_code)
-    return {} if current_user.nil?
-    current_user.aleph_permissions_by_sub_library_code(adm_library_code, sub_library_code)
-  end
-  private :user_permissions
-
-  def aleph_helper
-    @aleph_helper ||= Exlibris::Aleph::TabHelper.instance()
-  end
-  private :aleph_helper
-
   # Display header for the given holding
-  def display_header(title, sub_library)
-    return title + " is requested." if @status.match(/Requested/)
-    return title + " is checked out." if recall?
-    return title + " is available at #{sub_library}." if available?
-    return title + " is available from the #{sub_library} offsite storage facility." if offsite?
-    return title + " is currently being processed by library staff." if in_processing?
-    return title + " is on order." if on_order?
-    return title + " is currently out of circulation." if ill?
+  def request_header(title)
+    return "#{title} is requested." if @holding.requested?
+    return "#{title} is checked out." if @holding.recallable?
+    return "#{title} is available at #{@holding.sub_library}." if @holding.available?
+    return "#{title} is available from the #{@holding.sub_library} offsite storage facility." if @holding.offsite?
+    return "#{title} is currently being processed by library staff." if @holding.in_processing?
+    return "#{title} is on order." if @holding.on_order?
+    return "#{title} is currently out of circulation." if @holding.ill?
   end
 
-  def display_request_form(holding_request_type, &block)
+  # Request form to offer holding request options
+  def request_form(holding_request_type, &block)
     form_tag(holding_request_url(params[:service_response_id]), :class => "modal_dialog_form request_#{holding_request_type}" ) do
       holding_request_type_field = hidden_field_tag(:holding_request_type, holding_request_type)
       content = capture(&block)
@@ -147,7 +22,8 @@ module HoldingRequestsHelper
     end
   end
 
-  def display_request_option(&block)
+  # Request option for a request form
+  def request_option(&block)
     content_tag(:li) do
       content_tag(:div, :class => "section") do
         yield
@@ -155,88 +31,181 @@ module HoldingRequestsHelper
     end
   end
 
-  def display_request_link_or_text(text, holding_request_type)
-    (pickup_locations.length > 1) ? 
+  # Request option the entire item (with radio button).
+  # Request for the entire item to be delivered to a pickup location
+  def entire_item_request_option
+    request_option do
+      label_tag(:entire_yes, class: "radio") {
+        radio_button_tag("entire",  "yes", :checked => true) +
+        "Request this item to be delivered to an NYU Library of your choice." +
+        pickup_locations_fields + delivery_times
+      }
+    end
+  end
+
+  # Request option for a scanned of a portion of the item (with radio button).
+  # Request for a portion of the item to scanned and delivered electronically.
+  def scan_portion_request_option
+    request_option do
+      label_tag(:entire_no, class: "radio") {
+        radio_button_tag("entire",  "no") +
+        "Request that portions of the item be scanned and delivered electronically." +
+        fair_use_disclaimer + scan_fields
+      }
+    end
+  end
+
+  # Request a scan of a portion of the item option (with radio button).
+  def request_link_or_text(text, holding_request_type)
+    (pickup_locations.length > 1) ?
       text.html_safe :
-      link_to(text, create_holding_request_url(params[:service_response_id], 
+      link_to(text, create_holding_request_url(params[:service_response_id],
         holding_request_type, pickup_locations.first.last),
           {:target => "_blank", :class => "ajax_window"})+ tag(:br)
   end
 
-  # Display pickup locations
-  def display_pickup_locations
-    if pickup_locations.length > 1
-      label("pickup_location", "Select pickup location:") +
-       select_tag('pickup_location', options_for_select(pickup_locations))
-    else
-      pickup_location = (pickup_locations.length == 1) ? 
-        pickup_locations.first.first : sub_library
-      pickup_location_code = (pickup_locations.length == 1) ? 
-        pickup_locations.first.last : sub_library_code
-      content_tag(:strong, "Pickup location is #{pickup_location}") +
-        hidden_field_tag("pickup_location", pickup_location_code)
+  # Pickup locations fields for an item request
+  # If there are multiple pickup locations, a select box is rendered.
+  # If there is only one pickup location, text specifying the pickup
+  # location with a hidden field is rendered.
+  def pickup_locations_fields
+    field_set_tag do
+      if pickup_locations.length > 0
+        label_tag("pickup_location", "Select pickup location:") +
+         select_tag('pickup_location', options_for_select(pickup_locations))
+      else
+        pickup_location = (pickup_locations.length == 1) ?
+          pickup_locations.first.first : sub_library
+        pickup_location_code = (pickup_locations.length == 1) ?
+          pickup_locations.first.last : sub_library_code
+        content_tag(:strong, "Pickup location is #{pickup_location}") +
+          hidden_field_tag("pickup_location", pickup_location_code)
+      end
     end
   end
 
-  # Display delivery times link
-  def display_delivery_times_link
-    content_tag(:div) {
-      link_to("See delivery times", 
-        "http://library.nyu.edu/services/deliveryservices.html", 
-          :target => "_blank") } if pickup_locations.length > 1
+  # Scan fields for the scanned portion request option.
+  # Fields include
+  #   - Author of Part
+  #   - Title of Part
+  #   - Desired pages
+  #   - Notes
+  def scan_fields
+    field_set_tag do
+      label_tag("sub_author", "Author of part:") +
+        text_field_tag("sub_author") +
+      label_tag("sub_title", "Title of part:") +
+        text_field_tag("sub_title") +
+      label_tag("pages", "Pages (e.g., 7-12; 5, 6-8, 10-15):") +
+        text_field_tag("pages") +
+      label_tag("note_1", "Notes:") +
+        text_field_tag("note_1", nil, :maxlength => 50)
+    end
   end
 
-  # Display delivery help link
-  def display_delivery_help_link
-    content_tag(:p) {
-      link_to("http://library.nyu.edu/help/requesthelp.html", :target => "_blank") do
-        content_tag(:i, nil, :class => "icons-famfamfam-information") +
-          content_tag(:span, "Not sure which option to choose?")
-      end
-    } if request_option_count > 1
+  # Expected delivery times.
+  # Provide a link to the delivery times that patrons can expect
+  # for the request.
+  # Only display delivery times if mulitple pickup locations
+  def delivery_times
+    content_tag(:p, link_to_delivery_times) if pickup_locations.length > 0
   end
 
+  # Fair user disclaimer for scanned resources.
+  # Provide a link to fair use guidelines
+  def fair_use_disclaimer
+    content_tag(:p) do
+      "(Requests must be within ".html_safe + link_to_fair_use_guidelines + ".)".html_safe
+    end
+  end
+
+  # Help for delivery choices.
+  # Provide a link to helpful information explaining
+  # the various choices if there are multiple choices
+  def delivery_help
+    content_tag(:p, link_to_delivery_help) if request_option_count > 1
+  end
+
+  # Delivery times link
+  def link_to_delivery_times
+    link_to("See delivery times",
+      "http://library.nyu.edu/services/deliveryservices.html",
+        :target => "_blank")
+  end
+
+  # Fair use link
+  def link_to_fair_use_guidelines
+    link_to("fair use guidelines",
+      "http://library.nyu.edu/copyright/#fairuse",
+        target: "_blank")
+  end
+
+  # Delivery help link
+  def link_to_delivery_help
+    link_to("http://library.nyu.edu/help/requesthelp.html", :target => "_blank") do
+      icon_tag(:info) + content_tag(:span, "Not sure which option to choose?")
+    end
+  end
+
+  # Number of request options available for user/holding combo.
   def request_option_count
     count = 0
-    count += 1 if available?
-    count += 1 if recall?
-    count += 1 if in_processing?
-    count += 1 if on_order?
-    count += 1 if offsite?
-    count += 1 if ill?
+    count += 1 if @authorizer.available?
+    count += 1 if @authorizer.recall?
+    count += 1 if @authorizer.in_processing?
+    count += 1 if @authorizer.on_order?
+    count += 1 if @authorizer.offsite?
+    count += 1 if @authorizer.ill?
     return count
   end
 
-  # Gather and return pickup locations
+  # Gather and return pickup locations for the user/holding combo.
+  # Returns an Array of 2 element Arrays with the sub library and sub library code of the
+  # as the elements
+  #   e.g. [["NYU Bobst", "BOBST"], ["Courant Library", "COUR"]]
   def pickup_locations
     return @pickup_locations if defined?(@pickup_locations)
-    patron_status = user_permissions(@adm_library_code, @sub_library_code)[:bor_status]
-    item_availability_status = 
-      (@status == "Offsite Available" or @status == "Available") ? "Y" : "N"
-    # Return empty pickup locations if patron status adm library or sub library
-    # adm library, sub library or sub library pickup locations is nil
-    return [] if patron_status.nil? or @adm_library_code.nil? or @sub_library_code.nil?
-    # Get Aleph pick up locations for the given sub library
-    @pickup_locations = aleph_helper.item_pickup_locations(
-      :adm_library_code => @adm_library_code.downcase, :sub_library_code => @sub_library_code,
-        :item_status_code => @item_status_code, :item_process_status_code => @item_process_status_code,
-          :bor_status => patron_status, :availability_status => item_availability_status)
-    @pickup_locations = (@pickup_locations.nil?) ? 
-      [[@sub_library, @sub_library_code]] : @pickup_locations.collect { |location_code| 
+    # Return empty pickup locations if current user's borrower status,
+    # holding's adm library code or holdling's sub library code is nil
+    # since we need those to get the pickup locations in the first place
+    return [] if bor_status.nil? or @holding.adm_library_code.nil? or @holding.sub_library_code.nil?
+    # If we didn't get any pickup locations from the Aleph tables for the user/holding combo,
+    # return 1 pickup location based on the holding's sub library
+    @pickup_locations = (aleph_helper_pickup_locations.nil?) ?
+      [[@holding.sub_library, @holding.sub_library_code]] : aleph_helper_pickup_locations.collect { |location_code|
         [decode_sub_library(location_code), location_code] }
   end
 
-  # Display scan elements
-  def display_scan_elements
-    label("sub_author", "Author of part:") +
-      text_field_tag("sub_author") + "<br />".html_safe +
-    label("sub_title", "Title of part:") +
-      text_field_tag("sub_title") + "<br />".html_safe +
-    label("pages", "Pages (e.g., 7-12; 5, 6-8, 10-15):") +
-      text_field_tag("pages") + "<br />".html_safe +
-    label("note_1", "Notes:") +
-      text_field_tag("note_1", nil, :maxlength => 50) + "<br />".html_safe
+  # Return the pickup locations from the aleph helper for the user/holding combo.
+  def aleph_helper_pickup_locations
+    # Get Aleph pick up locations for the given holding's sub library
+    @aleph_helper_pickup_locations ||= aleph_helper.item_pickup_locations(
+      adm_library_code: @holding.adm_library_code.downcase, sub_library_code: @holding.sub_library_code,
+        item_status_code: @holding.item_status_code, item_process_status_code: @holding.item_process_status_code,
+          bor_status: => bor_status, availability_status: @holding.availability_status)
   end
+  private :aleph_helper_pickup_locations
+
+  # Return the borrower status for the current user/holding combo,
+  # i.e. the user's status for the holding's ADM and sub library.
+  def bor_status
+    @bor_status ||= user_permissions[:bor_status]
+  end
+  private :bor_status
+
+  # Instance of the Aleph tables helper
+  def aleph_helper
+    @aleph_helper ||= Exlibris::Aleph::TabHelper.instance()
+  end
+  private :aleph_helper
+
+  # User permissions for the holding,
+  # i.e. the user's permissions for the holding's ADM and sub library.
+  def user_permissions
+    @user_permission ||=
+      current_user.aleph_permissions_by_sub_library_code(@holding.adm_library_code, @holding.sub_library_code)
+  end
+  private :user_permissions
 
   # Decode sublibrary
   def decode_sub_library(code)

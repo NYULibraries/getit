@@ -1,4 +1,4 @@
-<%= display_request_option do %>
+<%= request_option do %>
   <%= link_to("Request this item from another library via Interlibrary Loan (ILL)", 
     create_holding_request_url(params[:service_response_id], "ill"), :target => "_blank" ) %>.<br />
   Most requests arrive within two weeks. Due dates and renewals are determined by the lending library.

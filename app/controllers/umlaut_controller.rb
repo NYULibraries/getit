@@ -18,7 +18,6 @@ require 'umlaut_configurable'
 class UmlautController < ApplicationController
   before_filter :institutional_config
   include Umlaut::ControllerBehavior
-  include HoldingRequestsHelper
 
   # Set the config based on the institutional settings.
   def institutional_config
@@ -32,6 +31,18 @@ class UmlautController < ApplicationController
       end
     end
   end
+
+  # Is the service response (i.e. holding) requestable 
+  def requestable?(service_response)
+    request_authorizer(service_response).requestable?
+  end
+  helper_method :requestable?
+
+  # Return a request authorizer for the given service_response
+  def request_authorizer(service_response)
+    HoldingRequestAuthorizer.new(Holding.new(service_response), current_user)
+  end
+  private :request_authorizer
 
   umlaut_config.configure do
     app_name 'Get It'

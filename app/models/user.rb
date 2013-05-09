@@ -13,6 +13,18 @@ class User < ActiveRecord::Base
     c.disable_perishable_token_maintenance = true
   end
 
+  # Create a hold in Aleph on the given holding for user
+  def create_hold(holding, hold_options)
+    patron.place_hold(holding.adm_library_code, holding.original_source_id, 
+      holding.source_record_id, holding.item_id, hold_options)
+  end
+
+  # Aleph Patron for placing holds
+  def patron
+    @patron ||= Exlibris::Aleph::Patron.new(patron_id: user_attributes[:nyuidn])
+  end
+  private :patron
+
   # Get the Aleph permissions for the given sub library.
   # e.g aleph_permissions_by_sub_library_code(adm_library_code, sub_library_code)
   def aleph_permissions_by_sub_library_code(*args)

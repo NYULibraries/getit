@@ -1,11 +1,14 @@
-<%= display_request_form("in_processing") do %>
-  <%= display_request_option do %>
-    <%= display_request_link_or_text(
+<%
+# The 'in procesing' request form
+%>
+<%= request_form("in_processing") do %>
+  <%= request_option do %>
+    <%= request_link_or_text(
       "Request for this item to be held for you once processed.", 
         "in_processing") %>
     Items are typically ready for pickup within 5 days.<br />
-    <%= display_pickup_locations %>
-    <%= display_delivery_times_link %>
+    <%= pickup_locations_fields %>
+    <%= delivery_times %>
   <% end %>
   <%= submit_tag 'Submit' if pickup_locations.length > 1 %>
 <% end %>
