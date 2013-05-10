@@ -1,5 +1,7 @@
 require 'test_helper'
 class HoldingRequestsHelperTest < ActionView::TestCase
+  include NyulibrariesHelper
+
   setup do
     @holding = nil
     @requested_holding = Holding.new(service_responses(:nyu_primo_naked_statistics))
@@ -41,10 +43,59 @@ class HoldingRequestsHelperTest < ActionView::TestCase
     assert_equal("Some Title is currently out of circulation.", request_header("Some Title"))
   end
 
+  test "should return 2 options count for available holding" do
+    @authorizer = HoldingRequestAuthorizer.new(@available_holding, current_user)
+    VCR.use_cassette('user aleph permissions') do
+      assert_equal(2, request_options_count)
+    end
+  end
+
+  test "should return 2 options count for offsite holding" do
+    @authorizer = HoldingRequestAuthorizer.new(@offsite_holding, current_user)
+    VCR.use_cassette('user aleph permissions') do
+      assert_equal(2, request_options_count)
+    end
+  end
+
+  test "should return 2 options count for checked out holding" do
+    @authorizer = HoldingRequestAuthorizer.new(@checked_out_holding, current_user)
+    VCR.use_cassette('user aleph permissions') do
+      assert_equal(2, request_options_count)
+    end
+  end
+
+  test "should return 2 options count for in processing holding" do
+    @authorizer = HoldingRequestAuthorizer.new(@in_processing_holding, current_user)
+    VCR.use_cassette('user aleph permissions') do
+      assert_equal(2, request_options_count)
+    end
+  end
+
+  test "should return 1 options count for ill holding" do
+    @authorizer = HoldingRequestAuthorizer.new(@ill_holding, current_user)
+    VCR.use_cassette('user aleph permissions') do
+      assert_equal(1, request_options_count)
+    end
+  end
+
   test "should return delivery link" do
     assert_equal(
       "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>",
         link_to_delivery_times)
+  end
+
+  test "should return delivery help link" do
+    assert_equal(
+      "<a href=\"http://library.nyu.edu/help/requesthelp.html\" target=\"_blank\">" +
+        "<i class=\"icons-famfamfam-information\"></i>" +
+        "<span>Not sure which option to choose?</span>" +
+      "</a>", link_to_delivery_help)
+  end
+
+  test "should return fair use link" do
+    assert_equal(
+      "<a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>",
+        link_to_fair_use_guidelines)
   end
 
   test "should return 'entire' request option" do
@@ -123,7 +174,9 @@ class HoldingRequestsHelperTest < ActionView::TestCase
     end
   end
 
+  # Mock current user function for tests
   def current_user
     @current_user ||= users(:uid)
   end
+  private :current_user
 end

@@ -123,7 +123,7 @@ module HoldingRequestsHelper
   # Provide a link to helpful information explaining
   # the various choices if there are multiple choices
   def delivery_help
-    content_tag(:p, link_to_delivery_help) if request_option_count > 1
+    content_tag(:p, link_to_delivery_help) if request_options_count > 1
   end
 
   # Delivery times link
@@ -148,7 +148,7 @@ module HoldingRequestsHelper
   end
 
   # Number of request options available for user/holding combo.
-  def request_option_count
+  def request_options_count
     count = 0
     count += 2 if @authorizer.available?
     count += 1 if @authorizer.recall?
