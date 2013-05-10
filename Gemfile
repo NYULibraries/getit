@@ -25,6 +25,7 @@ group :development do
   gem "better_errors", "~> 0.8.0"
   gem "binding_of_caller", "~> 0.7.1", platform: :ruby
   gem "debugger", "~> 1.5.0", platform: :mri
+  gem "ruby-debug", "~> 0.10.4", platform: :jruby
 end
 
 # Testing gems
