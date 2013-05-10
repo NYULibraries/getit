@@ -80,7 +80,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do
         assert_select 'h2', {:count => 1,
-          :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."},
+          :text => "&quot;Virtual inequality : beyond the digital divide&quot; is available at NYU Bobst."},
             "Unexpected h2 text."
         assert_select 'form.request_available input[name="holding_request_type"]', {:count => 1, :value => "available"}
         assert_select 'ol.request_options li' do |elements|
@@ -100,7 +100,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do |elements|
         assert_select 'h2', {:count => 1,
-          :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."},
+          :text => "&quot;Virtual inequality : beyond the digital divide&quot; is available from the New School Fogelman Library offsite storage facility."},
             "Unexpected h2 text."
         assert_select 'form.request_offsite input[name="holding_request_type"]', {:count => 1, :value => "offsite"}
         assert_select 'ol.request_options li' do |elements|
@@ -120,7 +120,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do |elements|
         assert_select 'h2', {:count => 1,
-          :text => "Programming Ruby : the pragmatic programmers&#x27; guide is checked out."},
+          :text => "&quot;Programming Ruby : the pragmatic programmers&#x27; guide&quot; is checked out."},
             "Unexpected h2 text."
         assert_select 'form.request_recall input[name="holding_request_type"]', {:count => 1, :value => "recall"}
         assert_select("ol.request_options li") do |elements|
@@ -139,7 +139,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do |elements|
         assert_select 'h2', {:count => 1,
-          :text => "Programming Ruby : the pragmatic programmers&#x27; guide is currently being processed by library staff."},
+          :text => "&quot;Programming Ruby : the pragmatic programmers&#x27; guide&quot; is currently being processed by library staff."},
             "Unexpected h2 text."
         assert_select 'form.request_in_processing input[name="holding_request_type"]', {:count => 1, :value => "in_processing"}
         assert_select("ol.request_options li") do |elements|
@@ -156,7 +156,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
     VCR.use_cassette('requests new ill') do
       get(:new, {'service_response_id' => "11"})
       assert_select 'h2', {:count => 1,
-        :text => "Naked statistics : stripping the dread from the data is currently out of circulation."},
+        :text => "&quot;Naked statistics : stripping the dread from the data&quot; is currently out of circulation."},
           "Unexpected h2 text."
       assert_select("ol.request_options li") do |elements|
         assert_equal(1, elements.length, "Problem with request options")
@@ -173,7 +173,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do |elements|
         assert_select 'h2', {:count => 1,
-          :text => "Chemistry : the molecular nature of matter and change is available at NYU Bobst."},
+          :text => "&quot;Chemistry : the molecular nature of matter and change&quot; is available at NYU Bobst."},
             "Unexpected h2 text."
         assert_select 'ol.request_options li', 2
         assert_select 'form.request_available input[name="holding_request_type"]', {:count => 1, :value => "available"}
@@ -188,7 +188,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :success
       assert_select 'div.request' do |elements|
         assert_select 'h2', {:count => 1,
-          :text => "Naked statistics : stripping the dread from the data is requested."},
+          :text => "&quot;Naked statistics : stripping the dread from the data&quot; is requested."},
             "Unexpected h2 text."
         assert_select 'ol.request_options li', 2
         assert_select 'form.request_recall input[name="holding_request_type"]', {:count => 1, :value => "recall"}

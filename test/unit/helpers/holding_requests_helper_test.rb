@@ -15,32 +15,32 @@ class HoldingRequestsHelperTest < ActionView::TestCase
 
   test "should return 'requested' header " do
     @holding = @requested_holding
-    assert_equal("Some Title is requested.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is requested.", request_header("Some Title"))
   end
 
   test "should return 'available' header " do
     @holding = @available_holding
-    assert_equal("Some Title is available at NYU Bobst.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is available at NYU Bobst.", request_header("Some Title"))
   end
 
   test "should return 'offsite' header " do
     @holding = @offsite_holding
-    assert_equal("Some Title is available from the New School Fogelman Library offsite storage facility.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is available from the New School Fogelman Library offsite storage facility.", request_header("Some Title"))
   end
 
   test "should return 'checked out' header " do
     @holding = @checked_out_holding
-    assert_equal("Some Title is checked out.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is checked out.", request_header("Some Title"))
   end
 
   test "should return 'in processing' header " do
     @holding = @in_processing_holding
-    assert_equal("Some Title is currently being processed by library staff.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is currently being processed by library staff.", request_header("Some Title"))
   end
 
   test "should return 'ill' header " do
     @holding = @ill_holding
-    assert_equal("Some Title is currently out of circulation.", request_header("Some Title"))
+    assert_equal("\"Some Title\" is currently out of circulation.", request_header("Some Title"))
   end
 
   test "should return 2 options count for available holding" do

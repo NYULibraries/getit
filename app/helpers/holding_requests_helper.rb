@@ -2,13 +2,13 @@ module HoldingRequestsHelper
 
   # Display header for the given holding
   def request_header(title)
-    return "#{title} is requested." if @holding.requested?
-    return "#{title} is checked out." if @holding.checked_out?
-    return "#{title} is available at #{@holding.sub_library}." if @holding.available?
-    return "#{title} is available from the #{@holding.sub_library} offsite storage facility." if @holding.offsite?
-    return "#{title} is currently being processed by library staff." if @holding.in_processing?
-    return "#{title} is on order." if @holding.on_order?
-    return "#{title} is currently out of circulation." if @holding.ill?
+    return "\"#{title}\" is requested." if @holding.requested?
+    return "\"#{title}\" is checked out." if @holding.checked_out?
+    return "\"#{title}\" is available at #{@holding.sub_library}." if @holding.available?
+    return "\"#{title}\" is available from the #{@holding.sub_library} offsite storage facility." if @holding.offsite?
+    return "\"#{title}\" is currently being processed by library staff." if @holding.in_processing?
+    return "\"#{title}\" is on order." if @holding.on_order?
+    return "\"#{title}\" is currently out of circulation." if @holding.ill?
   end
 
   # Request form to offer holding request options
