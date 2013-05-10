@@ -16,7 +16,7 @@ class HoldingRequestsController < UmlautController
     # Instantiate the holding request authorizer
     @authorizer = HoldingRequestAuthorizer.new(@holding, current_user)
     # Original user request for title citation
-    @user_request = service_response.request
+    @user_request = service_response.request if service_response
   end
 
   # Create a new request based on request type
@@ -27,7 +27,7 @@ class HoldingRequestsController < UmlautController
     # Instantiate the holding request authorizer
     @authorizer = HoldingRequestAuthorizer.new(@holding, current_user)
     # Original user request for ILL context object
-    @user_request = service_response.request
+    @user_request = service_response.request if service_response
     # Is this a valid request type?
     valid_holding_request_type = whitelist_holding_request_type(params[:holding_request_type])
     # Are we doing a scan?
@@ -83,6 +83,9 @@ class HoldingRequestsController < UmlautController
   def service_response
     # Get the service response
     @service_response ||= ServiceResponse.find(@service_response_id)
+  rescue ActiveRecord::RecordNotFound
+    flash[:alert] = "We're very sorry. Something went wrong. Please refresh the page and make your request again."
+    @service_response = nil
   end
   private :service_response
 

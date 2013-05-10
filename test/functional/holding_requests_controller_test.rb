@@ -296,6 +296,22 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Bobst."})
   end
 
+  test "missing service response in new" do
+    UserSession.create(users(:uid))
+    assert_nothing_raised {
+      get(:new, {:service_response_id => 1000})
+      assert_select("div.text-error", {:count => 1,
+        :text => "We&#x27;re very sorry. Something went wrong. Please refresh the page and make your request again."})
+    }
+  end
+
+  test "missing service response in create" do
+    UserSession.create(users(:uid))
+    assert_nothing_raised {
+      get(:create, {:service_response_id => 1000, :holding_request_type => "available"})
+    }
+  end
+
   def assert_entire_option(candidate)
     assert_select(candidate, 'label.radio input[type="radio"]',
       { count: 1, id: "entire_yes", name: "entire", value: "yes" })

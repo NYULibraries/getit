@@ -1,6 +1,6 @@
-<% cite = @user_request.referent.to_citation %>
+<% cite = @user_request.referent.to_citation if @user_request %>
 <div class="request">
-  <h2><%= request_header(cite[:title]) %></h2>
+  <h2><%= request_header(cite[:title]) if cite %></h2>
   <div class="text-error">
     <%= flash[:alert] %>
   </div>
