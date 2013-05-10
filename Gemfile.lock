@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 7e5f8fb4da8a96b8bd89f76ee91b0763280bade5
-  tag: v1.0.6
+  revision: 9d6149014c1c7bd2d2b82ec01465ff6c3bc5f65c
+  tag: v1.0.7
   specs:
-    exlibris-nyu (1.0.6)
+    exlibris-nyu (1.0.7)
       exlibris-aleph (~> 1.0.6)
       exlibris-primo (~> 1.0.10)
       nokogiri (~> 1.5.6)
