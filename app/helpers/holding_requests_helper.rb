@@ -13,7 +13,7 @@ module HoldingRequestsHelper
 
   # Request form to offer holding request options
   def request_form(holding_request_type, &block)
-    form_tag(holding_request_url(params[:service_response_id]), :class => "modal_dialog_form request_#{holding_request_type}" ) do
+    form_tag(holding_request_url(@service_response_id), :class => "modal_dialog_form request_#{holding_request_type}" ) do
       holding_request_type_field = hidden_field_tag(:holding_request_type, holding_request_type)
       content = capture(&block)
       output = ActiveSupport::SafeBuffer.new
@@ -29,6 +29,16 @@ module HoldingRequestsHelper
         yield
       end
     end
+  end
+
+  # Request a scan of a portion of the item option (with radio button).
+  def request_link_or_text(text, holding_request_type)
+    (pickup_locations.length > 1) ?
+      text.html_safe :
+        content_tag(:p) {
+          link_to(text, create_holding_request_url(@service_response_id,
+            holding_request_type, pickup_locations.first.last),
+              {:target => "_blank", :class => "ajax_window"}) }
   end
 
   # Request option the entire item (with radio button).
@@ -53,15 +63,6 @@ module HoldingRequestsHelper
         fair_use_disclaimer + scan_fields
       }
     end
-  end
-
-  # Request a scan of a portion of the item option (with radio button).
-  def request_link_or_text(text, holding_request_type)
-    (pickup_locations.length > 1) ?
-      text.html_safe :
-      link_to(text, create_holding_request_url(params[:service_response_id],
-        holding_request_type, pickup_locations.first.last),
-          {:target => "_blank", :class => "ajax_window"})+ tag(:br)
   end
 
   # Pickup locations fields for an item request

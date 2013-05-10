@@ -10,6 +10,7 @@ class HoldingRequestsController < UmlautController
 
   # Show options for creating new request
   def new
+    @service_response_id = params[:service_response_id]
     # Instaniate the holding from the service response
     @holding = Holding.new(service_response)
     # Instantiate the holding request authorizer
@@ -20,6 +21,7 @@ class HoldingRequestsController < UmlautController
 
   # Create a new request based on request type
   def create
+    @service_response_id = params[:service_response_id]
     # Instaniate the holding from the service response
     @holding = Holding.new(service_response)
     # Instantiate the holding request authorizer
@@ -80,7 +82,7 @@ class HoldingRequestsController < UmlautController
   # Return the service response
   def service_response
     # Get the service response
-    @service_response ||= ServiceResponse.find(params[:service_response_id])
+    @service_response ||= ServiceResponse.find(@service_response_id)
   end
   private :service_response
 

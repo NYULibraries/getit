@@ -11,7 +11,7 @@
     <%= render "new_offsite" if @authorizer.offsite? %>
     <%= render "new_in_processing" if @authorizer.in_processing? %>
     <%= render "new_on_order" if @authorizer.on_order? %>
-    <%= render "new_ill" if @authorizer.ill? %>
+    <%= render "new_ill", service_response_id: @service_response_id if @authorizer.ill? %>
   </ol>
   <p style="margin-top: 1em;"><strong>You will be notified by email when your item is ready or en route.</strong></p>
   <%= link_to_delivery_help %>

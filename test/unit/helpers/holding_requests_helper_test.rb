@@ -78,6 +78,23 @@ class HoldingRequestsHelperTest < ActionView::TestCase
     end
   end
 
+  test "should return link rather than text" do
+    @pickup_locations = [["NYU Bobst", "BOBST"]]
+    @service_response_id = 1
+    assert_equal(
+      "<p>" +
+        "<a href=\"http://test.host/holding_requests/1/available/BOBST\" class=\"ajax_window\" target=\"_blank\">" +
+          "Some request text" +
+        "</a>" +
+      "</p>", request_link_or_text("Some request text", 'available'))
+  end
+
+  test "should return text rather than link" do
+    @pickup_locations = [["NYU Bobst", "BOBST"], ["Courant Library", "COUR"]]
+    @service_response_id = 1
+    assert_equal("Some request text", request_link_or_text("Some request text", 'available'))
+  end
+
   test "should return delivery link" do
     assert_equal(
       "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>",
