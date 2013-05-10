@@ -177,7 +177,7 @@ class HoldingRequestsHelperTest < ActionView::TestCase
         "<div class=\"section\">" +
           "<label class=\"radio\" for=\"entire_no\">" +
             "<input id=\"entire_no\" name=\"entire\" type=\"radio\" value=\"no\" />" +
-            "Request that portions of the item be scanned and delivered electronically." +
+            "Request that a portion of the item be scanned and delivered electronically." +
             "<p class=\"fair-use-disclaimer\">" +
               "(Requests must be within "+
               "<a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>" +

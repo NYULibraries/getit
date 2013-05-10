@@ -55,7 +55,7 @@ module HoldingRequestsHelper
     request_option do
       label_tag(:entire_no, class: "radio") {
         radio_button_tag("entire",  "no") +
-        "Request that portions of the item be scanned and delivered electronically." +
+        "Request that a portion of the item be scanned and delivered electronically." +
         fair_use_disclaimer + scan_fields
       }
     end
