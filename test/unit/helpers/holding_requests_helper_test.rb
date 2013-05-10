@@ -95,10 +95,33 @@ class HoldingRequestsHelperTest < ActionView::TestCase
     assert_equal("Some request text", request_link_or_text("Some request text", 'available'))
   end
 
+  test "should return delivery times" do
+    @pickup_locations = [["NYU Bobst", "BOBST"], ["Courant Library", "COUR"]]
+    assert_not_nil(delivery_times)
+    assert_equal(
+      "<p class=\"delivery-times\">" +
+        "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>" +
+      "</p>", delivery_times)
+  end
+
+  test "should not return delivery times" do
+    @pickup_locations = [["NYU Bobst", "BOBST"]]
+    assert_nil(delivery_times)
+  end
+
   test "should return delivery link" do
     assert_equal(
       "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>",
         link_to_delivery_times)
+  end
+
+  test "should return create available link" do
+    @pickup_locations = [["NYU Bobst", "BOBST"]]
+    @service_response_id = 1
+    assert_equal(
+      "<a href=\"http://test.host/holding_requests/1/available/BOBST\" class=\"ajax_window\" target=\"_blank\">" +
+        "Some request text" +
+      "</a>", link_to_create_holding_request("Some request text", "available"))
   end
 
   test "should return delivery help link" do
@@ -138,7 +161,7 @@ class HoldingRequestsHelperTest < ActionView::TestCase
                   "<option value=\"NYUSS\">NYUAD Sama Fac Offices (UAE)</option>" +
                 "</select>" +
               "</fieldset>" +
-              "<p>" +
+              "<p class=\"delivery-times\">" +
                 "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>" +
               "</p>" +
             "</label>" +
@@ -155,7 +178,7 @@ class HoldingRequestsHelperTest < ActionView::TestCase
           "<label class=\"radio\" for=\"entire_no\">" +
             "<input id=\"entire_no\" name=\"entire\" type=\"radio\" value=\"no\" />" +
             "Request that portions of the item be scanned and delivered electronically." +
-            "<p>" +
+            "<p class=\"fair-use-disclaimer\">" +
               "(Requests must be within "+
               "<a href=\"http://library.nyu.edu/copyright/#fairuse\" target=\"_blank\">fair use guidelines</a>" +
               ".)" +

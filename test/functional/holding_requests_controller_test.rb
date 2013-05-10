@@ -82,12 +82,13 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Virtual inequality : beyond the digital divide is available at NYU Bobst."},
             "Unexpected h2 text."
+        assert_select 'form.request_available input[name="holding_request_type"]', {:count => 1, :value => "available"}
         assert_select 'ol.request_options li' do |elements|
           assert_equal(2, elements.length, "Problem with request options")
           assert_entire_option(elements.first)
           assert_scan_option(elements.last)
         end
-        assert_select 'form.request_available input[name="holding_request_type"]', {:count => 1, :value => "available"}
+        assert_select("p.delivery-help", 1)
       end
     end
   end
@@ -101,12 +102,13 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_select 'h2', {:count => 1,
           :text => "Virtual inequality : beyond the digital divide is available from the New School Fogelman Library offsite storage facility."},
             "Unexpected h2 text."
+        assert_select 'form.request_offsite input[name="holding_request_type"]', {:count => 1, :value => "offsite"}
         assert_select 'ol.request_options li' do |elements|
           assert_equal(2, elements.length, "Problem with request options")
           assert_entire_option(elements.first)
           assert_scan_option(elements.last)
         end
-        assert_select 'form.request_offsite input[name="holding_request_type"]', {:count => 1, :value => "offsite"}
+        assert_select("p.delivery-help", 1)
       end
     end
   end
@@ -125,6 +127,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
           assert_equal(2, elements.length, "Problem with request options")
           assert_ill_option(elements.last)
         end
+        assert_select("p.delivery-help", 1)
       end
     end
   end
@@ -143,6 +146,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
           assert_equal(2, elements.length, "Problem with request options")
           assert_ill_option(elements.last)
         end
+        assert_select("p.delivery-help", 1)
       end
     end
   end
@@ -158,6 +162,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
         assert_equal(1, elements.length, "Problem with request options")
         assert_ill_option(elements.first)
       end
+      assert_select("p.delivery-help", 0)
     end
   end
 

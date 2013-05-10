@@ -34,11 +34,7 @@ module HoldingRequestsHelper
   # Request a scan of a portion of the item option (with radio button).
   def request_link_or_text(text, holding_request_type)
     (pickup_locations.length > 1) ?
-      text.html_safe :
-        content_tag(:p) {
-          link_to(text, create_holding_request_url(@service_response_id,
-            holding_request_type, pickup_locations.first.last),
-              {:target => "_blank", :class => "ajax_window"}) }
+      text.html_safe : content_tag(:p) { link_to_create_holding_request(text, holding_request_type) }
   end
 
   # Request option the entire item (with radio button).
@@ -109,13 +105,13 @@ module HoldingRequestsHelper
   # for the request.
   # Only display delivery times if mulitple pickup locations
   def delivery_times
-    content_tag(:p, link_to_delivery_times) if pickup_locations.length > 1
+    content_tag(:p, link_to_delivery_times, class: "delivery-times") if pickup_locations.length > 1
   end
 
   # Fair user disclaimer for scanned resources.
   # Provide a link to fair use guidelines
   def fair_use_disclaimer
-    content_tag(:p) do
+    content_tag(:p, class: "fair-use-disclaimer") do
       "(Requests must be within ".html_safe + link_to_fair_use_guidelines + ".)".html_safe
     end
   end
@@ -124,7 +120,14 @@ module HoldingRequestsHelper
   # Provide a link to helpful information explaining
   # the various choices if there are multiple choices
   def delivery_help
-    content_tag(:p, link_to_delivery_help) if request_options_count > 1
+    content_tag(:p, link_to_delivery_help, class: "delivery-help") if request_options_count > 1
+  end
+
+  # Link to create a holding request for the given type with the given text
+  def link_to_create_holding_request(text, holding_request_type)
+    link_to(text, create_holding_request_url(@service_response_id,
+      holding_request_type, pickup_locations.first.last),
+        {:target => "_blank", :class => "ajax_window"})
   end
 
   # Delivery times link
