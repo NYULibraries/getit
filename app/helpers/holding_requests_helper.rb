@@ -129,7 +129,7 @@ module HoldingRequestsHelper
   # Delivery times link
   def link_to_delivery_times
     link_to("See delivery times",
-      "http://library.nyu.edu/services/deliveryservices.html",
+      "http://library.nyu.edu/services/deliveryservices.html#how_long",
         :target => "_blank")
   end
 
