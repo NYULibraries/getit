@@ -41,6 +41,12 @@ class HoldingRequestsHelperTest < ActionView::TestCase
     assert_equal("Some Title is currently out of circulation.", request_header("Some Title"))
   end
 
+  test "should return delivery link" do
+    assert_equal(
+      "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>",
+        link_to_delivery_times)
+  end
+
   test "should return 'entire' request option" do
     @holding = @available_holding
     VCR.use_cassette('user aleph permissions') do
@@ -65,7 +71,7 @@ class HoldingRequestsHelperTest < ActionView::TestCase
                 "</select>" +
               "</fieldset>" +
               "<p>" +
-                "<a href=\"http://library.nyu.edu/services/deliveryservices.html\" target=\"_blank\">See delivery times</a>" +
+                "<a href=\"http://library.nyu.edu/services/deliveryservices.html#how_long\" target=\"_blank\">See delivery times</a>" +
               "</p>" +
             "</label>" +
           "</div>" +

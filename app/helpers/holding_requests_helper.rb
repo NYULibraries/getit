@@ -150,11 +150,11 @@ module HoldingRequestsHelper
   # Number of request options available for user/holding combo.
   def request_option_count
     count = 0
-    count += 1 if @authorizer.available?
+    count += 2 if @authorizer.available?
     count += 1 if @authorizer.recall?
     count += 1 if @authorizer.in_processing?
     count += 1 if @authorizer.on_order?
-    count += 1 if @authorizer.offsite?
+    count += 2 if @authorizer.offsite?
     count += 1 if @authorizer.ill?
     return count
   end
