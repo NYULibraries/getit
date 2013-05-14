@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: e47fb32a7fa251452685fa480d0704f5d292ea23
-  tag: v1.0.10
+  revision: e1266d4d1b5884a8bac7f914938ec75a9e8dc749
+  tag: v1.0.13
   specs:
-    nyulibraries_assets (1.0.10)
+    nyulibraries_assets (1.0.13)
       bootstrap-sass (>= 2.2.0, < 2.4)
       compass (~> 0.12.2)
       institutions (~> 0.0.5)
@@ -292,7 +292,7 @@ GEM
     ruby-debug-base (0.10.4-java)
     rvm-capistrano (1.3.0)
       capistrano (>= 2.0.0)
-    sass (3.2.8)
+    sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)

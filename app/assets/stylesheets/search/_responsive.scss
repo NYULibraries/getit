@@ -1,0 +1,8 @@
+@media (max-width: 1200px) {
+  @include tabs-responsive;
+  .search {
+    &.with-tabs {
+      @include border-top-left-radius(4px);
+    }
+  }
+}
