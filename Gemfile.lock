@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: e1266d4d1b5884a8bac7f914938ec75a9e8dc749
-  tag: v1.0.13
+  revision: 346292e379c4776d509ff8874ea417a468bfc2bc
+  tag: v1.0.14
   specs:
-    nyulibraries_assets (1.0.13)
+    nyulibraries_assets (1.0.14)
       bootstrap-sass (>= 2.2.0, < 2.4)
       compass (~> 0.12.2)
       institutions (~> 0.0.5)
@@ -187,7 +187,7 @@ GEM
     git (1.2.5)
     gyoku (0.4.6)
       builder (>= 2.1.2)
-    highline (1.6.18)
+    highline (1.6.19)
     hike (1.2.2)
     htmlentities (4.3.1)
     httparty (0.10.2)
@@ -214,8 +214,7 @@ GEM
     json (1.7.7)
     json (1.7.7-java)
     libv8 (3.11.8.17)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     marc (0.5.0)
@@ -227,7 +226,7 @@ GEM
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
     mysql2 (0.3.11)
-    net-scp (1.1.0)
+    net-scp (1.1.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)

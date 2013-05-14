@@ -6,3 +6,41 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .umlaut-citation {
+    font: {
+      size: $baseFontSize*1.25
+    }
+    line-height: $baseLineHeight*2;
+    dl {
+      dt, dd {
+        padding: {
+          top: $baseLineHeight;
+        }
+      }
+    }
+  }
+
+  .umlaut-citation-link {
+    text-align: left;
+    font: {
+      size: $baseFontSize*1.25
+    }
+    line-height: $baseLineHeight*2;
+    padding: {
+      top: $baseLineHeight*2;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  div.rfr_id {
+    select {
+      width: auto;
+      margin: {
+        right: 0px;
+      }
+    }
+  }
+}
