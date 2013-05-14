@@ -177,7 +177,6 @@ GEM
       rake (~> 10.0.3)
       require_all (~> 1.2.1)
       savon (~> 1.2.0)
-    fastthread (1.0.7)
     fattr (2.2.1)
     fssm (0.2.10)
     git (1.2.5)
@@ -234,9 +233,8 @@ GEM
       marc
     options (2.3.0)
       fattr
-    passenger (3.0.19)
-      daemon_controller (>= 1.0.0)
-      fastthread (>= 1.0.1)
+    passenger (4.0.2)
+      daemon_controller (>= 1.1.0)
       rack
       rake (>= 0.8.1)
     polyglot (0.3.3)
@@ -350,7 +348,7 @@ DEPENDENCIES
   mysql2 (~> 0.3.11)
   newrelic_rpm (~> 3.6.0g)
   nyulibraries_assets!
-  passenger (~> 3.0.19)
+  passenger (~> 4.0.0)
   progress_bar (~> 1.0.0)
   rails (~> 3.2.13)
   rails_config (~> 0.3.2)

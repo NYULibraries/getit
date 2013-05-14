@@ -60,7 +60,7 @@ gem "rake_nyu", :git => "git://github.com/NYULibraries/rake_nyu.git"
 gem "rails_config", "~> 0.3.2"
 
 # Use passenger as the app server
-gem "passenger", "~> 3.0.19"
+gem "passenger", "~> 4.0.0"
 
 # Umlaut
 gem "umlaut", :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
