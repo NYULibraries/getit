@@ -77,4 +77,4 @@ gem "authpds-nyu", :git => "git://github.com/scotdalton/authpds-nyu.git"
 gem "dalli", "~> 2.6.0"
 
 # New Relic performance monitoring
-gem "newrelic_rpm", "~> 3.6.0g"
+gem "newrelic_rpm", "~> 3.6.0"
