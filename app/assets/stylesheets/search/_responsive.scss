@@ -7,6 +7,29 @@
   }
 }
 
+@media (max-width: 979px) and (min-width: 480px) {
+  .form-horizontal {
+    .control-group {
+      & > .controls {
+        & > label {
+          & + input {
+            display: block;
+            margin-top: 5px;
+          }
+          display: block;
+          float: left;
+          text-align: right;
+          padding-top: 5px;
+          margin-left: -150px;
+          clear: both;
+          width: 140px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .umlaut-citation {
     font: {
