@@ -364,7 +364,7 @@ DEPENDENCIES
   json (~> 1.7.7)
   mustache-rails (~> 0.2.3)
   mysql2 (~> 0.3.11)
-  newrelic_rpm (~> 3.6.0)
+  newrelic_rpm (~> 3.6.0g)
   nyulibraries_assets!
   passenger (~> 3.0.19)
   progress_bar (~> 1.0.0)
