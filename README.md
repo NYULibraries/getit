@@ -1,9 +1,9 @@
 # GetIt @ NYU
 
-[![Build Status](https://travis-ci.org/NYULibraries/getit.png?branch=master)](https://travis-ci.org/NYULibraries/getit)
+[![Build Status](https://travis-ci.org/NYULibraries/getit.png?branch=development)](https://travis-ci.org/NYULibraries/getit)
 [![Dependency Status](https://gemnasium.com/NYULibraries/getit.png)](https://gemnasium.com/NYULibraries/getit)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/getit.png)](https://codeclimate.com/github/NYULibraries/getit)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/getit)
+[![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=development)](https://coveralls.io/r/NYULibraries/getit)
 
 The GetIt application at NYU leverages [`Umlaut`](http://github.com/team-umlaut/umlaut) to provide just in time OpenURL resolution. 
 This means that GetIt should only display services that will result in useful delivery options based on the context of the current request.
