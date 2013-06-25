@@ -1,5 +1,7 @@
 language: ruby
 
+bundler_args: --without development
+
 services:
   - memcached
 
