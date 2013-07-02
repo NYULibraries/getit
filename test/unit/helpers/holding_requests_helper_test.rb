@@ -1,6 +1,7 @@
 require 'test_helper'
 class HoldingRequestsHelperTest < ActionView::TestCase
-  include NyulibrariesHelper
+  include Nyulibraries::ApplicationHelper
+  include Nyulibraries::HtmlHelper
 
   setup do
     @holding = nil
