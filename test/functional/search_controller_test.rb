@@ -15,6 +15,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
+    assert_tabs_header
     assert_template :partial => 'nyu/_sidebar', :count => 1
     assert_template :partial => 'nyu/_tip1', :count => 1
     assert_template :partial => 'nyu/_tip2', :count => 1
@@ -27,6 +28,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
+    assert_tabs_header
     assert_template :partial => 'nyu/_sidebar', :count => 1
     assert_template :partial => 'nyu/_tip1', :count => 1
     assert_template :partial => 'nyu/_tip2', :count => 1
@@ -39,6 +41,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
+    assert_tabs_header
     assert_template :partial => 'ns/_sidebar', :count => 1
   end
 
@@ -49,6 +52,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
+    assert_tabs_header
     assert_template :partial => 'cu/_sidebar', :count => 1
   end
 
@@ -59,6 +63,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
+    assert_tabs_header
     assert_template :partial => 'nyuad/_sidebar', :count => 1
     assert_template :partial => 'nyuad/_tip1', :count => 1
   end
@@ -71,6 +76,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
       assert_select 'div.search div.search-section', 3
+      assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
       assert_template :partial => 'nyu/_tip1', :count => 1
       assert_template :partial => 'nyu/_tip2', :count => 1
@@ -85,6 +91,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
       assert_select 'div.search div.search-section', 3
+      assert_tabs_header
       assert_template :partial => 'ns/_sidebar', :count => 1
     end
   end
@@ -97,6 +104,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
       assert_select 'div.search div.search-section', 3
+      assert_tabs_header
       assert_template :partial => 'cu/_sidebar', :count => 1
     end
   end
@@ -109,6 +117,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
       assert_select 'div.search div.search-section', 3
+      assert_tabs_header
       assert_template :partial => 'nyuad/_sidebar', :count => 1
       assert_template :partial => 'nyuad/_tip1', :count => 1
     end
@@ -123,6 +132,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
       assert_select 'div.search div.search-section', 3
+      assert_tabs_header
       assert_template :partial => 'hsl/_sidebar', :count => 1
     end
   end
@@ -137,6 +147,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
     end
   end
@@ -150,6 +161,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
     end
   end
@@ -163,6 +175,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'ns/_sidebar', :count => 1
     end
   end
@@ -176,6 +189,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'cu/_sidebar', :count => 1
     end
   end
@@ -190,6 +204,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
     end
   end
@@ -203,6 +218,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
       assert_select 'div.results' do |results|
         assert_select results.first, 'div.result h2.title', {:text => 'A.A.H.P.S.S.S. news and information', :count => 1}
@@ -219,6 +235,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'ns/_sidebar', :count => 1
       assert_select 'div.results' do |results|
         assert_select results.first, 'div.result h2.title', {:text => 'A.A.V. newsletter', :count => 1}
@@ -235,10 +252,15 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.search div.search-section', 2
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
+      assert_tabs_header
       assert_template :partial => 'cu/_sidebar', :count => 1
       assert_select 'div.results' do |results|
         assert_select results.first, 'div.result h2.title', {:text => 'A.A.O. newsletter', :count => 1}
       end
     end
+  end
+
+  def assert_tabs_header
+    assert_select 'div#bobcat_tabs div.navbar-inner h4', {count: 1, text: 'BobCat'}
   end
 end
