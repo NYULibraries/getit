@@ -31,18 +31,21 @@ set :default_stage, "staging"
 set :keep_releases, 5
 set :use_sudo, false
 
-# Configure app_settings from rails_config
-# Defer processing until we have rails environment
-set(:app_settings) { eval(run_locally("rails runner -e #{rails_env} 'p Settings.capistrano.to_hash'")) }
-set(:scm_username) { app_settings[:scm_username] }
-set(:app_path) { app_settings[:path] }
-set(:user) { app_settings[:user] }
-set(:deploy_to) {"#{app_path}#{application}"}
-
 # Rake variables
-set :rake, "#{rake} --trace"
+# set :rake, "#{rake} --trace"
 
 namespace :rails_config do
+  desc "Set stage variables"
+  task :set_variables do
+    # Configure app_settings from rails_config
+    # Defer processing until we have rails environment
+    set(:app_settings) { eval(run_locally("rails runner -e #{rails_env} 'p Settings.capistrano.to_hash'")) }
+    set(:scm_username) { app_settings[:scm_username] }
+    set(:app_path) { app_settings[:path] }
+    set(:user) { app_settings[:user] }
+    set(:deploy_to) {"#{app_path}#{application}"}
+  end
+
   desc "Set RailsConfig servers"
   task :set_servers do
     server "#{app_settings[:servers].first}", :app, :web, :db, :primary => true
@@ -115,6 +118,7 @@ end
 
 # Set the servers from rails config before we see
 # what's in the rails config environment
+before "rails_config:set_servers", "rails_config:set_variables"
 before "rails_config:see", "rails_config:set_servers"
 # After multistage is set, load up the rails config environment
 after "multistage:ensure", "rails_config:see"
