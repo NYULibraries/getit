@@ -1,7 +1,7 @@
 class UserSession < Authlogic::Session::Base
-  pds_url "https://login.library.nyu.edu"
-  redirect_logout_url "http://bobcat.library.nyu.edu"
-  aleph_url "http://aleph.library.nyu.edu"
+  pds_url Settings.pds.login_url
+  redirect_logout_url Settings.pds.logout_url
+  aleph_url Settings.pds.aleph_url
   calling_system "umlaut"
   institution_param_key "umlaut.institution"
 
@@ -19,7 +19,7 @@ class UserSession < Authlogic::Session::Base
     verification = pds_user ? pds_user.verification : attempted_record.user_attributes[:verification]
     # Don't do anything unless we get a verification
     if (bor_id and verification)
-      permission_attributes[:verification] =verification
+      permission_attributes[:verification] = verification
       permission_attributes[:aleph_permissions][self.class.aleph_default_sublibrary] = 
         aleph_bor_auth_permissions(bor_id, verification)
     end
