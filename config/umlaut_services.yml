@@ -309,20 +309,6 @@ NYU:
           existing_type: fulltext
       service_types:
           - document_delivery
-NYUSH:
-  name: NYU Shanghai Library
-  parent_code: NYU
-  views:
-    css: search_nyush
-    resolve_css: resolve_nyush
-    wayfinder_attributes:
-      primo:
-        url_suffix: "?institution=nyush"
-      xerxes:
-        url_suffix: "&institution=nyush"
-      umlaut:
-        url_suffix: "/nyuad"
-  ip_addresses: <%= Settings.institutions.NYUSH.ip_addresses %>
 NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU
@@ -337,6 +323,20 @@ NYUAD:
       umlaut:
         url_suffix: "/nyuad"
   ip_addresses: <%= Settings.institutions.NYUAD.ip_addresses %>
+NYUSH:
+  name: NYU Shanghai Library
+  parent_code: NYU
+  views:
+    css: search_nyush
+    resolve_css: resolve_nyush
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?institution=nyush"
+      xerxes:
+        url_suffix: "&institution=nyush"
+      umlaut:
+        url_suffix: "/nyuad"
+  ip_addresses: <%= Settings.institutions.NYUSH.ip_addresses %>
 CU:
   name: The Cooper Union Library
   active_tab: journals
