@@ -2,17 +2,8 @@
 module Views
   module Layouts
     class Bobcat < ActionView::Mustache
-      def javascripts
+      def application_javascript
         javascript_include_tag "search"
-      end
-
-      def application
-        "GetIt @ NYU Libraries"
-      end
-
-      # Using Gauges?
-      def gauges?
-        (Rails.env.eql?("production") and (not gauges_tracking_code.nil?))
       end
 
       def gauges_tracking_code
