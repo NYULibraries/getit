@@ -45,7 +45,7 @@ class UmlautController < ApplicationController
   private :request_authorizer
 
   umlaut_config.configure do
-    app_name 'Get It'
+    app_name 'GetIt'
 
     # URL to image to use for link resolver in some self-links,
     # OR name of image asset in local app.
