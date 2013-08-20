@@ -12,10 +12,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_assets.git
-  revision: ce72b0fb376949b2c107b0a95bef15ddcebcd7d3
-  tag: v1.1.4
+  revision: 900f120ca4b09787e476297e21bd59422e1f86f4
+  tag: v1.1.12
   specs:
-    nyulibraries_assets (1.1.4)
+    nyulibraries_assets (1.1.12)
       bootstrap-sass (>= 2.2.0, < 2.3.1.1)
       compass (~> 0.12.2)
       institutions (~> 0.0.5)
@@ -179,7 +179,7 @@ GEM
       savon (~> 1.2.0)
     fattr (2.2.1)
     fssm (0.2.10)
-    git (1.2.5)
+    git (1.2.6)
     gyoku (0.4.6)
       builder (>= 2.1.2)
     highline (1.6.19)
@@ -277,7 +277,7 @@ GEM
       builder (>= 2.1.2)
     rvm-capistrano (1.3.0)
       capistrano (>= 2.0.0)
-    sass (3.2.9)
+    sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
