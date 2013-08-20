@@ -335,7 +335,7 @@ NYUSH:
       xerxes:
         url_suffix: "&institution=nyush"
       umlaut:
-        url_suffix: "/nyuad"
+        url_suffix: "/nyush"
   ip_addresses: <%= Settings.institutions.NYUSH.ip_addresses %>
 CU:
   name: The Cooper Union Library
