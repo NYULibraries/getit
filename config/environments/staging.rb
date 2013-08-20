@@ -47,7 +47,8 @@ GetIt::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( search.js resolve.js search.css search_cu.css search_nyuad.css 
-    search_ns.css search_hsl.css resolve.css resolve_cu.css resolve_nyuad.css resolve_ns.css resolve_hsl.css )
+    search_ns.css search_hsl.css search_nyush.css search_nysid.css resolve.css resolve_cu.css
+    resolve_nyuad.css resolve_ns.css resolve_hsl.css resolve_nyush.css resolve_nysid.css )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
