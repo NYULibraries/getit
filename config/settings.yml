@@ -79,6 +79,8 @@ institutions:
         base_url: ""
   NYUAD:
     ip_addresses: []
+  NYUSH:
+    ip_addresses: []
   NYSID:
     ip_addresses: []
   HSL:
