@@ -54,6 +54,9 @@ require 'webmock'
 # have to tell webmock to let us. 
 WebMock.allow_net_connect!
 
+require 'debugger'
+debugger
+
 @@aleph_url = Exlibris::Aleph::Config.base_url
 @@primo_url = Settings.institutions.default.services.NYU_Primo.base_url
 @@aws_access_key = Settings.institutions.default.services.Amazon.api_key
@@ -73,7 +76,7 @@ VCR.configure do |c|
     :match_requests_on => [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]
   }  
   # c.debug_logger = $stderr
-  c.filter_sensitive_data("aleph.library.edu") { @@aleph_url }
+  c.filter_sensitive_data("http://aleph.library.edu") { @@aleph_url }
   c.filter_sensitive_data("http://primo.library.edu") { @@primo_url }
   c.filter_sensitive_data("DUMMY_AWS_ACCESS_KEY_ID") { @@aws_access_key }
   c.filter_sensitive_data("DUMMY_AWS_SECRET_KEY") { @@aws_associate_tag }
