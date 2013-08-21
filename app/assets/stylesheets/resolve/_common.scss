@@ -1,19 +1,33 @@
-#permalink {
-  @extend .pull-left;
+header {
+  background: none;
+  height: auto;
+  a {
+    height: auto
+  }
 }
 
-.umlaut-container {
-  h1 {
-    visibility: hidden;
-    margin-top: 0;
-  }
-  border: {
-    top: none;
-  }
+.header {
+  border: none;
+}
+
+nav {
+  @include umlaut-container();  
+  @include clearfix();    
+  background-color: $umlautHeaderBackgroundColor;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $umlautHeaderBorderColor;
 }
 
 .wayfinder {
-  @extend .help;
+  @include umlaut-well($umlautHighlightedSectionBackgroundColor, $umlautSidebarBorderColor);
+  padding: 6px;
+  ul {
+    margin-bottom: 0px;
+    li a {
+      vertical-align: middle;
+    }
+  }
 }
 
 .request_options.form input[name='entire'] {
@@ -21,6 +35,29 @@
   margin-right: .5em;
 }
 
-.cover_image {
-  padding-bottom: 1em;
+.umlaut-holding {
+  padding-bottom: 10px;
+  border-bottom: 1px solid $umlautBorderColor;
+  &:last-child {
+    border-bottom: none;
+  }
+  a.btn {
+    display:block;
+    margin-bottom: .25em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .umlaut-section {
+    &.holding {
+      .umlaut-holdings {
+        .umlaut-holding {
+          a.btn {
+            padding-left: 3px;
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+  }
 }

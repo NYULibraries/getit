@@ -63,8 +63,7 @@ gem "rails_config", "~> 0.3.2"
 gem "passenger", "~> 4.0.0"
 
 # Umlaut
-gem "umlaut", :git => "git://github.com/team-umlaut/umlaut.git", :branch => "bootstrap"
-# gem "umlaut-primo", "~> 0.1.0"
+gem "umlaut", "~> 3.1.0"
 gem "umlaut-primo", :git => "git://github.com/team-umlaut/umlaut-primo.git"
 gem "sunspot_rails", "~> 1.3.3"
 

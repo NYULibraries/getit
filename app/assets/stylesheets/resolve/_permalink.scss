@@ -1,0 +1,14 @@
+.umlaut-permalink {
+  margin-left: 0px;
+  text-align: left;
+  float: left;
+}
+
+.umlaut-permalink-content {
+  @extend .label;
+  @extend .label-info;
+  &>a {
+    @extend .label;
+    @extend .label-info;
+  }
+}
