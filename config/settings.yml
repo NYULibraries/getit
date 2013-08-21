@@ -106,6 +106,11 @@ sunspot:
     log_level: WARNING
     path: /
 
+pds:
+  login_url: "https://pds.library.edu"
+  logout_url: "http://primo.library.edu/"
+  aleph_url: "http://alephstage.library.nyu.edu"
+
 newrelic:
   api_key: 
   app_name: GetIt
