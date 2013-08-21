@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GetIt | <%= @page_title %></title>
-    <%= csrf_meta_tags %>
+    <%= meta %>
     <%= resolve_stylesheets %>
     <%= resolve_javascripts %>
     <%= render_umlaut_head_content %>
   </head>
-  <body>
-    <div class="container umlaut-container">
-      <header id="header" class="header">
-        <div><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
-        <h1><%= umlaut_config.app_name %></h1>
-      </header>
-      <nav class="umlaut-resolve-nav">
-        <%= permalink_nav if current_permalink_url %>
-        <%= login(:return_url => current_permalink_url, "umlaut.institution" => institution.code ) %>
-      </nav>
-      <div class="container-fluid <%= "umlaut-#{params[:controller]}-container" %>">
+  <body class="umlaut no-js">
+    <%= render :partial => "umlaut/header" %>
+    <div class="umlaut-container">
+      <div class="umlaut-main-container-fluid container-fluid <%= "umlaut-#{params[:controller]}-container" %>">
         <%= yield %>
       </div>
-      <footer id="footer" class="footer">
-        <%= render_service_credits %>
-        <%-
-          #links to aid in debugging openurls gone wrong when in production 
-        -%>
-        <%= link_to_test_resolve %>
-        <%= link_to_direct_sfx %>
-        <%= link_to_toggle_debug_info %>
-      </footer>
     </div>
+    <%= render :partial => "umlaut/footer" %>
+    <% if Rails.env.production? %>
     <script type="text/javascript">
       var _gauges = _gauges || [];
       (function() {
@@ -45,5 +29,6 @@
         s.parentNode.insertBefore(t, s);
       })();
     </script>
+    <% end %>
   </body>
 </html>
