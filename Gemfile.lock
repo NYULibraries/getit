@@ -22,12 +22,23 @@ GIT
       rake (~> 10.0.2)
 
 GIT
-  remote: git://github.com/NYULibraries/rake_nyu.git
-  revision: ac5c6e60209e10067348da0f4a89a998dd07a45a
+  remote: git://github.com/NYULibraries/nyulibraries_deploy.git
+  revision: a163938bc396674b969ca0b427f9f9c1b4f674ec
+  branch: devel
   specs:
-    rake_nyu (1.0.0)
+    nyulibraries_deploy (2.0.0)
+      cap_git_tools (~> 0.9.1)
+      capistrano (~> 2.15.5)
+      git (~> 1.2.5)
+      mail (~> 2.5.4)
+      newrelic_rpm (~> 3.6.0)
+      octokit (~> 1.25.0)
+      rails (~> 3.2.13)
+      rails_config (~> 0.3.2)
+      rails_config (~> 0.3.2)
       rake (~> 10.0.4)
       require_all (~> 1.2.1)
+      rvm-capistrano (~> 1.4.0)
 
 GIT
   remote: git://github.com/scotdalton/authpds-nyu.git
@@ -117,7 +128,9 @@ GEM
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
-    capistrano (2.15.4)
+    cap_git_tools (0.9.1)
+      capistrano (~> 2.0)
+    capistrano (2.15.5)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -177,11 +190,16 @@ GEM
       rake (~> 10.0.3)
       require_all (~> 1.2.1)
       savon (~> 1.2.0)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     fattr (2.2.1)
     fssm (0.2.10)
     git (1.2.6)
     gyoku (0.4.6)
       builder (>= 2.1.2)
+    hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.2)
     htmlentities (4.3.1)
@@ -213,21 +231,30 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     multi_xml (0.5.3)
+    multipart-post (1.2.0)
     mustache (0.99.4)
     mustache-rails (0.2.3)
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
     mysql2 (0.3.11)
-    net-scp (1.1.1)
+    net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.6.7)
+    net-ssh (2.6.8)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    netrc (0.7.7)
     newrelic_rpm (3.6.2.96)
     nokogiri (1.5.9)
     nori (1.1.5)
+    octokit (1.25.0)
+      addressable (~> 2.2)
+      faraday (~> 0.8)
+      faraday_middleware (~> 0.9)
+      hashie (~> 2.0)
+      multi_json (~> 1.3)
+      netrc (~> 0.7.7)
     openurl (0.4.3)
       ensure_valid_encoding
       marc
@@ -275,8 +302,8 @@ GEM
       mime-types (>= 1.16)
     rsolr (1.0.9)
       builder (>= 2.1.2)
-    rvm-capistrano (1.3.0)
-      capistrano (>= 2.0.0)
+    rvm-capistrano (1.4.4)
+      capistrano (>= 2.15.4)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -348,13 +375,12 @@ DEPENDENCIES
   mysql2 (~> 0.3.11)
   newrelic_rpm (~> 3.6.0)
   nyulibraries_assets!
+  nyulibraries_deploy!
   passenger (~> 4.0.0)
   progress_bar (~> 1.0.0)
   rails (~> 3.2.13)
   rails_config (~> 0.3.2)
-  rake_nyu!
   ruby-debug (~> 0.10.4)
-  rvm-capistrano (~> 1.3.0)
   sass-rails (~> 3.2.6)
   simplecov (~> 0.7.1)
   simplecov-rcov (~> 0.2.3)
