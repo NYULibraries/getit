@@ -1,7 +1,8 @@
+require 'exlibris-aleph'
 class UserSession < Authlogic::Session::Base
   pds_url Settings.pds.login_url
   redirect_logout_url Settings.pds.logout_url
-  aleph_url Settings.pds.aleph_url
+  aleph_url Exlibris::Aleph::Config.base_url
   calling_system "umlaut"
   institution_param_key "umlaut.institution"
 
