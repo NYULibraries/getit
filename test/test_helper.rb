@@ -54,9 +54,6 @@ require 'webmock'
 # have to tell webmock to let us. 
 WebMock.allow_net_connect!
 
-require 'debugger'
-debugger
-
 @@aleph_url = Exlibris::Aleph::Config.base_url
 @@primo_url = Settings.institutions.default.services.NYU_Primo.base_url
 @@aws_access_key = Settings.institutions.default.services.Amazon.api_key
