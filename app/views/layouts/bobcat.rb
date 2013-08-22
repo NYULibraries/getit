@@ -17,7 +17,7 @@ module Views
             breadcrumbs << link_to('E-Journals', :controller=>'search')
             breadcrumbs << "Results"
           else
-            breadcrumbs << "E-Journals A-Z"
+            breadcrumbs << "Journals"
           end
         end
       end
