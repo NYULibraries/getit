@@ -40,16 +40,6 @@ GIT
       require_all (~> 1.2.1)
 
 GIT
-  remote: git://github.com/scotdalton/authpds-nyu.git
-  revision: ae20187de22c3892132e311769e7f1d0486a5b77
-  branch: shibboleth
-  specs:
-    authpds-nyu (0.2.13)
-      authpds (~> 0.2.9)
-      exlibris-aleph (~> 1.0.4)
-      require_all (~> 1.2.1)
-
-GIT
   remote: git://github.com/team-umlaut/umlaut-primo.git
   revision: 89a380e532ac06431677ad529a55ee09a02e9939
   specs:
