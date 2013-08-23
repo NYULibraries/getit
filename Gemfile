@@ -69,7 +69,7 @@ gem "sunspot_rails", "~> 1.3.3"
 
 # NYU customization gems
 gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :branch => 'development'
-gem "authpds-nyu", :git => "git://github.com/scotdalton/authpds-nyu.git"
+gem "authpds-nyu", git: "git://github.com/scotdalton/authpds-nyu.git", branch: "shibboleth"
 # gem "authpds-nyu", "~> 0.2.11"
 
 # Dalli for caching with memcached
