@@ -110,6 +110,9 @@ pds:
   login_url: "https://pds.library.edu"
   logout_url: "http://primo.library.edu/"
 
+session:
+  domain:
+
 newrelic:
   api_key: 
   app_name: GetIt
