@@ -12,11 +12,6 @@ module ApplicationHelper
       lookup_context.exists?("#{current_primary_institution.views["dir"]}/#{partial}", [], true)
   end
 
-  def permalink_nav
-    content_tag(:div, :id => "permalink") { content_tag(:span, "URL: ") + 
-      link_to(current_permalink_url, current_permalink_url) } if current_permalink_url()
-  end
-
   def link_to_remote_popover(*args)
     popover_options = args.delete_at 3||{}
     link_class = args.delete_at 2
