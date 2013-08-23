@@ -69,7 +69,7 @@ gem "umlaut-primo", :git => "git://github.com/team-umlaut/umlaut-primo.git"
 gem "sunspot_rails", "~> 1.3.3"
 
 # NYU customization gems
-gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :tag => 'v1.0.7'
+gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :tag => 'v1.0.8'
 gem "authpds-nyu", :git => "git://github.com/scotdalton/authpds-nyu.git"
 # gem "authpds-nyu", "~> 0.2.11"
 
