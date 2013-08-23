@@ -3,7 +3,7 @@ GIT
   revision: d60f428b156bf69a2d25d3e42076a1283bed3fdb
   branch: development
   specs:
-    exlibris-nyu (1.0.7)
+    exlibris-nyu (1.0.8)
       exlibris-aleph (~> 1.0.6)
       exlibris-primo (~> 1.0.10)
       nokogiri (~> 1.5.6)
