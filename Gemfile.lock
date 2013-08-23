@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 18f15e6cd8afda4afa667c8be889f388e8b1636c
+  revision: d60f428b156bf69a2d25d3e42076a1283bed3fdb
   branch: development
   specs:
     exlibris-nyu (1.0.7)
@@ -227,7 +227,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    marc (0.5.0)
+    marc (0.5.1)
     mime-types (1.23)
     multi_json (1.7.3)
     multi_xml (0.5.3)
@@ -246,7 +246,7 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.7.7)
     newrelic_rpm (3.6.2.96)
-    nokogiri (1.5.9)
+    nokogiri (1.5.10)
     nori (1.1.5)
     octokit (1.25.0)
       addressable (~> 2.2)
