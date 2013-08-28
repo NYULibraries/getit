@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 6e3ad7e060222dd8473b5c06e1829829a95c97f3
+  revision: 38df364a760f81948f62b19bd18c11d4c3278671
   tag: v1.0.8
   specs:
     exlibris-nyu (1.0.8)
