@@ -34,7 +34,7 @@ module Sfx4
          string :title_exact, :multiple => true do
            pre_process_title_exact([self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH}).uniq)
          end
-         text :title_without_articles do
+         string :title_without_articles, :multiple => true do
            pre_process_title_without_articles([self.TITLE_DISPLAY, self.TITLE_SORT].concat(az_title_searches.map{|az_title_search| az_title_search.TITLE_SEARCH}).uniq)
          end
          string :letter_group, :multiple => true do

@@ -43,8 +43,9 @@ module SearchMethods
                 keywords("^ #{query}") do
                   fields(title_starts_with: 1.0)
                   fields(title_without_articles: 1.0)
-                  query_phrase_slop 1
+                  query_phrase_slop 0
                 end
+                order_by(:score, :desc)
                 order_by(:title_sort, :asc)
                 paginate(:page => page, :per_page => 20)
               }
