@@ -40,15 +40,17 @@ module SearchMethods
             }
           when "begins"
             az_title_klass.search {
-              with(:title_exact).starting_with(query)
-              order_by(:score, :desc)
-              order_by(:title_sort, :asc)
-              paginate(:page => page, :per_page => 20)
-            }
+                keywords("^ #{query}") do
+                  fields(title_starts_with: 1.0)
+                  query_phrase_slop 1
+                end
+                order_by(:title_sort, :asc)
+                paginate(:page => page, :per_page => 20)
+              }
           else # exact
             az_title_klass.search {
               fulltext query do
-                phrase_fields :title => 2.0
+                fields(title: 1.0)
                 phrase_slop   0
               end
               order_by(:score, :desc)
