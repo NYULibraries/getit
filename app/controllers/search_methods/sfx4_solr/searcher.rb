@@ -33,6 +33,9 @@ module SearchMethods
             az_title_klass.search {
               keywords query do 
                 fields(title: 1.0)
+                boost 10.0 do
+                  with(:title_exact, query.upcase)
+                end
               end
               order_by(:score, :desc)
               order_by(:title_sort, :asc)
@@ -40,20 +43,28 @@ module SearchMethods
             }
           when "begins"
             az_title_klass.search {
-                keywords("^ #{query}") do
-                  fields(title_starts_with: 1.0)
-                  fields(title_without_articles: 1.0)
-                  query_phrase_slop 0
+              fulltext query do
+                phrase_fields(title: 2.0)
+                phrase_slop 0
+                boost 10.0 do
+                  with(:title_exact).starting_with(query.upcase)
                 end
-                order_by(:score, :desc)
-                order_by(:title_sort, :asc)
-                paginate(:page => page, :per_page => 20)
+                boost 5.0 do
+                  with(:title_exact, query.upcase)
+                end
+              end
+              order_by(:score, :desc)
+              order_by(:title_sort, :asc)
+              paginate(:page => page, :per_page => 20)
               }
           else # exact
             az_title_klass.search {
               fulltext query do
-                fields(title: 1.0)
-                phrase_slop   0
+                phrase_fields(title: 2.0)
+                phrase_slop 0
+                boost 10.0 do
+                  with(:title_exact, query.upcase)
+                end
               end
               order_by(:score, :desc)
               order_by(:title_sort, :asc)
