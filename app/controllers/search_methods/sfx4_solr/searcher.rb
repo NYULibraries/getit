@@ -42,6 +42,7 @@ module SearchMethods
             az_title_klass.search {
                 keywords("^ #{query}") do
                   fields(title_starts_with: 1.0)
+                  fields(title_without_articles: 1.0)
                   query_phrase_slop 1
                 end
                 order_by(:title_sort, :asc)
