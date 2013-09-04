@@ -28,13 +28,17 @@ module SearchMethods
       end
 
       def _search_by_title(query, search_type, page=1)
+        query = query.upcase
+        [/^THE /, /^AN? /].each do |article|
+          query.gsub! article, ""
+        end
         search = case search_type
           when "contains"
             az_title_klass.search {
               keywords query do 
                 fields(title: 1.0)
                 boost 10.0 do
-                  with(:title_exact, query.upcase)
+                  with(:title_exact, query)
                 end
               end
               order_by(:score, :desc)
@@ -47,10 +51,13 @@ module SearchMethods
                 phrase_fields(title: 2.0)
                 phrase_slop 0
                 boost 10.0 do
-                  with(:title_exact).starting_with(query.upcase)
+                  with(:title_exact).starting_with(query)
                 end
                 boost 5.0 do
-                  with(:title_exact, query.upcase)
+                  with(:title_exact).starting_with(query)
+                end
+                boost 5.0 do
+                  with(:title_exact, query)
                 end
               end
               order_by(:score, :desc)
@@ -63,7 +70,7 @@ module SearchMethods
                 phrase_fields(title: 2.0)
                 phrase_slop 0
                 boost 10.0 do
-                  with(:title_exact, query.upcase)
+                  with(:title_exact, query)
                 end
               end
               order_by(:score, :desc)
