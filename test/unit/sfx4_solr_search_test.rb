@@ -36,22 +36,48 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     end
   end
   
-  test "sfx4solr fulltext search" do
+  test "sfx4solr title contains search" do
     if Sfx4::Local::AzTitle.connection_configured?
-      VCR.use_cassette('sfx4solr fulltext search') do
-        query = "New York"
-        results = Sfx4::Local::AzTitle.search {fulltext query}.results
+      VCR.use_cassette('sfx4solr title contains search') do
+        query = "economist"
+        results = Sfx4::Local::AzTitle.search do
+          keywords query do
+            fields(title: 1.0)
+            boost 10.0 do
+              with(:title_exact, query)
+            end
+          end
+          order_by(:score, :desc)
+          order_by(:title_sort, :asc)
+        end.results
         assert_instance_of Array, results
         assert(results.size > 0)
       end
     end
   end
 
-  test "sfx4solr starts with search" do
+  test "sfx4solr title starts with search" do
     if Sfx4::Local::AzTitle.connection_configured?
-      VCR.use_cassette('sfx4solr starts with search') do
+      VCR.use_cassette('sfx4solr title starts with search') do
         query = "economist"
-        results = Sfx4::Local::AzTitle.search {with(:title_exact).starting_with(query)}.results
+        results = Sfx4::Local::AzTitle.search do
+          fulltext query do
+            phrase_fields(title: 2.0)
+            phrase_slop 0
+            boost 10.0 do
+              with(:title_exact).starting_with(query)
+            end
+            boost 5.0 do
+              with(:title_exact).starting_with(query)
+            end
+            boost 5.0 do
+              with(:title_exact, query)
+            end
+          end
+          order_by(:score, :desc)
+          order_by(:title_sort, :asc)
+          paginate(:page => page, :per_page => 20)
+        end.results
         assert_instance_of Array, results
         assert(results.size > 0)
       end
@@ -62,7 +88,18 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     if Sfx4::Local::AzTitle.connection_configured?
       VCR.use_cassette('sfx4solr exact search') do
         query = "The New Yorker"
-        results = Sfx4::Local::AzTitle.search {with(:title_exact, query)}.results
+        results = Sfx4::Local::AzTitle.search do
+          fulltext query do
+            phrase_fields(title: 2.0)
+            phrase_slop 0
+            boost 10.0 do
+              with(:title_exact, query)
+            end
+          end
+          order_by(:score, :desc)
+          order_by(:title_sort, :asc)
+          paginate(:page => page, :per_page => 20)
+        end.results
         assert_instance_of Array, results
         assert(results.size > 0)
       end
