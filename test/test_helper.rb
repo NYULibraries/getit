@@ -64,6 +64,7 @@ WebMock.allow_net_connect!
 @@isbn_db_access_key = Settings.institutions.default.services.IsbnDb.access_key
 @@nyu_scopus_api_key = Settings.institutions.NYU.services.ScopusCitations.json_api_key
 @@ns_bx_token = Settings.institutions.NS.services.NS_bX.token
+@@solr_url = Settings.sunspot.solr.hostname + Settings.sunspot.solr.path
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
@@ -83,6 +84,7 @@ VCR.configure do |c|
   c.filter_sensitive_data("DUMMY_ISBN_DB_ACCESS_KEY") { @@isbn_db_access_key }
   c.filter_sensitive_data("DUMMY_NYU_SCOPUS_API_KEY") { @@nyu_scopus_api_key }
   c.filter_sensitive_data("DUMMY_NS_BX_TOKEN") { @@ns_bx_token }
+  c.filter_sensitive_data("DUMMY_SOLR_INSTANCE") { @@solr_url }
 end
 
 # Use the included testmnt for testing.

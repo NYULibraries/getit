@@ -40,6 +40,10 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     if Sfx4::Local::AzTitle.connection_configured?
       VCR.use_cassette('sfx4solr title contains search') do
         query = "economist"
+        query = query.upcase
+        [/^THE /, /^AN? /].each do |article|
+          query.gsub! article, ""
+        end
         results = Sfx4::Local::AzTitle.search do
           keywords query do
             fields(title: 1.0)
@@ -52,6 +56,7 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
         end.results
         assert_instance_of Array, results
         assert(results.size > 0)
+        assert_equal "The Economist: Blogs", results.first.TITLE_DISPLAY
       end
     end
   end
@@ -60,6 +65,10 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     if Sfx4::Local::AzTitle.connection_configured?
       VCR.use_cassette('sfx4solr title starts with search') do
         query = "economist"
+        query = query.upcase
+        [/^THE /, /^AN? /].each do |article|
+          query.gsub! article, ""
+        end
         results = Sfx4::Local::AzTitle.search do
           fulltext query do
             phrase_fields(title: 2.0)
@@ -76,10 +85,12 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
           end
           order_by(:score, :desc)
           order_by(:title_sort, :asc)
-          paginate(:page => page, :per_page => 20)
+          
+          paginate(:page => 1, :per_page => 20)
         end.results
         assert_instance_of Array, results
         assert(results.size > 0)
+        assert_equal "The Economist: Blogs", results.first.TITLE_DISPLAY
       end
     end
   end
@@ -88,6 +99,10 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     if Sfx4::Local::AzTitle.connection_configured?
       VCR.use_cassette('sfx4solr exact search') do
         query = "The New Yorker"
+        query = query.upcase
+        [/^THE /, /^AN? /].each do |article|
+          query.gsub! article, ""
+        end
         results = Sfx4::Local::AzTitle.search do
           fulltext query do
             phrase_fields(title: 2.0)
@@ -98,10 +113,10 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
           end
           order_by(:score, :desc)
           order_by(:title_sort, :asc)
-          paginate(:page => page, :per_page => 20)
         end.results
         assert_instance_of Array, results
         assert(results.size > 0)
+        assert_equal "The Economist: Blogs", results.first.TITLE_DISPLAY
       end
     end
   end
