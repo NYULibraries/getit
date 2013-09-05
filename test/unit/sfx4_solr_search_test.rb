@@ -50,7 +50,7 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
   test "sfx4solr starts with search" do
     if Sfx4::Local::AzTitle.connection_configured?
       VCR.use_cassette('sfx4solr starts with search') do
-        query = "Journal of"
+        query = "economist"
         results = Sfx4::Local::AzTitle.search {with(:title_exact).starting_with(query)}.results
         assert_instance_of Array, results
         assert(results.size > 0)
