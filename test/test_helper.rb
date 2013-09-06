@@ -64,7 +64,10 @@ WebMock.allow_net_connect!
 @@isbn_db_access_key = Settings.institutions.default.services.IsbnDb.access_key
 @@nyu_scopus_api_key = Settings.institutions.NYU.services.ScopusCitations.json_api_key
 @@ns_bx_token = Settings.institutions.NS.services.NS_bX.token
-@@solr_url = Settings.sunspot.solr.hostname + Settings.sunspot.solr.path
+solr_hostname = Settings.sunspot.solr.hostname
+solr_port = Settings.sunspot.solr.port
+solr_path = Settings.sunspot.solr.path
+@@solr_url =  "#{solr_hostname}" + ((solr_port.nil? || solr_port == 80) ? "" : ":#{solr_port}") + "#{solr_path}"
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
