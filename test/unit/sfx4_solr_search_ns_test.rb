@@ -1,5 +1,3 @@
-#!/bin/env ruby
-# encoding: utf-8
 require 'test_helper'
 class Sfx4SolrSearchNsTest < ActiveSupport::TestCase
   include SearchMethods::Sfx4Solr::Ns
@@ -39,10 +37,10 @@ class Sfx4SolrSearchNsTest < ActiveSupport::TestCase
   
   test "sfx4solr title exact search NS" do
     # if Sfx4::Ns::AzTitle.connection_configured?
-      VCR.use_cassette('sfx4solr title exact search') do
+      VCR.use_cassette('sfx4solr title exact search NS') do
         query = "The New Yorker"
         search_type = "exact"
-        first_result = "The New - Yorker (1836-1841)‎"
+        first_result = "The New - Yorker (1836-1841)"
         assert_equal first_result, _search_by_title(query, search_type).hits.first.stored(:title_display)
       end
     # end
