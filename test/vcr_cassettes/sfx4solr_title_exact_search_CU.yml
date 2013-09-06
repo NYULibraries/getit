@@ -21,12 +21,12 @@ http_interactions:
       Transfer-Encoding: 
       - chunked
       Date: 
-      - Thu, 05 Sep 2013 22:07:21 GMT
+      - Fri, 06 Sep 2013 15:20:24 GMT
       Connection: 
       - close
     body: 
       encoding: US-ASCII
       string: "{'responseHeader'=>{'status'=>0,'QTime'=>1,'params'=>{'sort'=>'score desc, title_sort_s asc','qf'=>'title_text','wt'=>'ruby','defType'=>'dismax','rows'=>'20','pf'=>'title_text^2.0','fl'=>'* score','bq'=>'title_exact_sm:NEW\\\\ YORKER^10.0','start'=>'0','q'=>'NEW YORKER','fq'=>'type:Sfx4\\\\:\\\\:Cu\\\\:\\\\:AzTitle','ps'=>'0'}},'response'=>{'numFound'=>1,'start'=>0,'maxScore'=>14.306714,'docs'=>[{'id'=>'Sfx4::Cu::AzTitle 36024','object_id_ss'=>'110975413975944','title_display_ss'=>'The New Yorker','issn_ss'=>'0028-792X','isbn_ss'=>'','lccn_ss'=>'2011201780','score'=>14.306714}]}}"
     http_version: 
-  recorded_at: Thu, 05 Sep 2013 22:07:21 GMT
+  recorded_at: Fri, 06 Sep 2013 15:20:26 GMT
 recorded_with: VCR 2.4.0

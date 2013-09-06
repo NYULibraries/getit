@@ -16,14 +16,14 @@ class Sfx4SolrSearchNsTest < ActiveSupport::TestCase
   end
   
   test "sfx4solr title contains search NS" do
-    if Sfx4::Ns::AzTitle.connection_configured?
-      # VCR.use_cassette('sfx4solr title contains search NS') do
+    # if Sfx4::Ns::AzTitle.connection_configured?
+      VCR.use_cassette('sfx4solr title contains search NS') do
         query = "economist"
         search_type = "contains"
-        first_result = "The Economist: Blogs"
+        first_result = "De Economist"
         assert_equal first_result, _search_by_title(query, search_type).hits.first.stored(:title_display)
-      # end
-    end
+      end
+    # end
   end
   
   test "sfx4solr title starts with search NS" do
