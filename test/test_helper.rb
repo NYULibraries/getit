@@ -67,7 +67,7 @@ WebMock.allow_net_connect!
 solr_hostname = Settings.sunspot.solr.hostname
 solr_port = Settings.sunspot.solr.port
 solr_path = Settings.sunspot.solr.path
-@@solr_url =  "#{solr_hostname}" + ((solr_port.nil? || solr_port == 80) ? "" : ":#{solr_port}") + "#{solr_path}"
+@@solr_url =  "#{solr_hostname}" + ((solr_port.nil? || solr_port == 80) ? "" : ":#{solr_port}") + ((solr_path.nil? || solr_path == '/') ? "" : "#{solr_path}")
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
