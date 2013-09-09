@@ -2,125 +2,72 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:8981/select?wt=ruby
+    uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
     body:
       encoding: US-ASCII
-      string: fq=type%3ASfx4%5C%3A%5C%3ALocal%5C%3A%5C%3AAzTitle&fq=letter_group_sm%3AA&sort=title_sort_s+asc&start=0&rows=20&q=%2A%3A%2A
+      string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&fq=letter_group_sm%3AA&sort=title_sort_s+asc&start=0&rows=20&q=%2A%3A%2A
     headers:
       Content-Type:
       - application/x-www-form-urlencoded; charset=UTF-8
   response:
     status:
       code: 200
-      message: !binary |-
-        T0s=
+      message: OK
     headers:
-      !binary "U2VydmVy":
-      - !binary |-
-        QXBhY2hlLUNveW90ZS8xLjE=
-      !binary "Q29udGVudC1UeXBl":
-      - !binary |-
-        dGV4dC9wbGFpbjtjaGFyc2V0PVVURi04
-      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "RGF0ZQ==":
-      - !binary |-
-        RnJpLCAwMSBGZWIgMjAxMyAxNDowNDozMCBHTVQ=
-      !binary "Q29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 09 Sep 2013 20:25:52 GMT
+      Connection:
+      - close
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eydyZXNwb25zZUhlYWRlcic9Pnsnc3RhdHVzJz0+MCwnUVRpbWUnPT4xLCdw
-        YXJhbXMnPT57J3NvcnQnPT4ndGl0bGVfc29ydF9zIGFzYycsJ3d0Jz0+J3J1
-        YnknLCdyb3dzJz0+JzIwJywnc3RhcnQnPT4nMCcsJ3EnPT4nKjoqJywnZnEn
-        PT5bJ3R5cGU6U2Z4NFxcOlxcOkxvY2FsXFw6XFw6QXpUaXRsZScsJ2xldHRl
-        cl9ncm91cF9zbTpBJ119fSwncmVzcG9uc2UnPT57J251bUZvdW5kJz0+MTA4
-        OTUsJ3N0YXJ0Jz0+MCwnZG9jcyc9Plt7J2lkJz0+J1NmeDQ6OkxvY2FsOjpB
-        elRpdGxlIDk1NjY3Jywnb2JqZWN0X2lkX3NzJz0+JzM0NjAwMDAwMDAwODA3
-        MTgnLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0EuQS5ILlAuUy5TLlMuIG5ld3Mg
-        YW5kIGluZm9ybWF0aW9uJywnaXNzbl9zcyc9PicwMTU4LTkwNDAnLCdpc2Ju
-        X3NzJz0+JycsJ2xjY25fc3MnPT4nJ30seydpZCc9PidTZng0OjpMb2NhbDo6
-        QXpUaXRsZSA0NzUyNCcsJ29iamVjdF9pZF9zcyc9PicxMTEwNzc4MjA2NDkw
-        OTgnLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0EuQS5PLiBuZXdzbGV0dGVyJywn
-        aXNzbl9zcyc9PicwNzI4LTU4MzMnLCdpc2JuX3NzJz0+JycsJ2xjY25fc3Mn
-        PT4nMjAwNDIwMTczOCd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0bGUg
-        NDcyNjMnLCdvYmplY3RfaWRfc3MnPT4nMjMyMDAwMDAwMDAxODM2OCcsJ3Rp
-        dGxlX2Rpc3BsYXlfc3MnPT4nQS5BLlYuIG5ld3NsZXR0ZXInLCdpc3NuX3Nz
-        Jz0+JzIxNTQtNjMxMicsJ2lzYm5fc3MnPT4nJywnbGNjbl9zcyc9Pidzbjg1
-        MDEwMTkyJ30seydpZCc9PidTZng0OjpMb2NhbDo6QXpUaXRsZSA5MjM3NScs
-        J29iamVjdF9pZF9zcyc9PiczMzEwMDAwMDAwMDA4MzUwJywndGl0bGVfZGlz
-        cGxheV9zcyc9PidBIGFuZCBEIEludGVsbGlnZW5jZScsJ2lzc25fc3MnPT4n
-        JywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6
-        TG9jYWw6OkF6VGl0bGUgMjQ4MDUnLCdvYmplY3RfaWRfc3MnPT4nMTAwMDAw
-        MDAwMDMxOTQzMycsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nw4AgYsOiYm9yZCcs
-        J2lzc25fc3MnPT4nMTcxMC0yMDlYJywnaXNibl9zcyc9PicnLCdsY2NuX3Nz
-        Jz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0bGUgMzI5NjQnLCdv
-        YmplY3RfaWRfc3MnPT4nMjY3MDAwMDAwMDMxMjI5MScsJ3RpdGxlX2Rpc3Bs
-        YXlfc3MnPT4nQStCRSA6ICBBcmNoaXRlY3R1cmUgYW5kIHRoZSBCdWlsdCBF
-        bnZpcm9ubWVudCcsJ2lzc25fc3MnPT4nMjIxMi0zMjAyJywnaXNibl9zcyc9
-        PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0
-        bGUgMTE5ODknLCdvYmplY3RfaWRfc3MnPT4nMTEwOTc4OTY2NTU1OTgyJywn
-        dGl0bGVfZGlzcGxheV9zcyc9PidUaGUgQS9DIGZseWVyJywnaXNzbl9zcyc9
-        PicwMTk0LTg2NTInLCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nJ30seydp
-        ZCc9PidTZng0OjpMb2NhbDo6QXpUaXRsZSA0Mjc0NycsJ29iamVjdF9pZF9z
-        cyc9PicxMDAwMDAwMDAwMjc3OTExJywndGl0bGVfZGlzcGxheV9zcyc9PidB
-        IGNvbnRyYXJpbycsJ2lzc25fc3MnPT4nMTY2MC03ODgwJywnaXNibl9zcyc9
-        PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0
-        bGUgMTE5ODY2Jywnb2JqZWN0X2lkX3NzJz0+JzExMDk3ODk3OTU5NDk0Mycs
-        J3RpdGxlX2Rpc3BsYXlfc3MnPT4nQSBEIEEgdXBkYXRlJywnaXNzbl9zcyc9
-        PicxMDcxLTczODInLCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nc245MzAw
-        MzA0MSd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0bGUgMzgzMTMnLCdv
-        YmplY3RfaWRfc3MnPT4nOTkxMDQyNzM0NDYyNDU4JywndGl0bGVfZGlzcGxh
-        eV9zcyc9PidBIEYgRSBBIFMsIEFzc29jaWF0aW9uIGbDqW1pbmluZSBkXCfD
-        qWR1Y2F0aW9uIGV0IGRcJ2FjdGlvbiBzb2NpYWxlJywnaXNzbl9zcyc9Picw
-        MzgxLTc1OTgnLCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nJ30seydpZCc9
-        PidTZng0OjpMb2NhbDo6QXpUaXRsZSAxMTgxMzknLCdvYmplY3RfaWRfc3Mn
-        PT4nMTAwMDAwMDAwMDIyMzM3MycsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQSAm
-        IEcgSW5mb3JtYXRpb24gU2VydmljZScsJ2lzc25fc3MnPT4nJywnaXNibl9z
-        cyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6
-        VGl0bGUgNTU0NDYnLCdvYmplY3RfaWRfc3MnPT4nMjY3MDAwMDAwMDE0NzU1
-        MCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQSZHIEluZm9ybWF0aW9uIFNlcnZp
-        Y2VzJywnaXNzbl9zcyc9PicnLCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4n
-        J30seydpZCc9PidTZng0OjpMb2NhbDo6QXpUaXRsZSA0Mjg4NicsJ29iamVj
-        dF9pZF9zcyc9PicxMDAwMDAwMDAwNDE5NTI1JywndGl0bGVfZGlzcGxheV9z
-        cyc9PidBJkcgSW5mb3JtYXRpb24gU2VydmljZXM6IENvbXRleCcsJ2lzc25f
-        c3MnPT4nJywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4n
-        U2Z4NDo6TG9jYWw6OkF6VGl0bGUgNjIwNDEnLCdvYmplY3RfaWRfc3MnPT4n
-        MTEwOTg1ODIyNDUwODM4JywndGl0bGVfZGlzcGxheV9zcyc9PidBLkkuQi5T
-        LiBidWxsZXRpbicsJ2lzc25fc3MnPT4nMDA5Ni03NjQ1JywnaXNibl9zcyc9
-        PicnLCdsY2NuX3NzJz0+JzIwMDUyMzY5NzUnfSx7J2lkJz0+J1NmeDQ6Okxv
-        Y2FsOjpBelRpdGxlIDU3MTA5Jywnb2JqZWN0X2lkX3NzJz0+JzI1NjAwMDAw
-        MDAwNzQ2ODQnLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0EuSS5ILlAuIG5vdGVz
-        JywnaXNzbl9zcyc9PicyMTYxLTU0MDMnLCdpc2JuX3NzJz0+JycsJ2xjY25f
-        c3MnPT4nMjAxMTIwMDIxOSd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0
-        bGUgNzg2Jywnb2JqZWN0X2lkX3NzJz0+Jzk5MTA0MjczMTg1NDU0NicsJ3Rp
-        dGxlX2Rpc3BsYXlfc3MnPT4nQS5JLk8uTi4gQW5uYWxpIGRlbGxcJ0lzdGl0
-        dXRvIFVuaXZlcnNpdGFyaW8gT3JpZW50YWxlIGRpIE5hcG9saS4gRGlwYXJ0
-        aW1lbnRvIGRpIHN0dWRpIGRlbCBtb25kbyBjbGFzc2ljbyBlIGRlbCBNZWRp
-        dGVycmFuZW8gQW50aWNvLiBTZXppb25lIGZpbG9sb2dpY28tbGV0dGVyYXJp
-        YScsJ2lzc25fc3MnPT4nMTEyOC03MjA5JywnaXNibl9zcyc9PicnLCdsY2Nu
-        X3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9jYWw6OkF6VGl0bGUgMzczMDMn
-        LCdvYmplY3RfaWRfc3MnPT4nOTkxMDQyNzQyOTQ3MTE2JywndGl0bGVfZGlz
-        cGxheV9zcyc9PidBLk0uQS4gYXJjaGl2ZXMgb2YgZGVybWF0b2xvZ3knLCdp
-        c3NuX3NzJz0+JzAwOTYtNTM1OScsJ2lzYm5fc3MnPT4nJywnbGNjbl9zcyc9
-        PidzZjk4MDg1NTg1J30seydpZCc9PidTZng0OjpMb2NhbDo6QXpUaXRsZSAx
-        MTUyOCcsJ29iamVjdF9pZF9zcyc9Pic5OTEwNDI3NDIwNTg3OTYnLCd0aXRs
-        ZV9kaXNwbGF5X3NzJz0+J0EuTS5BLiBhcmNoaXZlcyBvZiBnZW5lcmFsIHBz
-        eWNoaWF0cnknLCdpc3NuX3NzJz0+JzAzNzUtODUzMicsJ2lzYm5fc3MnPT4n
-        JywnbGNjbl9zcyc9PicyMDExMjYzMDM2J30seydpZCc9PidTZng0OjpMb2Nh
-        bDo6QXpUaXRsZSA3NzE4OCcsJ29iamVjdF9pZF9zcyc9Pic5OTEwNDI3NDQ0
-        ODkxNjgnLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0EuTS5BLiBhcmNoaXZlcyBv
-        ZiBpbmR1c3RyaWFsIGhlYWx0aCcsJ2lzc25fc3MnPT4nMDU2Ny0zOTMzJywn
-        aXNibl9zcyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6TG9j
-        YWw6OkF6VGl0bGUgMTE4NTY5Jywnb2JqZWN0X2lkX3NzJz0+Jzk5MTA0Mjcy
-        NDM5NTE5NCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQS5NLkEuIGFyY2hpdmVz
-        IG9mIGludGVybmFsIG1lZGljaW5lJywnaXNzbl9zcyc9PicwODg4LTI0Nzkn
-        LCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nNTMwMzk2NDInfV19fQ==
+      encoding: US-ASCII
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''sort''=>''title_sort_s
+        asc'',''wt''=>''ruby'',''rows''=>''20'',''start''=>''0'',''q''=>''*:*'',''fq''=>[''type:Sfx4\\:\\:Ns\\:\\:AzTitle'',''letter_group_sm:A'']}},''response''=>{''numFound''=>7592,''start''=>0,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
+        34288'',''object_id_ss''=>''2320000000018368'',''title_display_ss''=>''A.A.V.
+        newsletter'',''issn_ss''=>''2154-6312'',''isbn_ss''=>'''',''lccn_ss''=>''sn85010192''},{''id''=>''Sfx4::Ns::AzTitle
+        67127'',''object_id_ss''=>''3310000000008350'',''title_display_ss''=>''A and
+        D Intelligence'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        23940'',''object_id_ss''=>''2670000000312291'',''title_display_ss''=>''A+BE
+        :  Architecture and the Built Environment'',''issn_ss''=>''2212-3202'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        31058'',''object_id_ss''=>''1000000000277911'',''title_display_ss''=>''A contrario'',''issn_ss''=>''1660-7880'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        67373'',''object_id_ss''=>''3170000000047802'',''title_display_ss''=>''A.
+        Curtis\''s Journal of Education and of Physiological and Medical Reform'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        86922'',''object_id_ss''=>''110978979594943'',''title_display_ss''=>''A D
+        A update'',''issn_ss''=>''1071-7382'',''isbn_ss''=>'''',''lccn_ss''=>''sn93003041''},{''id''=>''Sfx4::Ns::AzTitle
+        52784'',''object_id_ss''=>''3170000000047803'',''title_display_ss''=>''A.
+        D. F. Randolph & Co\''s Literary Bulletin'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        40184'',''object_id_ss''=>''2670000000147550'',''title_display_ss''=>''A&G
+        Information Services'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        31157'',''object_id_ss''=>''1000000000419525'',''title_display_ss''=>''A&G
+        Information Services: Comtex'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        45032'',''object_id_ss''=>''110985822450838'',''title_display_ss''=>''A.I.B.S.
+        bulletin'',''issn_ss''=>''0096-7645'',''isbn_ss''=>'''',''lccn_ss''=>''2005236975''},{''id''=>''Sfx4::Ns::AzTitle
+        41428'',''object_id_ss''=>''2560000000074684'',''title_display_ss''=>''A.I.H.P.
+        notes'',''issn_ss''=>''2161-5403'',''isbn_ss''=>'''',''lccn_ss''=>''2011200219''},{''id''=>''Sfx4::Ns::AzTitle
+        40974'',''object_id_ss''=>''1000000000290135'',''title_display_ss''=>''A.M.
+        Best Newswire'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        2851'',''object_id_ss''=>''3170000000047806'',''title_display_ss''=>''A.M.D.C.
+        the Sunday School Messenger'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        72777'',''object_id_ss''=>''991042723427002'',''title_display_ss''=>''The
+        A.M.E. church review'',''issn_ss''=>''0360-3725'',''isbn_ss''=>'''',''lccn_ss''=>''2008247687''},{''id''=>''Sfx4::Ns::AzTitle
+        25380'',''object_id_ss''=>''110978979594903'',''title_display_ss''=>''A. magazine'',''issn_ss''=>''1070-9401'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        6743'',''object_id_ss''=>''2530000000001340'',''title_display_ss''=>''A Noticia
+        - Online Edition (Portuguese Language)'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        41874'',''object_id_ss''=>''110978984566349'',''title_display_ss''=>''A parte
+        rei'',''issn_ss''=>''1137-8204'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        21361'',''object_id_ss''=>''1000000000321364'',''title_display_ss''=>''The
+        A.W.A. bulletin'',''issn_ss''=>''1936-8976'',''isbn_ss''=>'''',''lccn_ss''=>''2007215164''},{''id''=>''Sfx4::Ns::AzTitle
+        80220'',''object_id_ss''=>''3170000000047804'',''title_display_ss''=>''A.
+        Williams & Co\''s List of All the New Books Issued in the United States'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        20165'',''object_id_ss''=>''3170000000047805'',''title_display_ss''=>''A.
+        Williams & Co\''s Monthly Bulletin of D. Appleton & Co\''s New Publications'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''}]}}'
     http_version: 
-  recorded_at: Fri, 01 Feb 2013 14:04:30 GMT
+  recorded_at: Mon, 09 Sep 2013 20:25:52 GMT
 - request:
     method: get
     uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
@@ -144,12 +91,12 @@ http_interactions:
       Content-Length:
       - '27'
       Date:
-      - Fri, 01 Feb 2013 14:04:30 GMT
+      - Mon, 09 Sep 2013 20:25:52 GMT
     body:
       encoding: US-ASCII
       string: ! 'string=iPlanetDirectoryPro
 
 '
     http_version: 
-  recorded_at: Fri, 01 Feb 2013 14:04:30 GMT
+  recorded_at: Mon, 09 Sep 2013 20:25:52 GMT
 recorded_with: VCR 2.4.0
