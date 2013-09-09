@@ -1,32 +1,151 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
     uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
-    body: 
+    body:
       encoding: US-ASCII
       string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&fq=letter_group_sm%3AA&sort=title_sort_s+asc&start=0&rows=20&q=%2A%3A%2A
-    headers: 
-      Content-Type: 
+    headers:
+      Content-Type:
       - application/x-www-form-urlencoded; charset=UTF-8
-  response: 
-    status: 
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC9wbGFpbjtjaGFyc2V0PVVURi04
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwOSBTZXAgMjAxMyAyMDoyNTo1MSBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eydyZXNwb25zZUhlYWRlcic9Pnsnc3RhdHVzJz0+MCwnUVRpbWUnPT4wLCdw
+        YXJhbXMnPT57J3NvcnQnPT4ndGl0bGVfc29ydF9zIGFzYycsJ3d0Jz0+J3J1
+        YnknLCdyb3dzJz0+JzIwJywnc3RhcnQnPT4nMCcsJ3EnPT4nKjoqJywnZnEn
+        PT5bJ3R5cGU6U2Z4NFxcOlxcOkN1XFw6XFw6QXpUaXRsZScsJ2xldHRlcl9n
+        cm91cF9zbTpBJ119fSwncmVzcG9uc2UnPT57J251bUZvdW5kJz0+NTU4Mywn
+        c3RhcnQnPT4wLCdkb2NzJz0+W3snaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUg
+        NDMxNzgnLCdvYmplY3RfaWRfc3MnPT4nMTExMDc3ODIwNjQ5MDk4JywndGl0
+        bGVfZGlzcGxheV9zcyc9PidBLkEuTy4gbmV3c2xldHRlcicsJ2lzc25fc3Mn
+        PT4nMDcyOC01ODMzJywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+JzIwMDQy
+        MDE3MzgnfSx7J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxlIDE5MjIzJywnb2Jq
+        ZWN0X2lkX3NzJz0+JzEwMDAwMDAwMDA3MTU1NjMnLCd0aXRsZV9kaXNwbGF5
+        X3NzJz0+J0EmRyBJbmZvcm1hdGlvbiBTZXJ2aWNlcycsJ2lzc25fc3MnPT4n
+        JywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6
+        Q3U6OkF6VGl0bGUgNjMxJywnb2JqZWN0X2lkX3NzJz0+JzExMDk4NTgyMjQ1
+        MDgzOCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQS5JLkIuUy4gYnVsbGV0aW4n
+        LCdpc3NuX3NzJz0+JzAwOTYtNzY0NScsJ2lzYm5fc3MnPT4nJywnbGNjbl9z
+        cyc9PicyMDA1MjM2OTc1J30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSAz
+        Mzc5NCcsJ29iamVjdF9pZF9zcyc9Pic5OTEwNDI3NDI5NDcxMTYnLCd0aXRs
+        ZV9kaXNwbGF5X3NzJz0+J0EuTS5BLiBhcmNoaXZlcyBvZiBkZXJtYXRvbG9n
+        eScsJ2lzc25fc3MnPT4nMDA5Ni01MzU5JywnaXNibl9zcyc9PicnLCdsY2Nu
+        X3NzJz0+J3NmOTgwODU1ODUnfSx7J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxl
+        IDEwNTA3Jywnb2JqZWN0X2lkX3NzJz0+Jzk5MTA0Mjc0MjA1ODc5NicsJ3Rp
+        dGxlX2Rpc3BsYXlfc3MnPT4nQS5NLkEuIGFyY2hpdmVzIG9mIGdlbmVyYWwg
+        cHN5Y2hpYXRyeScsJ2lzc25fc3MnPT4nMDM3NS04NTMyJywnaXNibl9zcyc9
+        PicnLCdsY2NuX3NzJz0+JzIwMTEyNjMwMzYnfSx7J2lkJz0+J1NmeDQ6OkN1
+        OjpBelRpdGxlIDE0MTgyJywnb2JqZWN0X2lkX3NzJz0+Jzk5MTA0Mjc0NDQ4
+        OTE2OCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQS5NLkEuIGFyY2hpdmVzIG9m
+        IGluZHVzdHJpYWwgaGVhbHRoJywnaXNzbl9zcyc9PicwNTY3LTM5MzMnLCdp
+        c2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nc244MDAxMzkwMSd9LHsnaWQnPT4n
+        U2Z4NDo6Q3U6OkF6VGl0bGUgMjMxMzQnLCdvYmplY3RfaWRfc3MnPT4nOTkx
+        MDQyNzQyMDU4Nzk4JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJj
+        aGl2ZXMgb2YgbmV1cm9sb2d5JywnaXNzbl9zcyc9PicwMzc1LTg1NDAnLCdp
+        c2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nc2Y4MjAwNjk5NCd9LHsnaWQnPT4n
+        U2Z4NDo6Q3U6OkF6VGl0bGUgNTMyMDEnLCdvYmplY3RfaWRfc3MnPT4nOTkx
+        MDQyNzIzMzg5MzQ2JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJj
+        aGl2ZXMgb2Ygb3BodGhhbG1vbG9neScsJ2lzc25fc3MnPT4nMDA5Ni02MzM5
+        JywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6
+        Q3U6OkF6VGl0bGUgNDM3NzEnLCdvYmplY3RfaWRfc3MnPT4nOTkxMDQyNzQ0
+        Mjk5NzE2JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uQS4gYXJjaGl2ZXMg
+        b2Ygc3VyZ2VyeScsJ2lzc25fc3MnPT4nMDA5Ni02OTA4JywnaXNibl9zcyc9
+        PicnLCdsY2NuX3NzJz0+JzIyMDExOTI5J30seydpZCc9PidTZng0OjpDdTo6
+        QXpUaXRsZSA1MTE2NycsJ29iamVjdF9pZF9zcyc9PicxMDAwMDAwMDAwMjkw
+        MTM1JywndGl0bGVfZGlzcGxheV9zcyc9PidBLk0uIEJlc3QgTmV3c3dpcmUn
+        LCdpc3NuX3NzJz0+JycsJ2lzYm5fc3MnPT4nJywnbGNjbl9zcyc9PicnfSx7
+        J2lkJz0+J1NmeDQ6OkN1OjpBelRpdGxlIDIxNDE0Jywnb2JqZWN0X2lkX3Nz
+        Jz0+Jzk5MTA0Mjc0MzE0MjM2MCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQS5N
+        LkcuSS4gcmFwcG9ydCBhbm51ZWwnLCdpc3NuX3NzJz0+JzEwMTQtODI0OCcs
+        J2lzYm5fc3MnPT4nJywnbGNjbl9zcyc9PicnfSx7J2lkJz0+J1NmeDQ6OkN1
+        OjpBelRpdGxlIDI1NTgnLCdvYmplY3RfaWRfc3MnPT4nMTAwMDAwMDAwMDUz
+        MjI3NCcsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nw4EgbW9yZ3VuJywnaXNzbl9z
+        cyc9PicxNjcwLTQyNFgnLCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nJ30s
+        eydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSA1MjI3NicsJ29iamVjdF9pZF9z
+        cyc9PicxMTA5Nzg5ODQ1NjYzNDknLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0Eg
+        cGFydGUgcmVpJywnaXNzbl9zcyc9PicxMTM3LTgyMDQnLCdpc2JuX3NzJz0+
+        JycsJ2xjY25fc3MnPT4nJ30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSAz
+        MjQ0MicsJ29iamVjdF9pZF9zcyc9PicxMTA5ODU4MjI0NjAwNzYnLCd0aXRs
+        ZV9kaXNwbGF5X3NzJz0+J0EuIHNwLiBBbmdsYWlzIGRlIHNww6ljaWFsaXTD
+        qScsJ2lzc25fc3MnPT4nMTI0Ni04MTg1JywnaXNibl9zcyc9PicnLCdsY2Nu
+        X3NzJz0+Jyd9LHsnaWQnPT4nU2Z4NDo6Q3U6OkF6VGl0bGUgODIyMycsJ29i
+        amVjdF9pZF9zcyc9PicxMDAwMDAwMDAwNTMxMTI4JywndGl0bGVfZGlzcGxh
+        eV9zcyc9PidBLVo6IEx1eGVtYnVyZ2VyIGlsbHVzdHJpZXJ0ZSBXb2NoZW5z
+        Y2hyaWZ0JywnaXNzbl9zcyc9PicnLCdpc2JuX3NzJz0+JycsJ2xjY25fc3Mn
+        PT4nJ30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSAxNTg1NScsJ29iamVj
+        dF9pZF9zcyc9Pic5OTEwNDI3NDgyNzY2MDAnLCd0aXRsZV9kaXNwbGF5X3Nz
+        Jz0+J1RoZSBBQUFTIG9ic2VydmVyJywnaXNzbl9zcyc9PicxMDQzLTY5MzYn
+        LCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nJ30seydpZCc9PidTZng0OjpD
+        dTo6QXpUaXRsZSAzMTI5OScsJ29iamVjdF9pZF9zcyc9PicxMTA5Nzg5Nzg5
+        NTc4NzQnLCd0aXRsZV9kaXNwbGF5X3NzJz0+J0FBQVMgcmVwb3J0IC4uLiBy
+        ZXNlYXJjaCAmIGRldmVsb3BtZW50JywnaXNzbl9zcyc9PicxMDQxLTg4NTcn
+        LCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nOTY2NDcxNjcnfSx7J2lkJz0+
+        J1NmeDQ6OkN1OjpBelRpdGxlIDIxOTY5Jywnb2JqZWN0X2lkX3NzJz0+Jzk5
+        MTA0MjczMDkwODczNicsJ3RpdGxlX2Rpc3BsYXlfc3MnPT4nQUFBUyBzY2ll
+        bmNlIGFuZCB0ZWNobm9sb2d5IHBvbGljeSB5ZWFyYm9vaycsJ2lzc25fc3Mn
+        PT4nMTA2OS02MDQwJywnaXNibl9zcyc9PicnLCdsY2NuX3NzJz0+JzkzNjQw
+        NTM5J30seydpZCc9PidTZng0OjpDdTo6QXpUaXRsZSA1NDk1OCcsJ29iamVj
+        dF9pZF9zcyc9PicxMTEwMjc2MTgzOTcwMDAnLCd0aXRsZV9kaXNwbGF5X3Nz
+        Jz0+J0FBQyZVIHBlZXIgcmV2aWV3JywnaXNzbl9zcyc9PicxNTI1LTk0NjMn
+        LCdpc2JuX3NzJz0+JycsJ2xjY25fc3MnPT4nJ30seydpZCc9PidTZng0OjpD
+        dTo6QXpUaXRsZSA0OTI0MycsJ29iamVjdF9pZF9zcyc9PicyNDgwMDAwMDAw
+        MDA0MjY0JywndGl0bGVfZGlzcGxheV9zcyc9PidBQUNBIGRpZ2l0YWwnLCdp
+        c3NuX3NzJz0+JzE5ODgtNTE4MCcsJ2lzYm5fc3MnPT4nJywnbGNjbl9zcyc9
+        PicnfV19fQ==
+    http_version: 
+  recorded_at: Mon, 09 Sep 2013 20:25:52 GMT
+- request:
+    method: get
+    uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      Content-Type: 
+      Content-Type:
       - text/plain;charset=UTF-8
-      Transfer-Encoding: 
-      - chunked
-      Date: 
-      - Fri, 06 Sep 2013 17:26:40 GMT
-      Connection: 
-      - close
-    body: 
-      encoding: ASCII-8BIT
-      string: "{'responseHeader'=>{'status'=>0,'QTime'=>1,'params'=>{'sort'=>'title_sort_s asc','wt'=>'ruby','rows'=>'20','start'=>'0','q'=>'*:*','fq'=>['type:Sfx4\\\\:\\\\:Cu\\\\:\\\\:AzTitle','letter_group_sm:A']}},'response'=>{'numFound'=>5583,'start'=>0,'docs'=>[{'id'=>'Sfx4::Cu::AzTitle 43178','object_id_ss'=>'111077820649098','title_display_ss'=>'A.A.O. newsletter','issn_ss'=>'0728-5833','isbn_ss'=>'','lccn_ss'=>'2004201738'},{'id'=>'Sfx4::Cu::AzTitle 19223','object_id_ss'=>'1000000000715563','title_display_ss'=>'A&G Information Services','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 631','object_id_ss'=>'110985822450838','title_display_ss'=>'A.I.B.S. bulletin','issn_ss'=>'0096-7645','isbn_ss'=>'','lccn_ss'=>'2005236975'},{'id'=>'Sfx4::Cu::AzTitle 33794','object_id_ss'=>'991042742947116','title_display_ss'=>'A.M.A. archives of dermatology','issn_ss'=>'0096-5359','isbn_ss'=>'','lccn_ss'=>'sf98085585'},{'id'=>'Sfx4::Cu::AzTitle 10507','object_id_ss'=>'991042742058796','title_display_ss'=>'A.M.A. archives of general psychiatry','issn_ss'=>'0375-8532','isbn_ss'=>'','lccn_ss'=>'2011263036'},{'id'=>'Sfx4::Cu::AzTitle 14182','object_id_ss'=>'991042744489168','title_display_ss'=>'A.M.A. archives of industrial health','issn_ss'=>'0567-3933','isbn_ss'=>'','lccn_ss'=>'sn80013901'},{'id'=>'Sfx4::Cu::AzTitle 23134','object_id_ss'=>'991042742058798','title_display_ss'=>'A.M.A. archives of neurology','issn_ss'=>'0375-8540','isbn_ss'=>'','lccn_ss'=>'sf82006994'},{'id'=>'Sfx4::Cu::AzTitle 53201','object_id_ss'=>'991042723389346','title_display_ss'=>'A.M.A. archives of ophthalmology','issn_ss'=>'0096-6339','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 43771','object_id_ss'=>'991042744299716','title_display_ss'=>'A.M.A. archives of surgery','issn_ss'=>'0096-6908','isbn_ss'=>'','lccn_ss'=>'22011929'},{'id'=>'Sfx4::Cu::AzTitle 51167','object_id_ss'=>'1000000000290135','title_display_ss'=>'A.M. Best Newswire','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 21414','object_id_ss'=>'991042743142360','title_display_ss'=>'A.M.G.I. rapport annuel','issn_ss'=>'1014-8248','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 2558','object_id_ss'=>'1000000000532274','title_display_ss'=>'\xC3\x81 morgun','issn_ss'=>'1670-424X','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 52276','object_id_ss'=>'110978984566349','title_display_ss'=>'A parte rei','issn_ss'=>'1137-8204','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 32442','object_id_ss'=>'110985822460076','title_display_ss'=>'A. sp. Anglais de sp\xC3\xA9cialit\xC3\xA9','issn_ss'=>'1246-8185','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 8223','object_id_ss'=>'1000000000531128','title_display_ss'=>'A-Z: Luxemburger illustrierte Wochenschrift','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 15855','object_id_ss'=>'991042748276600','title_display_ss'=>'The AAAS observer','issn_ss'=>'1043-6936','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 31299','object_id_ss'=>'110978978957874','title_display_ss'=>'AAAS report ... research & development','issn_ss'=>'1041-8857','isbn_ss'=>'','lccn_ss'=>'96647167'},{'id'=>'Sfx4::Cu::AzTitle 21969','object_id_ss'=>'991042730908736','title_display_ss'=>'AAAS science and technology policy yearbook','issn_ss'=>'1069-6040','isbn_ss'=>'','lccn_ss'=>'93640539'},{'id'=>'Sfx4::Cu::AzTitle 54958','object_id_ss'=>'111027618397000','title_display_ss'=>'AAC&U peer review','issn_ss'=>'1525-9463','isbn_ss'=>'','lccn_ss'=>''},{'id'=>'Sfx4::Cu::AzTitle 49243','object_id_ss'=>'2480000000004264','title_display_ss'=>'AACA digital','issn_ss'=>'1988-5180','isbn_ss'=>'','lccn_ss'=>''}]}}"
+      Content-Length:
+      - '27'
+      Date:
+      - Mon, 09 Sep 2013 20:25:52 GMT
+    body:
+      encoding: US-ASCII
+      string: ! 'string=iPlanetDirectoryPro
+
+'
     http_version: 
-  recorded_at: Fri, 06 Sep 2013 17:26:40 GMT
+  recorded_at: Mon, 09 Sep 2013 20:25:52 GMT
 recorded_with: VCR 2.4.0
