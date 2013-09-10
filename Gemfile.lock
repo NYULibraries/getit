@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut-primo.git
-  revision: 89a380e532ac06431677ad529a55ee09a02e9939
+  revision: 4d6ad46ffc7bb6a8998d1dd4e64ec5c0365db140
   specs:
     umlaut-primo (0.1.0)
       exlibris-primo (~> 1.0.8)
@@ -211,7 +211,7 @@ GEM
       treetop (~> 1.4.8)
     marc (0.5.1)
     mime-types (1.23)
-    multi_json (1.7.9)
+    multi_json (1.8.0)
     multi_xml (0.5.5)
     mustache (0.99.4)
     mustache-rails (0.2.3)
