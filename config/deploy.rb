@@ -1,6 +1,6 @@
 require 'nyulibraries/deploy/capistrano'
 
-set :recipient, "hab278@nyu.edu"
+set :recipient, "getit.admin@nyu.edu"
 set :app_title, "getit"
 
 # Environments
