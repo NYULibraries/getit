@@ -33,8 +33,8 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: d31343c35fc6f8c8f5d1b019d875df92f0917251
-  tag: v2.0.3
+  revision: 959b30ba32497d242cee5030844e50dcd8e915cd
+  branch: development-deploy
   specs:
     nyulibraries_deploy (2.0.0)
       cap_git_tools (~> 0.9.1)
@@ -270,7 +270,7 @@ GEM
       marc
     options (2.3.0)
       fattr
-    passenger (4.0.17)
+    passenger (4.0.18)
       daemon_controller (>= 1.1.0)
       rack
       rake (>= 0.8.1)
