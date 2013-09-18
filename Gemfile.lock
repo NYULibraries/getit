@@ -33,7 +33,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: 959b30ba32497d242cee5030844e50dcd8e915cd
+  revision: 344d0e7267051756aa26b5774dba63d138713b4f
   branch: development-deploy
   specs:
     nyulibraries_deploy (2.0.0)
@@ -130,8 +130,6 @@ GEM
     better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
@@ -170,13 +168,6 @@ GEM
       safe_yaml (~> 0.9.0)
     daemon_controller (1.1.5)
     dalli (2.6.4)
-    debug_inspector (0.0.2)
-    debugger (1.5.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.0)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     ensure_valid_encoding (0.5.3)
     erubis (2.7.0)
     execjs (2.0.1)
@@ -230,9 +221,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jruby-rack (1.1.13.2)
-    json (1.7.7)
     json (1.7.7-java)
-    libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -245,7 +234,6 @@ GEM
     mustache-rails (0.2.3)
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
-    mysql2 (0.3.13)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -255,7 +243,6 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.7.7)
     newrelic_rpm (3.6.7.152)
-    nokogiri (1.5.10)
     nokogiri (1.5.10-java)
     nori (1.1.5)
     octokit (1.25.0)
@@ -306,7 +293,6 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    ref (1.0.5)
     require_all (1.2.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -351,9 +337,6 @@ GEM
       sunspot (= 1.3.3)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
-      ref
     therubyrhino (2.0.2)
       therubyrhino_jar (>= 1.7.3)
     therubyrhino_jar (1.7.4)
@@ -377,7 +360,6 @@ GEM
 
 PLATFORMS
   java
-  ruby
 
 DEPENDENCIES
   activerecord-jdbcmysql-adapter (~> 1.2.5)
