@@ -33,8 +33,8 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: 7d117883b19b97825c68276af08cc6e6d34b28e3
-  tag: v2.0.4
+  revision: d35df35fd9d11c5bff788e6fd056f4e5f2531a2a
+  tag: v2.0.5
   specs:
     nyulibraries_deploy (2.0.0)
       cap_git_tools (~> 0.9.1)
