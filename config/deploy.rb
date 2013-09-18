@@ -6,8 +6,6 @@ set :app_title, "getit"
 # Environments
 set :stages, ["staging", "qa", "production"]
 
-set :tagging_environments, ["staging", "production", "qa"]
-
 
 namespace :exlibris do
   namespace :aleph do
