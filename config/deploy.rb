@@ -4,8 +4,7 @@ set :recipient, "getit.admin@library.nyu.edu"
 set :app_title, "getit"
 
 # Environments
-set :stages, ["staging", "qa", "production"]
-
+set :stages, ["staging", "qa", "production", "reindex"]
 
 namespace :exlibris do
   namespace :aleph do
