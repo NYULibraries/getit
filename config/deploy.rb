@@ -15,3 +15,5 @@ namespace :exlibris do
     end
   end
 end
+
+before "exlibris:aleph:refresh", "rails_config:see"
