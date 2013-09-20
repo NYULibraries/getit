@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: bfa5c19c913a50c6f6d81142edf126eae0b1f6aa
+  revision: eb554f10695a114733dc36b1482833f07e36381d
   branch: development
   specs:
-    exlibris-nyu (1.0.8)
+    exlibris-nyu (1.0.9)
       exlibris-aleph (~> 1.0.6)
       exlibris-primo (~> 1.0.10)
       nokogiri (~> 1.5.6)
