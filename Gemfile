@@ -41,7 +41,7 @@ platforms :jruby do
   gem "jruby-rack", "~> 1.1.12"
   gem "activerecord-jdbcmysql-adapter", "~> 1.2.5"
 end
-g
+
 platforms :ruby do
   gem "mysql2", "~> 0.3.11"
 end
