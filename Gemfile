@@ -30,6 +30,7 @@ end
 
 # Testing gems
 group :test do
+  gem "simplecov-rcov", "~> 0.2.3"
   gem 'coveralls', "~> 0.6.7", require: false
   gem "vcr", "~> 2.5.0"
   gem "webmock", "~> 1.13.0"
