@@ -227,7 +227,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=false"
     end
-    get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => false})
+    get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Bobst."})
   end
@@ -239,7 +239,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=true"
     end
-    get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => true})
+    get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => "true"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your scan request has been processed. You will receive an email when the item is available."})
   end
@@ -251,7 +251,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/3?pickup_location=TNSFO&scan=false"
     end
-    get(:show, {:service_response_id => 3, :pickup_location => "TNSFO", :scan => false})
+    get(:show, {:service_response_id => 3, :pickup_location => "TNSFO", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at New School Fogelman Library."})
   end
@@ -263,7 +263,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/4?pickup_location=NCOUR&scan=false"
     end
-    get(:show, {:service_response_id => 4, :pickup_location => "NCOUR", :scan => false})
+    get(:show, {:service_response_id => 4, :pickup_location => "NCOUR", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Courant."})
   end
@@ -275,7 +275,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/5?pickup_location=NABUD&scan=false"
     end
-    get(:show, {:service_response_id => 5, :pickup_location => "NABUD", :scan => false})
+    get(:show, {:service_response_id => 5, :pickup_location => "NABUD", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Abu Dhabi Library (UAE)."})
   end
@@ -294,7 +294,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/6?pickup_location=BOBST&scan=false"
     end
-    get(:show, {:service_response_id => 5, :pickup_location => "BOBST", :scan => false})
+    get(:show, {:service_response_id => 5, :pickup_location => "BOBST", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
       :text => "Your request has been processed. You will be notified when this item is available to pick up at NYU Bobst."})
   end

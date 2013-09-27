@@ -75,7 +75,7 @@ class HoldingRequestsController < UmlautController
 
   # Show the confirmation page for the request
   def show
-    @scan = params.fetch(:scan, false)
+    @scan = params.fetch(:scan, "false").eql?("true")
     @pickup_location = params.fetch(:pickup_location, "")
   end
 
