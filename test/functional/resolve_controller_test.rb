@@ -2,7 +2,13 @@
 require 'test_helper'
 
 class ResolveControllerTest < ActionController::TestCase
-  setup :activate_authlogic
+  setup do
+    activate_authlogic
+    # Pretend we've already checked PDS/Shibboleth for the session
+    # and we have a session
+    @request.cookies[:attempted_sso] = { value: "true" }
+    @controller.session[:session_id] = "FakeSessionID"
+  end
 
   test "resolve request available logged in" do
     UserSession.create(users(:uid))
@@ -152,12 +158,10 @@ class ResolveControllerTest < ActionController::TestCase
   end
 
   test "default institutions with no user" do
-    VCR.use_cassette('resolve default institutions with no user') do
-      institutions = @controller.send(:institutions, nil)
-      assert_equal(2, institutions.length)
-      assert_equal(:default, institutions.first.code)
-      assert_equal(:NYU, institutions.last.code)
-    end
+    institutions = @controller.send(:institutions, nil)
+    assert_equal(2, institutions.length)
+    assert_equal(:default, institutions.first.code)
+    assert_equal(:NYU, institutions.last.code)
   end
 
   test "default institutions with NYU user" do
@@ -176,12 +180,11 @@ class ResolveControllerTest < ActionController::TestCase
   end
 
   test "NS institutions with no user" do
-    VCR.use_cassette('resolve NS institutions with no user') do
-      institutions = @controller.send(:institutions, "NS")
-      assert_equal(2, institutions.length)
-      assert_equal(:default, institutions.first.code)
-      assert_equal(:NS, institutions.last.code)
-    end
+    # The cookies get munged in the test
+    institutions = @controller.send(:institutions, "NS")
+    assert_equal(2, institutions.length)
+    assert_equal(:default, institutions.first.code)
+    assert_equal(:NS, institutions.last.code)
   end
 
   test "NS institutions with NYU user" do
