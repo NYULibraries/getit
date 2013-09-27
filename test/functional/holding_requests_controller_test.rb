@@ -226,6 +226,10 @@ class HoldingRequestsControllerTest < ActionController::TestCase
       get(:create, {:service_response_id => 1, :holding_request_type => "available"})
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=false"
+      assert_nil assigns(:sub_author)
+      assert_nil assigns(:sub_title)
+      assert_nil assigns(:pages)
+      assert_nil assigns(:note_1)
     end
     get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => "false"})
     assert_select("div.text-success", {:count => 1,
@@ -235,9 +239,18 @@ class HoldingRequestsControllerTest < ActionController::TestCase
   test "holding requests create available scan" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create available scan') do
-      get(:create, {:service_response_id => 1, :holding_request_type => "available", :entire => "no"})
+      get(:create, {service_response_id: 1, holding_request_type: "available",
+        entire: "no", sub_author: "Sub Author", sub_title: "Sub Title", pages: "1-10", note_1: "Note 1"})
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=true"
+      assert_not_nil assigns(:sub_author)
+      assert_equal "Sub Author", assigns(:sub_author)
+      assert_not_nil assigns(:sub_title)
+      assert_equal "Sub Title", assigns(:sub_title)
+      assert_not_nil assigns(:pages)
+      assert_equal "1-10", assigns(:pages)
+      assert_not_nil assigns(:note_1)
+      assert_equal "Note 1", assigns(:note_1)
     end
     get(:show, {:service_response_id => 1, :pickup_location => "BOBST", :scan => "true"})
     assert_select("div.text-success", {:count => 1,
