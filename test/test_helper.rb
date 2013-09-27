@@ -1,12 +1,6 @@
-unless ENV['TRAVIS']
-  require 'simplecov'
-  require 'simplecov-rcov'
-  SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-  SimpleCov.start 'rails'
-else
-  require 'coveralls'
-  Coveralls.wear!
-end
+# Wear coveralls
+require 'coveralls'
+Coveralls.wear!
 
 ENV["RAILS_ENV"] = 'test'
 

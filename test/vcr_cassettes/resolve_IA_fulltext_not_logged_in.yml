@@ -2,37 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Content-Length:
-      - '27'
-      Date:
-      - Thu, 21 Feb 2013 14:08:31 GMT
-    body:
-      encoding: US-ASCII
-      string: ! 'string=iPlanetDirectoryPro
-
-'
-    http_version: 
-  recorded_at: Thu, 21 Feb 2013 14:08:37 GMT
-- request:
-    method: get
     uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2013-02-21T09:08:37-05:00&ctx_ver=Z39.88-2004&rft.aufirst=Michael&rft.aulast=Ende&rft.btitle=Momo&rft.genre=book&rft.isbn=038519093X&rft.pub=Doubleday&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
