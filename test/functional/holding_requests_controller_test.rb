@@ -67,10 +67,8 @@ class HoldingRequestsControllerTest < ActionController::TestCase
   end
 
   test "holding requests not logged in" do
-    VCR.use_cassette('requests not logged in') do
-      get(:new, {'service_response_id' => "1"})
-      assert_response :unauthorized
-    end
+    get(:new, {'service_response_id' => "1"})
+    assert_response :unauthorized
   end
 
   test "holding requests new available" do
