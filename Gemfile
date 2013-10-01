@@ -26,12 +26,11 @@ group :development do
   gem "binding_of_caller", "~> 0.7.1", platform: :ruby
   gem "debugger", "~> 1.5.0", platform: :mri
   gem "ruby-debug", "~> 0.10.4", platform: :jruby
+  gem "pry"
 end
 
 # Testing gems
 group :test do
-  gem "simplecov", "~> 0.7.1"
-  gem "simplecov-rcov", "~> 0.2.3"
   gem 'coveralls', "~> 0.6.7", require: false
   gem "vcr", "~> 2.4.0"
   gem "webmock", "~> 1.9.0"
@@ -69,7 +68,7 @@ gem "sunspot_rails", "~> 1.3.3"
 
 # NYU customization gems
 gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :tag => 'v1.0.8'
-gem "authpds-nyu", :git => "git://github.com/scotdalton/authpds-nyu.git"
+gem "authpds-nyu", :git => "git://github.com/scotdalton/authpds-nyu.git", :tag => 'v0.2.13'
 # gem "authpds-nyu", "~> 0.2.11"
 
 # Dalli for caching with memcached

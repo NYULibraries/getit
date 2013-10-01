@@ -38,7 +38,7 @@ class HoldingRequestsController < UmlautController
     @note_2 = (@scan) ? "entire_no" : "entire_yes"
     if @scan
       @sub_author = params[:sub_author].to_s
-      @sub_title = params[:sub_author].to_s
+      @sub_title = params[:sub_title].to_s
       @pages = params[:pages].to_s
       @note_1 = params[:note_1].to_s
     end
@@ -75,7 +75,7 @@ class HoldingRequestsController < UmlautController
 
   # Show the confirmation page for the request
   def show
-    @scan = params.fetch(:scan, false)
+    @scan = params.fetch(:scan, "false").eql?("true")
     @pickup_location = params.fetch(:pickup_location, "")
   end
 
