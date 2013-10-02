@@ -23,10 +23,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: 822fde1f40fdd541427d76b421ea67e313de9bf3
-  tag: v3.0.0
+  revision: 5ca1d1528f801f9d0efffa6b9cd67e32e01cfb5e
+  tag: v3.0.1
   specs:
-    nyulibraries_deploy (3.0.0)
+    nyulibraries_deploy (3.0.1)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       git (~> 1.2.5)
