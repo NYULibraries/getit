@@ -44,8 +44,8 @@ module HoldingRequestsHelper
       label_tag(:entire_yes, class: "radio") {
         radio_button_tag("entire",  "yes", :checked => true) +
         "Request this item to be delivered to an NYU Library of your choice." +
-        pickup_locations_fields + delivery_times
-      }
+        delivery_times
+      } + pickup_locations_fields(style: "padding-left: 20px;")
     end
   end
 
@@ -56,8 +56,8 @@ module HoldingRequestsHelper
       label_tag(:entire_no, class: "radio") {
         radio_button_tag("entire",  "no") +
         "Request that a portion of the item be scanned and delivered electronically." +
-        fair_use_disclaimer + scan_fields
-      }
+        fair_use_disclaimer
+      } + scan_fields(style: "padding-left: 20px;")
     end
   end
 
@@ -65,8 +65,8 @@ module HoldingRequestsHelper
   # If there are multiple pickup locations, a select box is rendered.
   # If there is only one pickup location, text specifying the pickup
   # location with a hidden field is rendered.
-  def pickup_locations_fields
-    field_set_tag do
+  def pickup_locations_fields(options=nil)
+    field_set_tag(nil, options) do
       if pickup_locations.length > 1
         label_tag("pickup_location", "Select pickup location:") +
          select_tag('pickup_location', options_for_select(pickup_locations))
@@ -87,8 +87,8 @@ module HoldingRequestsHelper
   #   - Title of Part
   #   - Desired pages
   #   - Notes
-  def scan_fields
-    field_set_tag do
+  def scan_fields(options=nil)
+    field_set_tag(nil, options) do
       label_tag("sub_author", "Author of part:") +
         text_field_tag("sub_author") +
       label_tag("sub_title", "Title of part:") +
