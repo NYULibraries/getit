@@ -331,12 +331,13 @@ class HoldingRequestsControllerTest < ActionController::TestCase
   def assert_entire_option(candidate)
     assert_select(candidate, 'label.radio input[type="radio"]',
       { count: 1, id: "entire_yes", name: "entire", value: "yes" })
+    assert_select(candidate, 'label.radio + fieldset', 1)
   end
 
   def assert_scan_option(candidate)
     assert_select(candidate, 'label.radio input[type="radio"]',
       { count: 1, id: "entire_no", name: "entire", value: "no" })
-    assert_select(candidate, 'label.radio fieldset', 1)
+    assert_select(candidate, 'label.radio + fieldset', 1)
   end
 
   def assert_ill_option(candidate)
