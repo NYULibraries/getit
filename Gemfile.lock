@@ -31,17 +31,17 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: 84439926027ef5c94a9d626def958e23783ca988
-  tag: v3.1.2
+  revision: 7ec6df985b294fcacd4bc203ba85b243453cb603
+  tag: v3.1.3
   specs:
-    nyulibraries_deploy (3.1.2)
+    nyulibraries_deploy (3.1.3)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       git (~> 1.2.5)
       mail (~> 2.5.4)
       newrelic_rpm (~> 3.6.0)
       rake (~> 10.1.0)
-      require_all (~> 1.3.1)
+      require_all (~> 1.3.0)
       rvm-capistrano (~> 1.5.0)
 
 GIT
