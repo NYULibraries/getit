@@ -52,7 +52,7 @@ gem "jquery-rails", "~> 2.2.1"
 gem "mustache-rails", "~> 0.2.3", :require => "mustache/railtie"
 
 # Deploy with NYU Libraries deploy recipes
-gem "nyulibraries_deploy", :git => "git://github.com/NYULibraries/nyulibraries_deploy.git",  :tag => "v3.0.2"
+gem "nyulibraries_deploy", :git => "git://github.com/NYULibraries/nyulibraries_deploy.git",  :tag => "v3.0.5"
 
 # For config settings
 gem "rails_config", "~> 0.3.2"

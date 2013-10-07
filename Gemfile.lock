@@ -23,10 +23,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: c54b704f5cf6175036be32130c911457ce6f0409
-  tag: v3.0.2
+  revision: 205170007914ff9c3be43c4ee9824931aa6915a7
+  tag: v3.0.5
   specs:
-    nyulibraries_deploy (3.0.1)
+    nyulibraries_deploy (3.0.5)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       git (~> 1.2.5)
@@ -232,7 +232,7 @@ GEM
     marc (0.5.1)
     method_source (0.8.2)
     mime-types (1.25)
-    multi_json (1.8.0)
+    multi_json (1.8.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
     mustache (0.99.4)
