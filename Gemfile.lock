@@ -52,12 +52,11 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut-primo.git
-  revision: 4d6ad46ffc7bb6a8998d1dd4e64ec5c0365db140
+  revision: 7574af1be1355fdc420050ebfeb59faaddf8b1dd
   specs:
     umlaut-primo (0.1.0)
-      exlibris-primo (~> 1.0.8)
-      rake (~> 10.0.3)
-      require_all (~> 1.2.1)
+      exlibris-primo (>= 1.0.8)
+      require_all (>= 1.2.1)
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
