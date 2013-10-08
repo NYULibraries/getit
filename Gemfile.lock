@@ -46,7 +46,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut-primo.git
-  revision: e931027d0bdd32e6412a18b7b7c6da3cff62d9e6
+  revision: 7574af1be1355fdc420050ebfeb59faaddf8b1dd
   specs:
     umlaut-primo (0.1.0)
       exlibris-primo (>= 1.0.8)
