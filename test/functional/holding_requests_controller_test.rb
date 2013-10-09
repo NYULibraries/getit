@@ -301,7 +301,7 @@ class HoldingRequestsControllerTest < ActionController::TestCase
     UserSession.create(users(:uid))
     get(:create, {:service_response_id => 5, :holding_request_type => "ill"})
     assert_response :redirect
-    assert @response.location.starts_with?("http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&")
+    assert @response.location.starts_with?("http://ill.library.edu/illiad/illiad.dll/OpenURL?url_ver=Z39.88-2004&url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&ctx_ver=Z39.88-2004&")
   end
 
   test "holding requests create mismatched item bsn" do
