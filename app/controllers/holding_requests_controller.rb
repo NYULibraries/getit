@@ -1,6 +1,6 @@
 class HoldingRequestsController < UmlautController
   # For now, a constanst for the ILLiad URL
-  ILLIAD_URL = "http://ill.library.nyu.edu"
+  ILLIAD_URL = Settings.urls.ill
 
   # Valid holding request types
   WHITELISTED_HOLDING_REQUEST_TYPES = ["available", "ill", "in_processing", "offsite", "on_order", "recall"]

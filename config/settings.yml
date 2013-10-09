@@ -99,6 +99,9 @@ capistrano:
   path: 
   scm_username: 
 
+urls:
+  ill: "http://ill.library.edu"
+
 sunspot:
   solr:
     hostname: localhost
