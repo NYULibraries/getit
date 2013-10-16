@@ -61,7 +61,7 @@ gem "rails_config", "~> 0.3.3"
 gem "passenger", "~> 4.0.0"
 
 # Umlaut
-gem "umlaut", git: "git://github.com/team-umlaut/umlaut.git"
+gem "umlaut", "~> 3.1.1"
 gem "umlaut-primo", git: "git://github.com/team-umlaut/umlaut-primo.git"
 gem "sunspot_rails", "~> 2.0.0"
 
