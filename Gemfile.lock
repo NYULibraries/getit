@@ -44,14 +44,6 @@ GIT
       require_all (~> 1.3.0)
       rvm-capistrano (~> 1.5.0)
 
-GIT
-  remote: git://github.com/team-umlaut/umlaut-primo.git
-  revision: 7574af1be1355fdc420050ebfeb59faaddf8b1dd
-  specs:
-    umlaut-primo (0.1.0)
-      exlibris-primo (>= 1.0.8)
-      require_all (>= 1.2.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -331,6 +323,9 @@ GEM
       openurl (>= 0.4.3)
       rails (~> 3.2.12)
       sass-rails (~> 3.2.6)
+    umlaut-primo (0.1.2)
+      exlibris-primo (>= 1.0.8)
+      require_all (>= 1.2.1)
     vcr (2.5.0)
     wasabi (3.1.0)
       httpi (~> 2.0)
@@ -373,6 +368,6 @@ DEPENDENCIES
   therubyrhino (~> 2.0.2)
   uglifier (~> 2.1.0)
   umlaut (~> 3.1.1)
-  umlaut-primo!
+  umlaut-primo (~> 0.1.2)
   vcr (~> 2.5.0)
   webmock (~> 1.13.0)
