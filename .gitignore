@@ -32,3 +32,6 @@ coverage/
 
 # Ignore backup files
 *.bak
+
+# Ignore the wiki directory
+wiki
