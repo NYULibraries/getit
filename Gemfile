@@ -8,12 +8,7 @@ group :assets do
   gem "sass-rails",   "~> 3.2.6"
   gem "coffee-rails", "~> 3.2.2"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  platforms :jruby do
-    gem "therubyrhino", "~> 2.0.2"
-  end
-  platforms :ruby do
-    gem "therubyracer", "~> 0.11.1"
-  end
+  gem "therubyracer", "~> 0.11.1"
   gem "uglifier", "~> 2.1.0"
   gem "compass-rails", "~> 1.0.3"
   gem "nyulibraries_assets", git: "git://github.com/NYULibraries/nyulibraries_assets.git", tag: "v1.2.0"
@@ -23,27 +18,20 @@ end
 group :development do
   gem "progress_bar", "~> 1.0.0"
   gem "better_errors", "~> 1.0.1"
-  gem "binding_of_caller", "~> 0.7.2", platform: :ruby
+  gem "binding_of_caller", "~> 0.7.2"
   gem "debugger", "~> 1.6.2", platform: :mri
-  gem "ruby-debug", "~> 0.10.4", platform: :jruby
   gem 'pry'
 end
 
 # Testing gems
 group :test do
   gem 'coveralls', "~> 0.7.0", require: false
-  gem "vcr", "~> 2.5.0"
-  gem "webmock", "~> 1.13.0"
+  gem "vcr", "~> 2.6.0"
+  gem "webmock", "~> 1.15.0"
 end
 
-platforms :jruby do
-  gem "jruby-rack", "~> 1.1.13.2"
-  gem "activerecord-jdbcmysql-adapter", "~> 1.3.1"
-end
-
-platforms :ruby do
-  gem "mysql2", "~> 0.3.13"
-end
+# Use MySQL
+gem "mysql2", "~> 0.3.13"
 
 # Use jquery
 gem "jquery-rails", "~> 3.0.4"
@@ -66,7 +54,7 @@ gem "umlaut-primo", "~> 0.1.2"
 gem "sunspot_rails", "~> 2.0.0"
 
 # NYU customization gems
-gem "exlibris-nyu", :git => "git://github.com/NYULibraries/exlibris-nyu.git", :branch => 'development'
+gem "exlibris-nyu", git: "git://github.com/NYULibraries/exlibris-nyu.git", branch: 'development'
 gem "authpds-nyu", git: "git://github.com/NYULibraries/authpds-nyu.git", tag: 'v1.1.2'
 
 # Dalli for caching with memcached

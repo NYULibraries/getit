@@ -326,11 +326,11 @@ GEM
     umlaut-primo (0.1.2)
       exlibris-primo (>= 1.0.8)
       require_all (>= 1.2.1)
-    vcr (2.5.0)
+    vcr (2.6.0)
     wasabi (3.1.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.0)
-    webmock (1.13.0)
+    webmock (1.15.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
 
@@ -338,7 +338,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-jdbcmysql-adapter (~> 1.3.1)
   authpds-nyu!
   better_errors (~> 1.0.1)
   binding_of_caller (~> 0.7.2)
@@ -349,7 +348,6 @@ DEPENDENCIES
   debugger (~> 1.6.2)
   exlibris-nyu!
   jquery-rails (~> 3.0.4)
-  jruby-rack (~> 1.1.13.2)
   json (~> 1.8.0)
   mustache-rails (~> 0.2.3)
   mysql2 (~> 0.3.13)
@@ -361,13 +359,11 @@ DEPENDENCIES
   pry
   rails (~> 3.2.14)
   rails_config (~> 0.3.3)
-  ruby-debug (~> 0.10.4)
   sass-rails (~> 3.2.6)
   sunspot_rails (~> 2.0.0)
   therubyracer (~> 0.11.1)
-  therubyrhino (~> 2.0.2)
   uglifier (~> 2.1.0)
   umlaut (~> 3.1.1)
   umlaut-primo (~> 0.1.2)
-  vcr (~> 2.5.0)
-  webmock (~> 1.13.0)
+  vcr (~> 2.6.0)
+  webmock (~> 1.15.0)
