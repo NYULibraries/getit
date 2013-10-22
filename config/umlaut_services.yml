@@ -452,8 +452,8 @@ NS:
 NYSID:
   display_name: New York School of Interior Design Library
   views:
-    css: search
-    resolve_css: resolve
+    css: search_nysid
+    resolve_css: resolve_nysid
   ip_addresses: <%= Settings.institutions.NYSID.ip_addresses %>
 
 HSL:

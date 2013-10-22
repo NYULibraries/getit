@@ -6,6 +6,10 @@ class UserSession < Authlogic::Session::Base
   calling_system "getit"
   institution_param_key "umlaut.institution"
 
+  def expiration_date
+    1.hour.ago
+  end
+
   # (Re-)Set verification and Aleph permissions to user attributes
   def additional_attributes
     # Don't do anything unless the record is expired or there are no aleph permissions.
