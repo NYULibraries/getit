@@ -31,10 +31,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries_deploy.git
-  revision: 2d9f5f706a6e8fb9304c5cfc01843b7533f3804d
-  tag: v3.1.4
+  revision: fb50274d12329936c7418c6c0a9931d6487b9fac
+  tag: v3.2.0
   specs:
-    nyulibraries_deploy (3.1.4)
+    nyulibraries_deploy (3.2.0)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       git (~> 1.2.5)
@@ -130,7 +130,7 @@ GEM
       thor
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
-    daemon_controller (1.1.5)
+    daemon_controller (1.1.7)
     dalli (2.6.4)
     debug_inspector (0.0.2)
     debugger (1.6.2)
@@ -204,7 +204,7 @@ GEM
     net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    newrelic_rpm (3.6.8.164)
+    newrelic_rpm (3.6.8.168)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     nori (2.1.0)
@@ -278,7 +278,7 @@ GEM
       nokogiri (>= 1.4.0)
       nori (~> 2.1.0)
       wasabi (~> 3.1.0)
-    sexp_processor (4.3.0)
+    sexp_processor (4.4.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
