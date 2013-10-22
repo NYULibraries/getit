@@ -67,10 +67,8 @@ class HoldingRequestsControllerTest < ActionController::TestCase
   end
 
   test "holding requests not logged in" do
-    VCR.use_cassette('requests not logged in') do
-      get(:new, {'service_response_id' => "1"})
-      assert_response :unauthorized
-    end
+    get(:new, {'service_response_id' => "1"})
+    assert_response :unauthorized
   end
 
   test "holding requests new available" do
@@ -241,10 +239,8 @@ class HoldingRequestsControllerTest < ActionController::TestCase
   test "holding requests create available scan" do
     UserSession.create(users(:uid))
     VCR.use_cassette('requests create available scan') do
-      get(:create, {:service_response_id => 1, :holding_request_type => "available",
-        :entire => "no", sub_author: "Sub Author", sub_title: "Sub Title", pages: "1-10", note_1: "Note 1"})
-      assert_response :redirect
-      assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=true"
+      get(:create, {service_response_id: 1, holding_request_type: "available",
+        entire: "no", sub_author: "Sub Author", sub_title: "Sub Title", pages: "1-10", note_1: "Note 1"})
       assert_response :redirect
       assert_redirected_to "http://test.host/holding_requests/1?pickup_location=BOBST&scan=true"
       assert_not_nil assigns(:sub_author)

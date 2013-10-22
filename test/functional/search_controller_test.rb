@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class SearchControllerTest < ActionController::TestCase
-  setup :activate_authlogic
+  setup do
+    activate_authlogic
+    # Pretend we've already checked PDS/Shibboleth for the session
+    @request.cookies[:attempted_sso] = { value: "true" }
+  end
+
   
   test "search institutional config" do
     assert @controller.respond_to?(:extend_with_institutional_search_module), 
@@ -69,72 +74,57 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "index not logged in" do
-    # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index not logged in') do
-      get :index
-      assert_response :success
-      assert_select "title", "BobCat"
-      assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 3
-      assert_tabs_header
-      assert_template :partial => 'nyu/_sidebar', :count => 1
-      assert_template :partial => 'nyu/_tip1', :count => 1
-      assert_template :partial => 'nyu/_tip2', :count => 1
-    end
+    get :index
+    assert_response :success
+    assert_select "title", "BobCat"
+    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
+    assert_select 'div.search div.search-section', 3
+    assert_tabs_header
+    assert_template :partial => 'nyu/_sidebar', :count => 1
+    assert_template :partial => 'nyu/_tip1', :count => 1
+    assert_template :partial => 'nyu/_tip2', :count => 1
   end
 
   test "index not logged in NS" do
-    # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index not logged in NS') do
-      get :index, "umlaut.institution" => "NS"
-      assert_response :success
-      assert_select "title", "BobCat"
-      assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 3
-      assert_tabs_header
-      assert_template :partial => 'ns/_sidebar', :count => 1
-    end
+    get :index, "umlaut.institution" => "NS"
+    assert_response :success
+    assert_select "title", "BobCat"
+    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
+    assert_select 'div.search div.search-section', 3
+    assert_tabs_header
+    assert_template :partial => 'ns/_sidebar', :count => 1
   end
 
   test "index not logged in CU" do
-    # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index not logged in CU') do
-      get :index, "umlaut.institution" => "CU"
-      assert_response :success
-      assert_select "title", "BobCat"
-      assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 3
-      assert_tabs_header
-      assert_template :partial => 'cu/_sidebar', :count => 1
-    end
+    get :index, "umlaut.institution" => "CU"
+    assert_response :success
+    assert_select "title", "BobCat"
+    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
+    assert_select 'div.search div.search-section', 3
+    assert_tabs_header
+    assert_template :partial => 'cu/_sidebar', :count => 1
   end
 
   test "index not logged in NYUAD" do
-    # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index not logged in NYUAD') do
-      get :index, "umlaut.institution" => "NYUAD"
-      assert_response :success
-      assert_select "title", "BobCat"
-      assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 3
-      assert_tabs_header
-      assert_template :partial => 'nyuad/_sidebar', :count => 1
-      assert_template :partial => 'nyuad/_tip1', :count => 1
-    end
+    get :index, "umlaut.institution" => "NYUAD"
+    assert_response :success
+    assert_select "title", "BobCat"
+    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
+    assert_select 'div.search div.search-section', 3
+    assert_tabs_header
+    assert_template :partial => 'nyuad/_sidebar', :count => 1
+    assert_template :partial => 'nyuad/_tip1', :count => 1
   end
 
 
   test "index not logged in HSL" do
-    # Need to wrap since there is a check for the OpenSSO cookie name.
-    VCR.use_cassette('search index not logged in HSL') do
-      get :index, "umlaut.institution" => "HSL"
-      assert_response :success
-      assert_select "title", "BobCat"
-      assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 3
-      assert_tabs_header
-      assert_template :partial => 'hsl/_sidebar', :count => 1
-    end
+    get :index, "umlaut.institution" => "HSL"
+    assert_response :success
+    assert_select "title", "BobCat"
+    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
+    assert_select 'div.search div.search-section', 3
+    assert_tabs_header
+    assert_template :partial => 'hsl/_sidebar', :count => 1
   end
 
   test "journal search logged in" do

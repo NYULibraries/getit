@@ -2,37 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://login.nyu.edu/sso/identity/getCookieNameForToken
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/plain;charset=UTF-8
-      Content-Length:
-      - '27'
-      Date:
-      - Thu, 21 Feb 2013 18:28:29 GMT
-    body:
-      encoding: US-ASCII
-      string: ! 'string=iPlanetDirectoryPro
-
-'
-    http_version: 
-  recorded_at: Thu, 21 Feb 2013 18:28:30 GMT
-- request:
-    method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002696713/items?view=full
     body:
       encoding: US-ASCII

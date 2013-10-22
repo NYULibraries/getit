@@ -3,8 +3,12 @@ class UserSession < Authlogic::Session::Base
   pds_url Settings.pds.login_url
   redirect_logout_url Settings.pds.logout_url
   aleph_url Exlibris::Aleph::Config.base_url
-  calling_system "umlaut"
+  calling_system "getit"
   institution_param_key "umlaut.institution"
+
+  def expiration_date
+    1.hour.ago
+  end
 
   # (Re-)Set verification and Aleph permissions to user attributes
   def additional_attributes
