@@ -45,14 +45,6 @@ GIT
       rvm-capistrano (~> 1.5.0)
 
 GIT
-  remote: git://github.com/team-umlaut/umlaut-primo.git
-  revision: d68df02e0cd6c7e95413a59d144ee7720458ef07
-  specs:
-    umlaut-primo (0.1.2)
-      exlibris-primo (>= 1.0.8)
-      require_all (>= 1.2.1)
-
-GIT
   remote: git://github.com/team-umlaut/umlaut.git
   revision: 6a71b267e37f8ac9a7a0d07aa5685b5abd5c04c4
   branch: bootstrap
@@ -337,6 +329,9 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    umlaut-primo (0.1.2)
+      exlibris-primo (>= 1.0.8)
+      require_all (>= 1.2.1)
     vcr (2.5.0)
     wasabi (3.1.0)
       httpi (~> 2.0)
@@ -379,6 +374,6 @@ DEPENDENCIES
   therubyrhino (~> 2.0.2)
   uglifier (~> 2.1.0)
   umlaut!
-  umlaut-primo!
+  umlaut-primo (~> 0.1.2)
   vcr (~> 2.5.0)
   webmock (~> 1.13.0)
