@@ -240,7 +240,7 @@ GEM
       marc
     options (2.3.0)
       fattr
-    passenger (4.0.20)
+    passenger (4.0.21)
       daemon_controller (>= 1.1.0)
       rack
       rake (>= 0.8.1)
