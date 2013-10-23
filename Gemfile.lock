@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/NYULibraries/authpds-nyu.git
-  revision: 88055ad3a713a18879b586ed80fe2bac4574cad7
-  tag: v1.1.2
+  revision: 13d300f11d8dd95576f24858cf82fe9ccd6ca521
+  branch: development
   specs:
     authpds-nyu (1.1.2)
       authpds (~> 1.1.1)
