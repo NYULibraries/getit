@@ -4,7 +4,7 @@ class SearchControllerTest < ActionController::TestCase
   setup do
     activate_authlogic
     # Pretend we've already checked PDS/Shibboleth for the session
-    @request.cookies[:attempted_sso] = { value: "true" }
+    @controller.session[:attempted_sso] = true
   end
 
   
