@@ -38,7 +38,6 @@ sfx_databases: {}
 
 institutions:
   default:
-    views:
       sfx_base_url: "http://sfx.library.nyu.edu/sfxlcl41?"
     services:
       NYU_Primo:
@@ -56,6 +55,8 @@ institutions:
       IsbnDb:
         access_key: access_key
   NYU:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses:
       - 127.0.0.1
     services:
@@ -78,16 +79,28 @@ institutions:
       NYU_ILLiad:
         base_url: ""
   NYUAD:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
   NYUSH:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
   NYSID:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
   HSL:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
   CU:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
   NS:
+    views:
+      gauges_tracking_code: trackme
     ip_addresses: []
     services:
       NS_bX:
