@@ -209,6 +209,7 @@ NYU:
   parent_code: default
   active_tab: journals
   views:
+    gauges_tracking_code: <%= Settings.institutions.NYU.views.gauges_tracking_code %>
     css: search
     resolve_css: resolve
   ip_addresses: <%= Settings.institutions.NYU.ip_addresses %>
@@ -313,6 +314,7 @@ NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU
   views:
+    gauges_tracking_code: <%= Settings.institutions.NYUAD.views.gauges_tracking_code %>
     css: search_nyuad
     resolve_css: resolve_nyuad
     wayfinder_attributes:
@@ -327,6 +329,7 @@ NYUSH:
   name: NYU Shanghai Library
   parent_code: NYU
   views:
+    gauges_tracking_code: <%= Settings.institutions.NYUSH.views.gauges_tracking_code %>
     css: search_nyush
     resolve_css: resolve_nyush
     wayfinder_attributes:
@@ -341,6 +344,7 @@ CU:
   name: The Cooper Union Library
   active_tab: journals
   views:
+    gauges_tracking_code: <%= Settings.institutions.CU.views.gauges_tracking_code %>
     css: search_cu
     resolve_css: resolve_cu
     sfx_base_url: "http://sfx.library.nyu.edu/sfxcooper?"
@@ -387,6 +391,7 @@ NS:
   name: New School Libraries
   active_tab: journals
   views:
+    gauges_tracking_code: <%= Settings.institutions.NS.views.gauges_tracking_code %>
     css: search_ns
     resolve_css: resolve_ns
     sfx_base_url: "http://sfx4.library.newschool.edu/ns?"
@@ -452,6 +457,7 @@ NS:
 NYSID:
   display_name: New York School of Interior Design Library
   views:
+    gauges_tracking_code: <%= Settings.institutions.NYSID.views.gauges_tracking_code %>
     css: search_nysid
     resolve_css: resolve_nysid
   ip_addresses: <%= Settings.institutions.NYSID.ip_addresses %>
@@ -459,6 +465,7 @@ NYSID:
 HSL:
   active_tab: journals
   views:
+    gauges_tracking_code: <%= Settings.institutions.HSL.views.gauges_tracking_code %>
     css: search_hsl
     resolve_css: resolve_hsl
   ip_addresses: <%= Settings.institutions.HSL.ip_addresses %>

@@ -7,7 +7,7 @@ module Views
       end
 
       def gauges_tracking_code
-        '5114fb95f5a1f555df00002b'
+        views["gauges_tracking_code"]
       end
 
       def breadcrumbs
