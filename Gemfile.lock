@@ -10,12 +10,12 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 345e64956dc121a60c84449d879e19b7fb7a89f9
+  revision: 9339b9c1944c18831c3c3a108f463047cf02f270
   branch: development
   specs:
-    exlibris-nyu (1.1.1)
+    exlibris-nyu (1.1.2)
       exlibris-aleph (~> 1.1.0)
-      exlibris-primo (~> 1.1.1)
+      exlibris-primo (~> 1.1.2)
       nokogiri (~> 1.6.0)
       require_all (~> 1.3.1)
 
@@ -169,7 +169,7 @@ GEM
       nokogiri (~> 1.6.0)
       rake (~> 10.1.0)
       require_all (~> 1.3.1)
-    exlibris-primo (1.1.1)
+    exlibris-primo (1.1.2)
       activesupport (~> 3.2.14)
       iso-639 (~> 0.1.0)
       json (~> 1.8.0)
