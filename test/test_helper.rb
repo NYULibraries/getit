@@ -39,7 +39,7 @@ require 'webmock'
 WebMock.allow_net_connect!
 
 @@aleph_url = Exlibris::Aleph::Config.base_url
-@@primo_url = Settings.institutions.default.services.NYU_Primo.base_url
+@@primo_url = Exlibris::Primo.config.base_url
 @@aws_access_key = Settings.institutions.default.services.Amazon.api_key
 @@aws_secret_key = Settings.institutions.default.services.Amazon.secret_key
 @@aws_associate_tag = Settings.institutions.default.services.Amazon.associate_tag
