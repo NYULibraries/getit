@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 9339b9c1944c18831c3c3a108f463047cf02f270
+  revision: 3aed2af711f4bb62bf30b4fdbc1d84ac82383c94
   branch: development
   specs:
     exlibris-nyu (1.1.2)
