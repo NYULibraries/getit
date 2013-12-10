@@ -427,6 +427,7 @@ NS:
       extra_targets_of_interest:
         ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
         REFWORKS_EXPORT_TOOL: export_citation
+        DOCDEL_ARES_LCL: export_citation
         # ISI_WEB_OF_SCIENCE: export_citation
         BX_RECOMMENDER_SERVICE: help
         ASK_A_LIBRARIAN_LCL: help
