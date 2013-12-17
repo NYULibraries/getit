@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # Include institution url helpers,
+  # specifically #url_for to include
+  # the institution in link_to URLs
+  include Authpds::Helpers::Institution::UrlHelper
+
   def resolve_stylesheets
     stylesheet_link_tag (current_primary_institution.views["resolve_css"] || "resolve")
   end
