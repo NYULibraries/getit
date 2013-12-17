@@ -166,43 +166,57 @@ class UmlautController < ApplicationController
   end
 
   def create_collection
-    return Collection.new(@user_request, services(institutions(params[UserSession.institution_param_key])))
+    return Collection.new(@user_request, services(institutions_in_play(params[UserSession.institution_param_key])))
   end
   protected :create_collection
 
-  def institutions(requested_institution)
-    institutions = []
+  def institutions_in_play(requested_institution)
+    institutions_in_play = []
     # Always add default institutions
-    institutions += Institutions.defaults
+    institutions_in_play += Institutions.defaults
     # Remove NYU at the start
-    institutions.reject! { |institution| institution.code == :NYU }
+    institutions_in_play.reject! { |institution| institution.code == :NYU }
     # Start adding conditional institutions
+    # beginning with the requested institution from the URL
     if requested_institution
-      requested_institution = Institutions.institutions[requested_institution.to_sym]
-      institutions << requested_institution unless requested_institution.nil?
+      requested_institution = 
+        Institutions.institutions[requested_institution.to_sym]
+      if requested_institution.present?
+        institutions_in_play << requested_institution
+      end
     end
     # Get all institutions based on IP
-    institutions += Institutions.with_ip(request.remote_ip) unless request.nil?
+    if request.present?
+      institutions_in_play += Institutions.with_ip(request.remote_ip)
+    end
     # Get all user associated institutions
-    institutions += user_institutions
+    institutions_in_play += user_institutions
     # Add NYU if we only have the one default
-    institutions << Institutions.institutions[:NYU] if (institutions.length == 1 and institutions.first.code == :default)
-    institutions.uniq!
+    if (institutions_in_play.length == 1 and institutions_in_play.first.code == :default)
+      institutions_in_play << Institutions.institutions[:NYU]
+    end
+    # Only get uniq institutions
+    institutions_in_play.uniq!
+    # Log the institutions
     Rails.logger.info("The following institutions are in play: #{institutions.collect{|i| i.name}.inspect}")
-    return institutions.collect{|i| i}
+    # Return a copy
+    return institutions_in_play.collect{ |i| i }
   end
-  private :institutions
+  private :institutions_in_play
 
   def user_institutions
-    return [current_user.primary_institution] unless current_user.nil? or current_user.primary_institution.nil?
-    return []
+    if current_user.present? and current_user.primary_institution.present?
+      [current_user.primary_institution] 
+    else
+      []
+    end
   end
   private :user_institutions
 
   # Add services belonging to institutions
-  def services(institutions)
+  def services(institutions_in_play)
     services = {}
-    institutions.each do | institution |
+    institutions_in_play.each do | institution |
       # trim out ones with disabled:true
       services.merge!(institution.services.reject {|id, hash| hash && hash["disabled"] == true})
       # services.merge!(ServiceStore.config["#{institution}"]["services"].reject {|id, hash| hash && hash["disabled"] == true})
