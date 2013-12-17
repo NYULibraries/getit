@@ -163,16 +163,16 @@ class ResolveControllerTest < ActionController::TestCase
     assert(services.has_key? "NS_SFX")
   end
 
-  test "default institutions with no user" do
-    institutions = @controller.send(:institutions, nil)
+  test "default institutions in play with no user" do
+    institutions = @controller.send(:institutions_in_play, nil)
     assert_equal(2, institutions.length)
     assert_equal(:default, institutions.first.code)
     assert_equal(:NYU, institutions.last.code)
   end
 
-  test "default institutions with NYU user" do
+  test "default institutions in play with NYU user" do
     UserSession.create(users(:uid))
-    institutions = @controller.send(:institutions, nil)
+    institutions = @controller.send(:institutions_in_play, nil)
     assert_equal(2, institutions.length)
     assert_equal(:default, institutions.first.code)
     assert_equal(:NYU, institutions.last.code)
@@ -185,26 +185,26 @@ class ResolveControllerTest < ActionController::TestCase
     assert_equal(:NYU, institutions.first.code)
   end
 
-  test "NS institutions with no user" do
+  test "NS institutions in play with no user" do
     # The cookies get munged in the test
-    institutions = @controller.send(:institutions, "NS")
+    institutions = @controller.send(:institutions_in_play, "NS")
     assert_equal(2, institutions.length)
     assert_equal(:default, institutions.first.code)
     assert_equal(:NS, institutions.last.code)
   end
 
-  test "NS institutions with NYU user" do
+  test "NS institutions in play with NYU user" do
     UserSession.create(users(:uid))
-    institutions = @controller.send(:institutions, "NS")
+    institutions = @controller.send(:institutions_in_play, "NS")
     assert_equal(3, institutions.length)
     assert_equal(:default, institutions.first.code)
     assert_equal(:NS, institutions[1].code)
     assert_equal(:NYU, institutions.last.code)
   end
 
-  test "NS institutions with NS user" do
+  test "NS institutions in play with NS user" do
     UserSession.create(users(:nsUser))
-    institutions = @controller.send(:institutions, "NS")
+    institutions = @controller.send(:institutions_in_play, "NS")
     assert_equal(2, institutions.length)
     assert_equal(:default, institutions.first.code)
     assert_equal(:NS, institutions.last.code)
