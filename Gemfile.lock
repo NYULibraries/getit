@@ -101,7 +101,7 @@ GEM
     authlogic (3.3.0)
       activerecord (>= 3.2)
       activesupport (>= 3.2)
-    authpds (1.1.3)
+    authpds (1.1.4)
       activerecord (~> 3.2.14)
       activesupport (~> 3.2.14)
       authlogic (~> 3.3.0)
