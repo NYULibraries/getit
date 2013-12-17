@@ -198,7 +198,7 @@ class UmlautController < ApplicationController
     # Only get uniq institutions
     institutions_in_play.uniq!
     # Log the institutions
-    Rails.logger.info("The following institutions are in play: #{institutions.collect{|i| i.name}.inspect}")
+    Rails.logger.info("The following institutions are in play: #{institutions_in_play.collect{|i| i.name}.inspect}")
     # Return a copy
     return institutions_in_play.collect{ |i| i }
   end
