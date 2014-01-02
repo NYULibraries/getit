@@ -10,17 +10,24 @@ class ResolveControllerTest < ActionController::TestCase
     @controller.session[:session_id] = "FakeSessionID"
   end
 
+  test "url for request" do
+    umlaut_request = requests(:frankenstein)
+    assert_equal "http://test.host/resolve?"+
+        "umlaut.request_id=#{umlaut_request.id}",
+          @controller.url_for_request(umlaut_request)
+  end
+
   test "resolve request available logged in" do
     UserSession.create(users(:uid))
     umlaut_request = requests(:primo_book_virtual_inequality)
     VCR.use_cassette('resolve request available logged in') do
       get(:index, {'umlaut.request_id' => umlaut_request.id})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
-      assert_select 'nav.umlaut-resolve-nav div#permalink a',
+      assert_select 'nav#nav1 div.umlaut-permalink', 1
+      assert_select 'nav#nav1 div.umlaut-permalink a',
         {:count => 1, :text => "http://test.host/go/#{umlaut_request.id}"}
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock', 1
-      assert_select 'nav.umlaut-resolve-nav a.logout', {:count => 1, :text => "Log-out Given Name", :href => "http://test.host/logout"}
+      assert_select 'nav#nav1 i.icons-famfamfam-lock', 1
+      assert_select 'nav#nav1 a.logout', {:count => 1, :text => "Log-out Given Name", :href => "http://test.host/logout"}
       assert_select 'div.umlaut-holdings div.umlaut-holding ' do |elements|
         elements.each do |element|
           assert_select element, "a.ajax_window", {:count => 1, :text => "Request"}
@@ -34,12 +41,11 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve request available not logged in') do
       get(:index, {'umlaut.request_id' => umlaut_request.id})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
-      assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1,
-        :text => "http://test.host/go/#{umlaut_request.id}",
-          :href => "http://test.host/go/#{umlaut_request.referent.id}"}
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
-      assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login",
+      assert_select 'nav#nav1 div.umlaut-permalink', 1
+      assert_select 'nav#nav1 div.umlaut-permalink a',
+        {:count => 1, :text => "http://test.host/go/#{umlaut_request.id}"}
+      assert_select 'nav#nav1 i.icons-famfamfam-lock_open', 1
+      assert_select 'nav#nav1 a.login', {:count => 1, :text => "Login",
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=NYU"}
       assert_select 'div.umlaut-holdings div.umlaut-holding ' do |elements|
         elements.each do |element|
@@ -55,8 +61,8 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve request available logged in but no on shelf permission') do
       get(:index, {'umlaut.request_id' => umlaut_request.id})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock', 1
-      assert_select 'nav.umlaut-resolve-nav a.logout', {:count => 1, :text => "Log-out Given Name", :href => "http://test.host/logout"}
+      assert_select 'nav#nav1 i.icons-famfamfam-lock', 1
+      assert_select 'nav#nav1 a.logout', {:count => 1, :text => "Log-out Given Name", :href => "http://test.host/logout"}
       assert_select 'div.umlaut-holdings div.umlaut-holding ' do |elements|
         elements.each do |element|
           assert_select element, "a.ajax_window", {:count => 0}
@@ -70,12 +76,12 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve request available not logged in NS') do
       get(:index, {'umlaut.request_id' => umlaut_request.id, "umlaut.institution" => "NS"})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
-      assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1,
+      assert_select 'nav#nav1 div.umlaut-permalink', 1
+      assert_select 'nav#nav1 div.umlaut-permalink a', { count: 1,
         :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=NS",
           :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=NS"}
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
-      assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login",
+      assert_select 'nav#nav1 i.icons-famfamfam-lock_open', 1
+      assert_select 'nav#nav1 a.login', {:count => 1, :text => "Login",
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=NS"}
       assert_select 'div.umlaut-holdings div.umlaut-holding ' do |elements|
         elements.each do |element|
@@ -90,12 +96,12 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve request available not logged in CU') do
       get(:index, {'umlaut.request_id' => umlaut_request.id, "umlaut.institution" => "CU"})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav div#permalink span', {:count => 1, :text => "URL:"}
-      assert_select 'nav.umlaut-resolve-nav div#permalink a', {:count => 1,
+      assert_select 'nav#nav1 div.umlaut-permalink', 1
+      assert_select 'nav#nav1 div.umlaut-permalink a', { count: 1,
         :text => "http://test.host/go/#{umlaut_request.id}?umlaut.institution=CU",
           :href => "http://test.host/go/#{umlaut_request.referent.id}?umlaut.institution=CU"}
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
-      assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login",
+      assert_select 'nav#nav1 i.icons-famfamfam-lock_open', 1
+      assert_select 'nav#nav1 a.login', {:count => 1, :text => "Login",
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=CU"}
       assert_select 'div.umlaut-holdings div.umlaut-holding ' do |elements|
         elements.each do |element|
@@ -110,8 +116,8 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve IA fulltext not logged in') do
       get(:index, {'umlaut.request_id' => umlaut_request.id})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
-      assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login",
+      assert_select 'nav#nav1 i.icons-famfamfam-lock_open', 1
+      assert_select 'nav#nav1 a.login', {:count => 1, :text => "Login",
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}"}
       assert_select 'div#fulltext ul.response_list li.response_item' do |elements|
         assert_equal(1, elements.size)
@@ -129,8 +135,8 @@ class ResolveControllerTest < ActionController::TestCase
     VCR.use_cassette('resolve no holdings not logged in') do
       get(:index, {'umlaut.request_id' => umlaut_request.id, "umlaut.institution" => "NYU"})
       assert_response :success
-      assert_select 'nav.umlaut-resolve-nav i.icons-famfamfam-lock_open', 1
-      assert_select 'nav.umlaut-resolve-nav a.login', {:count => 1, :text => "Login",
+      assert_select 'nav#nav1 i.icons-famfamfam-lock_open', 1
+      assert_select 'nav#nav1 a.login', {:count => 1, :text => "Login",
         :href => "http://test.host/login?return_url=http://test.host/go/#{umlaut_request.referent.id}&umlaut.institution=CU"}
       assert_select 'div#fulltext ul.response_list li.response_item' do |elements|
         assert_equal(1, elements.size)

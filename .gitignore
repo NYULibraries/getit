@@ -30,9 +30,6 @@
 # Ignore coverage
 coverage/
 
-# Ignore umlaut header partial for now.
-/app/views/umlaut
-
 # Ignore backup files
 *.bak
 

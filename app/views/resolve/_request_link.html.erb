@@ -10,6 +10,6 @@ view_data = service_response.view_data
   <%= link_to("Request", new_holding_request_url(service_response.id), 
     target: "_blank", class: "btn btn-primary") %>
 <% else #Send to login screen. %>
-  <%= link_to("Request", login_url({return_url: current_permalink_url, service_response_id: service_response.id}), 
+  <%= link_to("Request", login_url({return_url: url_for_request(@user_request), service_response_id: service_response.id}), 
     target: "_blank", class: "btn btn-primary") %>
 <% end %>

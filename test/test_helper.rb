@@ -23,17 +23,7 @@ class ActionController::TestRequest
   def performed?; end
 
   def redirect_to(*args); end
-  
-  # def logger
-  #   Rails.logger
-  # end
 end
-
-# Rails.logger.class_eval do
-#   def error(msg)
-#     raise msg
-#   end
-# end
 
 # VCR is used to 'record' HTTP interactions with
 # third party services used in tests, and play em
