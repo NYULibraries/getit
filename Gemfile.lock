@@ -46,7 +46,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 2af72c675cd6ef7a9494e53ca82530ccf8f537ae
+  revision: 121256cae1bb2d500e8b533755e91ad99e41faea
   specs:
     umlaut (3.1.1)
       bootstrap-sass (~> 2.3.0)
