@@ -19,6 +19,10 @@ nav {
   border-bottom: 1px solid $umlautHeaderBorderColor;
 }
 
+.umlaut-resource-info h2.title {
+  font-style: italic;
+}
+
 .wayfinder {
   @include umlaut-well($umlautHighlightedSectionBackgroundColor, $umlautSidebarBorderColor);
   padding: 6px;
