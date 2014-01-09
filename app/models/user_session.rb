@@ -29,5 +29,7 @@ class UserSession < Authlogic::Session::Base
         aleph_bor_auth_permissions(bor_id, verification)
     end
     return permission_attributes
+  rescue
+    return {}
   end
 end
