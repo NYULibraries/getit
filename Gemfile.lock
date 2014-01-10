@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 0b09caee58ee9feb730b55a651faa8a89e7bffa8
+  revision: cafc95d28ecc70997c22de1ece6cd77e5b3cc2cc
   branch: qa
   specs:
     exlibris-nyu (1.1.2)
@@ -168,9 +168,9 @@ GEM
       nokogiri (~> 1.6.0)
       rake (~> 10.1.0)
       require_all (~> 1.3.1)
-    exlibris-primo (1.1.2)
-      activesupport (~> 3.2.14)
-      iso-639 (~> 0.1.0)
+    exlibris-primo (1.1.3)
+      activesupport (>= 3.2.14)
+      iso-639 (~> 0.2.0)
       json (~> 1.8.0)
       nokogiri (~> 1.6.0)
       require_all (~> 1.3.1)
@@ -194,7 +194,7 @@ GEM
       require_all (~> 1.3.1)
     ipaddr_range_set (0.10.0)
     isbn (2.0.9)
-    iso-639 (0.1.0)
+    iso-639 (0.2.4)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
