@@ -157,14 +157,18 @@ class UmlautController < ApplicationController
     document_delivery[:bg_update] = true
 
     resolve_sections do
+      # Original order is:
+      #   cover_image, fulltext, search_inside, excerpts, audio,
+      #     holding, document_delivery, table_of_contents, abstract
+      # Desired order is:
+      #   cover_image, search_inside, fulltext, holding, document_delivery,
+      #     audio, excerpts, table_of_contents, abstract
+      # A little awkard below since ensure_order! just switches positions
+      # if necessary
       # Reorder Main Sections
       ensure_order!("search_inside", "fulltext")
-      ensure_order!("fulltext", "holding")
+      ensure_order!("document_delivery", "excerpts")
       ensure_order!("holding", "document_delivery")
-      ensure_order!("document_delivery", "audio")
-      ensure_order!("audio", "excerpts")
-      ensure_order!("excerpts", "table_of_contents")
-      ensure_order!("table_of_contents", "abstracts")
       # Reorder Sidebar Sections
       ensure_order!("wayfinder", "service_errors")
       ensure_order!("wayfinder", "highlighted_link")
