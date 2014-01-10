@@ -46,7 +46,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut.git
-  revision: 121256cae1bb2d500e8b533755e91ad99e41faea
+  revision: ac3c649b45c47dd1ee4262787b1535adb30faa77
   specs:
     umlaut (3.1.1)
       bootstrap-sass (~> 2.3.0)
@@ -208,7 +208,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.5.2)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
     multi_xml (0.5.5)
     mustache (0.99.4)
     mustache-rails (0.2.3)

@@ -157,6 +157,15 @@ class UmlautController < ApplicationController
     document_delivery[:bg_update] = true
 
     resolve_sections do
+      # Reorder Main Sections
+      ensure_order!("search_inside", "fulltext")
+      ensure_order!("fulltext", "holding")
+      ensure_order!("holding", "document_delivery")
+      ensure_order!("document_delivery", "audio")
+      ensure_order!("audio", "excerpts")
+      ensure_order!("excerpts", "table_of_contents")
+      ensure_order!("table_of_contents", "abstracts")
+      # Reorder Sidebar Sections
       ensure_order!("wayfinder", "service_errors")
       ensure_order!("wayfinder", "highlighted_link")
       ensure_order!("wayfinder", "related_items")
