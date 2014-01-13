@@ -143,6 +143,15 @@ class UmlautController < ApplicationController
       visibility :responses_exist 
     end
 
+    add_resolve_sections! do
+      div_id "bib_tool"
+      html_area :sidebar
+      bg_update false
+      section_title ServiceTypeValue[:bib_tool].display_name_pluralize
+      show_spinner false
+      visibility :responses_exist 
+    end
+
     export_citation = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "export_citation"}]
     export_citation[:section_title] = "Send/Share"
     # export_citation[:bg_update] = false
@@ -177,6 +186,9 @@ class UmlautController < ApplicationController
       ensure_order!("wayfinder", "coins")
       ensure_order!("wayfinder", "help")
       ensure_order!("export_citation", "highlighted_link")
+      ensure_order!("bib_tool", "service_errors")
+      ensure_order!("bib_tool", "highlighted_link")
+      ensure_order!("bib_tool", "related_items")
       ensure_order!("highlighted_link", "related_items")
     end
   end

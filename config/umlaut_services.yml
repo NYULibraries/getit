@@ -262,7 +262,7 @@ NYU:
       display_text: Push to RefWorks
       priority: 4
       service_types:
-          - export_citation
+          - bib_tool
     NYU_Endnote:
       name: EndNoteWeb
       type: OpenURLService
@@ -270,7 +270,7 @@ NYU:
       display_text: Push to EndNote Web
       priority: 4
       service_types:
-          - export_citation
+          - bib_tool
     NYU_EASYBIB:
       name: EasyBib
       type: OpenURLService
@@ -278,7 +278,7 @@ NYU:
       display_text: Push to EasyBib
       priority: 4
       service_types:
-          - export_citation
+          - bib_tool
     NYU_RIS:
       name: RIS
       type: OpenURLService
@@ -286,7 +286,7 @@ NYU:
       display_text: Download as RIS
       priority: 4
       service_types:
-          - export_citation
+          - bib_tool
     NYU_BIBTEX:
       name: BibTeX
       type: OpenURLService
@@ -294,7 +294,7 @@ NYU:
       display_text: Download as BibTeX
       priority: 4
       service_types:
-          - export_citation
+          - bib_tool
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
@@ -425,8 +425,8 @@ NS:
         - 'HIGHWIRE_'
         - 'GALEGROUP_'
       extra_targets_of_interest:
-        ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
-        REFWORKS_EXPORT_TOOL: export_citation
+        ISI_RESEARCHSOFT_EXPORT_TOOL: bib_tool
+        REFWORKS_EXPORT_TOOL: bib_tool
         DOCDEL_ARES_LCL: export_citation
         # ISI_WEB_OF_SCIENCE: export_citation
         BX_RECOMMENDER_SERVICE: help
