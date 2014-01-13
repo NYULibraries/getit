@@ -4,11 +4,6 @@
   float: left;
 }
 
-.umlaut-permalink-content {
-  @extend .label;
-  @extend .label-info;
-  &>a {
-    @extend .label;
-    @extend .label-info;
-  }
+.umlaut-permalink-container {
+  line-height: 30px;
 }
