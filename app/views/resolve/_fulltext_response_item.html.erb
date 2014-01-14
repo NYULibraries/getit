@@ -42,7 +42,7 @@ display_text = (/site.ebrary.com\/lib\/nyulibrary/ =~ view_data[:url]) ? "NYU eb
     end %>
   <% else %>
     <%- # Ordinary href link, with coverage roll up -%>
-    <%= link_to({controller: 'link_router', id: service_response.id}, 
+    <%= link_to({controller: 'link_router', id: service_response.id},
       {id: "svctype_link_#{service_response.id}", target: "_blank"}) do %>
        <%= coverage_summary(view_data) %>
        <%= display_text %>
