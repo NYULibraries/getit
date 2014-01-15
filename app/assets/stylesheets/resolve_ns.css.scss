@@ -19,6 +19,13 @@ body {
   background-image: url(http://library.newschool.edu/img/bg.png);
 }
 
-.header h1 {
-  color: #f05123;
+.header, nav {
+  background-color: #f05123;
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.header h1, .login, .logout {
+  color: white;
 }
