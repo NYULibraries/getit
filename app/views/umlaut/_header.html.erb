@@ -1,0 +1,7 @@
+<header class="header"><h1><%= current_primary_institution.name %></h1></header>
+<nav id="nav1">
+  <%= render_umlaut_permalink %>
+  <ul class="nyu-login">
+    <li><%= login(:return_url => url_for_request(@user_request), "umlaut.institution" => institution.code ) %></li>
+  </ul>
+</nav>

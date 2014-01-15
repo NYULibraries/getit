@@ -12,3 +12,10 @@
 @import "umlaut";
 @import "nyulibraries/misc";
 @import "resolve/common";
+@import "resolve/permalink";
+
+.header {
+  h1 {
+    color: #560d06;
+  }
+}

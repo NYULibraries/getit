@@ -1,3 +1,8 @@
 wayfinder:
   id: 100000
   display_name: Return Whence You Came
+
+bib_tool:
+  id: 100001
+  display_name: Bibliographic Tool
+  display_name_plural: Bibliographic Tools

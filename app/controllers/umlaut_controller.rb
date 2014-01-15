@@ -143,10 +143,22 @@ class UmlautController < ApplicationController
       visibility :responses_exist 
     end
 
+    add_resolve_sections! do
+      div_id "bib_tool"
+      html_area :sidebar
+      bg_update false
+      section_title ServiceTypeValue[:bib_tool].display_name_pluralize
+      show_spinner false
+      visibility :responses_exist 
+    end
+
     export_citation = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "export_citation"}]
     export_citation[:section_title] = "Send/Share"
     # export_citation[:bg_update] = false
     # export_citation[:visibility] = :complete_with_responses
+
+    help = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "help"}]
+    help[:section_title] = "Questions"
 
     document_delivery = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "document_delivery"}]
     document_delivery[:section_title] = "Get a copy from Interlibrary Loan (ILL)"
@@ -154,6 +166,19 @@ class UmlautController < ApplicationController
     document_delivery[:bg_update] = true
 
     resolve_sections do
+      # Original order is:
+      #   cover_image, fulltext, search_inside, excerpts, audio,
+      #     holding, document_delivery, table_of_contents, abstract
+      # Desired order is:
+      #   cover_image, search_inside, fulltext, holding, document_delivery,
+      #     audio, excerpts, table_of_contents, abstract
+      # A little awkard below since ensure_order! just switches positions
+      # if necessary
+      # Reorder Main Sections
+      ensure_order!("search_inside", "fulltext")
+      ensure_order!("document_delivery", "excerpts")
+      ensure_order!("holding", "document_delivery")
+      # Reorder Sidebar Sections
       ensure_order!("wayfinder", "service_errors")
       ensure_order!("wayfinder", "highlighted_link")
       ensure_order!("wayfinder", "related_items")
@@ -161,6 +186,9 @@ class UmlautController < ApplicationController
       ensure_order!("wayfinder", "coins")
       ensure_order!("wayfinder", "help")
       ensure_order!("export_citation", "highlighted_link")
+      ensure_order!("bib_tool", "service_errors")
+      ensure_order!("bib_tool", "highlighted_link")
+      ensure_order!("bib_tool", "related_items")
       ensure_order!("highlighted_link", "related_items")
     end
   end

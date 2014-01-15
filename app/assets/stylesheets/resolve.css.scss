@@ -10,3 +10,17 @@
 @import "umlaut";
 @import "nyulibraries/misc";
 @import "resolve/common";
+@import "resolve/permalink";
+
+.help-text-icon {
+  display: none;
+}
+
+.header, nav {
+  background-color: #57068c;
+  // background-color: #a4121f;
+  h1, .login, .logout {
+    color: white;
+  }
+}
+
