@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'pry'
 class UserSessionTest < ActiveSupport::TestCase
   setup :activate_authlogic
 
