@@ -1,6 +1,19 @@
 require 'test_helper'
+require 'pry'
 class UserSessionTest < ActiveSupport::TestCase
   setup :activate_authlogic
+
+  test "expiration date" do
+    user = users(:uid)
+    VCR.use_cassette('user session additional attributes') do
+      user_session = UserSession.create(user)
+      user.refreshed_at = Time.now
+      user.expiration_date = user_session.expiration_date
+      assert(!user.expired?, "User is expired when created")
+      user.refreshed_at = DateTime.now - 1.day
+      assert(user.expired?, "User is not expired after 1 day")
+    end
+  end
 
   test "user session additional attributes" do
     user = users(:uid)
