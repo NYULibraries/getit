@@ -52,24 +52,6 @@ GIT
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
 
-GIT
-  remote: git://github.com/team-umlaut/umlaut.git
-  revision: ac3c649b45c47dd1ee4262787b1535adb30faa77
-  specs:
-    umlaut (3.1.1)
-      bootstrap-sass (~> 2.3.0)
-      confstruct (~> 0.2)
-      ensure_valid_encoding
-      htmlentities
-      isbn (~> 2.0.9)
-      jquery-rails
-      marc (>= 0.5.0, < 1.1)
-      multi_json
-      nokogiri (>= 1.5.3)
-      openurl (>= 0.4.3)
-      rails (~> 3.2.12)
-      sass-rails (~> 3.2.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -147,7 +129,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
-    confstruct (0.2.5)
+    confstruct (0.2.7)
     coveralls (0.7.0)
       multi_json (~> 1.3)
       rest-client
@@ -286,7 +268,7 @@ GEM
     rvm-capistrano (1.5.1)
       capistrano (~> 2.15.4)
     safe_yaml (1.0.1)
-    sass (3.2.14)
+    sass (3.3.2)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -327,10 +309,23 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.38)
+    tzinfo (0.3.39)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    umlaut (3.2.0)
+      bootstrap-sass (~> 2.3.0)
+      confstruct (~> 0.2)
+      ensure_valid_encoding
+      htmlentities
+      isbn (~> 2.0.9)
+      jquery-rails
+      marc (>= 0.5.0, < 1.1)
+      multi_json
+      nokogiri (>= 1.5.3)
+      openurl (>= 0.4.3)
+      rails (~> 3.2.12)
+      sass-rails (~> 3.2.6)
     umlaut-primo (0.1.2)
       exlibris-primo (>= 1.0.8)
       require_all (>= 1.2.1)
@@ -372,7 +367,7 @@ DEPENDENCIES
   sunspot_rails (~> 2.0.0)
   therubyracer (~> 0.11.1)
   uglifier (~> 2.1.0)
-  umlaut!
+  umlaut (~> 3.2)
   umlaut-primo (~> 0.1.2)
   vcr (~> 2.6.0)
   webmock (~> 1.15.0)
