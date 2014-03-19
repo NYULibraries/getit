@@ -21,7 +21,7 @@ default:
       institution: NYU
       holding_search_institution: NYU
       holding_search_text: Search for this title in BobCat.
-      suppress_holdings: [ !ruby/regexp '/\$\$LBWEB/', !ruby/regexp '/\$\$LNWEB/', !ruby/regexp '/\$\$LTWEB/', !ruby/regexp '/\$\$LWEB/', !ruby/regexp '/\$\$SWEB/', !ruby/regexp '/\$\$ONSMARCIT/', !ruby/regexp '/\$\$Onyumarcit/', !ruby/regexp '/\$\$1Restricted Internet Resources/' ]
+      suppress_holdings: [ !ruby/regexp '/\$\$LBWEB/', !ruby/regexp '/\$\$LNWEB/', !ruby/regexp '/\$\$LTWEB/', !ruby/regexp '/\$\$SWEB/', !ruby/regexp '/\$\$LWEB/', !ruby/regexp '/\$\$ONSMARCIT/', !ruby/regexp '/\$\$Onyumarcit/', !ruby/regexp '/\$\$1Restricted Internet Resources/' ]
       ez_proxy: !ruby/regexp '/https\:\/\/ezproxy\.library\.nyu\.edu\/login\?url=/'
       service_types:
         - primo_source
