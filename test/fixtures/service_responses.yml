@@ -64,7 +64,7 @@ nyu_aleph_available_book:
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
       :status_code: available
       :status: Available
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: deferred
     :collection_str: NYU Bobst Main Collection
     :coverage_str: ''
@@ -121,7 +121,7 @@ nyu_aleph_journal:
       :rest_api_id: NYU01002895625
       :illiad_url: http://ill.library.nyu.edu
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
-    :request_link_supports_ajax_call: false
+    :from_aleph: false
     :requestability: no
     :collection_str: NYU Bobst Main Collection
     :coverage_str: ! 'Available in Main Collection: VOLUMES: 1-89 (YEARS: 1915-2006)'
@@ -194,7 +194,7 @@ nyu_aleph_offsite_book:
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
       :status: Offsite Available
       :status_code: offsite
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: 'yes'
     :collection_str: New School Fogelman Library Main Collection
     :coverage_str: ''
@@ -267,7 +267,7 @@ nyu_aleph_recall_book:
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
       :status: Due:01/31/13
       :status_code: checked_out
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: 'yes'
     :collection_str: NYU Courant Main Collection
     :coverage_str: ''
@@ -341,7 +341,7 @@ nyu_aleph_in_processing_book:
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
       :status: In Processing
       :status_code: processing
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: 'yes'
     :collection_str: NYU Abu Dhabi Library (UAE) Main Collection
     :coverage_str: ''
@@ -412,7 +412,7 @@ nyu_aleph_item_bsn_mismatch:
       :rest_api_id: NYU01003079903
       :illiad_url: http://ill.library.nyu.edu
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: deferred
     :collection_str: NYU Bobst Main Collection
     :coverage_str: ''
@@ -536,7 +536,7 @@ nyu_primo_naked_statistics:
       :rest_api_id: NYU01003710159
       :illiad_url: http://ill.library.nyu.edu
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: deferred
     :collection_str: NYU Bobst Main Collection
     :coverage_str: ''
@@ -608,7 +608,7 @@ nyu_aleph_ill_holding:
       :rest_api_id: NYU01003710159
       :illiad_url: http://ill.library.nyu.edu
       :aleph_rest_url: http://aleph.library.nyu.edu:1891/rest-dlf
-    :request_link_supports_ajax_call: true
+    :from_aleph: true
     :requestability: deferred
     :collection_str: NYU Bobst Main Collection
     :coverage_str: ''
