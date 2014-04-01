@@ -685,4 +685,112 @@ http_interactions:
         mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
     http_version: 
   recorded_at: Tue, 01 Apr 2014 20:34:29 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Hetkowski%22%20and%20local.OCLCNumber%20=%20%22641911709%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.FamilyName+%3D+%22Hetkowski%22+and+local.OCLCNumber+%3D+%22641911709%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '8067'
+      Date:
+      - Tue, 01 Apr 2014 20:40:28 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
+        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Tue
+        Dec 17 16:55:54 2013 UTC</creationtime><pnkey>lccn-n2009214430</pnkey><audLevel><min><level>0.47</level><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais /</title></min><avg><level>0.89</level></avg><max><level>1.00</level><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o
+        /</title></max></audLevel><authorityInfo><viafid>96776987</viafid><lccn>n
+        2009214430</lccn><arn>8214245</arn></authorityInfo><associatedNames><name
+        count=\"4\"><normName>lccn-n2009214446</normName><rawName><suba>Nascimento,
+        Anto&#x302;nio Dias</suba></rawName></name><name count=\"2\"><normName>lccn-n2007214789</normName><rawName><suba>Alves,
+        Lynn</suba></rawName></name><name count=\"2\"><normName>lccn-n2006219031</normName><rawName><suba>Fialho,
+        Nadia Hage</suba></rawName></name><name count=\"1\"><normName>lccn-n2009214431</normName><rawName><suba>Becker,
+        Adeline</suba></rawName></name><name count=\"1\"><normName>np-gewehr, rodrigo
+        barros</normName><rawName><suba>Gewehr, Rodrigo Barros</suba></rawName></name><name
+        count=\"1\"><normName>lccn-n2009214429</normName><rawName><suba>Lima Jr.,
+        Arnaud Soares de</suba><subq>(Lima Junior)</subq></rawName></name></associatedNames><nameInfo
+        type=\"personal\"><rawName><suba>Hetkowski, Ta&#x302;nia Maria</suba></rawName><languages
+        count=\"1\"><lang code=\"por\" count=\"6\"/></languages><dates><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2001</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2006</date><date byCount=\"2\"
+        byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">2007</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2008</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2012</date></dates><totalHoldings>16</totalHoldings><workCount>6</workCount><recordCount>6</recordCount><ddc
+        ident=\"370.9/81:22\">370.9/81</ddc><lcc ident=\"HN290.B3\">HN290.B3</lcc></nameInfo><by><citation><holdings>8</holdings><numEditions>1</numEditions><oclcnum>ocn641911709</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2008</date><dates
+        different=\"1\" first=\"2008\" last=\"2008\"/><audLevel>0.98</audLevel><title>Poli&#x301;ticas
+        pu&#x301;blicas &amp; inclusa&#x303;o digital</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn300308092</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn463974176</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Memo&#x301;ria
+        e formac&#x327;a&#x303;o de professores</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn860914670</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2012</date><dates
+        different=\"1\" first=\"2012\" last=\"2012\"/><audLevel>0.47</audLevel><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais</title></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn817151410</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2001</date><dates
+        different=\"1\" first=\"2001\" last=\"2001\"/><audLevel>0.47</audLevel><creator
+        ident=\"uncontrolled\">Gewehr, Rodrigo Barros</creator><title>Sexo e sexualidade
+        no mundo moderno</title><summary>Visa o presente ensaio a entender alguns
+        deslocamentos de sentido gerados pelo discurso social. Nosso enfoque partira&#x301;
+        de uma ra&#x301;pida visualizac&#x327;a&#x303;o de como a linguagem contribui
+        para que tenhamos uma mudanc&#x327;a na abordagem de determinados temas. A
+        partir deste ponto, trataremos de buscar entender a distinc&#x327;a&#x303;o
+        entre sexo e sexualidade e as particularidades existentes em cada um destes
+        significantes. Nosso objetivo e&#x301; entender as vicissitudes da sexualidade
+        no mundo contempora&#x302;neo, os lucros e prejui&#x301;zos do uso que se
+        faz do corpo, do sexo e da sexualidade</summary></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn473139015</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2006</date><dates
+        different=\"1\" first=\"2006\" last=\"2006\"/><audLevel>1.00</audLevel><title>Educac&#x327;a&#x303;o
+        e contemporaneidade : desafios para a pesquisa e a po&#x301;s-graduac&#x327;a&#x303;o</title></citation></by><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Tue
+        Dec 17 15:15:07 EST 2013</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>2799</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &amp;#34;Hetkowski&amp;#34; and local.OCLCNumber = &amp;#34;641911709&amp;#34;</query><xQuery><ns3:triple
+        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
+        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Hetkowski</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">641911709</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:40:29 GMT
 recorded_with: VCR 2.6.0

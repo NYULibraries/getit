@@ -470,4 +470,40 @@ http_interactions:
       string: ! '{"oclc:641911709":{"records":[],"items":[]}}'
     http_version: 
   recorded_at: Tue, 01 Apr 2014 20:31:27 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22pol%20ticas%20p%20blicas%20and%20amp%22%20AND%20creator:(hetkowski)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 01 Apr 2014 20:40:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":6,"params":{"json.wrf":"","qin":"title:\"pol
+        ticas p blicas and amp\" AND creator:(hetkowski) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"pol
+        ticas p blicas and amp\" AND creator:(hetkowski ) AND ( mediatype:texts OR
+        mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:40:29 GMT
 recorded_with: VCR 2.6.0
