@@ -6,9 +6,9 @@ class UserSession < Authlogic::Session::Base
   calling_system "getit"
   institution_param_key "umlaut.institution"
 
-  # Refresh users every day in production.
+  # Refresh users every hour in development.
   def expiration_date
-    1.day.ago
+    1.hour.ago
   end
 
   # (Re-)Set verification and Aleph permissions to user attributes

@@ -3,7 +3,7 @@
 # class "ajax_window" for unobtrusive JS. 
 -%>
 <% view_data = service_response.view_data %>
-<% if current_user and view_data[:request_link_supports_ajax_call] %>
+<% if current_user and view_data[:from_aleph] %>
   <%- # AJAX link, needs logged in user -%>
   <%= link_to("Request", new_holding_request_url(service_response.id), 
     target: "_blank", class: "btn btn-primary ajax_window") %>
