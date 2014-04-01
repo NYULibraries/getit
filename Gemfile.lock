@@ -21,8 +21,8 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: eddae33cf2fc75c18b11dd629c267f2ff9bfcf10
-  tag: v2.0.6
+  revision: cefc7195e0d86abcd1af34f234b86f1a7de2e7cb
+  tag: v2.0.7
   specs:
     nyulibraries-assets (2.0.1)
       bootstrap-sass (>= 2.2.0, < 2.3.1.1)
@@ -115,10 +115,10 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.3.6)
-    compass (0.12.3)
+    compass (0.12.4)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
-      sass (= 3.2.14)
+      sass (~> 3.2.17)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
     confstruct (0.2.7)
@@ -263,7 +263,7 @@ GEM
     rvm-capistrano (1.5.1)
       capistrano (~> 2.15.4)
     safe_yaml (1.0.1)
-    sass (3.2.14)
+    sass (3.2.18)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
