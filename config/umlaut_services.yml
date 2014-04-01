@@ -86,7 +86,7 @@ default:
       base_url: <%= Exlibris::Primo.config.base_url %>
       vid: NYU
       source_attributes:
-        - request_link_supports_ajax_call
+        - from_aleph
         - requestability
 
     # Priority b: Background
