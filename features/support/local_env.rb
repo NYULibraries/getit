@@ -15,7 +15,8 @@ Dir[Rails.root.join("features/support/helpers/**/*.rb")].each do |helper|
 end
 
 # Configure Capybara
+require 'capybara/poltergeist'
 Capybara.configure do |config|
   # config.app_host = 'https://dev.login.library.nyu.edu'
-  config.default_driver = :selenium
+  config.default_driver = :poltergeist
 end
