@@ -19,6 +19,8 @@ group :development do
   gem "progress_bar", "~> 1.0.0"
   gem "better_errors", "~> 1.0.1"
   gem "binding_of_caller", "~> 0.7.2"
+  # Use factory girl for creating models
+  gem "factory_girl_rails", "~> 4.4.0"
   gem "debugger", "~> 1.6.2", platform: :mri
   gem 'pry'
 end
