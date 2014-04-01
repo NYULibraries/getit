@@ -22,8 +22,8 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # Include Factory Girl convenience methods
+  config.include FactoryGirl::Syntax::Methods
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -37,6 +37,9 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.before(:suite) do
+    # Run factory girl lint before the suite
+    FactoryGirl.lint
+
     # Startout by trucating all the tables
     DatabaseCleaner.clean_with :truncation
     # Then use transactions to roll back other changes
