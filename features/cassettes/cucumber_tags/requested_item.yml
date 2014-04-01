@@ -1,0 +1,473 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-04-01T16:28:22-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003337878&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Apr 2014 20:28:22 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-04-01T16:28:22-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;6731534&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003337878&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003337878&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003337878&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s2B59FC44-B9DC-11E3-B06A-217EFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003337878&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003337878%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003337878+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-04-01T16%253A28%253A22-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph003337878%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:22 GMT
+- request:
+    method: post
+    uri: http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph003337878</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 01 Apr 2014 20:28:22 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;003337878&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph003337878&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01003337878&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;Pol&#xED;ticas p&#xFA;blicas &amp;amp; inclus&#xE3;o
+        digital&lt;/title&gt;\n                &lt;contributor&gt;T&#xE2;nia Maria
+        Hetkowski&lt;/contributor&gt;\n                &lt;publisher&gt;Salvador :
+        EDUFBA&lt;/publisher&gt;\n                &lt;creationdate&gt;2008&lt;/creationdate&gt;\n
+        \               &lt;format&gt;336 p. : ill. ; 25 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cisbn$$V9788523205591
+        (pbk.); $$Cisbn$$V8523205594 (pbk.)&lt;/identifier&gt;\n                &lt;subject&gt;Digital
+        divide -- Brazil -- Bahia (State); Digital divide -- Government policy --
+        Brazil -- Bahia (State); Information technology -- Social aspects -- Brazil
+        -- Bahia (State)&lt;/subject&gt;\n                &lt;language&gt;por&lt;/language&gt;\n
+        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main
+        Collection$$2(HN290.B3 P65 2008 )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph003337878&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;unavailable&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
+        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;org.,
+        T&#xE2;nia M. Hetkowski.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;T&#xE2;nia
+        Maria  Hetkowski&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Hetkowski,
+        T&lt;/creatorcontrib&gt;\n                &lt;title&gt;Pol&#xED;ticas p&#xFA;blicas
+        &amp;amp; inclus&#xE3;o digital /&lt;/title&gt;\n                &lt;subject&gt;Digital
+        divide  Brazil Bahia (State)&lt;/subject&gt;\n                &lt;subject&gt;Digital
+        divide  Government policy Brazil Bahia (State)&lt;/subject&gt;\n                &lt;subject&gt;Information
+        technology  Social aspects Brazil Bahia (State)&lt;/subject&gt;\n                &lt;subject&gt;GDD
+        (Global digital divide)&lt;/subject&gt;\n                &lt;subject&gt;Divide,
+        Digital&lt;/subject&gt;\n                &lt;subject&gt;Global digital divide&lt;/subject&gt;\n
+        \               &lt;subject&gt;IT (Information technology)&lt;/subject&gt;\n
+        \               &lt;general&gt;EDUFBA,&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph003337878&lt;/recordid&gt;\n                &lt;isbn&gt;9788523205591&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;8523205594&lt;/isbn&gt;\n                &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;2008&lt;/creationdate&gt;\n                &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n                &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;BOBST&lt;/scope&gt;\n                &lt;scope&gt;BOBST
+        Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;alttitle&gt;Pol&#xED;ticas
+        p&#xFA;blicas e inclus&#xE3;o digital&lt;/alttitle&gt;\n                &lt;lsr01&gt;HN290.B3
+        P65 2008&lt;/lsr01&gt;\n                &lt;lsr01&gt;HN290 .B3 P65 2008&lt;/lsr01&gt;\n
+        \               &lt;lsr02&gt;EDUFBA,&lt;/lsr02&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;Pol&#xED;ticas p&#xFA;blicas
+        &amp;amp; inclus&#xE3;o digital /&lt;/title&gt;\n                &lt;creationdate&gt;2008&lt;/creationdate&gt;\n
+        \               &lt;author&gt;Hetkowski, T&#xE2;nia Maria.&lt;/author&gt;\n
+        \               &lt;lso01&gt;2008&lt;/lso01&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;language&gt;por&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2008&lt;/creationdate&gt;\n                &lt;topic&gt;Digital
+        divide&#x2013;Brazil&#x2013;Bahia (State)&lt;/topic&gt;\n                &lt;topic&gt;Digital
+        divide&#x2013;Government policy&#x2013;Brazil&#x2013;Bahia (State)&lt;/topic&gt;\n
+        \               &lt;topic&gt;Information technology&#x2013;Social aspects&#x2013;Brazil&#x2013;Bahia
+        (State)&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Hetkowski, T&lt;/creatorcontrib&gt;\n
+        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;lfc01&gt;Main
+        Collection&lt;/lfc01&gt;\n                &lt;frbrgroupid&gt;96933186&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c2&gt;9788523205591;8523205594&lt;/c2&gt;\n
+        \               &lt;c3&gt;politicaspublicasincsaodigital&lt;/c3&gt;\n                &lt;c4&gt;2008&lt;/c4&gt;\n
+        \               &lt;f3&gt;9788523205591;8523205594&lt;/f3&gt;\n                &lt;f5&gt;politicaspublicasinclusaodigital&lt;/f5&gt;\n
+        \               &lt;f6&gt;2008&lt;/f6&gt;\n                &lt;f7&gt;politicas
+        publicas inclusao digital&lt;/f7&gt;\n                &lt;f8&gt;bl&lt;/f8&gt;\n
+        \               &lt;f9&gt;336 p. :&lt;/f9&gt;\n                &lt;f10&gt;edufba&lt;/f10&gt;\n
+        \               &lt;f20&gt;(OCoLC)641911709&lt;/f20&gt;\n              &lt;/dedup&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Khetkowski
+        tania maria$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookpoliticas publicas
+        &amp;amp; inclusao digital$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n              &lt;delivery&gt;\n
+        \               &lt;institution&gt;NYU&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
+        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;HN290.B3&lt;/classificationlcc&gt;\n
+        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Hetkowski&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;T&#xE2;nia Maria&lt;/aufirst&gt;\n                &lt;addau&gt;Hetkowski,
+        T&#xE2;nia Maria&lt;/addau&gt;\n                &lt;btitle&gt;Pol&#xED;ticas
+        p&#xFA;blicas &amp;amp; inclus&#xE3;o digital&lt;/btitle&gt;\n                &lt;addtitle&gt;Pol&#xED;ticas
+        p&#xFA;blicas e inclus&#xE3;o digital&lt;/addtitle&gt;\n                &lt;date&gt;2008&lt;/date&gt;\n
+        \               &lt;risdate&gt;2008.&lt;/risdate&gt;\n                &lt;isbn&gt;9788523205591&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;8523205594&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;cop&gt;Salvador&lt;/cop&gt;\n                &lt;pub&gt;EDUFBA&lt;/pub&gt;\n
+        \               &lt;oclcid&gt;641911709&lt;/oclcid&gt;\n                &lt;lad01&gt;BOBST&lt;/lad01&gt;\n
+        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
+        \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
+        \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:22 GMT
+- request:
+    method: get
+    uri: http://alephstage.library.nyu.edu:1891/rest-dlf/record/NYU01003337878/items?view=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 01 Apr 2014 20:28:23 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbiA9ICIxLjAiIGVuY29kaW5nID0gIlVURi04Ij8+PGdl
+        dC1pdGVtLWxpc3Q+PHJlcGx5LXRleHQ+b2s8L3JlcGx5LXRleHQ+PHJlcGx5
+        LWNvZGU+MDAwMDwvcmVwbHktY29kZT48aXRlbXM+PGl0ZW0gaHJlZj0iaHR0
+        cDovL2FsZXBoc3RhZ2UubGlicmFyeS5ueXUuZWR1OjE4OTEvcmVzdC1kbGYv
+        cmVjb3JkL05ZVTAxMDAzMzM3ODc4L2l0ZW1zL05ZVTUwMDAzMzM3ODc4MDAw
+        MDEwIj48ejMwLXN1Yi1saWJyYXJ5LWNvZGU+Qk9CU1Q8L3ozMC1zdWItbGli
+        cmFyeS1jb2RlPjx6MzAtaXRlbS1wcm9jZXNzLXN0YXR1cy1jb2RlPkRQPC96
+        MzAtaXRlbS1wcm9jZXNzLXN0YXR1cy1jb2RlPjx6MzAtaXRlbS1zdGF0dXMt
+        Y29kZT4wMTwvejMwLWl0ZW0tc3RhdHVzLWNvZGU+PHozMC1jb2xsZWN0aW9u
+        LWNvZGU+TUFJTjwvejMwLWNvbGxlY3Rpb24tY29kZT48cXVldWU+MSByZXF1
+        ZXN0KHMpIG9mIDEgaXRlbXMuPC9xdWV1ZT48ejMwPjx0cmFuc2xhdGUtY2hh
+        bmdlLWFjdGl2ZS1saWJyYXJ5Pk5ZVTUwPC90cmFuc2xhdGUtY2hhbmdlLWFj
+        dGl2ZS1saWJyYXJ5Pjx6MzAtZG9jLW51bWJlcj4wMDMzMzc4Nzg8L3ozMC1k
+        b2MtbnVtYmVyPjx6MzAtaXRlbS1zZXF1ZW5jZT4gICAgMS4wPC96MzAtaXRl
+        bS1zZXF1ZW5jZT48ejMwLWJhcmNvZGU+MzExNDIwNTA5OTUwNDU8L3ozMC1i
+        YXJjb2RlPjx6MzAtc3ViLWxpYnJhcnk+TllVIEJvYnN0PC96MzAtc3ViLWxp
+        YnJhcnk+PHozMC1tYXRlcmlhbD5Cb29rczwvejMwLW1hdGVyaWFsPjx6MzAt
+        aXRlbS1zdGF0dXM+T2Zmc2l0ZSBBdmFpbGFibGU8L3ozMC1pdGVtLXN0YXR1
+        cz48ejMwLW9wZW4tZGF0ZT4yMDEwMDYxMTwvejMwLW9wZW4tZGF0ZT48ejMw
+        LXVwZGF0ZS1kYXRlPjIwMTAxMDA1PC96MzAtdXBkYXRlLWRhdGU+PHozMC1j
+        YXRhbG9nZXI+SVJJWkFSUlk8L3ozMC1jYXRhbG9nZXI+PHozMC1kYXRlLWxh
+        c3QtcmV0dXJuPjAwMDAwMDAwPC96MzAtZGF0ZS1sYXN0LXJldHVybj48ejMw
+        LWhvdXItbGFzdC1yZXR1cm4+MDAwMDwvejMwLWhvdXItbGFzdC1yZXR1cm4+
+        PHozMC1pcC1sYXN0LXJldHVybj48L3ozMC1pcC1sYXN0LXJldHVybj48ejMw
+        LW5vLWxvYW5zPjAwMDwvejMwLW5vLWxvYW5zPjx6MzAtYWxwaGE+TDwvejMw
+        LWFscGhhPjx6MzAtY29sbGVjdGlvbj5NYWluIENvbGxlY3Rpb248L3ozMC1j
+        b2xsZWN0aW9uPjx6MzAtY2FsbC1uby10eXBlPjA8L3ozMC1jYWxsLW5vLXR5
+        cGU+PHozMC1jYWxsLW5vPkhOMjkwLkIzIFA2NSAyMDA4PC96MzAtY2FsbC1u
+        bz48ejMwLWNhbGwtbm8ta2V5PjAgaG4mcXVvdDsyOTAgYjMgcDY1IDIwMDg8
+        L3ozMC1jYWxsLW5vLWtleT48ejMwLWNhbGwtbm8tMi10eXBlPjwvejMwLWNh
+        bGwtbm8tMi10eXBlPjx6MzAtY2FsbC1uby0yPjwvejMwLWNhbGwtbm8tMj48
+        ejMwLWNhbGwtbm8tMi1rZXk+PC96MzAtY2FsbC1uby0yLWtleT48ejMwLWRl
+        c2NyaXB0aW9uPjwvejMwLWRlc2NyaXB0aW9uPjx6MzAtbm90ZS1vcGFjPjwv
+        ejMwLW5vdGUtb3BhYz48ejMwLW5vdGUtY2lyY3VsYXRpb24+PC96MzAtbm90
+        ZS1jaXJjdWxhdGlvbj48ejMwLW5vdGUtaW50ZXJuYWw+PC96MzAtbm90ZS1p
+        bnRlcm5hbD48ejMwLW9yZGVyLW51bWJlcj4yMDEwMjg3MjE8L3ozMC1vcmRl
+        ci1udW1iZXI+PHozMC1pbnZlbnRvcnktbnVtYmVyPjwvejMwLWludmVudG9y
+        eS1udW1iZXI+PHozMC1pbnZlbnRvcnktbnVtYmVyLWRhdGU+MDAwMDAwMDA8
+        L3ozMC1pbnZlbnRvcnktbnVtYmVyLWRhdGU+PHozMC1sYXN0LXNoZWxmLXJl
+        cG9ydC1kYXRlPjAwMDAwMDAwPC96MzAtbGFzdC1zaGVsZi1yZXBvcnQtZGF0
+        ZT48ejMwLXByaWNlPjI5LjQxPC96MzAtcHJpY2U+PHozMC1zaGVsZi1yZXBv
+        cnQtbnVtYmVyPjwvejMwLXNoZWxmLXJlcG9ydC1udW1iZXI+PHozMC1vbi1z
+        aGVsZi1kYXRlPjAwMDAwMDAwPC96MzAtb24tc2hlbGYtZGF0ZT48ejMwLW9u
+        LXNoZWxmLXNlcT4wMDAwMDA8L3ozMC1vbi1zaGVsZi1zZXE+PHozMC1kb2Mt
+        bnVtYmVyLTI+MDAwMDAwMDAwPC96MzAtZG9jLW51bWJlci0yPjx6MzAtc2No
+        ZWR1bGUtc2VxdWVuY2UtMj4wMDAwMDwvejMwLXNjaGVkdWxlLXNlcXVlbmNl
+        LTI+PHozMC1jb3B5LXNlcXVlbmNlLTI+MDAwMDA8L3ozMC1jb3B5LXNlcXVl
+        bmNlLTI+PHozMC12ZW5kb3ItY29kZT48L3ozMC12ZW5kb3ItY29kZT48ejMw
+        LWludm9pY2UtbnVtYmVyPjwvejMwLWludm9pY2UtbnVtYmVyPjx6MzAtbGlu
+        ZS1udW1iZXI+MDAwMDA8L3ozMC1saW5lLW51bWJlcj48ejMwLXBhZ2VzPjwv
+        ejMwLXBhZ2VzPjx6MzAtaXNzdWUtZGF0ZT4wMDAwMDAwMDwvejMwLWlzc3Vl
+        LWRhdGU+PHozMC1leHBlY3RlZC1hcnJpdmFsLWRhdGU+MDAwMDAwMDA8L3oz
+        MC1leHBlY3RlZC1hcnJpdmFsLWRhdGU+PHozMC1hcnJpdmFsLWRhdGU+MDAw
+        MDAwMDA8L3ozMC1hcnJpdmFsLWRhdGU+PHozMC1pdGVtLXN0YXRpc3RpYz48
+        L3ozMC1pdGVtLXN0YXRpc3RpYz48ejMwLWl0ZW0tcHJvY2Vzcy1zdGF0dXM+
+        RGVwb3NpdG9yeTwvejMwLWl0ZW0tcHJvY2Vzcy1zdGF0dXM+PHozMC1jb3B5
+        LWlkPjwvejMwLWNvcHktaWQ+PHozMC1ob2wtZG9jLW51bWJlcj4wMDM5NTEx
+        OTU8L3ozMC1ob2wtZG9jLW51bWJlcj48ejMwLXRlbXAtbG9jYXRpb24+Tm88
+        L3ozMC10ZW1wLWxvY2F0aW9uPjx6MzAtZW51bWVyYXRpb24tYT48L3ozMC1l
+        bnVtZXJhdGlvbi1hPjx6MzAtZW51bWVyYXRpb24tYj48L3ozMC1lbnVtZXJh
+        dGlvbi1iPjx6MzAtZW51bWVyYXRpb24tYz48L3ozMC1lbnVtZXJhdGlvbi1j
+        Pjx6MzAtZW51bWVyYXRpb24tZD48L3ozMC1lbnVtZXJhdGlvbi1kPjx6MzAt
+        ZW51bWVyYXRpb24tZT48L3ozMC1lbnVtZXJhdGlvbi1lPjx6MzAtZW51bWVy
+        YXRpb24tZj48L3ozMC1lbnVtZXJhdGlvbi1mPjx6MzAtZW51bWVyYXRpb24t
+        Zz48L3ozMC1lbnVtZXJhdGlvbi1nPjx6MzAtZW51bWVyYXRpb24taD48L3oz
+        MC1lbnVtZXJhdGlvbi1oPjx6MzAtY2hyb25vbG9naWNhbC1pPjwvejMwLWNo
+        cm9ub2xvZ2ljYWwtaT48ejMwLWNocm9ub2xvZ2ljYWwtaj48L3ozMC1jaHJv
+        bm9sb2dpY2FsLWo+PHozMC1jaHJvbm9sb2dpY2FsLWs+PC96MzAtY2hyb25v
+        bG9naWNhbC1rPjx6MzAtY2hyb25vbG9naWNhbC1sPjwvejMwLWNocm9ub2xv
+        Z2ljYWwtbD48ejMwLWNocm9ub2xvZ2ljYWwtbT48L3ozMC1jaHJvbm9sb2dp
+        Y2FsLW0+PHozMC1zdXBwLWluZGV4LW8+PC96MzAtc3VwcC1pbmRleC1vPjx6
+        MzAtODV4LXR5cGU+PC96MzAtODV4LXR5cGU+PHozMC1kZXBvc2l0b3J5LWlk
+        Pk5ZVVJTPC96MzAtZGVwb3NpdG9yeS1pZD48ejMwLWxpbmtpbmctbnVtYmVy
+        PjAwMDAwMDAwMDwvejMwLWxpbmtpbmctbnVtYmVyPjx6MzAtZ2FwLWluZGlj
+        YXRvcj48L3ozMC1nYXAtaW5kaWNhdG9yPjx6MzAtbWFpbnRlbmFuY2UtY291
+        bnQ+MDAwPC96MzAtbWFpbnRlbmFuY2UtY291bnQ+PHozMC1wcm9jZXNzLXN0
+        YXR1cy1kYXRlPjIwMTAxMDA1PC96MzAtcHJvY2Vzcy1zdGF0dXMtZGF0ZT48
+        L3ozMD48ejEzPjx0cmFuc2xhdGUtY2hhbmdlLWFjdGl2ZS1saWJyYXJ5Pk5Z
+        VTUwPC90cmFuc2xhdGUtY2hhbmdlLWFjdGl2ZS1saWJyYXJ5Pjx6MTMtZG9j
+        LW51bWJlcj4wMDMzMzc4Nzg8L3oxMy1kb2MtbnVtYmVyPjx6MTMteWVhcj4y
+        MDA4PC96MTMteWVhcj48ejEzLW9wZW4tZGF0ZT4yMDEwMDYxMTwvejEzLW9w
+        ZW4tZGF0ZT48ejEzLXVwZGF0ZS1kYXRlPjIwMTAwOTIyPC96MTMtdXBkYXRl
+        LWRhdGU+PHoxMy1jYWxsLW5vLWtleT48L3oxMy1jYWxsLW5vLWtleT48ejEz
+        LWNhbGwtbm8tY29kZT5MT0MwPC96MTMtY2FsbC1uby1jb2RlPjx6MTMtY2Fs
+        bC1ubz5ITjI5MC5CMzwvejEzLWNhbGwtbm8+PHoxMy1hdXRob3ItY29kZT48
+        L3oxMy1hdXRob3ItY29kZT48ejEzLWF1dGhvcj48L3oxMy1hdXRob3I+PHox
+        My10aXRsZS1jb2RlPjI0NTAwPC96MTMtdGl0bGUtY29kZT48ejEzLXRpdGxl
+        PlBvbMOtdGljYXMgcMO6YmxpY2FzICZhbXA7IGluY2x1c8OjbyBkaWdpdGFs
+        IC88L3oxMy10aXRsZT48ejEzLWltcHJpbnQtY29kZT4yNjA8L3oxMy1pbXBy
+        aW50LWNvZGU+PHoxMy1pbXByaW50PlNhbHZhZG9yIDogRURVRkJBLCAyMDA4
+        LjwvejEzLWltcHJpbnQ+PHoxMy1pc2JuLWlzc24tY29kZT4wMjA8L3oxMy1p
+        c2JuLWlzc24tY29kZT48ejEzLWlzYm4taXNzbj45Nzg4NTIzMjA1NTkxIChw
+        YmsuKTwvejEzLWlzYm4taXNzbj48L3oxMz48c3RhdHVzPlJlcXVlc3RlZDwv
+        c3RhdHVzPjwvaXRlbT48L2l0ZW1zPjwvZ2V0LWl0ZW0tbGlzdD4=
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:23 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=AIzaSyADjP7PRPsGaPYJB9tvfm8ZSpdmhUsCR1w&printType=books&q=%22OCLC641911709%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Forwarded-For:
+      - 127.0.0.1
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Tue, 01 Apr 2014 20:28:24 GMT
+      Date:
+      - Tue, 01 Apr 2014 20:28:24 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"IsfUdcAVcz7INVwzDlHq3nvnNXA/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 0\n}\n"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:24 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22pol%20ticas%20p%20blicas%20and%20amp%22%20AND%20creator:(hetkowski)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 01 Apr 2014 20:31:27 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '161'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22pol+ticas+p+blicas+and+amp%22+AND+creator:%28hetkowski%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Wed, 02 Apr 2014 02:31:27 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:31:27 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:641911709
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Apr 2014 20:31:27 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u8
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u8
+      Content-Length:
+      - '44'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 01-Apr-2014
+        20:41:27 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: ! '{"oclc:641911709":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:31:27 GMT
+recorded_with: VCR 2.6.0
