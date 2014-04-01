@@ -22,7 +22,7 @@ At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic
 4.  User Login: we've included the ability for users to login via PDS, using [`Authlogic`](http://github.com/binarylogic/authlogic), 
     [`authpds`](http://github.com/scotdalton/authpds) and [`authpds-nyu`](http://github.com/scotdalton/authpds)
 5.  UI: we've customized the search UI to leverage 
-    [NYU Libraries' common layouts and assets](https://github.com/NYULibraries/nyulibraries_assets)
+    [NYU Libraries' common layouts and assets](https://github.com/NYULibraries/nyulibraries-assets)
 6.  Institutional support: we've included support for different institutions for both [searching](config/initializers/search_controller.rb)
     and [resolving](app/controllers/umlaut_controller.rb#L157)
 
