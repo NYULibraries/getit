@@ -25,9 +25,14 @@ end
 
 # Testing gems
 group :test do
+  # Rspec as the test framework
+  gem "rspec-rails", "~> 2.14.0"
   gem 'coveralls', "~> 0.7.0", require: false
   gem "vcr", "~> 2.6.0"
   gem "webmock", "~> 1.15.0"
+  gem 'cucumber-rails', '~> 1.4.0', require: false
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'selenium-webdriver', '~> 2.40.0'
 end
 
 # Use MySQL
