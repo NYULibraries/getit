@@ -287,7 +287,46 @@ http_interactions:
         Daniel Bertrand, 1960-</z13-author><z13-title-code>24513</z13-title-code><z13-title>An
         aesthetic occupation :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Durham
         : Duke University Press, 2002.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0822328038
-        (cloth ; alk. paper)</z13-isbn-issn></z13><status>05/27/14</status></item></items></get-item-list> '
+        (cloth ; alk. paper)</z13-isbn-issn></z13><status>05/27/14</status></item></items></get-item-list>'
     http_version: 
   recorded_at: Tue, 01 Apr 2014 20:34:18 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2001040726
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Apr 2014 20:47:05 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u8
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u8
+      Content-Length:
+      - '676'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 01-Apr-2014
+        20:57:05 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: ! '{"lccn:2001040726":{"records":{"004242314":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/004242314","titles":["An
+        aesthetic occupation : the immediacy of architecture and the Palestine conflict
+        \/","aesthetic occupation : the immediacy of architecture and the Palestine
+        conflict \/"],"isbns":["9780822328148","9780822328032"],"issns":[],"oclcs":["47705555"],"lccns":["2001040726"],"publishDates":["2002"]}},"items":[{"orig":"University
+        of Michigan","fromRecord":"004242314","htid":"mdp.39015054171072","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015054171072","rightsCode":"ic","lastUpdate":"20140223","enumcron":false,"usRightsString":"Limited
+        (search-only)"}]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:47:05 GMT
 recorded_with: VCR 2.6.0
