@@ -15,6 +15,9 @@ class Holding
   attr_reader :service_response
 
   def initialize(service_response)
+    unless service_response.is_a?(ServiceResponse)
+      raise ArgumentError.new("Expecting #{service_response} to be a ServiceResponse")
+    end
     @service_response = service_response
   end
 
