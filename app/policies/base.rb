@@ -1,4 +1,4 @@
-module HoldingAuthorizer
+module Policies
   class Base
     attr_reader :holding, :user
     def initialize(holding, user=nil)

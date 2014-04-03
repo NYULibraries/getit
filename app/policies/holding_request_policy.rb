@@ -1,11 +1,14 @@
-module HoldingAuthorizer
-  class Requestability < Base
+module Policies
+  class HoldingRequestPolicy < Base
     def initialize(holding, user)
       super
     end
 
     def requestable?
       ill?
+    end
+
+    def available?
     end
 
     def ill?
