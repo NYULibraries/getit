@@ -34,10 +34,11 @@ class Holding
   end
 
   # Is this holding in processing?
-  def in_processing?
+  def processing?
     IN_PROCESSING_STATUSES.include?(status) or
       IN_PROCESSING_STATUS_CODES.include?(status_code)
   end
+  alias_method :in_processing?, :processing?
 
   # Is this holding in offsite?
   def offsite?
@@ -59,12 +60,12 @@ class Holding
 
   # Is this holding checked_out?
   def checked_out?
-    status_code.eql?("checked_out")
+    status_code == "checked_out"
   end
 
   # Is this holding requested?
   def requested?
-    status.match(/Requested/)
+    /Requested/ === status
   end
 
   # View data from the service response
