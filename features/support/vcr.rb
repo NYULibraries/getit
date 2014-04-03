@@ -12,12 +12,12 @@ end
 
 VCR.cucumber_tags do |t|
   # Uses default record mode since no options are given
-  t.tag  '@checked_out_item'
-  t.tag  '@requested_item'
-  t.tag  '@offsite_item'
-  t.tag  '@available_item'
-  t.tag  '@recalled_item'
-  t.tag  '@ill_item'
+  t.tag  '@checked_out'
+  t.tag  '@requested'
+  t.tag  '@offsite'
+  t.tag  '@available'
+  t.tag  '@recalled'
+  t.tag  '@ill'
   # Disallowed not in use
   t.tags '@disallowed', :record => :none
 end
