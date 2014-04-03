@@ -38,7 +38,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.before(:suite) do
-    # Run factory girl lint before the suite
+    # Make sure all Factories are loaded and actually work
+    FactoryGirl.reload
     FactoryGirl.lint
 
     # Startout by trucating all the tables
