@@ -1,34 +1,34 @@
 Feature: request button for a Copy in Library
-  In order to know I can request an item
+  In order to know I can request a library holding
   As a user
   I want to see a request button
 
-  @checked_out_item
-  Scenario: A guest user viewing a "checked out" item
-    Given I am on the GetIt page for a "checked out" item
+  @checked_out
+  Scenario: A guest user viewing a "checked out" holding
+    Given I am on the GetIt page for a "checked out" holding
     Then I should see a request button
 
-  @offsite_item
-  Scenario: A guest user viewing an "offsite" item
-    Given I am on the GetIt page for an "offsite" item
+  @offsite
+  Scenario: A guest user viewing an "offsite" holding
+    Given I am on the GetIt page for an "offsite" holding
     Then I should see a request button
 
-  @requested_item
-  Scenario: A guest user viewing a "requested" item
-    Given I am on the GetIt page for a "requested" item
+  @requested
+  Scenario: A guest user viewing a "requested" holding
+    Given I am on the GetIt page for a "requested" holding
     Then I should see a request button
 
-  @recalled_item
-  Scenario: A guest user viewing a "recalled" item
-    Given I am on the GetIt page for a "recalled" item
+  @recalled
+  Scenario: A guest user viewing a "recalled" holding
+    Given I am on the GetIt page for a "recalled" holding
     Then I should see a request button
 
-  @ill_item
-  Scenario: A guest user viewing a "ill" item
-    Given I am on the GetIt page for a "ill" item
+  @ill
+  Scenario: A guest user viewing a "ill" holding
+    Given I am on the GetIt page for a "ill" holding
     Then I should see a request button
 
-  @available_item
-  Scenario: A guest user viewing an "available" item
-    Given I am on the GetIt page for a "available" item
+  @available
+  Scenario: A guest user viewing an "available" holding
+    Given I am on the GetIt page for a "available" holding
     Then I should not see a request button

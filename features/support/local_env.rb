@@ -3,6 +3,11 @@ Coveralls.wear_merged!('rails')
 
 require 'pry'
 
+# Require support classes in spec/support and its subdirectories.
+Dir[Rails.root.join("spec/support/**/*.rb")].each do |helper|
+  require helper
+end
+
 # Require and include helper modules
 # in feature/support/helpers and its subdirectories.
 Dir[Rails.root.join("features/support/helpers/**/*.rb")].each do |helper|
