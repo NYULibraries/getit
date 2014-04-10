@@ -1,5 +1,5 @@
 Given(/^I am on the GetIt page for an? "(.*?)" holding$/) do |state|
-  pending if state == "recalled"
+  pending# if state == "recalled"
   visit getit_page_for_holdling_state(state)
 end
 
