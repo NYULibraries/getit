@@ -283,6 +283,28 @@ describe Holding do
       it { should be_false }
     end
   end
+  describe 'requestability' do
+    subject { holding.requestability }
+    context 'when the service response has "deferred" requestability' do
+      let(:service_response) { build(:deferred_requestability_service_response) }
+      it { should eq 'deferred' }
+    end
+    context 'when the service response is requestable' do
+      let(:service_response) { build(:always_requestable_service_response) }
+      it { should eq 'yes' }
+    end
+  end
+  describe '#recall_period' do
+    subject { holding.recall_period }
+    context 'when the sub library is "BAFC"' do
+      let(:service_response) { build(:afc_recalled_service_response) }
+      it { should eq '1 week' }
+    end
+    context 'when the sub library is not "BAFC"' do
+      let(:service_response) { build(:bobst_recalled_service_response) }
+      it { should eq '2 weeks' }
+    end
+  end
   context 'when initialized without any arguments' do
     it 'should raise an ArgumentError' do
       expect { Holding.new }.to raise_error ArgumentError
