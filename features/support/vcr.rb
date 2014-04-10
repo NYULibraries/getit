@@ -1,11 +1,11 @@
 require 'vcr'
 
-VCR.config do |c|
+VCR.configure do |c|
   c.stub_with :webmock
   c.ignore_hosts '127.0.0.1', 'localhost'
   c.cassette_library_dir     = 'features/cassettes'
   c.default_cassette_options = { 
-    record: :new_episodes,
+    # record: :new_episodes,
     match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]
   }
 end
