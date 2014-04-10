@@ -50,13 +50,15 @@ module Policies
             end
             context 'and the user has rights to request holdings that are "available"' do
               let(:user) { build(:user) }
-              it { should be_true }
+              it 'should be true'
+              # it { should be_true }
             end
           end
         end
       end
       context 'when the holding is in non "available" states' do
-        it 'should respond be false'
+        it 'should be false'
+        # it { should be_false }
       end
     end
     describe '#ill?' do
