@@ -1,6 +1,6 @@
-# Wear coveralls
+# Wear merged coveralls for rails
 require 'coveralls'
-Coveralls.wear!
+Coveralls.wear_merged!('rails')
 
 ENV["RAILS_ENV"] = 'test'
 

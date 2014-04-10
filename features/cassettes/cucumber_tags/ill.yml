@@ -1,0 +1,796 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-04-01T16:28:26-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000762323&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Apr 2014 20:28:26 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-04-01T16:28:26-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;6731537&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph000762323&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000762323&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph000762323&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s2DF23656-B9DC-11E3-9FAD-5080FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph000762323&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph000762323%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph000762323+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-04-01T16%253A28%253A26-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph000762323%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:26 GMT
+- request:
+    method: post
+    uri: http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph000762323</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 01 Apr 2014 20:28:27 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://bobcatdev.library.nyu.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;000762323&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph000762323&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01000762323&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;Approaches to teaching Shakespeare's Hamlet&lt;/title&gt;\n
+        \               &lt;contributor&gt;Bernice W Kliman&lt;/contributor&gt;\n
+        \               &lt;publisher&gt;New York : Modern Language Association of
+        America&lt;/publisher&gt;\n                &lt;creationdate&gt;2001&lt;/creationdate&gt;\n
+        \               &lt;format&gt;xiv, 287 p. : ill. ; 24 cm.&lt;/format&gt;\n
+        \               &lt;identifier&gt;$$Cisbn$$V0873527674 (cloth); $$Cisbn$$V0873527682
+        (pbk.); $$Cisbn$$V9780873527675; $$Cisbn$$V9780873527682&lt;/identifier&gt;\n
+        \               &lt;subject&gt;Shakespeare, William, 1564-1616. Hamlet; Shakespeare,
+        William, 1564-1616 -- Study and teaching; Hamlet (Legendary character)&lt;/subject&gt;\n
+        \               &lt;language&gt;eng&lt;/language&gt;\n                &lt;relation&gt;$$Cseries
+        $$VApproaches to teaching world literature ; 72.&lt;/relation&gt;\n                &lt;source&gt;nyu_aleph&lt;/source&gt;\n
+        \               &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(PR2807
+        .A954 2001 )$$Sunavailable$$31$$41$$5N$$61$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph000762323&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;unavailable&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
+        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;edited
+        by Bernice W. Kliman.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Bernice
+        W.  Kliman&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Kliman,
+        B&lt;/creatorcontrib&gt;\n                &lt;title&gt;Approaches to teaching
+        Shakespeare's Hamlet /&lt;/title&gt;\n                &lt;subject&gt;Shakespeare,
+        William, 1564-1616. Hamlet&lt;/subject&gt;\n                &lt;subject&gt;Shakespeare,
+        William, 1564-1616  Study and teaching&lt;/subject&gt;\n                &lt;subject&gt;Hamlet
+        (Legendary character)&lt;/subject&gt;\n                &lt;subject&gt;Hamlet&lt;/subject&gt;\n
+        \               &lt;subject&gt;Amleth (Legendary character)&lt;/subject&gt;\n
+        \               &lt;general&gt;Modern Language Association of America,&lt;/general&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph000762323&lt;/recordid&gt;\n
+        \               &lt;isbn&gt;0873527674&lt;/isbn&gt;\n                &lt;isbn&gt;0873527682&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780873527675&lt;/isbn&gt;\n                &lt;isbn&gt;9780873527682&lt;/isbn&gt;\n
+        \               &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n                &lt;creationdate&gt;2001&lt;/creationdate&gt;\n
+        \               &lt;addtitle&gt;Approaches to teaching world literature, 72&lt;/addtitle&gt;\n
+        \               &lt;addtitle&gt;Approaches to teaching world literature ;
+        72.&lt;/addtitle&gt;\n                &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n                &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;BOBST&lt;/scope&gt;\n                &lt;scope&gt;BOBST
+        Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;lsr01&gt;PR2807
+        .A954 2001&lt;/lsr01&gt;\n                &lt;lsr01&gt;PR2807.A954 2001&lt;/lsr01&gt;\n
+        \               &lt;lsr02&gt;Modern Language Association of America,&lt;/lsr02&gt;\n
+        \             &lt;/search&gt;\n              &lt;sort&gt;\n                &lt;title&gt;Approaches
+        to teaching Shakespeare's Hamlet /&lt;/title&gt;\n                &lt;creationdate&gt;2001&lt;/creationdate&gt;\n
+        \               &lt;author&gt;Kliman, Bernice W.&lt;/author&gt;\n                &lt;lso01&gt;2001&lt;/lso01&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2001&lt;/creationdate&gt;\n                &lt;topic&gt;Shakespeare,
+        William, 1564-1616. Hamlet&lt;/topic&gt;\n                &lt;topic&gt;Shakespeare,
+        William, 1564-1616&#x2013;Study and teaching&lt;/topic&gt;\n                &lt;topic&gt;Hamlet
+        (Legendary character)&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Kliman, B&lt;/creatorcontrib&gt;\n                &lt;library&gt;BOBST&lt;/library&gt;\n
+        \               &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;\n                &lt;classificationlcc&gt;P
+        - Language and literature.&#x2013;English literature&lt;/classificationlcc&gt;\n
+        \               &lt;frbrgroupid&gt;49686982&lt;/frbrgroupid&gt;\n                &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n
+        \             &lt;/facets&gt;\n              &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n
+        \               &lt;c1&gt;2001034297&lt;/c1&gt;\n                &lt;c2&gt;0873527674;0873527682;9780873527675;9780873527682&lt;/c2&gt;\n
+        \               &lt;c3&gt;approachestoteachingareshamlet&lt;/c3&gt;\n                &lt;c4&gt;2001&lt;/c4&gt;\n
+        \               &lt;f1&gt;2001034297&lt;/f1&gt;\n                &lt;f3&gt;0873527674;0873527682;9780873527675;9780873527682&lt;/f3&gt;\n
+        \               &lt;f5&gt;approachestoteachingareshamlet&lt;/f5&gt;\n                &lt;f6&gt;2001&lt;/f6&gt;\n
+        \               &lt;f7&gt;approaches to teaching shakespeares hamlet&lt;/f7&gt;\n
+        \               &lt;f8&gt;nyu&lt;/f8&gt;\n                &lt;f9&gt;xiv, 287
+        p. :&lt;/f9&gt;\n                &lt;f10&gt;modern language association of
+        america&lt;/f10&gt;\n              &lt;/dedup&gt;\n              &lt;frbr&gt;\n
+        \               &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Kkliman
+        bernice w$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookapproaches to teaching
+        shakespeare's hamlet$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n              &lt;delivery&gt;\n
+        \               &lt;institution&gt;NYU&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
+        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;PR2807&lt;/classificationlcc&gt;\n
+        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Kliman&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Bernice W.&lt;/aufirst&gt;\n                &lt;addau&gt;Kliman,
+        Bernice W&lt;/addau&gt;\n                &lt;btitle&gt;Approaches to teaching
+        Shakespeare's Hamlet&lt;/btitle&gt;\n                &lt;seriestitle&gt;Approaches
+        to teaching world literature ; 72&lt;/seriestitle&gt;\n                &lt;date&gt;2001&lt;/date&gt;\n
+        \               &lt;risdate&gt;2001.&lt;/risdate&gt;\n                &lt;isbn&gt;0873527674&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;0873527682&lt;/isbn&gt;\n                &lt;isbn&gt;9780873527675&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780873527682&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;notes&gt;Includes bibliographical references (p. [255]-282)
+        and index.&lt;/notes&gt;\n                &lt;cop&gt;New York&lt;/cop&gt;\n
+        \               &lt;pub&gt;Modern Language Association of America&lt;/pub&gt;\n
+        \               &lt;lccn&gt;2001034297&lt;/lccn&gt;\n                &lt;lad01&gt;BOBST&lt;/lad01&gt;\n
+        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
+        \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
+        \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:27 GMT
+- request:
+    method: get
+    uri: http://alephstage.library.nyu.edu:1891/rest-dlf/record/NYU01000762323/items?view=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 01 Apr 2014 20:28:28 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://alephstage.library.nyu.edu:1891/rest-dlf/record/NYU01000762323/items/NYU50000762323000010"><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>000762323</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142032411665</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20020626</z30-open-date><z30-update-date>20020815</z30-update-date><z30-cataloger>PRIMUSM</z30-cataloger><z30-date-last-return>20090524</z30-date-last-return><z30-hour-last-return>1220</z30-hour-last-return><z30-ip-last-return>128.122.88.177</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR2807
+        .A954 2001</z30-call-no><z30-call-no-key>0 pr#2807 a954 2001</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>33.75</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>003163569</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>001</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000762323</z13-doc-number><z13-year>2001</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR2807</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>Approaches
+        to teaching Shakespeare&apos;s Hamlet /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : Modern Language Association of America, 2001.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0873527674
+        (cloth)</z13-isbn-issn></z13><status>Billed as Lost</status></item></items></get-item-list>'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:28 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22approaches%20to%20teaching%20shakespeare's%20hamlet%22%20AND%20creator:(kliman)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 01 Apr 2014 20:28:29 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '161'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22approaches+to+teaching+shakespeare%27s+hamlet%22+AND+creator:%28kliman%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Wed, 02 Apr 2014 02:28:29 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:29 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2001034297
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Apr 2014 20:28:29 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u8
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u8
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 01-Apr-2014
+        20:38:29 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: ! '{"lccn:2001034297":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:29 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22approaches%20to%20teaching%20shakespeare's%20hamlet%22%20AND%20creator:(kliman)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 01 Apr 2014 20:28:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":5,"params":{"json.wrf":"","qin":"title:\"approaches
+        to teaching shakespeare''s hamlet\" AND creator:(kliman) AND (mediatype:texts
+        OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"approaches
+        to teaching shakespeare''s hamlet\" AND creator:(kliman ) AND ( mediatype:texts
+        OR mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:28:29 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Bernice%20W%20Kliman%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.Name+all+%22Bernice+W+Kliman%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1972'
+      Date:
+      - Tue, 01 Apr 2014 20:31:30 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &amp;#34;Bernice W Kliman&amp;#34;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">Bernice W Kliman</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:31:31 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Hetkowski%22%20and%20local.OCLCNumber%20=%20%22641911709%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.FamilyName+%3D+%22Hetkowski%22+and+local.OCLCNumber+%3D+%22641911709%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '8067'
+      Date:
+      - Tue, 01 Apr 2014 20:31:30 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
+        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Tue
+        Dec 17 16:55:54 2013 UTC</creationtime><pnkey>lccn-n2009214430</pnkey><audLevel><min><level>0.47</level><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais /</title></min><avg><level>0.89</level></avg><max><level>1.00</level><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o
+        /</title></max></audLevel><authorityInfo><viafid>96776987</viafid><lccn>n
+        2009214430</lccn><arn>8214245</arn></authorityInfo><associatedNames><name
+        count=\"4\"><normName>lccn-n2009214446</normName><rawName><suba>Nascimento,
+        Anto&#x302;nio Dias</suba></rawName></name><name count=\"2\"><normName>lccn-n2007214789</normName><rawName><suba>Alves,
+        Lynn</suba></rawName></name><name count=\"2\"><normName>lccn-n2006219031</normName><rawName><suba>Fialho,
+        Nadia Hage</suba></rawName></name><name count=\"1\"><normName>lccn-n2009214431</normName><rawName><suba>Becker,
+        Adeline</suba></rawName></name><name count=\"1\"><normName>np-gewehr, rodrigo
+        barros</normName><rawName><suba>Gewehr, Rodrigo Barros</suba></rawName></name><name
+        count=\"1\"><normName>lccn-n2009214429</normName><rawName><suba>Lima Jr.,
+        Arnaud Soares de</suba><subq>(Lima Junior)</subq></rawName></name></associatedNames><nameInfo
+        type=\"personal\"><rawName><suba>Hetkowski, Ta&#x302;nia Maria</suba></rawName><languages
+        count=\"1\"><lang code=\"por\" count=\"6\"/></languages><dates><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2001</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2006</date><date byCount=\"2\"
+        byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">2007</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2008</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2012</date></dates><totalHoldings>16</totalHoldings><workCount>6</workCount><recordCount>6</recordCount><ddc
+        ident=\"370.9/81:22\">370.9/81</ddc><lcc ident=\"HN290.B3\">HN290.B3</lcc></nameInfo><by><citation><holdings>8</holdings><numEditions>1</numEditions><oclcnum>ocn641911709</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2008</date><dates
+        different=\"1\" first=\"2008\" last=\"2008\"/><audLevel>0.98</audLevel><title>Poli&#x301;ticas
+        pu&#x301;blicas &amp; inclusa&#x303;o digital</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn300308092</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn463974176</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Memo&#x301;ria
+        e formac&#x327;a&#x303;o de professores</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn860914670</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2012</date><dates
+        different=\"1\" first=\"2012\" last=\"2012\"/><audLevel>0.47</audLevel><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais</title></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn817151410</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2001</date><dates
+        different=\"1\" first=\"2001\" last=\"2001\"/><audLevel>0.47</audLevel><creator
+        ident=\"uncontrolled\">Gewehr, Rodrigo Barros</creator><title>Sexo e sexualidade
+        no mundo moderno</title><summary>Visa o presente ensaio a entender alguns
+        deslocamentos de sentido gerados pelo discurso social. Nosso enfoque partira&#x301;
+        de uma ra&#x301;pida visualizac&#x327;a&#x303;o de como a linguagem contribui
+        para que tenhamos uma mudanc&#x327;a na abordagem de determinados temas. A
+        partir deste ponto, trataremos de buscar entender a distinc&#x327;a&#x303;o
+        entre sexo e sexualidade e as particularidades existentes em cada um destes
+        significantes. Nosso objetivo e&#x301; entender as vicissitudes da sexualidade
+        no mundo contempora&#x302;neo, os lucros e prejui&#x301;zos do uso que se
+        faz do corpo, do sexo e da sexualidade</summary></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn473139015</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2006</date><dates
+        different=\"1\" first=\"2006\" last=\"2006\"/><audLevel>1.00</audLevel><title>Educac&#x327;a&#x303;o
+        e contemporaneidade : desafios para a pesquisa e a po&#x301;s-graduac&#x327;a&#x303;o</title></citation></by><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Tue
+        Dec 17 15:15:07 EST 2013</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>2799</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &amp;#34;Hetkowski&amp;#34; and local.OCLCNumber = &amp;#34;641911709&amp;#34;</query><xQuery><ns3:triple
+        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
+        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Hetkowski</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">641911709</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:31:31 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Hetkowski%22%20and%20local.OCLCNumber%20=%20%22641911709%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.FamilyName+%3D+%22Hetkowski%22+and+local.OCLCNumber+%3D+%22641911709%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '8067'
+      Date:
+      - Tue, 01 Apr 2014 20:34:26 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
+        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Tue
+        Dec 17 16:55:54 2013 UTC</creationtime><pnkey>lccn-n2009214430</pnkey><audLevel><min><level>0.47</level><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais /</title></min><avg><level>0.89</level></avg><max><level>1.00</level><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o
+        /</title></max></audLevel><authorityInfo><viafid>96776987</viafid><lccn>n
+        2009214430</lccn><arn>8214245</arn></authorityInfo><associatedNames><name
+        count=\"4\"><normName>lccn-n2009214446</normName><rawName><suba>Nascimento,
+        Anto&#x302;nio Dias</suba></rawName></name><name count=\"2\"><normName>lccn-n2007214789</normName><rawName><suba>Alves,
+        Lynn</suba></rawName></name><name count=\"2\"><normName>lccn-n2006219031</normName><rawName><suba>Fialho,
+        Nadia Hage</suba></rawName></name><name count=\"1\"><normName>lccn-n2009214431</normName><rawName><suba>Becker,
+        Adeline</suba></rawName></name><name count=\"1\"><normName>np-gewehr, rodrigo
+        barros</normName><rawName><suba>Gewehr, Rodrigo Barros</suba></rawName></name><name
+        count=\"1\"><normName>lccn-n2009214429</normName><rawName><suba>Lima Jr.,
+        Arnaud Soares de</suba><subq>(Lima Junior)</subq></rawName></name></associatedNames><nameInfo
+        type=\"personal\"><rawName><suba>Hetkowski, Ta&#x302;nia Maria</suba></rawName><languages
+        count=\"1\"><lang code=\"por\" count=\"6\"/></languages><dates><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2001</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2006</date><date byCount=\"2\"
+        byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">2007</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2008</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2012</date></dates><totalHoldings>16</totalHoldings><workCount>6</workCount><recordCount>6</recordCount><ddc
+        ident=\"370.9/81:22\">370.9/81</ddc><lcc ident=\"HN290.B3\">HN290.B3</lcc></nameInfo><by><citation><holdings>8</holdings><numEditions>1</numEditions><oclcnum>ocn641911709</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2008</date><dates
+        different=\"1\" first=\"2008\" last=\"2008\"/><audLevel>0.98</audLevel><title>Poli&#x301;ticas
+        pu&#x301;blicas &amp; inclusa&#x303;o digital</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn300308092</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn463974176</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Memo&#x301;ria
+        e formac&#x327;a&#x303;o de professores</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn860914670</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2012</date><dates
+        different=\"1\" first=\"2012\" last=\"2012\"/><audLevel>0.47</audLevel><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais</title></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn817151410</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2001</date><dates
+        different=\"1\" first=\"2001\" last=\"2001\"/><audLevel>0.47</audLevel><creator
+        ident=\"uncontrolled\">Gewehr, Rodrigo Barros</creator><title>Sexo e sexualidade
+        no mundo moderno</title><summary>Visa o presente ensaio a entender alguns
+        deslocamentos de sentido gerados pelo discurso social. Nosso enfoque partira&#x301;
+        de uma ra&#x301;pida visualizac&#x327;a&#x303;o de como a linguagem contribui
+        para que tenhamos uma mudanc&#x327;a na abordagem de determinados temas. A
+        partir deste ponto, trataremos de buscar entender a distinc&#x327;a&#x303;o
+        entre sexo e sexualidade e as particularidades existentes em cada um destes
+        significantes. Nosso objetivo e&#x301; entender as vicissitudes da sexualidade
+        no mundo contempora&#x302;neo, os lucros e prejui&#x301;zos do uso que se
+        faz do corpo, do sexo e da sexualidade</summary></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn473139015</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2006</date><dates
+        different=\"1\" first=\"2006\" last=\"2006\"/><audLevel>1.00</audLevel><title>Educac&#x327;a&#x303;o
+        e contemporaneidade : desafios para a pesquisa e a po&#x301;s-graduac&#x327;a&#x303;o</title></citation></by><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Tue
+        Dec 17 15:15:07 EST 2013</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>2799</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &amp;#34;Hetkowski&amp;#34; and local.OCLCNumber = &amp;#34;641911709&amp;#34;</query><xQuery><ns3:triple
+        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
+        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Hetkowski</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">641911709</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:34:28 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22pol%20ticas%20p%20blicas%20and%20amp%22%20AND%20creator:(hetkowski)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 01 Apr 2014 20:34:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":4,"params":{"json.wrf":"","qin":"title:\"pol
+        ticas p blicas and amp\" AND creator:(hetkowski) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"pol
+        ticas p blicas and amp\" AND creator:(hetkowski ) AND ( mediatype:texts OR
+        mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:34:29 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Hetkowski%22%20and%20local.OCLCNumber%20=%20%22641911709%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.FamilyName+%3D+%22Hetkowski%22+and+local.OCLCNumber+%3D+%22641911709%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '8067'
+      Date:
+      - Tue, 01 Apr 2014 20:40:28 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
+        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Tue
+        Dec 17 16:55:54 2013 UTC</creationtime><pnkey>lccn-n2009214430</pnkey><audLevel><min><level>0.47</level><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais /</title></min><avg><level>0.89</level></avg><max><level>1.00</level><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o
+        /</title></max></audLevel><authorityInfo><viafid>96776987</viafid><lccn>n
+        2009214430</lccn><arn>8214245</arn></authorityInfo><associatedNames><name
+        count=\"4\"><normName>lccn-n2009214446</normName><rawName><suba>Nascimento,
+        Anto&#x302;nio Dias</suba></rawName></name><name count=\"2\"><normName>lccn-n2007214789</normName><rawName><suba>Alves,
+        Lynn</suba></rawName></name><name count=\"2\"><normName>lccn-n2006219031</normName><rawName><suba>Fialho,
+        Nadia Hage</suba></rawName></name><name count=\"1\"><normName>lccn-n2009214431</normName><rawName><suba>Becker,
+        Adeline</suba></rawName></name><name count=\"1\"><normName>np-gewehr, rodrigo
+        barros</normName><rawName><suba>Gewehr, Rodrigo Barros</suba></rawName></name><name
+        count=\"1\"><normName>lccn-n2009214429</normName><rawName><suba>Lima Jr.,
+        Arnaud Soares de</suba><subq>(Lima Junior)</subq></rawName></name></associatedNames><nameInfo
+        type=\"personal\"><rawName><suba>Hetkowski, Ta&#x302;nia Maria</suba></rawName><languages
+        count=\"1\"><lang code=\"por\" count=\"6\"/></languages><dates><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2001</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2006</date><date byCount=\"2\"
+        byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">2007</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2008</date><date byCount=\"1\"
+        byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2012</date></dates><totalHoldings>16</totalHoldings><workCount>6</workCount><recordCount>6</recordCount><ddc
+        ident=\"370.9/81:22\">370.9/81</ddc><lcc ident=\"HN290.B3\">HN290.B3</lcc></nameInfo><by><citation><holdings>8</holdings><numEditions>1</numEditions><oclcnum>ocn641911709</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2008</date><dates
+        different=\"1\" first=\"2008\" last=\"2008\"/><audLevel>0.98</audLevel><title>Poli&#x301;ticas
+        pu&#x301;blicas &amp; inclusa&#x303;o digital</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn300308092</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Desenvolvimento
+        sustenta&#x301;vel e tecnologias da informac&#x327;a&#x303;o e comunicac&#x327;a&#x303;o</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn463974176</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2007</date><dates
+        different=\"1\" first=\"2007\" last=\"2007\"/><audLevel>1.00</audLevel><title>Memo&#x301;ria
+        e formac&#x327;a&#x303;o de professores</title></citation><citation><holdings>2</holdings><numEditions>1</numEditions><oclcnum>ocn860914670</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2012</date><dates
+        different=\"1\" first=\"2012\" last=\"2012\"/><audLevel>0.47</audLevel><title>Tecnologias
+        digitais e educac&#x327;a&#x303;o : novas (re)configurac&#x327;o&#x303;es
+        te&#x301;cnicas, sociais e espaciais</title></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn817151410</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2001</date><dates
+        different=\"1\" first=\"2001\" last=\"2001\"/><audLevel>0.47</audLevel><creator
+        ident=\"uncontrolled\">Gewehr, Rodrigo Barros</creator><title>Sexo e sexualidade
+        no mundo moderno</title><summary>Visa o presente ensaio a entender alguns
+        deslocamentos de sentido gerados pelo discurso social. Nosso enfoque partira&#x301;
+        de uma ra&#x301;pida visualizac&#x327;a&#x303;o de como a linguagem contribui
+        para que tenhamos uma mudanc&#x327;a na abordagem de determinados temas. A
+        partir deste ponto, trataremos de buscar entender a distinc&#x327;a&#x303;o
+        entre sexo e sexualidade e as particularidades existentes em cada um destes
+        significantes. Nosso objetivo e&#x301; entender as vicissitudes da sexualidade
+        no mundo contempora&#x302;neo, os lucros e prejui&#x301;zos do uso que se
+        faz do corpo, do sexo e da sexualidade</summary></citation><citation><holdings>1</holdings><numEditions>1</numEditions><oclcnum>ocn473139015</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"por\" count=\"1\"/></languages><date>2006</date><dates
+        different=\"1\" first=\"2006\" last=\"2006\"/><audLevel>1.00</audLevel><title>Educac&#x327;a&#x303;o
+        e contemporaneidade : desafios para a pesquisa e a po&#x301;s-graduac&#x327;a&#x303;o</title></citation></by><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Tue
+        Dec 17 15:15:07 EST 2013</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>2799</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &amp;#34;Hetkowski&amp;#34; and local.OCLCNumber = &amp;#34;641911709&amp;#34;</query><xQuery><ns3:triple
+        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
+        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Hetkowski</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">641911709</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 01 Apr 2014 20:40:29 GMT
+recorded_with: VCR 2.6.0
