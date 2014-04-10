@@ -63,14 +63,13 @@ class HoldingRequestAuthorizer
 
   # Is the holding always requestable?
   def holding_always_requestable?
-    holding.requestability ==
-      Exlibris::Primo::Source::NyuAleph::Requestability::YES
+    holding.requestability == Exlibris::Nyu::Holding::Requestability::YES
   end
 
   # Is the holding requestable (possibly deferring the decision to whether the user can request)
   def holding_requestable?
     holding_always_requestable? || 
-      holding.requestability == Exlibris::Primo::Source::NyuAleph::Requestability::DEFERRED
+      holding.requestability == Exlibris::Nyu::Holding::Requestability::DEFERRED
   end
 
   # Is the user authorized to make the request, i.e. does she have the required permissions?

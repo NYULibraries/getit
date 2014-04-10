@@ -9,7 +9,7 @@
     <% else %>
       <%= request_link_or_text("Recall this item from a fellow library user.", "recall") %>
       The item will be available within
-      <%= ["BAFC"].include?(holding.sub_library_code) ? "1 week" : "2 weeks" %>.<br />
+      <%= holding.recall_period %>.<br />
     <% end %>
     <%= pickup_locations_fields %>
     <%= delivery_times %>
