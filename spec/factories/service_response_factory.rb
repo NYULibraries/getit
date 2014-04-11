@@ -36,7 +36,10 @@ FactoryGirl.define do
     trait :available do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'available',
           status: 'Available',
           requestability: 'deferred'
@@ -116,7 +119,10 @@ FactoryGirl.define do
     trait :afc_recalled do
       service_data do
         {
-          source_data: { sub_library_code: 'BAFC' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BAFC'
+          },
           status_code: 'recalled',
           status: 'Due: 01/01/14',
           requestability: 'deferred'
