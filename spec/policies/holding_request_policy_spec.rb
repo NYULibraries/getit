@@ -50,8 +50,7 @@ module Policies
             end
             context 'and the user has rights to request holdings that are "available"' do
               let(:user) { build(:user) }
-              it 'should be true'
-              # it { should be_true }
+              it { should be_true }
             end
           end
         end
