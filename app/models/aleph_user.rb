@@ -22,10 +22,6 @@ class AlephUser
     can_request?(holding) && permissions(holding)[:hold_on_shelf] == 'Y'
   end
 
-  def can_request_ill?(holding)
-    permissions(holding)[:photo_permission] == 'Y'
-  end
-
   private
   def permissions(holding)
     unless holding.is_a?(Holding)
