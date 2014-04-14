@@ -5,6 +5,9 @@ class Holding
     :offsite?, :checked_out?, :on_order?, :ill?, :requested?
   def_delegator :@holding, :processing?, :in_processing?
 
+  # Delegate requestability status instance methods to @holding
+  def_delegators :@holding, :always_requestable?, :requestable?
+
   # Delegate data instance methods to the @holding
   def_delegators :@holding, :status, :status_display, :requestability,
     :institution, :sub_library, :collection, :call_number, :location
