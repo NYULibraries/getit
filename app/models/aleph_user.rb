@@ -6,7 +6,7 @@ class AlephUser
       raise ArgumentError.new("Expecting #{user} to be a User")
     end
     unless user.user_attributes.is_a?(Hash)
-      raise ArgumentError.new("Expecting #{user.user_attributes} to be a User")
+      raise ArgumentError.new("Expecting #{user.user_attributes} to be a Hash")
     end
     @bor_id = user.user_attributes[:nyuidn]
     @verification = user.user_attributes[:verification]
