@@ -26,7 +26,10 @@ FactoryGirl.define do
     trait :requested do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'requested',
           status: 'Requested',
           requestability: 'yes'
@@ -49,7 +52,10 @@ FactoryGirl.define do
     trait :checked_out do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'checked_out',
           status: 'Due: 01/31/13',
           requestability: 'yes'
@@ -59,7 +65,10 @@ FactoryGirl.define do
     trait :ill do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'ill',
           status: 'Request ILL',
           requestability: 'yes'
@@ -69,7 +78,10 @@ FactoryGirl.define do
     trait :on_order do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'check_holdings',
           status: 'On Order',
           requestability: 'yes'
@@ -79,7 +91,10 @@ FactoryGirl.define do
     trait :billed_as_lost do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'billed_as_lost',
           status: 'Request ILL',
           requestability: 'yes'
@@ -89,7 +104,10 @@ FactoryGirl.define do
     trait :requested do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'requested',
           status: 'Requested',
           requestability: 'yes'
@@ -99,7 +117,10 @@ FactoryGirl.define do
     trait :offsite do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'offsite',
           status: 'Offsite Available',
           requestability: 'yes'
@@ -109,7 +130,10 @@ FactoryGirl.define do
     trait :processing do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'processing',
           status: 'In Processing',
           requestability: 'yes'
@@ -132,7 +156,10 @@ FactoryGirl.define do
     trait :bobst_recalled do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'recalled',
           status: 'Due: 01/01/14',
           requestability: 'deferred'
@@ -142,7 +169,10 @@ FactoryGirl.define do
     trait :deferred_requestability do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'available',
           status: 'Available',
           requestability: 'deferred'
@@ -152,10 +182,26 @@ FactoryGirl.define do
     trait :always_requestable do
       service_data do
         {
-          source_data: { sub_library_code: 'BOBST' },
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
           status_code: 'checked_out',
           status: 'Due: 01/31/13',
           requestability: 'yes'
+        }
+      end
+    end
+    trait :never_requestable do
+      service_data do
+        {
+          source_data: {
+            adm_library_code: 'NYU50',
+            sub_library_code: 'BOBST'
+          },
+          status_code: 'reshelving',
+          status: 'Reshelving',
+          requestability: 'no'
         }
       end
     end
@@ -171,5 +217,6 @@ FactoryGirl.define do
     factory :bobst_recalled_service_response, traits: [:primo_source, :bobst_recalled]
     factory :deferred_requestability_service_response, traits: [:primo_source, :deferred_requestability]
     factory :always_requestable_service_response, traits: [:primo_source, :always_requestable]
+    factory :never_requestable_service_response, traits: [:primo_source, :never_requestable]
   end
 end
