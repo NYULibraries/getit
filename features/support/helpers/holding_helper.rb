@@ -12,11 +12,6 @@ module GetItFeatures
       "/resolve?rfr_id=#{primo_referrer_id_for_holding_state(state)}"
     end
 
-    def wait_until_holdings_render
-      begin
-      end while page.has_css?(holding_css)
-    end
-
     def holding_css
       '#holding .umlaut-holdings .umlaut-holding .row-fluid'
     end
