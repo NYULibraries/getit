@@ -8,7 +8,7 @@ GetIt::Application.load_tasks
 if Rails.env.test?
   # RSpec deletes the test task as a default
   # We need to add it back here
-  task :default => :test
+  task default: :test
 end
 
 # We need to add the coveralls task in the Rakefile
