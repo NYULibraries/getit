@@ -14,6 +14,18 @@ require 'factory_girl'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/vcr_cassettes'
+  c.configure_rspec_metadata!
+  c.hook_into :webmock
+  c.filter_sensitive_data("http://aleph.library.edu") {
+    Exlibris::Aleph::Config.base_url
+  }
+  c.filter_sensitive_data("http://primo.library.edu") {
+    Exlibris::Primo::Config.base_url
+  }
+end
+
 RSpec.configure do |config|
   # ## Mock Framework
   #

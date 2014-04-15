@@ -24,4 +24,15 @@ require 'capybara/poltergeist'
 Capybara.configure do |config|
   # config.app_host = 'https://dev.login.library.nyu.edu'
   config.default_driver = :poltergeist
+  Capybara.default_wait_time = 20
+end
+
+VCR.configure do |config|
+  config.hook_into :webmock
+  config.filter_sensitive_data("http://aleph.library.edu") {
+    Exlibris::Aleph::Config.base_url
+  }
+  config.filter_sensitive_data("http://primo.library.edu") {
+    Exlibris::Primo::Config.base_url
+  }
 end

@@ -34,15 +34,20 @@ class UmlautController < ApplicationController
 
   # Is the service response (i.e. holding) requestable 
   def requestable?(service_response)
-    request_authorizer(service_response).requestable?
+    request_policy(holding(service_response)).requestable?
   end
   helper_method :requestable?
 
   # Return a request authorizer for the given service_response
-  def request_authorizer(service_response)
-    HoldingRequestAuthorizer.new(Holding.new(service_response), current_user)
+  def request_policy(holding)
+    Policies::HoldingRequestAuthorizer.new(holding, current_user)
   end
-  private :request_authorizer
+  private :request_policy
+
+  def holding(service_response)
+    Holding.new(service_response)
+  end
+  private :holding
 
   umlaut_config.configure do
     app_name 'GetIt'

@@ -305,6 +305,36 @@ describe Holding do
       it { should eq '2 weeks' }
     end
   end
+  describe '#requestable?' do
+    subject { holding.requestable? }
+    context 'when the requestability is "yes"' do
+      let(:service_response) { build(:always_requestable_service_response) }
+      it { should be_true }
+    end
+    context 'when the requestability is "deferred"' do
+      let(:service_response) { build(:deferred_requestability_service_response) }
+      it { should be_true }
+    end
+    context 'when the requestability is "no"' do
+      let(:service_response) { build(:never_requestable_service_response) }
+      it { should be_false }
+    end
+  end
+  describe '#always_requestable?' do
+    subject { holding.always_requestable? }
+    context 'when the requestability is "yes"' do
+      let(:service_response) { build(:always_requestable_service_response) }
+      it { should be_true }
+    end
+    context 'when the requestability is "deferred"' do
+      let(:service_response) { build(:deferred_requestability_service_response) }
+      it { should be_false }
+    end
+    context 'when the requestability is "no"' do
+      let(:service_response) { build(:never_requestable_service_response) }
+      it { should be_false }
+    end
+  end
   context 'when initialized without any arguments' do
     it 'should raise an ArgumentError' do
       expect { Holding.new }.to raise_error ArgumentError
