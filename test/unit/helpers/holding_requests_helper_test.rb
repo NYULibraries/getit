@@ -45,35 +45,35 @@ class HoldingRequestsHelperTest < ActionView::TestCase
   end
 
   test "should return 2 options count for available holding" do
-    @authorizer = HoldingRequestAuthorizer.new(@available_holding, current_user)
+    @authorizer = Policies::HoldingRequestAuthorizer.new(@available_holding, current_user)
     VCR.use_cassette('user aleph permissions') do
       assert_equal(2, request_options_count)
     end
   end
 
   test "should return 2 options count for offsite holding" do
-    @authorizer = HoldingRequestAuthorizer.new(@offsite_holding, current_user)
+    @authorizer = Policies::HoldingRequestAuthorizer.new(@offsite_holding, current_user)
     VCR.use_cassette('user aleph permissions') do
       assert_equal(2, request_options_count)
     end
   end
 
   test "should return 2 options count for checked out holding" do
-    @authorizer = HoldingRequestAuthorizer.new(@checked_out_holding, current_user)
+    @authorizer = Policies::HoldingRequestAuthorizer.new(@checked_out_holding, current_user)
     VCR.use_cassette('user aleph permissions') do
       assert_equal(2, request_options_count)
     end
   end
 
   test "should return 2 options count for in processing holding" do
-    @authorizer = HoldingRequestAuthorizer.new(@in_processing_holding, current_user)
+    @authorizer = Policies::HoldingRequestAuthorizer.new(@in_processing_holding, current_user)
     VCR.use_cassette('user aleph permissions') do
       assert_equal(2, request_options_count)
     end
   end
 
   test "should return 1 options count for ill holding" do
-    @authorizer = HoldingRequestAuthorizer.new(@ill_holding, current_user)
+    @authorizer = Policies::HoldingRequestAuthorizer.new(@ill_holding, current_user)
     VCR.use_cassette('user aleph permissions') do
       assert_equal(1, request_options_count)
     end
