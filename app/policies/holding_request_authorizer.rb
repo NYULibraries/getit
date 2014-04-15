@@ -1,5 +1,5 @@
 module Policies
-  class HoldingRequestPolicy < Base
+  class HoldingRequestAuthorizer < Base
     def initialize(holding, user)
       super
     end

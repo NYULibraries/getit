@@ -15,7 +15,7 @@ class HoldingRequestsController < UmlautController
       # Instaniate the holding from the service response
       @holding = Holding.new(service_response)
       # Instantiate the holding request authorizer
-      @authorizer = Policies::HoldingRequestPolicy.new(@holding, current_user)
+      @authorizer = Policies::HoldingRequestAuthorizer.new(@holding, current_user)
       # Original user request for title citation
       @user_request = service_response.request
     end
@@ -28,7 +28,7 @@ class HoldingRequestsController < UmlautController
       # Instaniate the holding from the service response
       @holding = Holding.new(service_response)
       # Instantiate the holding request authorizer
-      @authorizer = Policies::HoldingRequestPolicy.new(@holding, current_user)
+      @authorizer = Policies::HoldingRequestAuthorizer.new(@holding, current_user)
       # Original user request for ILL context object
       @user_request = service_response.request
       # Is this a valid request type?

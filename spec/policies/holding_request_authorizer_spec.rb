@@ -4,15 +4,15 @@
 # This is the base specification
 require 'spec_helper'
 module Policies
-  describe HoldingRequestPolicy do
+  describe HoldingRequestAuthorizer do
     let(:service_response) { build(:service_response) }
     let(:holding) { Holding.new(service_response) }
     let(:user) { build(:aleph_user) }
     subject(:policy) do
-      HoldingRequestPolicy.new(holding, user)
+      HoldingRequestAuthorizer.new(holding, user)
     end
     it { should be_a Base }
-    it { should be_a HoldingRequestPolicy }
+    it { should be_a HoldingRequestAuthorizer }
     describe '#requestable?' do
       subject { policy.requestable? }
       context 'when the holding is in an ILL state' do
@@ -231,25 +231,25 @@ module Policies
     end
     context 'when initialized without any arguments' do
       it 'should raise an ArgumentError' do
-        expect { HoldingRequestPolicy.new }.to raise_error ArgumentError
+        expect { HoldingRequestAuthorizer.new }.to raise_error ArgumentError
       end
     end
     context 'when initialized with a holding argument' do
       context 'but the holding argument is not a Holding' do
         it 'should raise an ArgumentError' do
-          expect { HoldingRequestPolicy.new("invalid") }.to raise_error ArgumentError
+          expect { HoldingRequestAuthorizer.new("invalid") }.to raise_error ArgumentError
         end
       end
       context 'and the holding argument is a Holding' do
         context 'and the user argument is missing' do
           it 'should raise an ArgumentError' do
-            expect { HoldingRequestPolicy.new(holding) }.to raise_error ArgumentError
+            expect { HoldingRequestAuthorizer.new(holding) }.to raise_error ArgumentError
           end
         end
         context 'and the user argument is present' do
           context 'but the user argument is not a User' do
             it 'should raise an ArgumentError' do
-              expect { HoldingRequestPolicy.new(holding, "invalid") }.to raise_error ArgumentError
+              expect { HoldingRequestAuthorizer.new(holding, "invalid") }.to raise_error ArgumentError
             end
           end
         end

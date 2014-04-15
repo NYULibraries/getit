@@ -40,7 +40,7 @@ class UmlautController < ApplicationController
 
   # Return a request authorizer for the given service_response
   def request_policy(holding)
-    Policies::HoldingRequestPolicy.new(holding, current_user)
+    Policies::HoldingRequestAuthorizer.new(holding, current_user)
   end
   private :request_policy
 
