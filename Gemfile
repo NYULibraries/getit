@@ -47,7 +47,7 @@ gem "jquery-rails", "~> 3.0.4"
 # Use mustache
 # Fix to 0.99.4 cuz 0.99.5 broke my shit.
 gem "mustache", "0.99.4"
-gem "mustache-rails", "~> 0.2.3", :require => "mustache/railtie"
+gem 'mustache-rails', github: 'josh/mustache-rails', require: 'mustache/railtie'
 
 # Deploy with NYU Libraries deploy recipes
 gem "nyulibraries_deploy", git: "git://github.com/NYULibraries/nyulibraries_deploy.git",  tag: "v3.2.0"
