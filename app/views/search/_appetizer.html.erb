@@ -1,7 +1,7 @@
 <%
 metadata = record.referent.metadata
-content_type = (metadata["genre"].nil?) ? "journal" : metadata["genre"]
-object_id = metadata["object_id"]
+content_type = (metadata['genre'].nil?) ? 'journal' : metadata['genre']
+object_id = metadata['object_id']
 %>
 <%= 
   label_tag(:id, class: ["checkbox", "inline"]) {
