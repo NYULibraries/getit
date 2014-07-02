@@ -1,2 +1,2 @@
-set :rails_env, "qa"
-set :branch, "qa"
+set :rails_env, 'qa'
+set :branch, 'qa'

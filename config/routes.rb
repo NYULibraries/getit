@@ -22,7 +22,7 @@ GetIt::Application.routes.draw do
   # POST to create a new holding request
   match 'holding_requests/:service_response_id', :to => 'holding_requests#create', :as => :holding_requests, :via => :post
   # GET to create a new holding request
-  match 'holding_requests/:service_response_id/:holding_request_type(/:pickup_location)', :to => 'holding_requests#create', :as => :create_holding_request, :via => :get
+  match 'holding_requests/:service_response_id/:type(/:pickup_location)', :to => 'holding_requests#create', :as => :create_holding_request, :via => :get
   # GET a holding request (confirmation of creation)
   match 'holding_requests/:service_response_id', :to => 'holding_requests#show', :as => :holding_request, :via => :get
 

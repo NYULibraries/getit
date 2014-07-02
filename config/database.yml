@@ -24,79 +24,78 @@
 #   database:
 #   pool: 30
 #
-development: &development
+mysql: &mysql
   adapter: mysql2
   encoding: utf8
+
+getit: &getit
+  <<: *mysql
   reconnect: false
   pool: 12
   checkout_timeout: 2
-  host: <%= Settings.databases.host %>
-  database: <%= Settings.databases.database %>
-  username: <%= Settings.databases.username %>
-  password: <%= Settings.databases.password %>
+  host: <%= (ENV['GETIT_DB_HOST'] || 'localhost') %>
+  username: <%= (ENV['GETIT_DB_USER'] || 'root') %>
+  password: <%= (ENV['GETIT_DB_PASSWORD'] || '') %>
+  database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit') %>
+
+development: &development
+  <<: *getit
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  <<: *development
-
-staging:
-  <<: *development
-
-qa:
-  <<: *development
-
-production:
-  <<: *development
-
-<% if Settings.sfx_databases.sfx_db %>
-sfx_db:
-  adapter: mysql2
-  pool: 5
-  encoding: utf8
-  host: <%= Settings.sfx_databases.sfx_db.host %>
-  port: <%= Settings.sfx_databases.sfx_db.port %>
-  database: <%= Settings.sfx_databases.sfx_db.database %>
-  username: <%= Settings.sfx_databases.sfx_db.username %>
-  password: <%= Settings.sfx_databases.sfx_db.password %>
-<% end %>
-
-<% if Settings.sfx_databases.sfx4_cu %>
-sfx4_cu:
-  adapter: mysql2
-  pool: 5
-  encoding: utf8
-  host: <%= Settings.sfx_databases.sfx4_cu.host %>
-  port: <%= Settings.sfx_databases.sfx4_cu.port %>
-  database: <%= Settings.sfx_databases.sfx4_cu.database %>
-  username: <%= Settings.sfx_databases.sfx4_cu.username %>
-  password: <%= Settings.sfx_databases.sfx4_cu.password %>
-<% end %>
-
-<% if Settings.sfx_databases.sfx4_ns %>
-sfx4_ns:
-  adapter: mysql2
-  pool: 5
-  encoding: utf8
-  host: <%= Settings.sfx_databases.sfx4_ns.host %>
-  port: <%= Settings.sfx_databases.sfx4_ns.port %>
-  database: <%= Settings.sfx_databases.sfx4_ns.database %>
-  username: <%= Settings.sfx_databases.sfx4_ns.username %>
-  password: <%= Settings.sfx_databases.sfx4_ns.password %>
-<% end %>
-
-<% if Settings.sfx_databases.sfx4_global %>
-sfx4_global:
-  adapter: mysql2
-  pool: 5
-  encoding: utf8
-  host: <%= Settings.sfx_databases.sfx4_global.host %>
-  port: <%= Settings.sfx_databases.sfx4_global.port %>
-  database: <%= Settings.sfx_databases.sfx4_global.database %>
-  username: <%= Settings.sfx_databases.sfx4_global.username %>
-  password: <%= Settings.sfx_databases.sfx4_global.password %>
-<% end %>
+  <<: *getit
+  database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit_test') %>
 
 cucumber:
   <<: *test
+
+staging:
+  <<: *getit
+
+qa:
+  <<: *getit
+
+production:
+  <<: *getit
+
+sfx: &sfx
+  <<: *mysql
+  pool: 5
+
+<% if ENV['NYU_SFX_DB_HOST'] %>
+sfx_db:
+  <<: *sfx
+  host: <%= ENV['NYU_SFX_DB_HOST'] %>
+  username: <%= ENV['NYU_SFX_DB_USER'] %>
+  password: <%= ENV['NYU_SFX_DB_PASSWORD'] %>
+  database: <%= ENV['NYU_SFX_DB_DATABASE'] %>
+<% end %>
+
+<% if ENV['CU_SFX_DB_HOST'] %>
+sfx4_cu:
+  <<: *sfx
+  host: <%= ENV['CU_SFX_DB_HOST'] %>
+  username: <%= ENV['CU_SFX_DB_USER'] %>
+  password: <%= ENV['CU_SFX_DB_PASSWORD'] %>
+  database: <%= ENV['CU_SFX_DB_DATABASE'] %>
+<% end %>
+
+<% if ENV['NS_SFX_DB_HOST'] %>
+sfx4_ns:
+  <<: *sfx
+  host: <%= ENV['NS_SFX_DB_HOST'] %>
+  username: <%= ENV['NS_SFX_DB_USER'] %>
+  password: <%= ENV['NS_SFX_DB_PASSWORD'] %>
+  database: <%= ENV['NS_SFX_DB_DATABASE'] %>
+<% end %>
+
+<% if ENV['GLOBAL_SFX_DB_HOST'] %>
+sfx4_global:
+  <<: *sfx
+  host: <%= ENV['GLOBAL_SFX_DB_HOST'] %>
+  username: <%= ENV['GLOBAL_SFX_DB_USER'] %>
+  password: <%= ENV['GLOBAL_SFX_DB_PASSWORD'] %>
+  database: <%= ENV['GLOBAL_SFX_DB_DATABASE'] %>
+<% end %>
