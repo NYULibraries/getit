@@ -23,10 +23,10 @@ end
 
 VCR.cucumber_tags do |t|
   # Uses default record mode since no options are given
-  t.tag  '@new_yorker', record: :new_episodes
-  t.tag  '@vogue', record: :new_episodes
+  t.tag  '@new_yorker'
+  t.tag  '@vogue'
   t.tag  '@book'
-  t.tag  '@journal', record: :new_episodes
+  t.tag  '@journal'
   t.tag  '@checked_out'
   t.tag  '@requested'
   t.tag  '@recalled'
