@@ -11,23 +11,10 @@ FactoryGirl.define do
     trait :aleph_attributes do
       user_attributes do
         {
-          nyuidn: 'BOR_ID',
-          verification: 'VERIFICATION',
+          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
           primary_institution: :NYU,
           institutions: [:NYU],
-          bor_status: '51',
-          aleph_permissions: {
-            'BOBST' => {
-              hold_permission: 'Y',
-              hold_on_shelf: 'Y',
-              photo_permission: 'Y'
-            },
-            'BAFC' => {
-              hold_permission: 'N',
-              hold_on_shelf: 'N',
-              photo_permission: 'N'
-            }
-          }
+          bor_status: '51'
         }
       end
     end
