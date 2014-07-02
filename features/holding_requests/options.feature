@@ -43,7 +43,7 @@ Feature: holding request options for a Copy in Library
   Scenario: A user with request permissions viewing options for a "on order" holding
     Given I am logged in
     And I am on the GetIt page for a "on order" holding
-    And I click the "on order" button
+    And I click the "Request" button
     Then I should see a modal indicating that the holding is on order
     And I should see an option to for this item to be held for me once processed.
     And I should see an option to request the holding from another library 
