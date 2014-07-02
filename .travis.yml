@@ -6,8 +6,8 @@ services:
   - memcached
 
 before_script:
-  - mysql -e 'create database nyu_getit_test;'
-  - bundle exec rake db:schema:load RAILS_ENV=test
+  - mysql -e 'create database getit_test;'
+  - RAILS_ENV=test bundle exec rake db:schema:load
 
 rvm:
   - 1.9.3
