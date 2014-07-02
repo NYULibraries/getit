@@ -1,6 +1,11 @@
+# encoding: UTF-8
 require 'test_helper'
 
 class SearchControllerTest < ActionController::TestCase
+  def user
+    FactoryGirl.create(:user)
+  end
+
   setup do
     activate_authlogic
     # Pretend we've already checked PDS/Shibboleth for the session
@@ -210,7 +215,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_tabs_header
       assert_template :partial => 'nyu/_sidebar', :count => 1
       assert_select 'div.results' do |results|
-        assert_select results.first, 'div.result h2.title', {:text => 'A.A.H.P.S.S.S. news and information', :count => 1}
+        assert_select results.first, 'div.result h2.title', {:text => 'À bâbord', :count => 1}
       end
     end
   end
@@ -244,7 +249,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_tabs_header
       assert_template :partial => 'cu/_sidebar', :count => 1
       assert_select 'div.results' do |results|
-        assert_select results.first, 'div.result h2.title', {:text => 'A.A.O. newsletter', :count => 1}
+        assert_select results.first, 'div.result h2.title', {:text => 'A+BE :  Architecture and the Built Environment', :count => 1}
       end
     end
   end
