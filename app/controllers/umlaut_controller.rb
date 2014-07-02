@@ -32,22 +32,25 @@ class UmlautController < ApplicationController
     end
   end
 
-  # Is the service response (i.e. holding) requestable 
-  def requestable?(service_response)
-    request_policy(holding(service_response)).requestable?
+  # Is the service response requestable 
+  def requestable?(holding)
+    if current_user.present?
+      holding_request_authorizer(holding_request(holding)).requestable?
+    else
+      holding.requestable?
+    end
   end
   helper_method :requestable?
 
-  # Return a request authorizer for the given service_response
-  def request_policy(holding)
-    Policies::HoldingRequestAuthorizer.new(holding, current_user)
+  def holding_request_authorizer(holding_request)
+    HoldingRequest::Authorizer.new(holding_request)
   end
-  private :request_policy
+  private :holding_request_authorizer
 
-  def holding(service_response)
-    Holding.new(service_response)
+  def holding_request(holding)
+    HoldingRequest.new(holding, current_user)
   end
-  private :holding
+  private :holding_request
 
   umlaut_config.configure do
     app_name 'GetIt'
@@ -118,7 +121,7 @@ class UmlautController < ApplicationController
       # base sfx url to use for search actions, error condition backup,
       # and some other purposes. For search actions (A-Z), direct database
       # connection to your SFX db also needs to be defined in database.yml
-      sfx_base_url Settings.institutions.default.views.sfx_base_url
+      sfx_base_url 'http://sfx.library.nyu.edu/sfxlcl41?'
 
       # Umlaut tries to figure out from the SFX knowledge base
       # which hosts are "SFX controlled", to avoid duplicating SFX
