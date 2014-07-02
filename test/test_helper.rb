@@ -2,21 +2,16 @@
 require 'coveralls'
 Coveralls.wear_merged!('rails')
 
-ENV["RAILS_ENV"] = 'test'
+ENV['RAILS_ENV'] = 'test'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'authlogic'
 require 'authlogic/test_case'
 
-class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-  #
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
-  # -- they do not yet inherit this setting
-  fixtures :all
+require 'pry'
 
-  # Add more helper methods to be used by all tests here...
+class ActiveSupport::TestCase
 end
 
 class ActionController::TestRequest
@@ -37,45 +32,30 @@ require 'webmock'
 # To allow us to do real HTTP requests in a VCR.turned_off, we
 # have to tell webmock to let us. 
 WebMock.allow_net_connect!
-
-@@aleph_url = Exlibris::Aleph::Config.base_url
-@@primo_url = Exlibris::Primo.config.base_url
-@@aws_access_key = Settings.institutions.default.services.Amazon.api_key
-@@aws_secret_key = Settings.institutions.default.services.Amazon.secret_key
-@@aws_associate_tag = Settings.institutions.default.services.Amazon.associate_tag
-@@cover_thing_developer_key = Settings.institutions.default.services.CoverThing.developer_key
-@@google_book_search_api_key = Settings.institutions.default.services.GoogleBookSearch.api_key
-@@isbn_db_access_key = Settings.institutions.default.services.IsbnDb.access_key
-@@nyu_scopus_api_key = Settings.institutions.NYU.services.ScopusCitations.json_api_key
-@@ns_bx_token = Settings.institutions.NS.services.NS_bX.token
-solr_hostname = Settings.sunspot.solr.hostname
-solr_port = Settings.sunspot.solr.port
-solr_path = Settings.sunspot.solr.path
-@@solr_url =  "#{solr_hostname}" + ((solr_port.nil? || solr_port == 80) ? "" : ":#{solr_port}") + ((solr_path.nil? || solr_path == '/') ? "" : "#{solr_path}")
-
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
   c.hook_into :webmock 
-  c.default_cassette_options = {
-    :match_requests_on => [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]
-  }  
+  c.default_cassette_options = 
+    {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}  
   # c.debug_logger = $stderr
-  c.filter_sensitive_data("http://aleph.library.edu") { @@aleph_url }
-  c.filter_sensitive_data("http://primo.library.edu") { @@primo_url }
-  c.filter_sensitive_data("DUMMY_AWS_ACCESS_KEY_ID") { @@aws_access_key }
-  c.filter_sensitive_data("DUMMY_AWS_SECRET_KEY") { @@aws_associate_tag }
-  c.filter_sensitive_data("DUMMY_AWS_ASSOCIATE_TAG") { @@aws_associate_tag }
-  c.filter_sensitive_data("DUMMY_COVER_THING_DEVELOPER_KEY") { @@cover_thing_developer_key }
-  c.filter_sensitive_data("DUMMY_GOOGLE_BOOK_SEARCH_API_KEY") { @@google_book_search_api_key }
-  c.filter_sensitive_data("DUMMY_ISBN_DB_ACCESS_KEY") { @@isbn_db_access_key }
-  c.filter_sensitive_data("DUMMY_NYU_SCOPUS_API_KEY") { @@nyu_scopus_api_key }
-  c.filter_sensitive_data("DUMMY_NS_BX_TOKEN") { @@ns_bx_token }
-  c.filter_sensitive_data("DUMMY_SOLR_INSTANCE") { @@solr_url }
+  c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
+  c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo.config.base_url }
+  c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
+  c.filter_sensitive_data('http://solr.library.edu') { Sunspot.config.solr.url }
+  c.filter_sensitive_data('AMAZON_API_KEY') { ENV['AMAZON_API_KEY'] }
+  c.filter_sensitive_data('AMAZON_SECRET_KEY') { ENV['AMAZON_SECRET_KEY'] }
+  c.filter_sensitive_data('AMAZON_ASSOCIATE_TAG') { ENV['AMAZON_ASSOCIATE_TAG'] }
+  c.filter_sensitive_data('COVER_THING_DEVELOPER_KEY') { ENV['COVER_THING_DEVELOPER_KEY'] }
+  c.filter_sensitive_data('GOOGLE_BOOK_SEARCH_API_KEY') { ENV['GOOGLE_BOOK_SEARCH_API_KEY'] }
+  c.filter_sensitive_data('ISBN_DB_ACCESS_KEY') { ENV['ISBN_DB_ACCESS_KEY'] }
+  c.filter_sensitive_data('NYU_SCOPUS_CITATIONS_JSON_API_KEY') { ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY']}
+  c.filter_sensitive_data('NS_BX_TOKEN') { ENV['NS_BX_TOKEN'] }
+  c.filter_sensitive_data('PDS_HANDLE') { ENV['PDS_HANDLE'] }
+  c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
 end
 
 # Use the included testmnt for testing.
 Exlibris::Aleph.configure do |config|
-  config.tab_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
-  config.yml_path = "#{File.dirname(__FILE__)}/../test/config/aleph"
+  config.table_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
 end
