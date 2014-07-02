@@ -1,32 +1,72 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
-    uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
-    body: 
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
       encoding: US-ASCII
-      string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=ECONOMIST&fl=%2A+score&qf=title_text%5E1.0&defType=dismax&bq=title_exact_sm%3AECONOMIST%5E10.0&start=0&rows=20
-    headers: 
-      Content-Type: 
+      string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=ECONOMIST&fl=%2A+score&qf=title_text%5E1.0&defType=edismax&bq=title_exact_sm%3AECONOMIST%5E10.0&start=0&rows=20
+    headers:
+      Content-Type:
       - application/x-www-form-urlencoded; charset=UTF-8
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      Content-Type: 
+      Content-Type:
       - text/plain;charset=UTF-8
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Fri, 06 Sep 2013 17:25:32 GMT
-      Connection: 
+      Date:
+      - Mon, 30 Jun 2014 19:36:43 GMT
+      Connection:
       - close
-    body: 
+    body:
       encoding: US-ASCII
-      string: "{'responseHeader'=>{'status'=>0,'QTime'=>2,'params'=>{'sort'=>'score desc, title_sort_s asc','qf'=>'title_text^1.0','wt'=>'ruby','defType'=>'dismax','rows'=>'20','fl'=>'* score','bq'=>'title_exact_sm:ECONOMIST^10.0','start'=>'0','q'=>'ECONOMIST','fq'=>'type:Sfx4\\\\:\\\\:Ns\\\\:\\\\:AzTitle'}},'response'=>{'numFound'=>145,'start'=>0,'maxScore'=>11.74996,'docs'=>[{'id'=>'Sfx4::Ns::AzTitle 36817','object_id_ss'=>'954921341152','title_display_ss'=>'De Economist','issn_ss'=>'0013-063X','isbn_ss'=>'','lccn_ss'=>'2004233204','score'=>11.74996},{'id'=>'Sfx4::Ns::AzTitle 19381','object_id_ss'=>'954921341151','title_display_ss'=>'The Economist','issn_ss'=>'0013-0613','isbn_ss'=>'','lccn_ss'=>'08017464','score'=>11.74996},{'id'=>'Sfx4::Ns::AzTitle 40807','object_id_ss'=>'1000000000698425','title_display_ss'=>'Economist (Russia,','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>11.731127},{'id'=>'Sfx4::Ns::AzTitle 32582','object_id_ss'=>'110976725599616','title_display_ss'=>'Building economist','issn_ss'=>'0007-3431','isbn_ss'=>'','lccn_ss'=>'','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 37485','object_id_ss'=>'3310000000006232','title_display_ss'=>'Healthcare Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 2809','object_id_ss'=>'110978976777393','title_display_ss'=>'Israel economist','issn_ss'=>'0021-2040','isbn_ss'=>'','lccn_ss'=>'52036499','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 53860','object_id_ss'=>'991042723359458','title_display_ss'=>'Oriental economist','issn_ss'=>'0030-5294','isbn_ss'=>'','lccn_ss'=>'sn94095201','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 10465','object_id_ss'=>'1000000000222445','title_display_ss'=>'Regional Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 15397','object_id_ss'=>'1000000000280459','title_display_ss'=>'The Regional economist','issn_ss'=>'1932-4707','isbn_ss'=>'','lccn_ss'=>'2001234477','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 64084','object_id_ss'=>'1000000000237584','title_display_ss'=>'The Social Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 84282','object_id_ss'=>'3310000000008262','title_display_ss'=>'Zambian Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.3654811},{'id'=>'Sfx4::Ns::AzTitle 79072','object_id_ss'=>'3360000000000891','title_display_ss'=>'The Inspired Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.33571583},{'id'=>'Sfx4::Ns::AzTitle 88876','object_id_ss'=>'954921381806','title_display_ss'=>'Energy economist','issn_ss'=>'0262-7108','isbn_ss'=>'','lccn_ss'=>'','score'=>0.2797632},{'id'=>'Sfx4::Ns::AzTitle 68827','object_id_ss'=>'110978977559117','title_display_ss'=>'Lloyd\\'s shipping economist','issn_ss'=>'0144-6673','isbn_ss'=>'','lccn_ss'=>'','score'=>0.2797632},{'id'=>'Sfx4::Ns::AzTitle 71777','object_id_ss'=>'110978977123982','title_display_ss'=>'PAKISTAN AND GULF ECONOMIST','issn_ss'=>'0253-1941','isbn_ss'=>'','lccn_ss'=>'','score'=>0.2797632},{'id'=>'Sfx4::Ns::AzTitle 36844','object_id_ss'=>'954921388926','title_display_ss'=>'Petroleum economist','issn_ss'=>'0306-395X','isbn_ss'=>'','lccn_ss'=>'sc83007441','score'=>0.2797632},{'id'=>'Sfx4::Ns::AzTitle 5113','object_id_ss'=>'1000000000238076','title_display_ss'=>'The Political Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.2797632},{'id'=>'Sfx4::Ns::AzTitle 64496','object_id_ss'=>'954921394036','title_display_ss'=>'American Economist','issn_ss'=>'0569-4345','isbn_ss'=>'','lccn_ss'=>'67034003','score'=>0.27411082},{'id'=>'Sfx4::Ns::AzTitle 55470','object_id_ss'=>'3400000000002181','title_display_ss'=>'The Economist - Print and Online','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.27411082},{'id'=>'Sfx4::Ns::AzTitle 10003','object_id_ss'=>'2550000000092777','title_display_ss'=>'Evan\\'s Rural Economist','issn_ss'=>'','isbn_ss'=>'','lccn_ss'=>'','score'=>0.27411082}]}}"
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>1,''params''=>{''bq''=>''title_exact_sm:ECONOMIST^10.0'',''fl''=>''*
+        score'',''sort''=>''score desc, title_sort_s asc'',''start''=>''0'',''q''=>''ECONOMIST'',''qf''=>''title_text^1.0'',''wt''=>''ruby'',''fq''=>''type:Sfx4\\:\\:Ns\\:\\:AzTitle'',''rows''=>''20'',''defType''=>''edismax''}},''response''=>{''numFound''=>134,''start''=>0,''maxScore''=>12.1443205,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
+        39096'',''object_id_ss''=>''954921341152'',''title_display_ss''=>''De Economist'',''issn_ss''=>''0013-063X'',''isbn_ss''=>'''',''lccn_ss''=>''2004233204'',''score''=>12.1443205},{''id''=>''Sfx4::Ns::AzTitle
+        20582'',''object_id_ss''=>''954921341151'',''title_display_ss''=>''The Economist'',''issn_ss''=>''0013-0613'',''isbn_ss''=>'''',''lccn_ss''=>''08017464'',''score''=>12.1443205},{''id''=>''Sfx4::Ns::AzTitle
+        34571'',''object_id_ss''=>''110976725599616'',''title_display_ss''=>''Building
+        economist'',''issn_ss''=>''0007-3431'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.36436385},{''id''=>''Sfx4::Ns::AzTitle
+        39786'',''object_id_ss''=>''3310000000006232'',''title_display_ss''=>''Healthcare
+        Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.36436385},{''id''=>''Sfx4::Ns::AzTitle
+        2979'',''object_id_ss''=>''110978976777393'',''title_display_ss''=>''Israel
+        economist'',''issn_ss''=>''0021-2040'',''isbn_ss''=>'''',''lccn_ss''=>''52036499'',''score''=>0.36436385},{''id''=>''Sfx4::Ns::AzTitle
+        57208'',''object_id_ss''=>''991042723359458'',''title_display_ss''=>''Oriental
+        economist'',''issn_ss''=>''0030-5294'',''isbn_ss''=>'''',''lccn_ss''=>''sn94095201'',''score''=>0.36436385},{''id''=>''Sfx4::Ns::AzTitle
+        89437'',''object_id_ss''=>''3310000000008262'',''title_display_ss''=>''Zambian
+        Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.36436385},{''id''=>''Sfx4::Ns::AzTitle
+        16348'',''object_id_ss''=>''1000000000280459'',''title_display_ss''=>''The
+        Regional economist'',''issn_ss''=>''1932-4707'',''isbn_ss''=>'''',''lccn_ss''=>''2001234477'',''score''=>0.31881836},{''id''=>''Sfx4::Ns::AzTitle
+        68067'',''object_id_ss''=>''1000000000237584'',''title_display_ss''=>''The
+        Social Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.31881836},{''id''=>''Sfx4::Ns::AzTitle
+        94285'',''object_id_ss''=>''954921381806'',''title_display_ss''=>''Energy
+        economist'',''issn_ss''=>''0262-7108'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.27890795},{''id''=>''Sfx4::Ns::AzTitle
+        83933'',''object_id_ss''=>''3360000000000891'',''title_display_ss''=>''The
+        Inspired Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.27890795},{''id''=>''Sfx4::Ns::AzTitle
+        39121'',''object_id_ss''=>''954921388926'',''title_display_ss''=>''Petroleum
+        economist'',''issn_ss''=>''0306-395X'',''isbn_ss''=>'''',''lccn_ss''=>''sc83007441'',''score''=>0.27890795},{''id''=>''Sfx4::Ns::AzTitle
+        68513'',''object_id_ss''=>''954921394036'',''title_display_ss''=>''American
+        Economist'',''issn_ss''=>''0569-4345'',''isbn_ss''=>'''',''lccn_ss''=>''67034003'',''score''=>0.27327287},{''id''=>''Sfx4::Ns::AzTitle
+        67332'',''object_id_ss''=>''1000000000217834'',''title_display_ss''=>''Economist.com'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.27327287},{''id''=>''Sfx4::Ns::AzTitle
+        10560'',''object_id_ss''=>''2550000000092777'',''title_display_ss''=>''Evan\''s
+        Rural Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.27327287},{''id''=>''Sfx4::Ns::AzTitle
+        41340'',''object_id_ss''=>''3310000000009095'',''title_display_ss''=>''The
+        Good News Economist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.27327287},{''id''=>''Sfx4::Ns::AzTitle
+        52573'',''object_id_ss''=>''991042726968154'',''title_display_ss''=>''Punjab
+        University economist'',''issn_ss''=>''0377-3191'',''isbn_ss''=>'''',''lccn_ss''=>''79931242'',''score''=>0.27327287},{''id''=>''Sfx4::Ns::AzTitle
+        19013'',''object_id_ss''=>''991042735560836'',''title_display_ss''=>''Markham
+        economist & sun'',''issn_ss''=>''1490-3555'',''isbn_ss''=>'''',''lccn_ss''=>''cn2001300098'',''score''=>0.25764415},{''id''=>''Sfx4::Ns::AzTitle
+        4289'',''object_id_ss''=>''1000000000436977'',''title_display_ss''=>''Namibia
+        economist'',''issn_ss''=>''1028-9143'',''isbn_ss''=>'''',''lccn_ss''=>''sn98034355'',''score''=>0.25764415},{''id''=>''Sfx4::Ns::AzTitle
+        76214'',''object_id_ss''=>''110978977123982'',''title_display_ss''=>''Pakistan
+        and Gulf Economist'',''issn_ss''=>''0253-1941'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.25764415}]}}
+
+'
     http_version: 
-  recorded_at: Fri, 06 Sep 2013 17:25:32 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Mon, 30 Jun 2014 19:36:43 GMT
+recorded_with: VCR 2.9.2

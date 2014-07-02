@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
+    uri: http://solr.library.edu/select?wt=ruby
     body:
       encoding: US-ASCII
-      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=NEW+YORK&fl=%2A+score&qf=title_text%5E1.0&defType=dismax&bq=title_exact_sm%3ANEW%5C+YORK%5E10.0&start=0&rows=20
+      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=NEW+YORK&fl=%2A+score&qf=title_text%5E1.0&defType=edismax&bq=title_exact_sm%3ANEW%5C+YORK%5E10.0&start=0&rows=20
     headers:
       Content-Type:
       - application/x-www-form-urlencoded; charset=UTF-8
@@ -21,54 +21,53 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Mon, 09 Sep 2013 20:25:55 GMT
+      - Mon, 30 Jun 2014 19:40:19 GMT
       Connection:
       - close
     body:
       encoding: US-ASCII
-      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>1,''params''=>{''sort''=>''score
-        desc, title_sort_s asc'',''qf''=>''title_text^1.0'',''wt''=>''ruby'',''defType''=>''dismax'',''rows''=>''20'',''fl''=>''*
-        score'',''bq''=>''title_exact_sm:NEW\\ YORK^10.0'',''start''=>''0'',''q''=>''NEW
-        YORK'',''fq''=>''type:Sfx4\\:\\:Cu\\:\\:AzTitle''}},''response''=>{''numFound''=>132,''start''=>0,''maxScore''=>12.623564,''docs''=>[{''id''=>''Sfx4::Cu::AzTitle
-        55064'',''object_id_ss''=>''110975413975942'',''title_display_ss''=>''New
-        York'',''issn_ss''=>''0028-7369'',''isbn_ss''=>'''',''lccn_ss''=>''76012785'',''score''=>12.623564},{''id''=>''Sfx4::Cu::AzTitle
-        38426'',''object_id_ss''=>''111038323492012'',''title_display_ss''=>''New
-        York Diamonds'',''issn_ss''=>''1538-7402'',''isbn_ss''=>'''',''lccn_ss''=>''2001214764'',''score''=>0.31867394},{''id''=>''Sfx4::Cu::AzTitle
-        22187'',''object_id_ss''=>''954925474423'',''title_display_ss''=>''New York
-        history'',''issn_ss''=>''0146-437X'',''isbn_ss''=>'''',''lccn_ss''=>''21027150'',''score''=>0.31867394},{''id''=>''Sfx4::Cu::AzTitle
-        44601'',''object_id_ss''=>''1000000000390911'',''title_display_ss''=>''New-York
-        tribune'',''issn_ss''=>''1941-0646'',''isbn_ss''=>'''',''lccn_ss''=>''2009252751'',''score''=>0.31867394},{''id''=>''Sfx4::Cu::AzTitle
-        41691'',''object_id_ss''=>''110975413976006'',''title_display_ss''=>''The
-        New York times'',''issn_ss''=>''0362-4331'',''isbn_ss''=>'''',''lccn_ss''=>''sn78004456'',''score''=>0.27539617},{''id''=>''Sfx4::Cu::AzTitle
-        45723'',''object_id_ss''=>''1000000000523340'',''title_display_ss''=>''amNewYork
-        (New York, NY)'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        19298'',''object_id_ss''=>''1000000000311297'',''title_display_ss''=>''The
-        annals of the New York Academy of Dentistry'',''issn_ss''=>''1931-6585'',''isbn_ss''=>'''',''lccn_ss''=>''2006243161'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        32120'',''object_id_ss''=>''991042731763438'',''title_display_ss''=>''Bulletin
-        of the New York Shakespear Society'',''issn_ss''=>''1075-1661'',''isbn_ss''=>'''',''lccn_ss''=>''94640719'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        27291'',''object_id_ss''=>''1000000000528267'',''title_display_ss''=>''Journal
-        of the Anthropological Institute of New York'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        2116'',''object_id_ss''=>''991042728880280'',''title_display_ss''=>''Legal
-        times of New York'',''issn_ss''=>''0748-3368'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        54501'',''object_id_ss''=>''1000000000214880'',''title_display_ss''=>''New
-        York Daily News'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        52190'',''object_id_ss''=>''3580000000000334'',''title_display_ss''=>''New
-        York Daily Times'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''sn83030746'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        39431'',''object_id_ss''=>''2320000000019888'',''title_display_ss''=>''New-York
-        daily tribune'',''issn_ss''=>''2158-2661'',''isbn_ss''=>'''',''lccn_ss''=>''sn83030213'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        27988'',''object_id_ss''=>''991042746955292'',''title_display_ss''=>''New
-        York edition newsday'',''issn_ss''=>''0889-793X'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        52308'',''object_id_ss''=>''954925521687'',''title_display_ss''=>''New York
-        folklore'',''issn_ss''=>''0361-204X'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        52108'',''object_id_ss''=>''1000000000319369'',''title_display_ss''=>''The
-        New York journal of sociology'',''issn_ss''=>''1935-9357'',''isbn_ss''=>'''',''lccn_ss''=>''2007214206'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        11628'',''object_id_ss''=>''111014153140000'',''title_display_ss''=>''New
-        York State conservationist'',''issn_ss''=>''0097-3319'',''isbn_ss''=>'''',''lccn_ss''=>''sn81003787'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        32759'',''object_id_ss''=>''2670000000058985'',''title_display_ss''=>''New
-        York State Conservationist'',''issn_ss''=>''2157-1082'',''isbn_ss''=>'''',''lccn_ss''=>''sn95049098'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        20754'',''object_id_ss''=>''110978977974450'',''title_display_ss''=>''New
-        York State statistical yearbook'',''issn_ss''=>''0077-9334'',''isbn_ss''=>'''',''lccn_ss''=>''68065956'',''score''=>0.2655616},{''id''=>''Sfx4::Cu::AzTitle
-        10468'',''object_id_ss''=>''954926952805'',''title_display_ss''=>''Sciences'',''issn_ss''=>''0036-861X'',''isbn_ss''=>'''',''lccn_ss''=>''76647572'',''score''=>0.2655616}]}}'
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>1,''params''=>{''bq''=>''title_exact_sm:NEW\\
+        YORK^10.0'',''fl''=>''* score'',''sort''=>''score desc, title_sort_s asc'',''start''=>''0'',''q''=>''NEW
+        YORK'',''qf''=>''title_text^1.0'',''wt''=>''ruby'',''fq''=>''type:Sfx4\\:\\:Cu\\:\\:AzTitle'',''rows''=>''20'',''defType''=>''edismax''}},''response''=>{''numFound''=>144,''start''=>0,''maxScore''=>11.926846,''docs''=>[{''id''=>''Sfx4::Cu::AzTitle
+        48312'',''object_id_ss''=>''110975413975942'',''title_display_ss''=>''New
+        York'',''issn_ss''=>''0028-7369'',''isbn_ss''=>'''',''lccn_ss''=>''76012785'',''score''=>11.926846},{''id''=>''Sfx4::Cu::AzTitle
+        9046'',''object_id_ss''=>''954921339106'',''title_display_ss''=>''Chemical
+        engineering'',''issn_ss''=>''0009-2460'',''isbn_ss''=>'''',''lccn_ss''=>''11012192'',''score''=>11.882449},{''id''=>''Sfx4::Cu::AzTitle
+        33539'',''object_id_ss''=>''111038323492012'',''title_display_ss''=>''New
+        York Diamonds'',''issn_ss''=>''1538-7402'',''isbn_ss''=>'''',''lccn_ss''=>''2001214764'',''score''=>0.351483},{''id''=>''Sfx4::Cu::AzTitle
+        38990'',''object_id_ss''=>''1000000000390911'',''title_display_ss''=>''New-York
+        tribune'',''issn_ss''=>''1941-0646'',''isbn_ss''=>'''',''lccn_ss''=>''2009252751'',''score''=>0.351483},{''id''=>''Sfx4::Cu::AzTitle
+        41006'',''object_id_ss''=>''3390000000023045'',''title_display_ss''=>''New-York
+        tribune. (New-York [N.Y.]) 1841-1842'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''sn83030212'',''score''=>0.32418364},{''id''=>''Sfx4::Cu::AzTitle
+        34290'',''object_id_ss''=>''3390000000046618'',''title_display_ss''=>''Employment
+        in New York State'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        45747'',''object_id_ss''=>''3580000000000334'',''title_display_ss''=>''New
+        York Daily Times'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''sn83030746'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        34448'',''object_id_ss''=>''2320000000019888'',''title_display_ss''=>''New-York
+        daily tribune'',''issn_ss''=>''2158-2661'',''isbn_ss''=>'''',''lccn_ss''=>''sn83030213'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        24516'',''object_id_ss''=>''991042746955292'',''title_display_ss''=>''New
+        York edition newsday'',''issn_ss''=>''0889-793X'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        45847'',''object_id_ss''=>''954925521687'',''title_display_ss''=>''New York
+        folklore'',''issn_ss''=>''0361-204X'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        9386'',''object_id_ss''=>''1000000000802831'',''title_display_ss''=>''The
+        New York Latin leaflet'',''issn_ss''=>''2151-7576'',''isbn_ss''=>'''',''lccn_ss''=>''2009201058'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        10222'',''object_id_ss''=>''111014153140000'',''title_display_ss''=>''New
+        York State conservationist'',''issn_ss''=>''0097-3319'',''isbn_ss''=>'''',''lccn_ss''=>''sn81003787'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        28580'',''object_id_ss''=>''2670000000058985'',''title_display_ss''=>''New
+        York State Conservationist'',''issn_ss''=>''2157-1082'',''isbn_ss''=>'''',''lccn_ss''=>''sn95049098'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        34471'',''object_id_ss''=>''3390000000046981'',''title_display_ss''=>''New
+        York State Preservationist'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        18603'',''object_id_ss''=>''991042748335462'',''title_display_ss''=>''New
+        York truck exchange'',''issn_ss''=>''1049-0612'',''isbn_ss''=>'''',''lccn_ss''=>''sn90002744'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        9204'',''object_id_ss''=>''954926952805'',''title_display_ss''=>''Sciences'',''issn_ss''=>''0036-861X'',''isbn_ss''=>'''',''lccn_ss''=>''76647572'',''score''=>0.29290247},{''id''=>''Sfx4::Cu::AzTitle
+        1854'',''object_id_ss''=>''110975405638446'',''title_display_ss''=>''Current'',''issn_ss''=>''0011-3131'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.28995866},{''id''=>''Sfx4::Cu::AzTitle
+        11370'',''object_id_ss''=>''954921394033'',''title_display_ss''=>''Innovation'',''issn_ss''=>''0537-7196'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.28995866},{''id''=>''Sfx4::Cu::AzTitle
+        10205'',''object_id_ss''=>''991042742884004'',''title_display_ss''=>''Advertising
+        news of New York'',''issn_ss''=>''0001-2041'',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.28698462},{''id''=>''Sfx4::Cu::AzTitle
+        3452'',''object_id_ss''=>''1000000000753269'',''title_display_ss''=>''Choices
+        (New York  N.Y.)'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>'''',''score''=>0.28698462}]}}
+
+'
     http_version: 
-  recorded_at: Mon, 09 Sep 2013 20:25:56 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Mon, 30 Jun 2014 19:40:19 GMT
+recorded_with: VCR 2.9.2
