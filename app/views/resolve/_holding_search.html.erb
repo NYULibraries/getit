@@ -1,0 +1,5 @@
+<% view_data = service_response.view_data %>
+<p class="umlaut-holding-search">
+  <%= link_to view_data[:display_text], {controller: 'link_router',
+    id: service_response.id}, target: '_blank' %>
+</p>
