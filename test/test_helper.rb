@@ -8,11 +8,11 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'authlogic'
 require 'authlogic/test_case'
-
+require 'factory_girl'
 require 'pry'
 
-class ActiveSupport::TestCase
-end
+# Make sure all Factories are loaded and actually work
+FactoryGirl.reload
 
 class ActionController::TestRequest
   def performed?; end
