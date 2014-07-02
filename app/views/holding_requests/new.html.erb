@@ -1,20 +1,25 @@
-<div class="request">
-  <div class="text-error">
-    <%= flash[:alert] %>
-  </div>
-  <%- if @holding.present? -%>
-    <% cite = @user_request.referent.to_citation if @user_request %>
-    <h2><%= request_header(cite[:title]) if cite %></h2>
+<div class="holding-request">
+  <%- if flash[:alert].present? -%>
+    <div class="text-error">
+      <%= flash[:alert] %>
+    </div>
+  <%- end -%>
+  <%- if @holding_request.present? && @authorizer.present? -%>
+    <h2><%= title %></h2>
     <p>You may:</p>
-    <ol class="request_options">
-      <%= render "new_available", sub_library_code: @holding.sub_library_code if @authorizer.available? %>
-      <%= render "new_recall", holding: @holding if @authorizer.recallable? %>
-      <%= render "new_offsite" if @authorizer.offsite? %>
-      <%= render "new_in_processing" if @authorizer.in_processing? %>
-      <%= render "new_on_order" if @authorizer.on_order? %>
-      <%= render "new_ill", service_response_id: @service_response_id if @authorizer.ill? %>
+    <ol class="holding-request-options">
+      <%= render 'new_available' if @authorizer.available? %>
+      <%= render 'new_recall' if @authorizer.recallable? %>
+      <%= render 'new_offsite' if @authorizer.offsite? %>
+      <%= render 'new_processing' if @authorizer.processing? %>
+      <%= render 'new_on_order' if @authorizer.on_order? %>
+      <%= render 'new_ill' if @authorizer.ill? %>
     </ol>
-    <p style="margin-top: 1em;"><strong>You will be notified by email when your item is ready or en route.</strong></p>
+    <p style="margin-top: 1em;">
+      <strong>
+        You will be notified by email when your item is ready or en route.
+      </strong>
+    </p>
     <%= delivery_help %>
   <%- end -%>
 </div>

@@ -1,18 +1,15 @@
-<%
-# The 'recall' request option
-%>
-<%= request_form("recall") do %>
-  <%= request_option do %>
+<%- # The 'recall' request option -%>
+<%= request_form(:recall) do %>
+  <%= request_option(:recall) do %>
     <% if holding.requested? %>
       This material has been requested by a fellow library user.
-      <%= request_link_or_text("You may also place a request to be added to the queue.", "recall") %>
+      <%= request_link_or_text(t('holding_requests.new.recall.requested'), :recall) %>
     <% else %>
-      <%= request_link_or_text("Recall this item from a fellow library user.", "recall") %>
-      The item will be available within
-      <%= holding.recall_period %>.<br />
+      <%= request_link_or_text(t('holding_requests.new.recall.default'), :recall) %>
+      The item will be available within <%= holding.recall_period %>.<br />
     <% end %>
-    <%= pickup_locations_fields %>
+    <%= pickup_locations_field_set %>
     <%= delivery_times %>
   <% end %>
-  <%= submit_tag 'Submit' if pickup_locations.length > 1 %>
+  <%= submit_tag 'Submit' if pickup_locations.size > 1 %>
 <% end %>

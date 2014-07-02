@@ -1,12 +1,11 @@
-<%
+<%-
 # The 'offsite' request form 
 # Offers the following options for offsite materials
 #   - Entire item request
 #   - Scanned portion
-%>
-<%= request_form("offsite") do %>
-  <%= entire_request_option %>
-  <br />
-  <%= scan_portion_request_option %>
+-%>
+<%= request_form(:offsite) do %>
+  <%= entire_request_option(:offsite) %><br />
+  <%= scan_request_option(:offsite) %>
   <%= submit_tag 'Submit' %>
 <% end %>
