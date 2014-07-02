@@ -7,14 +7,13 @@ class SearchControllerTest < ActionController::TestCase
     @controller.session[:attempted_sso] = true
   end
 
-  
   test "search institutional config" do
     assert @controller.respond_to?(:extend_with_institutional_search_module), 
       "Search controller not modified."
   end
 
   test "search index logged in" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     get :index
     assert_response :success
     assert_select "title", "BobCat"
@@ -27,7 +26,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "search index logged in NYU" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     get :index, "umlaut.institution" => "NYU"
     assert_response :success
     assert_select "title", "BobCat"
@@ -40,7 +39,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "search index logged in NS" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     get :index, "umlaut.institution" => "NS"
     assert_response :success
     assert_select "title", "BobCat"
@@ -51,7 +50,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "search index logged in CU" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     get :index, "umlaut.institution" => "CU"
     assert_response :success
     assert_select "title", "BobCat"
@@ -62,7 +61,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "search index logged in NYUAD" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     get :index, "umlaut.institution" => "NYUAD"
     assert_response :success
     assert_select "title", "BobCat"
@@ -128,7 +127,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "journal search logged in" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     VCR.use_cassette('search journal search logged in') do
       get :journal_search, "rft.jtitle"=>"New York", "umlaut.title_search_type"=>"contains"
       assert_response :success
@@ -185,7 +184,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "journal list logged in" do
-    UserSession.create(users(:uid))
+    UserSession.create(user)
     VCR.use_cassette('search journal list logged in') do
       get :journal_list, :id => "A"
       assert_response :success

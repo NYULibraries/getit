@@ -1,39 +1,67 @@
 <%
 metadata = record.referent.metadata
 # Get metadata
-atitle = metadata["atitle"] if metadata.has_key?("atitle") and (not metadata["atitle"].blank?)
-if metadata.has_key?("jtitle") or metadata.has_key?("title") or metadata.has_key?("btitle")
-  title = (metadata["title"] || metadata["btitle"] || metadata["jtitle"])
+atitle = metadata['atitle']
+title = (metadata['title'] || metadata['btitle'] || metadata['jtitle'])
+author = (metadata['au'] || metadata['aulast'])
+author2 = (metadata['aufirst'] || metadata['auinit'] || metadata['auinit1'])
+if author.present? && author2.present?
+  author << ", #{author2}"
 end
-author = (metadata["au"] || metadata["aulast"]) if metadata.has_key?("au") or metadata.has_key?("aulast")
-if author and (metadata["aufirst"] or metadata["auinit"] or metadata["auinit1"])
-  author << ", #{(metadata["aufirst"] || metadata["auinit"] || metadata["auinit1"])}"
+issn = metadata['issn']
+isbn = metadata['isbn']
+date = metadata['date']
+volume = metadata['volume']
+issue = metadata['issue']
+pages = metadata['spage']
+end_page = metadata['epage']
+if pages.present? && end_page.present?
+  pages << " - #{metadata['epage']}"
 end
-issn = metadata["issn"] if metadata.has_key?("issn") and (not metadata["issn"].blank?)
-isbn = metadata["isbn"] if metadata.has_key?("isbn") and (not metadata["isbn"].blank?)
-date = metadata["date"] if metadata.has_key?("date") and (not metadata["date"].blank?)
-volume = metadata["volume"] if metadata.has_key?("volume") and (not metadata["volume"].blank?)
-issue = metadata["issue"] if metadata.has_key?("issue") and (not metadata["issue"].blank?)
-pages = metadata["spage"] if metadata.has_key?("spage")
-pages << " - #{metadata["epage"]}" if pages and metadata.has_key?("epage")
-if metadata.has_key?("pub") and (not metadata["pub"].blank?)
-  publisher = (metadata.has_key?("place") and (not metadata["place"].blank?)) ? "#{metadata['place']} : " : ""
+place = metadata["place"]
+pub = metadata["pub"]
+if pub.present?
+  publisher = (place.present?) ? "#{place} : " : ""
   publisher << metadata["pub"]
 end
-available_text = (current_primary_institution.nil? or current_primary_institution.views.nil? or 
-  current_primary_institution.views.nil? or current_primary_institution.views["availability_text"].nil?) ? 
-    "Available @ GetIt" : current_primary_institution.views["availability_text"]
+available_text = (current_primary_institution.nil? || current_primary_institution.views.nil? ||
+  current_primary_institution.views.nil? || current_primary_institution.views['availability_text'].nil?) ?
+    'Available @ GetIt' : current_primary_institution.views['availability_text']
 %>
-<%= content_tag(:h2, class: "title") {
-  link_to((atitle || title), url_for_with_co({controller: 'resolve'}, record), {target: "_blank"}) } if (atitle || title) %>
-<%= content_tag(:div, author, class: "creator") if author %>
-<%= content_tag(:div, title, class: "title") if atitle and title%>
-<%= content_tag(:div, "ISSN: #{issn}", class: "issn") if issn %>
-<%= content_tag(:div, "ISBN: #{isbn}", class: "isbn") if isbn %>
-<%= content_tag(:div, "Published: #{date}", class: "published") if date %>
-<%= content_tag(:div, "Volume: #{volume}", class: "volume") if volume %>
-<%= content_tag(:div, "Issue: #{issue}", class: "issue") if issue %>
-<%= content_tag(:div, "Page: #{pages}", class: "pages") if pages %>
-<%= content_tag(:div, "Publisher: #{publisher}", class: "publisher") if publisher %>
-<%= content_tag(:div, class: "delivery") { 
-  link_to(available_text, url_for_with_co({:controller=>'resolve'}, record), {:target => "_blank", :class => "text-success"}) } %>
+<%- if (atitle || title).present? -%>
+  <%= content_tag(:h2, class: 'title') do
+    link_to((atitle || title), url_for_with_co({controller: 'resolve'}, record), {target: "_blank"})
+  end %>
+<%- end -%>
+<%- if author.present? -%>
+  <%= content_tag(:div, author, class: 'creator') %>
+<%- end -%>
+<%- if (atitle && title).present? -%>
+  <%= content_tag(:div, title, class: 'title') %>
+<%- end -%>
+<%- if issn.present? -%>
+  <%= content_tag(:div, "ISSN: #{issn}", class: 'issn') %>
+<%- end -%>
+<%- if isbn.present? -%>
+  <%= content_tag(:div, "ISBN: #{isbn}", class: 'isbn') %>
+<%- end -%>
+<%- if date.present? -%>
+  <%= content_tag(:div, "Published: #{date}", class: 'published') %>
+<%- end -%>
+<%- if volume.present? -%>
+  <%= content_tag(:div, "Volume: #{volume}", class: 'volume') %>
+<%- end -%>
+<%- if issue.present? -%>
+  <%= content_tag(:div, "Issue: #{issue}", class: 'issue') %>
+<%- end -%>
+<%- if pages.present? -%>
+  <%= content_tag(:div, "Page: #{pages}", class: 'pages') %>
+<%- end -%>
+<%- if publisher.present? -%>
+  <%= content_tag(:div, "Publisher: #{publisher}", class: 'publisher')  %>
+<%- end -%>
+<%- if available_text.present? -%>
+  <%= content_tag(:div, class: 'delivery') do 
+    link_to(available_text, url_for_with_co({controller: 'resolve'}, record), {target: '_blank', class: 'text-success'})
+  end %>
+<%- end -%>

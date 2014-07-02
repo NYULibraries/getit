@@ -1,4 +1,8 @@
 <div class="result row-fluid">
-  <div class="span1 appetizer"><%= render 'appetizer', :record => record, :record_idx => record_idx %></div>
-  <div class="span11 entree"><%= render 'entree', :record => record %></div>
+  <div class="span1 appetizer">
+    <%= render 'appetizer', record: record, record_idx: record_idx %>
+  </div>
+  <div class="span11 entree">
+    <%= render 'entree', record: record %>
+  </div>
 </div>
