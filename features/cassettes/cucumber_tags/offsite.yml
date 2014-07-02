@@ -2,171 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2001040726
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 01 Apr 2014 20:28:14 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u8
-      X-Powered-By:
-      - PHP/5.4.4-14+deb7u8
-      Content-Length:
-      - '676'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 01-Apr-2014
-        20:38:14 GMT;path=/;httponly
-    body:
-      encoding: US-ASCII
-      string: ! '{"lccn:2001040726":{"records":{"004242314":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/004242314","titles":["An
-        aesthetic occupation : the immediacy of architecture and the Palestine conflict
-        \/","aesthetic occupation : the immediacy of architecture and the Palestine
-        conflict \/"],"isbns":["9780822328148","9780822328032"],"issns":[],"oclcs":["47705555"],"lccns":["2001040726"],"publishDates":["2002"]}},"items":[{"orig":"University
-        of Michigan","fromRecord":"004242314","htid":"mdp.39015054171072","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015054171072","rightsCode":"ic","lastUpdate":"20140223","enumcron":false,"usRightsString":"Limited
-        (search-only)"}]}}'
-    http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:14 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22an%20aesthetic%20occupation%22%20AND%20creator:(monk)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 01 Apr 2014 20:28:14 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '161'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22an+aesthetic+occupation%22+AND+creator:%28monk%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Wed, 02 Apr 2014 02:28:14 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: US-ASCII
-      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:14 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Monk,%20Daniel%20Bertrand,%201960-%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Location:
-      - /identities/search/PersonalIdentities?query=local.Name+all+%22Monk%2C+Daniel+Bertrand%2C+1960-%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '1996'
-      Date:
-      - Tue, 01 Apr 2014 20:28:14 GMT
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
-        all &amp;#34;Monk, Daniel Bertrand, 1960-&amp;#34;</query><xQuery><ns2:searchClause
-        xsi:type=\"ns2:searchClauseType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index
-        xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
-        xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">Monk,
-        Daniel Bertrand, 1960-</ns2:term></ns2:searchClause></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:15 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22an%20aesthetic%20occupation%22%20AND%20creator:(monk)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 01 Apr 2014 20:28:15 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.2
-    body:
-      encoding: US-ASCII
-      string: ! '{"responseHeader":{"status":0,"QTime":3,"params":{"json.wrf":"","qin":"title:\"an
-        aesthetic occupation\" AND creator:(monk) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"an
-        aesthetic occupation\" AND creator:(monk ) AND ( mediatype:texts OR mediatype:audio
-        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:15 GMT
-- request:
-    method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-04-01T16:28:18-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002928667&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-06-16T17:16:00-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002928667&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -183,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 Apr 2014 20:28:18 GMT
+      - Mon, 16 Jun 2014 21:16:00 GMT
       Server:
       - Apache
       Content-Type:
@@ -194,8 +30,8 @@ http_interactions:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2014-04-01T16:28:18-04:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;6731532&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-06-16T17:16:00-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;7284678&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
         \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002928667&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
@@ -211,7 +47,7 @@ http_interactions:
         \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
         \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
         \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
-        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s28EC9688-B9DC-11E3-BA9C-B680FE4C1AE4&lt;/item&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s6A3E3272-F59B-11E3-B08A-D2B3FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002928667&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
@@ -242,7 +78,7 @@ http_interactions:
         \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
         to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
         in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
-        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002928667+(Via+SFX)&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-04-01T16%253A28%253A18-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph002928667%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1&amp;genre=journal</target_url>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002928667+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-06-16T17%253A16%253A00-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph002928667%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
@@ -256,7 +92,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:18 GMT
+  recorded_at: Mon, 16 Jun 2014 21:16:00 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -273,7 +109,7 @@ http_interactions:
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '846'
+      - '843'
       Accept:
       - ! '*/*'
       User-Agent:
@@ -285,12 +121,14 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - text/xml;charset=utf-8
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 01 Apr 2014 20:28:18 GMT
+      - Mon, 16 Jun 2014 21:16:00 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
@@ -309,9 +147,10 @@ http_interactions:
         lectures&lt;/title&gt;\n                &lt;contributor&gt;C. A. O. van Nieuwenhuijze
         (Christoffel Anthonie Olivier), 1920-&lt;/contributor&gt;\n                &lt;publisher&gt;Leiden
         : E.J. Brill&lt;/publisher&gt;\n                &lt;creationdate&gt;1987&lt;/creationdate&gt;\n
-        \               &lt;format&gt;256 p. ; 25 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cisbn$$V9004081755&lt;/identifier&gt;\n
-        \               &lt;subject&gt;Technology and civilization; Technology --
-        Social aspects; Economic development -- Social aspects&lt;/subject&gt;\n                &lt;description&gt;$$Ccontents$$VDevelopment,
+        \               &lt;format&gt;256 p. ; 25 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cisbn$$V9004081755;
+        $$Cisbn$$V9789004081758&lt;/identifier&gt;\n                &lt;subject&gt;Technology
+        and civilization; Technology -- Social aspects; Economic development -- Social
+        aspects&lt;/subject&gt;\n                &lt;description&gt;$$Ccontents$$VDevelopment,
         Multidimensional notion, complex practice -- Development from above, Planning
         as a learning process -- Development from below -- The economic dimension,
         the part that will stand for the whole? -- Social factors, barriers to development?
@@ -335,21 +174,22 @@ http_interactions:
         by C.A.O. Van Nieuwenhuijze.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;C.
         A. O. van  Nieuwenhuijze  (Christoffel Anthonie Olivier), 1920-&lt;/creatorcontrib&gt;\n
         \               &lt;creatorcontrib&gt;Nieuwenhuijze, C&lt;/creatorcontrib&gt;\n
-        \               &lt;creatorcontrib&gt;Van Nieuwenhuijze, C. A. O. (Christoffel
-        Anthonie Olivier), 1920-&lt;/creatorcontrib&gt;\n                &lt;title&gt;The
-        Many faces of development : a debate in seven lectures /&lt;/title&gt;\n                &lt;subject&gt;Technology
-        and civilization&lt;/subject&gt;\n                &lt;subject&gt;Technology
-        \ Social aspects&lt;/subject&gt;\n                &lt;subject&gt;Economic
-        development  Social aspects&lt;/subject&gt;\n                &lt;subject&gt;Civilization
-        and machinery&lt;/subject&gt;\n                &lt;subject&gt;Civilization
-        and technology&lt;/subject&gt;\n                &lt;subject&gt;Machinery and
-        civilization&lt;/subject&gt;\n                &lt;subject&gt;Science, Applied&lt;/subject&gt;\n
-        \               &lt;subject&gt;Arts, Useful&lt;/subject&gt;\n                &lt;subject&gt;Applied
-        science&lt;/subject&gt;\n                &lt;subject&gt;Useful arts&lt;/subject&gt;\n
-        \               &lt;subject&gt;Economic growth&lt;/subject&gt;\n                &lt;subject&gt;Growth,
-        Economic&lt;/subject&gt;\n                &lt;subject&gt;Development, Economic&lt;/subject&gt;\n
-        \               &lt;general&gt;E.J. Brill,&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
-        \               &lt;recordid&gt;nyu_aleph002928667&lt;/recordid&gt;\n                &lt;isbn&gt;9004081755&lt;/isbn&gt;\n
+        \               &lt;creatorcontrib&gt;Nieuwenhuijze, Christoffel Anthonie
+        Olivier van, 1920-&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Van
+        Nieuwenhuijze, C. A. O. (Christoffel Anthonie Olivier), 1920-&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;The Many faces of development : a debate in seven
+        lectures /&lt;/title&gt;\n                &lt;subject&gt;Technology and civilization&lt;/subject&gt;\n
+        \               &lt;subject&gt;Technology  Social aspects&lt;/subject&gt;\n
+        \               &lt;subject&gt;Economic development  Social aspects&lt;/subject&gt;\n
+        \               &lt;subject&gt;Civilization and machinery&lt;/subject&gt;\n
+        \               &lt;subject&gt;Civilization and technology&lt;/subject&gt;\n
+        \               &lt;subject&gt;Machinery and civilization&lt;/subject&gt;\n
+        \               &lt;subject&gt;Science, Applied&lt;/subject&gt;\n                &lt;subject&gt;Applied
+        science&lt;/subject&gt;\n                &lt;subject&gt;Economic growth&lt;/subject&gt;\n
+        \               &lt;subject&gt;Growth, Economic&lt;/subject&gt;\n                &lt;subject&gt;Development,
+        Economic&lt;/subject&gt;\n                &lt;general&gt;E.J. Brill,&lt;/general&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph002928667&lt;/recordid&gt;\n
+        \               &lt;isbn&gt;9004081755&lt;/isbn&gt;\n                &lt;isbn&gt;9789004081758&lt;/isbn&gt;\n
         \               &lt;toc&gt;Development, Multidimensional notion, complex practice
         -- Development from above, Planning as a learning process -- Development from
         below -- The economic dimension, the part that will stand for the whole? --
@@ -376,11 +216,11 @@ http_interactions:
         \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
         \               &lt;creatorcontrib&gt;Nieuwenhuijze, C&lt;/creatorcontrib&gt;\n
         \               &lt;library&gt;NSFO&lt;/library&gt;\n                &lt;lfc01&gt;Main
-        Collection&lt;/lfc01&gt;\n                &lt;frbrgroupid&gt;96636104&lt;/frbrgroupid&gt;\n
+        Collection&lt;/lfc01&gt;\n                &lt;frbrgroupid&gt;65112804&lt;/frbrgroupid&gt;\n
         \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
-        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c2&gt;9004081755&lt;/c2&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c2&gt;9004081755;9789004081758&lt;/c2&gt;\n
         \               &lt;c3&gt;manyfacesofdevelopmeenlectures&lt;/c3&gt;\n                &lt;c4&gt;1987&lt;/c4&gt;\n
-        \               &lt;f3&gt;9004081755&lt;/f3&gt;\n                &lt;f5&gt;manyfacesofdevelopmentadebateinsevenlectures&lt;/f5&gt;\n
+        \               &lt;f3&gt;9004081755;9789004081758&lt;/f3&gt;\n                &lt;f5&gt;manyfacesofdevelopmentadebateinsevenlectures&lt;/f5&gt;\n
         \               &lt;f6&gt;1987&lt;/f6&gt;\n                &lt;f7&gt;many
         faces of development a debate in seven lectures&lt;/f7&gt;\n                &lt;f8&gt;ne&lt;/f8&gt;\n
         \               &lt;f9&gt;256 p. ;&lt;/f9&gt;\n                &lt;f10&gt;e
@@ -397,22 +237,28 @@ http_interactions:
         C. A. O. van (Christoffel Anthonie Olivier), 1920-&lt;/addau&gt;\n                &lt;btitle&gt;The
         Many faces of development : a debate in seven lectures&lt;/btitle&gt;\n                &lt;date&gt;1987&lt;/date&gt;\n
         \               &lt;risdate&gt;1987.&lt;/risdate&gt;\n                &lt;isbn&gt;9004081755&lt;/isbn&gt;\n
-        \               &lt;format&gt;book&lt;/format&gt;\n                &lt;genre&gt;book&lt;/genre&gt;\n
-        \               &lt;ristype&gt;BOOK&lt;/ristype&gt;\n                &lt;notes&gt;Includes
-        bibliographies.&lt;/notes&gt;\n                &lt;cop&gt;Leiden&lt;/cop&gt;\n
+        \               &lt;isbn&gt;9789004081758&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;notes&gt;Includes bibliographies.&lt;/notes&gt;\n                &lt;cop&gt;Leiden&lt;/cop&gt;\n
         \               &lt;pub&gt;E.J. Brill&lt;/pub&gt;\n                &lt;lad01&gt;TNSFO&lt;/lad01&gt;\n
         \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
         \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
         \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:18 GMT
+  recorded_at: Mon, 16 Jun 2014 21:16:00 GMT
 - request:
     method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items?view=full
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -427,20 +273,53 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 01 Apr 2014 20:28:19 GMT
+      - Mon, 16 Jun 2014 21:16:00 GMT
     body:
       encoding: US-ASCII
-      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
-        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items/NYU50002928667000010"><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002928667</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31207013090091</z30-barcode><z30-sub-library>New
+      string: <?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items/NYU50002928667000010"></item></items></get-item-list>
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 21:16:00 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items/NYU50002928667000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 16 Jun 2014 21:16:00 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002928667</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31207013090091</z30-barcode><z30-sub-library>New
         School Fogelman Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
         Available</z30-item-status><z30-open-date>20080418</z30-open-date><z30-update-date>20080717</z30-update-date><z30-cataloger>AUBRYJ</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HM221
         .M35 1987</z30-call-no><z30-call-no-key>0 hm&quot;221 m35 1987</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>000291180</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002928667</z13-doc-number><z13-year>1987</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080810</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HM221</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
         Many faces of development :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Leiden
         : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
-        Available</status></item></items></get-item-list>'
+        Available</status></item></get-item>'
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:19 GMT
+  recorded_at: Mon, 16 Jun 2014 21:16:00 GMT
 - request:
     method: get
     uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22the%20many%20faces%20of%20development%22%20AND%20creator:(nieuwenhuijze)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
@@ -460,7 +339,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Tue, 01 Apr 2014 20:28:19 GMT
+      - Mon, 16 Jun 2014 21:16:01 GMT
       Content-Type:
       - text/html
       Content-Length:
@@ -470,7 +349,7 @@ http_interactions:
       Location:
       - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+many+faces+of+development%22+AND+creator:%28nieuwenhuijze%29+AND+(mediatype:texts+OR+mediatype:audio)
       Expires:
-      - Wed, 02 Apr 2014 02:28:19 GMT
+      - Tue, 17 Jun 2014 03:16:01 GMT
       Cache-Control:
       - max-age=21600
     body:
@@ -478,44 +357,7 @@ http_interactions:
       string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
         Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:19 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22the%20many%20faces%20of%20development%22%20AND%20creator:(nieuwenhuijze)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 01 Apr 2014 20:28:19 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.2
-    body:
-      encoding: US-ASCII
-      string: ! '{"responseHeader":{"status":0,"QTime":4,"params":{"json.wrf":"","qin":"title:\"the
-        many faces of development\" AND creator:(nieuwenhuijze) AND (mediatype:texts
-        OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"the many
-        faces of development\" AND creator:(nieuwenhuijze ) AND ( mediatype:texts
-        OR mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:28:20 GMT
+  recorded_at: Mon, 16 Jun 2014 21:16:01 GMT
 - request:
     method: get
     uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22C%20A%20O%20van%20Nieuwenhuijze%22&sortKeys=holdingscount
@@ -541,7 +383,7 @@ http_interactions:
       Content-Length:
       - '1986'
       Date:
-      - Tue, 01 Apr 2014 20:31:22 GMT
+      - Mon, 16 Jun 2014 21:16:01 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
@@ -566,14 +408,140 @@ http_interactions:
         xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
         Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:31:24 GMT
+  recorded_at: Mon, 16 Jun 2014 21:16:01 GMT
 - request:
     method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01000741245/items?view=full
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22the%20many%20faces%20of%20development%22%20AND%20creator:(nieuwenhuijze)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Mon, 16 Jun 2014 21:16:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":0,"params":{"json.wrf":"","qin":"title:\"the
+        many faces of development\" AND creator:(nieuwenhuijze) AND (mediatype:texts
+        OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"the many
+        faces of development\" AND creator:(nieuwenhuijze ) AND ( mediatype:texts
+        OR mediatype:audio )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Mon, 16 Jun 2014 21:16:01 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Jun 2014 16:05:23 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>21142224061247</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version: 
+  recorded_at: Mon, 23 Jun 2014 16:05:24 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Monk,%20Daniel%20Bertrand,%201960-%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.Name+all+%22Monk%2C+Daniel+Bertrand%2C+1960-%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1996'
+      Date:
+      - Mon, 23 Jun 2014 20:39:29 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &amp;#34;Monk, Daniel Bertrand, 1960-&amp;#34;</query><xQuery><ns2:searchClause
+        xsi:type=\"ns2:searchClauseType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index
+        xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">Monk,
+        Daniel Bertrand, 1960-</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Mon, 23 Jun 2014 20:39:30 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -588,20 +556,248 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 01 Apr 2014 20:40:22 GMT
+      - Mon, 23 Jun 2014 21:00:34 GMT
     body:
       encoding: US-ASCII
-      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
-        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01000741245/items/NYU50000741245000010"><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>000741245</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142032360730</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20020426</z30-open-date><z30-update-date>20050125</z30-update-date><z30-cataloger>MORAITSM</z30-cataloger><z30-date-last-return>20131015</z30-date-last-return><z30-hour-last-return>1539</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>006</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS126
-        .M62 2002</z30-call-no><z30-call-no-key>0 ds&quot;126 m62 2002</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>45.06</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>002794117</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000741245</z13-doc-number><z13-year>2002</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS126</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Monk,
-        Daniel Bertrand, 1960-</z13-author><z13-title-code>24513</z13-title-code><z13-title>An
-        aesthetic occupation :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Durham
-        : Duke University Press, 2002.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0822328038
-        (cloth ; alk. paper)</z13-isbn-issn></z13><status>05/27/14</status></item></items></get-item-list> '
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002928667</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31207013090091</z30-barcode><z30-sub-library>New
+        School Fogelman Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20080418</z30-open-date><z30-update-date>20080717</z30-update-date><z30-cataloger>AUBRYJ</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HM221
+        .M35 1987</z30-call-no><z30-call-no-key>0 hm&quot;221 m35 1987</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>000291180</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002928667</z13-doc-number><z13-year>1987</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080810</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HM221</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        Many faces of development :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Leiden
+        : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
+        Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        type="info"></note><note type="info">Item status: Offsite Available&lt;br
+        /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
+        usage="Optional">20140921</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv>'
     http_version: 
-  recorded_at: Tue, 01 Apr 2014 20:40:23 GMT
+  recorded_at: Mon, 23 Jun 2014 21:00:34 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22an%20aesthetic%20occupation%22%20AND%20creator:(monk)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Mon, 23 Jun 2014 21:03:49 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '161'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22an+aesthetic+occupation%22+AND+creator:%28monk%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Tue, 24 Jun 2014 03:03:49 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Mon, 23 Jun 2014 21:03:50 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22an%20aesthetic%20occupation%22%20AND%20creator:(monk)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Mon, 23 Jun 2014 21:03:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":55,"params":{"json.wrf":"","qin":"title:\"an
+        aesthetic occupation\" AND creator:(monk) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"an
+        aesthetic occupation\" AND creator:(monk ) AND ( mediatype:texts OR mediatype:audio
+        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Mon, 23 Jun 2014 21:03:50 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 23 Jun 2014 21:04:08 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002928667</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31207013090091</z30-barcode><z30-sub-library>New
+        School Fogelman Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20080418</z30-open-date><z30-update-date>20080717</z30-update-date><z30-cataloger>AUBRYJ</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HM221
+        .M35 1987</z30-call-no><z30-call-no-key>0 hm&quot;221 m35 1987</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>000291180</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002928667</z13-doc-number><z13-year>1987</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080810</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HM221</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        Many faces of development :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Leiden
+        : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
+        Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        type="info"></note><note type="info">Item status: Offsite Available&lt;br
+        /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
+        usage="Optional">20140921</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv>'
+    http_version: 
+  recorded_at: Mon, 23 Jun 2014 21:04:08 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 17:35:03 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002928667</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31207013090091</z30-barcode><z30-sub-library>New
+        School Fogelman Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20080418</z30-open-date><z30-update-date>20080717</z30-update-date><z30-cataloger>AUBRYJ</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HM221
+        .M35 1987</z30-call-no><z30-call-no-key>0 hm&quot;221 m35 1987</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>000291180</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002928667</z13-doc-number><z13-year>1987</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080810</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HM221</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        Many faces of development :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Leiden
+        : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
+        Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        type="info"></note><note type="info">Item status: Offsite Available&lt;br
+        /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
+        usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 17:35:03 GMT
+- request:
+    method: put
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold
+    body:
+      encoding: US-ASCII
+      string: post_xml=<hold-request-parameters><pickup-location>TNSFO</pickup-location><last-interest-date></last-interest-date><start-interest-date></start-interest-date><sub-author></sub-author><sub-title></sub-title><pages></pages><note-1></note-1><note-2>User
+        requested the entire item</note-2><rush></rush></hold-request-parameters>
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 17:35:03 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><put-item-hold><reply-text>ok</reply-text><reply-code>0000</reply-code><create-hold><note
+        type="info">Action Succeeded</note></create-hold></put-item-hold> '
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 17:35:03 GMT
 recorded_with: VCR 2.6.0
