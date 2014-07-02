@@ -36,7 +36,7 @@ class Sfx4SolrSearchTest < ActiveSupport::TestCase
     VCR.use_cassette('sfx4solr title exact search') do
       query = "The New Yorker"
       search_type = "exact"
-      first_result = "The New - Yorker (1836-1841)"
+      first_result = 'The New Yorker'
       assert_equal first_result, _search_by_title(query, search_type).hits.first.stored(:title_display)
     end
   end
