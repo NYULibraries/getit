@@ -1,18 +1,13 @@
-<%-
-# Generate a hyperlink for "Request" action with
-# class "ajax_window" for unobtrusive JS. 
--%>
-<% view_data = service_response.view_data %>
-<% if current_user and view_data[:from_aleph] %>
-  <%- # AJAX link, needs logged in user -%>
-  <%= link_to("Request", new_holding_request_url(service_response.id), 
-    target: "_blank", class: "btn btn-primary ajax_window") %>
-<% elsif current_user %>
-  <%- # Ordinary href link to request_url needs logged in user -%>
-  <%= link_to("Request", new_holding_request_url(service_response.id), 
-    target: "_blank", class: "btn btn-primary") %>
+<% service_response = holding.service_response %>
+<% if current_user %>
+  <%- # Link for "Request" action with class "ajax_window" for unobtrusive JS. -%>
+  <%= link_to("Request", new_holding_request_url(service_response), 
+    target: "_blank", class: "btn btn-primary request-link ajax_window") %>
 <% else %>
   <%- # Link to login screen -%>
-  <%= link_to("Request", login_url({return_url: url_for_request(@user_request), service_response_id: service_response.id}), 
-    target: "_blank", class: "btn btn-primary") %>
+  <strong>
+    <%= link_to("Login to Request",
+      login_path({return_url: url_for_request(service_response.request)}),
+      target: "_blank", class: "request-login-link") %>
+  </strong>
 <% end %>
