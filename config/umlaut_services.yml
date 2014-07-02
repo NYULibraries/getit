@@ -10,10 +10,11 @@ default:
   views:
     css: search
     resolve_css: resolve
-    sfx_base_url: "<%= Settings.institutions.default.views.sfx_base_url %>"
+    sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
     # Priority 2
     NYU_Primo:
+      service_id: NYU_Primo
       type: PrimoService
       priority: 2 # After SFX, to get SFX metadata enhancement
       base_url: "<%= Exlibris::Primo.config.base_url %>"
@@ -36,9 +37,9 @@ default:
       display_name: Amazon.com
       type: Amazon
       url: http://webservices.amazon.com/onca/xml
-      api_key: <%= Settings.institutions.default.services.Amazon.api_key %>
-      secret_key: <%= Settings.institutions.default.services.Amazon.secret_key %>
-      associate_tag: <%= Settings.institutions.default.services.Amazon.associate_tag %>
+      api_key: <%= ENV['AMAZON_API_KEY'] %>
+      secret_key: <%= ENV['AMAZON_SECRET_KEY'] %>
+      associate_tag: <%= ENV['AMAZON_ASSOCIATE_TAG'] %>
       priority: 3
       service_types:
         - referent_enhance
@@ -54,7 +55,7 @@ default:
         -
           name: primo
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
-          base_url: "http://library.nyu.edu/persistent/lcn/"
+          base_url: http://library.nyu.edu/persistent/lcn/
           display_text: Back to results
         -
           name: xerxes
@@ -64,23 +65,24 @@ default:
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
-          base_url: "https://getit.library.nyu.edu"
+          base_url: https://getit.library.nyu.edu
           display_text: Back to e-journal search
         -
           name: worldcat1
           regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
-          base_url: "http://www.worldcat.org"
+          base_url: http://www.worldcat.org
           display_text: Back to WorldCat
         -
           name: worldcat2
           regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
-          base_url: "http://www.worldcat.org/search?qt=worldcat_org_all"
+          base_url: http://www.worldcat.org/search?qt=worldcat_org_all
           display_text: Back to WorldCat
           querystring_metadata:
             q: title
 
     # Priority a: Background
     NYU_Primo_Source:
+      service_id: NYU_Primo_Source
       type: PrimoSource
       priority: a
       base_url: <%= Exlibris::Primo.config.base_url %>
@@ -94,9 +96,9 @@ default:
     # availability, so we do it in a bg wave.
     Amazon_bg:
       type: Amazon
-      api_key: <%= Settings.institutions.default.services.Amazon.api_key %>
-      secret_key: <%= Settings.institutions.default.services.Amazon.secret_key %>
-      associate_tag: <%= Settings.institutions.default.services.Amazon.associate_tag %>
+      api_key: <%= ENV['AMAZON_API_KEY'] %>
+      secret_key: <%= ENV['AMAZON_SECRET_KEY'] %>
+      associate_tag: <%= ENV['AMAZON_ASSOCIATE_TAG'] %>
       priority: b
       service_types:
         - abstract
@@ -106,7 +108,7 @@ default:
 
     CoverThing:
       type: CoverThing
-      developer_key: <%= Settings.institutions.default.services.CoverThing.developer_key %>
+      developer_key: <%= ENV['COVER_THING_DEVELOPER_KEY'] %>
       priority: b
       # Pre-empted by says if we already have a cover_image response
       # from somewhere else that runs earlier, don't run this.
@@ -124,7 +126,7 @@ default:
     GoogleBookSearch:
       type: GoogleBookSearch
       priority: b
-      api_key: <%= Settings.institutions.default.services.GoogleBookSearch.api_key %>
+      api_key: <%= ENV['GOOGLE_BOOK_SEARCH_API_KEY'] %>
 
     # Priority c: Background
     # Web of Knowledge API has no api key, but your
@@ -168,7 +170,7 @@ default:
       display_name: isbndb.com
       type: IsbnDb
       priority: d
-      access_key: <%= Settings.institutions.default.services.IsbnDb.access_key %>
+      access_key: <%= ENV['ISBN_DB_ACCESS_KEY'] %>
 
     InternetArchive:
       display_name: the Internet Archive
@@ -209,16 +211,15 @@ NYU:
   parent_code: default
   active_tab: journals
   views:
-    gauges_tracking_code: <%= Settings.institutions.NYU.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
     resolve_css: resolve
-  ip_addresses: <%= Settings.institutions.NYU.ip_addresses %>
   services:
     NYU_SFX:
       name: SFX @ NYU
       display_name: SFX @ NYU
       type: Sfx
-      base_url: "<%= Settings.institutions.NYU.services.NYU_SFX.base_url %>"
+      base_url: http://sfx.library.nyu.edu/sfxlcl41
       priority: 1
       click_passthrough: false
       sfx_requests_expire_crontab: '00 00 * * 00'
@@ -248,17 +249,17 @@ NYU:
       link_name: Periodical Information
       priority: c
       status: active
-      base_url: "<%= Settings.institutions.NYU.services.NYUUlrichsLink.base_url %>"
+      base_url: <%= ENV['NYU_ULRICHS_LINK_BASE_URL'] %>
     ScopusCitations:
       type: Scopus
       priority: c
-      json_api_key: <%= Settings.institutions.NYU.services.ScopusCitations.json_api_key %>
+      json_api_key: <%= ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] %>
       # partner_id: YOUR_SCOPUS_PARTNER_ID
       # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
     NYU_RefWorks:
       name: RefWorks
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_RefWorks.base_url %>"
+      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=refworks&"
       display_text: Push to RefWorks
       priority: 4
       service_types:
@@ -266,7 +267,7 @@ NYU:
     NYU_Endnote:
       name: EndNoteWeb
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_Endnote.base_url %>"
+      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=endnote&"
       display_text: Push to EndNote Web
       priority: 4
       service_types:
@@ -274,7 +275,7 @@ NYU:
     NYU_EASYBIB:
       name: EasyBib
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_EASYBIB.base_url %>"
+      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=easybibpush&"
       display_text: Push to EasyBib
       priority: 4
       service_types:
@@ -282,7 +283,7 @@ NYU:
     NYU_RIS:
       name: RIS
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_RIS.base_url %>"
+      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=ris&"
       display_text: Download as RIS
       priority: 4
       service_types:
@@ -290,7 +291,7 @@ NYU:
     NYU_BIBTEX:
       name: BibTeX
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_BIBTEX.base_url %>"
+      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=bibtex&"
       display_text: Download as BibTeX
       priority: 4
       service_types:
@@ -298,7 +299,7 @@ NYU:
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
-      base_url: "<%= Settings.institutions.NYU.services.NYU_ILLiad.base_url %>"
+      base_url: <%= ENV['ILLIAD_BASE_URL'] %>
       display_text: Bobst Library Interlibrary Loan
       priority: c
       preempted_by:
@@ -314,7 +315,7 @@ NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU
   views:
-    gauges_tracking_code: <%= Settings.institutions.NYUAD.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['NYUAD_GAUGES_TRACKING_CODE'] %>
     css: search_nyuad
     resolve_css: resolve_nyuad
     wayfinder_attributes:
@@ -324,12 +325,11 @@ NYUAD:
         url_suffix: "&institution=nyuad"
       umlaut:
         url_suffix: "/nyuad"
-  ip_addresses: <%= Settings.institutions.NYUAD.ip_addresses %>
 NYUSH:
   name: NYU Shanghai Library
   parent_code: NYU
   views:
-    gauges_tracking_code: <%= Settings.institutions.NYUSH.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['NYUSH_GAUGES_TRACKING_CODE'] %>
     css: search_nyush
     resolve_css: resolve_nyush
     wayfinder_attributes:
@@ -339,15 +339,14 @@ NYUSH:
         url_suffix: "&institution=nyush"
       umlaut:
         url_suffix: "/nyush"
-  ip_addresses: <%= Settings.institutions.NYUSH.ip_addresses %>
 CU:
   name: The Cooper Union Library
   active_tab: journals
   views:
-    gauges_tracking_code: <%= Settings.institutions.CU.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['CU_GAUGES_TRACKING_CODE'] %>
     css: search_cu
     resolve_css: resolve_cu
-    sfx_base_url: "http://sfx.library.nyu.edu/sfxcooper?"
+    sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
     wayfinder_attributes:
         primo:
           url_suffix: "?institution=cu"
@@ -358,7 +357,6 @@ CU:
   controllers:
     searcher: Sfx4Solr::Cu
     # searcher: Sfx4Cu
-  ip_addresses: <%= Settings.institutions.CU.ip_addresses %>
   services:
     # CU SFX service.
     CU_SFX:
@@ -383,7 +381,7 @@ CU:
     ScopusCitations:
       type: Scopus
       priority: c
-      json_api_key: <%= Settings.institutions.NYU.services.ScopusCitations.json_api_key %>
+      json_api_key: <%= ENV['CU_SCOPUS_CITATIONS_JSON_API_KEY'] %>
       # partner_id: YOUR_SCOPUS_PARTNER_ID
       # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
@@ -391,10 +389,10 @@ NS:
   name: New School Libraries
   active_tab: journals
   views:
-    gauges_tracking_code: <%= Settings.institutions.NS.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['NS_GAUGES_TRACKING_CODE'] %>
     css: search_ns
     resolve_css: resolve_ns
-    sfx_base_url: "http://sfx4.library.newschool.edu/ns?"
+    sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
         primo:
           url_suffix: "?institution=ns"
@@ -405,7 +403,6 @@ NS:
   controllers:
     searcher: Sfx4Solr::Ns
     # searcher: Sfx4Ns
-  ip_addresses: <%= Settings.institutions.NS.ip_addresses %>
   services:
     NS_SFX:
       name: SFX @ New School Libraries
@@ -437,14 +434,14 @@ NS:
       type: OpenURLService
       display_name: BobCat
       display_text: GetIt @ NYU
-      base_url: "http://getit.library.nyu.edu/nyu/resolve?"
+      base_url: http://getit.library.nyu.edu/nyu/resolve?
       priority: 5
       status: active
     NS_bX:
       type: Bx
       display_name: Recommender Services
       priority: c
-      token: <%= Settings.institutions.NS.services.NS_bX.token %>
+      token: <%= ENV['NS_BX_TOKEN'] %>
       openurl_base: "/getit/resolve?umlaut.institution=NS&"
       max_records: 2
     NSUlrichsLink:
@@ -453,23 +450,21 @@ NS:
       link_name: Periodical Information
       priority: d
       status: active
-      base_url: "https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn="
+      base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
 
 NYSID:
   display_name: New York School of Interior Design Library
   views:
-    gauges_tracking_code: <%= Settings.institutions.NYSID.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['NYSID_GAUGES_TRACKING_CODE'] %>
     css: search_nysid
     resolve_css: resolve_nysid
-  ip_addresses: <%= Settings.institutions.NYSID.ip_addresses %>
 
 HSL:
   active_tab: journals
   views:
-    gauges_tracking_code: <%= Settings.institutions.HSL.views.gauges_tracking_code %>
+    gauges_tracking_code: <%= ENV['HSL_GAUGES_TRACKING_CODE'] %>
     css: search_hsl
     resolve_css: resolve_hsl
-  ip_addresses: <%= Settings.institutions.HSL.ip_addresses %>
   wayfinder_attributes:
       primo:
         url_suffix: "?institution=hsl"
