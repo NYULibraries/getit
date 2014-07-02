@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 13 Jun 2014 20:29:35 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-patron><reply-text>ok</reply-text><reply-code>0000</reply-code><patron><info
+        type="Circulation Actions" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/circulationActions"></info><info
+        type="Patron Information" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/patronInformation"></info><info
+        type="Patron Status" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/patronStatus"></info><info
+        type="Records" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record"></info><translate-change-active-library>NYU50</translate-change-active-library><institution
+        code="NYU50">NYU50</institution></patron></get-patron> '
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 20:29:36 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/patronInformation/address
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 13 Jun 2014 20:29:36 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-pat-adrs><reply-text>ok</reply-text><reply-code>0000</reply-code><address-information
+        updateable="Y"><z304-address-1 usage="Mandatory" max_len="50">Eloper, Dev</z304-address-1><z304-address-2 usage="Optional" max_len="50">ADDRESS
+        2</z304-address-2><z304-address-3 usage="Optional" max_len="50">Brooklyn</z304-address-3><z304-address-4
+        usage="Optional" max_len="50">NY</z304-address-4><z304-address-5 usage="Optional"
+        max_len="50">NY</z304-address-5><z304-date-from usage="Mandatory">20140609</z304-date-from><z304-date-to
+        usage="Mandatory">20200101</z304-date-to><z304-zip usage="Optional" max_len="9">11215-627</z304-zip><z304-telephone-1
+        usage="Optional" max_len="30"></z304-telephone-1><z304-telephone-2 usage="Optional"
+        max_len="30"></z304-telephone-2><z304-telephone-3 usage="Optional" max_len="30"></z304-telephone-3><z304-telephone-4
+        usage="Optional" max_len="30"></z304-telephone-4><z304-sms-number usage="Optional"
+        max_len="30"></z304-sms-number><z303-want-sms usage="Optional">N</z303-want-sms><z303-plain-html
+        usage="Optional" code="P">Email Body Only</z303-plain-html><z304-email-address
+        usage="Optional" max_len="60">dev.eloper@library.edu</z304-email-address><mail-options
+        usage="Read-Only"><mail-option code="P">Email Body Only</mail-option><mail-option
+        code="H">Attachment Only</mail-option><mail-option code="B">Attachment and
+        Email Body</mail-option></mail-options></address-information></get-pat-adrs> '
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 20:29:36 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01000741245/items/NYU50000741245000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 13 Jun 2014 20:29:36 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>000741245</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142032360730</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20020426</z30-open-date><z30-update-date>20050125</z30-update-date><z30-cataloger>MORAITSM</z30-cataloger><z30-date-last-return>20131015</z30-date-last-return><z30-hour-last-return>1539</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>006</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS126
+        .M62 2002</z30-call-no><z30-call-no-key>0 ds&quot;126 m62 2002</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>45.06</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>002794117</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000741245</z13-doc-number><z13-year>2002</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS126</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Monk,
+        Daniel Bertrand, 1960-</z13-author><z13-title-code>24513</z13-title-code><z13-title>An
+        aesthetic occupation :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Durham
+        : Duke University Press, 2002.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0822328038
+        (cloth ; alk. paper)</z13-isbn-issn></z13><status>09/22/14</status><info type="HoldRequest"
+        href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01000741245/items/NYU50000741245000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="BOBST">NYU Bobst</pickup-location><pickup-location code="NCOUR">NYU
+        Courant</pickup-location><pickup-location code="NIFA">NYU Institute of Fine
+        Arts</pickup-location><pickup-location code="NISAW">NYU Inst Study Ancient
+        World</pickup-location><pickup-location code="NREI">NYU Jack Brause</pickup-location><pickup-location
+        code="NPOLY">NYU Poly</pickup-location><pickup-location code="NYUAB">NYU Abu
+        Dhabi Library (UAE)</pickup-location><pickup-location code="NYUSE">NYUAD Ctr
+        for Sci &amp; Eng (UAE)</pickup-location><pickup-location code="NYUSS">NYUAD
+        Sama Fac Offices (UAE)</pickup-location><pickup-location code="NYUSX">NYU
+        Shanghai Library (China)</pickup-location></pickup-locations><note type="info">This
+        item is checked out until 09/22/14 at 09:45 PM.</note><note type="info">The
+        expected date of availability for this item is 06/27/14 at 09:45 PM.</note><note
+        type="info"></note><note type="info"></note><note type="info">Item status:
+        Regular loan&lt;br /&gt; Call number: DS126 .M62 2002&lt;br /&gt;</note><last-interest-date
+        usage="Optional">20140911</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01000741245/items/NYU50000741245000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>000741245</adm-doc-number><item-sequence>000010</item-sequence></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>000741245</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Fri, 13 Jun 2014 20:29:36 GMT
+recorded_with: VCR 2.6.0
