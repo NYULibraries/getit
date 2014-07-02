@@ -1,63 +1,75 @@
 module HoldingRequestsHelper
 
-  # Display header for the given holding
-  def request_header(title)
-    return "\"#{title}\" is requested." if @holding.requested?
-    return "\"#{title}\" is checked out." if @holding.checked_out?
-    return "\"#{title}\" is available at #{@holding.sub_library}." if @holding.available?
-    return "\"#{title}\" is available from the #{@holding.sub_library} offsite storage facility." if @holding.offsite?
-    return "\"#{title}\" is currently being processed by library staff." if @holding.in_processing?
-    return "\"#{title}\" is on order." if @holding.on_order?
-    return "\"#{title}\" is currently out of circulation." if @holding.ill?
+  # Display title for the holding request
+  def title
+    @title ||= HoldingRequest::Title.new(@holding_request)
+  end
+
+  # Options available for the holding request
+  def options
+    @options ||= HoldingRequest::Options.new(@holding_request)
+  end
+
+  # Pickup locations for the holding request
+  def pickup_locations
+    @pickup_locations ||= HoldingRequest::PickupLocations.new(@holding_request)
   end
 
   # Request form to offer holding request options
-  def request_form(holding_request_type, &block)
-    form_tag(holding_request_url(@service_response_id), :class => "modal_dialog_form request_#{holding_request_type}" ) do
-      holding_request_type_field = hidden_field_tag(:holding_request_type, holding_request_type)
+  def request_form(type, &block)
+    url = holding_request_url(service_response)
+    form_tag(url, id: "holding-request-#{type}", class: 'modal_dialog_form') do
+      type_field = hidden_field_tag(:type, type)
       content = capture(&block)
       output = ActiveSupport::SafeBuffer.new
-      output.safe_concat(content_tag(:div, holding_request_type_field, :style => 'margin:0;padding:0;display:inline'))
+      style = 'margin:0;padding:0;display:inline'
+      output.safe_concat(content_tag(:div, type_field, style: style))
       output << content
     end
   end
 
   # Request option for a request form
-  def request_option(&block)
-    content_tag(:li) do
-      content_tag(:div, :class => "section") do
+  def request_option(type, &block)
+    content_tag(:li, id: "holding-request-option-#{type}") do
+      content_tag(:div, class: 'section') do
         yield
       end
     end
   end
 
   # Request a scan of a portion of the item option (with radio button).
-  def request_link_or_text(text, holding_request_type)
-    (pickup_locations.length > 1) ?
-      text.html_safe : content_tag(:p) { link_to_create_holding_request(text, holding_request_type) }
+  def request_link_or_text(text, type)
+    if (pickup_locations.size > 1)
+      text.html_safe
+    else
+      content_tag(:p) do
+        options = {target: '_blank', class: 'ajax_window'}
+        link_to_create_holding_request(text, type, options)
+      end
+    end
   end
 
   # Request option the entire item (with radio button).
   # Request for the entire item to be delivered to a pickup location
-  def entire_request_option
-    request_option do
-      label_tag(:entire_yes, class: "radio") {
-        radio_button_tag("entire",  "yes", :checked => true) +
-        "Request this item to be delivered to an NYU Library of your choice." +
+  def entire_request_option(type)
+    request_option("#{type}-entire") do
+      label_tag(:entire_yes, class: 'radio') do
+        radio_button_tag('entire',  'yes', checked: true) +
+        t("holding_requests.new.#{type}.entire.default") +
         delivery_times
-      } + pickup_locations_fields(style: "padding-left: 20px;")
+      end + pickup_locations_field_set(style: 'padding-left: 20px;')
     end
   end
 
   # Request option for a scanned of a portion of the item (with radio button).
   # Request for a portion of the item to scanned and delivered electronically.
-  def scan_portion_request_option
-    request_option do
-      label_tag(:entire_no, class: "radio") {
-        radio_button_tag("entire",  "no") +
-        "Request that a portion of the item be scanned and delivered electronically." +
+  def scan_request_option(type)
+    request_option("#{type}-scan") do
+      label_tag(:entire_no, class: 'radio') do
+        radio_button_tag('entire',  'no') +
+        t("holding_requests.new.#{type}.scan.default") +
         fair_use_disclaimer
-      } + scan_fields(style: "padding-left: 20px;")
+      end + scan_field_set(style: 'padding-left: 20px;')
     end
   end
 
@@ -65,18 +77,21 @@ module HoldingRequestsHelper
   # If there are multiple pickup locations, a select box is rendered.
   # If there is only one pickup location, text specifying the pickup
   # location with a hidden field is rendered.
-  def pickup_locations_fields(options=nil)
-    field_set_tag(nil, options) do
-      if pickup_locations.length > 1
-        label_tag("pickup_location", "Select pickup location:") +
-         select_tag('pickup_location', options_for_select(pickup_locations))
+  def pickup_locations_field_set(field_set_options=nil)
+    field_set_tag(nil, field_set_options) do
+      if pickup_locations.size > 1
+        label_tag('pickup_location', 'Select pickup location:') +
+         select_tag('pickup_location', options_for_select(pickup_locations.to_a))
       else
-        pickup_location = (pickup_locations.length == 1) ?
-          pickup_locations.first.first : @holding.sub_library
-        pickup_location_code = (pickup_locations.length == 1) ?
-          pickup_locations.first.last : @holding.sub_library_code
-        content_tag(:strong, "Pickup location is #{pickup_location}") +
-          hidden_field_tag("pickup_location", pickup_location_code)
+        pickup_location = begin
+          if pickup_locations.size == 1
+            pickup_locations.first
+          else
+            holding.sub_library
+          end
+        end
+        content_tag(:strong, "Pickup location is #{pickup_location.display}.") +
+          hidden_field_tag('pickup_location', pickup_location.code)
       end
     end
   end
@@ -87,8 +102,8 @@ module HoldingRequestsHelper
   #   - Title of Part
   #   - Desired pages
   #   - Notes
-  def scan_fields(options=nil)
-    field_set_tag(nil, options) do
+  def scan_field_set(field_set_options=nil)
+    field_set_tag(nil, field_set_options) do
       label_tag("sub_author", "Author of part:") +
         text_field_tag("sub_author") +
       label_tag("sub_title", "Title of part:") +
@@ -96,7 +111,7 @@ module HoldingRequestsHelper
       label_tag("pages", "Pages (e.g., 7-12; 5, 6-8, 10-15):") +
         text_field_tag("pages") +
       label_tag("note_1", "Notes:") +
-        text_field_tag("note_1", nil, :maxlength => 50)
+        text_field_tag("note_1", nil, maxlength: 50)
     end
   end
 
@@ -105,14 +120,17 @@ module HoldingRequestsHelper
   # for the request.
   # Only display delivery times if mulitple pickup locations
   def delivery_times
-    content_tag(:p, link_to_delivery_times, class: "delivery-times") if pickup_locations.length > 1
+    if pickup_locations.size > 1
+      content_tag(:p, link_to_delivery_times, class: "delivery-times")
+    end
   end
 
   # Fair user disclaimer for scanned resources.
   # Provide a link to fair use guidelines
   def fair_use_disclaimer
     content_tag(:p, class: "fair-use-disclaimer") do
-      "(Requests must be within ".html_safe + link_to_fair_use_guidelines + ".)".html_safe
+      '(Requests must be within '.html_safe +
+      link_to_fair_use_guidelines + '.)'.html_safe
     end
   end
 
@@ -120,100 +138,65 @@ module HoldingRequestsHelper
   # Provide a link to helpful information explaining
   # the various choices if there are multiple choices
   def delivery_help
-    content_tag(:p, link_to_delivery_help, class: "delivery-help") if request_options_count > 1
+    if options.size > 1
+      content_tag(:p, link_to_delivery_help, class: 'delivery-help')
+    end
   end
 
   # Link to create a holding request for the given type with the given text
-  def link_to_create_holding_request(text, holding_request_type)
-    link_to(text, create_holding_request_url(@service_response_id,
-      holding_request_type, pickup_locations.first.last),
-        {:target => "_blank", :class => "ajax_window"})
+  def link_to_create_holding_request(text, type, options)
+    pickup_location = (pickup_locations.first || holding.sub_library)
+    url = create_holding_request_url(service_response, type, pickup_location.code)
+    link_to(text, url, options)
   end
 
   # Delivery times link
   def link_to_delivery_times
-    link_to("See delivery times",
-      "http://library.nyu.edu/services/deliveryservices.html#how_long",
-        :target => "_blank")
+    url = 'http://library.nyu.edu/services/deliveryservices.html#how_long'
+    link_to('See delivery times', url, target: '_blank')
   end
 
   # Fair use link
   def link_to_fair_use_guidelines
-    link_to("fair use guidelines",
-      "http://library.nyu.edu/copyright/#fairuse",
-        target: "_blank")
+    url = 'http://library.nyu.edu/copyright/#fairuse'
+    link_to('fair use guidelines', url, target: "_blank")
   end
 
   # Delivery help link
   def link_to_delivery_help
-    link_to("http://library.nyu.edu/help/requesthelp.html", :target => "_blank") do
-      icon_tag(:info) + content_tag(:span, "Not sure which option to choose?")
+    link_to('http://library.nyu.edu/help/requesthelp.html', target: '_blank') do
+      icon_tag(:info) + content_tag(:span, 'Not sure which option to choose?')
     end
   end
 
-  # Number of request options available for user/holding combo.
-  def request_options_count
-    count = 0
-    count += 2 if @authorizer.available?
-    count += 1 if @authorizer.recall?
-    count += 1 if @authorizer.in_processing?
-    count += 1 if @authorizer.on_order?
-    count += 2 if @authorizer.offsite?
-    count += 1 if @authorizer.ill?
-    return count
+  def available_request_text
+    @available_request_text ||= begin
+      case holding.sub_library.code
+      when 'NABUD', 'NADEX'
+        t('holding_requests.new.available.entire.nyuad')
+      when 'BAFC'
+        t('holding_requests.new.available.entire.afc')
+      else
+        t('holding_requests.new.available.entire.default')
+      end
+    end
   end
 
-  # Gather and return pickup locations for the user/holding combo.
-  # Returns an Array of 2 element Arrays with the sub library and sub library code of the
-  # as the elements
-  #   e.g. [["NYU Bobst", "BOBST"], ["Courant Library", "COUR"]]
-  def pickup_locations
-    return @pickup_locations if defined?(@pickup_locations)
-    # Return empty pickup locations if current user's borrower status,
-    # holding's adm library code or holdling's sub library code is nil
-    # since we need those to get the pickup locations in the first place
-    return [] if bor_status.nil? or @holding.adm_library_code.nil? or @holding.sub_library_code.nil?
-    # If we didn't get any pickup locations from the Aleph tables for the user/holding combo,
-    # return 1 pickup location based on the holding's sub library
-    @pickup_locations = (aleph_helper_pickup_locations.nil?) ?
-      [[@holding.sub_library, @holding.sub_library_code]] : aleph_helper_pickup_locations.collect { |location_code|
-        [decode_sub_library(location_code), location_code] }
+  def success_text
+    @success_text ||= begin
+      if (scan?)
+        t('holding_requests.show.scan')
+      else
+        t('holding_requests.show.default', pickup_location: "#{pickup_location.display}")
+      end
+    end
   end
 
-  # Return the pickup locations from the aleph helper for the user/holding combo.
-  def aleph_helper_pickup_locations
-    # Get Aleph pick up locations for the given holding's sub library
-    @aleph_helper_pickup_locations ||= aleph_helper.item_pickup_locations(
-      adm_library_code: @holding.adm_library_code.downcase, sub_library_code: @holding.sub_library_code,
-        item_status_code: @holding.item_status_code, item_process_status_code: @holding.item_process_status_code,
-          availability_status: @holding.availability_status, bor_status: bor_status)
+  def service_response 
+    holding.service_response unless holding.nil?
   end
-  private :aleph_helper_pickup_locations
 
-  # Return the borrower status for the current user/holding combo,
-  # i.e. the user's status for the holding's ADM and sub library.
-  def bor_status
-    @bor_status ||= user_permissions[:bor_status]
-  end
-  private :bor_status
-
-  # Instance of the Aleph tables helper
-  def aleph_helper
-    @aleph_helper ||= Exlibris::Aleph::TabHelper.instance()
-  end
-  private :aleph_helper
-
-  # User permissions for the holding,
-  # i.e. the user's permissions for the holding's ADM and sub library.
-  def user_permissions
-    @user_permission ||=
-      current_user.aleph_permissions_by_sub_library_code(@holding.adm_library_code, @holding.sub_library_code)
-  end
-  private :user_permissions
-
-  # Decode sublibrary
-  def decode_sub_library(code)
-    value = aleph_helper.sub_library_text(code)
-    return (value.nil?) ? code : value
+  def holding
+    @holding_request.holding unless @holding_request.nil?
   end
 end

@@ -1,0 +1,10 @@
+<%- # The 'in procesing' request form -%>
+<%= request_form(:processing) do %>
+  <%= request_option(:processing) do %>
+    <%= request_link_or_text(t('holding_requests.new.processing.default'), :processing) %>
+    Items are typically ready for pickup within 5 days.<br />
+    <%= pickup_locations_field_set %>
+    <%= delivery_times %>
+  <% end %>
+  <%= submit_tag 'Submit' if pickup_locations.size > 1 %>
+<% end %>

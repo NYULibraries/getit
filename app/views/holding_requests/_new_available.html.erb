@@ -1,47 +1,21 @@
-<%
-# The 'available' request form
-# Offers the following options:
-#   - If we have an NYU sublibrary, 
+<%-
+# The 'available' request form offers the following options:
+#   - If the holding is from an NYU sublibrary, 
 #     - Entire item request
 #     - Scanned portion
 #   - Otherwise set the appropriate request text for the sublibrary
 #     - only offer the entire item option
-%>
-<%
-# Sublibrary constants for determining which options to offer.
-nyu_sub_libraries = ["BOBST", "NCOUR"]
-ad_sub_libraries = ["NABUD", "NADEX"]
-afc_sub_libraries = ["BAFC"]
-%>
-<%= request_form("available") do %>
-<%
-  # NYU sublibraries
-  if (nyu_sub_libraries.include?(sub_library_code))
-%>
-    <% # Entire item request %>
-    <%= entire_request_option %>
-    <br />
-    <% # Scanned portion request %>
-    <%= scan_portion_request_option %>
-<%
-  # Other sublibraries
-  else
-    # Default request text
-    request_text = "Request this item to be delivered to the pickup location of your choice."
-    # For AFC, use AFC request text
-    if (afc_sub_libraries.include?(sub_library_code))
-      request_text = "Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE)."
-    # For Abu Dhabi, use Abu Dhabi request text
-    elsif (ad_sub_libraries.include?(sub_library_code))
-      request_text = "Request this item."
-      request_text += "It will be held for you at the specified pickup location."
-      request_text += "Items are ready for pickup within 2 business days."
-    end %>
-    <% # Entire item request %>
-    <%= request_option {
-      content_tag(:p, request_text) +
-        pickup_locations_fields + delivery_times } %>
-<%
-  end %>
+-%>
+<%= request_form(:available) do %>
+  <% if (["BOBST", "NCOUR"].include?(holding.sub_library.code)) %>
+    <%= entire_request_option(:available) %><br />
+    <%= scan_request_option(:available) %>
+  <% else %>
+    <%= request_option(:available) do %>
+      <%= content_tag(:p, available_request_text) %>
+      <%= pickup_locations_field_set %>
+      <%= delivery_times %>
+    <% end %>
+  <% end %>
   <%= submit_tag 'Submit' %>
 <% end %>

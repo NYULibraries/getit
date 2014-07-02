@@ -1,9 +1,8 @@
-<%
-# The 'ILL' request option
-%>
-<%= request_option do %>
-  <%= link_to("Request this item from another library via Interlibrary Loan (ILL)", 
-    create_holding_request_url(service_response_id, "ill"), :target => "_blank" ) %>.<br />
-  Most requests arrive within two weeks. Due dates and renewals are determined by the lending library.
+<%- # The 'ILL' request option -%>
+<%= request_option(:ill) do %>
+  <%= link_to_create_holding_request(t('holding_requests.new.ill.default'), :ill, target: '_blank') %>.
+  <br />
+  Most requests arrive within two weeks.
+  Due dates and renewals are determined by the lending library.
   Article/chapter requests are typically delivered electronically in 3-5 days.
 <% end %>
