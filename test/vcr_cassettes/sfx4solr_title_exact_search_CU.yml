@@ -1,32 +1,38 @@
---- 
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: post
-    uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
-    body: 
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
       encoding: US-ASCII
-      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=NEW+YORKER&fl=%2A+score&qf=title_text&defType=dismax&pf=title_text%5E2.0&bq=title_exact_sm%3ANEW%5C+YORKER%5E10.0&ps=0&start=0&rows=20
-    headers: 
-      Content-Type: 
+      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=NEW+YORKER&fl=%2A+score&qf=title_text&defType=edismax&pf=title_text%5E2.0&bq=title_exact_sm%3ANEW%5C+YORKER%5E10.0&ps=0&start=0&rows=20
+    headers:
+      Content-Type:
       - application/x-www-form-urlencoded; charset=UTF-8
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      Server: 
+    headers:
+      Server:
       - Apache-Coyote/1.1
-      Content-Type: 
+      Content-Type:
       - text/plain;charset=UTF-8
-      Transfer-Encoding: 
+      Transfer-Encoding:
       - chunked
-      Date: 
-      - Fri, 06 Sep 2013 17:25:31 GMT
-      Connection: 
+      Date:
+      - Mon, 30 Jun 2014 19:51:37 GMT
+      Connection:
       - close
-    body: 
+    body:
       encoding: US-ASCII
-      string: "{'responseHeader'=>{'status'=>0,'QTime'=>1,'params'=>{'sort'=>'score desc, title_sort_s asc','qf'=>'title_text','wt'=>'ruby','defType'=>'dismax','rows'=>'20','pf'=>'title_text^2.0','fl'=>'* score','bq'=>'title_exact_sm:NEW\\\\ YORKER^10.0','start'=>'0','q'=>'NEW YORKER','fq'=>'type:Sfx4\\\\:\\\\:Cu\\\\:\\\\:AzTitle','ps'=>'0'}},'response'=>{'numFound'=>1,'start'=>0,'maxScore'=>14.306714,'docs'=>[{'id'=>'Sfx4::Cu::AzTitle 36024','object_id_ss'=>'110975413975944','title_display_ss'=>'The New Yorker','issn_ss'=>'0028-792X','isbn_ss'=>'','lccn_ss'=>'2011201780','score'=>14.306714}]}}"
+      string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>2,''params''=>{''pf''=>''title_text^2.0'',''bq''=>''title_exact_sm:NEW\\
+        YORKER^10.0'',''fl''=>''* score'',''sort''=>''score desc, title_sort_s asc'',''start''=>''0'',''q''=>''NEW
+        YORKER'',''qf''=>''title_text'',''wt''=>''ruby'',''fq''=>''type:Sfx4\\:\\:Cu\\:\\:AzTitle'',''rows''=>''20'',''ps''=>''0'',''defType''=>''edismax''}},''response''=>{''numFound''=>1,''start''=>0,''maxScore''=>14.660031,''docs''=>[{''id''=>''Sfx4::Cu::AzTitle
+        31452'',''object_id_ss''=>''110975413975944'',''title_display_ss''=>''The
+        New Yorker'',''issn_ss''=>''0028-792X'',''isbn_ss''=>'''',''lccn_ss''=>''2011201780'',''score''=>14.660031}]}}
+
+'
     http_version: 
-  recorded_at: Fri, 06 Sep 2013 17:25:31 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Mon, 30 Jun 2014 19:51:38 GMT
+recorded_with: VCR 2.9.2

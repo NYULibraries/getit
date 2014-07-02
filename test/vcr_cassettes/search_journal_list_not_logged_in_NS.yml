@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://DUMMY_SOLR_INSTANCE/select?wt=ruby
+    uri: http://solr.library.edu/select?wt=ruby
     body:
       encoding: US-ASCII
       string: fq=type%3ASfx4%5C%3A%5C%3ANs%5C%3A%5C%3AAzTitle&fq=letter_group_sm%3AA&sort=title_sort_s+asc&start=0&rows=20&q=%2A%3A%2A
@@ -21,51 +21,53 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Mon, 09 Sep 2013 20:25:52 GMT
+      - Mon, 30 Jun 2014 19:40:17 GMT
       Connection:
       - close
     body:
       encoding: US-ASCII
       string: ! '{''responseHeader''=>{''status''=>0,''QTime''=>0,''params''=>{''sort''=>''title_sort_s
-        asc'',''wt''=>''ruby'',''rows''=>''20'',''start''=>''0'',''q''=>''*:*'',''fq''=>[''type:Sfx4\\:\\:Ns\\:\\:AzTitle'',''letter_group_sm:A'']}},''response''=>{''numFound''=>7592,''start''=>0,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
-        34288'',''object_id_ss''=>''2320000000018368'',''title_display_ss''=>''A.A.V.
+        asc'',''start''=>''0'',''q''=>''*:*'',''wt''=>''ruby'',''fq''=>[''type:Sfx4\\:\\:Ns\\:\\:AzTitle'',''letter_group_sm:A''],''rows''=>''20''}},''response''=>{''numFound''=>8030,''start''=>0,''docs''=>[{''id''=>''Sfx4::Ns::AzTitle
+        36386'',''object_id_ss''=>''2320000000018368'',''title_display_ss''=>''A.A.V.
         newsletter'',''issn_ss''=>''2154-6312'',''isbn_ss''=>'''',''lccn_ss''=>''sn85010192''},{''id''=>''Sfx4::Ns::AzTitle
-        67127'',''object_id_ss''=>''3310000000008350'',''title_display_ss''=>''A and
+        71268'',''object_id_ss''=>''3310000000008350'',''title_display_ss''=>''A and
         D Intelligence'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        23940'',''object_id_ss''=>''2670000000312291'',''title_display_ss''=>''A+BE
-        :  Architecture and the Built Environment'',''issn_ss''=>''2212-3202'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        31058'',''object_id_ss''=>''1000000000277911'',''title_display_ss''=>''A contrario'',''issn_ss''=>''1660-7880'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        67373'',''object_id_ss''=>''3170000000047802'',''title_display_ss''=>''A.
+        25431'',''object_id_ss''=>''2670000000312291'',''title_display_ss''=>''A+BE
+        :  Architecture and the Built Environment'',''issn_ss''=>''2212-3202'',''isbn_ss''=>'''',''lccn_ss''=>''2013228579''},{''id''=>''Sfx4::Ns::AzTitle
+        32931'',''object_id_ss''=>''1000000000277911'',''title_display_ss''=>''A contrario'',''issn_ss''=>''1660-7880'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        71528'',''object_id_ss''=>''3170000000047802'',''title_display_ss''=>''A.
         Curtis\''s Journal of Education and of Physiological and Medical Reform'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        86922'',''object_id_ss''=>''110978979594943'',''title_display_ss''=>''A D
+        92212'',''object_id_ss''=>''110978979594943'',''title_display_ss''=>''A D
         A update'',''issn_ss''=>''1071-7382'',''isbn_ss''=>'''',''lccn_ss''=>''sn93003041''},{''id''=>''Sfx4::Ns::AzTitle
-        52784'',''object_id_ss''=>''3170000000047803'',''title_display_ss''=>''A.
+        56052'',''object_id_ss''=>''3170000000047803'',''title_display_ss''=>''A.
         D. F. Randolph & Co\''s Literary Bulletin'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        40184'',''object_id_ss''=>''2670000000147550'',''title_display_ss''=>''A&G
+        42672'',''object_id_ss''=>''2670000000147550'',''title_display_ss''=>''A&G
         Information Services'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        31157'',''object_id_ss''=>''1000000000419525'',''title_display_ss''=>''A&G
-        Information Services: Comtex'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        45032'',''object_id_ss''=>''110985822450838'',''title_display_ss''=>''A.I.B.S.
+        54684'',''object_id_ss''=>''1000000000565395'',''title_display_ss''=>''A.G.
+        Spanos Companies SWOT Analysis'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        47793'',''object_id_ss''=>''110985822450838'',''title_display_ss''=>''A.I.B.S.
         bulletin'',''issn_ss''=>''0096-7645'',''isbn_ss''=>'''',''lccn_ss''=>''2005236975''},{''id''=>''Sfx4::Ns::AzTitle
-        41428'',''object_id_ss''=>''2560000000074684'',''title_display_ss''=>''A.I.H.P.
+        43967'',''object_id_ss''=>''2560000000074684'',''title_display_ss''=>''A.I.H.P.
         notes'',''issn_ss''=>''2161-5403'',''isbn_ss''=>'''',''lccn_ss''=>''2011200219''},{''id''=>''Sfx4::Ns::AzTitle
-        40974'',''object_id_ss''=>''1000000000290135'',''title_display_ss''=>''A.M.
+        43487'',''object_id_ss''=>''1000000000290135'',''title_display_ss''=>''A.M.
         Best Newswire'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        2851'',''object_id_ss''=>''3170000000047806'',''title_display_ss''=>''A.M.D.C.
+        3025'',''object_id_ss''=>''3170000000047806'',''title_display_ss''=>''A.M.D.C.
         the Sunday School Messenger'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        72777'',''object_id_ss''=>''991042723427002'',''title_display_ss''=>''The
+        77303'',''object_id_ss''=>''991042723427002'',''title_display_ss''=>''The
         A.M.E. church review'',''issn_ss''=>''0360-3725'',''isbn_ss''=>'''',''lccn_ss''=>''2008247687''},{''id''=>''Sfx4::Ns::AzTitle
-        25380'',''object_id_ss''=>''110978979594903'',''title_display_ss''=>''A. magazine'',''issn_ss''=>''1070-9401'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        6743'',''object_id_ss''=>''2530000000001340'',''title_display_ss''=>''A Noticia
-        - Online Edition (Portuguese Language)'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        41874'',''object_id_ss''=>''110978984566349'',''title_display_ss''=>''A parte
+        26972'',''object_id_ss''=>''110978979594903'',''title_display_ss''=>''A. magazine'',''issn_ss''=>''1070-9401'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        33283'',''object_id_ss''=>''1000000000565391'',''title_display_ss''=>''A.
+        O. Smith Corporation SWOT Analysis'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        23975'',''object_id_ss''=>''1000000000565396'',''title_display_ss''=>''A.P.
+        Moller Maersk A/S SWOT Analysis'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
+        44431'',''object_id_ss''=>''110978984566349'',''title_display_ss''=>''A parte
         rei'',''issn_ss''=>''1137-8204'',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        21361'',''object_id_ss''=>''1000000000321364'',''title_display_ss''=>''The
+        22726'',''object_id_ss''=>''1000000000321364'',''title_display_ss''=>''The
         A.W.A. bulletin'',''issn_ss''=>''1936-8976'',''isbn_ss''=>'''',''lccn_ss''=>''2007215164''},{''id''=>''Sfx4::Ns::AzTitle
-        80220'',''object_id_ss''=>''3170000000047804'',''title_display_ss''=>''A.
-        Williams & Co\''s List of All the New Books Issued in the United States'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''},{''id''=>''Sfx4::Ns::AzTitle
-        20165'',''object_id_ss''=>''3170000000047805'',''title_display_ss''=>''A.
-        Williams & Co\''s Monthly Bulletin of D. Appleton & Co\''s New Publications'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''}]}}'
+        85153'',''object_id_ss''=>''3170000000047804'',''title_display_ss''=>''A.
+        Williams & Co\''s List of All the New Books Issued in the United States'',''issn_ss''=>'''',''isbn_ss''=>'''',''lccn_ss''=>''''}]}}
+
+'
     http_version: 
-  recorded_at: Mon, 09 Sep 2013 20:25:52 GMT
-recorded_with: VCR 2.4.0
+  recorded_at: Mon, 30 Jun 2014 19:40:18 GMT
+recorded_with: VCR 2.9.2
