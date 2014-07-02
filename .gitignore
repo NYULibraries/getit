@@ -35,3 +35,9 @@ coverage/
 
 # Ignore the wiki directory
 wiki
+
+# Ignore .ruby-version
+.ruby-version
+
+# Ignore .powenv
+.powenv
