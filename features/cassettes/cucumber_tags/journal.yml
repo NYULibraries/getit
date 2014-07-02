@@ -1,0 +1,713 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-06-24T15:09:38-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002736245&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 19:09:38 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-06-24T15:09:38-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;7321440&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002736245&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002736245&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002736245&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s16A5F918-FBD3-11E3-A709-5795FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002736245&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002736245%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002736245+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-06-24T15%253A09%253A38-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph002736245%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:38 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph002736245</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '843'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 19:09:38 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;002736245&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph002736245&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01002736245&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;journal&lt;/type&gt;\n
+        \               &lt;title&gt;The Journal of behavioral economics.&lt;/title&gt;\n
+        \               &lt;publisher&gt;Macomb, Center for Business and Economic
+        Research, Western Illinois University&lt;/publisher&gt;\n                &lt;creationdate&gt;1972&lt;/creationdate&gt;\n
+        \               &lt;format&gt;v. 28 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cissn$$V0090-5720&lt;/identifier&gt;\n
+        \               &lt;subject&gt;Economics -- Psychological aspects -- Periodicals;
+        Economics -- Periodicals; Electronic journals&lt;/subject&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;relation&gt;$$Clater_title ; $$VJournal of socio-economics&lt;/relation&gt;\n
+        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main
+        Collection$$2(HB1 .J55 )$$Sunavailable$$38$$48$$5Y$$60$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$INYU$$LBWEB$$1Internet Resources$$2(HB1
+        .J55 Electronic access )$$Scheck_holdings$$XNYU50$$YBWEB$$ZBNYUI&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph002736245&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;lds01&gt;NYUAD&lt;/lds01&gt;\n                &lt;lds01&gt;NYUSH&lt;/lds01&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Scheck_holdings&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;available&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;linktorsrc&gt;$$Uhttps://ezproxy.library.nyu.edu/login?url=http://www.sciencedirect.com/science/journal/00905720$$DOnline
+        Version$$INYU&lt;/linktorsrc&gt;\n                &lt;linktorsrc&gt;$$Uhttps://ezproxy.library.nyu.edu/login?url=http://www.sciencedirect.com/science/journal/00905720$$DOnline
+        Resource$$INYUAD&lt;/linktorsrc&gt;\n                &lt;linktorsrc&gt;$$Uhttps://ezproxy.library.nyu.edu/login?url=http://www.sciencedirect.com/science/journal/00905720$$DOnline
+        Resource$$INYUSH&lt;/linktorsrc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;Mellon
+        Project.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;ScienceDirect
+        (Online service)&lt;/creatorcontrib&gt;\n                &lt;title&gt;The
+        Journal of behavioral economics.&lt;/title&gt;\n                &lt;subject&gt;Economics
+        \ Psychological aspects Periodicals&lt;/subject&gt;\n                &lt;subject&gt;Economics
+        \ Periodicals&lt;/subject&gt;\n                &lt;subject&gt;Electronic journals&lt;/subject&gt;\n
+        \               &lt;subject&gt;Political economy&lt;/subject&gt;\n                &lt;subject&gt;Economic
+        theory&lt;/subject&gt;\n                &lt;general&gt;Center for Business
+        and Economic Research, Western Illinois University]&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph002736245&lt;/recordid&gt;\n                &lt;isbn&gt;0090-5720&lt;/isbn&gt;\n
+        \               &lt;rsrctype&gt;journal&lt;/rsrctype&gt;\n                &lt;creationdate&gt;1972&lt;/creationdate&gt;\n
+        \               &lt;creationdate&gt;1990&lt;/creationdate&gt;\n                &lt;addtitle&gt;The
+        Journal of behavioral economics (Online)&lt;/addtitle&gt;\n                &lt;addtitle&gt;Journal
+        of socio-economics&lt;/addtitle&gt;\n                &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;BWEB&lt;/searchscope&gt;\n                &lt;searchscope&gt;BWEB
+        Internet Resources&lt;/searchscope&gt;\n                &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n                &lt;searchscope&gt;NYUAD&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NYUSH&lt;/searchscope&gt;\n                &lt;searchscope&gt;IFA&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;IFAC&lt;/searchscope&gt;\n                &lt;searchscope&gt;ISAW&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;COUR&lt;/searchscope&gt;\n                &lt;searchscope&gt;REI&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;BOBST&lt;/scope&gt;\n                &lt;scope&gt;BOBST
+        Main Collection&lt;/scope&gt;\n                &lt;scope&gt;BWEB&lt;/scope&gt;\n
+        \               &lt;scope&gt;BWEB Internet Resources&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;scope&gt;NYUAD&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYUSH&lt;/scope&gt;\n                &lt;scope&gt;IFA&lt;/scope&gt;\n
+        \               &lt;scope&gt;IFAC&lt;/scope&gt;\n                &lt;scope&gt;ISAW&lt;/scope&gt;\n
+        \               &lt;scope&gt;COUR&lt;/scope&gt;\n                &lt;scope&gt;REI&lt;/scope&gt;\n
+        \               &lt;lsr01&gt;HB1 .J55&lt;/lsr01&gt;\n                &lt;lsr01&gt;HB1.J55&lt;/lsr01&gt;\n
+        \               &lt;lsr02&gt;Center for Business and Economic Research, Western
+        Illinois University]&lt;/lsr02&gt;\n              &lt;/search&gt;\n              &lt;sort&gt;\n
+        \               &lt;title&gt;Journal of behavioral economics.&lt;/title&gt;\n
+        \               &lt;creationdate&gt;1972&lt;/creationdate&gt;\n                &lt;lso01&gt;1972&lt;/lso01&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;1972&lt;/creationdate&gt;\n                &lt;topic&gt;Economics&#x2013;Psychological
+        aspects&#x2013;Periodicals&lt;/topic&gt;\n                &lt;topic&gt;Economics&#x2013;Periodicals&lt;/topic&gt;\n
+        \               &lt;collection&gt;BOBST&lt;/collection&gt;\n                &lt;toplevel&gt;available&lt;/toplevel&gt;\n
+        \               &lt;toplevel&gt;online_resources&lt;/toplevel&gt;\n                &lt;prefilter&gt;journals&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;journals&lt;/rsrctype&gt;\n                &lt;genre&gt;Periodicals&lt;/genre&gt;\n
+        \               &lt;genre&gt;Electronic journals&lt;/genre&gt;\n                &lt;library&gt;BOBST&lt;/library&gt;\n
+        \               &lt;library&gt;IFA&lt;/library&gt;\n                &lt;library&gt;IFAC&lt;/library&gt;\n
+        \               &lt;library&gt;ISAW&lt;/library&gt;\n                &lt;library&gt;COUR&lt;/library&gt;\n
+        \               &lt;library&gt;REI&lt;/library&gt;\n                &lt;lfc01&gt;Main
+        Collection&lt;/lfc01&gt;\n                &lt;lfc01&gt;Internet Resources&lt;/lfc01&gt;\n
+        \               &lt;classificationlcc&gt;H - Social sciences.&#x2013;Economic
+        theory. Demography&lt;/classificationlcc&gt;\n                &lt;frbrgroupid&gt;107766559&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;2&lt;/t&gt;\n                &lt;c1&gt;73641924&lt;/c1&gt;\n
+        \               &lt;c2&gt;0090-5720&lt;/c2&gt;\n                &lt;c3&gt;journalofbehavioraleconomics&lt;/c3&gt;\n
+        \               &lt;c4&gt;macomb&lt;/c4&gt;\n                &lt;f1&gt;73641924&lt;/f1&gt;\n
+        \               &lt;f3&gt;00905720&lt;/f3&gt;\n                &lt;f6&gt;1972&lt;/f6&gt;\n
+        \               &lt;f7&gt;journal of behavioral economics&lt;/f7&gt;\n                &lt;f8&gt;journal
+        of behavioral economics&lt;/f8&gt;\n                &lt;f9&gt;ilu&lt;/f9&gt;\n
+        \               &lt;f10&gt;macomb&lt;/f10&gt;\n              &lt;/dedup&gt;\n
+        \             &lt;frbr&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;k3&gt;$$Kjournal
+        of behavioral economics$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n              &lt;delivery&gt;\n
+        \               &lt;institution&gt;NYU&lt;/institution&gt;\n                &lt;institution&gt;NYUAD&lt;/institution&gt;\n
+        \               &lt;institution&gt;NYUSH&lt;/institution&gt;\n                &lt;delcategory&gt;Online
+        Resource&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;HB1&lt;/classificationlcc&gt;\n              &lt;/enrichment&gt;\n
+        \             &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;jtitle&gt;The Journal of
+        behavioral economics.&lt;/jtitle&gt;\n                &lt;date&gt;1972&lt;/date&gt;\n
+        \               &lt;risdate&gt;1972&lt;/risdate&gt;\n                &lt;issn&gt;0090-5720&lt;/issn&gt;\n
+        \               &lt;format&gt;journal&lt;/format&gt;\n                &lt;genre&gt;journal&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;cop&gt;Macomb&lt;/cop&gt;\n
+        \               &lt;pub&gt;Center for Business and Economic Research, Western
+        Illinois University]&lt;/pub&gt;\n                &lt;lccn&gt;73641924&lt;/lccn&gt;\n
+        \               &lt;lad01&gt;BOBSTBWEB&lt;/lad01&gt;\n                &lt;lad01&gt;Online
+        Resource&lt;/lad01&gt;\n              &lt;/addata&gt;\n            &lt;/record&gt;\n
+        \         &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n      &lt;/DOCSET&gt;\n
+        \   &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:39 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 19:09:39 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version = "1.0" encoding = "UTF-8"?><get-hol-list><reply-text>ok</reply-text><reply-code>0000</reply-code><holdings><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings/NYU60000632344"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings/NYU60000632345"></holding></holdings></get-hol-list>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:39 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings/NYU60000632344
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 19:09:39 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><record><leader>     cyH
+        a22003975i 4500</leader><controlfield tag="001">000632344</controlfield><controlfield
+        tag="004">NYUb10434651</controlfield><controlfield tag="005">20080531120117.0</controlfield><controlfield
+        tag="007">ta</controlfield><controlfield tag="008">9908195p||||8   0001aaeng0091005</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">73641924</subfield></datafield><datafield
+        tag="022" ind1=" " ind2=" "><subfield code="a">0090-5720</subfield></datafield><datafield
+        tag="035" ind1="9" ind2=" "><subfield code="a">NYUH10434651/10589797</subfield></datafield><datafield
+        tag="852" ind1="0" ind2=" "><subfield code="b">BOBST</subfield><subfield code="c">MAIN</subfield><subfield
+        code="h">HB1</subfield><subfield code="i">.J55</subfield><subfield code="a">NNU</subfield></datafield><datafield
+        tag="853" ind1="2" ind2="0"><subfield code="8">1</subfield><subfield code="a">v.</subfield><subfield
+        code="b">no.</subfield><subfield code="i">(year)</subfield><subfield code="u">4</subfield><subfield
+        code="v">R</subfield><subfield code="w">m</subfield></datafield><datafield
+        tag="954" ind1=" " ind2=" "><subfield code="8">1</subfield><subfield code="a">ISS</subfield><subfield
+        code="b">v.19:no.4</subfield><subfield code="c">FEB 25, 1991</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.1</subfield><subfield code="a">15</subfield><subfield
+        code="b">1</subfield><subfield code="p">P863.10202409</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.2</subfield><subfield code="a">15</subfield><subfield
+        code="b">2</subfield><subfield code="p">P863.10202408</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.3</subfield><subfield code="a">15</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202407</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.4</subfield><subfield code="a">15</subfield><subfield
+        code="b">4</subfield><subfield code="p">P863.10202406</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.5</subfield><subfield code="a">16</subfield><subfield
+        code="b">1</subfield><subfield code="p">P863.10202405</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.6</subfield><subfield code="a">16</subfield><subfield
+        code="b">2</subfield><subfield code="p">P863.10202404</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.7</subfield><subfield code="a">16</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202403</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.8</subfield><subfield code="a">16</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202402</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.9</subfield><subfield code="a">16</subfield><subfield
+        code="b">4</subfield><subfield code="p">P863.10202401</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.10</subfield><subfield code="a">17</subfield><subfield
+        code="b">1</subfield><subfield code="p">P863.10202400</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.11</subfield><subfield code="a">17</subfield><subfield
+        code="b">2</subfield><subfield code="p">P863.10202399</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.12</subfield><subfield code="a">17</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202398</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.13</subfield><subfield code="a">17</subfield><subfield
+        code="b">4</subfield><subfield code="p">P863.10202397</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.14</subfield><subfield code="a">18</subfield><subfield
+        code="b">1</subfield><subfield code="p">P863.10202396</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.15</subfield><subfield code="a">18</subfield><subfield
+        code="b">2</subfield><subfield code="p">P863.10202395</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.16</subfield><subfield code="a">18</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202394</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.17</subfield><subfield code="a">18</subfield><subfield
+        code="b">4</subfield><subfield code="p">P863.10202393</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.18</subfield><subfield code="a">19</subfield><subfield
+        code="b">1</subfield><subfield code="p">P863.10202392</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.19</subfield><subfield code="a">19</subfield><subfield
+        code="b">2</subfield><subfield code="p">P863.10202391</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.20</subfield><subfield code="a">19</subfield><subfield
+        code="b">3</subfield><subfield code="p">P863.10202390</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">1.21</subfield><subfield code="a">19</subfield><subfield
+        code="b">4</subfield><subfield code="p">P863.10202389</subfield></datafield></record></get-hol>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:39 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings/NYU60000632345
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 19:09:39 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><record><leader>     cyH
+        a22001334  4500</leader><controlfield tag="001">000632345</controlfield><controlfield
+        tag="004">NYUb10434651</controlfield><controlfield tag="005">20080531120117.0</controlfield><controlfield
+        tag="007">cr|cnu</controlfield><controlfield tag="008">0310310|||||0   |001|||||003103</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">73641924</subfield></datafield><datafield
+        tag="022" ind1=" " ind2=" "><subfield code="a">0090-5720</subfield></datafield><datafield
+        tag="035" ind1="9" ind2=" "><subfield code="a">NYUH10434651/13334793</subfield></datafield><datafield
+        tag="852" ind1=" " ind2=" "><subfield code="a">NNU</subfield><subfield code="b">BWEB</subfield><subfield
+        code="c">BNYUI</subfield><subfield code="h">HB1</subfield><subfield code="i">.J55</subfield><subfield
+        code="m">Electronic access</subfield><subfield code="7">13334793</subfield></datafield><datafield
+        tag="856" ind1="4" ind2="1"><subfield code="u">http://www.sciencedirect.com/science/journal/00905720</subfield><subfield
+        code="9">BWEB</subfield></datafield></record></get-hol>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:39 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245?view=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Jun 2014 19:09:39 GMT
+    body:
+      encoding: US-ASCII
+      string: <?xml version = "1.0" encoding = "UTF-8"?><get-record><reply-text>ok</reply-text><reply-code>0000</reply-code><record><info
+        type="Items" href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/items"></info><info
+        type="Holdings" href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/holdings"></info><info
+        type="Filters" href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002736245/filters"></info><leader>00000cas
+        a2200421   45M</leader><controlfield tag="001">002736245</controlfield><controlfield
+        tag="003">NNU</controlfield><controlfield tag="005">20091005152743.0</controlfield><controlfield
+        tag="006">m        d</controlfield><controlfield tag="008">760330d19721990ilufr|    os  0   a0eng</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">73641924</subfield></datafield><datafield
+        tag="022" ind1=" " ind2=" "><subfield code="a">0090-5720</subfield><subfield
+        code="2">1</subfield></datafield><datafield tag="035" ind1="9" ind2=" "><subfield
+        code="a">NYUb10434651</subfield></datafield><datafield tag="035" ind1=" "
+        ind2=" "><subfield code="a">GLIS004346512</subfield></datafield><datafield
+        tag="035" ind1=" " ind2=" "><subfield code="a">(CStRLIN)NYUG2245895-S</subfield></datafield><datafield
+        tag="040" ind1=" " ind2=" "><subfield code="a">DLC</subfield><subfield code="c">DLC</subfield><subfield
+        code="d">*OCL*</subfield><subfield code="d">DLC</subfield><subfield code="d">NNU</subfield></datafield><datafield
+        tag="042" ind1=" " ind2=" "><subfield code="a">lc</subfield><subfield code="a">nsdp</subfield></datafield><datafield
+        tag="050" ind1=" " ind2="4"><subfield code="a">HB1</subfield><subfield code="b">.J55</subfield></datafield><datafield
+        tag="082" ind1=" " ind2=" "><subfield code="a">330/.05</subfield></datafield><datafield
+        tag="090" ind1=" " ind2=" "><subfield code="i">04/29/91 T</subfield><subfield
+        code="h">01/03/86 T</subfield></datafield><datafield tag="222" ind1=" " ind2="0"><subfield
+        code="a">Journal of behavioral economics</subfield></datafield><datafield
+        tag="245" ind1="0" ind2="4"><subfield code="a">The Journal of behavioral economics.</subfield></datafield><datafield
+        tag="260" ind1=" " ind2=" "><subfield code="a">[Macomb,</subfield><subfield
+        code="b">Center for Business and Economic Research, Western Illinois University]</subfield></datafield><datafield
+        tag="300" ind1=" " ind2=" "><subfield code="a">v.</subfield><subfield code="c">28
+        cm.</subfield></datafield><datafield tag="310" ind1=" " ind2=" "><subfield
+        code="a">Quarterly</subfield></datafield><datafield tag="362" ind1="0" ind2="
+        "><subfield code="a">v. 1-19 1972-1990.</subfield></datafield><datafield tag="515"
+        ind1=" " ind2=" "><subfield code="a">Vol. 1, no. 1 called Demonstration issue.</subfield></datafield><datafield
+        tag="530" ind1=" " ind2=" "><subfield code="a">Available also online via the
+        World Wide Web. Access restricted to users affiliated with the licensed institutions.</subfield></datafield><datafield
+        tag="650" ind1=" " ind2="0"><subfield code="a">Economics</subfield><subfield
+        code="x">Psychological aspects</subfield><subfield code="v">Periodicals.</subfield></datafield><datafield
+        tag="650" ind1=" " ind2="0"><subfield code="a">Economics</subfield><subfield
+        code="v">Periodicals.</subfield></datafield><datafield tag="655" ind1=" "
+        ind2="7"><subfield code="a">Electronic journals.</subfield><subfield code="2">nyuegwgf</subfield></datafield><datafield
+        tag="776" ind1="0" ind2=" "><subfield code="t">The Journal of behavioral economics
+        (Online)</subfield></datafield><datafield tag="785" ind1="0" ind2="0"><subfield
+        code="t">Journal of socio-economics</subfield><subfield code="x">1053-5357</subfield></datafield><datafield
+        tag="797" ind1="2" ind2=" "><subfield code="a">Mellon Project.</subfield></datafield><datafield
+        tag="797" ind1="2" ind2=" "><subfield code="a">ScienceDirect (Online service)</subfield></datafield><datafield
+        tag="866" ind1="4" ind2="1"><subfield code="l">Bobst Offsite</subfield><subfield
+        code="d">HB1 .J55</subfield><subfield code="e">0910</subfield><subfield code="j">5-19</subfield><subfield
+        code="k">1976-1990</subfield></datafield><datafield tag="950" ind1=" " ind2="
+        "><subfield code="l">BMAIN</subfield><subfield code="a">HB1</subfield><subfield
+        code="b">.J55</subfield><subfield code="h">01/03/86 N</subfield><subfield
+        code="h">01/01/01 N</subfield></datafield><datafield tag="955" ind1=" " ind2="
+        "><subfield code="l">BMAIN</subfield><subfield code="h">01/03/86 C</subfield></datafield><datafield
+        tag="998" ind1=" " ind2=" "><subfield code="a">04/29/91</subfield><subfield
+        code="t">c</subfield><subfield code="s">9665</subfield><subfield code="n">NNU</subfield><subfield
+        code="w">RIBG90S912</subfield><subfield code="d">03/25/84</subfield><subfield
+        code="b">MJD</subfield><subfield code="i">910429</subfield><subfield code="h">860103</subfield><subfield
+        code="l">NYUG</subfield></datafield></record></get-record>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:39 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:73641924
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 19:09:40 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u11
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u11
+      Content-Length:
+      - '4410'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a423660;expires=Tue, 24-Jun-2014
+        19:19:40 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: ! '{"lccn:73641924":{"records":{"006224884":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/006224884","titles":["The
+        Journal of behavioral economics","Journal of behavioral economics"],"isbns":[],"issns":["905720","357634"],"oclcs":["2245895"],"lccns":["73641924"],"publishDates":["1972"]}},"items":[{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357560","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357560","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.16:1
+        (spring 1987)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357563","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357563","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.16:4
+        (winter 1987)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357562","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357562","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.16:3
+        (fall 1987)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357561","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357561","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.16:2
+        (summer 1987)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357566","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357566","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.17:3
+        (fall 1988)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357567","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357567","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.17:4
+        (winter 1988, inde","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357565","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357565","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.17:2
+        (summer 1988)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357564","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357564","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.17:1
+        (spring 1988)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357571","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357571","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.18:4
+        (winter 1989, inde","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357570","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357570","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.18:3
+        (fall 1989)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357569","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357569","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.18:2
+        (summer 1989)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357568","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357568","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.18:1
+        (spring 1989)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357575","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357575","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.19:4
+        (winter 1990, inde","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357574","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357574","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.19:3
+        (fall 1990)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357572","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357572","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.19:1
+        (spring 1990)","usRightsString":"Limited (search-only)"},{"orig":"University
+        of California","fromRecord":"006224884","htid":"uc1.b4357573","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.b4357573","rightsCode":"ic","lastUpdate":"20130821","enumcron":"v.19:2
+        (summer 1990)","usRightsString":"Limited (search-only)"}]}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 19:09:40 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 20:38:18 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
+        exist</error></pds>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 20:38:19 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 20:38:20 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
+        exist</error></pds>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 20:38:20 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 20:38:21 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
+        exist</error></pds>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 20:38:21 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 20:38:22 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
+        exist</error></pds>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 20:38:23 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 24 Jun 2014 20:38:23 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
+        exist</error></pds>
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 20:38:23 GMT
+recorded_with: VCR 2.6.0

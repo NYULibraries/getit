@@ -1,13 +1,23 @@
-Given(/^I am on the GetIt page for an? "(.*?)" holding$/) do |state|
-  pending if state == 'recalled'
-  visit getit_page_for_holdling_state(state)
+Given(/^I click the "Request" button$/) do
+  within holding_information_row_css do
+    click_link 'Request'
+  end
+end
+
+Then(/^I should see a link to login for request options$/) do
+  expect(page).to have_css(request_login_link_css, text: 'Login to Request')
+end
+
+
+Then(/^I should not see a link to login for request options$/) do
+  expect(page).not_to have_css(request_login_link_css, text: 'Login to Request')
 end
 
 Then(/^I should see a request button$/) do
-  expect(page).to have_css holding_css << ' .btn-primary'
+  expect(page).to have_css(request_button_css, text: 'Request')
 end
 
 
 Then(/^I should not see a request button$/) do
-  expect(page).not_to have_css holding_css << ' .btn-primary'
+  expect(page).not_to have_css(request_button_css, text: 'Request')
 end
