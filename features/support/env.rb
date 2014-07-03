@@ -3,6 +3,11 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
+require 'exlibris-nyu'
+# Use the included test mnt for cucumber.
+Exlibris::Aleph.configure do |config|
+  config.table_path = "#{File.dirname(__FILE__)}/../../test/mnt/aleph_tab"
+end
 
 require 'cucumber/rails'
 

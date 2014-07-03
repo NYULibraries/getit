@@ -4,6 +4,12 @@ Coveralls.wear_merged!('rails')
 
 ENV['RAILS_ENV'] = 'test'
 
+require 'exlibris-nyu'
+# Use the included test mnt for testing.
+Exlibris::Aleph.configure do |config|
+  config.table_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
+end
+
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'authlogic'
@@ -53,9 +59,4 @@ VCR.configure do |c|
   c.filter_sensitive_data('NS_BX_TOKEN') { ENV['NS_BX_TOKEN'] }
   c.filter_sensitive_data('PDS_HANDLE') { ENV['PDS_HANDLE'] }
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
-end
-
-# Use the included test mnt for testing.
-Exlibris::Aleph.configure do |config|
-  config.table_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
 end
