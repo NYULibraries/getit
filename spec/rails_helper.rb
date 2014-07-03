@@ -10,6 +10,11 @@ require 'database_cleaner'
 require 'factory_girl'
 require 'pry'
 
+# Use the included test mnt for specs.
+Exlibris::Aleph.configure do |config|
+  config.table_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab" if ENV['CI']
+end
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }

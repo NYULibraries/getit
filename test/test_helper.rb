@@ -55,7 +55,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
 end
 
-# Use the included testmnt for testing.
+# Use the included test mnt for testing.
 Exlibris::Aleph.configure do |config|
   config.table_path = "#{File.dirname(__FILE__)}/../test/mnt/aleph_tab"
 end
