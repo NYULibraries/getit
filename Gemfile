@@ -21,14 +21,14 @@ group :development do
   gem 'progress_bar', '~> 1.0.0'
   gem 'better_errors', '~> 1.0.1'
   gem 'binding_of_caller', "~> 0.7.2"
-  # Use factory girl for creating models
-  gem 'factory_girl_rails', '~> 4.4.0'
 end
 
 # Testing gems
 group :test do
   # Rspec as the test framework
   gem 'rspec-rails', '~> 3.0.0'
+  # Use factory girl for creating models
+  gem 'factory_girl_rails', '~> 4.4.0'
   gem 'cucumber-rails', '~> 1.4.0', require: false
   gem 'vcr', '~> 2.9.0'
   gem 'webmock', '~> 1.18.0'
