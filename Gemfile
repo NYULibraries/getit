@@ -14,8 +14,6 @@ group :assets do
   gem 'nyulibraries-assets', git: 'git://github.com/NYULibraries/nyulibraries-assets.git', tag: 'v2.0.7'
 end
 
-gem 'pry', group: [:development, :test]
-
 # Development gems
 group :development do
   gem 'progress_bar', '~> 1.0.0'
@@ -24,7 +22,7 @@ group :development do
 end
 
 # Testing gems
-group :test do
+group :development, :test, :cucumber do
   # Rspec as the test framework
   gem 'rspec-rails', '~> 3.0.0'
   # Use factory girl for creating models
@@ -36,6 +34,8 @@ group :test do
   gem 'selenium-webdriver', '~> 2.42.0'
   gem 'poltergeist', '~> 1.5.0'
   gem 'coveralls', '~> 0.7.0', require: false
+  # Use pry-debugger as the REPL and for debugging
+  gem 'pry-debugger', '~> 0.2.0'
 end
 
 # Use MySQL
