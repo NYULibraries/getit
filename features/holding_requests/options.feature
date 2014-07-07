@@ -10,7 +10,7 @@ Feature: holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is checked out
     And I should see an option to recall the holding from a fellow library patron
-    And I should see an option to request the holding from another library 
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @offsite
   Scenario: A user with request permissions viewing options for an "offsite" holding
@@ -28,7 +28,7 @@ Feature: holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is requested
     And I should see an option to be added to the request queue
-    And I should see an option to request the holding from another library 
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @processing
   Scenario: A user without request permissions viewing options for a "processing" holding
@@ -37,7 +37,7 @@ Feature: holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently being processed by library staff
     And I should not see an option to for this item to be held for me once processed.
-    And I should see an option to request the holding from another library 
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @on_order
   Scenario: A user with request permissions viewing options for a "on order" holding
@@ -46,7 +46,7 @@ Feature: holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is on order
     And I should see an option to for this item to be held for me once processed.
-    And I should see an option to request the holding from another library 
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @ill
   Scenario: A user with request permissions viewing options for a "ill" holding
@@ -54,7 +54,7 @@ Feature: holding request options for a Copy in Library
     And I am on the GetIt page for a "ill" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently out of circulation
-    And I should see an option to request the holding from another library 
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @available
   Scenario: A user with request permissions viewing options for an "available" holding

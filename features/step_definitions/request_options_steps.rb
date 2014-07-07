@@ -31,7 +31,7 @@ Then(/^I should see an option to recall the holding from a fellow library patron
   expect(page).to have_text 'The item will be available within 2 weeks.'
 end
 
-Then(/^I should see an option to request the holding from another library$/) do
+Then(/^I should see an option to request the holding from another library via Interlibrary Loan \(ILL\)$/) do
   expect(page).to have_text 'Request this item from another library via Interlibrary Loan (ILL).'
   expect(page).to have_text 'Most requests arrive within two weeks. Due dates and renewals are determined by the lending library.'
   expect(page).to have_text 'Article/chapter requests are typically delivered electronically in 3-5 days.'
