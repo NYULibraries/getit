@@ -57,6 +57,9 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 
+  # In RSpec 3 onwards, the spec types are not inferred from the file location
+  # by default so we tell RSpec to do just that
+  # https://www.relishapp.com/rspec/rspec-rails/v/3-0/docs/upgrade#file-type-inference-disabled
   config.infer_spec_type_from_file_location!
 
   # Run specs in random order to surface order dependencies. If you find an
