@@ -1,1 +1,0 @@
-<%= Figs.env.institutions.to_yaml if ENV.has_key?("INSTITUTIONS") %>
