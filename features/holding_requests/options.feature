@@ -36,7 +36,7 @@ Feature: holding request options for a Copy in Library
     And I am on the GetIt page for a "processing" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently being processed by library staff
-    And I should not see an option to for this item to be held for me once processed.
+    And I should not see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @on_order
@@ -45,7 +45,7 @@ Feature: holding request options for a Copy in Library
     And I am on the GetIt page for a "on order" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is on order
-    And I should see an option to for this item to be held for me once processed.
+    And I should see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @ill

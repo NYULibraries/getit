@@ -49,10 +49,10 @@ Then(/^I should see an option to be added to the request queue$/) do
   expect(page).to have_text 'You may also place a request to be added to the queue.'
 end
 
-Then(/^I should see an option to for this item to be held for me once processed\.$/) do
+Then(/^I should see an option for this item to be held for me once processed\.$/) do
   expect(page).to have_text 'Request for this item to be held for you once processed.'
 end
 
-Then(/^I should not see an option to for this item to be held for me once processed\.$/) do
+Then(/^I should not see an option for this item to be held for me once processed\.$/) do
   expect(page).not_to have_text 'Request for this item to be held for you once processed.'
 end
