@@ -37,9 +37,9 @@ default:
       display_name: Amazon.com
       type: Amazon
       url: http://webservices.amazon.com/onca/xml
-      api_key: <%= ENV['AMAZON_API_KEY'] %>
-      secret_key: <%= ENV['AMAZON_SECRET_KEY'] %>
-      associate_tag: <%= ENV['AMAZON_ASSOCIATE_TAG'] %>
+      api_key: <%= (ENV['AMAZON_API_KEY'] || 'AMAZON_API_KEY') %>
+      secret_key: <%= (ENV['AMAZON_SECRET_KEY'] || 'AMAZON_SECRET_KEY') %>
+      associate_tag: <%= (ENV['AMAZON_ASSOCIATE_TAG'] || 'AMAZON_ASSOCIATE_TAG') %>
       priority: 3
       service_types:
         - referent_enhance
@@ -96,9 +96,9 @@ default:
     # availability, so we do it in a bg wave.
     Amazon_bg:
       type: Amazon
-      api_key: <%= ENV['AMAZON_API_KEY'] %>
-      secret_key: <%= ENV['AMAZON_SECRET_KEY'] %>
-      associate_tag: <%= ENV['AMAZON_ASSOCIATE_TAG'] %>
+      api_key: <%= (ENV['AMAZON_API_KEY'] || 'AMAZON_API_KEY') %>
+      secret_key: <%= (ENV['AMAZON_SECRET_KEY'] || 'AMAZON_SECRET_KEY') %>
+      associate_tag: <%= (ENV['AMAZON_ASSOCIATE_TAG'] || 'AMAZON_ASSOCIATE_TAG') %>
       priority: b
       service_types:
         - abstract
@@ -108,7 +108,7 @@ default:
 
     CoverThing:
       type: CoverThing
-      developer_key: <%= ENV['COVER_THING_DEVELOPER_KEY'] %>
+      developer_key: <%= (ENV['COVER_THING_DEVELOPER_KEY'] || 'COVER_THING_DEVELOPER_KEY') %>
       priority: b
       # Pre-empted by says if we already have a cover_image response
       # from somewhere else that runs earlier, don't run this.
@@ -126,7 +126,7 @@ default:
     GoogleBookSearch:
       type: GoogleBookSearch
       priority: b
-      api_key: <%= ENV['GOOGLE_BOOK_SEARCH_API_KEY'] %>
+      api_key: <%= (ENV['GOOGLE_BOOK_SEARCH_API_KEY'] || 'GOOGLE_BOOK_SEARCH_API_KEY') %>
 
     # Priority c: Background
     # Web of Knowledge API has no api key, but your
@@ -170,7 +170,7 @@ default:
       display_name: isbndb.com
       type: IsbnDb
       priority: d
-      access_key: <%= ENV['ISBN_DB_ACCESS_KEY'] %>
+      access_key: <%= (ENV['ISBN_DB_ACCESS_KEY'] || 'ISBN_DB_ACCESS_KEY') %>
 
     InternetArchive:
       display_name: the Internet Archive
@@ -249,11 +249,11 @@ NYU:
       link_name: Periodical Information
       priority: c
       status: active
-      base_url: <%= ENV['NYU_ULRICHS_LINK_BASE_URL'] %>
+      base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
     ScopusCitations:
       type: Scopus
       priority: c
-      json_api_key: <%= ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] %>
+      json_api_key: <%= (ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] || 'NYU_SCOPUS_CITATIONS_JSON_API_KEY') %>
       # partner_id: YOUR_SCOPUS_PARTNER_ID
       # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
     NYU_RefWorks:
@@ -299,7 +299,7 @@ NYU:
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
-      base_url: <%= ENV['ILLIAD_BASE_URL'] %>
+      base_url: <%= (ENV['ILLIAD_BASE_URL'] || 'http://ill.library.edu') %>
       display_text: Bobst Library Interlibrary Loan
       priority: c
       preempted_by:
@@ -381,7 +381,7 @@ CU:
     ScopusCitations:
       type: Scopus
       priority: c
-      json_api_key: <%= ENV['CU_SCOPUS_CITATIONS_JSON_API_KEY'] %>
+      json_api_key: <%= (ENV['CU_SCOPUS_CITATIONS_JSON_API_KEY'] || 'CU_SCOPUS_CITATIONS_JSON_API_KEY') %>
       # partner_id: YOUR_SCOPUS_PARTNER_ID
       # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
 
