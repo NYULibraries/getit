@@ -14,6 +14,7 @@ require 'nyulibraries-assets'
 require 'figs'
 # Don't run this initializer on travis.
 Figs.load(stage: Rails.env) unless ENV['TRAVIS']
+p ENV
 
 module GetIt
   class Application < Rails::Application
