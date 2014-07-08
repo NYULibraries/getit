@@ -4,8 +4,9 @@ Feature: Copies in Library
   I want to see Copies in Library
 
   @book
-  Scenario: Copies in Library display for a book
-    Given I am on the GetIt page for a "book" holding
+  Scenario: Guest user Copies in Library display for a book
+    Given I am not logged in
+    And I am on the GetIt page for a "book" holding
     Then I should see the "Copies in Library" section
     And I should the link to the call number maps
     And I should see "NYU Bobst Main Collection" as the copy's location
@@ -13,8 +14,9 @@ Feature: Copies in Library
     And I should see the "More Info" button for the copy
 
   @journal
-  Scenario: Copies in Library display for a journal
-    Given I am on the GetIt page for a "journal" holding
+  Scenario: Guest user Copies in Library display for a journal
+    Given I am not logged in
+    And I am on the GetIt page for a "journal" holding
     Then I should see the "Copies in Library" section
     And I should the link to the call number maps
     And I should see "NYU Bobst Main Collection" as the copy's location
