@@ -1,8 +1,11 @@
 # Configure Capybara
 require 'capybara/poltergeist'
 Capybara.configure do |config|
-  # config.app_host = 'https://dev.login.library.nyu.edu'
-  config.default_driver = :poltergeist
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, timeout: 120)
+  end
   # config.default_driver = :selenium
+  config.default_driver = :poltergeist
+  config.javascript_driver = :poltergeist
   Capybara.default_wait_time = 20
 end
