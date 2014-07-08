@@ -64,7 +64,7 @@ production:
 
 sfx: &sfx
   <<: *mysql
-  port: ENV['SFX_DB_PORT']
+  port: <%= ENV['SFX_DB_PORT'] %>
   pool: 5
 
 <% if ENV['NYU_SFX_DB_HOST'] %>
