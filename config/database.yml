@@ -34,7 +34,7 @@ getit: &getit
   pool: 12
   checkout_timeout: 2
   host: <%= (ENV['GETIT_DB_HOST'] || 'localhost') %>
-  username: <%= (ENV['GETIT_DB_USER'] || ENV['JENKINS_DB_USER'] || 'root') %>
+  username: <%= (ENV['GETIT_DB_USER'] || 'root') %>
   password: <%= (ENV['GETIT_DB_PASSWORD'] || '') %>
   database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit') %>
 
@@ -46,6 +46,8 @@ development: &development
 # Do not set this db to the same as development or production.
 test: &test
   <<: *getit
+  username: <%= (ENV['GETIT_DB_USER'] || ENV['JENKINS_DB_USER'] || 'root') %>
+  password: <%= (ENV['GETIT_DB_PASSWORD'] || ENV['JENKINS_DB_PASSWORD'] || '') %>
   database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit_test') %>
 
 cucumber:
