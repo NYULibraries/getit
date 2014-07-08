@@ -5,7 +5,8 @@ Feature: Online Access
 
   @new_yorker
   Scenario: Online Access displays for fulltext
-    Given I am on the GetIt page for "The New Yorker"
+    Given I am not logged in
+    And I am on the GetIt page for "The New Yorker"
     Then I should see the "Online Access" section
     And I should see "E Journal Full Text" as a link to fulltext
     And I should see "1925 – latest:" as the coverage summary for the online access
