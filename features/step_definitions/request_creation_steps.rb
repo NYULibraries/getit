@@ -11,7 +11,6 @@ Given(/^I choose "(.*?)"$/) do |choice|
 end
 
 Given(/^I click the "Submit" button$/) do
-  p page.body
   within '.modal-footer' do
     click_button 'Submit'
   end
