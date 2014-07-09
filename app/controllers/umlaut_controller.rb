@@ -96,7 +96,7 @@ class UmlautController < ApplicationController
 
     # How many seconds between updates of the background updater for background
     # services?
-    # poll_wait_seconds 4
+    poll_wait_seconds 2
 
     # Configuration for the 'search' functions -- A-Z lookup
     # and citation entry.
