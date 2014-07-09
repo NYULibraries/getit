@@ -11,7 +11,9 @@ Given(/^I choose "(.*?)"$/) do |choice|
 end
 
 Given(/^I click the "Submit" button$/) do
-  click_button 'Submit'
+  within '.modal-footer' do
+    click_button 'Submit'
+  end
 end
 
 Then(/^I should see a confirmation that my request has been processed$/) do
