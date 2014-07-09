@@ -15,7 +15,6 @@ class HoldingRequestsController < UmlautController
 
   # Create a new request based on request type
   def create
-    p "Start create: #{Time.now}"
     if authorizer.present?
       # Is this a valid request type?
       valid_type = whitelist_type(params[:type])
@@ -48,7 +47,6 @@ class HoldingRequestsController < UmlautController
     else
       head :bad_request
     end
-    p "End create: #{Time.now}"
   end
 
   # Show the confirmation page for the request
@@ -68,12 +66,9 @@ class HoldingRequestsController < UmlautController
 
   private
   def pickup_sub_library
-    p "Start pickup sub library: #{Time.now}"
     @pickup_sub_library ||= sub_libraries.find(->{ holding.sub_library }) do |sub_library|
       sub_library.code == params[:pickup_location]
     end
-    p "End pickup sub library: #{Time.now}"
-    @pickup_sub_library
   end
 
   def sub_libraries
