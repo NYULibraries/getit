@@ -7,5 +7,5 @@ Capybara.configure do |config|
   # config.default_driver = :selenium
   config.default_driver = :poltergeist
   config.javascript_driver = :poltergeist
-  Capybara.default_wait_time = 20
+  Capybara.default_wait_time = 25
 end
