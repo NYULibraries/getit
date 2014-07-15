@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: cefc7195e0d86abcd1af34f234b86f1a7de2e7cb
-  tag: v2.0.7
+  revision: ab0136efbc4b4780fa3e7b158812f8226d423339
+  tag: v2.1.2
   specs:
-    nyulibraries-assets (2.0.1)
+    nyulibraries-assets (2.1.2)
       bootstrap-sass (>= 2.2.0, < 2.3.1.1)
       compass (~> 0.12.2)
       institutions (~> 0.1.1)
@@ -127,10 +127,10 @@ GEM
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
+    coffee-script-source (1.7.1)
     columnize (0.8.9)
     compass (0.12.6)
       chunky_png (~> 1.2)
@@ -256,7 +256,7 @@ GEM
       ensure_valid_encoding
       marc
     options (2.3.2)
-    passenger (4.0.45)
+    passenger (4.0.46)
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
@@ -304,7 +304,7 @@ GEM
       json (~> 1.4)
     ref (1.0.5)
     require_all (1.3.2)
-    rest-client (1.7.1)
+    rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
     rsolr (1.0.10)
@@ -379,7 +379,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.39)
+    tzinfo (0.3.40)
     uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
