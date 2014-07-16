@@ -35,6 +35,7 @@ VCR.cucumber_tags do |t|
   t.tag  '@offsite'
   t.tag  '@available'
   t.tag  '@ill'
+  t.tag  '@logout'
   # Disallowed not in use
   t.tags '@disallowed', record: :none
 end
