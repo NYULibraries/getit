@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: ab0136efbc4b4780fa3e7b158812f8226d423339
-  tag: v2.1.2
+  revision: 64ba7cd04fa3d1135e7e805b5e4481c674ed79ed
+  tag: v2.1.4
   specs:
-    nyulibraries-assets (2.1.2)
+    nyulibraries-assets (2.1.4)
       bootstrap-sass (>= 2.2.0, < 2.3.1.1)
       compass (~> 0.12.2)
       institutions (~> 0.1.1)
@@ -252,9 +252,9 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nori (2.4.0)
-    openurl (0.5.0)
-      ensure_valid_encoding
+    openurl (1.0.0)
       marc
+      scrub_rb (~> 1.0)
     options (2.3.2)
     passenger (4.0.46)
       daemon_controller (>= 1.2.0)
@@ -344,6 +344,7 @@ GEM
       nori (~> 2.4.0)
       uuid (~> 2.3.7)
       wasabi (~> 3.3.0)
+    scrub_rb (1.0.0)
     selenium-webdriver (2.42.0)
       childprocess (>= 0.5.0)
       multi_json (~> 1.0)
