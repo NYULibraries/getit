@@ -6,6 +6,8 @@ end
 
 Then(/^I should see a link to login for request options$/) do
   expect(page).to have_css(request_login_link_css, text: 'Login to Request')
+  request_login_link = find(request_login_link_css)
+  expect(request_login_link[:href]).to match /^http:\/\/[^\/]+\/login/
 end
 
 
