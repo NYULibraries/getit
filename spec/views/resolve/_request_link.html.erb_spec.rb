@@ -12,13 +12,13 @@ describe 'resolve/_request_link' do
     render '/resolve/request_link', {holding: holding}
   end
   it { should match /request-link/ }
-  it { should_not match /Login to Request/ }
+  it { should_not match /Login for Request Options/ }
   it { should match /Request/ }
   it { should match /href="http:\/\/test.host\/holding_requests\/new\/#{service_response.id}/ }
   context 'when there is no current user' do
     let(:current_user) { nil }
     it { should match /request-login-link/ }
-    it { should match /Login to Request/ }
+    it { should match /Login for Request Options/ }
     it { should_not match /href="http:\/\/test.host\/holding_requests\/new\/#{service_response.id}"/ }
     it { should match /href="http:\/\/test.host\/login\?return_url=http%3A%2F%2Furl.for.request"/ }
   end
