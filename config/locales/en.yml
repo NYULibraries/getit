@@ -4,6 +4,10 @@
 en:
   application:
     title_html: BobCat
+  resolve:
+    holdings:
+      request_text: Request
+      login_text: Login for Request Options
   holding_requests:
     show:
       scan: Your scan request has been processed. You will receive an email when the item is available.
