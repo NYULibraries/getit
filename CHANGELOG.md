@@ -1,5 +1,58 @@
 # Change Log
 
+## 2014-03-20
+- __Exclude Shanghai Web Resources__  
+  Don't display Shanghai web resources as "Copies in Library"
+
+## 2014-03-06
+- __Refresh Users Daily__  
+  Refresh users every day in production to ensure we have the latest
+  Aleph request permissions
+
+## 2014-02-20
+- __Upgrade Rails version for security__  
+  Upgrade to Rails v3.2.17 to fix DOS security vulnerabilty
+
+## 2014-01-16
+- __Use the official Umlaut :gem:__  
+  Use the official Umlaut :gem:, not our forked "bootstrap" branch,
+  so future upgrades will be easy
+- __Update Styles__  
+  Since we're using the fancy new Umlaut :gem:, we updated our styles
+  based on the fancy awesomeness that was available
+- __Send/Share__  
+  We created a separate section for "Send/Share" which makes it easy for
+  user to see their "Send/Share" options
+- __Update 866$l Mapping Table__  
+  Update the 866$l mapping table to better match coverage information
+  for Aleph holdings
+
+## 2014-01-08
+- __Update Umlaut :gem: to get a bug fix for institutional services__  
+  Get latest from the Umlaut bootstrap branch to get the properly formatted
+  URL for Umlaut's background updater
+- __Improve Error Handling for Requesting__  
+  When loading additional attributes, rescue any errors encountered so
+  the user is not concerned with system issues, e.g. Aleph is down.
+
+## 2013-12-19
+- __Improve DB Performance for Users__  
+  Add a unique username index to the users table to improve performance
+- __Fix bug in Wayfinder service for institutions__  
+  Upgrade the [authpds :gem:](/scotdalton/authpds) to fix [bug #6](/NYULibraries/getit/issues/6)
+
+## 2013-12-04
+- __Upgrade Rails version for security__  
+  Upgrade to Rails v3.2.16 to fix i18n security vulnerabilty
+
+## 2013-11-21
+- __Upgrade the Exlibris NYU :gem:__  
+  Upgrade the bundled [Exlibris NYU :gem:] to fix non-escaped ampersands coming Primo
+
+## 2013-11-07
+- __Gauges Web Analytics__  
+  Added per institution web analytics
+
 ## 2013-10-25
 
 ### Functional Changes
