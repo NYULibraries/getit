@@ -21,9 +21,9 @@ class HoldingRequestsController < UmlautController
       if valid_type
         # Is the user authorized to create a request for the holding?
         if authorizer.send("#{valid_type}?".to_sym)
-          if valid_type == :ill
+          if valid_type == 'ill'
             # If we're ILLing, send them to ILLiad
-            redirect_to "#{ILLIAD_BASE_URL}/illiad/illiad.dll/OpenURL?#{@user_request.to_context_object.kev}"
+            redirect_to "#{ILLIAD_BASE_URL}/illiad/illiad.dll/OpenURL?#{service_response.request.to_context_object.kev}"
           else
             # Otherwise, create the hold
             create_hold = holding_request.create_hold(creation_parameters)

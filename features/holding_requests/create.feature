@@ -23,3 +23,12 @@ Feature: place a hold on a Copy in Library
     And I click the "Submit" button
     Then I should see a confirmation that my request has been processed
     And I should see a message that I will be notified when my item is available to pick up at "New School Fogelman Library"
+
+  @ill
+  Scenario: A user with request permissions places a hold on an "ILL" holding
+    Given I am logged in
+    And I am on the GetIt page for an "ill" holding
+    And I click the "Request" button
+    And I click the "Request this item from another library via Interlibrary Loan (ILL)" link
+    Then I should see the ILL page prepopulated with information about my holding
+  

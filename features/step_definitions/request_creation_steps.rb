@@ -16,10 +16,24 @@ Given(/^I click the "Submit" button$/) do
   end
 end
 
+Given(/^I click the "(.*?)" link$/) do |link_text|
+  click_link link_text
+end
+
 Then(/^I should see a confirmation that my request has been processed$/) do
   expect(page).to have_text "Your request has been processed."
 end
 
 Then(/^I should see a message that I will be notified when my item is available to pick up at "(.*?)"$/) do |pickup_location|
   expect(page).to have_text "You will be notified when this item is available to pick up at #{pickup_location}."
+end
+
+Then(/^I should see the ILL page prepopulated with information about my holding$/) do
+  pending 'proper test users'
+  main = page.driver.browser.window_handles.first
+  popup = page.driver.browser.window_handles.last
+  page.driver.browser.switch_to.window(popup)
+  # expect(page.title).to eq 'BobCat - ILL - Request a Book'
+  page.driver.browser.close
+  page.driver.browser.switch_to.window(main)
 end
