@@ -109,5 +109,13 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
     it { should be_redirect }
     it("should have a 302 status") { expect(subject.status).to be(302) }
     it { should redirect_to(holding_request_url(service_response, entire: 'yes', pickup_location: 'BOBST')) }
+    context 'when the request type is ILL' do
+      let(:type) { 'ill' }
+      it { should be_redirect }
+      it("should have a 302 status") { expect(subject.status).to be(302) }
+      it 'should redirect to ILL' do
+        expect(subject.location).to match /^http:\/\/ill(dev)?\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
+      end
+    end
   end
 end
