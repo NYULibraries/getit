@@ -95,7 +95,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
     end
   end
   describe 'POST create' do
-    let(:type) { :recall }
+    let(:type) { 'recall' }
     let(:pickup_location) do
       Exlibris::Aleph::PickupLocation.new('BOBST', 'NYU Bobst')
     end
