@@ -256,7 +256,7 @@ GEM
       marc
       scrub_rb (~> 1.0)
     options (2.3.2)
-    passenger (4.0.46)
+    passenger (4.0.48)
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
