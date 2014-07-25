@@ -40,6 +40,12 @@ nav {
   margin-right: .5em;
 }
 
+.umlaut-holdings {
+  .collection-str, .call-number, .holding-status, .holding-actions {
+    min-height: 1px !important;
+  }
+}
+
 .umlaut-holding {
   padding-bottom: 10px;
   border-bottom: 1px solid $umlautBorderColor;
