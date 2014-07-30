@@ -25,7 +25,7 @@ Then(/^I should see a message that I will be notified when my item is available 
 end
 
 Then(/^I should see the ILL page prepopulated with information about my holding$/) do
-  pending 'proper test users'
+  pending_proper_test_users
   main = page.driver.browser.window_handles.first
   popup = page.driver.browser.window_handles.last
   page.driver.browser.switch_to.window(popup)
