@@ -14,12 +14,12 @@ rvm:
   # - jruby-19mode # JRuby (1.9)
   # - rbx-19mode
   - 2.0.0
-  
+
 git:
   submodules: false
 
 notifications:
-  irc: 
+  irc:
     channels:
       - "irc.freenode.org#libtechnyu"
     template:
