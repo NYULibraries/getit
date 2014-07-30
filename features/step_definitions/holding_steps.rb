@@ -3,10 +3,6 @@ Given(/^I am on the GetIt page for an? "(.*?)" holding$/) do |state|
   visit getit_page_for_holdling_state(state)
 end
 
-Given(/^I am on the GetIt page for the title "(.*?)"$/) do |title|
-  visit getit_page_for_holdling_title(title)
-end
-
 Then(/^I should the link to the call number maps$/) do
   expect(page).to have_css('#holding .umlaut-section.holding .umlaut_section_content', text: /View Maps and Call Number Locations/)
 end
