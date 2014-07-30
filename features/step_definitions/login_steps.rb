@@ -25,3 +25,7 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
   logout_link = find(:css, '.nyu-login a.logout')
   expect(logout_link).to have_text text
 end
+
+Then(/^I should see the login page in the current window$/) do
+  expect(current_host).to eq 'https://logindev.library.nyu.edu'
+end
