@@ -16,10 +16,6 @@ Given(/^I click the "Submit" button$/) do
   end
 end
 
-Given(/^I click the "(.*?)" link$/) do |link_text|
-  click_link link_text
-end
-
 Then(/^I should see a confirmation that my request has been processed$/) do
   expect(page).to have_text "Your request has been processed."
 end

@@ -1,7 +1,3 @@
-Given(/^I am on the GetIt page for "The New Yorker"$/) do
-  visit '/resolve?rft.object_id=110975413975944'
-end
-
 Then(/^I should see "(.*?)" as a link to fulltext$/) do |link_text|
   expect(page).to have_css(fulltext_css << ' a', text: /#{link_text}/)
 end
