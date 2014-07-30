@@ -1,6 +1,6 @@
 class HoldingRequestsController < UmlautController
   # For now, a constanst for the ILLiad URL
-  ILLIAD_BASE_URL = ENV['ILLIAD_BASE_URL']
+  ILLIAD_BASE_URL = (ENV['ILLIAD_BASE_URL'] || 'http://ill.library.nyu.edu')
 
   # Valid holding request types
   WHITELISTED_TYPES = %w[available ill processing offsite on_order recall]
