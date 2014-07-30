@@ -17,11 +17,11 @@ Given(/^I click the "Submit" button$/) do
 end
 
 Then(/^I should see a confirmation that my request has been processed$/) do
+  pending_resolution_of_poltergeist_timeout
   expect(page).to have_text "Your request has been processed."
 end
 
 Then(/^I should see a message that I will be notified when my item is available to pick up at "(.*?)"$/) do |pickup_location|
-  pending_resolution_of_poltergeist_timeout
   expect(page).to have_text "You will be notified when this item is available to pick up at #{pickup_location}."
 end
 
