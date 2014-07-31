@@ -3,7 +3,7 @@ Feature: Log in to get holding request options for a Copy in Library
   As a user
   I want to be able to log in
 
-  @checked_out
+  @guest/checked_out
   Scenario: A guest user logging in for a "checked out" holding
     Given I am not logged in
     And I am on the GetIt page for a "checked out" holding

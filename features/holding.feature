@@ -3,7 +3,7 @@ Feature: Copies in Library
   As a user
   I want to see Copies in Library
 
-  @book
+  @guest/book
   Scenario: Guest user Copies in Library display for a book
     Given I am not logged in
     And I am on the GetIt page for a "book" holding
@@ -13,7 +13,7 @@ Feature: Copies in Library
     And I should see "(HN690.I56 I84 2004)" as the copy's call number
     And I should see the "More Info" button for the copy
 
-  @journal
+  @guest/journal
   Scenario: Guest user Copies in Library display for a journal
     Given I am not logged in
     And I am on the GetIt page for a "journal" holding

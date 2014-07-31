@@ -3,7 +3,7 @@ Feature: Online Access
   As a user
   I want to see Online Access
 
-  @new_yorker
+  @guest/new_yorker
   Scenario: Online Access displays for fulltext
     Given I am not logged in
     And I am on the GetIt page for "The New Yorker"

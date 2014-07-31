@@ -3,7 +3,7 @@ Feature: coverage statement for a Copy in Library
   As a user
   I want to see a coverage statement
 
-  @new_yorker
+  @guest/new_yorker
   Scenario: a guest user viewing the coverage statement for "The New Yorker"
     Given I am not logged in
     And I am on the GetIt page for "The New Yorker"
@@ -12,7 +12,7 @@ Feature: coverage statement for a Copy in Library
     Then I should see "Available in Periodicals: v.81(2005)-" in a copy's coverage statement
     Then I should see "Available in Closed Periodical Stacks: v.1(1925)-v.81(2005)" in a copy's coverage statement
 
-  @vogue
+  @guest/vogue
   Scenario: a guest user viewing the coverage statement for "Vogue"
     Given I am not logged in
     And I am on the GetIt page for the title "Vogue"
