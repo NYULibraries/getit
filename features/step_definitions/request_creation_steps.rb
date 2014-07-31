@@ -10,7 +10,7 @@ Given(/^I choose "(.*?)"$/) do |choice|
   choose(choice)
 end
 
-Given(/^I click the "Submit" button$/) do
+Given(/^I click the "Submit" button in the modal footer$/) do
   within '.modal-footer' do
     click_button 'Submit'
   end
