@@ -17,7 +17,6 @@ Given(/^I click the "Submit" button in the modal footer$/) do
 end
 
 Then(/^I should see a confirmation that my request has been processed$/) do
-  pending_resolution_of_poltergeist_timeout
   expect(page).to have_text "Your request has been processed."
 end
 
