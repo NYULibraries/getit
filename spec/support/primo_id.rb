@@ -4,6 +4,7 @@ class PrimoId
     'journal' => 'nyu_aleph002736245',
     'Vogue' => 'nyu_aleph002893728',
     'The New Yorker' => 'nyu_aleph002904404',
+    'Not by Reason Alone' => 'nyu_aleph002104209',
     'book' => 'nyu_aleph001102376',
     'checked out' => 'nyu_aleph003562911',
     'requested' => 'nyu_aleph000864162',
