@@ -27,5 +27,5 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
-  expect(current_host).to match /^https:\/\/login(dev)?\.library\.nyu\.edu$/
+  expect(page).to have_text 'Login with an NYU NetID'
 end
