@@ -25,6 +25,7 @@ VCR.cucumber_tags do |t|
   # Uses default record mode since no options are given
   t.tag '@guest/new_yorker'
   t.tag '@guest/vogue'
+  t.tag '@guest/not_by_reason_alone'
   t.tag '@guest/book'
   t.tag '@guest/journal'
   t.tag '@guest/checked_out'
