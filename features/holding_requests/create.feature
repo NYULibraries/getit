@@ -1,3 +1,4 @@
+@wip
 Feature: Place a hold on a Copy in Library
   In order to place a hold on a Copy in Library
   As a user requesting a Copy in Library
@@ -24,7 +25,6 @@ Feature: Place a hold on a Copy in Library
     Then I should see a confirmation that my request has been processed
     And I should see a message that I will be notified when my item is available to pick up at "New School Fogelman Library"
 
-  @wip
   @user/ill
   Scenario: A user with request permissions places a hold on an "ILL" holding
     Given I am logged in
