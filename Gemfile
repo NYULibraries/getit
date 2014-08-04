@@ -66,7 +66,7 @@ gem 'umlaut-primo', git: 'git://github.com/team-umlaut/umlaut-primo.git'
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
-gem 'exlibris-nyu', git: 'git://github.com/NYULibraries/exlibris-nyu.git', branch: 'qa'
+gem 'exlibris-nyu', git: 'git://github.com/NYULibraries/exlibris-nyu.git', tag: 'v2.1.2'
 gem 'authpds-nyu', git: 'git://github.com/NYULibraries/authpds-nyu.git', tag: 'v2.0.1'
 
 # Dalli for caching with memcached
