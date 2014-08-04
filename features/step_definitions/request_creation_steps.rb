@@ -10,14 +10,13 @@ Given(/^I choose "(.*?)"$/) do |choice|
   choose(choice)
 end
 
-Given(/^I click the "Submit" button$/) do
+Given(/^I click the "Submit" button in the modal footer$/) do
   within '.modal-footer' do
     click_button 'Submit'
   end
 end
 
 Then(/^I should see a confirmation that my request has been processed$/) do
-  pending_resolution_of_poltergeist_timeout
   expect(page).to have_text "Your request has been processed."
 end
 
@@ -26,6 +25,7 @@ Then(/^I should see a message that I will be notified when my item is available 
 end
 
 Then(/^I should see the ILL page prepopulated with information about my holding$/) do
+  close_popup
   pending_proper_test_users
   main = page.driver.browser.window_handles.first
   popup = page.driver.browser.window_handles.last

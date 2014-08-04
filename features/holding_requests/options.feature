@@ -1,9 +1,9 @@
-Feature: holding request options for a Copy in Library
+Feature: Holding request options for a Copy in Library
   In order to select the appropriate choice
   As a user requesting a Copy in Library
   I want to see my options
 
-  @checked_out
+  @user/checked_out
   Scenario: A user with request permissions viewing options for a "checked out" holding
     Given I am logged in
     And I am on the GetIt page for a "checked out" holding
@@ -12,7 +12,7 @@ Feature: holding request options for a Copy in Library
     And I should see an option to recall the holding from a fellow library patron
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @offsite
+  @user/offsite
   Scenario: A user with request permissions viewing options for an "offsite" holding
     Given I am logged in
     And I am on the GetIt page for an "offsite" holding
@@ -21,7 +21,7 @@ Feature: holding request options for a Copy in Library
     And I should see an option to request the holding to be delivered to the pickup location of my choice
     And I should see an option to request a scan of a portion of the holding to be delivered to me electronically
 
-  @requested
+  @user/requested
   Scenario: A user with request permissions viewing options for a "requested" holding
     Given I am logged in
     And I am on the GetIt page for a "requested" holding
@@ -30,7 +30,7 @@ Feature: holding request options for a Copy in Library
     And I should see an option to be added to the request queue
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @processing
+  @user/processing
   Scenario: A user without request permissions viewing options for a "processing" holding
     Given I am logged in
     And I am on the GetIt page for a "processing" holding
@@ -39,7 +39,7 @@ Feature: holding request options for a Copy in Library
     And I should not see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @on_order
+  @user/on_order
   Scenario: A user with request permissions viewing options for a "on order" holding
     Given I am logged in
     And I am on the GetIt page for a "on order" holding
@@ -48,7 +48,7 @@ Feature: holding request options for a Copy in Library
     And I should see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @ill
+  @user/ill
   Scenario: A user with request permissions viewing options for a "ill" holding
     Given I am logged in
     And I am on the GetIt page for a "ill" holding
@@ -56,7 +56,7 @@ Feature: holding request options for a Copy in Library
     Then I should see a modal indicating that the holding is currently out of circulation
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @available
+  @user/available
   Scenario: A user with request permissions viewing options for an "available" holding
     Given I am logged in
     And I am on the GetIt page for a "available" holding

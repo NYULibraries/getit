@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 23 Jun 2014 16:04:36 GMT
+      - Tue, 24 Jun 2014 16:50:52 GMT
       Server:
       - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
         School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
         OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
     http_version: 
-  recorded_at: Mon, 23 Jun 2014 16:04:37 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:52 GMT
 - request:
     method: get
     uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-06-24T09:56:14-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003562911&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
@@ -51,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Jun 2014 13:56:07 GMT
+      - Tue, 24 Jun 2014 16:50:53 GMT
       Server:
       - Apache
       Content-Type:
@@ -124,7 +124,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:15 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:53 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -160,7 +160,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:56:08 GMT
+      - Tue, 24 Jun 2014 16:50:54 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
@@ -321,7 +321,7 @@ http_interactions:
         \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
         \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:15 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:54 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003562911/items
@@ -349,13 +349,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:56:09 GMT
+      - Tue, 24 Jun 2014 16:50:55 GMT
     body:
       encoding: US-ASCII
       string: <?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01003562911/items/NYU50003562911000010"></item></items></get-item-list>
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:16 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:55 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003562911/items/NYU50003562911000010
@@ -383,7 +383,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:56:09 GMT
+      - Tue, 24 Jun 2014 16:50:56 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
@@ -396,302 +396,7 @@ http_interactions:
         Africa&apos;s World Cup :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Scottsville,
         South Africa : University of KwaZulu-Natal Press, 2011.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9781869142162</z13-isbn-issn></z13><status>10/11/14</status></item></get-item>'
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:16 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/books/v1/volumes?key=AIzaSyADjP7PRPsGaPYJB9tvfm8ZSpdmhUsCR1w&printType=books&q=%22OCLC749853403%22
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      X-Forwarded-For:
-      - 127.0.0.1
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Expires:
-      - Tue, 24 Jun 2014 13:56:47 GMT
-      Date:
-      - Tue, 24 Jun 2014 13:56:47 GMT
-      Cache-Control:
-      - private, max-age=0, must-revalidate, no-transform
-      Etag:
-      - ! '"dUmPLHzb8fIGao6-Pro7ieDXciA/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
-      Content-Type:
-      - application/json; charset=UTF-8
-      X-Content-Type-Options:
-      - nosniff
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      Content-Length:
-      - '47'
-      Server:
-      - GSE
-      Alternate-Protocol:
-      - 443:quic
-    body:
-      encoding: US-ASCII
-      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 0\n}\n"
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:54 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22south%20africa's%20world%20cup%22%20AND%20creator:(cottle)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 24 Jun 2014 13:56:48 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '161'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22south+africa%27s+world+cup%22+AND+creator:%28cottle%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Tue, 24 Jun 2014 19:56:48 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: US-ASCII
-      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:55 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.8.9
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - ! '*/*'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Tue, 24 Jun 2014 13:56:48 GMT
-    body:
-      encoding: US-ASCII
-      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20120121</z30-open-date><z30-update-date>20120406</z30-update-date><z30-cataloger>KAUFFMANR</z30-cataloger><z30-date-last-return>20121213</z30-date-last-return><z30-hour-last-return>1132</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>GV943.5
-        2010 S68 2011</z30-call-no><z30-call-no-key>0 gv&quot;943 5 2010 s68 2011</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number>20123286</z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>39.00</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004385625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20120508</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>003562911</z13-doc-number><z13-year>2011</z13-year><z13-open-date>20120121</z13-open-date><z13-update-date>20120402</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>GV943.5
-        2010</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>South
-        Africa&apos;s World Cup :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Scottsville,
-        South Africa : University of KwaZulu-Natal Press, 2011.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9781869142162</z13-isbn-issn></z13><status>10/11/14</status><info
-        type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010/hold"
-        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="BOBST">NYU Bobst</pickup-location><pickup-location code="NCOUR">NYU
-        Courant</pickup-location><pickup-location code="NIFA">NYU Institute of Fine
-        Arts</pickup-location><pickup-location code="NISAW">NYU Inst Study Ancient
-        World</pickup-location><pickup-location code="NREI">NYU Jack Brause</pickup-location><pickup-location
-        code="NPOLY">NYU Poly</pickup-location><pickup-location code="NYUAB">NYU Abu
-        Dhabi Library (UAE)</pickup-location><pickup-location code="NYUSE">NYUAD Ctr
-        for Sci &amp; Eng (UAE)</pickup-location><pickup-location code="NYUSS">NYUAD
-        Sama Fac Offices (UAE)</pickup-location><pickup-location code="NYUSX">NYU
-        Shanghai Library (China)</pickup-location></pickup-locations><note type="info">This
-        item is checked out until 10/11/14 at 06:45 PM.</note><note type="info">The
-        expected date of availability for this item is 07/08/14 at 06:45 PM.</note><note
-        type="info"></note><note type="info"></note><note type="info">Item status:
-        Regular loan&lt;br /&gt; Call number: GV943.5 2010 S68 2011&lt;br /&gt;</note><last-interest-date
-        usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
-        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
-        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
-        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
-        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010/shortLoan"
-        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
-        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
-        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence></info><info
-        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
-        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv>'
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:55 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:749853403;lccn:2012371683
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Jun 2014 13:56:48 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u11
-      X-Powered-By:
-      - PHP/5.4.4-14+deb7u11
-      Content-Length:
-      - '60'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a423660;expires=Tue, 24-Jun-2014
-        14:06:48 GMT;path=/;httponly
-    body:
-      encoding: US-ASCII
-      string: ! '{"oclc:749853403;lccn:2012371683":{"records":[],"items":[]}}'
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:55 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Cottle%22%20and%20local.OCLCNumber%20=%20%22749853403%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '5099'
-      Date:
-      - Tue, 24 Jun 2014 13:56:48 GMT
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
-        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
-        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
-        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Fri
-        Mar 21 17:09:35 2014 UTC</creationtime><pnkey>lccn-no2012041797</pnkey><audLevel><min><level>0.88</level><title>South
-        Africa's World Cup : a legacy for whom? /</title></min><avg><level>0.88</level></avg><max><level>0.88</level><title>South
-        Africa's World Cup : a legacy for whom? /</title></max></audLevel><authorityInfo><viafid>230050889</viafid><lccn>no2012041797</lccn></authorityInfo><nameInfo
-        type=\"personal\"><rawName><suba>Cottle, Eddie</suba></rawName><fastHeadings><fast
-        count=\"74\" norm=\"902116\" size=\"5\" tag=\"650\">Economics</fast><fast
-        count=\"74\" norm=\"1409245\" size=\"5\" tag=\"611\">World Cup (Soccer)</fast><fast
-        coor=\"e0260000|s0300000\" count=\"74\" norm=\"1204616\" size=\"5\" tag=\"651\">South
-        Africa</fast></fastHeadings><languages count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><dates><date
-        byCount=\"4\" byScaled=\"2.00\" count=\"4\" scaled=\"2.00\">2011</date></dates><totalHoldings>75</totalHoldings><workCount>1</workCount><recordCount>4</recordCount><ddc
-        ident=\"796.33/466809/68:23\">796.3346680968</ddc><lcc ident=\"GV943.5 2010\">GV943.5
-        2010</lcc></nameInfo><by><citation ident=\"newwork749853403\"><holdings>75</holdings><numEditions>4</numEditions><oclcnum>ocn749853403</oclcnum><recordType>book</recordType><languages
-        count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><date>2011</date><dates
-        different=\"1\" first=\"2011\" last=\"2011\"/><audLevel>0.88</audLevel><title>South
-        Africa's World Cup : a legacy for whom?</title><summary>&quot;This groundbreaking
-        book provides a critically informed analysis of the impact and legacy of mega-sporting
-        events through the lens of South Africa's 2010 FIFA Soccer World Cup and its
-        associated developmental paradigm. It challenges mainstream thinking and mega-event
-        praise singers by providing concrete evidence to show that this sporting spectacular
-        was little more than a front for massive accumulation and extraction of wealth,
-        alongside increased sporting and socio-economic inequality.&quot;--Back cover</summary></citation></by><admin:administrativeMetadata
-        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Fri
-        Mar 21 16:04:06 EDT 2014</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>1404</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
-        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
-        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
-        = &amp;#34;Cottle&amp;#34; and local.OCLCNumber = &amp;#34;749853403&amp;#34;</query><xQuery><ns3:triple
-        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
-        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
-        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
-        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
-        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Cottle</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
-        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
-        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
-        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">749853403</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
-        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
-        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:55 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22south%20africa's%20world%20cup%22%20AND%20creator:(cottle)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 24 Jun 2014 13:56:49 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.2
-    body:
-      encoding: US-ASCII
-      string: ! '{"responseHeader":{"status":0,"QTime":206,"params":{"json.wrf":"","qin":"title:\"south
-        africa''s world cup\" AND creator:(cottle) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"south
-        africa''s world cup\" AND creator:(cottle ) AND ( mediatype:texts OR mediatype:audio
-        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:56:56 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:56 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010
@@ -760,15 +465,17 @@ http_interactions:
   recorded_at: Tue, 24 Jun 2014 16:50:57 GMT
 - request:
     method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Cottle%22%20and%20local.OCLCNumber%20=%20%22749853403%22&sortKeys=holdingscount
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept:
-      - text/xml
       User-Agent:
-      - Ruby
+      - Faraday v0.8.9
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -776,64 +483,52 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
-      - text/xml
-      Content-Length:
-      - '5099'
+      - application/xml
+      Transfer-Encoding:
+      - chunked
       Date:
-      - Tue, 24 Jun 2014 17:05:02 GMT
+      - Tue, 24 Jun 2014 16:50:58 GMT
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
-        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
-        xsi:type=\"xsd:string\">default</recordSchema><recordPacking xsi:type=\"xsd:string\">xml</recordPacking><recordData
-        xsi:type=\"ns1:stringOrXmlFragment\"><Identity type=\"personal\" xmlns=\"\"><creationtime>Fri
-        Mar 21 17:09:35 2014 UTC</creationtime><pnkey>lccn-no2012041797</pnkey><audLevel><min><level>0.88</level><title>South
-        Africa's World Cup : a legacy for whom? /</title></min><avg><level>0.88</level></avg><max><level>0.88</level><title>South
-        Africa's World Cup : a legacy for whom? /</title></max></audLevel><authorityInfo><viafid>230050889</viafid><lccn>no2012041797</lccn></authorityInfo><nameInfo
-        type=\"personal\"><rawName><suba>Cottle, Eddie</suba></rawName><fastHeadings><fast
-        count=\"74\" norm=\"902116\" size=\"5\" tag=\"650\">Economics</fast><fast
-        count=\"74\" norm=\"1409245\" size=\"5\" tag=\"611\">World Cup (Soccer)</fast><fast
-        coor=\"e0260000|s0300000\" count=\"74\" norm=\"1204616\" size=\"5\" tag=\"651\">South
-        Africa</fast></fastHeadings><languages count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><dates><date
-        byCount=\"4\" byScaled=\"2.00\" count=\"4\" scaled=\"2.00\">2011</date></dates><totalHoldings>75</totalHoldings><workCount>1</workCount><recordCount>4</recordCount><ddc
-        ident=\"796.33/466809/68:23\">796.3346680968</ddc><lcc ident=\"GV943.5 2010\">GV943.5
-        2010</lcc></nameInfo><by><citation ident=\"newwork749853403\"><holdings>75</holdings><numEditions>4</numEditions><oclcnum>ocn749853403</oclcnum><recordType>book</recordType><languages
-        count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><date>2011</date><dates
-        different=\"1\" first=\"2011\" last=\"2011\"/><audLevel>0.88</audLevel><title>South
-        Africa's World Cup : a legacy for whom?</title><summary>&quot;This groundbreaking
-        book provides a critically informed analysis of the impact and legacy of mega-sporting
-        events through the lens of South Africa's 2010 FIFA Soccer World Cup and its
-        associated developmental paradigm. It challenges mainstream thinking and mega-event
-        praise singers by providing concrete evidence to show that this sporting spectacular
-        was little more than a front for massive accumulation and extraction of wealth,
-        alongside increased sporting and socio-economic inequality.&quot;--Back cover</summary></citation></by><admin:administrativeMetadata
-        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Fri
-        Mar 21 16:04:06 EDT 2014</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>1404</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
-        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
-        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
-        = &amp;#34;Cottle&amp;#34; and local.OCLCNumber = &amp;#34;749853403&amp;#34;</query><xQuery><ns3:triple
-        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
-        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
-        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
-        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
-        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Cottle</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
-        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
-        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
-        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">749853403</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
-        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
-        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20120121</z30-open-date><z30-update-date>20120406</z30-update-date><z30-cataloger>KAUFFMANR</z30-cataloger><z30-date-last-return>20121213</z30-date-last-return><z30-hour-last-return>1132</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>GV943.5
+        2010 S68 2011</z30-call-no><z30-call-no-key>0 gv&quot;943 5 2010 s68 2011</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number>20123286</z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>39.00</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004385625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20120508</z30-process-status-date></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>003562911</z13-doc-number><z13-year>2011</z13-year><z13-open-date>20120121</z13-open-date><z13-update-date>20120402</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>GV943.5
+        2010</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>South
+        Africa&apos;s World Cup :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Scottsville,
+        South Africa : University of KwaZulu-Natal Press, 2011.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9781869142162</z13-isbn-issn></z13><status>10/11/14</status><info
+        type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="BOBST">NYU Bobst</pickup-location><pickup-location code="NCOUR">NYU
+        Courant</pickup-location><pickup-location code="NIFA">NYU Institute of Fine
+        Arts</pickup-location><pickup-location code="NISAW">NYU Inst Study Ancient
+        World</pickup-location><pickup-location code="NREI">NYU Jack Brause</pickup-location><pickup-location
+        code="NPOLY">NYU Poly</pickup-location><pickup-location code="NYUAB">NYU Abu
+        Dhabi Library (UAE)</pickup-location><pickup-location code="NYUSE">NYUAD Ctr
+        for Sci &amp; Eng (UAE)</pickup-location><pickup-location code="NYUSS">NYUAD
+        Sama Fac Offices (UAE)</pickup-location><pickup-location code="NYUSX">NYU
+        Shanghai Library (China)</pickup-location></pickup-locations><note type="info">This
+        item is checked out until 10/11/14 at 06:45 PM.</note><note type="info">The
+        expected date of availability for this item is 07/08/14 at 06:45 PM.</note><note
+        type="info"></note><note type="info"></note><note type="info">Item status:
+        Regular loan&lt;br /&gt; Call number: GV943.5 2010 S68 2011&lt;br /&gt;</note><last-interest-date
+        usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotocopyRequest" allowed="N"><note type="error">Item cannot be photocopied
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv>'
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 17:05:02 GMT
+  recorded_at: Tue, 24 Jun 2014 16:50:58 GMT
 - request:
     method: put
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003562911/items/NYU50003562911000010/hold
@@ -862,11 +557,47 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 17:05:26 GMT
+      - Tue, 24 Jun 2014 16:50:59 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><put-item-hold><reply-text>ok</reply-text><reply-code>0000</reply-code><create-hold><note
         type="info">Action Succeeded</note></create-hold></put-item-hold> '
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 17:05:27 GMT
-recorded_with: VCR 2.6.0
+  recorded_at: Tue, 24 Jun 2014 16:50:59 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22south%20africa's%20world%20cup%22%20AND%20creator:(cottle)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Thu, 31 Jul 2014 15:56:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":640,"params":{"json.wrf":"","qin":"title:\"south
+        africa''s world cup\" AND creator:(cottle) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"south
+        africa''s world cup\" AND creator:(cottle ) AND ( mediatype:texts OR mediatype:audio
+        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Thu, 31 Jul 2014 15:56:14 GMT
+recorded_with: VCR 2.9.2

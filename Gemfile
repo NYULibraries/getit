@@ -30,7 +30,6 @@ group :development, :test, :cucumber do
   gem 'cucumber-rails', '~> 1.4.0', require: false
   gem 'database_cleaner', '~> 1.3.0'
   gem 'selenium-webdriver', '~> 2.42.0'
-  gem 'poltergeist', '~> 1.5.0'
   gem 'coveralls', '~> 0.7.0', require: false
   # Use pry-debugger as the REPL and for debugging
   gem 'pry-debugger', '~> 0.2.0'

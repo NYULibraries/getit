@@ -51,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 24 Jun 2014 13:45:30 GMT
+      - Mon, 23 Jun 2014 16:04:38 GMT
       Server:
       - Apache
       Content-Type:
@@ -124,7 +124,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:37 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:38 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -160,7 +160,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:45:31 GMT
+      - Mon, 23 Jun 2014 16:04:39 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
@@ -320,7 +320,7 @@ http_interactions:
         \         &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n      &lt;/DOCSET&gt;\n
         \   &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:38 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:39 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items
@@ -348,13 +348,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:45:41 GMT
+      - Mon, 23 Jun 2014 16:04:40 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items/NYU50001102376000010"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:49 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:40 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items/NYU50001102376000010
@@ -382,7 +382,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:45:41 GMT
+      - Mon, 23 Jun 2014 16:04:40 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
@@ -395,129 +395,7 @@ http_interactions:
         Delhi ; Thousand Oaks, Calif. : SAGE Publications, 2004.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0761998306
         (Cloth)</z13-isbn-issn></z13><status>On Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:49 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22it%20experience%20in%20india%22%20AND%20creator:(keniston)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 24 Jun 2014 13:45:42 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '161'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22it+experience+in+india%22+AND+creator:%28keniston%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Tue, 24 Jun 2014 19:45:42 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: US-ASCII
-      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:49 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2003026836
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Jun 2014 13:45:42 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u11
-      X-Powered-By:
-      - PHP/5.4.4-14+deb7u11
-      Content-Length:
-      - '45'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff854c63df45525d5f4f58455e445a4a423660;expires=Tue, 24-Jun-2014
-        13:55:42 GMT;path=/;httponly
-    body:
-      encoding: US-ASCII
-      string: ! '{"lccn:2003026836":{"records":[],"items":[]}}'
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:49 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Kenneth%20Keniston%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Location:
-      - /identities/search/PersonalIdentities?query=local.Name+all+%22Kenneth+Keniston%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '1972'
-      Date:
-      - Tue, 24 Jun 2014 13:45:42 GMT
-    body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
-        all &amp;#34;Kenneth Keniston&amp;#34;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
-        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
-        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
-        xsi:type=\"xsd:string\">Kenneth Keniston</ns2:term></ns2:searchClause></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:50 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:40 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010
@@ -545,7 +423,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:45:43 GMT
+      - Mon, 23 Jun 2014 16:04:41 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
@@ -580,7 +458,7 @@ http_interactions:
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:50 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:41 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010
@@ -608,7 +486,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 24 Jun 2014 13:45:43 GMT
+      - Mon, 23 Jun 2014 16:04:42 GMT
     body:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
@@ -643,41 +521,5 @@ http_interactions:
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:50 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22it%20experience%20in%20india%22%20AND%20creator:(keniston)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Tue, 24 Jun 2014 13:45:43 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.2
-    body:
-      encoding: US-ASCII
-      string: ! '{"responseHeader":{"status":0,"QTime":367,"params":{"json.wrf":"","qin":"title:\"it
-        experience in india\" AND creator:(keniston) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"it
-        experience in india\" AND creator:(keniston ) AND ( mediatype:texts OR mediatype:audio
-        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 13:45:50 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:42 GMT
 recorded_with: VCR 2.6.0
