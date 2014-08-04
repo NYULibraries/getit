@@ -6,12 +6,12 @@ Feature: Log in/out links
   Scenario: A guest user should see a login link
     Given I am not logged in
     And I am on the GetIt search page
-    Then I should a login link
+    Then I should see a login link
     And I should see "Login" as the text of the login link
 
   @logout
   Scenario: A logged in user should see a logout link
     Given I am logged in
     And I am on the GetIt search page
-    Then I should a logout link
+    Then I should see a logout link
     And I should see "Log-out Dev" as the text of the logout link
