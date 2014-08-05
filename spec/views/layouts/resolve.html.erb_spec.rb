@@ -17,6 +17,7 @@ describe 'layouts/resolve' do
   it { should match /class="umlaut no-js"/ }
   it { should match /class="umlaut-container"/ }
   it { should match /class="umlaut-main-container-fluid container-fluid umlaut-resolve-container/ }
+  it { should match /Log-out Dev/ }
   it { should render_template 'umlaut/_header' }
   it { should render_template 'umlaut/_footer' }
 end
