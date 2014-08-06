@@ -6,6 +6,10 @@ module Views
         javascript_include_tag "search"
       end
 
+      def gauges?
+        Rails.env.production? || Rails.env.reindex?
+      end
+
       def gauges_tracking_code
         views["gauges_tracking_code"]
       end
