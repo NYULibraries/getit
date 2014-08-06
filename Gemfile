@@ -55,7 +55,7 @@ gem 'mustache-rails', git: 'git://github.com/josh/mustache-rails.git', tag: 'v0.
 gem 'nyulibraries-deploy', git: 'git://github.com/NYULibraries/nyulibraries-deploy.git' , branch: 'development-fig'
 
 # Figs for configuration
-gem 'figs', '~> 2.0.0'
+gem 'figs', '~> 2.0.2'
 
 # Use passenger as the app server
 gem 'passenger', '~> 4.0.0'
