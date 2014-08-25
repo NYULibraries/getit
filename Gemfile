@@ -62,7 +62,7 @@ gem 'passenger', '~> 4.0.0'
 
 # Umlaut
 gem 'umlaut', '~> 3.3.0'
-gem 'umlaut-primo', '~> 0.1.2'
+gem 'umlaut-primo', git: 'git://github.com/team-umlaut/umlaut-primo.git'
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
