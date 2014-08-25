@@ -52,6 +52,14 @@ GIT
       actionpack (>= 3.1)
       mustache (~> 0.99.4)
 
+GIT
+  remote: git://github.com/team-umlaut/umlaut-primo.git
+  revision: 70ee3ab940cd41f8575d12185c3154daab577e3a
+  specs:
+    umlaut-primo (0.1.2)
+      exlibris-primo (>= 1.0.8)
+      require_all (>= 1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -391,9 +399,6 @@ GEM
       openurl (>= 0.5.0)
       rails (~> 3.2.12)
       sass-rails (~> 3.2.6)
-    umlaut-primo (0.1.2)
-      exlibris-primo (>= 1.0.8)
-      require_all (>= 1.2.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.6)
@@ -446,6 +451,6 @@ DEPENDENCIES
   therubyracer (~> 0.12.0)
   uglifier (~> 2.5.0)
   umlaut (~> 3.3.0)
-  umlaut-primo (~> 0.1.2)
+  umlaut-primo!
   vcr (~> 2.9.0)
   webmock (~> 1.18.0)
