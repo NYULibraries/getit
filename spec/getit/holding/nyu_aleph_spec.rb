@@ -2,6 +2,10 @@ require 'rails_helper'
 module GetIt
   module Holding
     describe NyuAleph do
+      describe NyuAleph::VALID_SOURCES do
+        subject { NyuAleph::VALID_SOURCES }
+        it { should eq ['nyu_aleph', 'COURSES']}
+      end
       let(:service_response) { build(:nyu_aleph_service_response) }
       subject(:holding) { NyuAleph.new(service_response) }
       it { should be_a Base }
@@ -235,7 +239,7 @@ module GetIt
       end
       context 'when initialized with a service response argument' do
         context 'and the service response argument is an "NYU_Primo_Source" ServiceResponse' do
-          context 'but the service response argument is not an "nyu_aleph" Primo source' do
+          context 'but the service response argument is not a valid NyuAleph Primo source' do
             let(:service_response) { build(:primo_source_service_response) }
             it 'should raise an ArgumentError' do
               expect { subject }.to raise_error ArgumentError

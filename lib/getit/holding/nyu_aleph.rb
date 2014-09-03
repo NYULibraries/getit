@@ -1,14 +1,15 @@
 module GetIt
   module Holding
     class NyuAleph < GetIt::Holding::PrimoSource
+      VALID_SOURCES = ['nyu_aleph', 'COURSES']
       ILL_STATUSES = ['Request ILL', 'On Order']
 
       attr_reader :record_id, :item_id, :institution
 
       def initialize(service_response)
         super(service_response)
-        if view_data[:source_id] != 'nyu_aleph'
-          raise ArgumentError.new("Expecting #{view_data} to have :source_id 'nyu_aleph'")
+        unless VALID_SOURCES.include? view_data[:source_id]
+          raise ArgumentError.new("Expecting #{view_data} to have a valid :source_id")
         end
         if source_data.nil?
           raise ArgumentError.new("Expecting #{service_response} to have :source_data")
@@ -25,7 +26,7 @@ module GetIt
 
       def ill?
         from_aleph? && (status.checked_out? || status.requested? ||
-          status.processing? || status.billed_as_lost? || 
+          status.processing? || status.billed_as_lost? ||
           ILL_STATUSES.include?(status.value))
       end
 
