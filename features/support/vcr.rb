@@ -26,6 +26,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/new_yorker'
   t.tag '@guest/vogue'
   t.tag '@guest/not_by_reason_alone'
+  t.tag '@guest/the_body_as_home'
   t.tag '@guest/book'
   t.tag '@guest/journal'
   t.tag '@guest/checked_out'
