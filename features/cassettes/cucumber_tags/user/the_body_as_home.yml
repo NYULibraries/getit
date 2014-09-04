@@ -1,0 +1,425 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Sep 2014 15:16:07 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/xml; charset=UTF-8
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:16:07 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-09-04T11:16:10-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-COURSES000243396&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Sep 2014 15:16:10 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-09-04T11:16:10-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;7637918&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-COURSES000243396&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-COURSES000243396&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-COURSES000243396&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s67010EC4-3446-11E4-8BB3-88C7FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-COURSES000243396&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-COURSES000243396%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-COURSES000243396+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-09-04T11%253A16%253A10-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-COURSES000243396%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:16:11 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>COURSES000243396</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '841'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 04 Sep 2014 15:16:12 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;000243396&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;COURSES&lt;/sourceid&gt;\n                &lt;recordid&gt;COURSES000243396&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU30&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU30000243396&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;The body as home&lt;/title&gt;\n                &lt;creator&gt;Louise
+        Steinman&lt;/creator&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;source&gt;COURSES&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBRES$$1Reserve
+        Collection$$2(YSL1211.A02 )$$Savailable$$31$$40$$5N$$60$$XNYU50$$YBRES$$ZBRES&lt;/availlibrary&gt;\n
+        \               &lt;lds01&gt;ARTS-UG1211 -- Making Dance -- Satin, Leslie
+        -- Fall -- Gallatin&lt;/lds01&gt;\n                &lt;lds02&gt;COURSES000243396&lt;/lds02&gt;\n
+        \               &lt;lds03&gt;ARTS-UG1211 -- Making Dance -- Satin, Leslie&lt;/lds03&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;available&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Treserves_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DClick here for a persistent
+        link&lt;/linktoreview&gt;\n              &lt;/links&gt;\n              &lt;search&gt;\n
+        \               &lt;creatorcontrib&gt;Louise  Steinman&lt;/creatorcontrib&gt;\n
+        \               &lt;creatorcontrib&gt;Steinman, L&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;The body as home&lt;/title&gt;\n                &lt;sourceid&gt;COURSES&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;COURSES000243396&lt;/recordid&gt;\n                &lt;toc&gt;ARTS-UG1211
+        BOBST - Making Dance - Satin, Leslie&lt;/toc&gt;\n                &lt;toc&gt;ARTS-UG1211
+        BOBST Making Dance Satin, Leslie Fall Gallatin&lt;/toc&gt;\n                &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n
+        \               &lt;searchscope&gt;BOBSTCR&lt;/searchscope&gt;\n                &lt;searchscope&gt;COURSES&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;BOBSTCR&lt;/scope&gt;\n                &lt;scope&gt;COURSES&lt;/scope&gt;\n
+        \               &lt;lsr03&gt;Making Dance&lt;/lsr03&gt;\n                &lt;lsr04&gt;Satin,
+        Leslie&lt;/lsr04&gt;\n              &lt;/search&gt;\n              &lt;sort&gt;\n
+        \               &lt;title&gt;The body as home&lt;/title&gt;\n                &lt;author&gt;Steinman,
+        Louise&lt;/author&gt;\n              &lt;/sort&gt;\n              &lt;facets&gt;\n
+        \               &lt;collection&gt;BRES&lt;/collection&gt;\n                &lt;toplevel&gt;available&lt;/toplevel&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Steinman, L&lt;/creatorcontrib&gt;\n
+        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;lfc01&gt;Reserve
+        Collection&lt;/lfc01&gt;\n                &lt;lfc02&gt;ARTS-UG1211&lt;/lfc02&gt;\n
+        \               &lt;lfc03&gt;Satin, Leslie&lt;/lfc03&gt;\n                &lt;lfc05&gt;Satin,
+        Leslie&lt;/lfc05&gt;\n                &lt;lfc06&gt;Making Dance&lt;/lfc06&gt;\n
+        \               &lt;frbrgroupid&gt;135048799&lt;/frbrgroupid&gt;\n                &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n
+        \             &lt;/facets&gt;\n              &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n
+        \               &lt;c3&gt;thebodyashome&lt;/c3&gt;\n                &lt;f5&gt;thebodyashome&lt;/f5&gt;\n
+        \               &lt;f7&gt;the body as home&lt;/f7&gt;\n                &lt;f11&gt;steinman
+        louise&lt;/f11&gt;\n              &lt;/dedup&gt;\n              &lt;frbr&gt;\n
+        \               &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Ksteinman
+        louise$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookthe body as home$$AT&lt;/k3&gt;\n
+        \             &lt;/frbr&gt;\n              &lt;delivery&gt;\n                &lt;institution&gt;NYU&lt;/institution&gt;\n
+        \               &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n
+        \             &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Steinman&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Louise&lt;/aufirst&gt;\n                &lt;au&gt;Steinman,
+        Louise&lt;/au&gt;\n                &lt;btitle&gt;The body as home&lt;/btitle&gt;\n
+        \               &lt;format&gt;book&lt;/format&gt;\n                &lt;genre&gt;book&lt;/genre&gt;\n
+        \               &lt;ristype&gt;BOOK&lt;/ristype&gt;\n                &lt;lad01&gt;Physical
+        Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n            &lt;/record&gt;\n
+        \         &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n      &lt;/DOCSET&gt;\n
+        \   &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:16:12 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU30000243396/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 04 Sep 2014 15:26:31 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU30000243396/items/NYU50100315710000010"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:26:31 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU30000243396/items/NYU50100315710000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 04 Sep 2014 15:26:31 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BRES</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>20</z30-item-status-code><z30-collection-code>BRES</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>100315710</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142054357317</z30-barcode><z30-sub-library>NYU
+        Bobst Reserve Collection</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Reserve
+        2 hour loan</z30-item-status><z30-open-date>20140828</z30-open-date><z30-update-date>20140828</z30-update-date><z30-cataloger>MENDINOE</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Reserve
+        Collection</z30-collection><z30-call-no-type>8</z30-call-no-type><z30-call-no>YSL1211.A02</z30-call-no><z30-call-no-key>8
+        ysl1211.a02</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>000000000</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20140828</z30-process-status-date><z30-upd-time-stamp>201408281859255</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>000243395</z13-doc-number><z13-year>0000</z13-year><z13-open-date>20140828</z13-open-date><z13-update-date>20140828</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC8</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Steinman,
+        Louise</z13-author><z13-title-code>245</z13-title-code><z13-title>The body
+        as home</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn><z13-upd-time-stamp>201408281859522</z13-upd-time-stamp></z13><status>On
+        Shelf</status></item></get-item> '
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:26:31 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Steinman,%20Louise%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.Name+all+%22Steinman%2C+Louise%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1972'
+      Date:
+      - Thu, 04 Sep 2014 15:26:33 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &amp;#34;Steinman, Louise&amp;#34;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">Steinman, Louise</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 15:26:34 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22the%20body%20as%20home%22%20AND%20creator:(steinman)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Thu, 04 Sep 2014 17:57:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '161'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+body+as+home%22+AND+creator:%28steinman%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Thu, 04 Sep 2014 23:57:40 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 17:57:41 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22the%20body%20as%20home%22%20AND%20creator:(steinman)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Thu, 04 Sep 2014 18:04:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":4,"params":{"json.wrf":"","qin":"title:\"the
+        body as home\" AND creator:(steinman) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"the
+        body as home\" AND creator:(steinman ) AND ( mediatype:texts OR mediatype:audio
+        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Thu, 04 Sep 2014 18:04:15 GMT
+recorded_with: VCR 2.9.2

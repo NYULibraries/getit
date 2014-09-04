@@ -42,3 +42,13 @@ Feature: Copies in Library
     And I should see "NYU Bobst Reserve Collection" as the copy's location
     And I should see "(YSL1211.A02)" as the copy's call number
     And I should see the "More Info" button for the copy
+
+  @user/the_body_as_home
+  Scenario: A user viewing Copies in Library for course reserves
+    Given I am logged in
+    And I am on the GetIt page for the title "The body as home"
+    Then I should see the "Copies in Library" section
+    And I should the link to the call number maps
+    And I should see "NYU Bobst Reserve Collection" as the copy's location
+    And I should see "(YSL1211.A02)" as the copy's call number
+    And I should see the "More Info" button for the copy
