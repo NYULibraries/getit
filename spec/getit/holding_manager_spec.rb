@@ -1,6 +1,10 @@
 require 'rails_helper'
 module GetIt
   describe HoldingManager, vcr: { cassette_name: 'holdings' } do
+    describe HoldingManager::VALID_SERVICE_IDS do
+      subject { HoldingManager::VALID_SERVICE_IDS }
+      it { should eq ['NYU_Primo', 'NYU_Primo_Source'] }
+    end
     let(:service_response) { build(:nyu_aleph_service_response) }
     subject(:holding_manager) { HoldingManager.new(service_response) }
     it { should be_a HoldingManager }
@@ -11,9 +15,13 @@ module GetIt
     end
     describe '#holding' do
       subject { holding_manager.holding }
-      context 'when initialized with an "NyuAleph" holding service response' do
-        let(:service_response) { build(:nyu_aleph_service_response) }
-        it { should be_a Holding::NyuAleph }
+      context 'when initialized with an "PrimoSource" holding service response' do
+        let(:service_response) { build(:primo_source_service_response) }
+        it { should be_a Holding::PrimoSource }
+        context 'and the holding service response is an "NyuAleph" holding service response' do
+          let(:service_response) { build(:nyu_aleph_service_response) }
+          it { should be_a Holding::NyuAleph }
+        end
       end
       context 'when initialized with an "Primo" holding service response' do
         let(:service_response) { build(:primo_service_response) }
@@ -37,14 +45,6 @@ module GetIt
           let(:service_response) { build(:service_response) }
           it 'should raise an ArgumentError' do
             expect { subject }.to raise_error ArgumentError
-          end
-        end
-        context 'and the service response argument is a "holding" ServiceResponse' do
-          context 'but the service response argument is a "PrimoSource" service response' do
-            let(:service_response) { build(:primo_source_service_response) }
-            it 'should raise an ArgumentError' do
-              expect { subject }.to raise_error ArgumentError
-            end
           end
         end
       end
