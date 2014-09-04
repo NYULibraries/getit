@@ -32,8 +32,10 @@ class UmlautController < ApplicationController
     end
   end
 
-  # Is the service response requestable 
+  # Is the service response requestable
   def requestable?(holding)
+    # Only NyuAleph holdings are requestable
+    return false unless holding.is_a? GetIt::Holding::NyuAleph
     if current_user.present?
       holding_request_authorizer(holding_request(holding)).requestable?
     else
@@ -148,7 +150,7 @@ class UmlautController < ApplicationController
       partial "wayfinder"
       show_heading false
       show_spinner false
-      visibility :responses_exist 
+      visibility :responses_exist
     end
 
     add_resolve_sections! do
@@ -157,7 +159,7 @@ class UmlautController < ApplicationController
       bg_update false
       section_title ServiceTypeValue[:bib_tool].display_name_pluralize
       show_spinner false
-      visibility :responses_exist 
+      visibility :responses_exist
     end
 
     export_citation = resolve_sections[resolve_sections.index {|s| s[:div_id].to_s == "export_citation"}]
@@ -215,7 +217,7 @@ class UmlautController < ApplicationController
     # Start adding conditional institutions
     # beginning with the requested institution from the URL
     if requested_institution
-      requested_institution = 
+      requested_institution =
         Institutions.institutions[requested_institution.to_sym]
       if requested_institution.present?
         institutions_in_play << requested_institution
@@ -242,7 +244,7 @@ class UmlautController < ApplicationController
 
   def user_institutions
     if current_user.present? and current_user.primary_institution.present?
-      [current_user.primary_institution] 
+      [current_user.primary_institution]
     else
       []
     end
