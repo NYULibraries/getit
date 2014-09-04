@@ -47,7 +47,7 @@ module ApplicationHelper
       nyu_primo_source_service_responses =
         request.service_responses.where(service_id: 'NYU_Primo_Source')
       nyu_primo_source_service_responses.each do |service_response|
-        holding = GetIt::Holding::NyuAleph.new(service_response)
+        holding = GetIt::HoldingManager.new(service_response).holding
         if holding.expired?
           service_response.destroy
         else
