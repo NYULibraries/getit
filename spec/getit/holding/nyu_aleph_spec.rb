@@ -4,7 +4,7 @@ module GetIt
     describe NyuAleph do
       describe NyuAleph::VALID_SOURCES do
         subject { NyuAleph::VALID_SOURCES }
-        it { should eq ['nyu_aleph', 'COURSES']}
+        it { should eq ['nyu_aleph'] }
       end
       let(:service_response) { build(:nyu_aleph_service_response) }
       subject(:holding) { NyuAleph.new(service_response) }

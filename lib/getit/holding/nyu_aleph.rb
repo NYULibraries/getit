@@ -1,7 +1,7 @@
 module GetIt
   module Holding
     class NyuAleph < GetIt::Holding::PrimoSource
-      VALID_SOURCES = ['nyu_aleph', 'COURSES']
+      VALID_SOURCES = ['nyu_aleph']
       ILL_STATUSES = ['Request ILL', 'On Order']
 
       attr_reader :record_id, :item_id, :institution
