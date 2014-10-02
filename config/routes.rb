@@ -56,13 +56,6 @@ Rails.application.routes.draw do
 
   Umlaut::Routes.new(self).draw
 
-  get 'login' => 'user_sessions#new', as: :login
-  get 'logout' => 'user_sessions#destroy', as: :logout
-  get 'validate' => 'user_sessions#validate', as: :validate
-
-  # Probably should remove this in a future iteration
-  resources :user_sessions
-
   # GET a new holding request form
   get 'holding_requests/new/:service_response_id' => 'holding_requests#new',
     as: :new_holding_request
