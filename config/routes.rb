@@ -12,11 +12,6 @@ GetIt::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
-  match 'login', :to => 'user_sessions#new', :as => :login
-  match 'logout', :to => 'user_sessions#destroy', :as => :logout
-  match 'validate', :to => 'user_sessions#validate', :as => :validate
-  resources :user_sessions
-
   # GET a new holding request form
   match 'holding_requests/new/:service_response_id', :to => 'holding_requests#new', :as => :new_holding_request, :via => :get
   # POST to create a new holding request
