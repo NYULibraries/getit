@@ -26,7 +26,6 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
-  c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
   c.filter_sensitive_data('http://solr.library.edu') { Sunspot.config.solr.url }
   c.filter_sensitive_data('AMAZON_API_KEY') { ENV['AMAZON_API_KEY'] }
   c.filter_sensitive_data('AMAZON_SECRET_KEY') { ENV['AMAZON_SECRET_KEY'] }
