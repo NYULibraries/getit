@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131218153325) do
+ActiveRecord::Schema.define(:version => 20140930160653) do
 
   create_table "clickthroughs", :force => true do |t|
     t.integer  "request_id",          :default => 0, :null => false
@@ -120,23 +120,19 @@ ActiveRecord::Schema.define(:version => 20131218153325) do
     t.string   "email"
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "mobile_phone"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.string   "session_id"
-    t.string   "persistence_token"
-    t.integer  "login_count"
-    t.string   "last_request_at"
-    t.string   "current_login_at"
-    t.string   "last_login_at"
-    t.string   "last_login_ip"
-    t.string   "current_login_ip"
-    t.text     "user_attributes"
-    t.datetime "refreshed_at"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.integer  "sign_in_count",      :default => 0,  :null => false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "provider",           :default => "", :null => false
+    t.string   "aleph_id"
+    t.string   "institution_code"
   end
 
+  add_index "users", ["username", "provider"], :name => "index_users_on_username_and_provider", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
 end
