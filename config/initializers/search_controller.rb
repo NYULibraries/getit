@@ -1,5 +1,5 @@
 # Re-open SearchController to support different institutional search methods.
-# We override initialize and extend with the search module via a before 
+# We override initialize and extend with the search module via a before
 # filter since we may need params to determine current primary institution.
 # We can't extend at initialization since we don't have the request
 # params at that point.
@@ -16,13 +16,10 @@ ActiveSupport.on_load(:after_initialize) do
     def extend_with_institutional_search_module
       # Get the module from umlaut_config
       search_module = search_method_module
-      # If we have defined a searcher for the institution
-      # use that instead.
-      if current_primary_institution and 
-        current_primary_institution.controllers and 
-          current_primary_institution.controllers["searcher"]
+      # If we have defined a searcher for the institution use that instead.
+      if current_institution_searcher.present?
         search_module = SearchMethods
-        current_primary_institution.controllers["searcher"].split("::").each do |const|
+        current_institution_searcher.split("::").each do |const|
           search_module = search_module.const_get(const.to_sym)
         end
       end
@@ -30,5 +27,12 @@ ActiveSupport.on_load(:after_initialize) do
       # to this object.
       self.extend search_module
     end
+
+    def current_institution_searcher
+      if current_institution && current_institution.controllers
+        @current_institution_searcher ||= current_institution.controllers["searcher"]
+      end
+    end
+    private :current_institution_searcher
   end
 end
