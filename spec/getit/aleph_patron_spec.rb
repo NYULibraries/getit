@@ -29,8 +29,8 @@ module GetIt
         end
       end
       context 'and the user argument is a User' do
-        context 'but the user attributes are not a Hash' do
-          let(:user) { build :user, user_attributes: nil }
+        context 'but the user does not have an aleph_id' do
+          let(:user) { build :user, aleph_id: nil }
           it 'should raise an ArgumentError' do
             expect { subject }.to raise_error ArgumentError
           end

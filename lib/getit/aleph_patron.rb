@@ -6,11 +6,11 @@ module GetIt
       unless user.is_a?(User)
         raise ArgumentError.new("Expecting #{user} to be a User")
       end
-      unless user.user_attributes.is_a?(Hash)
-        raise ArgumentError.new("Expecting #{user.user_attributes} to be a Hash")
+      if user.aleph_id.blank?
+        raise ArgumentError.new("Expecting #{user} to have an Aleph ID")
       end
       @user = user
-      @id = user.user_attributes[:nyuidn]
+      @id = user.aleph_id
     end
 
     def record(record_id)
