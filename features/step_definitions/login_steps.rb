@@ -1,7 +1,10 @@
 Given(/^I am logged in$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = omniauth_hash
+  visit '/users/auth/nyulibraries'
 end
 
 Given(/^I am not logged in$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
 
 Then(/^I should see a login link$/) do
@@ -25,4 +28,5 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
+  expect(page).to have_text 'Select your affiliation'
 end
