@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  include Authpds::Controllers::AuthpdsController
 
   # For dev purposes
   def current_user_dev
