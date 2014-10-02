@@ -31,19 +31,19 @@ end
 # back. Useful for efficiency, also useful for
 # testing code against API's that not everyone
 # has access to -- the responses can be cached
-# and re-used. 
+# and re-used.
 require 'vcr'
 require 'webmock'
 
 # To allow us to do real HTTP requests in a VCR.turned_off, we
-# have to tell webmock to let us. 
+# have to tell webmock to let us.
 WebMock.allow_net_connect!
 VCR.configure do |c|
   c.cassette_library_dir = 'test/vcr_cassettes'
   # webmock needed for HTTPClient testing
-  c.hook_into :webmock 
-  c.default_cassette_options = 
-    {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}  
+  c.hook_into :webmock
+  c.default_cassette_options =
+    {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
   # c.debug_logger = $stderr
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo.config.base_url }
