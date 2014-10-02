@@ -5,9 +5,6 @@ FactoryGirl.define do
     email 'developer@example.com'
     firstname 'Dev'
     lastname 'Eloper'
-    password_salt Authlogic::Random.hex_token
-    crypted_password { Authlogic::CryptoProviders::Sha512.encrypt("#{username}#{password_salt}") }
-    persistence_token Authlogic::Random.hex_token
     trait :aleph_attributes do
       user_attributes do
         {
