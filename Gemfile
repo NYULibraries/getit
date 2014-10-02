@@ -80,3 +80,10 @@ gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'development'
 
 # New Relic performance monitoring
 gem 'newrelic_rpm', '~> 3.9.0'
+
+# Use devise for our user model
+gem 'devise', '~> 3.2.0'
+
+# Use omniauth for logging in from multiple providers
+gem 'omniauth', '~> 1.2.0'
+gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries'
