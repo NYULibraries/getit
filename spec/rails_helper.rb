@@ -28,7 +28,6 @@ VCR.configure do |c|
     {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
-  c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
   c.filter_sensitive_data('http://solr.library.edu') { Sunspot.config.solr.url }
   c.filter_sensitive_data('AMAZON_API_KEY') { ENV['AMAZON_API_KEY'] }
   c.filter_sensitive_data('AMAZON_SECRET_KEY') { ENV['AMAZON_SECRET_KEY'] }
