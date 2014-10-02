@@ -56,6 +56,14 @@ Rails.application.routes.draw do
 
   Umlaut::Routes.new(self).draw
 
+  providers = Regexp.union(User::VALID_PROVIDERS)
+  devise_for :users, controllers: { omniauth_callbacks: 'users' }
+  devise_scope :user do
+    get 'users/:provider/:id', to: 'users#show', as: 'user', constraints: { provider: providers }
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'login/', to: redirect('/users/auth/nyulibraries'), as: :login
+  end
+
   # GET a new holding request form
   get 'holding_requests/new/:service_response_id' => 'holding_requests#new',
     as: :new_holding_request
