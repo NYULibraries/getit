@@ -1,4 +1,12 @@
 GetIt::Application.routes.draw do
+  providers = Regexp.union(User::VALID_PROVIDERS)
+  devise_for :users, controllers: { omniauth_callbacks: 'users' }
+  devise_scope :user do
+    get 'users/:provider/:id', to: 'users#show', as: 'user', constraints: { provider: providers }
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'login/', to: redirect('/users/auth/nyulibraries'), as: :login
+  end
+
   Umlaut::Routes.new(self).draw
 
   # The priority is based upon order of creation:
