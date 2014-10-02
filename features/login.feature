@@ -9,14 +9,12 @@ Feature: Log in/out links
     Then I should see a login link
     And I should see "Login" as the text of the login link
 
-  @logout
   Scenario: A logged in user on the search page should see a logout link
     Given I am logged in
     And I am on the GetIt search page
     Then I should see a logout link
     And I should see "Log-out Dev" as the text of the logout link
 
-  @logout
   Scenario: A logged in user on the resolve page should see a logout link
     Given I am logged in
     And I am on the GetIt page for "The New Yorker"
