@@ -35,7 +35,6 @@ VCR.configure do |c|
   c.filter_sensitive_data('ISBN_DB_ACCESS_KEY') { ENV['ISBN_DB_ACCESS_KEY'] }
   c.filter_sensitive_data('NYU_SCOPUS_CITATIONS_JSON_API_KEY') { ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] }
   c.filter_sensitive_data('NS_BX_TOKEN') { ENV['NS_BX_TOKEN'] }
-  c.filter_sensitive_data('PDS_HANDLE') { ENV['PDS_HANDLE'] }
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
 end
 
