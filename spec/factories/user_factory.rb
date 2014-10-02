@@ -1,19 +1,14 @@
 # User factory
 FactoryGirl.define do
   factory :user do
-    username 'developer'
-    email 'developer@example.com'
+    sequence :username do |n| "user#{n}" end
+    provider 'nyu_shibboleth'
+    email { "#{username}@example.com" }
     firstname 'Dev'
     lastname 'Eloper'
+    institution_code 'NYU'
     trait :aleph_attributes do
-      user_attributes do
-        {
-          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
-          primary_institution: :NYU,
-          institutions: [:NYU],
-          bor_status: '51'
-        }
-      end
+      aleph_id { (ENV['BOR_ID'] || 'BOR_ID') }
     end
     factory :aleph_user, traits: [:aleph_attributes]
   end
