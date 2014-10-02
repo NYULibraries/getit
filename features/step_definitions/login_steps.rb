@@ -1,9 +1,7 @@
 Given(/^I am logged in$/) do
-  ENV['PDS_HANDLE'] = 'PDS_HANDLE'
 end
 
 Given(/^I am not logged in$/) do
-  ENV['PDS_HANDLE'] = nil
 end
 
 Then(/^I should see a login link$/) do
@@ -27,5 +25,4 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
-  expect(page).to have_text 'Login with an NYU NetID'
 end
