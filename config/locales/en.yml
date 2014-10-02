@@ -20,6 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  devise:
+    users:
+      user:
+        failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+        success: "Successfully authenticated from your %{kind} account."
   application:
     title_html: BobCat
   umlaut:
