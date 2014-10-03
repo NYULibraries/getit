@@ -52,7 +52,7 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'josh/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Deploy with Formaggio deploy recipes
-gem 'nyulibraries-deploy', github: 'NYULibraries/nyulibraries-deploy' , branch: 'development-fig'
+gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.0.0'
 
 # Figs for configuration
 gem 'figs', '~> 2.0.2'
