@@ -184,7 +184,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
-      # assert_template :partial => 'cu/_sidebar', :count => 1
+      assert_template :partial => 'cu/_sidebar', :count => 1
     end
   end
 
