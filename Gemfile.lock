@@ -18,21 +18,11 @@ GIT
       require_all (~> 1.3)
 
 GIT
-  remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: 012c007e0c3eca4a623dbb2a490e43e462931e9f
-  tag: v2.1.7
+  remote: git://github.com/NYULibraries/formaggio.git
+  revision: 5606a4a9061830d0dfc7356c03c2ca65a95af13c
+  tag: v1.0.0
   specs:
-    nyulibraries-assets (2.1.7)
-      bootstrap-sass (>= 2.2.0, < 2.3.1.1)
-      compass (~> 0.12.2)
-      institutions (~> 0.1.1)
-
-GIT
-  remote: git://github.com/NYULibraries/nyulibraries-deploy.git
-  revision: 14228eeac5612d17028ed723294d468aa9a7daaf
-  branch: development-fig
-  specs:
-    nyulibraries-deploy (3.2.5)
+    formaggio (1.0.0)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       figs (~> 2.0)
@@ -42,6 +32,16 @@ GIT
       rake (~> 10.1.0)
       require_all (~> 1.3.0)
       rvm-capistrano (~> 1.5.0)
+
+GIT
+  remote: git://github.com/NYULibraries/nyulibraries-assets.git
+  revision: 012c007e0c3eca4a623dbb2a490e43e462931e9f
+  tag: v2.1.7
+  specs:
+    nyulibraries-assets (2.1.7)
+      bootstrap-sass (>= 2.2.0, < 2.3.1.1)
+      compass (~> 0.12.2)
+      institutions (~> 0.1.1)
 
 GIT
   remote: git://github.com/josh/mustache-rails.git
@@ -423,6 +423,7 @@ DEPENDENCIES
   exlibris-nyu!
   factory_girl_rails (~> 4.4.0)
   figs (~> 2.0.2)
+  formaggio!
   jquery-rails (~> 3.1.0)
   json (~> 1.8.0)
   mustache (= 0.99.4)
@@ -430,7 +431,6 @@ DEPENDENCIES
   mysql2 (~> 0.3.13)
   newrelic_rpm (~> 3.9.0)
   nyulibraries-assets!
-  nyulibraries-deploy!
   passenger (~> 4.0.0)
   progress_bar (~> 1.0.0)
   pry (~> 0.10.1)
