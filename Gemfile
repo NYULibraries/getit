@@ -11,7 +11,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'compass-rails', '~> 1.1.0'
-  gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v2.1.7'
+  gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v2.1.8'
 end
 
 # Development gems
