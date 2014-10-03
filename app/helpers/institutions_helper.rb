@@ -20,7 +20,7 @@ module InstitutionsHelper
   alias current_primary_institution current_institution
   alias current_institute current_institution
 
-  # Override Rails #url_for to add institution 
+  # Override Rails #url_for to add institution
   def url_for(options={})
     if institution_param.present? and options.is_a? Hash
       options[:institute] ||= institution_param
@@ -44,7 +44,7 @@ module InstitutionsHelper
 
   # The institution param as a Symbol
   def institution_param
-    params["institute"].upcase.to_sym if params["institute"].present?
+    params['umlaut.institution'].upcase.to_sym if params['umlaut.institution'].present?
   end
   private :institution_param
 end
