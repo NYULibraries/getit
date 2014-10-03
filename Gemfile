@@ -11,7 +11,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'compass-rails', '~> 1.1.0'
-  gem 'nyulibraries-assets', git: 'git://github.com/NYULibraries/nyulibraries-assets.git', tag: 'v2.1.7'
+  gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v2.1.7'
 end
 
 # Development gems
@@ -49,10 +49,10 @@ gem 'jquery-rails', '~> 3.1.0'
 # Use mustache
 # Fix to 0.99.4 cuz 0.99.5 broke my shit.
 gem 'mustache', '0.99.4'
-gem 'mustache-rails', git: 'git://github.com/josh/mustache-rails.git', tag: 'v0.2.3', require: 'mustache/railtie'
+gem 'mustache-rails', github: 'josh/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
-# Deploy with NYU Libraries deploy recipes
-gem 'nyulibraries-deploy', git: 'git://github.com/NYULibraries/nyulibraries-deploy.git' , branch: 'development-fig'
+# Deploy with Formaggio deploy recipes
+gem 'nyulibraries-deploy', github: 'NYULibraries/nyulibraries-deploy' , branch: 'development-fig'
 
 # Figs for configuration
 gem 'figs', '~> 2.0.2'
@@ -62,12 +62,12 @@ gem 'passenger', '~> 4.0.0'
 
 # Umlaut
 gem 'umlaut', '~> 3.3.0'
-gem 'umlaut-primo', git: 'git://github.com/team-umlaut/umlaut-primo.git'
+gem 'umlaut-primo', github: 'team-umlaut/umlaut-primo'
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
-gem 'exlibris-nyu', git: 'git://github.com/NYULibraries/exlibris-nyu.git', branch: 'development'
-gem 'authpds-nyu', git: 'git://github.com/NYULibraries/authpds-nyu.git', tag: 'v2.0.1'
+gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'development'
+gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
 
 # Dalli for caching with memcached
 gem 'dalli', '~> 2.7.0'
