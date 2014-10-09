@@ -38,6 +38,10 @@ module GetIt
         subject { holding.reliability}
         it { should_not be_nil }
       end
+      describe '#title' do
+        subject { holding.title}
+        it { should_not be_nil }
+      end
       describe '#expired?' do
         subject { holding.expired?}
         it { should be false }
