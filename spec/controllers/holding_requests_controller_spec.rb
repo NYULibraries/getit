@@ -5,7 +5,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
   describe 'WHITELISTED_TYPES' do
     subject { HoldingRequestsController::WHITELISTED_TYPES }
     it { should be_an Array }
-    it { should eq %w[available ill processing offsite on_order recall] }
+    it { should eq %w[available ill processing offsite on_order recall ezborrow] }
   end
   describe '#scan?' do
     before { allow(controller).to receive(:entire).and_return(entire) }
@@ -115,6 +115,14 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it("should have a 302 status") { expect(subject.status).to be(302) }
       it 'should redirect to ILL' do
         expect(subject.location).to match /^http:\/\/ill(dev)?\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
+      end
+    end
+    context 'when the request type is E-ZBorrow' do
+      let(:type) { 'ezborrow' }
+      it { should be_redirect }
+      it("should have a 302 status") { expect(subject.status).to be(302) }
+      it 'should redirect to ILL' do
+        expect(subject.location).to match /^http:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/
       end
     end
   end
