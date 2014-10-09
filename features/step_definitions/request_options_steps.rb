@@ -56,3 +56,7 @@ end
 Then(/^I should not see an option for this item to be held for me once processed\.$/) do
   expect(page).not_to have_text 'Request for this item to be held for you once processed.'
 end
+
+Then(/^I should see an option to request the holding from E\-ZBorrow$/) do
+  expect(page).to have_text 'Request this item from E-ZBorrow (NYU only).'
+end
