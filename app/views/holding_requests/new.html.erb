@@ -9,11 +9,11 @@
     <p>You may:</p>
     <ol class="holding-request-options">
       <%= render 'new_available' if @authorizer.available? %>
-      <%= render 'new_recall' if @authorizer.recallable? %>
       <%= render 'new_offsite' if @authorizer.offsite? %>
+      <%= render 'new_ill' if @authorizer.ill? %>
+      <%= render 'new_recall' if @authorizer.recallable? %>
       <%= render 'new_processing' if @authorizer.processing? %>
       <%= render 'new_on_order' if @authorizer.on_order? %>
-      <%= render 'new_ill' if @authorizer.ill? %>
     </ol>
     <p style="margin-top: 1em;">
       <strong>
