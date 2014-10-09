@@ -15,6 +15,10 @@ describe HoldingRequest, vcr: {cassette_name: 'holding requests'} do
     it { should be_a User }
     it { should eq user }
   end
+  describe '#aleph_patron' do
+    subject { holding_request.aleph_patron }
+    it { should be_a GetIt::AlephPatron }
+  end
   describe '#circulation_policy' do
     subject { holding_request.circulation_policy }
     it { should be_an Exlibris::Aleph::Patron::Record::Item::CirculationPolicy }
