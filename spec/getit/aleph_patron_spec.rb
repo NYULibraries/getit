@@ -11,6 +11,10 @@ module GetIt
       subject { aleph_patron.id }
       it { should eq (ENV['BOR_ID'] || 'BOR_ID') }
     end
+    describe '#bor_status' do
+      subject { aleph_patron.bor_status }
+      it { should eq '51' }
+    end
     describe '#record', vcr: {cassette_name: 'patron'} do
       let(:record_id) { 'NYU01000980206' }
       subject { aleph_patron.record(record_id) }
