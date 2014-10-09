@@ -1,6 +1,6 @@
 module GetIt
   class AlephPatron
-    attr_reader :user, :id
+    attr_reader :user, :id, :bor_status
 
     def initialize(user)
       unless user.is_a?(User)
@@ -11,6 +11,7 @@ module GetIt
       end
       @user = user
       @id = user.user_attributes[:nyuidn]
+      @bor_status = user.user_attributes[:bor_status]
     end
 
     def record(record_id)
