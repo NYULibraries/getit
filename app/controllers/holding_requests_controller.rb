@@ -3,7 +3,7 @@ class HoldingRequestsController < UmlautController
   ILLIAD_BASE_URL = (ENV['ILLIAD_BASE_URL'] || 'http://ill.library.nyu.edu')
 
   # E-ZBorrow URL
-  EZBORROW_BASE_URL = (ENV['EZBORROW_BASE_URL'] || 'http://login.library.nyu.edu')
+  EZBORROW_BASE_URL = (ENV['EZBORROW_BASE_URL'] || 'https://login.library.nyu.edu')
 
   # Valid holding request types
   WHITELISTED_TYPES = %w[available ill processing offsite on_order recall ezborrow]
