@@ -11,8 +11,8 @@ header {
 }
 
 nav {
-  @include umlaut-container();  
-  @include clearfix();    
+  @include umlaut-container();
+  @include clearfix();
   background-color: $umlautHeaderBackgroundColor;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -33,6 +33,10 @@ nav {
       vertical-align: middle;
     }
   }
+}
+
+.holding-request-options > li{
+  margin-bottom: 1em;
 }
 
 .holding-request-options.form input[name='entire'] {
