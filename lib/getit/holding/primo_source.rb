@@ -8,6 +8,10 @@ module GetIt
         end
       end
 
+      def bobst_reserve?
+        source_data[:sub_library_code] == 'BRES'
+      end
+
       protected
       # Source data from Exlibris::Primo::Holding
       def source_data
