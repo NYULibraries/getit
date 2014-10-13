@@ -127,10 +127,10 @@ FactoryGirl.define do
       end
     end
 
-    trait :bobst_reserves_nyu_aleph do
-      bobst_reserves_sub_library = Exlibris::Aleph::SubLibrary.new('BRES', 'NYU Bobst Reserve Collection', admin_library)
+    trait :bobst_reserve_nyu_aleph do
+      bobst_reserve_sub_library = Exlibris::Aleph::SubLibrary.new('BRES', 'NYU Bobst Reserve Collection', admin_library)
       service_data do
-        nyu_aleph_service_data.merge({library: bobst_reserves_sub_library})
+        nyu_aleph_service_data.merge({library: bobst_reserve_sub_library})
       end
     end
 
