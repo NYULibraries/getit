@@ -19,12 +19,12 @@ en:
           nyuny: Request this item to be delivered to an NYU Library of your choice.
           afc: Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE).
           nyuad: Request this item. It will be held for you at the specified pickup location. Items are ready for pickup within 2 business days.
-        scan: 
+        scan:
           default: Request that a portion of the item be scanned and delivered electronically.
       offsite:
         entire:
           default: Request this item to be delivered to the pickup location of your choice.
-        scan: 
+        scan:
           default: Request that a portion of the item be scanned and delivered electronically.
       recall:
         default: Recall this item from a fellow library user.
@@ -35,3 +35,5 @@ en:
         default: Request for this item to be held for you once processed.
       ill:
         default: Request this item from another library via Interlibrary Loan (ILL)
+      ezborrow:
+        default: Request this item from E-ZBorrow (NYU only)
