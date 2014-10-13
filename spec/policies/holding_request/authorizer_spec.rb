@@ -4,13 +4,6 @@
 require 'rails_helper'
 class HoldingRequest
   describe Authorizer, vcr: {cassette_name: 'holding_requests/authorizer'} do
-    describe Authorizer::EZBORROW_BOR_STATUSES do
-      subject { Authorizer::EZBORROW_BOR_STATUSES }
-      it do
-        should eq %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82}
-      end
-    end
-
     let(:service_response) { build(:nyu_aleph_service_response) }
     let(:holding) { GetIt::Holding::NyuAleph.new(service_response) }
     let(:user) { build(:aleph_user) }
