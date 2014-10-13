@@ -66,10 +66,10 @@ FactoryGirl.define do
       service_type_value_name 'holding'
       service_data do
         {
-          collection_str: "NYU Bobst Main Collection", 
-          call_number: "(DS126 .M62 2002 )", 
-          coverage: [], 
-          status: "Check Availability", 
+          collection_str: "NYU Bobst Main Collection",
+          call_number: "(DS126 .M62 2002 )",
+          coverage: [],
+          status: "Check Availability",
           edition_str: '',
           match_reliability: "exact"
         }
@@ -124,6 +124,13 @@ FactoryGirl.define do
       abu_dhabi_sub_library = Exlibris::Aleph::SubLibrary.new('NABUD', 'NYU Abu Dhabi Library (UAE)', abu_dhabi_admin_library)
       service_data do
         nyu_aleph_service_data.merge({library: abu_dhabi_sub_library})
+      end
+    end
+
+    trait :bobst_reserves_nyu_aleph do
+      bobst_reserves_sub_library = Exlibris::Aleph::SubLibrary.new('BRES', 'NYU Bobst Reserve Collection', admin_library)
+      service_data do
+        nyu_aleph_service_data.merge({library: bobst_reserves_sub_library})
       end
     end
 
@@ -251,6 +258,7 @@ FactoryGirl.define do
     factory :expired_nyu_aleph_service_response, traits: [:holding, :primo_source, :expired_nyu_aleph]
     factory :single_pickup_location_nyu_aleph_service_response, traits: [:holding, :primo_source, :single_pickup_location_nyu_aleph]
     factory :abu_dhabi_nyu_aleph_service_response, traits: [:holding, :primo_source, :abu_dhabi_nyu_aleph]
+    factory :bobst_reserve_nyu_aleph_service_response, traits: [:holding, :primo_source, :bobst_reserve_nyu_aleph]
     factory :avery_fisher_nyu_aleph_service_response, traits: [:holding, :primo_source, :avery_fisher_nyu_aleph]
     factory :on_shelf_nyu_aleph_service_response, traits: [:holding, :primo_source, :on_shelf_nyu_aleph]
     factory :available_nyu_aleph_service_response, traits: [:holding, :primo_source, :available_nyu_aleph]
