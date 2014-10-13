@@ -58,6 +58,10 @@ module GetIt
         from_aleph? && status.reshelving?
       end
 
+      def bobst_reserve?
+        from_aleph? && sub_library.code == 'BRES'
+      end
+
       def recall_period
         @recall_period ||= (sub_library.code == 'BAFC') ? "1 week" : "2 weeks"
       end
