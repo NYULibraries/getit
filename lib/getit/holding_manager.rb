@@ -16,7 +16,7 @@ module GetIt
         if service_response.service_id == 'NYU_Primo'
           Holding::Primo.new(service_response)
         elsif service_response.service_id == 'NYU_Primo_Source'
-          if service_response.view_data[:source_id] == 'nyu_aleph'
+          if Holding::NyuAleph::VALID_SOURCES.include? service_response.view_data[:source_id]
             Holding::NyuAleph.new(service_response)
           else
             Holding::PrimoSource.new(service_response)
