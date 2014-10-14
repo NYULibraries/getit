@@ -4,6 +4,12 @@ def nyu_aleph_status(circulation_status_value)
     Exlibris::Aleph::Item::CirculationStatus.new(circulation_status_value)
   Exlibris::Nyu::Aleph::Status.new(circulation_status)
 end
+
+def reserves_status(circulation_status_value, status_code, status_display)
+  item_status = Exlibris::Aleph::Item::Status.new(status_code, status_display)
+  Exlibris::Nyu::Aleph::ReservesStatus.new(nyu_aleph_status('Available'), item_status)
+end
+
 admin_library = Exlibris::Aleph::AdminLibrary.new('NYU50')
 sub_library = Exlibris::Aleph::SubLibrary.new('BOBST', 'NYU Bobst', admin_library)
 collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
@@ -129,8 +135,10 @@ FactoryGirl.define do
 
     trait :bobst_reserve_nyu_aleph do
       bobst_reserve_sub_library = Exlibris::Aleph::SubLibrary.new('BRES', 'NYU Bobst Reserve Collection', admin_library)
+      status = reserves_status('On Shelf', '20', 'Reserve 2 hour loan')
+      requestability = 'deferred'
       service_data do
-        nyu_aleph_service_data.merge({library: bobst_reserve_sub_library})
+        nyu_aleph_service_data.merge({library: bobst_reserve_sub_library, status: status, requestability: requestability})
       end
     end
 
