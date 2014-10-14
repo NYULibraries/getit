@@ -22,6 +22,8 @@
           class: "btn btn-success more-info" ) %>
         <%- # Request link -%>
         <%= render("request_link", holding: holding) if requestable?(holding) %>
+        <%- # E-ZBorrow link -%>
+        <%= render("ezborrow_link", holding: holding) %>
       </div>
     </div>
     <%- # Display edition info -%>

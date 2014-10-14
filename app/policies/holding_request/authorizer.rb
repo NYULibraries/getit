@@ -1,8 +1,5 @@
 class HoldingRequest
   class Authorizer
-    EZBORROW_BOR_STATUSES =
-      %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82}
-
     attr_reader :holding_request
 
     def initialize(holding_request)
@@ -21,7 +18,7 @@ class HoldingRequest
     end
 
     def ezborrow?
-      holding.ill? && EZBORROW_BOR_STATUSES.include?(aleph_patron.bor_status)
+      holding.ill? && ezborrow_authorizer.authorized?
     end
 
     def ill?
@@ -52,7 +49,7 @@ class HoldingRequest
     private
     extend Forwardable
     # Delegate holding and user instance methods to the @holding_request
-    def_delegators :@holding_request, :holding, :aleph_patron
+    def_delegators :@holding_request, :holding, :user, :aleph_patron
 
     def privileges
       @privileges ||= circulation_policy.privileges
@@ -60,6 +57,10 @@ class HoldingRequest
 
     def circulation_policy
       @circulation_policy ||= holding_request.circulation_policy
+    end
+
+    def ezborrow_authorizer
+      @ezborrow_authorizer ||= EZBorrowAuthorizer.new(user)
     end
   end
 end

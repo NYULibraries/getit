@@ -32,5 +32,9 @@ module GetItFeatures
     def request_button_css
       holding_information_row_css << ' a.btn-primary.request-link'
     end
+
+    def ezborrow_button_css
+      holding_information_row_css << ' a.btn-primary.ezborrow-link'
+    end
   end
 end

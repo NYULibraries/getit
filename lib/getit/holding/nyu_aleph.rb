@@ -1,7 +1,7 @@
 module GetIt
   module Holding
     class NyuAleph < GetIt::Holding::PrimoSource
-      VALID_SOURCES = ['nyu_aleph']
+      VALID_SOURCES = ['nyu_aleph', 'COURSES']
       ILL_STATUSES = ['Request ILL', 'On Order']
 
       attr_reader :record_id, :item_id, :institution
@@ -56,6 +56,10 @@ module GetIt
 
       def reshelving?
         from_aleph? && status.reshelving?
+      end
+
+      def bobst_reserve?
+        from_aleph? && sub_library.code == 'BRES'
       end
 
       def recall_period

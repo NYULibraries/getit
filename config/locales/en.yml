@@ -7,6 +7,7 @@ en:
   resolve:
     holdings:
       request_text: Request
+      ezborrow_text: E-ZBorrow
       login_text: Login for Request Options
   holding_requests:
     show:
