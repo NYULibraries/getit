@@ -4,7 +4,7 @@ module EZBorrowHelper
   end
 
   def ezborrow_url(holding)
-    @ezborrow_url =
+    @ezborrow_url ||=
       "#{HoldingRequestsController::EZBORROW_BASE_URL}/ezborrow?query=#{CGI::escape(holding.title)}"
   end
 
