@@ -831,4 +831,89 @@ http_interactions:
         {"oclc:651902336;lccn:2010030105":{"records":[],"items":[]}}'
     http_version: 
   recorded_at: Mon, 13 Oct 2014 20:38:27 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22overcoming%20trauma%20through%20yoga%22%20AND%20creator:(emerson)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 14 Oct 2014 18:05:01 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.10-1ubuntu3.2
+    body:
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":134,"params":{"qin":"title:\"overcoming
+        trauma through yoga\" AND creator:(emerson) AND (mediatype:texts OR mediatype:audio)","fl":"*","start":"0","q":"title:\"overcoming
+        trauma through yoga\" AND creator:(emerson ) AND ( mediatype:texts OR mediatype:audio
+        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 18:05:01 GMT
+- request:
+    method: get
+    uri: http://isbndb.com/api/books.xml?access_key=ISBN_DB_ACCESS_KEY&index1=isbn&results=details,prices&value1=9781556439698
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS42LjE=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        VHVlLCAxNCBPY3QgMjAxNCAxODowNTowMiBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7IGNoYXJzZXQ9dXRmLTg=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "WC1DYXRhbHlzdA==":
+      - !binary |-
+        NS45MDA0Mg==
+      !binary "Q29udGVudC1FbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    http_version: 
+  recorded_at: Tue, 14 Oct 2014 18:05:01 GMT
 recorded_with: VCR 2.9.3
