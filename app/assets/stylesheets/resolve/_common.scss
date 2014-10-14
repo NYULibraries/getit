@@ -59,6 +59,9 @@ nav {
   a.btn {
     display:block;
     margin-bottom: .25em;
+    &.ezborrow-link {
+      white-space: nowrap;
+    }
   }
 }
 
