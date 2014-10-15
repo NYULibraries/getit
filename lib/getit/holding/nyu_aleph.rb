@@ -70,6 +70,10 @@ module GetIt
         @sub_library ||= view_data[:library]
       end
 
+      def collection
+        @collection ||= view_data[:collection]
+      end
+
       def from_aleph?
         view_data[:from_aleph].present?
       end
@@ -77,10 +81,6 @@ module GetIt
       private
       def requestability
         @requestability ||= view_data[:requestability]
-      end
-
-      def collection
-        @collection ||= view_data[:collection]
       end
     end
   end
