@@ -142,6 +142,102 @@ FactoryGirl.define do
       end
     end
 
+    trait :available_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('On Shelf')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :checked_out_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('05/27/14')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :offsite_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('Offsite Available')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :available_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('On Shelf')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :checked_out_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('05/27/14')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :offsite_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('Offsite Available')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
     trait :avery_fisher_nyu_aleph do
       avery_fisher_sub_library = Exlibris::Aleph::SubLibrary.new('BAFC', 'NYU Bobst Avery Fisher Center', admin_library)
       service_data do
@@ -267,6 +363,12 @@ FactoryGirl.define do
     factory :single_pickup_location_nyu_aleph_service_response, traits: [:holding, :primo_source, :single_pickup_location_nyu_aleph]
     factory :abu_dhabi_nyu_aleph_service_response, traits: [:holding, :primo_source, :abu_dhabi_nyu_aleph]
     factory :bobst_reserve_nyu_aleph_service_response, traits: [:holding, :primo_source, :bobst_reserve_nyu_aleph]
+    factory :available_new_school_main_collection_service_response, traits: [:holding, :primo_source, :available_new_school_main_collection]
+    factory :checked_out_new_school_main_collection_service_response, traits: [:holding, :primo_source, :checked_out_new_school_main_collection]
+    factory :offsite_new_school_main_collection_service_response, traits: [:holding, :primo_source, :offsite_new_school_main_collection]
+    factory :available_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :available_new_school_oversize_collection]
+    factory :checked_out_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :checked_out_new_school_oversize_collection]
+    factory :offsite_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :offsite_new_school_oversize_collection]
     factory :avery_fisher_nyu_aleph_service_response, traits: [:holding, :primo_source, :avery_fisher_nyu_aleph]
     factory :on_shelf_nyu_aleph_service_response, traits: [:holding, :primo_source, :on_shelf_nyu_aleph]
     factory :available_nyu_aleph_service_response, traits: [:holding, :primo_source, :available_nyu_aleph]
