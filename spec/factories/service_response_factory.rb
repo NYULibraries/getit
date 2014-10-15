@@ -98,6 +98,32 @@ FactoryGirl.define do
       end
     end
 
+    trait :new_school_main_collection_journal do
+      service_data do
+        {
+          collection_str: 'New School University Center Main Collection',
+          call_number: "(TS171.A1 R48 )",
+          coverage: [],
+          status: "Check Availability",
+          edition_str: '',
+          match_reliability: "exact"
+        }
+      end
+    end
+
+    trait :new_school_oversize_collection_journal do
+      service_data do
+        {
+          collection_str: 'New School University Center Oversize Collection',
+          call_number: "(TS171.A1 R48 )",
+          coverage: [],
+          status: "Check Availability",
+          edition_str: '',
+          match_reliability: "exact"
+        }
+      end
+    end
+
     trait :nyu_aleph do
       service_data do
         nyu_aleph_service_data
@@ -355,6 +381,8 @@ FactoryGirl.define do
 
     factory :holding_service_response, traits: [:holding]
     factory :primo_service_response, traits: [:holding, :primo]
+    factory :new_school_main_collection_journal_service_response, traits: [:holding, :primo, :new_school_main_collection_journal]
+    factory :new_school_oversize_collection_journal_service_response, traits: [:holding, :primo, :new_school_oversize_collection_journal]
     factory :primo_source_service_response, traits: [:holding, :primo_source]
     factory :nyu_aleph_service_response_without_source_data, traits: [:holding, :primo_source, :nyu_aleph_without_source_data]
     factory :nyu_aleph_not_from_aleph_service_response, traits: [:holding, :primo_source, :nyu_aleph_not_from_aleph]
