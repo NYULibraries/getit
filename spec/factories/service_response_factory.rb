@@ -10,48 +10,64 @@ def reserves_status(circulation_status_value, status_code, status_display)
   Exlibris::Nyu::Aleph::ReservesStatus.new(nyu_aleph_status('Available'), item_status)
 end
 
-admin_library = Exlibris::Aleph::AdminLibrary.new('NYU50')
-sub_library = Exlibris::Aleph::SubLibrary.new('BOBST', 'NYU Bobst', admin_library)
-collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
-call_number = Exlibris::Aleph::Item::CallNumber.new('DS126 .M62 2002', nil)
-nyu_call_number = Exlibris::Nyu::Aleph::CallNumber.new(call_number)
+def admin_library
+  Exlibris::Aleph::AdminLibrary.new('NYU50')
+end
 
-nyu_aleph_service_data = {
-  record_id: 'nyu_aleph000741245',
-  original_id: 'nyu_aleph000741245',
-  title: 'An aesthetic occupation : the immediacy of architecture and the Palestine conflict',
-  author: 'Daniel Bertrand  Monk  1960-',
-  display_type: 'book',
-  source_id: 'nyu_aleph',
-  original_source_id: 'NYU01',
-  source_record_id: '000741245',
-  ils_api_id: 'NYU01000741245',
-  institution_code: 'NYU',
-  institution: 'NYU',
-  library_code: 'BOBST',
-  library: sub_library,
-  collection: collection,
-  call_number: nyu_call_number,
-  coverage: [],
-  status: nyu_aleph_status('05/27/14'),
-  from_aleph: true,
-  requestability: 'deferred',
-  collection_str: 'NYU Bobst Main Collection',
-  coverage_str: '',
-  edition_str: '',
-  coverage_str_array: [],
-  match_reliability: "exact",
-  source_data: {
-    item_id: 'NYU50000741245000010',
-    doc_library: 'NYU01',
-    sub_library_code: 'BOBST',
-    sub_library: sub_library,
+def sub_library
+  Exlibris::Aleph::SubLibrary.new('BOBST', 'NYU Bobst', admin_library)
+end
+
+def collection
+  Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+end
+
+def call_number
+  Exlibris::Aleph::Item::CallNumber.new('DS126 .M62 2002', nil)
+end
+
+def nyu_call_number
+  Exlibris::Nyu::Aleph::CallNumber.new(call_number)
+end
+
+def nyu_aleph_service_data
+  {
+    record_id: 'nyu_aleph000741245',
+    original_id: 'nyu_aleph000741245',
+    title: 'An aesthetic occupation : the immediacy of architecture and the Palestine conflict',
+    author: 'Daniel Bertrand  Monk  1960-',
+    display_type: 'book',
+    source_id: 'nyu_aleph',
+    original_source_id: 'NYU01',
+    source_record_id: '000741245',
+    ils_api_id: 'NYU01000741245',
+    institution_code: 'NYU',
+    institution: 'NYU',
+    library_code: 'BOBST',
+    library: sub_library,
     collection: collection,
     call_number: nyu_call_number,
-    doc_number: '000741245',
-    rest_api_id: 'NYU01000741245'
+    coverage: [],
+    status: nyu_aleph_status('05/27/14'),
+    from_aleph: true,
+    requestability: 'deferred',
+    collection_str: 'NYU Bobst Main Collection',
+    coverage_str: '',
+    edition_str: '',
+    coverage_str_array: [],
+    match_reliability: "exact",
+    source_data: {
+      item_id: 'NYU50000741245000010',
+      doc_library: 'NYU01',
+      sub_library_code: 'BOBST',
+      sub_library: sub_library,
+      collection: collection,
+      call_number: nyu_call_number,
+      doc_number: '000741245',
+      rest_api_id: 'NYU01000741245'
+    }
   }
-}
+end
 
 FactoryGirl.define do
   factory :service_response do
