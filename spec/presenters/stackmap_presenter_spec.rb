@@ -58,7 +58,7 @@ describe StackMapPresenter do
     it { should eq 'newschool' }
   end
   context 'when initialized with a holding argument' do
-    context 'but the holding argument is not a Holding' do
+    context 'but the holding argument is not an NyuAleph Holding' do
       let(:holding) { :invalid }
       it 'should raise an ArgumentError' do
         expect { subject }.to raise_error ArgumentError
