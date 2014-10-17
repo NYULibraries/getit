@@ -1,0 +1,939 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-10-17T11:45:13-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002106230&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Oct 2014 15:45:13 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-10-17T11:45:13-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;7986088&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002106230&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002106230&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002106230&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s95A8A8B4-5614-11E4-946C-26A7FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002106230&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002106230%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002106230+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-10-17T11%253A45%253A13-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph002106230%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:13 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph002106230</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.4.0, ruby 1.9.3 (2013-11-22))
+      Accept:
+      - ! '*/*'
+      Date:
+      - Fri, 17 Oct 2014 15:45:14 GMT
+      Soapaction:
+      - ! '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        RnJpLCAxNyBPY3QgMjAxNCAxNTo0NToxNyBHTVQ=
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;002106230&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph002106230&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01002106230&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;journal&lt;/type&gt;\n
+        \               &lt;title&gt;El Croquis.&lt;/title&gt;\n                &lt;publisher&gt;Madrid,
+        Spain : El Croquis&lt;/publisher&gt;\n                &lt;creationdate&gt;1982&lt;/creationdate&gt;\n
+        \               &lt;format&gt;v. : ill. ; 33 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cissn$$V0212-5633&lt;/identifier&gt;\n
+        \               &lt;subject&gt;Architecture -- Spain -- Periodicals; Architecture
+        -- Periodicals&lt;/subject&gt;\n                &lt;language&gt;spa;eng&lt;/language&gt;\n
+        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$ICU$$LCU$$1Closed
+        Periodical Stacks$$2(Non-circulating )$$Savailable$$31$$40$$5N$$60$$XNYU50$$YCU$$ZCLOSP&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$INS$$LNSGI$$1Main Collection$$2(NA5
+        .C7 Oversize Non-circulating )$$Scheck_holdings$$5Y$$XNYU50$$YTNSGI$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph002106230&lt;/lds02&gt;\n                &lt;lds01&gt;CU&lt;/lds01&gt;\n
+        \               &lt;lds01&gt;NS&lt;/lds01&gt;\n                &lt;availinstitution&gt;$$INS$$Scheck_holdings&lt;/availinstitution&gt;\n
+        \               &lt;availinstitution&gt;$$ICU$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;available&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tgoogle_thumbnail&lt;/thumbnail&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_oclc$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;title&gt;El
+        Croquis.&lt;/title&gt;\n                &lt;subject&gt;Architecture  Spain
+        Periodicals&lt;/subject&gt;\n                &lt;subject&gt;Architecture  Periodicals&lt;/subject&gt;\n
+        \               &lt;general&gt;El Croquis,&lt;/general&gt;\n                &lt;general&gt;Description
+        based on: 19 (enero 1985); title from cover.&lt;/general&gt;\n                &lt;general&gt;Some
+        nos. have also distinctive titles.&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph002106230&lt;/recordid&gt;\n                &lt;isbn&gt;0212-5633&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;0212-5683&lt;/isbn&gt;\n                &lt;rsrctype&gt;journal&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;1982&lt;/creationdate&gt;\n                &lt;creationdate&gt;9999&lt;/creationdate&gt;\n
+        \               &lt;searchscope&gt;CU&lt;/searchscope&gt;\n                &lt;searchscope&gt;CU
+        Closed Periodical Stacks&lt;/searchscope&gt;\n                &lt;searchscope&gt;TNSGI&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;TNSGI Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n                &lt;searchscope&gt;NS&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NSGI&lt;/searchscope&gt;\n                &lt;searchscope&gt;CCLOS&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;CU&lt;/scope&gt;\n                &lt;scope&gt;CU
+        Closed Periodical Stacks&lt;/scope&gt;\n                &lt;scope&gt;TNSGI&lt;/scope&gt;\n
+        \               &lt;scope&gt;TNSGI Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NS&lt;/scope&gt;\n                &lt;scope&gt;NSGI&lt;/scope&gt;\n
+        \               &lt;scope&gt;CCLOS&lt;/scope&gt;\n                &lt;alttitle&gt;Croquis&lt;/alttitle&gt;\n
+        \               &lt;lsr01&gt;NA5 .C7 Oversize&lt;/lsr01&gt;\n                &lt;lsr01&gt;NA5.C7
+        Oversize&lt;/lsr01&gt;\n                &lt;lsr02&gt;El Croquis,&lt;/lsr02&gt;\n
+        \             &lt;/search&gt;\n              &lt;sort&gt;\n                &lt;title&gt;Croquis.&lt;/title&gt;\n
+        \               &lt;creationdate&gt;1982&lt;/creationdate&gt;\n                &lt;lso01&gt;1982&lt;/lso01&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;spa&lt;/language&gt;\n
+        \               &lt;language&gt;eng&lt;/language&gt;\n                &lt;creationdate&gt;1982&lt;/creationdate&gt;\n
+        \               &lt;topic&gt;Architecture&#x2013;Spain&#x2013;Periodicals&lt;/topic&gt;\n
+        \               &lt;topic&gt;Architecture&#x2013;Periodicals&lt;/topic&gt;\n
+        \               &lt;collection&gt;CU&lt;/collection&gt;\n                &lt;collection&gt;TNSGI&lt;/collection&gt;\n
+        \               &lt;toplevel&gt;available&lt;/toplevel&gt;\n                &lt;prefilter&gt;journals&lt;/prefilter&gt;\n
+        \               &lt;rsrctype&gt;journals&lt;/rsrctype&gt;\n                &lt;genre&gt;Periodicals&lt;/genre&gt;\n
+        \               &lt;library&gt;NSGI&lt;/library&gt;\n                &lt;library&gt;CCLOS&lt;/library&gt;\n
+        \               &lt;lfc01&gt;Closed Periodical Stacks&lt;/lfc01&gt;\n                &lt;lfc01&gt;Main
+        Collection&lt;/lfc01&gt;\n                &lt;classificationlcc&gt;N - Fine
+        arts.&#x2013;Architecture&#x2013;General&lt;/classificationlcc&gt;\n                &lt;frbrgroupid&gt;109282580&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;2&lt;/t&gt;\n                &lt;c1&gt;sn89011813&lt;/c1&gt;\n
+        \               &lt;c2&gt;0212-5633;0212-5683&lt;/c2&gt;\n                &lt;c3&gt;croquis&lt;/c3&gt;\n
+        \               &lt;c4&gt;madrid&lt;/c4&gt;\n                &lt;f1&gt;sn89011813&lt;/f1&gt;\n
+        \               &lt;f3&gt;02125633&lt;/f3&gt;\n                &lt;f4&gt;0212-5683&lt;/f4&gt;\n
+        \               &lt;f6&gt;1982&lt;/f6&gt;\n                &lt;f7&gt;croquis&lt;/f7&gt;\n
+        \               &lt;f8&gt;croquis&lt;/f8&gt;\n                &lt;f9&gt;sp&lt;/f9&gt;\n
+        \               &lt;f10&gt;madrid&lt;/f10&gt;\n                &lt;f20&gt;(OCoLC)14627990&lt;/f20&gt;\n
+        \             &lt;/dedup&gt;\n              &lt;frbr&gt;\n                &lt;t&gt;1&lt;/t&gt;\n
+        \               &lt;k3&gt;$$Kcroquis$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n
+        \             &lt;delivery&gt;\n                &lt;institution&gt;CU&lt;/institution&gt;\n
+        \               &lt;institution&gt;NS&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
+        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;NA5&lt;/classificationlcc&gt;\n              &lt;/enrichment&gt;\n
+        \             &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;jtitle&gt;El Croquis.&lt;/jtitle&gt;\n
+        \               &lt;stitle&gt;Croquis&lt;/stitle&gt;\n                &lt;date&gt;1982&lt;/date&gt;\n
+        \               &lt;risdate&gt;1982&lt;/risdate&gt;\n                &lt;issn&gt;0212-5633&lt;/issn&gt;\n
+        \               &lt;format&gt;journal&lt;/format&gt;\n                &lt;genre&gt;journal&lt;/genre&gt;\n
+        \               &lt;ristype&gt;JOUR&lt;/ristype&gt;\n                &lt;cop&gt;Madrid,
+        Spain]&lt;/cop&gt;\n                &lt;pub&gt;El Croquis&lt;/pub&gt;\n                &lt;oclcid&gt;14627990&lt;/oclcid&gt;\n
+        \               &lt;lad01&gt;CUTNSGI&lt;/lad01&gt;\n                &lt;lad01&gt;Physical
+        Item&lt;/lad01&gt;\n                &lt;lccn&gt;sn 89011813&lt;/lccn&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;/DOC&gt;\n      &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:17 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:17 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol-list><reply-text>ok</reply-text><reply-code>0000</reply-code><holdings><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885573"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885574"></holding></holdings></get-hol-list> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:17 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885573
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:17 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><holding><leader>     cyH
+        a22001214  4500</leader><controlfield tag="001">001885573</controlfield><controlfield
+        tag="004">NYUb11063418</controlfield><controlfield tag="005">20080531125311.0</controlfield><controlfield
+        tag="007">ta</controlfield><controlfield tag="008">9908190|||||0   |001|||||0990819</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">sn 89011813</subfield></datafield><datafield
+        tag="022" ind1="0" ind2=" "><subfield code="a">0212-5633</subfield><subfield
+        code="y">0212-5683</subfield></datafield><datafield tag="035" ind1="9" ind2="
+        "><subfield code="a">NYUH11063418/10942279</subfield></datafield><datafield
+        tag="852" ind1=" " ind2=" "><subfield code="b">CU</subfield><subfield code="c">CLOSP</subfield><subfield
+        code="m">Non-circulating</subfield><subfield code="7">10942279</subfield><subfield
+        code="a">NNCoo</subfield></datafield><datafield tag="866" ind1="3" ind2="1"><subfield
+        code="8">1</subfield><subfield code="a">no.41(1989),no.83(1997),no.93(1998)-</subfield></datafield></holding></get-hol> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:17 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885574
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:17 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><holding><leader>     cyH
+        a22010815i 4500</leader><controlfield tag="001">001885574</controlfield><controlfield
+        tag="004">NYUb11063418</controlfield><controlfield tag="005">20080531125311.0</controlfield><controlfield
+        tag="007">ta</controlfield><controlfield tag="008">9908194p    8   0001baeng0110524</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">sn 89011813</subfield></datafield><datafield
+        tag="022" ind1="0" ind2=" "><subfield code="a">0212-5633</subfield><subfield
+        code="y">0212-5683</subfield></datafield><datafield tag="035" ind1="9" ind2="
+        "><subfield code="a">NYUH11063418/10942278</subfield></datafield><datafield
+        tag="852" ind1="0" ind2=" "><subfield code="a">NNNS</subfield><subfield code="b">TNSGI</subfield><subfield
+        code="c">MAIN</subfield><subfield code="h">NA5</subfield><subfield code="i">.C7
+        Oversize</subfield><subfield code="m">Non-circulating</subfield><subfield
+        code="7">10942278</subfield></datafield><datafield tag="853" ind1="2" ind2="0"><subfield
+        code="8">2</subfield><subfield code="a">no.</subfield><subfield code="i">(year)</subfield><subfield
+        code="u">5</subfield><subfield code="v">c</subfield><subfield code="w">x</subfield><subfield
+        code="y">pm03,05,07,09,11</subfield></datafield><datafield tag="853" ind1="X"
+        ind2=" "><subfield code="8">2</subfield><subfield code="9">00003</subfield><subfield
+        code="a">175</subfield><subfield code="i">2014</subfield><subfield code="3">20150315</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.1</subfield><subfield code="a">29</subfield><subfield
+        code="i">1982</subfield><subfield code="p">31207026769152</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.2</subfield><subfield code="a">30</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.3</subfield><subfield code="a">32</subfield><subfield
+        code="i">1985</subfield><subfield code="p">P863.10590080</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.4</subfield><subfield code="a">33</subfield><subfield
+        code="i">1986</subfield><subfield code="p">P863.10590083</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.5</subfield><subfield code="a">35</subfield><subfield
+        code="i">1988</subfield><subfield code="p">31207026727283</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.6</subfield><subfield code="a">36</subfield><subfield
+        code="i">1988</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.7</subfield><subfield code="a">37</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.8</subfield><subfield code="a">38</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.9</subfield><subfield code="a">40</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026768766</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.10</subfield><subfield code="a">42</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.11</subfield><subfield code="a">43</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.12</subfield><subfield code="a">44</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.13</subfield><subfield code="a">48</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207026768709</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.14</subfield><subfield code="a">49</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.15</subfield><subfield code="a">50</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.16</subfield><subfield code="a">51</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207024923447</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.17</subfield><subfield code="a">52</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207026759856</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.18</subfield><subfield code="a">60</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.19</subfield><subfield code="a">61</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.20</subfield><subfield code="a">62/63</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.21</subfield><subfield code="a">64</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.22</subfield><subfield code="a">65/66</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.23</subfield><subfield code="a">67</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.24</subfield><subfield code="a">68/69</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.25</subfield><subfield code="a">70</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.26</subfield><subfield code="a">71</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.27</subfield><subfield code="a">72
+        1&amp;2</subfield><subfield code="i">1995</subfield><subfield code="p">31207024923454</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.28</subfield><subfield code="a">73
+        1&amp;2</subfield><subfield code="i">1995</subfield><subfield code="p">31207024923454</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.29</subfield><subfield code="a">74/75</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024923512</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.30</subfield><subfield code="a">76</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024923512</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.31</subfield><subfield code="a">77
+        1&amp;2</subfield><subfield code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.32</subfield><subfield code="a">78</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.33</subfield><subfield code="a">79</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.34</subfield><subfield code="a">80</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727226</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.35</subfield><subfield code="a">84</subfield><subfield
+        code="i">1997</subfield><subfield code="p">31207034035844</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.36</subfield><subfield code="a">86</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026758239</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.37</subfield><subfield code="a">87</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.38</subfield><subfield code="a">88/89</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.39</subfield><subfield code="a">90</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.40</subfield><subfield code="a">94</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026768824</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.41</subfield><subfield code="a">95</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026768824</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.42</subfield><subfield code="a">96</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10281847</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.43</subfield><subfield code="a">97</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10925381</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.44</subfield><subfield code="a">98</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10939603</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.45</subfield><subfield code="a">99</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10951583</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.46</subfield><subfield code="a">100/101</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10977459</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.47</subfield><subfield code="a">102</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10999549</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.48</subfield><subfield code="a">103</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.11007880</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.49</subfield><subfield code="a">104</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11031991</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.50</subfield><subfield code="a">105</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11055387</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.51</subfield><subfield code="a">106</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062757</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.52</subfield><subfield code="a">107</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062758</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.53</subfield><subfield code="a">108</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062759</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.54</subfield><subfield code="a">109/110</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062760</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.55</subfield><subfield code="a">111</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062761</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.56</subfield><subfield code="a">112/113</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062765</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.57</subfield><subfield code="a">114</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034033286</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.58</subfield><subfield code="a">115/116</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034033286</subfield><subfield
+        code="x">3 parts</subfield></datafield><datafield tag="863" ind1="5" ind2="0"><subfield
+        code="8">2.59</subfield><subfield code="a">117</subfield><subfield code="i">2003</subfield><subfield
+        code="p">31207034054985</subfield></datafield><datafield tag="863" ind1="5"
+        ind2="0"><subfield code="8">2.60</subfield><subfield code="a">118</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034054985</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.61</subfield><subfield code="a">119</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034055891</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.62</subfield><subfield code="a">120</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034055891</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.63</subfield><subfield code="a">121/122</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034056931</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.64</subfield><subfield code="a">123</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034056931</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.65</subfield><subfield code="a">124</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.66</subfield><subfield code="a">125</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.67</subfield><subfield code="a">126</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.68</subfield><subfield code="a">127</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034059851</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.69</subfield><subfield code="a">128</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034059851</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.70</subfield><subfield code="a">129/130</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034039085</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.71</subfield><subfield code="a">131/132</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034035877</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.72</subfield><subfield code="a">133</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039366</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.73</subfield><subfield code="a">134/135</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039333</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.74</subfield><subfield code="a">136/137</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039655</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.75</subfield><subfield code="a">138</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034040117</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.76</subfield><subfield code="a">139</subfield><subfield
+        code="i">2008</subfield><subfield code="p">31207034040828</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.77</subfield><subfield code="a">140</subfield><subfield
+        code="i">2008</subfield><subfield code="p">P863.11628396</subfield></datafield><datafield
+        tag="866" ind1="4" ind2="1"><subfield code="8">0</subfield><subfield code="a">29
+        (1982)-</subfield><subfield code="z">Numerous issues missing.</subfield></datafield></holding></get-hol> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:18 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:19 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol-list><reply-text>ok</reply-text><reply-code>0000</reply-code><holdings><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885573"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885574"></holding></holdings></get-hol-list> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:19 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885573
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:19 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><holding><leader>     cyH
+        a22001214  4500</leader><controlfield tag="001">001885573</controlfield><controlfield
+        tag="004">NYUb11063418</controlfield><controlfield tag="005">20080531125311.0</controlfield><controlfield
+        tag="007">ta</controlfield><controlfield tag="008">9908190|||||0   |001|||||0990819</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">sn 89011813</subfield></datafield><datafield
+        tag="022" ind1="0" ind2=" "><subfield code="a">0212-5633</subfield><subfield
+        code="y">0212-5683</subfield></datafield><datafield tag="035" ind1="9" ind2="
+        "><subfield code="a">NYUH11063418/10942279</subfield></datafield><datafield
+        tag="852" ind1=" " ind2=" "><subfield code="b">CU</subfield><subfield code="c">CLOSP</subfield><subfield
+        code="m">Non-circulating</subfield><subfield code="7">10942279</subfield><subfield
+        code="a">NNCoo</subfield></datafield><datafield tag="866" ind1="3" ind2="1"><subfield
+        code="8">1</subfield><subfield code="a">no.41(1989),no.83(1997),no.93(1998)-</subfield></datafield></holding></get-hol> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:19 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=%22OCLC14627990%22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Forwarded-For:
+      - 127.0.0.1
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Fri, 17 Oct 2014 15:45:19 GMT
+      Date:
+      - Fri, 17 Oct 2014 15:45:19 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - ! '"07oh1oY3NVeQM2tp1f5lbkahdXQ/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 0\n}\n"
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:19 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002106230/holdings/NYU60001885574
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 17 Oct 2014 15:45:19 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-hol><reply-text>ok</reply-text><reply-code>0000</reply-code><holding><leader>     cyH
+        a22010815i 4500</leader><controlfield tag="001">001885574</controlfield><controlfield
+        tag="004">NYUb11063418</controlfield><controlfield tag="005">20080531125311.0</controlfield><controlfield
+        tag="007">ta</controlfield><controlfield tag="008">9908194p    8   0001baeng0110524</controlfield><datafield
+        tag="010" ind1=" " ind2=" "><subfield code="a">sn 89011813</subfield></datafield><datafield
+        tag="022" ind1="0" ind2=" "><subfield code="a">0212-5633</subfield><subfield
+        code="y">0212-5683</subfield></datafield><datafield tag="035" ind1="9" ind2="
+        "><subfield code="a">NYUH11063418/10942278</subfield></datafield><datafield
+        tag="852" ind1="0" ind2=" "><subfield code="a">NNNS</subfield><subfield code="b">TNSGI</subfield><subfield
+        code="c">MAIN</subfield><subfield code="h">NA5</subfield><subfield code="i">.C7
+        Oversize</subfield><subfield code="m">Non-circulating</subfield><subfield
+        code="7">10942278</subfield></datafield><datafield tag="853" ind1="2" ind2="0"><subfield
+        code="8">2</subfield><subfield code="a">no.</subfield><subfield code="i">(year)</subfield><subfield
+        code="u">5</subfield><subfield code="v">c</subfield><subfield code="w">x</subfield><subfield
+        code="y">pm03,05,07,09,11</subfield></datafield><datafield tag="853" ind1="X"
+        ind2=" "><subfield code="8">2</subfield><subfield code="9">00003</subfield><subfield
+        code="a">175</subfield><subfield code="i">2014</subfield><subfield code="3">20150315</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.1</subfield><subfield code="a">29</subfield><subfield
+        code="i">1982</subfield><subfield code="p">31207026769152</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.2</subfield><subfield code="a">30</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.3</subfield><subfield code="a">32</subfield><subfield
+        code="i">1985</subfield><subfield code="p">P863.10590080</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.4</subfield><subfield code="a">33</subfield><subfield
+        code="i">1986</subfield><subfield code="p">P863.10590083</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.5</subfield><subfield code="a">35</subfield><subfield
+        code="i">1988</subfield><subfield code="p">31207026727283</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.6</subfield><subfield code="a">36</subfield><subfield
+        code="i">1988</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.7</subfield><subfield code="a">37</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.8</subfield><subfield code="a">38</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026727010</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.9</subfield><subfield code="a">40</subfield><subfield
+        code="i">1989</subfield><subfield code="p">31207026768766</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.10</subfield><subfield code="a">42</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.11</subfield><subfield code="a">43</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.12</subfield><subfield code="a">44</subfield><subfield
+        code="i">1990</subfield><subfield code="p">31207026726756</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.13</subfield><subfield code="a">48</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207026768709</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.14</subfield><subfield code="a">49</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.15</subfield><subfield code="a">50</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207026759864</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.16</subfield><subfield code="a">51</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207024923447</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.17</subfield><subfield code="a">52</subfield><subfield
+        code="i">1991</subfield><subfield code="p">31207026759856</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.18</subfield><subfield code="a">60</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.19</subfield><subfield code="a">61</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.20</subfield><subfield code="a">62/63</subfield><subfield
+        code="i">1993</subfield><subfield code="p">31207024923389</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.21</subfield><subfield code="a">64</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.22</subfield><subfield code="a">65/66</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.23</subfield><subfield code="a">67</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024923579</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.24</subfield><subfield code="a">68/69</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.25</subfield><subfield code="a">70</subfield><subfield
+        code="i">1994</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.26</subfield><subfield code="a">71</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024924049</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.27</subfield><subfield code="a">72
+        1&amp;2</subfield><subfield code="i">1995</subfield><subfield code="p">31207024923454</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.28</subfield><subfield code="a">73
+        1&amp;2</subfield><subfield code="i">1995</subfield><subfield code="p">31207024923454</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.29</subfield><subfield code="a">74/75</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024923512</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.30</subfield><subfield code="a">76</subfield><subfield
+        code="i">1995</subfield><subfield code="p">31207024923512</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.31</subfield><subfield code="a">77
+        1&amp;2</subfield><subfield code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.32</subfield><subfield code="a">78</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.33</subfield><subfield code="a">79</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727077</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.34</subfield><subfield code="a">80</subfield><subfield
+        code="i">1996</subfield><subfield code="p">31207026727226</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.35</subfield><subfield code="a">84</subfield><subfield
+        code="i">1997</subfield><subfield code="p">31207034035844</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.36</subfield><subfield code="a">86</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026758239</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.37</subfield><subfield code="a">87</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.38</subfield><subfield code="a">88/89</subfield><subfield
+        code="i">1998</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.39</subfield><subfield code="a">90</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026759781</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.40</subfield><subfield code="a">94</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026768824</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.41</subfield><subfield code="a">95</subfield><subfield
+        code="i">1999</subfield><subfield code="p">31207026768824</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.42</subfield><subfield code="a">96</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10281847</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.43</subfield><subfield code="a">97</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10925381</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.44</subfield><subfield code="a">98</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10939603</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.45</subfield><subfield code="a">99</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.10951583</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.46</subfield><subfield code="a">100/101</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10977459</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.47</subfield><subfield code="a">102</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.10999549</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.48</subfield><subfield code="a">103</subfield><subfield
+        code="i">2000</subfield><subfield code="p">P863.11007880</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.49</subfield><subfield code="a">104</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11031991</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.50</subfield><subfield code="a">105</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11055387</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.51</subfield><subfield code="a">106</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062757</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.52</subfield><subfield code="a">107</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062758</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.53</subfield><subfield code="a">108</subfield><subfield
+        code="i">2001</subfield><subfield code="p">P863.11062759</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.54</subfield><subfield code="a">109/110</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062760</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.55</subfield><subfield code="a">111</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062761</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.56</subfield><subfield code="a">112/113</subfield><subfield
+        code="i">2002</subfield><subfield code="p">P863.11062765</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.57</subfield><subfield code="a">114</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034033286</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.58</subfield><subfield code="a">115/116</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034033286</subfield><subfield
+        code="x">3 parts</subfield></datafield><datafield tag="863" ind1="5" ind2="0"><subfield
+        code="8">2.59</subfield><subfield code="a">117</subfield><subfield code="i">2003</subfield><subfield
+        code="p">31207034054985</subfield></datafield><datafield tag="863" ind1="5"
+        ind2="0"><subfield code="8">2.60</subfield><subfield code="a">118</subfield><subfield
+        code="i">2003</subfield><subfield code="p">31207034054985</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.61</subfield><subfield code="a">119</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034055891</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.62</subfield><subfield code="a">120</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034055891</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.63</subfield><subfield code="a">121/122</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034056931</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.64</subfield><subfield code="a">123</subfield><subfield
+        code="i">2004</subfield><subfield code="p">31207034056931</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.65</subfield><subfield code="a">124</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.66</subfield><subfield code="a">125</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.67</subfield><subfield code="a">126</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034057749</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.68</subfield><subfield code="a">127</subfield><subfield
+        code="i">2005</subfield><subfield code="p">31207034059851</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.69</subfield><subfield code="a">128</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034059851</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.70</subfield><subfield code="a">129/130</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034039085</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.71</subfield><subfield code="a">131/132</subfield><subfield
+        code="i">2006</subfield><subfield code="p">31207034035877</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.72</subfield><subfield code="a">133</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039366</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.73</subfield><subfield code="a">134/135</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039333</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.74</subfield><subfield code="a">136/137</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034039655</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.75</subfield><subfield code="a">138</subfield><subfield
+        code="i">2007</subfield><subfield code="p">31207034040117</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.76</subfield><subfield code="a">139</subfield><subfield
+        code="i">2008</subfield><subfield code="p">31207034040828</subfield></datafield><datafield
+        tag="863" ind1="5" ind2="0"><subfield code="8">2.77</subfield><subfield code="a">140</subfield><subfield
+        code="i">2008</subfield><subfield code="p">P863.11628396</subfield></datafield><datafield
+        tag="866" ind1="4" ind2="1"><subfield code="8">0</subfield><subfield code="a">29
+        (1982)-</subfield><subfield code="z">Numerous issues missing.</subfield></datafield></holding></get-hol> '
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:19 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:14627990;lccn:sn89011813
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Oct 2014 15:45:20 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u14
+      X-Powered-By:
+      - PHP/5.4.4-14+deb7u14
+      Content-Length:
+      - '777'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a423660;expires=Fri, 17-Oct-2014
+        15:55:20 GMT;path=/;httponly
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+
+        {"oclc:14627990;lccn:sn89011813":{"records":{"002723465":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/002723465","titles":["El
+        Croquis","Croquis"],"isbns":[],"issns":["2125633"],"oclcs":["14627990"],"lccns":["sn89011813"],"publishDates":["1980"]}},"items":[{"orig":"University
+        of California","fromRecord":"002723465","htid":"uc1.31822023429111","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.31822023429111","rightsCode":"und","lastUpdate":"20130809","enumcron":"v.46","usRightsString":"Limited
+        (search-only)"},{"orig":"University of California","fromRecord":"002723465","htid":"uc1.31822023429053","itemURL":"http:\/\/hdl.handle.net\/2027\/uc1.31822023429053","rightsCode":"und","lastUpdate":"20130809","enumcron":"v.47","usRightsString":"Limited
+        (search-only)"}]}}'
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:20 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/Identities?maximumRecords=1&query=local.OCLCNumber%20=%20%2214627990%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/Identities?query=local.OCLCNumber+%3D+%2214627990%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1627'
+      Date:
+      - Fri, 17 Oct 2014 15:45:20 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.OCLCNumber
+        = &amp;#34;14627990&amp;#34;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.OCLCNumber</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">14627990</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns3:extraDataType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns4=\"http://oclc.org/srw/extraData\"><ns4:databaseTitle>WorldCat
+        Personal Identity Records</ns4:databaseTitle></ns4:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Fri, 17 Oct 2014 15:45:20 GMT
+recorded_with: VCR 2.9.3
