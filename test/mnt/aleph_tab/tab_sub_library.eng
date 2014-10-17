@@ -17,21 +17,21 @@
 !
 ! HELP
 ! .
-! This table defines the sublibraries of all the ADM libraries 
-! on the server. In the list of items display in the ALEPH WEB 
+! This table defines the sublibraries of all the ADM libraries
+! on the server. In the list of items display in the ALEPH WEB
 ! OPAC, it is possible to "gather together" all the sublibraries
 ! in one list, regardless of the connection to separate ADM libraries.
-! For all other ALEPH functions (USER, CIRC, ITEMS, SERIALS, ILL, 
-! ACQ) it is required that the operater "connects" to a specific ADM 
+! For all other ALEPH functions (USER, CIRC, ITEMS, SERIALS, ILL,
+! ACQ) it is required that the operater "connects" to a specific ADM
 ! library (e.g. USM50).
 ! The number of sublibraries in the table is not limited. However,
 ! there are places in the system where the total number of
 ! sublibraries relevant to the situation cannot surpass 200.
 ! For example, when sorting a list of items or list holding
 ! libraries for a single bibliographic record.
-! "Connect" in GUI updating modules is to an ADM library (which is  
-! a group of sublibraries). This is a physical group, and one 
-! sublibrary can be assigned to one ADM library ONLY. Each 
+! "Connect" in GUI updating modules is to an ADM library (which is
+! a group of sublibraries). This is a physical group, and one
+! sublibrary can be assigned to one ADM library ONLY. Each
 ! sublibrary code must be unique in this table (unless a special
 ! setup for testing conversions has been installed by Ex Libris).
 ! .
@@ -40,7 +40,7 @@
 ! For libraries who use more than one language interface, each
 ! language is a separate tab_sub_library.<lng> table. All rows
 ! and columns should be exactly the same, except for column 5
-! (library name). 
+! (library name).
 ! Note! In order to define library names for the WEB Opac use table
 ! tab_www_item_desc.eng.
 ! .
@@ -55,15 +55,15 @@
 ! Ordering Unit).
 ! .
 ! link to tab15 (col.6):
-! The code registered in this column identifies the lines in 
-! tab15 (Item statuses) that are relevant for this sublibrary.  
+! The code registered in this column identifies the lines in
+! tab15 (Item statuses) that are relevant for this sublibrary.
 ! The code here must match the code in column 1 of tab15.
-! This allows you to define statuses in tab15 that are used 
+! This allows you to define statuses in tab15 that are used
 ! in common by a number of sublibraries.
 ! .
 ! link to tab16 (col.7):
 ! The code registered in this column identifies the lines in
-! tab16 (Fines, due dates and loan limits) that are relevant 
+! tab16 (Fines, due dates and loan limits) that are relevant
 ! for this sublibrary.
 ! The code here must match the code in column 1 of tab16.
 ! This allows you to define lines in tab16 that are used
@@ -78,8 +78,8 @@
 ! open/close hours.
 ! .
 ! link to patron record (col.9-13):
-! Columns 9 through 13 are used to define the preferred 
-! local patron record, when matching the patron and the 
+! Columns 9 through 13 are used to define the preferred
+! local patron record, when matching the patron and the
 ! item to a line in tab16 (loan due dates, loan, request and
 ! renew limits, etc.). The five columns are alternatives, and
 ! the system checks one after the other, in an attempt to
@@ -90,21 +90,21 @@
 ! If, in the end, no matching local patron record is found
 ! the patron does not have privileges for this item, and he
 ! cannot take it on loan.
-! Therefore, at least one sublibrary code is mandatory for 
+! Therefore, at least one sublibrary code is mandatory for
 ! sublibraries type 1, and sublibrary type 2 must have one
 ! sublibrary code.
 !  For example, for library type 1:
-!  ULINC USM50 ALEPH 
+!  ULINC USM50 ALEPH
 !   - checks for ULINC local patron record, if not found checks for
 !     USM50 (general library patron) and lastly checks for
 !     ALEPH (general ALEPH patron)
-!  UHLTH 
+!  UHLTH
 !   - patron can loan items from UHLTH library only
 !  For example, for library type 2:
 !  ALEPH
-!   - the system uses the patron status in the ALEPH 
-!     local patron record in order to find the matching line in 
-!     tab16 for global loan and hold limits. 
+!   - the system uses the patron status in the ALEPH
+!     local patron record in order to find the matching line in
+!     tab16 for global loan and hold limits.
 ! END_HELP
 ! COL  1.  5; ALPHA_NUM, UPPER; ;
 !            Sublibrary;
@@ -132,7 +132,7 @@
 !            Only for Item sublibraries;
 ! COL  7.  5; ALPHA_NUM, UPPER; ;
 !            tab16;
-!            Group ID for tab16; 
+!            Group ID for tab16;
 ! COL  8.  5; ALPHA_NUM, UPPER; ;
 !            tab17;
 !            Group ID for tab17:
@@ -158,7 +158,7 @@
 !  Add demo sublibraries here
 !  Add customer sublibraries below
 !
-! 1   2   3   4             5                    6     7     8     9    10   11 !    12   13            
+! 1   2   3   4             5                    6     7     8     9    10   11 !    12   13
 !!!!!-!-!!!!!-!-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-!!!!!-!!!!!-!!!!!-!!!!!-!!!!!-!!!!!-!!!!!-!!!!!
 USR00 2       L USR00 Library                        ALEPH       ALEPH
 !*
@@ -193,7 +193,7 @@ NIFAC 1 NYU50 L NYU IFA Conservation Center    NIFAC NIFAC NIFAC NIFAC NYU50 ALE
 NISAW 1 NYU50 L NYU Inst Study Ancient World   NISAW NISAW NISAW NISAW NYU50 ALEPH
 NKEV  1 NYU50 L NYU Kevorkian                  NKEV  NKEV  NKEV  NKEV  NYU50 ALEPH
 NLAPI 1 NYU50 L NYU La Pietra Library (Italy)  NLAPI NLAPI NLAPI NLAPI NYU50 ALEPH
-NLOND 3 NYU50 L NYU London (England) 
+NLOND 3 NYU50 L NYU London (England)
 NOFFS 1 NYU50 L NYU Offsite Storage            NOFFS NOFFS NOFFS NOFFS NYU50 ALEPH
 NPOLY 1 NYU50 L NYU Poly                       BOBST BOBST NPOLY BOBST NYU50 ALEPH
 NPRAG 3 NYU50 L NYU Prague (Czech Republic)
@@ -203,12 +203,12 @@ NSHNG 1 NYU52 L NYU Shanghai Library (China)   NSHNG NSHNG NSHNG NSHNG NYU52 ALE
 NWADC 3 NYU50 L NYU Washington, D.C.
 NYHS  1 NYU50 L New-York Historical Society    NYHS  NYHS  NYHS  NYHS  NYU50 ALEPH
 NYSID 1 NYU50 L New York School of Int Des     NYSID NYSID NYSID NYSID NYU50 ALEPH
-NYUAB 3 NYU50 L NYU Abu Dhabi Library (UAE)                           
+NYUAB 3 NYU50 L NYU Abu Dhabi Library (UAE)
 NYUSS 3 NYU50 L NYUAD Sama Fac Offices (UAE)
-NYUSE 3 NYU50 L NYUAD Ctr for Sci & Eng (UAE) 
+NYUSE 3 NYU50 L NYUAD Ctr for Sci & Eng (UAE)
 SWEB  1 NYU52 L NYU NSHNG Restricted EResouces SWEB  SWEB  SWEB  SWEB  NYU52 ALEPH
 TNSFO 1 NYU50 L New School Fogelman Library    TNSFO TNSFO TNSFO TNSFO NYU50 ALEPH
-TNSGI 1 NYU50 L New School Gimbel Library      TNSGI TNSGI TNSGI TNSGI NYU50 ALEPH
+TNSGI 1 NYU50 L New School University Center   TNSGI TNSGI TNSGI TNSGI NYU50 ALEPH
 TNSKE 1 NYU50 L New School Kellen Archives     TNSKE TNSKE TNSKE TNSKE NYU50 ALEPH
 TNSOS 1 NYU50 L New School Offsite Storage     TNSOS TNSOS TNSOS TNSOS NYU50 ALEPH
 TNSSC 1 NYU50 L New School Scherman Library    TNSSC TNSSC TNSSC TNSSC NYU50 ALEPH
@@ -231,7 +231,7 @@ NIF1  5 NYU50 L Institute of Fine Arts
 NIF2  5 NYU50 L Inst of Fine Arts Conserv
 NISA1 5 NYU50 L Inst for Study of Anc World
 TNSF1 5 NYU50 L New School Fogelman Library
-TNSG1 5 NYU50 L New School Gimbel Library
+TNSG1 5 NYU50 L New School University Center
 TNSS1 5 NYU50 L New School Scherman Library
 NEWA  5 NYU50 L New School University, Acq
 NEWS  5 NYU50 L New School University, Ser
