@@ -68,15 +68,11 @@ describe StackMapPolicy do
         end
         it { should be true }
       end
-      context "but it is not in the New School's Main or Oversize Collections" do
-        let(:service_response) { build(:primo_service_response) }
-        it { should be false }
-      end
     end
   end
 
   context 'when initialized with a holding argument' do
-    context 'but the holding argument is not a Holding' do
+    context 'but the holding argument is not an NyuAleph Holding' do
       let(:holding) { :invalid }
       it 'should raise an ArgumentError' do
         expect { subject }.to raise_error ArgumentError

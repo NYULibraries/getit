@@ -4,8 +4,8 @@ class StackMapPresenter
   attr_reader :holding
 
   def initialize(holding)
-    unless(holding.is_a?(GetIt::Holding::Base))
-      raise ArgumentError.new("Expecting #{holding} to be a GetIt::Holding::Base")
+    unless(holding.is_a?(GetIt::Holding::NyuAleph))
+      raise ArgumentError.new("Expecting #{holding} to be a GetIt::Holding::NyuAleph")
     end
     @holding = holding
   end

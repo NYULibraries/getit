@@ -115,28 +115,34 @@ FactoryGirl.define do
     end
 
     trait :new_school_main_collection_journal do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = "(TS171.A1 R48 )"
+      status = "Check Availability"
       service_data do
-        {
-          collection_str: 'New School University Center Main Collection',
-          call_number: "(TS171.A1 R48 )",
-          coverage: [],
-          status: "Check Availability",
-          edition_str: '',
-          match_reliability: "exact"
-        }
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          call_number: call_number,
+          status: status,
+          from_aleph: false
+        })
       end
     end
 
     trait :new_school_oversize_collection_journal do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = "(TS171.A1 R48 )"
+      status = "Check Availability"
       service_data do
-        {
-          collection_str: 'New School University Center Oversize Collection',
-          call_number: "(TS171.A1 R48 )",
-          coverage: [],
-          status: "Check Availability",
-          edition_str: '',
-          match_reliability: "exact"
-        }
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          call_number: call_number,
+          status: status,
+          from_aleph: false
+        })
       end
     end
 
@@ -397,8 +403,8 @@ FactoryGirl.define do
 
     factory :holding_service_response, traits: [:holding]
     factory :primo_service_response, traits: [:holding, :primo]
-    factory :new_school_main_collection_journal_service_response, traits: [:holding, :primo, :new_school_main_collection_journal]
-    factory :new_school_oversize_collection_journal_service_response, traits: [:holding, :primo, :new_school_oversize_collection_journal]
+    factory :new_school_main_collection_journal_service_response, traits: [:holding, :primo_source, :new_school_main_collection_journal]
+    factory :new_school_oversize_collection_journal_service_response, traits: [:holding, :primo_source, :new_school_oversize_collection_journal]
     factory :primo_source_service_response, traits: [:holding, :primo_source]
     factory :nyu_aleph_service_response_without_source_data, traits: [:holding, :primo_source, :nyu_aleph_without_source_data]
     factory :nyu_aleph_not_from_aleph_service_response, traits: [:holding, :primo_source, :nyu_aleph_not_from_aleph]
