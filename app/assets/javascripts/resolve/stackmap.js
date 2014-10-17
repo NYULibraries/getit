@@ -140,7 +140,7 @@ function trimHTML(text){
 }
 
 var StackMap = StackMap || {
-    domain: 'https://newschool.stackmap.com',  // TODO
+    domain: window.location.protocol + '//newschool.stackmap.com',  // TODO
     delayImgLoad: true,  // TODO
     libraries: ['New School University Center'],  // TODO
     setup: function() {
