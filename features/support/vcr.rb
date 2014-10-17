@@ -31,6 +31,8 @@ VCR.cucumber_tags do |t|
   t.tag '@user/overcoming_trauma_through_yoga'
   t.tag '@guest/gothic_architecture'
   t.tag '@user/gothic_architecture'
+  t.tag '@guest/el_croquis'
+  t.tag '@user/el_croquis'
   t.tag '@guest/book'
   t.tag '@guest/journal'
   t.tag '@guest/checked_out'
