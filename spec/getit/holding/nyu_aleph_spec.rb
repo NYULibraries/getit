@@ -33,6 +33,11 @@ module GetIt
         it { should_not be_nil }
         it { should be_an Exlibris::Aleph::SubLibrary }
       end
+      describe '#collection' do
+        subject { holding.collection}
+        it { should_not be_nil }
+        it { should be_an Exlibris::Aleph::Collection }
+      end
       describe '#call_number' do
         subject { holding.call_number}
         it { should_not be_nil }
