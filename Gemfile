@@ -29,7 +29,7 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'josh/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.0.2'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.0.3'
 
 # Deploy the application with Formaggio deploy recipes
 gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.0.0'
@@ -78,9 +78,6 @@ gem 'sunspot_rails', '~> 2.1.0'
 # NYU customization gems
 gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'v2.1.2'
 gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
-
-# Dalli for caching with memcached
-gem 'dalli', '~> 2.7.0'
 
 # New Relic performance monitoring
 gem 'newrelic_rpm', '~> 3.9.0'
