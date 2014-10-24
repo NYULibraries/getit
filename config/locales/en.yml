@@ -22,6 +22,10 @@
 en:
   application:
     title_html: BobCat
+  umlaut:
+    display_sections:
+      bib_tool:
+        title: Citation Management Tools
   resolve:
     holdings:
       request_text: Request
