@@ -1,6 +1,8 @@
 @import "compass";
 @import "icons/*.png";
 @include all-icons-sprites;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "nyulibraries/variables";
 @import "resolve/variables";
 @import "nyulibraries/hsl/variables";

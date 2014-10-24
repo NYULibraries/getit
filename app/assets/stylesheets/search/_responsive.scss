@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: $screen-lg) {
   @include tabs-responsive;
   .search {
     &.with-tabs {
@@ -7,39 +7,25 @@
   }
 }
 
-@media (max-width: 979px) and (min-width: 480px) {
-  .form-horizontal {
-    .control-group {
-      & > .controls {
-        & > label {
-          & + input {
-            display: block;
-            margin-top: 5px;
-          }
-          display: block;
-          float: left;
-          text-align: right;
-          padding-top: 5px;
-          margin-left: -150px;
-          clear: both;
-          width: 140px;
-          vertical-align: middle;
-        }
-      }
+@media (max-width: $screen-md) {
+  label {
+    &:not(.doi) {
+      height: 1.5em;
     }
+    margin-left: 0px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm) {
   .umlaut-citation {
     font: {
-      size: $baseFontSize*1.25
+      size: $font-size-base*1.25
     }
-    line-height: $baseLineHeight*2;
+    line-height: $line-height-base*2;
     dl {
       dt, dd {
         padding: {
-          top: $baseLineHeight;
+          top: $line-height-base;
         }
       }
     }
@@ -48,16 +34,16 @@
   .umlaut-citation-link {
     text-align: left;
     font: {
-      size: $baseFontSize*1.25
+      size: $font-size-base*1.25
     }
-    line-height: $baseLineHeight*2;
+    line-height: $line-height-base*2;
     padding: {
-      top: $baseLineHeight*2;
+      top: $line-height-base*2;
     }
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $screen-xs) {
   div.rfr_id {
     select {
       width: auto;
