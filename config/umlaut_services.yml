@@ -443,7 +443,7 @@ NS:
       display_name: Recommender Services
       priority: c
       token: <%= ENV['NS_BX_TOKEN'] %>
-      openurl_base: "/ns/resolve?umlaut.institution=NS&"
+      openurl_base: "/ns/resolve?"
       max_records: 2
     NSUlrichsLink:
       type: UlrichsLink
