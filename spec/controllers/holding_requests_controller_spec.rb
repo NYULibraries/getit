@@ -82,7 +82,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it { should_not render_template('new') }
     end
     context 'when the service response is missing' do
-      let(:service_response) { nil }
+      let(:service_response) { -1 }
       it { should_not be_success }
       it { should be_bad_request }
       it 'should not assign @holding_request' do
