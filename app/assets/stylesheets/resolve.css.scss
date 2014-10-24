@@ -1,6 +1,8 @@
 @import "compass";
 @import "icons/*.png";
 @include all-icons-sprites;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "nyulibraries/variables";
 @import "resolve/variables";
 @import "nyulibraries/header";
@@ -18,10 +20,20 @@
 }
 
 .header, nav {
-  background-color: #57068c;
+  background-color: $nyu-purple;
   // background-color: #a4121f;
   h1, .login, .logout {
     color: white;
   }
 }
 
+.header {
+  background-image: url(/assets/nyulibraries/nyu/header.png);
+  background-position: 21px 21px;
+  background-repeat: no-repeat;
+  background-color: #57068C;
+  height: 67px;
+  h1 {
+    @extend .invisible
+  }
+}
