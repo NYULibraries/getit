@@ -24,4 +24,9 @@ Rails.application.config.assets.precompile += %w[
   resolve_hsl.css
   resolve_nyush.css
   resolve_nysid.css
+  nyulibraries/nyu/header.png
+  nyulibraries/nyush/shanghai.png
+  nyulibraries/nyuad/header.png
+  nyu.png
+  magnifier.png
 ]
