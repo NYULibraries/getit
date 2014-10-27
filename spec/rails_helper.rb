@@ -24,6 +24,8 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
   c.configure_rspec_metadata!
   c.hook_into :webmock
+  c.default_cassette_options =
+    {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
   c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
