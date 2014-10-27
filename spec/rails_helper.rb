@@ -71,8 +71,8 @@ RSpec.configure do |config|
   config.before(:suite) do
     # Startout by trucating all the tables
     DatabaseCleaner.clean_with :truncation
-    # Then use transactions to roll back other changes
-    DatabaseCleaner.strategy = :transaction
+    # Then use truncation to handle other changes
+    DatabaseCleaner.strategy = :truncation
 
     # Run factory girl lint before the suite
     begin
