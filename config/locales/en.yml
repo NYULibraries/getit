@@ -26,6 +26,8 @@ en:
     display_sections:
       bib_tool:
         title: Citation Management Tools
+      holding:
+        title: Copies in Library
   resolve:
     holdings:
       request_text: Request
