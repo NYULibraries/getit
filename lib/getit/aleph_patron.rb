@@ -11,7 +11,7 @@ module GetIt
       end
       @user = user
       @id = user.aleph_id
-      @bor_status = user.user_attributes[:bor_status]
+      @bor_status = user.patron_status
     end
 
     def record(record_id)

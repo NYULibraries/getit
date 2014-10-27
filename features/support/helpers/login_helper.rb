@@ -38,7 +38,13 @@ module GetItFeatures
     end
 
     def aleph_identity
-      {provider: 'aleph', uid: (ENV['BOR_ID'] || 'BOR_ID')}
+      {
+        provider: 'aleph',
+        uid: (ENV['BOR_ID'] || 'BOR_ID'),
+        properties: {
+          patron_status: '51'
+        }
+      }
     end
   end
 end

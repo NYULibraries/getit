@@ -9,8 +9,10 @@ FactoryGirl.define do
     institution_code 'NYU'
     aleph_id { (ENV['BOR_ID'] || 'BOR_ID') }
     trait :nyu_aleph_attributes do
+      patron_status { '51' }
     end
-    trait :cooper_union_aleph_attributes do
+    trait :nyu_aleph_attributes do
+      patron_status { '10' }
     end
     factory :aleph_user, traits: [:nyu_aleph_attributes]
     factory :ezborrow_user, traits: [:nyu_aleph_attributes]
