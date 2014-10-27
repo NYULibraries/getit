@@ -54,12 +54,12 @@ module GetIt
         end
         it 'should be reflected in the service response' do
           subject
-          expect(service_response.view_data[:expired]).to be true
+          expect(service_response.service_data[:expired]).to be true
         end
         it 'should saved to the database via the service response' do
           subject
           service_response.reload
-          expect(service_response.view_data[:expired]).to be true
+          expect(service_response.service_data[:expired]).to be true
         end
       end
       context 'when initialized without any arguments' do
