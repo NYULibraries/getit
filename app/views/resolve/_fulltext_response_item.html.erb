@@ -10,8 +10,9 @@ service_response = fulltext_response_item # passed in via :object or :collection
 view_data = service_response.view_data
 institution_code = (view_data[:institution] || service_response.service.group)
 # Set the authentcaition based on institution code
-unless institution_code.nil? or (view_data[:authentication] and (not view_data[:authentication].blank?))
-  service_response.service_data[:authentication] = case institution_code
+authentication = view_data[:authentication]
+unless (institution_code.blank? || authentication.present?)
+  authentication = case institution_code
     when "NYU" then "NYU access only"
     when "HSL" then "HSL access only"
     when "CU" then "Cooper Union access only"
@@ -53,8 +54,8 @@ display_text = (/site.ebrary.com\/lib\/nyulibrary/ =~ view_data[:url]) ? "NYU eb
     <%= content_tag(:div, "from #{view_data[:source] || service_response.service.display_name}", class: "umlaut-link-source") %>
   <% end %>
   <%- # Show authentication before coverage since we have coverage roll-up -%>
-  <% if view_data[:authentication].present? %>
-    <%= content_tag(:div, view_data[:authentication], class: "response_authentication_instructions text-error") %>
+  <% if authentication.present? %>
+    <%= content_tag(:div, authentication, class: "response_authentication_instructions text-error") %>
   <% end %>
   <%- # Coverage -%>
   <% if view_data[:coverage].present? %>
