@@ -13,7 +13,7 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   test "search institutional config" do
-    assert @controller.respond_to?(:extend_with_institutional_search_module), 
+    assert @controller.respond_to?(:extend_with_institutional_search_module),
       "Search controller not modified."
   end
 
@@ -255,6 +255,6 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   def assert_tabs_header
-    assert_select 'div#bobcat_tabs div.navbar-inner h4', {count: 1, text: 'BobCat'}
+    assert_select 'nav#bobcat_tabs div.navbar-header h4', {count: 1, text: 'BobCat'}
   end
 end
