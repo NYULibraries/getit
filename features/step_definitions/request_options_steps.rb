@@ -1,29 +1,29 @@
 Then(/^I should see a modal indicating that the holding is checked out$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /is checked out/)
+  expect(page).to have_css('#modal .modal-header h4', text: /is checked out/)
 end
 
 Then(/^I should see a modal indicating that the holding is available from the offsite storage facility$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /offsite storage facility/)
+  expect(page).to have_css('#modal .modal-header h4', text: /offsite storage facility/)
 end
 
 Then(/^I should see a modal indicating that the holding is available$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /is available at/)
+  expect(page).to have_css('#modal .modal-header h4', text: /is available at/)
 end
 
 Then(/^I should see a modal indicating that the holding is requested$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /is requested/)
+  expect(page).to have_css('#modal .modal-header h4', text: /is requested/)
 end
 
 Then(/^I should see a modal indicating that the holding is currently out of circulation$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /is currently out of circulation/)
+  expect(page).to have_css('#modal .modal-header h4', text: /is currently out of circulation/)
 end
 
 Then(/^I should see a modal indicating that the holding is currently being processed by library staff$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /currently being processed by library staff/)
+  expect(page).to have_css('#modal .modal-header h4', text: /currently being processed by library staff/)
 end
 
 Then(/^I should see a modal indicating that the holding is on order$/) do
-  expect(page).to have_css('#modal .modal-header h3', text: /is on order/)
+  expect(page).to have_css('#modal .modal-header h4', text: /is on order/)
 end
 
 Then(/^I should see an option to recall the holding from a fellow library patron$/) do
