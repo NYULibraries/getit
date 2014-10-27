@@ -18,11 +18,11 @@ module GetItFeatures
     end
 
     def holding_information_row_css
-      holding_css << ' div.row-fluid'
+      holding_css << ' div.row'
     end
 
     def holding_coverage_row_css
-      holding_css << ' div.row-fluid.coverage'
+      holding_css << ' div.row.coverage'
     end
 
     def request_login_link_css
