@@ -1,4 +1,8 @@
 Rails.application.configure do
+  # Umlaut generated this, because Umlaut does some colorized
+  # logging, and Rails really ought to default to false in production.
+  config.colorize_logging = false
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
