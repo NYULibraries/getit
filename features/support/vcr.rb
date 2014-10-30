@@ -27,7 +27,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/vogue'
   t.tag '@guest/not_by_reason_alone'
   t.tag '@guest/the_body_as_home'
-  t.tag '@user/the_body_as_home', record: :new_episodes
+  t.tag '@user/the_body_as_home'
   t.tag '@user/overcoming_trauma_through_yoga'
   t.tag '@guest/gothic_architecture'
   t.tag '@user/gothic_architecture'
