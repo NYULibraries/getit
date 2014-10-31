@@ -9,10 +9,6 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :trackable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :username, :provider, :email, :firstname, :lastname,
-    :institution_code, :aleph_id
-
   # Must have a valid provider
   validates :provider, inclusion: { in: VALID_PROVIDERS }
 
