@@ -1,6 +1,6 @@
 Given(/^I am logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = omniauth_hash
-  visit '/users/auth/nyulibraries'
+  visit '/login'
 end
 
 Given(/^I am not logged in$/) do
