@@ -19,10 +19,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/formaggio.git
-  revision: 5606a4a9061830d0dfc7356c03c2ca65a95af13c
-  tag: v1.0.0
+  revision: ea772f96ceb394e045b45b8197319f31491656b0
+  tag: v1.0.1
   specs:
-    formaggio (1.0.0)
+    formaggio (1.0.1)
       cap_git_tools (~> 0.9.1)
       capistrano (~> 2.15.5)
       figs (~> 2.0)
@@ -35,10 +35,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: ad18a99f6ff16279af3020e4f6f1ad6ea81f426d
-  tag: v4.0.3
+  revision: 31a31641f91362ae32a8524b6cdc03f98cb04ca0
+  tag: v4.0.4
   specs:
-    nyulibraries-assets (4.0.3)
+    nyulibraries-assets (4.0.4)
       bootstrap-sass (~> 3.2.0.2)
       compass (~> 1.0.1)
       institutions (~> 0.1.3)

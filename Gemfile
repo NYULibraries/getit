@@ -29,10 +29,10 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'josh/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.0.3'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.0.4'
 
 # Deploy the application with Formaggio deploy recipes
-gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.0.0'
+gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.0.1'
 
 # Use Figs for setting the configuration in the Environment
 gem 'figs', '~> 2.0.2'
