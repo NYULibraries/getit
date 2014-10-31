@@ -14,25 +14,40 @@ div.rfr_id {
 .umlaut-citation-link {
   text-align: right;
   padding: {
-    top: $baseLineHeight;
+    top: $line-height-base;
   }
 }
 
 .popover {
   .article-finding {
-    width: 300px;
+    width: 30em;
   }
   .issn {
-    width: 400px;
+    width: 40em;
     p {
-      margin-bottom: $baseLineHeight/2;
+      margin-bottom: $line-height-base/2;
     }
   }
   .doi {
-    width: 500px;
+    width: 35em;
   }
+  max-width: 50em;
 }
 
+.glyphicon {
+  color: $brand-primary;
+  font-size: medium;
+  opacity: .75;
+}
+
+.input-group-addon {
+  padding: 3px;
+}
+
+.nyu-tip {
+  @extend .visible-lg;
+  margin-top: 1em;
+}
 
 .form-horizontal {
   .title_search_type {
@@ -41,5 +56,32 @@ div.rfr_id {
 
   .title_search {
     vertical-align: top !important;
+  }
+
+  .control-label {
+    max-width: 11.5em;
+  }
+}
+
+.form-inline.form-very-inline {
+  margin-bottom: 1em;
+  label:first-of-type {
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    padding-right: .5em;
+  }
+  label, select, input {
+    vertical-align: middle;
+  }
+}
+
+#date_year, #date_month, #date_day {
+  @extend .col-md-4;
+}
+
+.nyu-az a {
+  &:hover {
+    color: #fff;
   }
 }

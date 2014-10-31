@@ -23,7 +23,7 @@ module GetIt
       end
 
       def expired?
-        view_data[:expired] == true
+        service_data[:expired] == true
       end
 
       def expire!
@@ -34,7 +34,7 @@ module GetIt
       protected
       extend Forwardable
       # Delegate view_data and destroy! method to the service_response
-      def_delegators :service_response, :view_data, :destroy!
+      def_delegators :service_response, :view_data, :service_data, :destroy!
 
       def request
         @request ||= service_response.request

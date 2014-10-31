@@ -6,7 +6,7 @@ FactoryGirl.define do
     isbn '1234567890123'
     year '2014'
     volume '1'
-    ignore do
+    transient do
       format 'book'
       author 'Author'
     end

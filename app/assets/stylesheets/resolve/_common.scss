@@ -17,6 +17,9 @@ nav {
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid $umlautHeaderBorderColor;
+  .nyu-login {
+    list-style: none;
+  }
 }
 
 .umlaut-resource-info h2.title {
@@ -28,6 +31,7 @@ nav {
   @include umlaut-well($umlautHighlightedSectionBackgroundColor, $umlautSidebarBorderColor);
   padding: 6px;
   ul {
+    padding-left: .5em;
     margin-bottom: 0px;
     li a {
       vertical-align: middle;
@@ -62,20 +66,17 @@ nav {
     &.ezborrow-link {
       white-space: nowrap;
     }
+    @media (min-width: $screen-md) {
+      width: 8em;
+    }
+    @media (min-width: $screen-sm) and (max-width: $screen-md) {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  .umlaut-section {
-    &.holding {
-      .umlaut-holdings {
-        .umlaut-holding {
-          a.btn {
-            padding-left: 3px;
-            padding-right: 3px;
-          }
-        }
-      }
-    }
-  }
+.btn.input-group-add-on {
+  line-height: $line-height-base;
+  margin-top: 0px;
 }

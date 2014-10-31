@@ -24,6 +24,8 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr_cassettes'
   c.configure_rspec_metadata!
   c.hook_into :webmock
+  c.default_cassette_options =
+    {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
   c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
@@ -69,15 +71,18 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.before(:suite) do
-    # Make sure all Factories are loaded and actually work
-    FactoryGirl.reload
-    FactoryGirl.lint
-
     # Startout by trucating all the tables
     DatabaseCleaner.clean_with :truncation
-    # Then use transactions to roll back other changes
-    # DatabaseCleaner.strategy = :transaction
+    # Then use truncation to handle other changes
     DatabaseCleaner.strategy = :truncation
+
+    # Run factory girl lint before the suite
+    begin
+      DatabaseCleaner.start
+      FactoryGirl.lint
+    ensure
+      DatabaseCleaner.clean
+    end
   end
 
   config.around(:each) do |example|

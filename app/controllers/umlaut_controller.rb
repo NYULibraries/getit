@@ -1,5 +1,4 @@
 require 'umlaut'
-require 'umlaut_configurable'
 
 # Superclass for all Umlaut controllers, to hold default behavior,
 # also hold global configuration. It's a superclass rather than a module,
@@ -157,7 +156,6 @@ class UmlautController < ApplicationController
       div_id "bib_tool"
       html_area :sidebar
       bg_update false
-      section_title ServiceTypeValue[:bib_tool].display_name_pluralize
       show_spinner false
       visibility :responses_exist
     end

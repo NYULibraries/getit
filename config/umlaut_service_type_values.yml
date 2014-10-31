@@ -5,4 +5,4 @@ wayfinder:
 bib_tool:
   id: 100001
   display_name: Citation Management Tool
-  display_name_plural: Citation Management Tools
+  display_name_plural: citation_management_tools

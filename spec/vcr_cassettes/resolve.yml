@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-07-01T10:00:58-04:00&ctx_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003562911&rft.au=Author&rft.genre=book&rft.isbn=1234567890123&rft.title=Title&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:1234567890123
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +10,60 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Mon, 27 Oct 2014 14:58:44 GMT
+      Date:
+      - Mon, 27 Oct 2014 14:58:44 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"07oh1oY3NVeQM2tp1f5lbkahdXQ/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=0.01
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 0
+        }
+    http_version: 
+  recorded_at: Mon, 27 Oct 2014 14:58:44 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-10-27T10:58:44-04:00&ctx_ver=Z39.88-2004&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003562911&rft.au=Author&rft.genre=book&rft.isbn=1234567890123&rft.title=Title&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -19,7 +72,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 Jul 2014 14:00:58 GMT
+      - Mon, 27 Oct 2014 14:58:44 GMT
       Server:
       - Apache
       Content-Type:
@@ -27,11 +80,11 @@ http_interactions:
       Transfer-Encoding:
       - chunked
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
         \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2014-07-01T10:00:58-04:00&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2014-10-27T10:58:44-04:00&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.isbn\"&gt;1234567890123&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
         \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003562911&lt;/item&gt;\n
@@ -42,23 +95,18 @@ http_interactions:
         \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
-        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s20B61FD2-0128-11E4-9448-85C5FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sBF8D5206-5DE9-11E4-8202-1C5CFE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         \ &lt;item key=\"rft.isbn_13\"&gt;1234567890123&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
         \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;7349316&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003562911&lt;/item&gt;\n
+        key=\"sfx.request_id\"&gt;8062719&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003562911&lt;/item&gt;\n
         \ \n  &lt;item key=\"rft.title\"&gt;Title&lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
         \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
         \ &lt;item key=\"@rft.aufirst\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.isbn_10\"&gt;&lt;/item&gt;\n
         \ &lt;item key=\"@rft.aulast\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;book&lt;/item&gt;\n
-        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
-        \   &lt;item key=\"1\"&gt;111069357678001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;1000000000002414&lt;/item&gt;\n
-        \   &lt;item key=\"3\"&gt;1000000000002415&lt;/item&gt;\n    &lt;item key=\"4\"&gt;111076678899001&lt;/item&gt;\n
-        \   &lt;item key=\"5\"&gt;111000155328001&lt;/item&gt;\n    &lt;item key=\"6\"&gt;111032274555001&lt;/item&gt;\n
-        \   &lt;item key=\"7\"&gt;20430000000000002&lt;/item&gt;\n    &lt;item key=\"8\"&gt;1000000000000009&lt;/item&gt;\n
-        \   &lt;item key=\"9\"&gt;20430000000000000&lt;/item&gt;\n    &lt;item key=\"10\"&gt;110974985005474&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;20430000000000002&lt;/item&gt;\n
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003562911&lt;/item&gt;\n
         \ &lt;item key=\"@rft.au\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@sfx.searched_by_identifier\"&gt;\n
@@ -69,76 +117,7 @@ http_interactions:
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rft.auinit1\"&gt;\n
         \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"rft.btitle\"&gt;Title&lt;/item&gt;\n &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n
-        \ <ctx_obj_targets>\n   <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n
-        \   <target_public_name>NYU Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
-        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
-        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
-        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
-        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>UNION_CATALOGUE_OCLC_WORLDCAT</target_name>\n
-        \   <target_public_name>WorldCat (OCLC)</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>111032274555000</target_id>\n    <target_service_id>111032274555001</target_service_id>\n
-        \   <service_type>getHolding</service_type>\n    <parser>FirstSearch::WORLDCAT</parser>\n
-        \   <parse_param>url=http://www.worldcat.org/search &amp;partner_key_code=exlibris
-        &amp;wcautho=100-195-964</parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
-        \   <displayer>Worldcat::Worldcat</displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://www.worldcat.org/search?q=isbn%3A1234567890123</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
-        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
-        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
-        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
-        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
-        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
-        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003562911%20(Via%20SFX)&amp;isbn=1234567890123&amp;aulast=&amp;genre=book&amp;title=Title&amp;aufirst=</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_BOOK_SEARCH</target_name>\n
-        \   <target_public_name>Search Google Books by</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>1000000000001761</target_id>\n    <target_service_id>1000000000002414</target_service_id>\n
-        \   <service_type>getCitedBook</service_type>\n    <parser>GoogleBookSearch::Isbn</parser>\n
-        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
-        \   <displayer>GoogleBookSearch::Reference</displayer>\n    <target_url>http://books.google.com/books</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>REFWORKS_EXPORT_TOOL</target_name>\n
-        \   <target_public_name>to RefWorks </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>111069357678000</target_id>\n    <target_service_id>111069357678001</target_service_id>\n
-        \   <service_type>getReference</service_type>\n    <parser>REFWORKS::REFWORKS</parser>\n
-        \   <parse_param>refworksurl=http://www.refworks.com/express/ExpressImport.asp
-        &amp;\r\nproviderid = $$PROVIDERID &amp;\r\n&amp; exporturl=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/refworks.cgi</parse_param>\n
-        \   <proxy>no</proxy>\n    <crossref>yes</crossref>\n    <note></note>\n    <authentication></authentication>\n
-        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://www.refworks.com/express/ExpressImport.asp?filter=RefWorks+Tagged+Format&amp;vendor=SFX&amp;url=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%2Fcgi%2Fpublic%2Frefworks.cgi%3FRT%3DBook%25252C%2BWhole%26A1%3D%2B%26T1%3DTitle%26SN%3D1234567890123&amp;database=&amp;providerid=%24%24PROVIDERID</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>ISI_RESEARCHSOFT_EXPORT_TOOL</target_name>\n
-        \   <target_public_name>to EndNote </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>111000155328000</target_id>\n    <target_service_id>111000155328001</target_service_id>\n
-        \   <service_type>getReference</service_type>\n    <parser>SAVE_CITATION::SAVE_CITATION</parser>\n
-        \   <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/save_citation.cgi
-        &amp; text_version = $$TEXT_VERSION \r\n</parse_param>\n    <proxy>no</proxy>\n
-        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
-        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://sfx.library.nyu.edu/sfxlcl41/cgi/public/save_citation.cgi?Book=Title&amp;Type=BOOK&amp;ISBN=1234567890123&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-07-01T10%253A00%253A58-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft.au%3DAuthor%26rft.genre%3Dbook%26rft.isbn%3D1234567890123%26rft.title%3DTitle%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Abook%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph003562911%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
-        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
-        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
-        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
-        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
-        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
-        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
-        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
-        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003562911+(Via+SFX)&amp;auinitm=%7C&amp;auinit1=%7C&amp;isbn=1234567890123&amp;aulast=%7C&amp;genre=book&amp;booktitle=Title&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-07-01T10%253A00%253A58-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft.au%3DAuthor%26rft.genre%3Dbook%26rft.isbn%3D1234567890123%26rft.title%3DTitle%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Abook%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph003562911%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1&amp;auinit=%7C&amp;aufirst=%7C</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \ <ctx_obj_targets>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
         \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
         \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
         \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
@@ -147,57 +126,32 @@ http_interactions:
         \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>WWW_SEARCH_ENGINES_FREE</target_name>\n
-        \   <target_public_name>Search</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>110974985005473</target_id>\n    <target_service_id>110974985005474</target_service_id>\n
-        \   <service_type>getWebSearch</service_type>\n    <parser>WWW::ALL</parser>\n
-        \   <parse_param></parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
-        \   <displayer>WWW::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
-        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_BOOK_SEARCH</target_name>\n
-        \   <target_public_name>Search Google Books by</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>1000000000001761</target_id>\n    <target_service_id>1000000000002415</target_service_id>\n
-        \   <service_type>getWebSearch</service_type>\n    <parser>GoogleBookSearch::TitleIsbn</parser>\n
-        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
-        \   <displayer>GoogleBookSearch::Search</displayer>\n    <target_url>http://books.google.com/books?q=</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>GOOGLE_SCHOLAR_FREE</target_name>\n
-        \   <target_public_name>Search Google Scholar by </target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>1000000000000009</target_id>\n    <target_service_id>1000000000000009</target_service_id>\n
-        \   <service_type>getWebSearch</service_type>\n    <parser>GoogleScholar::Search</parser>\n
-        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>iso-8859-1</char_set>\n
-        \   <displayer>GoogleScholar::Search</displayer>\n    <target_url></target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 01 Jul 2014 14:00:59 GMT
+  recorded_at: Mon, 27 Oct 2014 14:58:45 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
         xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
         xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
         xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph003562911</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
     headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.5.1, ruby 2.1.3 (2014-09-19))
+      Accept:
+      - "*/*"
+      Date:
+      - Mon, 27 Oct 2014 14:58:45 GMT
       Soapaction:
-      - ! '"getRecord"'
+      - '"getRecord"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '843'
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
+      - '846'
   response:
     status:
       code: 200
@@ -205,410 +159,180 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - text/xml;charset=utf-8
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 01 Jul 2014 14:00:59 GMT
+      - Mon, 27 Oct 2014 14:58:48 GMT
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
-        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
-        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
-        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
-        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
-        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
-        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;003562911&lt;/sourcerecordid&gt;\n
-        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;\n
-        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01003562911&lt;/ilsapiid&gt;\n
-        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
-        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
-        \               &lt;title&gt;South Africa's World Cup : a legacy for whom?&lt;/title&gt;\n
-        \               &lt;contributor&gt;Eddie Cottle&lt;/contributor&gt;\n                &lt;publisher&gt;Scottsville,
-        South Africa : University of KwaZulu-Natal Press&lt;/publisher&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
-        \               &lt;format&gt;xvii, 349 p. : ill. ; 24 cm.&lt;/format&gt;\n
-        \               &lt;identifier&gt;$$Cisbn$$V9781869142162; $$Cisbn$$V1869142160&lt;/identifier&gt;\n
-        \               &lt;subject&gt;Fussballweltmeisterschaft (2010); World Cup
-        (Soccer) (2010)--Economic aspects; Soccer -- Tournaments -- Economic aspects
-        -- South Africa; Sozio&#xF6;konomischer Wandel; Aufsatzsammlung&lt;/subject&gt;\n
-        \               &lt;description&gt;$$Ccontents$$VFIFA and the sports-accumulation
-        complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's
-        World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction
-        companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal?
-        : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade
-        union legacy of the 2010 World Cup : international solidarity revitalised
-        / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade
-        / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work
-        and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green
-        : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank
-        all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium
-        : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall
-        tales : dissecting the urban legend of the developmental legacy of Durban's
-        Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false
-        promises and resistance / Dale T. McKinley (with African Eye News Service)
-        -- Building coliseums, living in shacks : construction workers in the shadow
-        of the world-class city / Tony Roshan Samara.&lt;/description&gt;\n                &lt;description&gt;$$Csummary$$V&quot;This
-        groundbreaking book provides a critically informed analysis of the impact
-        and legacy of mega-sporting events through the lens of South Africa's 2010
-        FIFA Soccer World Cup and its associated developmental paradigm. It challenges
-        mainstream thinking and mega-event praise singers by providing concrete evidence
-        to show that this sporting spectacular was little more than a front for massive
-        accumulation and extraction of wealth, alongside increased sporting and socio-economic
-        inequality.&quot;--Back cover.&lt;/description&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
-        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main
-        Collection$$2(GV943.5 2010 S68 2011 )$$Sunavailable$$31$$41$$5N$$64$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
-        \               &lt;lds02&gt;nyu_aleph003562911&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
-        \               &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;\n
-        \               &lt;availpnx&gt;unavailable&lt;/availpnx&gt;\n              &lt;/display&gt;\n
-        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
-        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
-        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
-        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
-        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
-        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
-        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
-        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
-        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
-        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;edited
-        by Eddie Cottle.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Eddie
-        \ Cottle&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Cottle,
-        E&lt;/creatorcontrib&gt;\n                &lt;title&gt;South Africa's World
-        Cup : a legacy for whom? /&lt;/title&gt;\n                &lt;description&gt;&quot;This
-        groundbreaking book provides a critically informed analysis of the impact
-        and legacy of mega-sporting events through the lens of South Africa's 2010
-        FIFA Soccer World Cup and its associated developmental paradigm. It challenges
-        mainstream thinking and mega-event praise singers by providing concrete evidence
-        to show that this sporting spectacular was little more than a front for massive
-        accumulation and extraction of wealth, alongside increased sporting and socio-economic
-        inequality.&quot;--Back cover.&lt;/description&gt;\n                &lt;subject&gt;Fussballweltmeisterschaft
-        (2010)&lt;/subject&gt;\n                &lt;subject&gt;World Cup (Soccer)
-        (2010)  Economic aspects&lt;/subject&gt;\n                &lt;subject&gt;Soccer
-        \ Tournaments Economic aspects South Africa&lt;/subject&gt;\n                &lt;subject&gt;Sozio&#xF6;konomischer
-        Wandel&lt;/subject&gt;\n                &lt;subject&gt;Aufsatzsammlung&lt;/subject&gt;\n
-        \               &lt;subject&gt;Association football&lt;/subject&gt;\n                &lt;subject&gt;Football
-        (Soccer)&lt;/subject&gt;\n                &lt;subject&gt;English football&lt;/subject&gt;\n
-        \               &lt;subject&gt;European football&lt;/subject&gt;\n                &lt;general&gt;University
-        of KwaZulu-Natal Press,&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
-        \               &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;\n                &lt;isbn&gt;9781869142162&lt;/isbn&gt;\n
-        \               &lt;isbn&gt;1869142160&lt;/isbn&gt;\n                &lt;toc&gt;FIFA
-        and the sports-accumulation complex / Dale T. McKinley -- Economic promises
-        and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle --
-        Their cup runneth over : construction companies and the 2010 FIFA World Cup
-        / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World
-        Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup
-        : international solidarity revitalised / Vasco Pedrina and Joachim Merz --
-        Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation
-        and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne
-        Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen
-        Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi
-        Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo
-        and Michael Blake -- Tall tales : dissecting the urban legend of the developmental
-        legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption,
-        murder, false promises and resistance / Dale T. McKinley (with African Eye
-        News Service) -- Building coliseums, living in shacks : construction workers
-        in the shadow of the world-class city / Tony Roshan Samara.&lt;/toc&gt;\n
-        \               &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
-        \               &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n                &lt;searchscope&gt;BOBST
-        Main Collection&lt;/searchscope&gt;\n                &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n
-        \               &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n                &lt;scope&gt;BOBST&lt;/scope&gt;\n
-        \               &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
-        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;lsr01&gt;GV943.5
-        2010 S68 2011&lt;/lsr01&gt;\n                &lt;lsr02&gt;University of KwaZulu-Natal
-        Press,&lt;/lsr02&gt;\n              &lt;/search&gt;\n              &lt;sort&gt;\n
-        \               &lt;title&gt;South Africa's World Cup : a legacy for whom?
-        /&lt;/title&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
-        \               &lt;author&gt;Cottle, Eddie.&lt;/author&gt;\n                &lt;lso01&gt;2011&lt;/lso01&gt;\n
-        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
-        \               &lt;creationdate&gt;2011&lt;/creationdate&gt;\n                &lt;topic&gt;Fussballweltmeisterschaft
-        (2010)&lt;/topic&gt;\n                &lt;topic&gt;World Cup (Soccer) (2010)&#x2013;Economic
-        aspects&lt;/topic&gt;\n                &lt;topic&gt;Soccer&#x2013;Tournaments&#x2013;Economic
-        aspects&#x2013;South Africa&lt;/topic&gt;\n                &lt;topic&gt;Sozio&#xF6;konomischer
-        Wandel&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
-        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
-        \               &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;\n                &lt;genre&gt;Aufsatzsammlung&lt;/genre&gt;\n
-        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;lfc01&gt;Main
-        Collection&lt;/lfc01&gt;\n                &lt;frbrgroupid&gt;65470126&lt;/frbrgroupid&gt;\n
-        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
-        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c1&gt;2012371683&lt;/c1&gt;\n
-        \               &lt;c2&gt;9781869142162;1869142160&lt;/c2&gt;\n                &lt;c3&gt;southafricasworldcupacyforwhom&lt;/c3&gt;\n
-        \               &lt;c4&gt;2011&lt;/c4&gt;\n                &lt;f1&gt;2012371683&lt;/f1&gt;\n
-        \               &lt;f3&gt;9781869142162;1869142160&lt;/f3&gt;\n                &lt;f5&gt;southafricasworldcupacyforwhom&lt;/f5&gt;\n
-        \               &lt;f6&gt;2011&lt;/f6&gt;\n                &lt;f7&gt;south
-        africas world cup a legacy for whom&lt;/f7&gt;\n                &lt;f8&gt;sa&lt;/f8&gt;\n
-        \               &lt;f9&gt;xvii, 349 p. :&lt;/f9&gt;\n                &lt;f10&gt;university
-        of kwazulu natal press&lt;/f10&gt;\n              &lt;/dedup&gt;\n              &lt;frbr&gt;\n
-        \               &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Kcottle
-        eddie$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbooksouth africa's world
-        cup a legacy for whom$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n              &lt;delivery&gt;\n
-        \               &lt;institution&gt;NYU&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
-        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
-        \               &lt;classificationlcc&gt;GV943.5 2010&lt;/classificationlcc&gt;\n
-        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
-        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
-        \             &lt;addata&gt;\n                &lt;aulast&gt;Cottle&lt;/aulast&gt;\n
-        \               &lt;aufirst&gt;Eddie&lt;/aufirst&gt;\n                &lt;addau&gt;Cottle,
-        Eddie&lt;/addau&gt;\n                &lt;btitle&gt;South Africa's World Cup
-        : a legacy for whom?&lt;/btitle&gt;\n                &lt;date&gt;2011&lt;/date&gt;\n
-        \               &lt;risdate&gt;2011.&lt;/risdate&gt;\n                &lt;isbn&gt;9781869142162&lt;/isbn&gt;\n
-        \               &lt;isbn&gt;1869142160&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
-        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
-        \               &lt;notes&gt;Includes bibliographical references and index.&lt;/notes&gt;\n
-        \               &lt;abstract&gt;&quot;This groundbreaking book provides a
-        critically informed analysis of the impact and legacy of mega-sporting events
-        through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated
-        developmental paradigm. It challenges mainstream thinking and mega-event praise
-        singers by providing concrete evidence to show that this sporting spectacular
-        was little more than a front for massive accumulation and extraction of wealth,
-        alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/abstract&gt;\n
-        \               &lt;cop&gt;Scottsville, South Africa&lt;/cop&gt;\n                &lt;pub&gt;University
-        of KwaZulu-Natal Press&lt;/pub&gt;\n                &lt;oclcid&gt;749853403&lt;/oclcid&gt;\n
-        \               &lt;lccn&gt;2012371683&lt;/lccn&gt;\n                &lt;lad01&gt;BOBST&lt;/lad01&gt;\n
-        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
-        \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
-        \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;003562911&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01003562911&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;book&lt;/type&gt;
+                        &lt;title&gt;South Africa's World Cup : a legacy for whom?&lt;/title&gt;
+                        &lt;contributor&gt;Eddie Cottle&lt;/contributor&gt;
+                        &lt;publisher&gt;Scottsville, South Africa : University of KwaZulu-Natal Press&lt;/publisher&gt;
+                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
+                        &lt;format&gt;xvii, 349 p. : ill. ; 24 cm.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cisbn$$V9781869142162; $$Cisbn$$V1869142160&lt;/identifier&gt;
+                        &lt;subject&gt;Fussballweltmeisterschaft (2010); World Cup (Soccer) (2010)--Economic aspects; Soccer -- Tournaments -- Economic aspects -- South Africa; Sozio&#xF6;konomischer Wandel; Aufsatzsammlung&lt;/subject&gt;
+                        &lt;description&gt;$$Ccontents$$VFIFA and the sports-accumulation complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup : international solidarity revitalised / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall tales : dissecting the urban legend of the developmental legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false promises and resistance / Dale T. McKinley (with African Eye News Service) -- Building coliseums, living in shacks : construction workers in the shadow of the world-class city / Tony Roshan Samara.&lt;/description&gt;
+                        &lt;description&gt;$$Csummary$$V&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/description&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(GV943.5 2010 S68 2011 )$$Sunavailable$$31$$41$$5N$$64$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph003562911&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;unavailable&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
+                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
+                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;edited by Eddie Cottle.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Eddie  Cottle&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;
+                        &lt;title&gt;South Africa's World Cup : a legacy for whom? /&lt;/title&gt;
+                        &lt;description&gt;&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/description&gt;
+                        &lt;subject&gt;Fussballweltmeisterschaft (2010)&lt;/subject&gt;
+                        &lt;subject&gt;World Cup (Soccer) (2010)  Economic aspects&lt;/subject&gt;
+                        &lt;subject&gt;Soccer  Tournaments Economic aspects South Africa&lt;/subject&gt;
+                        &lt;subject&gt;Sozio&#xF6;konomischer Wandel&lt;/subject&gt;
+                        &lt;subject&gt;Aufsatzsammlung&lt;/subject&gt;
+                        &lt;subject&gt;English football&lt;/subject&gt;
+                        &lt;subject&gt;European football&lt;/subject&gt;
+                        &lt;subject&gt;Association football&lt;/subject&gt;
+                        &lt;subject&gt;Football (Soccer)&lt;/subject&gt;
+                        &lt;general&gt;University of KwaZulu-Natal Press,&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;
+                        &lt;isbn&gt;9781869142162&lt;/isbn&gt;
+                        &lt;isbn&gt;1869142160&lt;/isbn&gt;
+                        &lt;toc&gt;FIFA and the sports-accumulation complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup : international solidarity revitalised / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall tales : dissecting the urban legend of the developmental legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false promises and resistance / Dale T. McKinley (with African Eye News Service) -- Building coliseums, living in shacks : construction workers in the shadow of the world-class city / Tony Roshan Samara.&lt;/toc&gt;
+                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
+                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;scope&gt;BOBST&lt;/scope&gt;
+                        &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;lsr01&gt;GV943.5 2010 S68 2011&lt;/lsr01&gt;
+                        &lt;lsr02&gt;University of KwaZulu-Natal Press,&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;South Africa's World Cup : a legacy for whom? /&lt;/title&gt;
+                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
+                        &lt;author&gt;Cottle, Eddie.&lt;/author&gt;
+                        &lt;lso01&gt;2011&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
+                        &lt;topic&gt;Fussballweltmeisterschaft (2010)&lt;/topic&gt;
+                        &lt;topic&gt;World Cup (Soccer) (2010)&#x2013;Economic aspects&lt;/topic&gt;
+                        &lt;topic&gt;Soccer&#x2013;Tournaments&#x2013;Economic aspects&#x2013;South Africa&lt;/topic&gt;
+                        &lt;topic&gt;Sozio&#xF6;konomischer Wandel&lt;/topic&gt;
+                        &lt;collection&gt;BOBST&lt;/collection&gt;
+                        &lt;prefilter&gt;books&lt;/prefilter&gt;
+                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
+                        &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;
+                        &lt;genre&gt;Aufsatzsammlung&lt;/genre&gt;
+                        &lt;library&gt;BOBST&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;classificationlcc&gt;G - Geography. Anthropology. Recreation.&#x2013;Recreation. Leisure&#x2013;Sports&#x2013;Ball games: Baseball, football, golf, etc.&lt;/classificationlcc&gt;
+                        &lt;frbrgroupid&gt;97191176&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c1&gt;2012371683&lt;/c1&gt;
+                        &lt;c2&gt;9781869142162;1869142160&lt;/c2&gt;
+                        &lt;c3&gt;southafricasworldcupacyforwhom&lt;/c3&gt;
+                        &lt;c4&gt;2011&lt;/c4&gt;
+                        &lt;f1&gt;2012371683&lt;/f1&gt;
+                        &lt;f3&gt;9781869142162;1869142160&lt;/f3&gt;
+                        &lt;f5&gt;southafricasworldcupacyforwhom&lt;/f5&gt;
+                        &lt;f6&gt;2011&lt;/f6&gt;
+                        &lt;f7&gt;south africas world cup a legacy for whom&lt;/f7&gt;
+                        &lt;f8&gt;sa&lt;/f8&gt;
+                        &lt;f9&gt;xvii, 349 p. :&lt;/f9&gt;
+                        &lt;f10&gt;university of kwazulu natal press&lt;/f10&gt;
+                        &lt;f20&gt;(OCoLC)749853403&lt;/f20&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kcottle eddie$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kbooksouth africa's world cup a legacy for whom$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;enrichment&gt;
+                        &lt;classificationlcc&gt;GV943.5 2010&lt;/classificationlcc&gt;
+                      &lt;/enrichment&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;Cottle&lt;/aulast&gt;
+                        &lt;aufirst&gt;Eddie&lt;/aufirst&gt;
+                        &lt;addau&gt;Cottle, Eddie&lt;/addau&gt;
+                        &lt;btitle&gt;South Africa's World Cup : a legacy for whom?&lt;/btitle&gt;
+                        &lt;date&gt;2011&lt;/date&gt;
+                        &lt;risdate&gt;2011.&lt;/risdate&gt;
+                        &lt;isbn&gt;9781869142162&lt;/isbn&gt;
+                        &lt;isbn&gt;1869142160&lt;/isbn&gt;
+                        &lt;format&gt;book&lt;/format&gt;
+                        &lt;genre&gt;book&lt;/genre&gt;
+                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
+                        &lt;notes&gt;Includes bibliographical references and index.&lt;/notes&gt;
+                        &lt;abstract&gt;&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/abstract&gt;
+                        &lt;cop&gt;Scottsville, South Africa&lt;/cop&gt;
+                        &lt;pub&gt;University of KwaZulu-Natal Press&lt;/pub&gt;
+                        &lt;oclcid&gt;749853403&lt;/oclcid&gt;
+                        &lt;lad01&gt;BOBST&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
+                        &lt;lccn&gt;2012371683&lt;/lccn&gt;
+                      &lt;/addata&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 01 Jul 2014 14:00:59 GMT
-- request:
-    method: get
-    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AMAZON_API_KEY&AssociateTag=AMAZON_ASSOCIATE_TAG&ItemId=123456789X&Operation=ItemLookup&ResponseGroup=Large&Service=AWSECommerceService&Signature=Rr/RPm8Lnr/CRtZWQ2ErOn/pGyLnLLruXfw1dLJGOtc=&Timestamp=2014-07-01T10:00:59-04:00
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 01 Jul 2014 14:01:00 GMT
-      Server:
-      - Server
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Vary:
-      - Accept-Encoding,User-Agent
-      Nncoection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxJdGVtTG9va3VwUmVzcG9uc2UgeG1s
-        bnM9Imh0dHA6Ly93ZWJzZXJ2aWNlcy5hbWF6b24uY29tL0FXU0VDb21tZXJj
-        ZVNlcnZpY2UvMjAxMS0wOC0wMSI+PE9wZXJhdGlvblJlcXVlc3Q+PEhUVFBI
-        ZWFkZXJzPjxIZWFkZXIgTmFtZT0iVXNlckFnZW50IiBWYWx1ZT0iUnVieSI+
-        PC9IZWFkZXI+PC9IVFRQSGVhZGVycz48UmVxdWVzdElkPjg4MGQ1MWU3LTJm
-        MzktNGQzMi1iNmYwLTY3Y2M5MDRhZjM3NjwvUmVxdWVzdElkPjxBcmd1bWVu
-        dHM+PEFyZ3VtZW50IE5hbWU9IlNlcnZpY2UiIFZhbHVlPSJBV1NFQ29tbWVy
-        Y2VTZXJ2aWNlIj48L0FyZ3VtZW50PjxBcmd1bWVudCBOYW1lPSJPcGVyYXRp
-        b24iIFZhbHVlPSJJdGVtTG9va3VwIj48L0FyZ3VtZW50PjxBcmd1bWVudCBO
-        YW1lPSJTaWduYXR1cmUiIFZhbHVlPSJSci9SUG04TG5yL0NSdFpXUTJFck9u
-        L3BHeUxuTExydVhmdzFkTEpHT3RjPSI+PC9Bcmd1bWVudD48QXJndW1lbnQg
-        TmFtZT0iQXNzb2NpYXRlVGFnIiBWYWx1ZT0iQU1BWk9OX0FTU09DSUFURV9U
-        QUciPjwvQXJndW1lbnQ+PEFyZ3VtZW50IE5hbWU9Ikl0ZW1JZCIgVmFsdWU9
-        IjEyMzQ1Njc4OVgiPjwvQXJndW1lbnQ+PEFyZ3VtZW50IE5hbWU9IkFXU0Fj
-        Y2Vzc0tleUlkIiBWYWx1ZT0iQU1BWk9OX0FQSV9LRVkiPjwvQXJndW1lbnQ+
-        PEFyZ3VtZW50IE5hbWU9IlRpbWVzdGFtcCIgVmFsdWU9IjIwMTQtMDctMDFU
-        MTA6MDA6NTktMDQ6MDAiPjwvQXJndW1lbnQ+PEFyZ3VtZW50IE5hbWU9IlJl
-        c3BvbnNlR3JvdXAiIFZhbHVlPSJMYXJnZSI+PC9Bcmd1bWVudD48L0FyZ3Vt
-        ZW50cz48UmVxdWVzdFByb2Nlc3NpbmdUaW1lPjAuMDMxODgwMDAwMDAwMDAw
-        MDwvUmVxdWVzdFByb2Nlc3NpbmdUaW1lPjwvT3BlcmF0aW9uUmVxdWVzdD48
-        SXRlbXM+PFJlcXVlc3Q+PElzVmFsaWQ+VHJ1ZTwvSXNWYWxpZD48SXRlbUxv
-        b2t1cFJlcXVlc3Q+PElkVHlwZT5BU0lOPC9JZFR5cGU+PEl0ZW1JZD4xMjM0
-        NTY3ODlYPC9JdGVtSWQ+PFJlc3BvbnNlR3JvdXA+TGFyZ2U8L1Jlc3BvbnNl
-        R3JvdXA+PFZhcmlhdGlvblBhZ2U+QWxsPC9WYXJpYXRpb25QYWdlPjwvSXRl
-        bUxvb2t1cFJlcXVlc3Q+PC9SZXF1ZXN0PjxJdGVtPjxBU0lOPjEyMzQ1Njc4
-        OVg8L0FTSU4+PERldGFpbFBhZ2VVUkw+aHR0cDovL3d3dy5hbWF6b24uY29t
-        L0R1ZGUtU2hpcnQtRG9yb3RoeS1EYXZpcy9kcC8xMjM0NTY3ODlYJTNGU3Vi
-        c2NyaXB0aW9uSWQlM0RBTUFaT05fQVBJX0tFWSUyNnRhZyUzREFNQVpPTl9B
-        U1NPQ0lBVEVfVEFHJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUy
-        NmNyZWF0aXZlJTNEMTY1OTUzJTI2Y3JlYXRpdmVBU0lOJTNEMTIzNDU2Nzg5
-        WDwvRGV0YWlsUGFnZVVSTD48SXRlbUxpbmtzPjxJdGVtTGluaz48RGVzY3Jp
-        cHRpb24+VGVjaG5pY2FsIERldGFpbHM8L0Rlc2NyaXB0aW9uPjxVUkw+aHR0
-        cDovL3d3dy5hbWF6b24uY29tL0R1ZGUtU2hpcnQtRG9yb3RoeS1EYXZpcy9k
-        cC90ZWNoLWRhdGEvMTIzNDU2Nzg5WCUzRlN1YnNjcmlwdGlvbklkJTNEQU1B
-        Wk9OX0FQSV9LRVklMjZ0YWclM0RBTUFaT05fQVNTT0NJQVRFX1RBRyUyNmxp
-        bmtDb2RlJTNEeG0yJTI2Y2FtcCUzRDIwMjUlMjZjcmVhdGl2ZSUzRDM4NjAw
-        MSUyNmNyZWF0aXZlQVNJTiUzRDEyMzQ1Njc4OVg8L1VSTD48L0l0ZW1MaW5r
-        PjxJdGVtTGluaz48RGVzY3JpcHRpb24+QWRkIFRvIEJhYnkgUmVnaXN0cnk8
-        L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29tL2dwL3Jl
-        Z2lzdHJ5L2JhYnkvYWRkLWl0ZW0uaHRtbCUzRmFzaW4uMCUzRDEyMzQ1Njc4
-        OVglMjZTdWJzY3JpcHRpb25JZCUzREFNQVpPTl9BUElfS0VZJTI2dGFnJTNE
-        QU1BWk9OX0FTU09DSUFURV9UQUclMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAl
-        M0QyMDI1JTI2Y3JlYXRpdmUlM0QzODYwMDElMjZjcmVhdGl2ZUFTSU4lM0Qx
-        MjM0NTY3ODlYPC9VUkw+PC9JdGVtTGluaz48SXRlbUxpbms+PERlc2NyaXB0
-        aW9uPkFkZCBUbyBXZWRkaW5nIFJlZ2lzdHJ5PC9EZXNjcmlwdGlvbj48VVJM
-        Pmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9yZWdpc3RyeS93ZWRkaW5nL2Fk
-        ZC1pdGVtLmh0bWwlM0Zhc2luLjAlM0QxMjM0NTY3ODlYJTI2U3Vic2NyaXB0
-        aW9uSWQlM0RBTUFaT05fQVBJX0tFWSUyNnRhZyUzREFNQVpPTl9BU1NPQ0lB
-        VEVfVEFHJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0
-        aXZlJTNEMzg2MDAxJTI2Y3JlYXRpdmVBU0lOJTNEMTIzNDU2Nzg5WDwvVVJM
-        PjwvSXRlbUxpbms+PEl0ZW1MaW5rPjxEZXNjcmlwdGlvbj5BZGQgVG8gV2lz
-        aGxpc3Q8L0Rlc2NyaXB0aW9uPjxVUkw+aHR0cDovL3d3dy5hbWF6b24uY29t
-        L2dwL3JlZ2lzdHJ5L3dpc2hsaXN0L2FkZC1pdGVtLmh0bWwlM0Zhc2luLjAl
-        M0QxMjM0NTY3ODlYJTI2U3Vic2NyaXB0aW9uSWQlM0RBTUFaT05fQVBJX0tF
-        WSUyNnRhZyUzREFNQVpPTl9BU1NPQ0lBVEVfVEFHJTI2bGlua0NvZGUlM0R4
-        bTIlMjZjYW1wJTNEMjAyNSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3JlYXRp
-        dmVBU0lOJTNEMTIzNDU2Nzg5WDwvVVJMPjwvSXRlbUxpbms+PEl0ZW1MaW5r
-        PjxEZXNjcmlwdGlvbj5UZWxsIEEgRnJpZW5kPC9EZXNjcmlwdGlvbj48VVJM
-        Pmh0dHA6Ly93d3cuYW1hem9uLmNvbS9ncC9wZHAvdGFmLzEyMzQ1Njc4OVgl
-        M0ZTdWJzY3JpcHRpb25JZCUzREFNQVpPTl9BUElfS0VZJTI2dGFnJTNEQU1B
-        Wk9OX0FTU09DSUFURV9UQUclMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0Qy
-        MDI1JTI2Y3JlYXRpdmUlM0QzODYwMDElMjZjcmVhdGl2ZUFTSU4lM0QxMjM0
-        NTY3ODlYPC9VUkw+PC9JdGVtTGluaz48SXRlbUxpbms+PERlc2NyaXB0aW9u
-        PkFsbCBDdXN0b21lciBSZXZpZXdzPC9EZXNjcmlwdGlvbj48VVJMPmh0dHA6
-        Ly93d3cuYW1hem9uLmNvbS9yZXZpZXcvcHJvZHVjdC8xMjM0NTY3ODlYJTNG
-        U3Vic2NyaXB0aW9uSWQlM0RBTUFaT05fQVBJX0tFWSUyNnRhZyUzREFNQVpP
-        Tl9BU1NPQ0lBVEVfVEFHJTI2bGlua0NvZGUlM0R4bTIlMjZjYW1wJTNEMjAy
-        NSUyNmNyZWF0aXZlJTNEMzg2MDAxJTI2Y3JlYXRpdmVBU0lOJTNEMTIzNDU2
-        Nzg5WDwvVVJMPjwvSXRlbUxpbms+PEl0ZW1MaW5rPjxEZXNjcmlwdGlvbj5B
-        bGwgT2ZmZXJzPC9EZXNjcmlwdGlvbj48VVJMPmh0dHA6Ly93d3cuYW1hem9u
-        LmNvbS9ncC9vZmZlci1saXN0aW5nLzEyMzQ1Njc4OVglM0ZTdWJzY3JpcHRp
-        b25JZCUzREFNQVpPTl9BUElfS0VZJTI2dGFnJTNEQU1BWk9OX0FTU09DSUFU
-        RV9UQUclMjZsaW5rQ29kZSUzRHhtMiUyNmNhbXAlM0QyMDI1JTI2Y3JlYXRp
-        dmUlM0QzODYwMDElMjZjcmVhdGl2ZUFTSU4lM0QxMjM0NTY3ODlYPC9VUkw+
-        PC9JdGVtTGluaz48L0l0ZW1MaW5rcz48U2FsZXNSYW5rPjQ0NDE2NjA8L1Nh
-        bGVzUmFuaz48U21hbGxJbWFnZT48VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFt
-        YXpvbi5jb20vaW1hZ2VzL0kvNTEtUHlBQUVRQUwuX1NMNzVfLmpwZzwvVVJM
-        PjxIZWlnaHQgVW5pdHM9InBpeGVscyI+NjI8L0hlaWdodD48V2lkdGggVW5p
-        dHM9InBpeGVscyI+NzU8L1dpZHRoPjwvU21hbGxJbWFnZT48TWVkaXVtSW1h
-        Z2U+PFVSTD5odHRwOi8vZWN4LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9J
-        LzUxLVB5QUFFUUFMLl9TTDE2MF8uanBnPC9VUkw+PEhlaWdodCBVbml0cz0i
-        cGl4ZWxzIj4xMzI8L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+MTYw
-        PC9XaWR0aD48L01lZGl1bUltYWdlPjxMYXJnZUltYWdlPjxVUkw+aHR0cDov
-        L2VjeC5pbWFnZXMtYW1hem9uLmNvbS9pbWFnZXMvSS81MS1QeUFBRVFBTC5q
-        cGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjQxMTwvSGVpZ2h0PjxX
-        aWR0aCBVbml0cz0icGl4ZWxzIj41MDA8L1dpZHRoPjwvTGFyZ2VJbWFnZT48
-        SW1hZ2VTZXRzPjxJbWFnZVNldCBDYXRlZ29yeT0icHJpbWFyeSI+PFN3YXRj
-        aEltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMtYW1hem9uLmNvbS9pbWFn
-        ZXMvSS81MS1QeUFBRVFBTC5fU0wzMF8uanBnPC9VUkw+PEhlaWdodCBVbml0
-        cz0icGl4ZWxzIj4yNTwvSGVpZ2h0PjxXaWR0aCBVbml0cz0icGl4ZWxzIj4z
-        MDwvV2lkdGg+PC9Td2F0Y2hJbWFnZT48U21hbGxJbWFnZT48VVJMPmh0dHA6
-        Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTEtUHlBQUVRQUwu
-        X1NMNzVfLmpwZzwvVVJMPjxIZWlnaHQgVW5pdHM9InBpeGVscyI+NjI8L0hl
-        aWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+NzU8L1dpZHRoPjwvU21hbGxJ
-        bWFnZT48VGh1bWJuYWlsSW1hZ2U+PFVSTD5odHRwOi8vZWN4LmltYWdlcy1h
-        bWF6b24uY29tL2ltYWdlcy9JLzUxLVB5QUFFUUFMLl9TTDc1Xy5qcGc8L1VS
-        TD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjYyPC9IZWlnaHQ+PFdpZHRoIFVu
-        aXRzPSJwaXhlbHMiPjc1PC9XaWR0aD48L1RodW1ibmFpbEltYWdlPjxUaW55
-        SW1hZ2U+PFVSTD5odHRwOi8vZWN4LmltYWdlcy1hbWF6b24uY29tL2ltYWdl
-        cy9JLzUxLVB5QUFFUUFMLl9TTDExMF8uanBnPC9VUkw+PEhlaWdodCBVbml0
-        cz0icGl4ZWxzIj45MDwvSGVpZ2h0PjxXaWR0aCBVbml0cz0icGl4ZWxzIj4x
-        MTA8L1dpZHRoPjwvVGlueUltYWdlPjxNZWRpdW1JbWFnZT48VVJMPmh0dHA6
-        Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTEtUHlBQUVRQUwu
-        X1NMMTYwXy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjEzMjwv
-        SGVpZ2h0PjxXaWR0aCBVbml0cz0icGl4ZWxzIj4xNjA8L1dpZHRoPjwvTWVk
-        aXVtSW1hZ2U+PExhcmdlSW1hZ2U+PFVSTD5odHRwOi8vZWN4LmltYWdlcy1h
-        bWF6b24uY29tL2ltYWdlcy9JLzUxLVB5QUFFUUFMLmpwZzwvVVJMPjxIZWln
-        aHQgVW5pdHM9InBpeGVscyI+NDExPC9IZWlnaHQ+PFdpZHRoIFVuaXRzPSJw
-        aXhlbHMiPjUwMDwvV2lkdGg+PC9MYXJnZUltYWdlPjwvSW1hZ2VTZXQ+PElt
-        YWdlU2V0IENhdGVnb3J5PSJ2YXJpYW50Ij48U3dhdGNoSW1hZ2U+PFVSTD5o
-        dHRwOi8vZWN4LmltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzUxNWE4dzNL
-        MTJMLl9TTDMwXy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjI0
-        PC9IZWlnaHQ+PFdpZHRoIFVuaXRzPSJwaXhlbHMiPjMwPC9XaWR0aD48L1N3
-        YXRjaEltYWdlPjxTbWFsbEltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMt
-        YW1hem9uLmNvbS9pbWFnZXMvSS81MTVhOHczSzEyTC5fU0w3NV8uanBnPC9V
-        Ukw+PEhlaWdodCBVbml0cz0icGl4ZWxzIj41OTwvSGVpZ2h0PjxXaWR0aCBV
-        bml0cz0icGl4ZWxzIj43NTwvV2lkdGg+PC9TbWFsbEltYWdlPjxUaHVtYm5h
-        aWxJbWFnZT48VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1h
-        Z2VzL0kvNTE1YTh3M0sxMkwuX1NMNzVfLmpwZzwvVVJMPjxIZWlnaHQgVW5p
-        dHM9InBpeGVscyI+NTk8L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+
-        NzU8L1dpZHRoPjwvVGh1bWJuYWlsSW1hZ2U+PFRpbnlJbWFnZT48VVJMPmh0
-        dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTE1YTh3M0sx
-        MkwuX1NMMTEwXy5qcGc8L1VSTD48SGVpZ2h0IFVuaXRzPSJwaXhlbHMiPjg2
-        PC9IZWlnaHQ+PFdpZHRoIFVuaXRzPSJwaXhlbHMiPjExMDwvV2lkdGg+PC9U
-        aW55SW1hZ2U+PE1lZGl1bUltYWdlPjxVUkw+aHR0cDovL2VjeC5pbWFnZXMt
-        YW1hem9uLmNvbS9pbWFnZXMvSS81MTVhOHczSzEyTC5fU0wxNjBfLmpwZzwv
-        VVJMPjxIZWlnaHQgVW5pdHM9InBpeGVscyI+MTI1PC9IZWlnaHQ+PFdpZHRo
-        IFVuaXRzPSJwaXhlbHMiPjE2MDwvV2lkdGg+PC9NZWRpdW1JbWFnZT48TGFy
-        Z2VJbWFnZT48VVJMPmh0dHA6Ly9lY3guaW1hZ2VzLWFtYXpvbi5jb20vaW1h
-        Z2VzL0kvNTE1YTh3M0sxMkwuanBnPC9VUkw+PEhlaWdodCBVbml0cz0icGl4
-        ZWxzIj4zOTI8L0hlaWdodD48V2lkdGggVW5pdHM9InBpeGVscyI+NTAwPC9X
-        aWR0aD48L0xhcmdlSW1hZ2U+PC9JbWFnZVNldD48L0ltYWdlU2V0cz48SXRl
-        bUF0dHJpYnV0ZXM+PEF1dGhvcj5Eb3JvdGh5IERhdmlzPC9BdXRob3I+PEJp
-        bmRpbmc+UGFwZXJiYWNrPC9CaW5kaW5nPjxFQU4+OTc4MTIzNDU2Nzg5Nzwv
-        RUFOPjxFQU5MaXN0PjxFQU5MaXN0RWxlbWVudD45NzgxMjM0NTY3ODk3PC9F
-        QU5MaXN0RWxlbWVudD48L0VBTkxpc3Q+PEVkaXRpb24+I1JFRiE8L0VkaXRp
-        b24+PElTQk4+MTIzNDU2Nzg5WDwvSVNCTj48SXRlbURpbWVuc2lvbnM+PEhl
-        aWdodCBVbml0cz0iaHVuZHJlZHRocy1pbmNoZXMiPjk1NzwvSGVpZ2h0PjxM
-        ZW5ndGggVW5pdHM9Imh1bmRyZWR0aHMtaW5jaGVzIj41OTwvTGVuZ3RoPjxX
-        ZWlnaHQgVW5pdHM9Imh1bmRyZWR0aHMtcG91bmRzIj4xMzg8L1dlaWdodD48
-        V2lkdGggVW5pdHM9Imh1bmRyZWR0aHMtaW5jaGVzIj42MjY8L1dpZHRoPjwv
-        SXRlbURpbWVuc2lvbnM+PExhYmVsPlVuaXZlcnNpZGFkIE5hY2lvbmFsIEF1
-        dMOzbm9tYSBkZSBNw6l4aWNvPC9MYWJlbD48TGFuZ3VhZ2VzPjxMYW5ndWFn
-        ZT48TmFtZT5FbmdsaXNoPC9OYW1lPjxUeXBlPlVua25vd248L1R5cGU+PC9M
-        YW5ndWFnZT48TGFuZ3VhZ2U+PE5hbWU+RW5nbGlzaDwvTmFtZT48VHlwZT5P
-        cmlnaW5hbCBMYW5ndWFnZTwvVHlwZT48L0xhbmd1YWdlPjxMYW5ndWFnZT48
-        TmFtZT5FbmdsaXNoPC9OYW1lPjxUeXBlPlB1Ymxpc2hlZDwvVHlwZT48L0xh
-        bmd1YWdlPjwvTGFuZ3VhZ2VzPjxNYW51ZmFjdHVyZXI+VW5pdmVyc2lkYWQg
-        TmFjaW9uYWwgQXV0w7Nub21hIGRlIE3DqXhpY288L01hbnVmYWN0dXJlcj48
-        TVBOPlNCMjIyNDwvTVBOPjxOdW1iZXJPZkl0ZW1zPjI8L051bWJlck9mSXRl
-        bXM+PE51bWJlck9mUGFnZXM+MTEyPC9OdW1iZXJPZlBhZ2VzPjxQYWNrYWdl
-        RGltZW5zaW9ucz48SGVpZ2h0IFVuaXRzPSJodW5kcmVkdGhzLWluY2hlcyI+
-        MzA8L0hlaWdodD48TGVuZ3RoIFVuaXRzPSJodW5kcmVkdGhzLWluY2hlcyI+
-        NjgwPC9MZW5ndGg+PFdlaWdodCBVbml0cz0iaHVuZHJlZHRocy1wb3VuZHMi
-        PjE1PC9XZWlnaHQ+PFdpZHRoIFVuaXRzPSJodW5kcmVkdGhzLWluY2hlcyI+
-        NDEwPC9XaWR0aD48L1BhY2thZ2VEaW1lbnNpb25zPjxQYXJ0TnVtYmVyPlNC
-        MjIyNDwvUGFydE51bWJlcj48UHJvZHVjdEdyb3VwPkJvb2s8L1Byb2R1Y3RH
-        cm91cD48UHJvZHVjdFR5cGVOYW1lPkFCSVNfQk9PSzwvUHJvZHVjdFR5cGVO
-        YW1lPjxQdWJsaWNhdGlvbkRhdGU+MjAxMDwvUHVibGljYXRpb25EYXRlPjxQ
-        dWJsaXNoZXI+VW5pdmVyc2lkYWQgTmFjaW9uYWwgQXV0w7Nub21hIGRlIE3D
-        qXhpY288L1B1Ymxpc2hlcj48U0tVPjEyMzQ1Njc4OU48L1NLVT48U3R1ZGlv
-        PlVuaXZlcnNpZGFkIE5hY2lvbmFsIEF1dMOzbm9tYSBkZSBNw6l4aWNvPC9T
-        dHVkaW8+PFRpdGxlPkR1ZGUgU2hpcnQ8L1RpdGxlPjwvSXRlbUF0dHJpYnV0
-        ZXM+PE9mZmVyU3VtbWFyeT48TG93ZXN0TmV3UHJpY2U+PEFtb3VudD4yMzY8
-        L0Ftb3VudD48Q3VycmVuY3lDb2RlPlVTRDwvQ3VycmVuY3lDb2RlPjxGb3Jt
-        YXR0ZWRQcmljZT4kMi4zNjwvRm9ybWF0dGVkUHJpY2U+PC9Mb3dlc3ROZXdQ
-        cmljZT48TG93ZXN0VXNlZFByaWNlPjxBbW91bnQ+MTwvQW1vdW50PjxDdXJy
-        ZW5jeUNvZGU+VVNEPC9DdXJyZW5jeUNvZGU+PEZvcm1hdHRlZFByaWNlPiQw
-        LjAxPC9Gb3JtYXR0ZWRQcmljZT48L0xvd2VzdFVzZWRQcmljZT48VG90YWxO
-        ZXc+Mjk8L1RvdGFsTmV3PjxUb3RhbFVzZWQ+Mzg8L1RvdGFsVXNlZD48VG90
-        YWxDb2xsZWN0aWJsZT4wPC9Ub3RhbENvbGxlY3RpYmxlPjxUb3RhbFJlZnVy
-        YmlzaGVkPjA8L1RvdGFsUmVmdXJiaXNoZWQ+PC9PZmZlclN1bW1hcnk+PE9m
-        ZmVycz48VG90YWxPZmZlcnM+MDwvVG90YWxPZmZlcnM+PFRvdGFsT2ZmZXJQ
-        YWdlcz4wPC9Ub3RhbE9mZmVyUGFnZXM+PE1vcmVPZmZlcnNVcmw+MDwvTW9y
-        ZU9mZmVyc1VybD48L09mZmVycz48Q3VzdG9tZXJSZXZpZXdzPjxJRnJhbWVV
-        Ukw+aHR0cDovL3d3dy5hbWF6b24uY29tL3Jldmlld3MvaWZyYW1lP2FraWQ9
-        QU1BWk9OX0FQSV9LRVkmYW1wO2FsaW5rQ29kZT14bTImYW1wO2FzaW49MTIz
-        NDU2Nzg5WCZhbXA7YXRhZz1BTUFaT05fQVNTT0NJQVRFX1RBRyZhbXA7ZXhw
-        PTIwMTQtMDctMDJUMTQlM0EwMSUzQTAwWiZhbXA7dj0yJmFtcDtzaWc9bTBh
-        S1U4NWJSQzFTbHlwWVJLMUJvM1NhR00xNTVNUGIlMkY5VXJVUXJRRmYwJTNE
-        PC9JRnJhbWVVUkw+PEhhc1Jldmlld3M+dHJ1ZTwvSGFzUmV2aWV3cz48L0N1
-        c3RvbWVyUmV2aWV3cz48QnJvd3NlTm9kZXM+PEJyb3dzZU5vZGU+PEJyb3dz
-        ZU5vZGVJZD4yMjc2NzA8L0Jyb3dzZU5vZGVJZD48TmFtZT5SZWZlcmVuY2U8
-        L05hbWU+PENoaWxkcmVuPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MjI3
-        NjcyPC9Ccm93c2VOb2RlSWQ+PE5hbWU+RGljdGlvbmFyaWVzICZhbXA7IFRl
-        cm1pbm9sb2d5PC9OYW1lPjwvQnJvd3NlTm9kZT48QnJvd3NlTm9kZT48QnJv
-        d3NlTm9kZUlkPjIyNzY3MzwvQnJvd3NlTm9kZUlkPjxOYW1lPkRydWcgR3Vp
-        ZGVzPC9OYW1lPjwvQnJvd3NlTm9kZT48QnJvd3NlTm9kZT48QnJvd3NlTm9k
-        ZUlkPjM1NTkyODkwMTE8L0Jyb3dzZU5vZGVJZD48TmFtZT5FZHVjYXRpb24g
-        JmFtcDsgVHJhaW5pbmc8L05hbWU+PC9Ccm93c2VOb2RlPjxCcm93c2VOb2Rl
-        PjxCcm93c2VOb2RlSWQ+MjI3Njc0PC9Ccm93c2VOb2RlSWQ+PE5hbWU+SW5z
-        dHJ1bWVudHMgJmFtcDsgU3VwcGxpZXM8L05hbWU+PC9Ccm93c2VOb2RlPjxC
-        cm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MjI3Njc1PC9Ccm93c2VOb2RlSWQ+
-        PE5hbWU+TWVkaWNhbCBBdGxhc2VzPC9OYW1lPjwvQnJvd3NlTm9kZT48L0No
-        aWxkcmVuPjxBbmNlc3RvcnM+PEJyb3dzZU5vZGU+PEJyb3dzZU5vZGVJZD4y
-        NjU1NDI8L0Jyb3dzZU5vZGVJZD48TmFtZT5NZWRpY2luZTwvTmFtZT48QW5j
-        ZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MTczNTE0PC9Ccm93
-        c2VOb2RlSWQ+PE5hbWU+TWVkaWNhbCBCb29rczwvTmFtZT48QW5jZXN0b3Jz
-        PjxCcm93c2VOb2RlPjxCcm93c2VOb2RlSWQ+MTAwMDwvQnJvd3NlTm9kZUlk
-        PjxOYW1lPlN1YmplY3RzPC9OYW1lPjxJc0NhdGVnb3J5Um9vdD4xPC9Jc0Nh
-        dGVnb3J5Um9vdD48QW5jZXN0b3JzPjxCcm93c2VOb2RlPjxCcm93c2VOb2Rl
-        SWQ+MjgzMTU1PC9Ccm93c2VOb2RlSWQ+PE5hbWU+Qm9va3M8L05hbWU+PC9C
-        cm93c2VOb2RlPjwvQW5jZXN0b3JzPjwvQnJvd3NlTm9kZT48L0FuY2VzdG9y
-        cz48L0Jyb3dzZU5vZGU+PC9BbmNlc3RvcnM+PC9Ccm93c2VOb2RlPjwvQW5j
-        ZXN0b3JzPjwvQnJvd3NlTm9kZT48L0Jyb3dzZU5vZGVzPjwvSXRlbT48L0l0
-        ZW1zPjwvSXRlbUxvb2t1cFJlc3BvbnNlPg==
-    http_version: 
-  recorded_at: Tue, 01 Jul 2014 14:01:00 GMT
-recorded_with: VCR 2.9.2
+  recorded_at: Mon, 27 Oct 2014 14:58:48 GMT
+recorded_with: VCR 2.9.3
