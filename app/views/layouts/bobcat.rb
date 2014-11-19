@@ -14,6 +14,14 @@ module Views
         views["gauges_tracking_code"]
       end
 
+      def google_analytics?
+        gauges?
+      end
+
+      def google_analytics_tracking_code
+        ENV['GOOGLE_ANALYTICS_TRACKING_CODE']
+      end
+
       def breadcrumbs
         breadcrumbs = super
         unless params["controller"] == "export_email"
