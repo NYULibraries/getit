@@ -204,6 +204,8 @@ NYU:
     gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
     resolve_css: resolve
+  controllers:
+    searcher: <%= ENV['DEFAULT_SEARCH_METHOD'] || 'Sfx4Solr::Local' %>
   services:
     NYU_SFX:
       name: SFX @ NYU
@@ -345,8 +347,7 @@ CU:
         umlaut:
           url_suffix: "/cu"
   controllers:
-    searcher: Sfx4Solr::Cu
-    # searcher: Sfx4Cu
+    searcher: <%= ENV['CU_SEARCH_METHOD'] || 'Sfx4Solr::Cu' %>
   services:
     # CU SFX service.
     CU_SFX:
@@ -391,8 +392,7 @@ NS:
         umlaut:
           url_suffix: "/ns"
   controllers:
-    searcher: Sfx4Solr::Ns
-    # searcher: Sfx4Ns
+    searcher: <%= ENV['NS_SEARCH_METHOD'] || 'Sfx4Solr::Ns' %>
   services:
     NS_SFX:
       name: SFX @ New School Libraries
