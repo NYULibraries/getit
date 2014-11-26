@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 42754298c16790402598df9ef59aa38be1a256c1
+  revision: db1b469ab28922b85fd10f75fa181e567cb755c9
   branch: feature/env-based-configs
   specs:
     exlibris-nyu (2.2.0)
@@ -41,6 +41,19 @@ GIT
       bootstrap-sass (~> 3.2.0.2)
       compass (~> 1.0.1)
       institutions (~> 0.1.3)
+
+GIT
+  remote: git://github.com/barnabyalter/exlibris-primo.git
+  revision: cdae7a8e8d2e281b11c503b9451aece70b5f6215
+  tag: v1.1.8
+  specs:
+    exlibris-primo (1.1.8)
+      activesupport (>= 3.2.14)
+      iso-639 (~> 0.2.0)
+      json (~> 1.8.0)
+      nokogiri (~> 1.6.0)
+      require_all (~> 1.3.1)
+      savon (~> 2.5.0)
 
 GIT
   remote: git://github.com/josh/mustache-rails.git
@@ -179,13 +192,6 @@ GEM
       marc (~> 0.8.0)
       multi_xml (~> 0.5.0)
       require_all (~> 1.3.0)
-    exlibris-primo (1.1.7)
-      activesupport (>= 3.2.14)
-      iso-639 (~> 0.2.0)
-      json (~> 1.8.0)
-      nokogiri (~> 1.6.0)
-      require_all (~> 1.3.1)
-      savon (~> 2.5.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -323,7 +329,7 @@ GEM
     rvm-capistrano (1.5.5)
       capistrano (~> 2.15.4)
     safe_yaml (1.0.4)
-    sass (3.4.8)
+    sass (3.4.9)
     sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2)
@@ -358,7 +364,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.2.0)
+    sprockets-rails (2.2.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
@@ -434,6 +440,7 @@ DEPENDENCIES
   cucumber-rails (~> 1.4.0)
   database_cleaner (~> 1.3.0)
   exlibris-nyu!
+  exlibris-primo!
   factory_girl_rails (~> 4.5.0)
   figs (~> 2.0.2)
   formaggio!
