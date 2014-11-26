@@ -76,7 +76,8 @@ end
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
-gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'development'
+gem 'exlibris-primo', github: 'barnabyalter/exlibris-primo', tag: 'v1.1.8'
+gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'feature/env-based-configs'
 gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
 
 # New Relic performance monitoring
