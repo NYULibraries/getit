@@ -19,6 +19,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('PDS_HANDLE') { ENV['PDS_HANDLE'] }
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
   c.default_cassette_options = {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
+  c.allow_http_connections_when_no_cassette = true
 end
 
 VCR.cucumber_tags do |t|
