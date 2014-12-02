@@ -13,7 +13,7 @@ Feature: Holding request options for a Copy in Library
     And I should see an option to recall the holding from a fellow library patron
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @user/offsite @wip
+  @user/offsite
   Scenario: A user with request permissions viewing options for an "offsite" holding
     Given I am logged in
     And I am on the GetIt page for an "offsite" holding
@@ -22,7 +22,7 @@ Feature: Holding request options for a Copy in Library
     And I should see an option to request the holding to be delivered to the pickup location of my choice
     And I should see an option to request a scan of a portion of the holding to be delivered to me electronically
 
-  @user/requested @wip
+  @user/requested
   Scenario: A user with request permissions viewing options for a "requested" holding
     Given I am logged in
     And I am on the GetIt page for a "requested" holding
