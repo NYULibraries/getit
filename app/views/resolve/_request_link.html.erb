@@ -1,13 +1,13 @@
 <% service_response = holding.service_response %>
 <% if current_user %>
   <%- # Link for "Request" action with class "ajax_window" for unobtrusive JS. -%>
-  <%= link_to(t('resolve.holdings.request_text'), new_holding_request_url(service_response), 
+  <%= link_to(t('resolve.holdings.request_text'), new_holding_request_url(service_response),
     target: "_blank", class: "btn btn-primary request-link ajax_window") %>
 <% else %>
   <%- # Link to login screen -%>
-  <strong>
+  <div style="z-index:1000;">
     <%= link_to(t('resolve.holdings.login_text'),
       login_url({return_url: url_for_request(service_response.request)}),
       class: "request-login-link") %>
-  </strong>
+  </div>
 <% end %>
