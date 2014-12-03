@@ -27,7 +27,10 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
+  # Can't click layered links from capybara in poltergeist so let's skip this step for now
   unless poltergeist?
     expect(page).to have_text 'Login with an NYU NetID'
+  else
+    pending
   end
 end
