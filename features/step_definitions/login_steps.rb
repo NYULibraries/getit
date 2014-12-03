@@ -27,5 +27,7 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
-  expect(page).to have_text 'Login with an NYU NetID'
+  unless poltergeist?
+    expect(page).to have_text 'Login with an NYU NetID'
+  end
 end
