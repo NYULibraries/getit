@@ -23,4 +23,8 @@ UserSession.class_eval do
     -> { ENV['PDS_HANDLE'] }
   end
   private :pds_handle_lambda
+
+  def attempt_sso?
+    false
+  end
 end

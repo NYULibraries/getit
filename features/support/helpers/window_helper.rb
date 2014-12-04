@@ -12,8 +12,5 @@ module GetItFeatures
         end
       end
     end
-    def poltergeist?
-      (Capybara.default_driver == :poltergeist)
-    end
   end
 end
