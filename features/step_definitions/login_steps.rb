@@ -27,8 +27,8 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
-  # Poltergiest can't always redirect to external HTTPS page,
-  # so just make sure there is a link to the login page until we can test with Oauth2
-  expect(find('a',text:"Login for Request Options")[:href]).to match /\/login/
+  pending
+  # Poltergiest can't always redirect to external HTTPS page
+  # Will change with OAuth2
   # expect(page).to have_text 'Login with an NYU NetID'
 end
