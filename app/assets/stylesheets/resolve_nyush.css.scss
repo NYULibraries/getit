@@ -31,16 +31,16 @@ header {
 }
 
 .header {
-  background-image: url(/assets/nyulibraries/nyu/header.png);
+  background-image: image-url('nyulibraries/nyu/header.png');
   background-position: 21px 21px;
   background-repeat: no-repeat;
   height: 69px;
   h1 {
-    @extend .invisible
+    @extend .invisible;
   }
 
   .institution {
-    background-image: url(/assets/nyulibraries/nyush/shanghai.png);
+    background-image: image-url('nyulibraries/nyush/shanghai.png');
     background-repeat: no-repeat;
     background-position: 0px 21px;
     width: 182px;
