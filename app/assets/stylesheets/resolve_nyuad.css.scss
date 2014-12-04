@@ -26,13 +26,13 @@
 }
 
 .header {
-  background-image: url(/assets/nyulibraries/nyuad/header.png);
+  background-image: image-url('nyulibraries/nyuad/header.png');
   background-position: 30px;
   background-repeat: no-repeat;
   background-color: $nyu-purple;
   background-attachment: scroll;
   height: 171px;
   h1 {
-    @extend .invisible
+    @extend .invisible;
   }
 }
