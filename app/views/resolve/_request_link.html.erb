@@ -5,9 +5,9 @@
     target: "_blank", class: "btn btn-primary request-link ajax_window") %>
 <% else %>
   <%- # Link to login screen -%>
-  <div style="z-index:1000;">
+  <strong>
     <%= link_to(t('resolve.holdings.login_text'),
       login_url({return_url: url_for_request(service_response.request)}),
       class: "request-login-link") %>
-  </div>
+  </strong>
 <% end %>
