@@ -29,13 +29,11 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'josh/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.1.0'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.1.3'
+# gem 'nyulibraries-assets', path: '/apps/nyulibraries-assets'
 
 # Deploy the application with Formaggio deploy recipes
 gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.0.1'
-
-# Use Figs for setting the configuration in the Environment
-gem 'figs', '~> 2.0.2'
 
 # Umlaut
 gem 'umlaut', '~> 4.0.0'
@@ -79,7 +77,7 @@ end
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
-gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', branch: 'v2.1.2'
+gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.2.0'
 gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
 
 # New Relic performance monitoring
