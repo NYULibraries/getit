@@ -1,5 +1,17 @@
 # Change Log
 
+## 2014-12-09
+- __Configurable Search Methods__
+    Search methods are in configula now so they can change per environment, e.g. reindex :crown:.
+- __Poltergeist Cucumber Tests__
+  After much trickery :wrench:, got the Cucumber tests running on Poltergeist and passing on Travis :tophat:.
+- __Google Analytics__
+  Upgraded nyulibraries-assets :gem: to use Google analytics helpers and added the GetIt tracking code.
+- __Exlibris Environments__
+  The environment-specific Exlibris urls (for either Aleph or Primo) are pulled from env vars now instead of separate gems.
+- __EZBorrow__
+  Options for EZBorrow where user has permissions.
+
 ## 2014-03-20
 - __Exclude Shanghai Web Resources__  
   Don't display Shanghai web resources as "Copies in Library"
@@ -63,7 +75,7 @@
 ### Technical Changes
 - :gem: __Updates__: Most gems are up to date. We're not on Rails 4, so that's the exception.
 
-- __Update authpds-nyu__: Use the Shibboleth version of the 
+- __Update authpds-nyu__: Use the Shibboleth version of the
   [NYU PDS authentication gem](https://github.com/NYULibraries/authpds-nyu/tree/v1.1.2).
   Updated tests to reflect that change.
 
@@ -73,7 +85,7 @@
 - __Enhance the Citation More Often with Primo Metadata__  
   When GetIt resolves a citation using either an ISSN or ISBN, it will enhance the citation
   with metadata from Primo.  Previously, we only enhanced the citation with Primo if we resolved
-  the citation using the Primo record id.  This was begging to be more inclusive, so we made it 
+  the citation using the Primo record id.  This was begging to be more inclusive, so we made it
   more inclusive :open_hands:
 
 ### Technical Change
