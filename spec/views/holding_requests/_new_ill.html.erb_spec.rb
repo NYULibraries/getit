@@ -11,7 +11,7 @@ describe 'holding_requests/_new_ill', vcr: {cassette_name: 'holding requests'} d
   end
   it { should match /\/holding_requests\/#{_service_response.id}\/ill\/#{_holding.sub_library.code}/ }
   it { should match /id="holding-request-option-ill"/ }
-  it { should match /Request this item from another library via Interlibrary Loan \(ILL\)/ }
+  it { should match /Request a loan of this item via ILL./ }
   it { should match /Most requests arrive within two weeks./ }
   it { should match /Due dates and renewals are determined by the lending library./ }
   it { should match /Article\/chapter requests are typically delivered electronically in 3-5 days./ }
