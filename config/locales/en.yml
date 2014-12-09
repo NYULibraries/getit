@@ -60,6 +60,6 @@ en:
       on_order:
         default: Request for this item to be held for you once processed.
       ill:
-        default: Request this item from another library via Interlibrary Loan (ILL)
+        default: Request a loan of this item via ILL.
       ezborrow:
-        default: Request this item from E-ZBorrow (NYU only)
+        default: Search E-ZBorrow for this item.
