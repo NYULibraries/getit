@@ -32,9 +32,10 @@ Then(/^I should see an option to recall the holding from a fellow library patron
 end
 
 Then(/^I should see an option to request the holding from another library via Interlibrary Loan \(ILL\)$/) do
-  expect(page).to have_text 'Request this item from another library via Interlibrary Loan (ILL).'
-  expect(page).to have_text 'Most requests arrive within two weeks. Due dates and renewals are determined by the lending library.'
-  expect(page).to have_text 'Article/chapter requests are typically delivered electronically in 3-5 days.'
+  expect(page).to have_text 'Request a loan of this item via ILL.'
+  expect(page).to have_text 'Most requests arrive within two weeks.'
+  expect(page).to have_text 'Due dates and renewals are determined by the lending library.'
+  expect(page).to have_text 'Article/chapter requests are typically delivered electronically in 3-5 days'
 end
 
 Then(/^I should see an option to request the holding to be delivered to the pickup location of my choice$/) do
@@ -58,5 +59,6 @@ Then(/^I should not see an option for this item to be held for me once processed
 end
 
 Then(/^I should see an option to request the holding from E\-ZBorrow$/) do
-  expect(page).to have_text 'Request this item from E-ZBorrow (NYU only).'
+  expect(page).to have_text 'Search E-ZBorrow for this item.'
+  expect(page).to have_text 'If available to request, the item should arrive in 3-5 days for 12 week loan.'
 end
