@@ -106,9 +106,19 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
         type: type, entire: entire, pickup_location: pickup_location
     end
     subject { response }
-    it { should be_redirect }
-    it("should have a 302 status") { expect(subject.status).to be(302) }
-    it { should redirect_to(holding_request_url(service_response, entire: 'yes', pickup_location: 'BOBST')) }
+    context 'when the request type is recall' do
+      context 'and the user has ill and ezborrow permissions' do
+        it 'should throw an access denied error' do
+          expect(subject.status).to be 401
+        end
+      end
+      context 'and the user does not have ill and ezborrow permissions' do
+        let(:user) { build(:non_ezborrow_user) }
+        it { should be_redirect }
+        it("should have a 302 status") { expect(subject.status).to be(302) }
+        it { should redirect_to(holding_request_url(service_response, entire: 'yes', pickup_location: 'BOBST')) }
+      end
+    end
     context 'when the request type is ILL' do
       let(:type) { 'ill' }
       it { should be_redirect }

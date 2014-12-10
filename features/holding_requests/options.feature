@@ -10,7 +10,7 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is checked out
     And I should see an option to request the holding from E-ZBorrow
-    And I should see an option to recall the holding from a fellow library patron
+    And I should not see an option to recall the holding from a fellow library patron
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @user/offsite
@@ -29,7 +29,7 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is requested
     And I should see an option to request the holding from E-ZBorrow
-    And I should see an option to be added to the request queue
+    And I should not see an option to be added to the request queue
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
   @user/processing

@@ -26,9 +26,10 @@ Then(/^I should see a modal indicating that the holding is on order$/) do
   expect(page).to have_css('#modal .modal-header h4', text: /is on order/)
 end
 
-Then(/^I should see an option to recall the holding from a fellow library patron$/) do
-  expect(page).to have_text 'Recall this item from a fellow library user.'
-  expect(page).to have_text 'The item will be available within 2 weeks.'
+Then(/^I should (not )?see an option to recall the holding from a fellow library patron$/) do |negator|
+  expectation_verb = (negator.present?) ? :to_not : :to
+  expect(page).send(expectation_verb, have_text('Recall this item from a fellow library user.'))
+  expect(page).send(expectation_verb, have_text('The item will be available within 2 weeks.'))
 end
 
 Then(/^I should see an option to request the holding from another library via Interlibrary Loan \(ILL\)$/) do
@@ -46,8 +47,9 @@ Then(/^I should see an option to request a scan of a portion of the holding to b
   expect(page).to have_text 'Request that a portion of the item be scanned and delivered electronically.'
 end
 
-Then(/^I should see an option to be added to the request queue$/) do
-  expect(page).to have_text 'You may also place a request to be added to the queue.'
+Then(/^I should (not )?see an option to be added to the request queue$/) do |negator|
+  expectation_verb = (negator.present?) ? :to_not : :to
+  expect(page).send(expectation_verb, have_text('You may also place a request to be added to the queue.'))
 end
 
 Then(/^I should see an option for this item to be held for me once processed\.$/) do
