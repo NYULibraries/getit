@@ -30,7 +30,7 @@ class HoldingRequest
     end
 
     def recallable?
-      (holding.checked_out? || holding.requested?) && privileges.hold_request?
+      (holding.checked_out? || holding.requested?) && privileges.hold_request? && !ill?
     end
     alias_method :recall?, :recallable?
 
