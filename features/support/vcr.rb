@@ -37,6 +37,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/journal'
   t.tag '@guest/checked_out'
   t.tag '@user/checked_out'
+  t.tag '@consortium_user/checked_out'
   t.tag '@guest/requested'
   t.tag '@user/requested'
   t.tag '@guest/recalled'

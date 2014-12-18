@@ -16,6 +16,7 @@ class HoldingRequest
         size += 1 if authorizer.on_order?
         size += 2 if authorizer.offsite?
         size += 1 if authorizer.ill?
+        size += 1 if authorizer.ezborrow?
         size
       end
     end
