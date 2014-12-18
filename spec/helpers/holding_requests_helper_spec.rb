@@ -226,7 +226,10 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     subject { helper.delivery_help }
     context 'when there is only one option' do
       let(:_service_response) { build(:ill_nyu_aleph_service_response) }
-      it { should be_blank }
+      context 'because user does not have ill or ezborrow privileges' do
+        let(:_user) { build(:non_ezborrow_user) }
+        it { should be_blank }
+      end
     end
     context 'when there are multiple pickup options' do
       let(:_service_response) { build(:checked_out_nyu_aleph_service_response) }

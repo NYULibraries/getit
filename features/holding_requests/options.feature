@@ -10,8 +10,8 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is checked out
     And I should see an option to request the holding from E-ZBorrow
-    And I should not see an option to recall the holding from a fellow library patron
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option to recall the holding from a fellow library patron
 
   @user/offsite
   Scenario: A user with request permissions viewing options for an "offsite" holding
@@ -29,8 +29,8 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is requested
     And I should see an option to request the holding from E-ZBorrow
-    And I should not see an option to be added to the request queue
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option to be added to the request queue
 
   @user/processing
   Scenario: A user without request permissions viewing options for a "processing" holding
@@ -39,8 +39,8 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently being processed by library staff
     And I should see an option to request the holding from E-ZBorrow
-    And I should not see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option for this item to be held for me once processed.
 
   @user/on_order
   Scenario: A user with request permissions viewing options for a "on order" holding
@@ -60,6 +60,7 @@ Feature: Holding request options for a Copy in Library
     Then I should see a modal indicating that the holding is currently out of circulation
     And I should see an option to request the holding from E-ZBorrow
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option to recall the holding from a fellow library patron
 
   @user/available
   Scenario: A user with request permissions viewing options for an "available" holding
@@ -69,3 +70,13 @@ Feature: Holding request options for a Copy in Library
     Then I should see a modal indicating that the holding is available
     And I should see an option to request the holding to be delivered to the pickup location of my choice
     And I should see an option to request a scan of a portion of the holding to be delivered to me electronically
+
+  @consortium_user/checked_out
+  Scenario: A user without ILL and E-ZBorrow permissions viewing options for a "checked out" holding
+    Given I am logged in
+    And I am on the GetIt page for a "checked out" holding
+    And I click the "Request" button
+    Then I should see a modal indicating that the holding is checked out
+    And I should see an option to recall the holding from a fellow library patron
+    But I should not see an option to request the holding from E-ZBorrow
+    And I should not see an option to request the holding from another library via Interlibrary Loan (ILL)

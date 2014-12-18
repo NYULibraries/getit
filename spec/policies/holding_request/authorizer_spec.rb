@@ -50,7 +50,14 @@ class HoldingRequest
           xit { should be false }
         end
         context 'and the user does have rights to request holdings in this sublibrary' do
-          it { should be true }
+          context 'but the user does not have ill or ezborrow rights' do
+            let(:user) { build(:non_ezborrow_user) }
+            it { should be true }
+          end
+          context 'and the user has ill or ezborrow rights' do
+            let(:user) { build(:ezborrow_user) }
+            it { should be false }
+          end
         end
       end
       context 'when the holding is in a non "recallable" state' do

@@ -37,7 +37,7 @@ describe 'holding_requests/new', vcr: {cassette_name: 'holding requests'} do
     it { should match /<h2>&quot;Title&quot; is checked out.<\/h2>/ }
     it { should_not match /id="holding-request-option-available-entire"/ }
     it { should_not match /id="holding-request-option-available-scan"/ }
-    it { should match /id="holding-request-option-recall"/ }
+    it { should_not match /id="holding-request-option-recall"/ }
     it { should_not match /id="holding-request-option-offsite-entire"/ }
     it { should_not match /id="holding-request-option-offsite-scan"/ }
     it { should_not match /id="holding-request-option-processing"/ }
@@ -50,6 +50,7 @@ describe 'holding_requests/new', vcr: {cassette_name: 'holding requests'} do
     context 'and the user does not have permissions to request items from E-ZBorrow' do
       let(:_user) { build(:non_ezborrow_user) }
       it { should_not match /id="holding-request-option-ezborrow"/ }
+      it { should match /id="holding-request-option-recall"/ }
     end
   end
   context 'when the holding is offsite' do
