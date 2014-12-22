@@ -3,8 +3,7 @@ language: ruby
 bundler_args: --without development
 
 env:
-  - ALEPH_BASE_URL=http://aleph.library.edu ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf PRIMO_BASE_URL=http://primo.library.edu
-  - ILL_PATRON_STATUSES="51,37,55"
+  - ILL_PATRON_STATUSES="51,37,55" ALEPH_BASE_URL=http://aleph.library.edu ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf PRIMO_BASE_URL=http://primo.library.edu
 
 services:
   - memcached
