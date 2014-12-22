@@ -28,8 +28,20 @@ FactoryGirl.define do
         }
       end
     end
+    trait :ns_aleph_attributes do
+      user_attributes do
+        {
+          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
+          primary_institution: :NS,
+          institutions: [:NS],
+          bor_status: '37'
+        }
+      end
+    end
     factory :aleph_user, traits: [:nyu_aleph_attributes]
     factory :ezborrow_user, traits: [:nyu_aleph_attributes]
+    factory :ill_user, traits: [:ns_aleph_attributes]
     factory :non_ezborrow_user, traits: [:cooper_union_aleph_attributes]
+    factory :non_ill_user, traits: [:cooper_union_aleph_attributes]
   end
 end

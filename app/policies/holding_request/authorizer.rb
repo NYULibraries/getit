@@ -22,7 +22,7 @@ class HoldingRequest
     end
 
     def ill?
-      holding.ill?
+      holding.ill? && ill_authorizer.authorized?
     end
 
     def available?
@@ -30,7 +30,7 @@ class HoldingRequest
     end
 
     def recallable?
-      (holding.checked_out? || holding.requested?) && privileges.hold_request?
+      (holding.checked_out? || holding.requested?) && privileges.hold_request? && !ill_authorizer.authorized?
     end
     alias_method :recall?, :recallable?
 
@@ -61,6 +61,10 @@ class HoldingRequest
 
     def ezborrow_authorizer
       @ezborrow_authorizer ||= EZBorrowAuthorizer.new(user)
+    end
+
+    def ill_authorizer
+      @ill_authorizer ||= ILLAuthorizer.new(user)
     end
   end
 end

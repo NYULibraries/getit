@@ -1,24 +1,25 @@
 require 'rails_helper'
-describe EZBorrowAuthorizer do
+describe ILLAuthorizer do
   let(:user) { build(:aleph_user) }
-  subject(:authorizer) { EZBorrowAuthorizer.new(user) }
-  it { should be_an EZBorrowAuthorizer }
+  subject(:authorizer) { ILLAuthorizer.new(user) }
+  it { should be_an ILLAuthorizer }
   describe '#user' do
     subject { authorizer.user }
     it { should eq user }
   end
   describe '#authorized_bor_statuses' do
     subject { authorizer.authorized_bor_statuses }
-    it { should eq %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82} }
+    it { should be_instance_of Array }
+    it { should include "51" }
   end
   describe '#authorized?' do
     subject { authorizer.authorized? }
     context 'when the user is authorized' do
-      let(:user) { build(:ezborrow_user) }
+      let(:user) { build(:ill_user) }
       it { should be true }
     end
     context 'when the user is not authorized' do
-      let(:user) { build(:non_ezborrow_user) }
+      let(:user) { build(:non_ill_user) }
       it { should be false }
     end
   end
