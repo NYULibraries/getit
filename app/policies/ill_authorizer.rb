@@ -17,12 +17,10 @@ class ILLAuthorizer < PatronStatusAuthorizer
   # If it's an Array sent in from teh environment, just make sure to map it to string:
   # =>  ILL_PATRON_STATUSES=[01,02,03] => ["01","02","03"]
   def patron_statuses
-    if Figs.env.ill_patron_statuses.is_a? Hash
+    if Figs.env.ill_patron_statuses.try(:first).is_a? Hash
       Figs.env.ill_patron_statuses.map {|status| status["code"]}
-    elsif Figs.env.ill_patron_statuses.is_a? Array
-      Figs.env.ill_patron_statuses.map {|status| status.to_s}
     else
-      []
+      Figs.env.ill_patron_statuses.try(:map) {|status| status.to_s} || []
     end
   end
 end
