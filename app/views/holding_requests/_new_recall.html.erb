@@ -2,11 +2,11 @@
 <%= request_form(:recall) do %>
   <%= request_option(:recall) do %>
     <% if holding.requested? %>
-      This material has been requested by a fellow library user.
       <%= request_link_or_text(t('holding_requests.new.recall.requested'), :recall) %>
+      Please expect a wait of more than <%= holding.recall_period %>.<br />
     <% else %>
       <%= request_link_or_text(t('holding_requests.new.recall.default'), :recall) %>
-      The item will be available within <%= holding.recall_period %>.<br />
+      The item should be available within <%= holding.recall_period %>.<br />
     <% end %>
     <%= pickup_locations_field_set %>
     <%= delivery_times %>

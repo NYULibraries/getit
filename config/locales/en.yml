@@ -53,8 +53,8 @@ en:
         scan:
           default: Request that a portion of the item be scanned and delivered electronically.
       recall:
-        default: Recall this item from a fellow library user.
-        requested: You may also place a request to be added to the queue.
+        default: You may recall this item from a fellow library user.
+        requested: This material is currently checked out and has also been requested by another library user (or users). You may place a request for this item.
       processing:
         default: Request for this item to be held for you once processed.
       on_order:

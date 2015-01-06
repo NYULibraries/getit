@@ -13,7 +13,7 @@ describe 'holding_requests/_new_recall', vcr: {cassette_name: 'holding requests'
   it { should match /name="type"/ }
   it { should match /value="recall"/ }
   it { should match /id="holding-request-option-recall"/ }
-  it { should match /Recall this item from a fellow library user./ }
-  it { should match /The item will be available within 2 weeks./ }
+  it { should match /You may recall this item from a fellow library user./ }
+  it { should match /The item should be available within 2 weeks./ }
   it { should match /name="pickup_location"/ }
 end

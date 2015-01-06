@@ -28,8 +28,8 @@ end
 
 Then(/^I should (not )?see an option to recall the holding from a fellow library patron$/) do |negator|
   expectation_verb = (negator.present?) ? :to_not : :to
-  expect(page).send(expectation_verb, have_text('Recall this item from a fellow library user.'))
-  expect(page).send(expectation_verb, have_text('The item will be available within 2 weeks.'))
+  expect(page).send(expectation_verb, have_text('You may recall this item from a fellow library user.'))
+  expect(page).send(expectation_verb, have_text('The item should be available within 2 weeks.'))
 end
 
 Then(/^I should (not )?see an option to request the holding from another library via Interlibrary Loan \(ILL\)$/) do |negator|
