@@ -6,7 +6,7 @@
   <%- end -%>
   <%- if @holding_request.present? && @authorizer.present? -%>
     <h2><%= title %></h2>
-    <p>Request Options</p>
+    <p>Request Options:</p>
     <ol class="holding-request-options">
       <%= render 'new_available' if @authorizer.available? %>
       <%= render 'new_offsite' if @authorizer.offsite? %>
