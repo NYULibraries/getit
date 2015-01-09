@@ -15,8 +15,6 @@ describe 'holding_requests/new', vcr: {cassette_name: 'holding requests'} do
   it { should match /<h2>&quot;Title&quot; is checked out.<\/h2>/ }
   it { should match /class="holding-request-options"/ }
   it { should match /You will be notified by email when your item is ready or en route./ }
-  it { should match /class="delivery-help"/ }
-  it { should match /Not sure which option to choose?/ }
   context 'when the holding is on the shelf' do
     let(:_service_response) { create(:on_shelf_nyu_aleph_service_response) }
     it { should match /class="holding-request-options"/ }
