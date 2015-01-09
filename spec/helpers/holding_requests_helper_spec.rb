@@ -231,18 +231,6 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         it { should be_blank }
       end
     end
-    context 'when there are multiple pickup options' do
-      let(:_service_response) { build(:checked_out_nyu_aleph_service_response) }
-      it { should_not be_blank }
-      it do
-        should eq '<p class="delivery-help">' +
-          '<a href="http://library.nyu.edu/help/requesthelp.html" target="_blank">' +
-            '<i class="icons-famfamfam-information"></i>' +
-            '<span>Not sure which option to choose?</span>' +
-          '</a>' +
-        '</p>'
-      end
-    end
   end
   describe '#available_request_text' do
     subject { helper.available_request_text }
