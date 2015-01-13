@@ -69,7 +69,7 @@ module HoldingRequestsHelper
         radio_button_tag('entire',  'no') +
         t("holding_requests.new.#{type}.scan.default") +
         fair_use_disclaimer
-      end + scan_field_set(style: 'padding-left: 20px;')
+      end + scan_field_set(style: 'padding-left: 20px;padding-right: 20px;')
     end
   end
 
@@ -104,14 +104,14 @@ module HoldingRequestsHelper
   #   - Notes
   def scan_field_set(field_set_options=nil)
     field_set_tag(nil, field_set_options) do
-      label_tag("sub_author", "Author of part:") +
-        text_field_tag("sub_author") +
-      label_tag("sub_title", "Title of part:") +
-        text_field_tag("sub_title") +
-      label_tag("pages", "Pages (e.g., 7-12; 5, 6-8, 10-15):") +
-        text_field_tag("pages") +
-      label_tag("note_1", "Notes:") +
-        text_field_tag("note_1", nil, maxlength: 50)
+      label_tag("sub_author", "Author of part:", class: "control-label") +
+        text_field_tag("sub_author", nil, class: "form-control") +
+      label_tag("sub_title", "Title of part:", class: "control-label") +
+        text_field_tag("sub_title", nil, class: "form-control") +
+      label_tag("pages", "Pages (e.g., 7-12; 5, 6-8, 10-15):", class: "control-label") +
+        text_field_tag("pages", nil, class: "form-control") +
+      label_tag("note_1", "Notes:", class: "control-label") +
+        text_field_tag("note_1", nil, maxlength: 50, class: "form-control")
     end
   end
 
@@ -192,7 +192,7 @@ module HoldingRequestsHelper
     end
   end
 
-  def service_response 
+  def service_response
     holding.service_response unless holding.nil?
   end
 
