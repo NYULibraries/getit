@@ -127,15 +127,15 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
               '(Requests must be within <a href="http://library.nyu.edu/copyright/#fairuse" target="_blank">fair use guidelines</a>.)' +
             '</p>' +
           '</label>' +
-          '<fieldset style="padding-left: 20px;">' +
-            '<label for="sub_author">Author of part:</label>' +
-            '<input id="sub_author" name="sub_author" type="text" />' +
-            '<label for="sub_title">Title of part:</label>' +
-            '<input id="sub_title" name="sub_title" type="text" />' +
-            '<label for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
-            '<input id="pages" name="pages" type="text" />' +
-            '<label for="note_1">Notes:</label>' +
-            '<input id="note_1" maxlength="50" name="note_1" type="text" />' +
+          '<fieldset style="padding-left: 20px;padding-right: 20px;">' +
+            '<label class="control-label" for="sub_author">Author of part:</label>' +
+            '<input class="form-control" id="sub_author" name="sub_author" type="text" />' +
+            '<label class="control-label" for="sub_title">Title of part:</label>' +
+            '<input class="form-control" id="sub_title" name="sub_title" type="text" />' +
+            '<label class="control-label" for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
+            '<input class="form-control" id="pages" name="pages" type="text" />' +
+            '<label class="control-label" for="note_1">Notes:</label>' +
+            '<input class="form-control" id="note_1" maxlength="50" name="note_1" type="text" />' +
           '</fieldset>' +
         '</div>' +
       '</li>'
@@ -185,14 +185,14 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     subject { helper.scan_field_set }
     it do
       should eq '<fieldset>' +
-        '<label for="sub_author">Author of part:</label>' +
-        '<input id="sub_author" name="sub_author" type="text" />' +
-        '<label for="sub_title">Title of part:</label>' +
-        '<input id="sub_title" name="sub_title" type="text" />' +
-        '<label for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
-        '<input id="pages" name="pages" type="text" />' +
-        '<label for="note_1">Notes:</label>' +
-        '<input id="note_1" maxlength="50" name="note_1" type="text" />' +
+        '<label class="control-label" for="sub_author">Author of part:</label>' +
+        '<input class="form-control" id="sub_author" name="sub_author" type="text" />' +
+        '<label class="control-label" for="sub_title">Title of part:</label>' +
+        '<input class="form-control" id="sub_title" name="sub_title" type="text" />' +
+        '<label class="control-label" for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
+        '<input class="form-control" id="pages" name="pages" type="text" />' +
+        '<label class="control-label" for="note_1">Notes:</label>' +
+        '<input class="form-control" id="note_1" maxlength="50" name="note_1" type="text" />' +
       '</fieldset>'
     end
   end
