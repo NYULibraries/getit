@@ -1,5 +1,5 @@
 require 'rails_helper'
-describe 'resolve/_ezborrow_link' do
+xdescribe 'resolve/_ezborrow_link' do
   let(:holding) { GetIt::HoldingManager.new(service_response).holding }
   subject { rendered }
   before do
