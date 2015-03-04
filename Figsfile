@@ -2,7 +2,7 @@
 repo: git@github.com:NYULibraries/configula.git
 locations:
 - common
-- getit.yml
 - exlibris-nyu.yml
 - illiad.yml
+- getit.yml
 method: git
