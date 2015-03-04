@@ -26,9 +26,17 @@ Feature: Place a hold on a Copy in Library
     And I should see a message that I will be notified when my item is available to pick up at "New School Fogelman Library"
 
   @user/ill
-  Scenario: A user with request permissions places a hold on an "ILL" holding
+  Scenario: A user with request permissions places a request to ILL an "ILL" holding
     Given I am logged in
     And I am on the GetIt page for an "ill" holding
     And I click the "Request" button
     And I click the "Request this item from another library via Interlibrary Loan (ILL)" link
     Then I should see the ILL page prepopulated with information about my holding
+
+  @user/checked_out
+  Scenario: A user with request permissions places a request to E-ZBorrow "checked out" holding
+    Given I am logged in
+    And I am on the GetIt page for an "checked_out" holding
+    And I click the "Request" button
+    And I click the "Request this item from E-ZBorrow (NYU only)" link
+    Then I should see the E-ZBorrow page prepopulated with a search for my title

@@ -3,32 +3,36 @@
 <%- # Only display holdings that aren't expired. -%>
 <% unless holding.expired? %>
   <div class="umlaut-holding">
-    <div class="row-fluid">
-      <div class="span3 location">
+    <div class="row">
+      <div class="col-md-3 location">
         <strong><%= holding.location %></strong>
       </div>
-      <div class="span4 call-number"><%= holding.call_number %></div>
+      <div class="col-md-4 call-number"><%= holding.call_number %></div>
       <%- # Set status class based on configured available statuses -%>
       <% available_statuses = umlaut_config.holdings.available_statuses
         status_class = available_statuses.include?("#{holding.status}") ?
           'text-success' : '' %>
-      <div class="span3 status <%= status_class %>">
+      <div class="col-md-3 status <%= status_class %>">
         <%= holding.status %>
       </div>
-      <div class="span2">
+      <div class="col-md-2">
         <%- # More info link -%>
         <%= link_to("More Info", {controller: "link_router",
           id: service_response.id}, target: "_blank",
           class: "btn btn-success more-info" ) %>
         <%- # Request link -%>
         <%= render("request_link", holding: holding) if requestable?(holding) %>
+        <%- # E-ZBorrow link -%>
+        <%= render("ezborrow_link", holding: holding) %>
+        <%- # StackMap link -%>
+        <%= render("stackmap_link", holding: holding) %>
       </div>
     </div>
     <%- # Display edition info -%>
     <% if holding.reliability.present? &&
         holding.reliability != ServiceResponse::MatchExact %>
-      <div class="row-fluid edition-information">
-        <div class="span11 offset1">
+      <div class="row edition-information">
+        <div class="col-md-11 offset1">
           <div class="umlaut-content-indent">
             <% if holding.edition.present? %>
               <em class="text-info">Edition information</em> <%= holding.edition %>
@@ -41,14 +45,14 @@
     <% end %>
     <%- # Display notes -%>
     <% if holding.notes.present? %>
-      <div class="row-fluid notes">
-        <div class="span11 offset1"><%= holding.notes %></div>
+      <div class="row notes">
+        <div class="col-md-11 offset1"><%= holding.notes %></div>
       </div>
     <% end %>
     <%- # Display coverage -%>
     <% if holding.coverage.present? %>
-      <div class="row-fluid coverage">
-        <div class="span11 offset1">
+      <div class="row coverage">
+        <div class="col-md-11 offset1">
           <%= list_with_limit("copies_#{service_response.id}", holding.coverage) do |item, index| %>
             <li><%= item %></li>
           <% end %>

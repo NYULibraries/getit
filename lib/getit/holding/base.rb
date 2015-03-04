@@ -2,7 +2,7 @@ module GetIt
   module Holding
     class Base
       attr_reader :service_response, :location, :call_number,
-        :status, :reliability, :edition, :notes, :coverage
+        :status, :reliability, :edition, :notes, :coverage, :title
 
       def initialize(service_response)
         unless service_response.is_a?(ServiceResponse)
@@ -19,10 +19,11 @@ module GetIt
         @edition = view_data[:edition_str]
         @notes = view_data[:notes]
         @coverage = view_data[:coverage]
+        @title = citation[:title].to_s
       end
 
       def expired?
-        view_data[:expired] == true
+        service_data[:expired] == true
       end
 
       def expire!
@@ -33,7 +34,19 @@ module GetIt
       protected
       extend Forwardable
       # Delegate view_data and destroy! method to the service_response
-      def_delegators :service_response, :view_data, :destroy!
+      def_delegators :service_response, :view_data, :service_data, :destroy!
+
+      def request
+        @request ||= service_response.request
+      end
+
+      def referent
+        @referent ||= request.referent.reload
+      end
+
+      def citation
+        @citation ||= referent.to_citation
+      end
     end
   end
 end

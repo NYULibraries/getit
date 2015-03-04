@@ -38,6 +38,10 @@ module GetIt
         subject { holding.reliability}
         it { should_not be_nil }
       end
+      describe '#title' do
+        subject { holding.title}
+        it { should_not be_nil }
+      end
       describe '#expired?' do
         subject { holding.expired?}
         it { should be false }
@@ -50,12 +54,12 @@ module GetIt
         end
         it 'should be reflected in the service response' do
           subject
-          expect(service_response.view_data[:expired]).to be true
+          expect(service_response.service_data[:expired]).to be true
         end
         it 'should saved to the database via the service response' do
           subject
           service_response.reload
-          expect(service_response.view_data[:expired]).to be true
+          expect(service_response.service_data[:expired]).to be true
         end
       end
       context 'when initialized without any arguments' do

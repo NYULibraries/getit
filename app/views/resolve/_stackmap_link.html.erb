@@ -1,0 +1,21 @@
+<% if stackmap_policy(holding).mappable? %>
+  <%- # Link for "Map" -%>
+  <% presenter = stackmap_presenter(holding) %>
+  <% link_id = "map#{holding.service_response.id}" %>
+  <%= link_to(
+    t('resolve.holdings.map_text'),
+    '#',
+    'id' => "#{link_id}",
+    'style' => 'display:none;',
+    'class' => "btn btn-primary #{presenter.prefix}-stackmap-link",
+    'data-id' => "#{holding.service_response.id}",
+    'data-prefix' => "#{presenter.prefix}",
+    'data-callno' => "#{presenter.call_number}",
+    'data-location' => "#{presenter.location}",
+    'data-library' => "#{presenter.library}"
+  ) %>
+  <script type="text/javascript">
+    var mapLink = jQuery('#<%= link_id %>');
+    StackMap.addPopup(mapLink);
+  </script>
+<% end %>

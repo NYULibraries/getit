@@ -1,12 +1,38 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   application:
     title_html: BobCat
+  umlaut:
+    display_sections:
+      bib_tool:
+        title: Citation Management Tools
+      holding:
+        title: Copies in Library
   resolve:
     holdings:
       request_text: Request
+      ezborrow_text: E-ZBorrow
+      map_text: Map
       login_text: Login for Request Options
   holding_requests:
     show:
@@ -19,19 +45,21 @@ en:
           nyuny: Request this item to be delivered to an NYU Library of your choice.
           afc: Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE).
           nyuad: Request this item. It will be held for you at the specified pickup location. Items are ready for pickup within 2 business days.
-        scan: 
+        scan:
           default: Request that a portion of the item be scanned and delivered electronically.
       offsite:
         entire:
           default: Request this item to be delivered to the pickup location of your choice.
-        scan: 
+        scan:
           default: Request that a portion of the item be scanned and delivered electronically.
       recall:
-        default: Recall this item from a fellow library user.
-        requested: You may also place a request to be added to the queue.
+        default: You may recall this item from a fellow library user.
+        requested: This material is currently checked out and has also been requested by another library user (or users). You may place a request for this item.
       processing:
         default: Request for this item to be held for you once processed.
       on_order:
         default: Request for this item to be held for you once processed.
       ill:
-        default: Request this item from another library via Interlibrary Loan (ILL)
+        default: Request a loan of this item via ILL.
+      ezborrow:
+        default: Search E-ZBorrow for this item.

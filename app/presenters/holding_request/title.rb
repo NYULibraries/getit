@@ -38,24 +38,8 @@ class HoldingRequest
       @status ||= holding.status
     end
 
-    def service_response
-      @service_response ||= holding.service_response
-    end
-
-    def request
-      @request ||= service_response.request
-    end
-
-    def referent
-      @referent ||= request.referent.reload
-    end
-
-    def citation
-      @citation ||= referent.to_citation
-    end
-
     def title
-      @title ||= citation[:title].to_s
+      @title ||= holding.title
     end
   end
 end

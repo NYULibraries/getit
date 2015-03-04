@@ -13,7 +13,10 @@ class PrimoId
     'available' => 'nyu_aleph001102376',
     'processing' => 'nyu_aleph003933870',
     'on_order' => 'NEEDED',
-    'ill' => 'nyu_aleph000762323'
+    'ill' => 'nyu_aleph000762323',
+    'Overcoming trauma through yoga' => 'dedupmrg200192935',
+    'Gothic architecture' => 'nyu_aleph002517067',
+    'El Croquis' => 'nyu_aleph002106230'
   }
   attr_reader :id, :state
   def initialize(state)

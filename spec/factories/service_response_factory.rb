@@ -4,48 +4,70 @@ def nyu_aleph_status(circulation_status_value)
     Exlibris::Aleph::Item::CirculationStatus.new(circulation_status_value)
   Exlibris::Nyu::Aleph::Status.new(circulation_status)
 end
-admin_library = Exlibris::Aleph::AdminLibrary.new('NYU50')
-sub_library = Exlibris::Aleph::SubLibrary.new('BOBST', 'NYU Bobst', admin_library)
-collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
-call_number = Exlibris::Aleph::Item::CallNumber.new('DS126 .M62 2002', nil)
-nyu_call_number = Exlibris::Nyu::Aleph::CallNumber.new(call_number)
 
-nyu_aleph_service_data = {
-  record_id: 'nyu_aleph000741245',
-  original_id: 'nyu_aleph000741245',
-  title: 'An aesthetic occupation : the immediacy of architecture and the Palestine conflict',
-  author: 'Daniel Bertrand  Monk  1960-',
-  display_type: 'book',
-  source_id: 'nyu_aleph',
-  original_source_id: 'NYU01',
-  source_record_id: '000741245',
-  ils_api_id: 'NYU01000741245',
-  institution_code: 'NYU',
-  institution: 'NYU',
-  library_code: 'BOBST',
-  library: sub_library,
-  collection: collection,
-  call_number: nyu_call_number,
-  coverage: [],
-  status: nyu_aleph_status('05/27/14'),
-  from_aleph: true,
-  requestability: 'deferred',
-  collection_str: 'NYU Bobst Main Collection',
-  coverage_str: '',
-  edition_str: '',
-  coverage_str_array: [],
-  match_reliability: "exact",
-  source_data: {
-    item_id: 'NYU50000741245000010',
-    doc_library: 'NYU01',
-    sub_library_code: 'BOBST',
-    sub_library: sub_library,
+def reserves_status(circulation_status_value, status_code, status_display)
+  item_status = Exlibris::Aleph::Item::Status.new(status_code, status_display)
+  Exlibris::Nyu::Aleph::ReservesStatus.new(nyu_aleph_status('Available'), item_status)
+end
+
+def admin_library
+  Exlibris::Aleph::AdminLibrary.new('NYU50')
+end
+
+def sub_library
+  Exlibris::Aleph::SubLibrary.new('BOBST', 'NYU Bobst', admin_library)
+end
+
+def collection
+  Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+end
+
+def call_number
+  Exlibris::Aleph::Item::CallNumber.new('DS126 .M62 2002', nil)
+end
+
+def nyu_call_number
+  Exlibris::Nyu::Aleph::CallNumber.new(call_number)
+end
+
+def nyu_aleph_service_data
+  {
+    record_id: 'nyu_aleph000741245',
+    original_id: 'nyu_aleph000741245',
+    title: 'An aesthetic occupation : the immediacy of architecture and the Palestine conflict',
+    author: 'Daniel Bertrand  Monk  1960-',
+    display_type: 'book',
+    source_id: 'nyu_aleph',
+    original_source_id: 'NYU01',
+    source_record_id: '000741245',
+    ils_api_id: 'NYU01000741245',
+    institution_code: 'NYU',
+    institution: 'NYU',
+    library_code: 'BOBST',
+    library: sub_library,
     collection: collection,
     call_number: nyu_call_number,
-    doc_number: '000741245',
-    rest_api_id: 'NYU01000741245'
+    coverage: [],
+    status: nyu_aleph_status('05/27/14'),
+    from_aleph: true,
+    requestability: 'deferred',
+    collection_str: 'NYU Bobst Main Collection',
+    coverage_str: '',
+    edition_str: '',
+    coverage_str_array: [],
+    match_reliability: "exact",
+    source_data: {
+      item_id: 'NYU50000741245000010',
+      doc_library: 'NYU01',
+      sub_library_code: 'BOBST',
+      sub_library: sub_library,
+      collection: collection,
+      call_number: nyu_call_number,
+      doc_number: '000741245',
+      rest_api_id: 'NYU01000741245'
+    }
   }
-}
+end
 
 FactoryGirl.define do
   factory :service_response do
@@ -66,10 +88,10 @@ FactoryGirl.define do
       service_type_value_name 'holding'
       service_data do
         {
-          collection_str: "NYU Bobst Main Collection", 
-          call_number: "(DS126 .M62 2002 )", 
-          coverage: [], 
-          status: "Check Availability", 
+          collection_str: "NYU Bobst Main Collection",
+          call_number: "(DS126 .M62 2002 )",
+          coverage: [],
+          status: "Check Availability",
           edition_str: '',
           match_reliability: "exact"
         }
@@ -89,6 +111,38 @@ FactoryGirl.define do
         nyu_aleph_service_data.reject do |key, value|
           key == :source_data
         end
+      end
+    end
+
+    trait :new_school_main_collection_journal do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = "(TS171.A1 R48 )"
+      status = "Check Availability"
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          call_number: call_number,
+          status: status,
+          from_aleph: false
+        })
+      end
+    end
+
+    trait :new_school_oversize_collection_journal do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = "(TS171.A1 R48 )"
+      status = "Check Availability"
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          call_number: call_number,
+          status: status,
+          from_aleph: false
+        })
       end
     end
 
@@ -124,6 +178,111 @@ FactoryGirl.define do
       abu_dhabi_sub_library = Exlibris::Aleph::SubLibrary.new('NABUD', 'NYU Abu Dhabi Library (UAE)', abu_dhabi_admin_library)
       service_data do
         nyu_aleph_service_data.merge({library: abu_dhabi_sub_library})
+      end
+    end
+
+    trait :bobst_reserve_nyu_aleph do
+      bobst_reserve_sub_library = Exlibris::Aleph::SubLibrary.new('BRES', 'NYU Bobst Reserve Collection', admin_library)
+      status = reserves_status('On Shelf', '20', 'Reserve 2 hour loan')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({library: bobst_reserve_sub_library, status: status, requestability: requestability})
+      end
+    end
+
+    trait :available_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('On Shelf')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :checked_out_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('05/27/14')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :offsite_new_school_main_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('Offsite Available')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :available_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('On Shelf')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :checked_out_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('05/27/14')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
+      end
+    end
+
+    trait :offsite_new_school_oversize_collection do
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
+      collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
+      call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
+      status = nyu_aleph_status('Offsite Available')
+      requestability = 'deferred'
+      service_data do
+        nyu_aleph_service_data.merge({
+          library: sub_library,
+          collection: collection,
+          status: status,
+          requestability: requestability
+        })
       end
     end
 
@@ -244,6 +403,8 @@ FactoryGirl.define do
 
     factory :holding_service_response, traits: [:holding]
     factory :primo_service_response, traits: [:holding, :primo]
+    factory :new_school_main_collection_journal_service_response, traits: [:holding, :primo_source, :new_school_main_collection_journal]
+    factory :new_school_oversize_collection_journal_service_response, traits: [:holding, :primo_source, :new_school_oversize_collection_journal]
     factory :primo_source_service_response, traits: [:holding, :primo_source]
     factory :nyu_aleph_service_response_without_source_data, traits: [:holding, :primo_source, :nyu_aleph_without_source_data]
     factory :nyu_aleph_not_from_aleph_service_response, traits: [:holding, :primo_source, :nyu_aleph_not_from_aleph]
@@ -251,6 +412,13 @@ FactoryGirl.define do
     factory :expired_nyu_aleph_service_response, traits: [:holding, :primo_source, :expired_nyu_aleph]
     factory :single_pickup_location_nyu_aleph_service_response, traits: [:holding, :primo_source, :single_pickup_location_nyu_aleph]
     factory :abu_dhabi_nyu_aleph_service_response, traits: [:holding, :primo_source, :abu_dhabi_nyu_aleph]
+    factory :bobst_reserve_nyu_aleph_service_response, traits: [:holding, :primo_source, :bobst_reserve_nyu_aleph]
+    factory :available_new_school_main_collection_service_response, traits: [:holding, :primo_source, :available_new_school_main_collection]
+    factory :checked_out_new_school_main_collection_service_response, traits: [:holding, :primo_source, :checked_out_new_school_main_collection]
+    factory :offsite_new_school_main_collection_service_response, traits: [:holding, :primo_source, :offsite_new_school_main_collection]
+    factory :available_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :available_new_school_oversize_collection]
+    factory :checked_out_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :checked_out_new_school_oversize_collection]
+    factory :offsite_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :offsite_new_school_oversize_collection]
     factory :avery_fisher_nyu_aleph_service_response, traits: [:holding, :primo_source, :avery_fisher_nyu_aleph]
     factory :on_shelf_nyu_aleph_service_response, traits: [:holding, :primo_source, :on_shelf_nyu_aleph]
     factory :available_nyu_aleph_service_response, traits: [:holding, :primo_source, :available_nyu_aleph]

@@ -1,94 +1,130 @@
-<%= form_tag(@submit_hash, method: :get, class: "form-horizontal", name: "OpenURL", id: "OpenURL") do %>
-  <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.code}" %> 
-  <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %> 
-  <%= hidden_field_tag "rft.date", "" %> 
-  <%= hidden_field_tag "rft.title", "", {class: "rft_title"} %> 
-  <%= hidden_field_tag "rft.object_id", "", {class: "rft_object_id"} %> 
+<%= form_tag(@submit_hash, method: :get, class: 'form-horizontal', name: 'OpenURL', id: 'OpenURL', role: 'form') do %>
+  <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.code}" %>
+  <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %>
+  <%= hidden_field_tag "rft.date", "" %>
+  <%= hidden_field_tag "rft.title", "", {class: "rft_title"} %>
+  <%= hidden_field_tag "rft.object_id", "", {class: "rft_object_id"} %>
+  <%= institutional_partial("tip1") %>
   <div id="primary-search" class="search-section">
-    <h2>Search for a Specific E-Journal or Article</h2>
-    <%= institutional_partial("tip1") %>
+    <h2>Search for a Specific E-Journal or a Known Article</h2>
     <fieldset>
-      <div class="control-group">
-        <%= label :journal, :title, "Journal Title:", class: "control-label" %>
-        <div class="controls">
-          <select name="umlaut.title_search_type" class="title_search_type input-medium">
-            <%= options_for_select({"contains" => "contains", "begins with" => "begins", "exact match" => "exact"}, params["umlaut.title_search_type"])  %>
+      <div class="form-group">
+        <%= label :journal, :title, "Journal Title:", class: "journal_title control-label col-md-3" %>
+        <div class="col-md-3">
+          <select name="umlaut.title_search_type" class="title_search_type form-control">
+            <%= options_for_select(
+              {
+                "contains" => "contains",
+                "begins with" => "begins",
+                "exact match" => "exact"
+              },
+              params["umlaut.title_search_type"]) %>
           </select>
-          <%= text_field :journal, :title, {name: 'rft.jtitle', class: "title_search input-xlarge"} %>
+        </div>
+        <div class="col-md-5">
+          <%= text_field :journal, :title,
+            name: 'rft.jtitle',
+            class: "title_search form-control",
+            placeholder: 'Enter the Journal Title' %>
         </div>
       </div>
-      <div class="control-group">
-        <%= label :journal, :issn, content_tag(:strong, "OR").concat(" ISSN:"), class: "control-label" %>
-        <div class="controls">
-          <%= text_field :journal, :issn, {name: 'rft.issn', max_length: "9", class: "issn input-xlarge"} %>
-          <%= link_to(content_tag(:i, "", class: "icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/journal.html", 
-            class: ["issn-popover", "help-inline"], rel: "popover", title: "What is an ISSN?", "data-placement" => "bottom", "data-class" => "issn", target: "_blank")%>
+      <div class="form-group">
+        <%= label :journal, :issn, content_tag(:strong, "OR").concat(" ISSN:"), class: "control-label col-md-3" %>
+        <div class="col-md-6">
+          <div class="input-group">
+            <%= text_field :journal, :issn,
+              name: 'rft.issn',
+              max_length: "9",
+              class: "issn form-control",
+              placeholder: 'Or enter the ISSN of the Journal' %>
+            <span class="input-group-addon">
+              <%= link_to(content_tag(:i, "", class: "glyphicon glyphicon-info-sign"), "http://library.nyu.edu/info/umlaut/journal.html",
+                class: ["issn-popover", "help-inline"], rel: "popover", title: "What is an ISSN?", "data-placement" => "bottom", "data-class" => "issn", target: "_blank")%>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="submit-group">
-        <%= submit_tag "Search", {name: "Generate_OpenURL2"} %>
+      <div class="form-group">
+        <div class="col-md-offset-1 col-md-2">
+          <%= submit_tag "Search", {name: "Generate_OpenURL2", class: "btn btn-primary"} %>
+        </div>
       </div>
     </fieldset>
   </div>
   <div id="optional-search" class="search-section">
-    <h2>Optional Information: Enter as much as you know of the following:</h2>
+    <%= institutional_partial("tip2") %>
+    <h2>Optional Article Information<br/ ><small>Enter as much as you know of the following</small></h2>
     <fieldset>
-      <%= institutional_partial("tip2") %>
-      <div class="control-group">
-        <%= label :article, :title, "Article Title:", class: "control-label" %>
-        <div class="controls">
-          <%= text_field :article, :title, {name: 'rft.atitle', class: "article_title input-xlarge"} %>
+      <div class="form-group">
+        <%= label :article, :title, "Article Title:", class: "control-label col-md-3" %>
+        <div class="col-md-6">
+          <%= text_field :article, :title, {name: 'rft.atitle', class: "article_title form-control"} %>
         </div>
       </div>
-      <div class="control-group">
-        <%= label :article, :aulast, "Author Last Name:", class: "control-label" %>
-        <div class="controls">
-          <%= text_field :article, :aulast, {name: 'rft.aulast', class: "article_aulast input-xlarge"} %>
+      <div class="form-group">
+        <%= label :article, :aulast, "Author Last Name:", class: "control-label col-md-3" %>
+        <div class="col-md-6">
+          <%= text_field :article, :aulast, {name: 'rft.aulast', class: "article_aulast form-control"} %>
         </div>
       </div>
-      <div class="control-group">
-        <%= label :article, :aufirst, "Author First Name:", class: "control-label" %>
-        <div class="controls">
-          <%= text_field :article, :aufirst, {name: 'rft.aufirst', class: "article_aufirst input-xlarge"} %>
+      <div class="form-group">
+        <%= label :article, :aufirst, "Author First Name:", class: "control-label col-md-3" %>
+        <div class="col-md-6">
+          <%= text_field :article, :aufirst, {name: 'rft.aufirst', class: "article_aufirst form-control"} %>
         </div>
       </div>
-      <div class="control-group">
-        <label for="year" class="control-label">Date:</label>
-        <div class="controls">
-          <%= date %>
+      <div class="form-group">
+        <label for="year" class="control-label col-md-3">Date:</label>
+        <div class="col-md-6">
+          <%= search_date_select %>
         </div>
       </div>
-      <div class="control-group">
-        <%= label :article, :volume, "Volume:", class: "control-label" %>
-        <div class="controls">
-          <%= text_field :article, :volume, {name: 'rft.volume', max_length: "5", class: "volume input-small"} %>
-          <%= label :article, :issue, "Issue:" %>
-          <%= text_field :article, :issue, {name: 'rft.issue', class: "issue input-small"} %>
+      <div class="form-group">
+        <%= label :article, :volume, "Volume:", class: "control-label col-md-3" %>
+        <div class="col-md-2">
+          <%= text_field :article, :volume, {name: 'rft.volume', max_length: "5", class: "volume form-control"} %>
+        </div>
+        <%= label :article, :issue, "Issue:", class: "control-label col-md-2" %>
+        <div class="col-md-2">
+          <%= text_field :article, :issue, {name: 'rft.issue', class: "issue form-control"} %>
         </div>
       </div>
-      <div class="control-group">
-        <%= label :article, :spage, "Start page:", class: "control-label" %>
-        <div class="controls">
-          <%= text_field :article, :spage, {name: 'rft.spage', class: "spage input-small"} %>
-          <%= label :article, :epage, "End page:" %>
-          <%= text_field :article, :epage, {name: 'rft.epage', class: "epage input-small"} %>
+      <div class="form-group">
+        <%= label :article, :spage, "Start page:", class: "control-label col-md-3" %>
+        <div class="col-md-2">
+          <%= text_field :article, :spage, {name: 'rft.spage', class: "spage form-control"} %>
+        </div>
+        <%= label :article, :epage, "End page:", class: "control-label col-md-2" %>
+        <div class="col-md-2">
+          <%= text_field :article, :epage, {name: 'rft.epage', class: "epage form-control"} %>
         </div>
       </div>
-      <div class="control-group">
-        <div class="control-label rfr_id">
-          <select name="rft_id_type" class="input-small">
+      <div class="form-group">
+        <label class="control-label col-md-3 doi" style="margin-top: 0;">
+          <select name="rft_id_type" class="form-control rfr_id">
             <option value='doi'>DOI:</option>
             <option value='pmid'>PMID:</option>
           </select>
-        </div>
-        <div class="controls">
-          <input id="rft_id_value" name="rft_id_value" type="text" />
-          <%= link_to(content_tag(:i, "", class: "icons-famfamfam-information"), "http://library.nyu.edu/info/umlaut/article_identifiers.html", 
-            class: ["doi-popover", "help-inline"], rel: "popover", title: "What is a DOI or PMID ?", "data-class" => "doi", target: "_blank")%>
+        </label>
+        <div class="col-md-6">
+          <div class="input-group">
+            <input id="rft_id_value" name="rft_id_value" type="text" class="form-control" />
+            <span class="input-group-addon">
+              <%= link_to(content_tag(:span, "", class: "glyphicon glyphicon-info-sign"),
+                "http://library.nyu.edu/info/umlaut/article_identifiers.html",
+                class: ["doi-popover", "help-inline"],
+                rel: "popover",
+                title: "What is a DOI or PMID ?",
+                "data-class" => "doi",
+                target: "_blank") %>
+            </span>
+          </div>
         </div>
       </div>
-      <div class="submit-group">
-        <%= submit_tag "Search", name: "Generate_OpenURL2", class: "btn" %>
+      <div class="form-group">
+        <div class="col-md-offset-1 col-md-2">
+          <%= submit_tag "Search", {name: "Generate_OpenURL2", class: "btn btn-primary"} %>
+        </div>
       </div>
     </fieldset>
   </div>

@@ -1,9 +1,12 @@
 class HoldingRequestsController < UmlautController
-  # For now, a constanst for the ILLiad URL
+  # For now, a constant for the ILLiad URL
   ILLIAD_BASE_URL = (ENV['ILLIAD_BASE_URL'] || 'http://ill.library.nyu.edu')
 
+  # E-ZBorrow URL
+  EZBORROW_BASE_URL = (ENV['EZBORROW_BASE_URL'] || 'https://login.library.nyu.edu')
+
   # Valid holding request types
-  WHITELISTED_TYPES = %w[available ill processing offsite on_order recall]
+  WHITELISTED_TYPES = %w[available ill processing offsite on_order recall ezborrow]
 
   before_filter :restrict_access
   layout :search_layout_except_xhr
@@ -24,6 +27,9 @@ class HoldingRequestsController < UmlautController
           if valid_type == 'ill'
             # If we're ILLing, send them to ILLiad
             redirect_to "#{ILLIAD_BASE_URL}/illiad/illiad.dll/OpenURL?#{service_response.request.to_context_object.kev}"
+          elsif valid_type == 'ezborrow'
+            # If we're E-ZBorrowing, send them to E-ZBorrow (via PDS)
+            redirect_to "#{EZBORROW_BASE_URL}/ezborrow?query=#{escaped_holding_title}"
           else
             # Otherwise, create the hold
             create_hold = holding_request.create_hold(creation_parameters)
@@ -153,5 +159,9 @@ class HoldingRequestsController < UmlautController
   # Whitelist the holding request type
   def whitelist_type(candidate)
     WHITELISTED_TYPES.find{ |type| type == candidate }
+  end
+
+  def escaped_holding_title
+    CGI::escape(holding.title)
   end
 end

@@ -60,12 +60,14 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
         request.service_responses.where(service_id: 'NYU_Primo_Source')
       nyu_primo_source_service_responses.each do |service_response|
         service_response.reload
-        expect(service_response.view_data[:expired]).to be false
+        holding = GetIt::HoldingManager.new(service_response).holding
+        expect(holding.expired?).to be false
       end
       helper.expire_or_destroy_nyu_primo_source_service_responses(request)
       nyu_primo_source_service_responses.each do |service_response|
         service_response.reload
-        expect(service_response.view_data[:expired]).to be true
+        holding = GetIt::HoldingManager.new(service_response).holding
+        expect(holding.expired?).to be true
       end
     end
     it 'should destroy NYU Primo Sources when run twice' do
@@ -73,7 +75,8 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
         request.service_responses.where(service_id: 'NYU_Primo_Source')
       nyu_primo_source_service_responses.each do |service_response|
         service_response.reload
-        expect(service_response.view_data[:expired]).to be false
+        holding = GetIt::HoldingManager.new(service_response).holding
+        expect(holding.expired?).to be false
       end
       helper.expire_or_destroy_nyu_primo_source_service_responses(request)
       helper.expire_or_destroy_nyu_primo_source_service_responses(request)

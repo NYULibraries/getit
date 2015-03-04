@@ -4,7 +4,7 @@ module GetIt
     describe NyuAleph do
       describe NyuAleph::VALID_SOURCES do
         subject { NyuAleph::VALID_SOURCES }
-        it { should eq ['nyu_aleph'] }
+        it { should eq ['nyu_aleph', 'COURSES'] }
       end
       let(:service_response) { build(:nyu_aleph_service_response) }
       subject(:holding) { NyuAleph.new(service_response) }
@@ -32,6 +32,11 @@ module GetIt
         subject { holding.sub_library}
         it { should_not be_nil }
         it { should be_an Exlibris::Aleph::SubLibrary }
+      end
+      describe '#collection' do
+        subject { holding.collection}
+        it { should_not be_nil }
+        it { should be_an Exlibris::Aleph::Collection }
       end
       describe '#call_number' do
         subject { holding.call_number}
@@ -227,6 +232,22 @@ module GetIt
         context 'when the holding is on order' do
           let(:service_response) { build(:on_order_nyu_aleph_service_response) }
           it { should be true }
+        end
+        context 'when the holding is not from Aleph' do
+          let(:service_response) { build(:nyu_aleph_not_from_aleph_service_response) }
+          it { should be false }
+        end
+      end
+      describe '#bobst_reserve?' do
+        subject { holding.bobst_reserve? }
+        it { should_not be_nil }
+        context 'when the holding is from the NYU Bobst Reserve Collection' do
+          let(:service_response) { build(:bobst_reserve_nyu_aleph_service_response) }
+          it { should be true }
+        end
+        context 'when the holding is not from the NYU Bobst Reserve Collection' do
+          let(:service_response) { build(:avery_fisher_nyu_aleph_service_response) }
+          it { should be false }
         end
         context 'when the holding is not from Aleph' do
           let(:service_response) { build(:nyu_aleph_not_from_aleph_service_response) }

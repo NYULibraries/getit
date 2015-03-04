@@ -50,7 +50,14 @@ class HoldingRequest
           xit { should be false }
         end
         context 'and the user does have rights to request holdings in this sublibrary' do
-          it { should be true }
+          context 'but the user does not have ill or ezborrow rights' do
+            let(:user) { build(:non_ezborrow_user) }
+            it { should be true }
+          end
+          context 'and the user has ill or ezborrow rights' do
+            let(:user) { build(:ezborrow_user) }
+            it { should be false }
+          end
         end
       end
       context 'when the holding is in a non "recallable" state' do
@@ -113,6 +120,24 @@ class HoldingRequest
         it { should be true }
       end
       context 'when the holding is in an available state' do
+        let(:service_response) { build(:available_nyu_aleph_service_response) }
+        it { should be false }
+      end
+    end
+    describe '#ezborrow?' do
+      subject { authorizer.ezborrow? }
+      context 'when the holding is in a "ezborrow" state' do
+        let(:service_response) { build(:checked_out_nyu_aleph_service_response) }
+        context 'but the user does not have rights to request items from ezborrow' do
+          let(:user) { build(:non_ezborrow_user) }
+          it { should be false }
+        end
+        context 'and the user does have rights to request items for ezborrow' do
+          let(:user) { build(:ezborrow_user) }
+          it { should be true }
+        end
+      end
+      context 'when the holding is in a non "ezborrow" state' do
         let(:service_response) { build(:available_nyu_aleph_service_response) }
         it { should be false }
       end

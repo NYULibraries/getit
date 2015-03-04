@@ -2,6 +2,8 @@
 @import "icons/*.png";
 @include all-icons-sprites;
 @import "nyulibraries/variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "resolve/variables";
 @import "nyulibraries/nyuad/variables";
 @import "nyulibraries/header";
@@ -15,9 +17,22 @@
 @import "resolve/common";
 @import "resolve/permalink";
 
-header {
-  margin-top: 0 !important;
+.header, nav {
+  background-color: $nyu-purple;
+  // background-color: #a4121f;
+  h1, .login, .logout {
+    color: white;
+  }
+}
+
+.header {
+  background-image: image-url('nyulibraries/nyuad/header.png');
+  background-position: 30px;
+  background-repeat: no-repeat;
+  background-color: $nyu-purple;
+  background-attachment: scroll;
+  height: 171px;
   h1 {
-    color: #57068c;
+    @extend .invisible;
   }
 }

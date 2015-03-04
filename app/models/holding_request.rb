@@ -11,6 +11,10 @@ class HoldingRequest
     @user = user
   end
 
+  def aleph_patron
+    @aleph_patron ||= GetIt::AlephPatron.new(user)
+  end
+
   def circulation_policy
     @circulation_policy ||= item.circulation_policy
   end
@@ -34,9 +38,5 @@ class HoldingRequest
 
   def item_id
     @item_id ||= holding.item_id
-  end
-
-  def aleph_patron
-    @aleph_patron ||= GetIt::AlephPatron.new(user)
   end
 end

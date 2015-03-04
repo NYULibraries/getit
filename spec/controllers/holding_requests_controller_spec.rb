@@ -5,7 +5,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
   describe 'WHITELISTED_TYPES' do
     subject { HoldingRequestsController::WHITELISTED_TYPES }
     it { should be_an Array }
-    it { should eq %w[available ill processing offsite on_order recall] }
+    it { should eq %w[available ill processing offsite on_order recall ezborrow] }
   end
   describe '#scan?' do
     before { allow(controller).to receive(:entire).and_return(entire) }
@@ -82,7 +82,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it { should_not render_template('new') }
     end
     context 'when the service response is missing' do
-      let(:service_response) { nil }
+      let(:service_response) { -1 }
       it { should_not be_success }
       it { should be_bad_request }
       it 'should not assign @holding_request' do
@@ -106,15 +106,33 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
         type: type, entire: entire, pickup_location: pickup_location
     end
     subject { response }
-    it { should be_redirect }
-    it("should have a 302 status") { expect(subject.status).to be(302) }
-    it { should redirect_to(holding_request_url(service_response, entire: 'yes', pickup_location: 'BOBST')) }
+    context 'when the request type is recall' do
+      context 'and the user has ill and ezborrow permissions' do
+        it 'should throw an access denied error' do
+          expect(subject.status).to be 401
+        end
+      end
+      context 'and the user does not have ill and ezborrow permissions' do
+        let(:user) { build(:non_ezborrow_user) }
+        it { should be_redirect }
+        it("should have a 302 status") { expect(subject.status).to be(302) }
+        it { should redirect_to(holding_request_url(service_response, entire: 'yes', pickup_location: 'BOBST')) }
+      end
+    end
     context 'when the request type is ILL' do
       let(:type) { 'ill' }
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
       it 'should redirect to ILL' do
         expect(subject.location).to match /^http:\/\/ill(dev)?\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
+      end
+    end
+    context 'when the request type is E-ZBorrow' do
+      let(:type) { 'ezborrow' }
+      it { should be_redirect }
+      it("should have a 302 status") { expect(subject.status).to be(302) }
+      it 'should redirect to ILL' do
+        expect(subject.location).to match /^https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/
       end
     end
   end

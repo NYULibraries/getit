@@ -12,17 +12,39 @@ default:
     resolve_css: resolve
     sfx_base_url: http://sfx.library.nyu.edu/sfxlcl41?
   services:
+    # Priority 1
+    # We have GoogleBookSearch running early because it can take a bare ISBN
+    # and look up bibliographic metadata, which is useful to happen early.
+    # By running at the same priority as SFX, it will run concurrently
+    # and maximize fast response time. You could also have it run before SFX,
+    # if you needed SFX to have the enhanced metadata from GoogleBookSearch.
+    #
+    # It can also find cover images, abstracts, and links to
+    # previews and search-inside-the-book. You can turn
+    # each of those off if you want.
+    GoogleBookSearch:
+      type: GoogleBookSearch
+      priority: 1
+      api_key: <%= (ENV['GOOGLE_BOOK_SEARCH_API_KEY'] || 'GOOGLE_BOOK_SEARCH_API_KEY') %>
+      referent_enhance: true
+      fulltext: true
+      cover_image: true
+      abstract: true
+      web_links: true
+
     # Priority 2
+    # Run the Primo service After SFX, to get SFX referent enhancements
     NYU_Primo:
       service_id: NYU_Primo
       type: PrimoService
-      priority: 2 # After SFX, to get SFX metadata enhancement
+      priority: 2
       base_url: "<%= Exlibris::Primo.config.base_url %>"
       vid: NYU
       institution: NYU
       holding_search_institution: NYU
       holding_search_text: Search for this title in BobCat.
       suppress_holdings: [ !ruby/regexp '/\$\$LBWEB/', !ruby/regexp '/\$\$LNWEB/', !ruby/regexp '/\$\$LTWEB/', !ruby/regexp '/\$\$LSWEB/', !ruby/regexp '/\$\$LWEB/', !ruby/regexp '/\$\$ONSMARCIT/', !ruby/regexp '/\$\$Onyumarcit/', !ruby/regexp '/\$\$1Restricted Internet Resources/' ]
+      suppress_urls: [ !ruby/regexp '/getit\.library\.nyu\.edu/', !ruby/regexp '/www\.loc\.gov\/catdir\/toc/']
       ez_proxy: !ruby/regexp '/https\:\/\/ezproxy\.library\.nyu\.edu\/login\?url=/'
       service_types:
         - primo_source
@@ -32,18 +54,12 @@ default:
         - referent_enhance
 
     # Priority 3
-    # First half of Amazon, run in foreground, get metadata and cover images.
-    Amazon:
-      display_name: Amazon.com
-      type: Amazon
-      url: http://webservices.amazon.com/onca/xml
-      api_key: <%= (ENV['AMAZON_API_KEY'] || 'AMAZON_API_KEY') %>
-      secret_key: <%= (ENV['AMAZON_SECRET_KEY'] || 'AMAZON_SECRET_KEY') %>
-      associate_tag: <%= (ENV['AMAZON_ASSOCIATE_TAG'] || 'AMAZON_ASSOCIATE_TAG') %>
+    # Blind link to price comparison site AllBooks.com.
+    # just a blind link with no API pre-check, will be near
+    # instantaneous to calculate.
+    AllBooksDotCom:
+      type: AllBooksDotCom
       priority: 3
-      service_types:
-        - referent_enhance
-        - cover_image
 
     # Priority 5
     # Wayfinder to return whence you came
@@ -91,21 +107,6 @@ default:
         - from_aleph
         - requestability
 
-    # Priority b: Background
-    # Second half of Amazon. It's Slow to lookup highlighted_link and search_inside
-    # availability, so we do it in a bg wave.
-    Amazon_bg:
-      type: Amazon
-      api_key: <%= (ENV['AMAZON_API_KEY'] || 'AMAZON_API_KEY') %>
-      secret_key: <%= (ENV['AMAZON_SECRET_KEY'] || 'AMAZON_SECRET_KEY') %>
-      associate_tag: <%= (ENV['AMAZON_ASSOCIATE_TAG'] || 'AMAZON_ASSOCIATE_TAG') %>
-      priority: b
-      service_types:
-        - abstract
-        - highlighted_link
-        - search_inside
-        - excerpts
-
     CoverThing:
       type: CoverThing
       developer_key: <%= (ENV['COVER_THING_DEVELOPER_KEY'] || 'COVER_THING_DEVELOPER_KEY') %>
@@ -122,11 +123,6 @@ default:
     UlrichsCover:
       type: UlrichsCover
       priority: b
-
-    GoogleBookSearch:
-      type: GoogleBookSearch
-      priority: b
-      api_key: <%= (ENV['GOOGLE_BOOK_SEARCH_API_KEY'] || 'GOOGLE_BOOK_SEARCH_API_KEY') %>
 
     # Priority c: Background
     # Web of Knowledge API has no api key, but your
@@ -165,12 +161,6 @@ default:
       #   self_type: fulltext
       #   existing_service: GoogleBookSearch
       #   existing_type: fulltext
-
-    IsbnDb:
-      display_name: isbndb.com
-      type: IsbnDb
-      priority: d
-      access_key: <%= (ENV['ISBN_DB_ACCESS_KEY'] || 'ISBN_DB_ACCESS_KEY') %>
 
     InternetArchive:
       display_name: the Internet Archive
@@ -214,6 +204,8 @@ NYU:
     gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
     resolve_css: resolve
+  controllers:
+    searcher: <%= ENV['DEFAULT_SEARCH_METHOD'] || 'Sfx4Solr::Local' %>
   services:
     NYU_SFX:
       name: SFX @ NYU
@@ -355,8 +347,7 @@ CU:
         umlaut:
           url_suffix: "/cu"
   controllers:
-    searcher: Sfx4Solr::Cu
-    # searcher: Sfx4Cu
+    searcher: <%= ENV['CU_SEARCH_METHOD'] || 'Sfx4Solr::Cu' %>
   services:
     # CU SFX service.
     CU_SFX:
@@ -401,8 +392,7 @@ NS:
         umlaut:
           url_suffix: "/ns"
   controllers:
-    searcher: Sfx4Solr::Ns
-    # searcher: Sfx4Ns
+    searcher: <%= ENV['NS_SEARCH_METHOD'] || 'Sfx4Solr::Ns' %>
   services:
     NS_SFX:
       name: SFX @ New School Libraries
@@ -442,7 +432,7 @@ NS:
       display_name: Recommender Services
       priority: c
       token: <%= ENV['NS_BX_TOKEN'] %>
-      openurl_base: "/getit/resolve?umlaut.institution=NS&"
+      openurl_base: "/ns/resolve?"
       max_records: 2
     NSUlrichsLink:
       type: UlrichsLink

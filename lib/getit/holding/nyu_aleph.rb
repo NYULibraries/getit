@@ -1,7 +1,7 @@
 module GetIt
   module Holding
     class NyuAleph < GetIt::Holding::PrimoSource
-      VALID_SOURCES = ['nyu_aleph']
+      VALID_SOURCES = ['nyu_aleph', 'COURSES']
       ILL_STATUSES = ['Request ILL', 'On Order']
 
       attr_reader :record_id, :item_id, :institution
@@ -58,12 +58,20 @@ module GetIt
         from_aleph? && status.reshelving?
       end
 
+      def bobst_reserve?
+        from_aleph? && sub_library.code == 'BRES'
+      end
+
       def recall_period
         @recall_period ||= (sub_library.code == 'BAFC') ? "1 week" : "2 weeks"
       end
 
       def sub_library
         @sub_library ||= view_data[:library]
+      end
+
+      def collection
+        @collection ||= view_data[:collection]
       end
 
       def from_aleph?
@@ -73,10 +81,6 @@ module GetIt
       private
       def requestability
         @requestability ||= view_data[:requestability]
-      end
-
-      def collection
-        @collection ||= view_data[:collection]
       end
     end
   end

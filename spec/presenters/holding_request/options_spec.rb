@@ -17,7 +17,7 @@ class HoldingRequest
       it { should be_an Integer }
       context 'when the holding is in an "ILL" state' do
         let(:service_response) { build(:ill_nyu_aleph_service_response) }
-        it { should be 1 }
+        it { should be 2 }
       end
       context 'when the holding is in an "available" state' do
         let(:service_response) { build(:available_nyu_aleph_service_response) }
@@ -35,13 +35,13 @@ class HoldingRequest
         let(:service_response) { build(:requested_nyu_aleph_service_response) }
         it { should be 2 }
       end
-      context 'when the holding is "requested"' do
+      context 'when the holding is "on order"' do
         let(:service_response) { build(:on_order_nyu_aleph_service_response) }
-        it { should be 2 }
+        it { should be 3 }
       end
       context 'when the holding is "billed as lost"' do
         let(:service_response) { build(:billed_as_lost_nyu_aleph_service_response) }
-        it { should be 1 }
+        it { should be 2 }
       end
     end
   end

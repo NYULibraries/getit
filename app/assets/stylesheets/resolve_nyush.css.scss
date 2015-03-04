@@ -2,6 +2,8 @@
 @import "icons/*.png";
 @include all-icons-sprites;
 @import "nyulibraries/variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "resolve/variables";
 @import "nyulibraries/nyush/variables";
 @import "nyulibraries/header";
@@ -17,5 +19,32 @@
 header {
   h1 {
     color: #57068c;
+  }
+}
+
+.header, nav {
+  background-color: $nyu-purple;
+  // background-color: #a4121f;
+  h1, .login, .logout {
+    color: white;
+  }
+}
+
+.header {
+  background-image: image-url('nyulibraries/nyu/header.png');
+  background-position: 21px 21px;
+  background-repeat: no-repeat;
+  height: 69px;
+  h1 {
+    @extend .invisible;
+  }
+
+  .institution {
+    background-image: image-url('nyulibraries/nyush/shanghai.png');
+    background-repeat: no-repeat;
+    background-position: 0px 21px;
+    width: 182px;
+    height: 69px;
+    @extend .text-hide
   }
 }
