@@ -1,2 +1,2 @@
-set :rails_env, 'staging'
-set :branch, 'development'
+set :rails_env, 'production'
+set :branch, 'master'
