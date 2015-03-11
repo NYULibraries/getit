@@ -7,7 +7,7 @@ module Views
       end
 
       def gauges?
-        Rails.env.production? || Rails.env.reindex?
+        Rails.env.production?
       end
 
       def gauges_tracking_code

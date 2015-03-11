@@ -56,6 +56,9 @@ cucumber:
 staging:
   <<: *getit
 
+reindex:
+  <<: *getit
+
 qa:
   <<: *getit
 
