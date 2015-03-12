@@ -1,7 +1,7 @@
 <%
 # Destroy Expired "NYU_Primo_Source" ServiceResponses
 expire_or_destroy_nyu_primo_source_service_responses(@user_request)
-holdings = holding.find_all do |service_response| 
+holdings = holding.find_all do |service_response|
   service_response.service_type_value_name == 'holding'
 end
 # Put current institution's holdings first.
@@ -19,7 +19,7 @@ holdings = institutional_holding + other_holding
         <%= link_to('View Maps and Call Number Locations',
           'http://library.nyu.edu/bobcat/callno/', target: '_blank') %>
       </strong>
-    </p>  
+    </p>
     <% holdings.each do |service_response| %>
       <%= render('holding_response_item', service_response: service_response) %>
     <% end %>
@@ -37,7 +37,7 @@ holdings = institutional_holding + other_holding
     <% else %>
       <% if !service_types_in_progress?(['holding', 'holding_search']) %>
         <%-
-        # Display "Not Available" if we've completed our service run and 
+        # Display "Not Available" if we've completed our service run and
         # both holdings and holding searches are empty
         -%>
         <p class="umlaut-unavailable">Not Available</p>

@@ -64,5 +64,5 @@ end
 Then(/^I should (not )?see an option to request the holding from E\-ZBorrow$/) do |negator|
   expectation_verb = (negator.present?) ? :to_not : :to
   expect(page).send(expectation_verb, have_text('Search E-ZBorrow for this item.'))
-  expect(page).send(expectation_verb, have_text('If available to request, the item should arrive in 3-5 days for 12 week loan.'))
+  expect(page).send(expectation_verb, have_text('If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location.'))
 end
