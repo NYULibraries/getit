@@ -12,5 +12,5 @@ describe 'holding_requests/_new_ezborrow', vcr: {cassette_name: 'holding request
   it { should match /\/holding_requests\/#{_service_response.id}\/ezborrow\/#{_holding.sub_library.code}/ }
   it { should match /id="holding-request-option-ezborrow"/ }
   it { should match /Search E-ZBorrow for this item./ }
-  it { should match /If available to request, the item should arrive in 3-5 days for 12 week loan./ }
+  it { should match /If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location./ }
 end
