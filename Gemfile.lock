@@ -262,7 +262,7 @@ GEM
       scrub_rb (~> 1.0)
     options (2.3.2)
     phantomjs (1.9.7.1)
-    poltergeist (1.6.0)
+    poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
@@ -448,7 +448,7 @@ DEPENDENCIES
   newrelic_rpm (~> 3.9.0)
   nyulibraries-assets!
   phantomjs (>= 1.9.0)
-  poltergeist (~> 1.6.0)
+  poltergeist (~> 1.5.0)
   progress_bar (~> 1.0.0)
   pry (~> 0.10.1)
   rails (~> 4.1.0)
