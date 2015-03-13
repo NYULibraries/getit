@@ -11,7 +11,7 @@ if ENV['IN_BROWSER']
   # IN_BROWSER=true PAUSE=1 bundle exec cucumber
   Capybara.register_driver :selenium do |app|
     http_client = Selenium::WebDriver::Remote::Http::Default.new
-    http_client.timeout = 300
+    http_client.timeout = 500
     Capybara::Selenium::Driver.new(app, :browser => :firefox, :http_client => http_client)
   end
   Capybara.default_driver = :selenium
@@ -27,7 +27,7 @@ else
     # https://github.com/teampoltergeist/poltergeist/issues/121#issuecomment-49891097
     phantomjs_options: ['--debug=no', '--load-images=no', '--ignore-ssl-errors=yes'],#, '--ssl-protocol=any'],
     window_size: [1280, 1024],
-    timeout: 300,
+    timeout: 500,
     debug: false
     )
   end
