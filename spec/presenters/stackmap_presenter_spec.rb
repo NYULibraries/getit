@@ -14,13 +14,13 @@ describe StackMapPresenter do
       let(:service_response) do
         build(:available_new_school_main_collection_service_response)
       end
-      it { should eq 'New School University Center' }
+      it { should eq 'TNS University Center Library' }
     end
     context 'when the holding is a journal in the "New School Main Collection"' do
       let(:service_response) do
         build(:new_school_main_collection_journal_service_response)
       end
-      it { should eq 'New School University Center'}
+      it { should eq 'TNS University Center Library'}
     end
   end
   describe '#location' do
