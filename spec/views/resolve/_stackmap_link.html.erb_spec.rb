@@ -12,7 +12,7 @@ describe 'resolve/_stackmap_link' do
     end
     it { should match /newschool-stackmap-link/ }
     it { should match /Map/ }
-    it { should match /data-library="TNS University Center Library"/ }
+    it { should match /data-library="New School University Center"/ }
     it { should match /data-location="Main Collection"/ }
     it { should match /data-callno="DS126 .M62 2002"/ }
   end

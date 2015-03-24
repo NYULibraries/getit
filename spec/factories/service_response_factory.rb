@@ -115,7 +115,7 @@ FactoryGirl.define do
     end
 
     trait :new_school_main_collection_journal do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
       call_number = "(TS171.A1 R48 )"
       status = "Check Availability"
@@ -131,7 +131,7 @@ FactoryGirl.define do
     end
 
     trait :new_school_oversize_collection_journal do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
       call_number = "(TS171.A1 R48 )"
       status = "Check Availability"
@@ -191,7 +191,7 @@ FactoryGirl.define do
     end
 
     trait :available_new_school_main_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('On Shelf')
@@ -207,7 +207,7 @@ FactoryGirl.define do
     end
 
     trait :checked_out_new_school_main_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('05/27/14')
@@ -223,7 +223,7 @@ FactoryGirl.define do
     end
 
     trait :offsite_new_school_main_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('MAIN', 'Main Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('Offsite Available')
@@ -239,7 +239,7 @@ FactoryGirl.define do
     end
 
     trait :available_new_school_oversize_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('On Shelf')
@@ -255,7 +255,7 @@ FactoryGirl.define do
     end
 
     trait :checked_out_new_school_oversize_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('05/27/14')
@@ -271,7 +271,7 @@ FactoryGirl.define do
     end
 
     trait :offsite_new_school_oversize_collection do
-      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'TNS University Center Library', admin_library)
+      sub_library = Exlibris::Aleph::SubLibrary.new('TNSGI', 'New School University Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
       call_number = Exlibris::Aleph::Item::CallNumber.new('NA480 .G7613 1977', nil)
       status = nyu_aleph_status('Offsite Available')

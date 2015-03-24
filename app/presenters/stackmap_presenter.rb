@@ -1,5 +1,5 @@
 class StackMapPresenter
-  MAPPABLE_LIBRARIES = ["TNS University Center Library"]
+  MAPPABLE_LIBRARIES = ["New School University Center"]
 
   attr_reader :holding
 
