@@ -20,12 +20,12 @@
         <%= link_to("More Info", {controller: "link_router",
           id: service_response.id}, target: "_blank",
           class: "btn btn-success more-info" ) %>
+        <%- # StackMap link -%>
+        <%= render("stackmap_link", holding: holding) %>
         <%- # Request link -%>
         <%= render("request_link", holding: holding) if requestable?(holding) %>
         <%- # E-ZBorrow link -%>
         <%= render("ezborrow_link", holding: holding) %>
-        <%- # StackMap link -%>
-        <%= render("stackmap_link", holding: holding) %>
       </div>
     </div>
     <%- # Display edition info -%>

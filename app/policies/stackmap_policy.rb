@@ -1,5 +1,5 @@
 class StackMapPolicy
-  MAPPABLE_SUB_LIBRARY_CODES = %w[TNSGI]
+  MAPPABLE_SUB_LIBRARY_CODES = %w[TNSGI TNSFO]
   MAPPABLE_COLLECTION_CODES = %w[MAIN OVERZ]
 
   attr_reader :holding
