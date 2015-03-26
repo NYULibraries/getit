@@ -29,7 +29,7 @@ class HoldingRequestsController < UmlautController
             redirect_to "#{ILLIAD_BASE_URL}/illiad/illiad.dll/OpenURL?#{service_response.request.to_context_object.kev}"
           elsif valid_type == 'ezborrow'
             # If we're E-ZBorrowing, send them to E-ZBorrow (via PDS)
-            redirect_to "#{EZBORROW_BASE_URL}/ezborrow?query=ti:#{escaped_holding_title}"
+            redirect_to "#{EZBORROW_BASE_URL}/ezborrow?query=ti=#{escaped_holding_title}"
           else
             # Otherwise, create the hold
             create_hold = holding_request.create_hold(creation_parameters)
