@@ -62,7 +62,7 @@ group :test, :cucumber do
   gem 'phantomjs', '>= 1.9.0'
   gem 'poltergeist', '~> 1.5.0'
   # Use Coveralls.io to track testing coverage
-  gem 'coveralls', '~> 0.7.0', require: false
+  gem 'coveralls', '~> 0.7.11', require: false
   # Use VCR for testing with deterministic HTTP interactions
   gem 'vcr', '~> 2.9.0'
   gem 'webmock', '~> 1.19.0'
