@@ -142,7 +142,7 @@ function trimHTML(text){
 var StackMap = StackMap || {
     domain: window.location.protocol + '//newschool.stackmap.com',  // TODO
     delayImgLoad: true,  // TODO
-    libraries: ['New School University Center'],  // TODO
+    libraries: ['TNS University Center Library','New School Fogelman Library'],  // TODO
     setup: function() {
       jQuery("body").append('<div id="SMblock-screen"></div>');
       jQuery('#SMblock-screen').click(StackMap.hideAllPopups);
