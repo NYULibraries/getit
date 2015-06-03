@@ -1,7 +1,7 @@
 namespace :nyu do
   namespace :umlaut do
     desc "Perform nightly maintenance. Set up in cron."
-    task :nightly_maintenance => [:load_sfx_urls, :expire_old_data]
+    task :nightly_maintenance => [:load_sfx_urls, :expire_old_data, :fix_permalinks]
 
     # desc "NYU: Loads sfx_urls from SFX installation. SFX mysql login needs to be set in config."
     # task :load_sfx_urls => :environment do
@@ -166,6 +166,19 @@ namespace :nyu do
       # reason, let's just delete any older than 3 months ago.
       Clickthrough.delete_all(['created_at < ?', 3.months.ago])
       puts "Deleted Clickthroughs older than 3 months"
+    end
+
+    desc "Cleanup of faulty XML for creating permalinks"
+    task :fix_permalinks => :environment do
+      # This is a known problem, that creating the permalink context object
+      # will sometimes have <rft:?sid> tag which is not valid XML and hence cause the URL for break
+      # So for now I will clean these all up by stripping that out, but ultimately
+      # this is coming from certain sources and we need to identify that
+      tainted_permalinks = Permalink.where("context_obj_serialized LIKE '%rft:?sid%'")
+      tainted_permalinks.each do |permalink|
+        permalink.context_obj_serialized = permalink.context_obj_serialized.gsub(/rft:\?sid/,"rft:sid")
+        permalink.save!
+      end
     end
 
   end
