@@ -11,9 +11,9 @@ username = 'dev123'
 if Rails.env.development? and User.find_by_username(username).nil?
   salt = Authlogic::Random.hex_token
   user = User.create!({
-    username: username, 
-    firstname: 'Dev', 
-    lastname: 'Eloper', 
+    username: username,
+    firstname: 'Dev',
+    lastname: 'Eloper',
     email: 'dev.eloper@library.edu',
     password_salt: salt,
     crypted_password: Authlogic::CryptoProviders::Sha512.encrypt(username + salt),
