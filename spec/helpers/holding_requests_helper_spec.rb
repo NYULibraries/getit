@@ -231,6 +231,17 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         it { should be_blank }
       end
     end
+    context 'when there is more than one option' do
+      let(:_service_response) { build(:ill_nyu_aleph_service_response) }
+      context 'because user does not have ill or ezborrow privileges' do
+        let(:_user) { build(:ezborrow_user) }
+        it do
+          should eq '<p class="delivery-help">' +
+            '<a href="http://library.nyu.edu/help/requesthelp.html" target="_blank"><i class="icons-famfamfam-information"></i><span>Not sure which option to choose?</span></a>' +
+          '</p>'
+        end
+      end
+    end
   end
   describe '#available_request_text' do
     subject { helper.available_request_text }

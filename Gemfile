@@ -37,7 +37,7 @@ gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.
 gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.4.0'
 
 # Umlaut
-gem 'umlaut', '~> 4.0.0'
+gem 'umlaut', '~> 4.1.0'
 gem 'umlaut-primo', '~> 1.0.0'
 
 # Development gems

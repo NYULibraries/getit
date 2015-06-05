@@ -1,0 +1,10 @@
+<header id="header" class="header">
+  <div class="parent"><a href="http://library.nyu.edu/"><span>NYU Libraries</span></a></div>
+  <div class="institution"></div>
+</header>
+<nav id="nav1">
+  <%= render_umlaut_permalink %>
+  <ul>
+    <li class="nyu-login"><%= login(:return_url => url_for_request(@user_request), "umlaut.institution" => institution.code ) %></li>
+  </ul>
+</nav>

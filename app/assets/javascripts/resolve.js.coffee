@@ -1,6 +1,6 @@
 #  Umlaut javascript required for proper functionality. The 'umlaut' file
-#  also forces require of jquery and jquery-ui, dependencies. 
-# = require 'umlaut'          
+#  also forces require of jquery and jquery-ui, dependencies.
+# = require 'umlaut'
 # = require "nyulibraries"
 # = require_tree ./resolve
 
@@ -18,7 +18,7 @@ window.fit_modal_body = (modal) ->
 
 $ ->
   # Bind resize event with the modal resize
-  $(window).resize -> 
+  $(window).resize ->
     fit_modal_body($("#modal"))
 
   # Bind show event with the modal resize
