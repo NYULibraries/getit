@@ -2,6 +2,7 @@ require 'rails_helper'
 describe ILLAuthorizer do
   let(:user) { build(:aleph_user) }
   subject(:authorizer) { ILLAuthorizer.new(user) }
+  it { should be_an PatronStatusAuthorizer }
   it { should be_an ILLAuthorizer }
   describe '#user' do
     subject { authorizer.user }
