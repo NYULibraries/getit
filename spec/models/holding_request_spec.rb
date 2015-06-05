@@ -44,9 +44,9 @@ describe HoldingRequest, vcr: {cassette_name: 'holding requests'} do
       end
     end
     context 'but the holding argument is not a Holding::NyuAleph' do
-      subject(:holding) { GetIt::Holding::PrimoSource.new(service_response) }
+      let(:holding) { GetIt::Holding::PrimoSource.new(service_response) }
       it 'should raise an ArgumentError' do
-        expect { HoldingRequest.new("invalid") }.to raise_error ArgumentError
+        expect { HoldingRequest.new(holding, user) }.to raise_error ArgumentError
       end
     end
     context 'and the holding argument is a Holding' do

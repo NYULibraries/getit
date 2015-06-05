@@ -266,6 +266,12 @@ module GetIt
               expect { subject }.to raise_error ArgumentError
             end
           end
+          context 'but the service response argument does not have source data' do
+            let(:service_response) { build(:nyu_aleph_service_response_without_source_data) }
+            it 'should raise an ArgumentError' do
+              expect { subject }.to raise_error ArgumentError
+            end
+          end
         end
       end
     end
