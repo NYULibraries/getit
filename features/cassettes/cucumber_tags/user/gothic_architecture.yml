@@ -1111,4 +1111,44 @@ http_interactions:
         exist</error></pds>
     http_version: 
   recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki,%20louis,%201910%201982)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 05 Jun 2015 18:31:00 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22gothic+architecture%22+AND+creator:%28grodecki%2C+louis%2C+1910+1982%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Sat, 06 Jun 2015 00:31:00 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Fri, 05 Jun 2015 18:31:00 GMT
 recorded_with: VCR 2.9.3
