@@ -6,14 +6,18 @@
 
 .umlaut-permalink-container {
   line-height: 30px;
-  background-color: #efefef;
+  background-color: white;
   padding: .5em;
   position: absolute;
   z-index: 100;
-  width: 201px;
+  width: 300px;
   border-bottom: 2px solid #ccc;
   border-right: 1px solid #ccc;
   font-size: 12px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.umlaut-permalink-close {
+  line-height: 10px;
 }
