@@ -6,7 +6,6 @@ VCR.configure do |c|
   c.cassette_library_dir = 'features/cassettes'
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
-  c.filter_sensitive_data('https://login.library.edu') { UserSession.pds_url }
   c.filter_sensitive_data('http://solr.library.edu') { Sunspot.config.solr.url }
   c.filter_sensitive_data('AMAZON_API_KEY') { ENV['AMAZON_API_KEY'] }
   c.filter_sensitive_data('AMAZON_SECRET_KEY') { ENV['AMAZON_SECRET_KEY'] }
@@ -16,7 +15,6 @@ VCR.configure do |c|
   c.filter_sensitive_data('ISBN_DB_ACCESS_KEY') { ENV['ISBN_DB_ACCESS_KEY'] }
   c.filter_sensitive_data('NYU_SCOPUS_CITATIONS_JSON_API_KEY') { ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] }
   c.filter_sensitive_data('NS_BX_TOKEN') { ENV['NS_BX_TOKEN'] }
-  c.filter_sensitive_data('PDS_HANDLE') { ENV['PDS_HANDLE'] }
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
   c.default_cassette_options = {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
 end
@@ -37,7 +35,6 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/journal'
   t.tag '@guest/checked_out'
   t.tag '@user/checked_out'
-  t.tag '@consortium_user/checked_out'
   t.tag '@guest/requested'
   t.tag '@user/requested'
   t.tag '@guest/recalled'
@@ -52,7 +49,6 @@ VCR.cucumber_tags do |t|
   t.tag '@user/available'
   t.tag '@guest/ill'
   t.tag '@user/ill'
-  t.tag '@logout'
   # Disallowed not in use
   t.tags '@disallowed', record: :none
 end
