@@ -9,7 +9,7 @@ Feature: "Map" button for a Copy in Library
     And I am on the GetIt page for the title "Gothic architecture"
     Then I should see a blue "Map" button
 
-  @user/gothic_architecture
+  @wip @user/gothic_architecture
   Scenario: A user viewing an "available" TNS University Center Library Main Collection holding
     Given I am logged in
     And I am on the GetIt page for the title "Gothic architecture"
