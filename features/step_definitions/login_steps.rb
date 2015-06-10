@@ -1,9 +1,10 @@
 Given(/^I am logged in$/) do
-  ENV['PDS_HANDLE'] = 'PDS_HANDLE'
+  OmniAuth.config.mock_auth[:nyulibraries] = omniauth_hash
+  visit '/users/auth/nyulibraries'
 end
 
 Given(/^I am not logged in$/) do
-  ENV['PDS_HANDLE'] = nil
+  OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
 
 Then(/^I should see a login link$/) do
@@ -27,8 +28,5 @@ Then(/^I should see "(.*?)" as the text of the logout link$/) do |text|
 end
 
 Then(/^I should see the login page in the current window$/) do
-  pending
-  # Poltergiest can't always redirect to external HTTPS page
-  # Will change with OAuth2
-  # expect(page).to have_text 'Login with an NYU NetID'
+  expect(page).to have_text 'Select your affiliation'
 end
