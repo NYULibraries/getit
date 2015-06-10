@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610191144) do
+ActiveRecord::Schema.define(version: 20150610195404) do
 
   create_table "clickthroughs", force: true do |t|
     t.integer  "request_id",          default: 0, null: false
@@ -135,6 +135,5 @@ ActiveRecord::Schema.define(version: 20150610191144) do
   end
 
   add_index "users", ["username", "provider"], name: "index_users_on_username_and_provider", unique: true, using: :btree
-  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
