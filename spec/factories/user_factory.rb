@@ -5,6 +5,9 @@ FactoryGirl.define do
     email { "#{username}@example.com" }
     firstname 'Dev'
     lastname 'Eloper'
+    institution_code 'NYU'
+    aleph_id { (ENV['BOR_ID'] || 'BOR_ID') }
+    provider 'nyu_shibboleth'
     trait :nyu_aleph_attributes do
       patron_status '51'
     end
