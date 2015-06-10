@@ -6,7 +6,7 @@ module GetIt
       unless user.is_a?(User)
         raise ArgumentError.new("Expecting #{user} to be a User")
       end
-      unless user.aleph_id.blank?
+      unless user.aleph_id.present?
         raise ArgumentError.new("Expecting #{user} to have an Aleph ID")
       end
       @user = user
