@@ -6,34 +6,13 @@ FactoryGirl.define do
     firstname 'Dev'
     lastname 'Eloper'
     trait :nyu_aleph_attributes do
-      user_attributes do
-        {
-          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
-          primary_institution: :NYU,
-          institutions: [:NYU],
-          bor_status: '51'
-        }
-      end
+      patron_status '51'
     end
     trait :cooper_union_aleph_attributes do
-      user_attributes do
-        {
-          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
-          primary_institution: :CU,
-          institutions: [:CU],
-          bor_status: '10'
-        }
-      end
+      patron_status '10'
     end
     trait :ns_aleph_attributes do
-      user_attributes do
-        {
-          nyuidn: (ENV['BOR_ID'] || 'BOR_ID'),
-          primary_institution: :NS,
-          institutions: [:NS],
-          bor_status: '37'
-        }
-      end
+      patron_status '37'
     end
     factory :aleph_user, traits: [:nyu_aleph_attributes]
     factory :ezborrow_user, traits: [:nyu_aleph_attributes]
