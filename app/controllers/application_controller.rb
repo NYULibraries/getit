@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  # helper :institutions
-  include Nyulibraries::Assets::InstitutionsHelper
+  helper :institutions
+  include InstitutionsHelper
 
   def url_for_request(request)
     url_for(controller: :resolve, action: :index, only_path: false,
