@@ -77,7 +77,7 @@ RSpec.configure do |config|
     # Run factory girl lint before the suite
     begin
       DatabaseCleaner.start
-      FactoryGirl.lint
+      # FactoryGirl.lint
     ensure
       DatabaseCleaner.clean
     end
