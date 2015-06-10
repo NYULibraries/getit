@@ -1,38 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 23 Jun 2014 16:04:36 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
-        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
-        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
-        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
-    http_version: 
-  recorded_at: Mon, 23 Jun 2014 16:04:37 GMT
-- request:
     method: get
     uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-10-30T13:03:53-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001102376&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
@@ -91,7 +59,7 @@ http_interactions:
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:53 GMT
 - request:
     method: post
@@ -321,7 +289,7 @@ http_interactions:
             &lt;/RESULT&gt;
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:56 GMT
 - request:
     method: get
@@ -355,7 +323,7 @@ http_interactions:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items/NYU50001102376000010"></item></items></get-item-list> '
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
 - request:
     method: get
@@ -397,7 +365,7 @@ http_interactions:
         Delhi ; Thousand Oaks, Calif. : SAGE Publications, 2004.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0761998306
         (Cloth)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
 - request:
     method: get
@@ -449,7 +417,7 @@ http_interactions:
         xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
         xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
         Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
 - request:
     method: get
@@ -510,7 +478,7 @@ http_interactions:
         allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
 - request:
     method: get
@@ -549,7 +517,7 @@ http_interactions:
 
 
         {"lccn:2003026836":{"records":[],"items":[]}}
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
 - request:
     method: get
@@ -589,7 +557,7 @@ http_interactions:
       encoding: UTF-8
       string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
         Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:04:20 GMT
 - request:
     method: get
@@ -650,7 +618,7 @@ http_interactions:
         allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:04:21 GMT
 - request:
     method: get
@@ -688,6 +656,6 @@ http_interactions:
         experience in india\" AND creator:(keniston) AND (mediatype:texts OR mediatype:audio)","fl":"*","start":"0","q":"title:\"it
         experience in india\" AND creator:(keniston ) AND ( mediatype:texts OR mediatype:audio
         )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 30 Oct 2014 17:04:21 GMT
 recorded_with: VCR 2.9.3
