@@ -79,7 +79,10 @@ gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
 gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.2.0'
-gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
+
+# Use omniauth strategy for login with devise
+gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag: 'v1.1.2'
+gem 'devise', '~> 3.4.1'
 
 # New Relic performance monitoring
 gem 'newrelic_rpm', '~> 3.9.0'
