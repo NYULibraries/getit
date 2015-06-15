@@ -1,27 +1,27 @@
 require 'rails_helper'
-describe EZBorrowAuthorizer do
+describe PatronStatusAuthorizer do
   let(:user) { build(:aleph_user) }
-  subject(:authorizer) { EZBorrowAuthorizer.new(user) }
+  subject(:authorizer) { PatronStatusAuthorizer.new(user) }
   it { should be_an PatronStatusAuthorizer }
-  it { should be_an EZBorrowAuthorizer }
   describe '#user' do
     subject { authorizer.user }
     it { should eq user }
   end
   describe '#authorized_bor_statuses' do
     subject { authorizer.authorized_bor_statuses }
-    it { should eq %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82} }
+    it { should be_nil }
   end
   describe '#authorized?' do
     subject { authorizer.authorized? }
-    context 'when the user is authorized' do
-      let(:user) { build(:ezborrow_user) }
-      it { should be true }
+    context "when implementing in the abstract class" do
+      it "should raise an ArgumentError" do
+        expect { subject }.to raise_error ArgumentError
+      end
     end
-    context 'when the user is not authorized' do
-      let(:user) { build(:non_ezborrow_user) }
-      it { should be false }
-    end
+  end
+  describe "#aleph_patron" do
+    subject { authorizer.send(:aleph_patron) }
+    it { should be_a GetIt::AlephPatron }
   end
 
   context 'when initialized with a user argument' do

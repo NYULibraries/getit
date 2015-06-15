@@ -1,3 +1,7 @@
+<% # Allow a faux dynamic header override per institution by rescuing when the template is missing %>
+<% begin %>
+<%= render "#{institution.code.downcase}/header" %>
+<% rescue %>
 <header class="header">
   <h1><%= current_primary_institution.name %></h1>
   <div class="institution"></div>
@@ -8,3 +12,4 @@
     <li class="nyu-login"><%= login(:return_url => url_for_request(@user_request), "umlaut.institution" => institution.code ) %></li>
   </ul>
 </nav>
+<% end %>

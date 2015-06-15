@@ -11,11 +11,11 @@ describe 'resolve/_background_updater' do
   subject { rendered }
   it { should match /umlaut_base = "http:\/\/test.host\/";/}
   it { should match /context_object = "umlaut\.request_id=#{request.id}&umlaut\.institution=NYU";/}
-  it { should match /setTimeout\(function \(\) { updater\.update\(\); }, 300.0\);/}
+  it { should match /setTimeout\(function \(\) { updater\.update\(\); }, 250.0\);/}
   context 'when there are not any services in progress' do
     let(:any_services_in_progress) { false }
     it { should_not match /umlaut_base = "http:\/\/test.host\/";/}
     it { should_not match /context_object = "umlaut\.request_id=#{request.id}&umlaut\.institution=NYU";/}
-    it { should_not match /setTimeout\(function \(\) { updater\.update\(\); }, 300.0\);/}
+    it { should_not match /setTimeout\(function \(\) { updater\.update\(\); }, 250.0\);/}
   end
 end

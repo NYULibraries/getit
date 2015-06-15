@@ -28,6 +28,8 @@ en:
         title: Citation Management Tools
       holding:
         title: Copies in Library
+    permalink:
+      name: Create a stable link to this page
   resolve:
     holdings:
       request_text: Request

@@ -248,46 +248,46 @@ NYU:
       json_api_key: <%= (ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] || 'NYU_SCOPUS_CITATIONS_JSON_API_KEY') %>
       # partner_id: YOUR_SCOPUS_PARTNER_ID
       # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
-    NYU_RefWorks:
-      name: RefWorks
-      type: OpenURLService
-      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=refworks&"
-      display_text: Push to RefWorks
-      priority: 4
-      service_types:
-          - bib_tool
-    NYU_Endnote:
-      name: EndNoteWeb
-      type: OpenURLService
-      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=endnote&"
-      display_text: Push to EndNote Web
-      priority: 4
-      service_types:
-          - bib_tool
-    NYU_EASYBIB:
-      name: EasyBib
-      type: OpenURLService
-      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=easybibpush&"
-      display_text: Push to EasyBib
-      priority: 4
-      service_types:
-          - bib_tool
-    NYU_RIS:
-      name: RIS
-      type: OpenURLService
-      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=ris&"
-      display_text: Download as RIS
-      priority: 4
-      service_types:
-          - bib_tool
-    NYU_BIBTEX:
-      name: BibTeX
-      type: OpenURLService
-      base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=bibtex&"
-      display_text: Download as BibTeX
-      priority: 4
-      service_types:
-          - bib_tool
+    # NYU_RefWorks:
+    #   name: RefWorks
+    #   type: OpenURLService
+    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=refworks&"
+    #   display_text: Push to RefWorks
+    #   priority: 4
+    #   service_types:
+    #       - bib_tool
+    # NYU_Endnote:
+    #   name: EndNoteWeb
+    #   type: OpenURLService
+    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=endnote&"
+    #   display_text: Push to EndNote Web
+    #   priority: 4
+    #   service_types:
+    #       - bib_tool
+    # NYU_EASYBIB:
+    #   name: EasyBib
+    #   type: OpenURLService
+    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=easybibpush&"
+    #   display_text: Push to EasyBib
+    #   priority: 4
+    #   service_types:
+    #       - bib_tool
+    # NYU_RIS:
+    #   name: RIS
+    #   type: OpenURLService
+    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=ris&"
+    #   display_text: Download as RIS
+    #   priority: 4
+    #   service_types:
+    #       - bib_tool
+    # NYU_BIBTEX:
+    #   name: BibTeX
+    #   type: OpenURLService
+    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=bibtex&"
+    #   display_text: Download as BibTeX
+    #   priority: 4
+    #   service_types:
+    #       - bib_tool
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
