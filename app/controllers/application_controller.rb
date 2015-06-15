@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
       'umlaut.request_id' => request.id)
   end
   helper_method :url_for_request
+
+  # Alias new_session_path as login_path for default devise config
+  def new_session_path(scope)
+    login_path
+  end
 end
