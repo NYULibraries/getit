@@ -200,38 +200,8 @@ class UmlautController < ApplicationController
     resolve_sections.insert_section(abstract, :after => "table_of_contents")
 
     # Reorder sidebar sections as well
-
-
     wayfinder = resolve_sections.remove_section("wayfinder")
     resolve_sections.insert_section(wayfinder, before: "questions")
-
-    # resolve_sections do
-    #   # Original order is:
-    #   #   cover_image, fulltext, search_inside, excerpts, audio,
-    #   #     holding, document_delivery, table_of_contents, abstract
-    #   # Desired order is:
-    #   #   cover_image, search_inside, fulltext, holding, document_delivery,
-    #   #     audio, excerpts, table_of_contents, abstract
-    #   # A little awkard below since ensure_order! just switches positions
-    #   # if necessary
-    #   # Reorder Main Sections
-    #   insert_section("search_inside", "fulltext")
-    #   insert_section("document_delivery", "excerpts")
-    #   insert_section("holding", "document_delivery")
-    #   # Reorder Sidebar Sections
-    #   insert_section("wayfinder", "service_errors")
-    #   insert_section("wayfinder", "highlighted_link")
-    #   insert_section("wayfinder", "related_items")
-    #   insert_section("wayfinder", "export_citation")
-    #   insert_section("wayfinder", "coins")
-    #   insert_section("wayfinder", "help")
-    #   insert_section("export_citation", "highlighted_link")
-    #   # Removing bib_tool
-    #   # ensure_order!("bib_tool", "service_errors")
-    #   # ensure_order!("bib_tool", "highlighted_link")
-    #   # ensure_order!("bib_tool", "related_items")
-    #   insert_section("highlighted_link", "related_items")
-    # end
   end
 
   def create_collection
