@@ -1,3 +1,9 @@
+Around('@omniauth_test') do |scenario, block|
+  OmniAuth.config.test_mode = true
+  block.call
+  OmniAuth.config.test_mode = false
+end
+
 Given(/^I am logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = omniauth_hash
   visit '/login'
@@ -30,4 +36,12 @@ end
 Then(/^I should see the login page in the current window$/) do
   pending
   expect(page).to have_text 'Select your affiliation'
+end
+
+Then(/^I should be logged out$/) do
+  expect(page).to have_text 'LOGGED OUT'
+end
+
+Given(/^I click the logout link$/) do
+  find('.nyu-login a.logout').click
 end
