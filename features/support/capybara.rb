@@ -25,7 +25,7 @@ else
     app,
     # Found a fix to redirecting to SSL pages
     # https://github.com/teampoltergeist/poltergeist/issues/121#issuecomment-49891097
-    phantomjs_options: ['--debug=no', '--load-images=no', '--ignore-ssl-errors=yes'],#, '--ssl-protocol=any'],
+    phantomjs_options: ['--debug=no', '--load-images=no', '--ignore-ssl-errors=yes', '--ssl-protocol=any'],
     window_size: [1280, 1024],
     timeout: 500,
     debug: false,

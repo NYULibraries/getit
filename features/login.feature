@@ -1,4 +1,3 @@
-@wip-travis
 Feature: Log in/out links
   In order to easily log in and log out
   As a user
@@ -22,3 +21,10 @@ Feature: Log in/out links
     And I am on the GetIt page for a "available" holding
     Then I should see a logout link
     And I should see "Log-out Dev" as the text of the logout link
+
+  @omniauth_test
+  Scenario: A logged in user clicks logout
+    Given I am logged in
+    And I am on the GetIt search page
+    When I click the logout link
+    Then I should be logged out
