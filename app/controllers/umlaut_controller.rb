@@ -174,33 +174,34 @@ class UmlautController < ApplicationController
     document_delivery[:section_prompt] = "Please do not use for available or offsite materials."
     document_delivery[:bg_update] = true
 
-    resolve_sections do
-      # Original order is:
-      #   cover_image, fulltext, search_inside, excerpts, audio,
-      #     holding, document_delivery, table_of_contents, abstract
-      # Desired order is:
-      #   cover_image, search_inside, fulltext, holding, document_delivery,
-      #     audio, excerpts, table_of_contents, abstract
-      # A little awkard below since ensure_order! just switches positions
-      # if necessary
-      # Reorder Main Sections
-      ensure_order!("search_inside", "fulltext")
-      ensure_order!("document_delivery", "excerpts")
-      ensure_order!("holding", "document_delivery")
-      # Reorder Sidebar Sections
-      ensure_order!("wayfinder", "service_errors")
-      ensure_order!("wayfinder", "highlighted_link")
-      ensure_order!("wayfinder", "related_items")
-      ensure_order!("wayfinder", "export_citation")
-      ensure_order!("wayfinder", "coins")
-      ensure_order!("wayfinder", "help")
-      ensure_order!("export_citation", "highlighted_link")
-      # Removing bib_tool
-      # ensure_order!("bib_tool", "service_errors")
-      # ensure_order!("bib_tool", "highlighted_link")
-      # ensure_order!("bib_tool", "related_items")
-      ensure_order!("highlighted_link", "related_items")
-    end
+    # Original order is:
+    #   cover_image, fulltext, search_inside, excerpts, audio,
+    #     holding, document_delivery, table_of_contents, abstract
+    # Desired order is:
+    #   cover_image, search_inside, fulltext, holding, document_delivery,
+    #     audio, excerpts, table_of_contents, abstract
+
+    # Get each resolve section from whereever they are
+    search_inside = resolve_sections.remove_section("search_inside")
+    holding = resolve_sections.remove_section("holding")
+    document_delivery = resolve_sections.remove_section("document_delivery")
+    audio = resolve_sections.remove_section("audio")
+    excerpts = resolve_sections.remove_section("excerpts")
+    table_of_contents = resolve_sections.remove_section("table_of_contents")
+    abstract = resolve_sections.remove_section("abstract")
+
+    # And insert them in the desired order
+    resolve_sections.insert_section(search_inside, :before => "fulltext")
+    resolve_sections.insert_section(holding, :after => "fulltext")
+    resolve_sections.insert_section(document_delivery, :after => "holding")
+    resolve_sections.insert_section(audio, :after => "document_delivery")
+    resolve_sections.insert_section(excerpts, :after => "audio")
+    resolve_sections.insert_section(table_of_contents, :after => "excerpts")
+    resolve_sections.insert_section(abstract, :after => "table_of_contents")
+
+    # Reorder sidebar sections as well
+    wayfinder = resolve_sections.remove_section("wayfinder")
+    resolve_sections.insert_section(wayfinder, before: "questions")
   end
 
   def create_collection
