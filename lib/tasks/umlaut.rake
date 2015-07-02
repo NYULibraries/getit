@@ -176,9 +176,9 @@ namespace :nyu do
       # So for now I will clean these all up by stripping that out, but ultimately
       # this is coming from certain sources and we need to identify that
       count = 0
-      tainted_permalinks = Permalink.where("context_obj_serialized LIKE '%rft:?sid%'")
+      tainted_permalinks = Permalink.where("context_obj_serialized LIKE '%rft:?%'")
       tainted_permalinks.each do |permalink|
-        permalink.context_obj_serialized = permalink.context_obj_serialized.gsub(/rft:\?sid/,"rft:sid")
+        permalink.context_obj_serialized = permalink.context_obj_serialized.gsub(/rft:\?/,"rft:")
         count += 1 if permalink.save!
       end
       puts " Fixed #{count} broken Permalinks"
