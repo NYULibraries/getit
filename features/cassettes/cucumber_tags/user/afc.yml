@@ -1,0 +1,908 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:55 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:57 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-07-21T16:11:57-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2015-07-21T16:11:57-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;9815805&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sBDCF4190-2FE4-11E5-8373-F2CEFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph001624317%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:57 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph001624317</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.1.5 (2014-11-13))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 21 Jul 2015 20:11:57 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 21 Jul 2015 20:11:57 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;001624317&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph001624317&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01001624317&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;video&lt;/type&gt;
+                        &lt;title&gt;To kill a mockingbird [videorecording]&lt;/title&gt;
+                        &lt;contributor&gt;Christopher Morris; Matt Gray; John Parker; Andy Kershaw; BBC Education &amp;amp; Training.; BBC Worldwide Americas, Inc.; BBC Wales.; Films for the Humanities (Firm)&lt;/contributor&gt;
+                        &lt;publisher&gt;Princeton, N.J. : Films for the Humanities &amp;amp; Sciences&lt;/publisher&gt;
+                        &lt;creationdate&gt;c1999&lt;/creationdate&gt;
+                        &lt;format&gt;1 videocassette (20 min.) : sd., col. with b&amp;amp;w sequences ; 1/2 in.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cmuspub$$VFFH8859 Films for the Humanities &amp;amp; Sciences&lt;/identifier&gt;
+                        &lt;subject&gt;Lee, Harper. To kill a mockingbird; Literature and history -- United States -- History -- 20th century; African Americans in literature; Civil rights -- Illinois -- Periodicals&lt;/subject&gt;
+                        &lt;description&gt;$$Csummary$$V&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/description&gt;
+                        &lt;description&gt;$$Ccredits$$VProducer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/description&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;relation&gt;$$Cseries $$VIn context (Films for the Humanities &amp;amp; Sciences); $$VEnglish file.&lt;/relation&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LBAFC$$1Main Collection$$2(VCA 9649 )$$Savailable$$31$$40$$5N$$62$$XNYU50$$YBAFC$$ZAFC&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph001624317&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;available&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tgoogle_thumbnail&lt;/thumbnail&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tworldcat_oclc$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;BBC Education &amp;amp; Training.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Producer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Christopher  Morris&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Matt  Gray&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;John  Parker&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Andy  Kershaw&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Morris, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Gray, M&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Parker, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Kershaw, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;British Broadcasting Corporation. Education &amp;amp; Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Education and Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Americas, Inc.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Ltd. BBC Worldwide Americas, Inc.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Wales.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Cymru&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Cymru Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;British Broadcasting Corporation. BBC Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Films for the Humanities (Firm)&lt;/creatorcontrib&gt;
+                        &lt;title&gt;To kill a mockingbird&lt;/title&gt;
+                        &lt;description&gt;&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/description&gt;
+                        &lt;subject&gt;Lee, Harper. To kill a mockingbird&lt;/subject&gt;
+                        &lt;subject&gt;Lee, Harper. Al tiga&#x2BB; ba-zamir&lt;/subject&gt;
+                        &lt;subject&gt;Literature and history  United States History 20th century&lt;/subject&gt;
+                        &lt;subject&gt;African Americans in literature&lt;/subject&gt;
+                        &lt;subject&gt;Afro-Americans in literature&lt;/subject&gt;
+                        &lt;subject&gt;Civil rights  Illinois Periodicals&lt;/subject&gt;
+                        &lt;general&gt;Films for the Humanities &amp;amp; Sciences,&lt;/general&gt;
+                        &lt;general&gt;&quot;Distributed under license from BBC Worldwide Americas, Inc.&quot;&lt;/general&gt;
+                        &lt;general&gt;&quot;BBC Wales c1997.&quot;&lt;/general&gt;
+                        &lt;general&gt;Producer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/general&gt;
+                        &lt;general&gt;FFH8859&lt;/general&gt;
+                        &lt;general&gt;[videorecording] /&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph001624317&lt;/recordid&gt;
+                        &lt;rsrctype&gt;video&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;addtitle&gt;In context&lt;/addtitle&gt;
+                        &lt;addtitle&gt;English file&lt;/addtitle&gt;
+                        &lt;addtitle&gt;In context (Films for the Humanities &amp;amp; Sciences)&lt;/addtitle&gt;
+                        &lt;addtitle&gt;English file.&lt;/addtitle&gt;
+                        &lt;searchscope&gt;BAFC&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BAFC Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
+                        &lt;scope&gt;BAFC&lt;/scope&gt;
+                        &lt;scope&gt;BAFC Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;scope&gt;BOBST&lt;/scope&gt;
+                        &lt;lsr01&gt;VCA 9649&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Films for the Humanities &amp;amp; Sciences,&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;To kill a mockingbird&lt;/title&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;author&gt;Morris, Christopher.&lt;/author&gt;
+                        &lt;lso01&gt;1999&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;topic&gt;Lee, Harper. To kill a mockingbird&lt;/topic&gt;
+                        &lt;topic&gt;Literature and history&#x2013;United States&#x2013;History&#x2013;20th century&lt;/topic&gt;
+                        &lt;topic&gt;African Americans in literature&lt;/topic&gt;
+                        &lt;topic&gt;Civil rights&#x2013;Illinois&#x2013;Periodicals&lt;/topic&gt;
+                        &lt;collection&gt;BAFC&lt;/collection&gt;
+                        &lt;toplevel&gt;available&lt;/toplevel&gt;
+                        &lt;prefilter&gt;video&lt;/prefilter&gt;
+                        &lt;creatorcontrib&gt;Morris, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Gray, M&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Parker, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Kershaw, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Education &amp;amp; Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Americas, Inc&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Films for the Humanities (Firm)&lt;/creatorcontrib&gt;
+                        &lt;genre&gt;Periodicals&lt;/genre&gt;
+                        &lt;library&gt;BOBST&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;frbrgroupid&gt;136616927&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c3&gt;tokillamockingbird&lt;/c3&gt;
+                        &lt;c4&gt;1999&lt;/c4&gt;
+                        &lt;f1&gt;FFH8859&lt;/f1&gt;
+                        &lt;f5&gt;tokillamockingbird&lt;/f5&gt;
+                        &lt;f6&gt;1999&lt;/f6&gt;
+                        &lt;f7&gt;to kill a mockingbird&lt;/f7&gt;
+                        &lt;f8&gt;nju&lt;/f8&gt;
+                        &lt;f9&gt;1 videocassette (20 min.) :&lt;/f9&gt;
+                        &lt;f10&gt;films for the humanities sciences&lt;/f10&gt;
+                        &lt;f20&gt;(OCoLC)ocm42739441&lt;/f20&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kmorris christopher$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kgray matt$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kparker john$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kkershaw andy$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc education &amp;amp; training$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc worldwide americas inc$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc wales$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kfilms for the humanities firm$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kvideoto kill a mockingbird$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;Gray&lt;/aulast&gt;
+                        &lt;aufirst&gt;Christopher&lt;/aufirst&gt;
+                        &lt;addau&gt;Morris, Christopher&lt;/addau&gt;
+                        &lt;addau&gt;Gray, Matt&lt;/addau&gt;
+                        &lt;addau&gt;Parker, John&lt;/addau&gt;
+                        &lt;addau&gt;Kershaw, Andy&lt;/addau&gt;
+                        &lt;addau&gt;BBC Education &amp;amp; Training&lt;/addau&gt;
+                        &lt;addau&gt;BBC Worldwide Americas, Inc&lt;/addau&gt;
+                        &lt;addau&gt;BBC Wales&lt;/addau&gt;
+                        &lt;addau&gt;Films for the Humanities (Firm)&lt;/addau&gt;
+                        &lt;btitle&gt;To kill a mockingbird [videorecording]&lt;/btitle&gt;
+                        &lt;seriestitle&gt;In context (Films for the Humanities &amp;amp; Sciences)&lt;/seriestitle&gt;
+                        &lt;seriestitle&gt;English file&lt;/seriestitle&gt;
+                        &lt;date&gt;1999&lt;/date&gt;
+                        &lt;risdate&gt;c1999.&lt;/risdate&gt;
+                        &lt;format&gt;video&lt;/format&gt;
+                        &lt;genre&gt;video&lt;/genre&gt;
+                        &lt;ristype&gt;VIDEO&lt;/ristype&gt;
+                        &lt;abstract&gt;&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/abstract&gt;
+                        &lt;cop&gt;Princeton, N.J.&lt;/cop&gt;
+                        &lt;pub&gt;Films for the Humanities &amp;amp; Sciences&lt;/pub&gt;
+                        &lt;oclcid&gt;42739441&lt;/oclcid&gt;
+                        &lt;lad01&gt;BAFC&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DMorris, Christopher$$EMorris, Christopher$$INYU10001428586$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DGray, Matt$$EGray, Matt&lt;/author&gt;
+                        &lt;author&gt;$$DParker, John$$EParker, John$$INYU10000767949$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DKershaw, Andy$$EKershaw, Andy&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Education &amp;amp; Training$$EBBC Education &amp;amp; Training$$INYU10000576557$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBritish Broadcasting Corporation. Education &amp;amp; Training$$EBritish Broadcasting Corporation. Education &amp;amp; Training$$INYU10000576557$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Education and Training$$EBBC Education and Training$$INYU10000576557$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Worldwide Americas, Inc$$EBBC Worldwide Americas, Inc$$INYU10001116039$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Worldwide Ltd. BBC Worldwide Americas, Inc$$EBBC Worldwide Ltd. BBC Worldwide Americas, Inc$$INYU10001116039$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Wales$$EBBC Wales$$INYU10001379503$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Cymru$$EBBC Cymru$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Cymru Wales$$EBBC Cymru Wales$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBritish Broadcasting Corporation. BBC Wales$$EBritish Broadcasting Corporation. BBC Wales$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DFilms for the Humanities (Firm)$$EFilms for the Humanities (Firm)&lt;/author&gt;
+                        &lt;title&gt;$$DTo kill a mockingbird$$ETo kill a mockingbird&lt;/title&gt;
+                        &lt;title&gt;$$DIn context$$EIn context&lt;/title&gt;
+                        &lt;title&gt;$$DEnglish file$$EEnglish file&lt;/title&gt;
+                        &lt;title&gt;$$DIn context (Films for the Humanities &amp;amp; Sciences)$$EIn context (Films for the Humanities &amp;amp; Sciences)&lt;/title&gt;
+                        &lt;subject&gt;$$DLiterature and history -- United States -- History -- 20th century$$ELiterature and history United States History 20th century$$INYU10007457440$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DAfrican Americans in literature$$EAfrican Americans in literature$$INYU10001670695$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DAfro-Americans in literature$$EAfro-Americans in literature$$INYU10001670695$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DCivil rights -- Illinois -- Periodicals$$ECivil rights Illinois Periodicals&lt;/subject&gt;
+                        &lt;subject&gt;$$DLee, Harper. To kill a mockingbird$$ELee, Harper. To kill a mockingbird$$INYU10000648607$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DLee, Harper. Al tiga&#x2BB; ba-zamir$$ELee, Harper. Al tiga&#x2BB; ba-zamir$$INYU10000648607$$PN&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DVCA 9649$$Evca 9649$$T4&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:58 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:57 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:58 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 21 Jul 2015 20:11:57 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items/NYU50001624317000010"></item></items></get-item-list> '
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:58 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items/NYU50001624317000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 21 Jul 2015 20:11:57 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BAFC</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>02</z30-item-status-code><z30-collection-code>AFC</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001624317</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142029200758</z30-barcode><z30-sub-library>NYU
+        Bobst Avery Fisher Center</z30-sub-library><z30-material>Videos</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20000629</z30-open-date><z30-update-date>20150203</z30-update-date><z30-cataloger>BROWNB</z30-cataloger><z30-date-last-return>20091029</z30-date-last-return><z30-hour-last-return>1640</z30-hour-last-return><z30-ip-last-return>128.122.91.15</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>4</z30-call-no-type><z30-call-no>VCA
+        9649</z30-call-no><z30-call-no-key>4 $$jvca 9649</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>129.00</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001647433</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>20150203</z30-process-status-date><z30-upd-time-stamp>201502031632059</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001624317</z13-doc-number><z13-year>1999</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC4</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>To
+        kill a mockingbird</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Princeton,
+        N.J. : Films for the Humanities &amp; Sciences, c1999.</z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn><z13-upd-time-stamp>201412071437547</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22to%20kill%20a%20mockingbird%22%20AND%20creator:(gray)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22to+kill+a+mockingbird%22+AND+creator:%28gray%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Wed, 22 Jul 2015 02:11:58 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22to%20kill%20a%20mockingbird%22%20AND%20creator:(gray)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.9
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":3,"params":{"wt":"json","rows":"999","qin":"title:\"to
+        kill a mockingbird\" AND creator:(gray) AND (mediatype:texts OR mediatype:audio)","fl":"*","start":"0","q":"title:\"to
+        kill a mockingbird\" AND creator:(gray ) AND ( mediatype:texts OR mediatype:audio
+        )"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:42739441
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.41-0+deb7u1
+      X-Powered-By:
+      - PHP/5.4.41-0+deb7u1
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63df45525d5f4f58455e445a4a423660;expires=Tue, 21-Jul-2015
+        20:21:58 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"oclc:42739441":{"records":[],"items":[]}}
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Gray%22%20and%20local.OCLCNumber%20=%20%2242739441%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '2220'
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &quot;Gray&quot; and local.OCLCNumber = &quot;42739441&quot;</query><xQuery><ns2:triple
+        xsi:type=\"ns2:tripleType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:boolean
+        xsi:type=\"ns2:booleanType\"><ns2:value xsi:type=\"xsd:string\">and</ns2:value></ns2:boolean><ns2:leftOperand
+        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">Gray</ns2:term></ns2:searchClause></ns2:leftOperand><ns2:rightOperand
+        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">42739441</ns2:term></ns2:searchClause></ns2:rightOperand></ns2:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns3:extraDataType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns4=\"http://oclc.org/srw/extraData\"><ns4:databaseTitle>WorldCat
+        Personal Identity Records</ns4:databaseTitle></ns4:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:11:59 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:58 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:12:00 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:11:59 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:12:00 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:12:01 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:12:03 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:12:01 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:12:03 GMT
+- request:
+    method: post
+    uri: https://login.library.edu/pds
+    body:
+      encoding: UTF-8
+      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Jul 2015 20:12:02 GMT
+      Server:
+      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>52</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:12:03 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001624317/items/NYU50001624317000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 21 Jul 2015 20:22:16 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BAFC</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>02</z30-item-status-code><z30-collection-code>AFC</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001624317</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142029200758</z30-barcode><z30-sub-library>NYU
+        Bobst Avery Fisher Center</z30-sub-library><z30-material>Videos</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>20000629</z30-open-date><z30-update-date>20150203</z30-update-date><z30-cataloger>BROWNB</z30-cataloger><z30-date-last-return>20091029</z30-date-last-return><z30-hour-last-return>1640</z30-hour-last-return><z30-ip-last-return>128.122.91.15</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>4</z30-call-no-type><z30-call-no>VCA
+        9649</z30-call-no><z30-call-no-key>4 $$jvca 9649</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>129.00</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001647433</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>20150203</z30-process-status-date><z30-upd-time-stamp>201502031632059</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001624317</z13-doc-number><z13-year>1999</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC4</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>To
+        kill a mockingbird</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Princeton,
+        N.J. : Films for the Humanities &amp; Sciences, c1999.</z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn><z13-upd-time-stamp>201412071437547</z13-upd-time-stamp></z13><status>Offsite
+        Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001624317/items/NYU50001624317000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="BAFC">NYU Bobst Avery Fisher Center</pickup-location><pickup-location
+        code="NYUAB">NYU Abu Dhabi Library (UAE)</pickup-location><pickup-location
+        code="NYUSX">NYU Shanghai Library (China)</pickup-location></pickup-locations><note
+        type="info"></note><note type="info">Item status: Offsite Available&lt;br
+        /&gt; Call number: VCA 9649&lt;br /&gt;</note><last-interest-date usage="Optional">20151019</last-interest-date><start-interest-date
+        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
+        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
+        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
+        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001624317/items/NYU50001624317000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001624317/items/NYU50001624317000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001624317</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version:
+  recorded_at: Tue, 21 Jul 2015 20:22:16 GMT
+recorded_with: VCR 2.9.3

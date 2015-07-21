@@ -53,6 +53,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/ill'
   t.tag '@user/ill'
   t.tag '@logout'
+  t.tag '@user/afc'#, record: :new_episodes
   # Disallowed not in use
   t.tags '@disallowed', record: :none
 end
