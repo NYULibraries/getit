@@ -1,0 +1,7 @@
+<% if can_afc_schedule? && holding.afc_schedulable? %>
+  <%= link_to(
+    t('resolve.holdings.afc_schedule_text'),
+    afc_schedule_url,
+    target: "_blank",
+    class: "btn btn-primary afc-schedule-link") %>
+<% end %>

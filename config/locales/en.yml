@@ -34,6 +34,7 @@ en:
     holdings:
       request_text: Request
       ezborrow_text: E-ZBorrow
+      afc_schedule_text: Schedule
       map_text: Map
       login_text: Login for Request Options
   holding_requests:
