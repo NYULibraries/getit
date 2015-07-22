@@ -19,9 +19,6 @@ rvm:
   - 2.0.0
   - 2.1.3
 
-git:
-  submodules: false
-
 notifications:
   irc:
     channels:
@@ -31,4 +28,6 @@ notifications:
       - "Change view : %{compare_url}"
       - "Build details : %{build_url}"
   email:
-    - web.services@library.nyu.edu
+    - lib-webservices@lnyu.edu
+
+sudo: false
