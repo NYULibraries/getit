@@ -15,5 +15,6 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
   inflect.acronym 'GetIt'
   inflect.acronym 'EZBorrow'
+  inflect.acronym 'AFC'
   inflect.acronym 'StackMap'
 end

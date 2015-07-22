@@ -1,0 +1,374 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-07-22T10:32:41-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Jul 2015 14:32:42 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2015-07-22T10:32:41-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;9818603&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s83B18226-307E-11E5-AEA1-B178FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001624317&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph001624317%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 14:32:43 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph001624317</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.1.5 (2014-11-13))
+      Accept:
+      - "*/*"
+      Date:
+      - Wed, 22 Jul 2015 14:32:43 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 22 Jul 2015 14:32:42 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;001624317&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph001624317&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01001624317&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;video&lt;/type&gt;
+                        &lt;title&gt;To kill a mockingbird [videorecording]&lt;/title&gt;
+                        &lt;contributor&gt;Christopher Morris; Matt Gray; John Parker; Andy Kershaw; BBC Education &amp;amp; Training.; BBC Worldwide Americas, Inc.; BBC Wales.; Films for the Humanities (Firm)&lt;/contributor&gt;
+                        &lt;publisher&gt;Princeton, N.J. : Films for the Humanities &amp;amp; Sciences&lt;/publisher&gt;
+                        &lt;creationdate&gt;c1999&lt;/creationdate&gt;
+                        &lt;format&gt;1 videocassette (20 min.) : sd., col. with b&amp;amp;w sequences ; 1/2 in.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cmuspub$$VFFH8859 Films for the Humanities &amp;amp; Sciences&lt;/identifier&gt;
+                        &lt;subject&gt;Lee, Harper. To kill a mockingbird; Literature and history -- United States -- History -- 20th century; African Americans in literature; Civil rights -- Illinois -- Periodicals&lt;/subject&gt;
+                        &lt;description&gt;$$Csummary$$V&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/description&gt;
+                        &lt;description&gt;$$Ccredits$$VProducer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/description&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;relation&gt;$$Cseries $$VIn context (Films for the Humanities &amp;amp; Sciences); $$VEnglish file.&lt;/relation&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LBAFC$$1Main Collection$$2(VCA 9649 )$$Savailable$$31$$40$$5N$$62$$XNYU50$$YBAFC$$ZAFC&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph001624317&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;available&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tgoogle_thumbnail&lt;/thumbnail&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tworldcat_oclc$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;BBC Education &amp;amp; Training.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Producer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Christopher  Morris&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Matt  Gray&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;John  Parker&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Andy  Kershaw&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Morris, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Gray, M&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Parker, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Kershaw, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;British Broadcasting Corporation. Education &amp;amp; Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Education and Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Americas, Inc.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Ltd. BBC Worldwide Americas, Inc.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Wales.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Cymru&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Cymru Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;British Broadcasting Corporation. BBC Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Films for the Humanities (Firm)&lt;/creatorcontrib&gt;
+                        &lt;title&gt;To kill a mockingbird&lt;/title&gt;
+                        &lt;description&gt;&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/description&gt;
+                        &lt;subject&gt;Lee, Harper. To kill a mockingbird&lt;/subject&gt;
+                        &lt;subject&gt;Lee, Harper. Al tiga&#x2BB; ba-zamir&lt;/subject&gt;
+                        &lt;subject&gt;Literature and history  United States History 20th century&lt;/subject&gt;
+                        &lt;subject&gt;African Americans in literature&lt;/subject&gt;
+                        &lt;subject&gt;Afro-Americans in literature&lt;/subject&gt;
+                        &lt;subject&gt;Civil rights  Illinois Periodicals&lt;/subject&gt;
+                        &lt;general&gt;Films for the Humanities &amp;amp; Sciences,&lt;/general&gt;
+                        &lt;general&gt;&quot;Distributed under license from BBC Worldwide Americas, Inc.&quot;&lt;/general&gt;
+                        &lt;general&gt;&quot;BBC Wales c1997.&quot;&lt;/general&gt;
+                        &lt;general&gt;Producer, Christopher Morris ; photography, Matt Gray ; editor, John Parker ; narrator, Andy Kershaw.&lt;/general&gt;
+                        &lt;general&gt;FFH8859&lt;/general&gt;
+                        &lt;general&gt;[videorecording] /&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph001624317&lt;/recordid&gt;
+                        &lt;rsrctype&gt;video&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;addtitle&gt;In context&lt;/addtitle&gt;
+                        &lt;addtitle&gt;English file&lt;/addtitle&gt;
+                        &lt;addtitle&gt;In context (Films for the Humanities &amp;amp; Sciences)&lt;/addtitle&gt;
+                        &lt;addtitle&gt;English file.&lt;/addtitle&gt;
+                        &lt;searchscope&gt;BAFC&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BAFC Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
+                        &lt;scope&gt;BAFC&lt;/scope&gt;
+                        &lt;scope&gt;BAFC Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;scope&gt;BOBST&lt;/scope&gt;
+                        &lt;lsr01&gt;VCA 9649&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Films for the Humanities &amp;amp; Sciences,&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;To kill a mockingbird&lt;/title&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;author&gt;Morris, Christopher.&lt;/author&gt;
+                        &lt;lso01&gt;1999&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;1999&lt;/creationdate&gt;
+                        &lt;topic&gt;Lee, Harper. To kill a mockingbird&lt;/topic&gt;
+                        &lt;topic&gt;Literature and history&#x2013;United States&#x2013;History&#x2013;20th century&lt;/topic&gt;
+                        &lt;topic&gt;African Americans in literature&lt;/topic&gt;
+                        &lt;topic&gt;Civil rights&#x2013;Illinois&#x2013;Periodicals&lt;/topic&gt;
+                        &lt;collection&gt;BAFC&lt;/collection&gt;
+                        &lt;toplevel&gt;available&lt;/toplevel&gt;
+                        &lt;prefilter&gt;video&lt;/prefilter&gt;
+                        &lt;creatorcontrib&gt;Morris, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Gray, M&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Parker, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Kershaw, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Education &amp;amp; Training&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Worldwide Americas, Inc&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;BBC Wales&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Films for the Humanities (Firm)&lt;/creatorcontrib&gt;
+                        &lt;genre&gt;Periodicals&lt;/genre&gt;
+                        &lt;library&gt;BOBST&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;frbrgroupid&gt;136616927&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c3&gt;tokillamockingbird&lt;/c3&gt;
+                        &lt;c4&gt;1999&lt;/c4&gt;
+                        &lt;f1&gt;FFH8859&lt;/f1&gt;
+                        &lt;f5&gt;tokillamockingbird&lt;/f5&gt;
+                        &lt;f6&gt;1999&lt;/f6&gt;
+                        &lt;f7&gt;to kill a mockingbird&lt;/f7&gt;
+                        &lt;f8&gt;nju&lt;/f8&gt;
+                        &lt;f9&gt;1 videocassette (20 min.) :&lt;/f9&gt;
+                        &lt;f10&gt;films for the humanities sciences&lt;/f10&gt;
+                        &lt;f20&gt;(OCoLC)ocm42739441&lt;/f20&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kmorris christopher$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kgray matt$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kparker john$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kkershaw andy$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc education &amp;amp; training$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc worldwide americas inc$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kbbc wales$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kfilms for the humanities firm$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kvideoto kill a mockingbird$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;Gray&lt;/aulast&gt;
+                        &lt;aufirst&gt;Christopher&lt;/aufirst&gt;
+                        &lt;addau&gt;Morris, Christopher&lt;/addau&gt;
+                        &lt;addau&gt;Gray, Matt&lt;/addau&gt;
+                        &lt;addau&gt;Parker, John&lt;/addau&gt;
+                        &lt;addau&gt;Kershaw, Andy&lt;/addau&gt;
+                        &lt;addau&gt;BBC Education &amp;amp; Training&lt;/addau&gt;
+                        &lt;addau&gt;BBC Worldwide Americas, Inc&lt;/addau&gt;
+                        &lt;addau&gt;BBC Wales&lt;/addau&gt;
+                        &lt;addau&gt;Films for the Humanities (Firm)&lt;/addau&gt;
+                        &lt;btitle&gt;To kill a mockingbird [videorecording]&lt;/btitle&gt;
+                        &lt;seriestitle&gt;In context (Films for the Humanities &amp;amp; Sciences)&lt;/seriestitle&gt;
+                        &lt;seriestitle&gt;English file&lt;/seriestitle&gt;
+                        &lt;date&gt;1999&lt;/date&gt;
+                        &lt;risdate&gt;c1999.&lt;/risdate&gt;
+                        &lt;format&gt;video&lt;/format&gt;
+                        &lt;genre&gt;video&lt;/genre&gt;
+                        &lt;ristype&gt;VIDEO&lt;/ristype&gt;
+                        &lt;abstract&gt;&quot;In Monroeville, Alabama, Harper Lee's model for Maycomb, 'To Kill a Mockingbird' is celebrated as a tribute to Southern life. This hard-edged program juxtaposes white and black experiences in the racially segregated South of the 1930s-1960s to deepen the understanding of the novel's portrayal of racial tension and tolerated judicial bias&quot;--Container.&lt;/abstract&gt;
+                        &lt;cop&gt;Princeton, N.J.&lt;/cop&gt;
+                        &lt;pub&gt;Films for the Humanities &amp;amp; Sciences&lt;/pub&gt;
+                        &lt;oclcid&gt;42739441&lt;/oclcid&gt;
+                        &lt;lad01&gt;BAFC&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DMorris, Christopher$$EMorris, Christopher$$INYU10001428586$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DGray, Matt$$EGray, Matt&lt;/author&gt;
+                        &lt;author&gt;$$DParker, John$$EParker, John$$INYU10000767949$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DKershaw, Andy$$EKershaw, Andy&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Education &amp;amp; Training$$EBBC Education &amp;amp; Training$$INYU10000576557$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBritish Broadcasting Corporation. Education &amp;amp; Training$$EBritish Broadcasting Corporation. Education &amp;amp; Training$$INYU10000576557$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Education and Training$$EBBC Education and Training$$INYU10000576557$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Worldwide Americas, Inc$$EBBC Worldwide Americas, Inc$$INYU10001116039$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Worldwide Ltd. BBC Worldwide Americas, Inc$$EBBC Worldwide Ltd. BBC Worldwide Americas, Inc$$INYU10001116039$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Wales$$EBBC Wales$$INYU10001379503$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Cymru$$EBBC Cymru$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBBC Cymru Wales$$EBBC Cymru Wales$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DBritish Broadcasting Corporation. BBC Wales$$EBritish Broadcasting Corporation. BBC Wales$$INYU10001379503$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DFilms for the Humanities (Firm)$$EFilms for the Humanities (Firm)&lt;/author&gt;
+                        &lt;title&gt;$$DTo kill a mockingbird$$ETo kill a mockingbird&lt;/title&gt;
+                        &lt;title&gt;$$DIn context$$EIn context&lt;/title&gt;
+                        &lt;title&gt;$$DEnglish file$$EEnglish file&lt;/title&gt;
+                        &lt;title&gt;$$DIn context (Films for the Humanities &amp;amp; Sciences)$$EIn context (Films for the Humanities &amp;amp; Sciences)&lt;/title&gt;
+                        &lt;subject&gt;$$DLiterature and history -- United States -- History -- 20th century$$ELiterature and history United States History 20th century$$INYU10007457440$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DAfrican Americans in literature$$EAfrican Americans in literature$$INYU10001670695$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DAfro-Americans in literature$$EAfro-Americans in literature$$INYU10001670695$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DCivil rights -- Illinois -- Periodicals$$ECivil rights Illinois Periodicals&lt;/subject&gt;
+                        &lt;subject&gt;$$DLee, Harper. To kill a mockingbird$$ELee, Harper. To kill a mockingbird$$INYU10000648607$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DLee, Harper. Al tiga&#x2BB; ba-zamir$$ELee, Harper. Al tiga&#x2BB; ba-zamir$$INYU10000648607$$PN&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DVCA 9649$$Evca 9649$$T4&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 14:32:43 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 22 Jul 2015 14:33:09 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items/NYU50001624317000010"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Wed, 22 Jul 2015 14:33:11 GMT
+recorded_with: VCR 2.9.3
