@@ -43,5 +43,7 @@ FactoryGirl.define do
     factory :ill_user, traits: [:ns_aleph_attributes]
     factory :non_ezborrow_user, traits: [:cooper_union_aleph_attributes]
     factory :non_ill_user, traits: [:cooper_union_aleph_attributes]
+    factory :afc_user, traits: [:cooper_union_aleph_attributes]
+    factory :non_afc_user, traits: [:ns_aleph_attributes]
   end
 end

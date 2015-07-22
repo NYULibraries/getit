@@ -254,6 +254,27 @@ module GetIt
           it { should be false }
         end
       end
+      describe "#afc_schedulable?" do
+        subject { holding.afc_schedulable? }
+        context 'when the holding is from the AFC' do
+          context 'and the holding is from the Main Collection' do
+            let(:service_response) { build(:avery_fisher_nyu_aleph_service_response) }
+            it { should be true }
+          end
+          context 'but the holding is not from the Main Collection' do
+            let(:service_response) { build(:avery_fisher_not_main_nyu_aleph_service_response) }
+            it { should be false }
+          end
+        end
+        context 'when the holding is not from the AFC' do
+          let(:service_response) { build(:bobst_reserve_nyu_aleph_service_response) }
+          it { should be false }
+        end
+        context 'when the holding is not from Aleph' do
+          let(:service_response) { build(:nyu_aleph_not_from_aleph_service_response) }
+          it { should be false }
+        end
+      end
       describe '#institution' do
         subject { holding.institution }
         it { should_not be_nil }

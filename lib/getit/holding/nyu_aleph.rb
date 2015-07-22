@@ -66,6 +66,10 @@ module GetIt
         @recall_period ||= (sub_library.code == 'BAFC') ? "1 week" : "2 weeks"
       end
 
+      def afc_schedulable?
+        from_aleph? && sub_library.code == 'BAFC' && collection.display == 'Main Collection'
+      end
+
       def sub_library
         @sub_library ||= view_data[:library]
       end
