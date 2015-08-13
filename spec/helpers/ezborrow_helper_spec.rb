@@ -22,7 +22,7 @@ describe EZBorrowHelper do
     let(:service_response) { build(:nyu_aleph_service_response) }
     let(:holding) { GetIt::Holding::NyuAleph.new(service_response) }
     subject { helper.ezborrow_url(holding) }
-    it { should eql "https://login.library.nyu.edu/ezborrow?query=ti=Title" }
+    it { should eql "https://pds.library.nyu.edu/ezborrow?query=ti=Title" }
   end
   describe "#ezborrow_authorizer" do
     subject { helper.send(:ezborrow_authorizer) }

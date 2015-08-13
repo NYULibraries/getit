@@ -3,7 +3,7 @@ describe UserSession do
   let(:user) { build(:user) }
   describe '.pds_url' do
     subject { UserSession.pds_url }
-    it { should eq (ENV['PDS_URL'] || 'https://login.library.nyu.edu') }
+    it { should eq (ENV['PDS_URL'] || 'https://pds.library.nyu.edu') }
   end
   describe '.redirect_logout_url' do
     subject { UserSession.redirect_logout_url }
