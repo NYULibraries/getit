@@ -13,13 +13,13 @@ xdescribe 'resolve/_ezborrow_link' do
         let(:service_response) { create(:bobst_reserve_nyu_aleph_service_response) }
         it { should_not match /ezborrow-link/ }
         it { should_not match /E-ZBorrow/ }
-        it { should_not match(/href="https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
+        it { should_not match(/href="https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
       end
       context 'and the holding is in the NYU Bobst Reserve Collection' do
         let(:service_response) { create(:nyu_aleph_service_response) }
         it { should_not match /ezborrow-link/ }
         it { should_not match /E-ZBorrow/ }
-        it { should_not match(/href="https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
+        it { should_not match(/href="https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
       end
     end
     context "and the user is authorized to request items from E-ZBorrow" do
@@ -28,13 +28,13 @@ xdescribe 'resolve/_ezborrow_link' do
         let(:service_response) { create(:bobst_reserve_nyu_aleph_service_response) }
         it { should match /ezborrow-link/ }
         it { should match /E-ZBorrow/ }
-        it { should match(/href="https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
+        it { should match(/href="https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
       end
       context "and the holding isn't a reserves item" do
         let(:service_response) { create(:nyu_aleph_service_response) }
         it { should_not match /ezborrow-link/ }
         it { should_not match /E-ZBorrow/ }
-        it { should_not match /href="http:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query="/ }
+        it { should_not match /href="http:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query="/ }
       end
     end
   end
@@ -44,13 +44,13 @@ xdescribe 'resolve/_ezborrow_link' do
       let(:service_response) { create(:bobst_reserve_nyu_aleph_service_response) }
       it { should_not match /ezborrow-link/ }
       it { should_not match /E-ZBorrow/ }
-      it { should_not match(/href="https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
+      it { should_not match(/href="https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
     end
     context "and the holding isn't a reserves item" do
       let(:service_response) { create(:nyu_aleph_service_response) }
       it { should_not match /ezborrow-link/ }
       it { should_not match /E-ZBorrow/ }
-      it { should_not match(/href="https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
+      it { should_not match(/href="https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/) }
     end
   end
 end

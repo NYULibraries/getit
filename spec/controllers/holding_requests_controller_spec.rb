@@ -132,7 +132,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
       it 'should redirect to ILL' do
-        expect(subject.location).to match /^https:\/\/login(dev)?\.library\.nyu\.edu\/ezborrow\?query=/
+        expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/
       end
     end
   end
