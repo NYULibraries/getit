@@ -9,5 +9,5 @@ Devise.setup do |config|
   config.password_length = 8..128
   config.reset_password_within = 60.minutes
   config.sign_out_via = :get
-  config.omniauth :nyulibraries, ENV['NYULIBRARIES_ID'], ENV['NYULIBRARIES_SECRET']
+  config.omniauth :nyulibraries, ENV['APP_ID'], ENV['APP_SECRET']
 end
