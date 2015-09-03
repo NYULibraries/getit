@@ -39,7 +39,7 @@ Then(/^I should see the login page in the current window$/) do
 end
 
 Then(/^I should be logged out$/) do
-  expect(page).to have_text 'LOGGED OUT'
+  expect(page).to have_text 'Almost logged out'
 end
 
 Given(/^I click the logout link$/) do

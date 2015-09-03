@@ -46,8 +46,8 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/omniauth-nyulibraries.git
-  revision: 73e527844b90a7fdf3faf4a7a57d39fb1566f4c7
-  tag: v1.1.2
+  revision: 352bd2c76350483667c603c1a7e63735e4a283b8
+  tag: v2.0.0
   specs:
     omniauth-nyulibraries (1.1.0)
       omniauth-oauth2 (~> 1.2.0)
@@ -226,7 +226,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
-    jwt (1.5.0)
+    jwt (1.5.1)
     libv8 (3.16.14.7)
     macaddr (1.7.1)
       systemu (~> 2.6.2)
