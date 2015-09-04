@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610195404) do
+ActiveRecord::Schema.define(version: 20150729181646) do
 
   create_table "clickthroughs", force: true do |t|
     t.integer  "request_id",          default: 0, null: false
@@ -75,14 +75,14 @@ ActiveRecord::Schema.define(version: 20150610195404) do
   add_index "referents", ["year", "volume"], name: "by_year", using: :btree
 
   create_table "requests", force: true do |t|
-    t.string   "session_id",             limit: 100,  default: "", null: false
-    t.integer  "referent_id",                         default: 0,  null: false
+    t.string   "session_id",             limit: 100, default: "", null: false
+    t.integer  "referent_id",                        default: 0,  null: false
     t.string   "referrer_id"
-    t.datetime "created_at",                                       null: false
+    t.datetime "created_at",                                      null: false
     t.string   "client_ip_addr"
     t.boolean  "client_ip_is_simulated"
     t.string   "contextobj_fingerprint", limit: 32
-    t.string   "http_env",               limit: 2048
+    t.text     "http_env"
   end
 
   add_index "requests", ["client_ip_addr"], name: "index_requests_on_client_ip_addr", using: :btree
@@ -121,8 +121,8 @@ ActiveRecord::Schema.define(version: 20150610195404) do
     t.string   "firstname"
     t.string   "lastname"
     t.datetime "refreshed_at"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "sign_in_count",      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
