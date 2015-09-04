@@ -205,7 +205,7 @@ class UmlautController < ApplicationController
   end
 
   def create_collection
-    return Collection.new(@user_request, services(institutions_in_play(params[UserSession.institution_param_key])))
+    return Collection.new(@user_request, services(institutions_in_play(params['umlaut.institution'])))
   end
   protected :create_collection
 
@@ -244,8 +244,8 @@ class UmlautController < ApplicationController
   private :institutions_in_play
 
   def user_institutions
-    if current_user.present? and current_user.primary_institution.present?
-      [current_user.primary_institution]
+    if current_user.present? && current_user.institution.present?
+      [current_user.institution]
     else
       []
     end

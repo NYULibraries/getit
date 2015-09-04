@@ -1,38 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept:
-      - ! '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Jun 2014 16:50:52 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
-        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
-        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
-        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 16:50:52 GMT
-- request:
     method: get
     uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-06-16T17:16:00-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002928667&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
@@ -123,7 +91,7 @@ http_interactions:
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:53 GMT
 - request:
     method: post
@@ -276,7 +244,7 @@ http_interactions:
         \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
         \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
         \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:54 GMT
 - request:
     method: get
@@ -310,7 +278,7 @@ http_interactions:
       encoding: US-ASCII
       string: <?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002928667/items/NYU50002928667000010"></item></items></get-item-list>
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:55 GMT
 - request:
     method: get
@@ -350,7 +318,7 @@ http_interactions:
         Many faces of development :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Leiden
         : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
         Available</status></item></get-item>'
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:56 GMT
 - request:
     method: get
@@ -404,7 +372,7 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:57 GMT
 - request:
     method: get
@@ -458,7 +426,7 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:58 GMT
 - request:
     method: get
@@ -512,7 +480,7 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002928667</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:59 GMT
 - request:
     method: put
@@ -547,6 +515,6 @@ http_interactions:
       encoding: US-ASCII
       string: ! '<?xml version = "1.0" encoding = "UTF-8"?><put-item-hold><reply-text>ok</reply-text><reply-code>0000</reply-code><create-hold><note
         type="info">Action Succeeded</note></create-hold></put-item-hold> '
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 17:35:03 GMT
 recorded_with: VCR 2.9.2
