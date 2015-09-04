@@ -16,7 +16,8 @@ class PrimoId
     'ill' => 'nyu_aleph000762323',
     'Overcoming trauma through yoga' => 'dedupmrg200192935',
     'Gothic architecture' => 'nyu_aleph002517067',
-    'El Croquis' => 'nyu_aleph002106230'
+    'El Croquis' => 'nyu_aleph002106230',
+    'To kill a mockingbird [videorecording]' => 'nyu_aleph001624317'
   }
   attr_reader :id, :state
   def initialize(state)

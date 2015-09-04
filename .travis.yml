@@ -3,7 +3,7 @@ language: ruby
 bundler_args: --without development
 
 env:
-  - ILL_PATRON_STATUSES=[51,37,55] ALEPH_BASE_URL=http://aleph.library.edu ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf PRIMO_BASE_URL=http://primo.library.edu LOGIN_URL=https://dev.login.library.nyu.edu SSO_LOGOUT_PATH=/logout
+  - ILL_PATRON_STATUSES=[51,37,55] ALEPH_BASE_URL=http://aleph.library.edu ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf PRIMO_BASE_URL=http://primo.library.edu
 
 services:
   - memcached
@@ -19,6 +19,9 @@ rvm:
   - 2.0.0
   - 2.1.3
 
+git:
+  submodules: false
+
 notifications:
   irc:
     channels:
@@ -28,6 +31,6 @@ notifications:
       - "Change view : %{compare_url}"
       - "Build details : %{build_url}"
   email:
-    - lib-webservices@lnyu.edu
+    - lib-webservices@nyu.edu
 
 sudo: false

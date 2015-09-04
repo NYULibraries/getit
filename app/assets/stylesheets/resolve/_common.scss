@@ -66,6 +66,9 @@ nav {
     &.ezborrow-link {
       white-space: nowrap;
     }
+    &.afc-schedule-link {
+      background-color: $nyu-purple !important;
+    }
     @media (min-width: $screen-md) {
       width: 8em;
     }
