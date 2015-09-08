@@ -9,6 +9,15 @@ Given(/^I am logged in$/) do
   visit '/login'
 end
 
+Given(/^I am logged in as a non-AFC user$/) do
+  step "I am logged in"
+end
+
+Given(/^I am logged in as an AFC user$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = afc_omniauth_hash
+  visit '/login'
+end
+
 Given(/^I am not logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
