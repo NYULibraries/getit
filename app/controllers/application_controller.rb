@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   private
 
   def passive_login_url
-    "#{ENV['LOGIN_URL']}#{ENV['PASSIVE_LOGIN_PATH']}?client_id=#{ENV['APP_ID']}&origin=#{request_url_escaped}&login_path=#{login_path_escaped}"
+    "#{ENV['LOGIN_URL']}#{ENV['PASSIVE_LOGIN_PATH']}?client_id=#{ENV['APP_ID']}&origin=#{request_url_escaped}&return_uri=#{request_url_escaped}&login_path=#{login_path_escaped}"
   end
 
   def request_url_escaped
