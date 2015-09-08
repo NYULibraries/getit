@@ -20,7 +20,7 @@ describe 'resolve/_request_link' do
     it { should match /request-login-link/ }
     it { should match /Login for Request Options/ }
     it { should_not match /href="http:\/\/test.host\/holding_requests\/new\/#{service_response.id}"/ }
-    it { should match /href="http:\/\/test.host\/login\?return_url=http%3A%2F%2Furl.for.request"/ }
+    it { should match /href="http:\/\/test.host\/login\?origin=http%3A%2F%2Furl.for.request"/ }
     it { should_not match /target="_blank"/ }
   end
 end
