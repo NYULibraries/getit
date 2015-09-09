@@ -16,7 +16,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def after_omniauth_failure_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || super(resource)
+    request.env['omniauth.origin'] || stored_location_for(resource) || root_path
   end
 
   def find_user_with_or_without_provider
