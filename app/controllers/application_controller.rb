@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper :institutions
   include InstitutionsHelper
 
-  prepend_before_filter :passive_login, unless: -> { Rails.env.test? || Rails.env.development? }
+  prepend_before_filter :passive_login
   def passive_login
     if !cookies[:_check_passive_login]
       cookies[:_check_passive_login] = true
@@ -30,14 +30,20 @@ class ApplicationController < ActionController::Base
   # After signing out from the local application,
   # redirect to the logout path for the Login app
   def after_sign_out_path_for(resource_or_scope)
-    if ENV['SSO_LOGOUT_PATH'].present?
-      "#{ENV['LOGIN_URL']}#{ENV['SSO_LOGOUT_PATH']}"
+    if logout_path.present?
+      logout_path
     else
       super(resource_or_scope)
     end
   end
 
   private
+
+  def logout_path
+    if ENV['LOGIN_URL'].present? && ENV['SSO_LOGOUT_PATH'].present?
+      "#{ENV['LOGIN_URL']}#{ENV['SSO_LOGOUT_PATH']}"
+    end
+  end
 
   def passive_login_url
     "#{ENV['LOGIN_URL']}#{ENV['PASSIVE_LOGIN_PATH']}?client_id=#{ENV['APP_ID']}&return_uri=#{request_url_escaped}&login_path=#{login_path_escaped}"
