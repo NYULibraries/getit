@@ -15,6 +15,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  def after_omniauth_failure_path_for(resource)
+    request.env['omniauth.origin'] || stored_location_for(resource) || super(resource)
+  end
+
   def find_user_with_or_without_provider
     @find_user_with_or_without_provider ||= (find_user_with_provider.present?) ? find_user_with_provider : find_user_without_provider
   end
