@@ -46,7 +46,11 @@ class ApplicationController < ActionController::Base
   end
 
   def passive_login_url
-    "#{ENV['LOGIN_URL']}#{ENV['PASSIVE_LOGIN_PATH']}?client_id=#{ENV['APP_ID']}"
+    "#{ENV['LOGIN_URL']}#{ENV['PASSIVE_LOGIN_PATH']}?client_id=#{ENV['APP_ID']}&return_url=#{request_url_escaped}"
+  end
+
+  def request_url_escaped
+    CGI::escape(request.url)
   end
 
 end
