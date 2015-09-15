@@ -9,7 +9,7 @@
 <nav id="nav1">
   <%= render_umlaut_permalink %>
   <ul>
-    <li class="nyu-login"><%= login(:origin => url_for_request(@user_request), "umlaut.institution" => institution.code ) %></li>
+    <li class="nyu-login"><%= login("umlaut.institution" => institution.code ) %></li>
   </ul>
 </nav>
 <% end %>

@@ -7,10 +7,8 @@ http_interactions:
       encoding: UTF-8
       string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -19,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 02 Apr 2015 15:15:43 GMT
+      - Mon, 23 Jun 2014 16:04:36 GMT
       Server:
       - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
       Transfer-Encoding:
@@ -27,14 +25,16 @@ http_interactions:
       Content-Type:
       - text/xml; charset=UTF-8
     body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
+        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
+        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
+        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:43 GMT
+  recorded_at: Mon, 23 Jun 2014 16:04:37 GMT
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-04-02T11:15:43-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002517067&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-10-15T09:30:05-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002517067&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -42,7 +42,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -51,7 +51,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 02 Apr 2015 15:15:43 GMT
+      - Wed, 15 Oct 2014 13:30:05 GMT
       Server:
       - Apache
       Content-Type:
@@ -59,11 +59,11 @@ http_interactions:
       Transfer-Encoding:
       - chunked
     body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2015-04-02T11:15:43-04:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;9175115&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2014-10-15T09:30:05-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;7966577&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
         \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002517067&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
@@ -77,19 +77,40 @@ http_interactions:
         \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
         key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
-        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
-        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s21749E48-D94B-11E4-AA4A-CDCCFE4C1AE4&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;111076678899001&lt;/item&gt;\n    &lt;item key=\"2\"&gt;20430000000000002&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;20430000000000000&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s602319BE-546F-11E4-A0A6-4198FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002517067&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
-        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
-        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
-        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
-        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        \  <target>\n    <target_name>NYU_Libraries_LCL</target_name>\n    <target_public_name>NYU
+        Libraries</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000000</target_id>\n    <target_service_id>20430000000000000</target_service_id>\n
+        \   <service_type>getHolding</service_type>\n    <parser>NYU::ALL</parser>\n
+        \   <parse_param></parse_param>\n    <proxy>no</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set></char_set>\n
+        \   <displayer>NYU::ALL</displayer>\n    <target_url></target_url>\n    <is_related>no</is_related>\n
+        \   <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n
+        \   <target_public_name>Bobst Library  Interlibrary Loan</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111027614344000</target_id>\n
+        \   <target_service_id>111027614344001</target_service_id>\n    <service_type>getDocumentDelivery</service_type>\n
+        \   <parser>ILLiad::DDL</parser>\n    <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
         &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
         \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
         \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002517067%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>CAPTURE_CITATION</target_name>\n
+        \   <target_public_name>&lt;b&gt;this citation&lt;/b&gt;</target_public_name>\n
+        \   <object_portfolio_id></object_portfolio_id>\n    <target_id>111076678898000</target_id>\n
+        \   <target_service_id>111076678899001</target_service_id>\n    <service_type>getReference</service_type>\n
+        \   <parser>CAPTURE_CITATION::CAPTURE_CITATION</parser>\n    <parse_param>url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note>Use this link
+        to create a permanent URL for course pages.&lt;br&gt;\r\nFormat this citation
+        in MLA, APA, etc.</note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>https://ezproxy.library.nyu.edu/login?url=http://sfx.library.nyu.edu/sfxlcl41/cgi/public/capture_citation.cgi?source=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002517067+(Via+SFX)&amp;genre=journal&amp;openurl=http%3A%2F%2Fsfx.library.nyu.edu%2Fsfxlcl41%3Furl_ver%3DZ39.88-2004%26url_ctx_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Actx%26ctx_ver%3DZ39.88-2004%26ctx_tim%3D2014-10-15T09%253A30%253A05-04%253A00%26ctx_id%3D%26ctx_enc%3Dinfo%253Aofi%252Fenc%253AUTF-8%26rft_val_fmt%3Dinfo%253Aofi%252Ffmt%253Akev%253Amtx%253Ajournal%26req.ip%3D127.0.0.1%26rfr_id%3Dinfo%253Asid%252Fprimo.exlibrisgroup.com%253Aprimo-nyu_aleph002517067%26sfx.response_type%3Dmulti_obj_xml%26sfx.ignore_date_threshold%3D1%26sfx.show_availability%3D1</target_url>\n
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
@@ -103,7 +124,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:43 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:05 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -116,13 +137,13 @@ http_interactions:
         xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph002517067</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.6.0.1, ruby 2.1.3 (2014-09-19))
+      - HTTPClient/1.0 (2.4.0, ruby 1.9.3 (2013-11-22))
       Accept:
-      - "*/*"
+      - ! '*/*'
       Date:
-      - Thu, 02 Apr 2015 15:15:43 GMT
+      - Wed, 15 Oct 2014 13:30:06 GMT
       Soapaction:
-      - '"getRecord"'
+      - ! '"getRecord"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
@@ -130,246 +151,158 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: !binary |-
+        T0s=
     headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/xml;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 02 Apr 2015 15:15:43 GMT
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        dGV4dC94bWw7Y2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAxNSBPY3QgMjAxNCAxMzozMDowNiBHTVQ=
     body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
-          &lt;JAGROOT&gt;
-            &lt;RESULT&gt;
-              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
-                &lt;DOC LOCAL=&quot;true&quot;&gt;
-                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
-                    &lt;record&gt;
-                      &lt;control&gt;
-                        &lt;sourcerecordid&gt;002517067&lt;/sourcerecordid&gt;
-                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
-                        &lt;recordid&gt;nyu_aleph002517067&lt;/recordid&gt;
-                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
-                        &lt;ilsapiid&gt;NYU01002517067&lt;/ilsapiid&gt;
-                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
-                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
-                      &lt;/control&gt;
-                      &lt;display&gt;
-                        &lt;type&gt;book&lt;/type&gt;
-                        &lt;title&gt;Gothic architecture&lt;/title&gt;
-                        &lt;creator&gt;Louis  Grodecki  1910-1982.&lt;/creator&gt;
-                        &lt;contributor&gt;Roland Recht; Anne Prache&lt;/contributor&gt;
-                        &lt;publisher&gt;New York : H. N. Abrams&lt;/publisher&gt;
-                        &lt;creationdate&gt;1977, c1976&lt;/creationdate&gt;
-                        &lt;format&gt;442 p. : ill. ; 29 cm.&lt;/format&gt;
-                        &lt;identifier&gt;$$Cisbn$$V081091008X; $$Cisbn$$V9780810910089&lt;/identifier&gt;
-                        &lt;subject&gt;Architecture, Gothic&lt;/subject&gt;
-                        &lt;language&gt;eng;fre&lt;/language&gt;
-                        &lt;relation&gt;$$Cseries $$VHistory of world architecture.&lt;/relation&gt;
-                        &lt;source&gt;nyu_aleph&lt;/source&gt;
-                        &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(NA480 .G7613 1977 )$$Savailable$$32$$40$$5N$$66$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;
-                        &lt;availlibrary&gt;$$ICU$$LCU$$1Main Collection$$2(NA480 .G7613 1977 )$$Savailable$$31$$40$$5N$$60$$XNYU50$$YCU$$ZMAIN&lt;/availlibrary&gt;
-                        &lt;availlibrary&gt;$$INYU$$LIFA$$1Main Collection$$2(NA480 .G7613 1977 Non-circulating )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YNIFA$$ZMAIN&lt;/availlibrary&gt;
-                        &lt;availlibrary&gt;$$INS$$LNSGI$$1Main Collection$$2(NA480 .G7613 1977 )$$Savailable$$31$$40$$5N$$64$$XNYU50$$YTNSGI$$ZMAIN&lt;/availlibrary&gt;
-                        &lt;unititle&gt;Architecture gothique.&lt;/unititle&gt;
-                        &lt;lds02&gt;nyu_aleph002517067&lt;/lds02&gt;
-                        &lt;lds01&gt;NYU&lt;/lds01&gt;
-                        &lt;lds01&gt;CU&lt;/lds01&gt;
-                        &lt;lds01&gt;NS&lt;/lds01&gt;
-                        &lt;availinstitution&gt;$$INS$$Savailable&lt;/availinstitution&gt;
-                        &lt;availinstitution&gt;$$ICU$$Savailable&lt;/availinstitution&gt;
-                        &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;
-                        &lt;availpnx&gt;available&lt;/availpnx&gt;
-                      &lt;/display&gt;
-                      &lt;links&gt;
-                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
-                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
-                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
-                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
-                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
-                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
-                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
-                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
-                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
-                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
-                      &lt;/links&gt;
-                      &lt;search&gt;
-                        &lt;creatorcontrib&gt;Louis,  Grodecki  1910-1982.&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Grodecki, Louis, 1910-1982.&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Grodecki, L&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Louis Grodecki, in collaboration with Anne Prache and Roland Recht ; translated from the French by I. Mark Paris.&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Roland  Recht&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Anne  Prache&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Recht, R&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Prache, A&lt;/creatorcontrib&gt;
-                        &lt;title&gt;Gothic architecture /&lt;/title&gt;
-                        &lt;subject&gt;Architecture, Gothic&lt;/subject&gt;
-                        &lt;subject&gt;Gothic architecture&lt;/subject&gt;
-                        &lt;general&gt;H. N. Abrams,&lt;/general&gt;
-                        &lt;general&gt;Translation of L'architecture gothique.&lt;/general&gt;
-                        &lt;general&gt;Includes index.&lt;/general&gt;
-                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
-                        &lt;recordid&gt;nyu_aleph002517067&lt;/recordid&gt;
-                        &lt;isbn&gt;081091008X&lt;/isbn&gt;
-                        &lt;isbn&gt;9780810910089&lt;/isbn&gt;
-                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
-                        &lt;creationdate&gt;1977&lt;/creationdate&gt;
-                        &lt;creationdate&gt;1976&lt;/creationdate&gt;
-                        &lt;addtitle&gt;History of world architecture series&lt;/addtitle&gt;
-                        &lt;addtitle&gt;History of world architecture.&lt;/addtitle&gt;
-                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
-                        &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;
-                        &lt;searchscope&gt;CU&lt;/searchscope&gt;
-                        &lt;searchscope&gt;CU Main Collection&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NIFA&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NIFA Main Collection&lt;/searchscope&gt;
-                        &lt;searchscope&gt;TNSGI&lt;/searchscope&gt;
-                        &lt;searchscope&gt;TNSGI Main Collection&lt;/searchscope&gt;
-                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NS&lt;/searchscope&gt;
-                        &lt;searchscope&gt;IFA&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NSGI&lt;/searchscope&gt;
-                        &lt;searchscope&gt;CGEN&lt;/searchscope&gt;
-                        &lt;scope&gt;BOBST&lt;/scope&gt;
-                        &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;
-                        &lt;scope&gt;CU&lt;/scope&gt;
-                        &lt;scope&gt;CU Main Collection&lt;/scope&gt;
-                        &lt;scope&gt;NIFA&lt;/scope&gt;
-                        &lt;scope&gt;NIFA Main Collection&lt;/scope&gt;
-                        &lt;scope&gt;TNSGI&lt;/scope&gt;
-                        &lt;scope&gt;TNSGI Main Collection&lt;/scope&gt;
-                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
-                        &lt;scope&gt;NYU&lt;/scope&gt;
-                        &lt;scope&gt;NS&lt;/scope&gt;
-                        &lt;scope&gt;IFA&lt;/scope&gt;
-                        &lt;scope&gt;NSGI&lt;/scope&gt;
-                        &lt;scope&gt;CGEN&lt;/scope&gt;
-                        &lt;lsr01&gt;NA480 .G7613 1977&lt;/lsr01&gt;
-                        &lt;lsr01&gt;NA480.G7613 1977&lt;/lsr01&gt;
-                        &lt;alttitle&gt;Architecture gothique. English&lt;/alttitle&gt;
-                        &lt;lsr02&gt;H. N. Abrams,&lt;/lsr02&gt;
-                      &lt;/search&gt;
-                      &lt;sort&gt;
-                        &lt;title&gt;Gothic architecture /&lt;/title&gt;
-                        &lt;creationdate&gt;1977&lt;/creationdate&gt;
-                        &lt;author&gt;Grodecki, Louis, 1910-1982.&lt;/author&gt;
-                        &lt;lso01&gt;1977&lt;/lso01&gt;
-                      &lt;/sort&gt;
-                      &lt;facets&gt;
-                        &lt;language&gt;eng&lt;/language&gt;
-                        &lt;language&gt;fre&lt;/language&gt;
-                        &lt;creationdate&gt;1977&lt;/creationdate&gt;
-                        &lt;topic&gt;Architecture, Gothic&lt;/topic&gt;
-                        &lt;collection&gt;BOBST&lt;/collection&gt;
-                        &lt;collection&gt;CU&lt;/collection&gt;
-                        &lt;collection&gt;NIFA&lt;/collection&gt;
-                        &lt;collection&gt;TNSGI&lt;/collection&gt;
-                        &lt;toplevel&gt;available&lt;/toplevel&gt;
-                        &lt;prefilter&gt;books&lt;/prefilter&gt;
-                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
-                        &lt;creatorcontrib&gt;Grodecki, L&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Recht, R&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Prache, A&lt;/creatorcontrib&gt;
-                        &lt;library&gt;BOBST&lt;/library&gt;
-                        &lt;library&gt;IFA&lt;/library&gt;
-                        &lt;library&gt;NSGI&lt;/library&gt;
-                        &lt;library&gt;CGEN&lt;/library&gt;
-                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
-                        &lt;classificationlcc&gt;N - Fine arts.&#x2013;Architecture&#x2013;History&lt;/classificationlcc&gt;
-                        &lt;frbrgroupid&gt;136245462&lt;/frbrgroupid&gt;
-                        &lt;frbrtype&gt;5&lt;/frbrtype&gt;
-                      &lt;/facets&gt;
-                      &lt;dedup&gt;
-                        &lt;t&gt;1&lt;/t&gt;
-                        &lt;c1&gt;77004853&lt;/c1&gt;
-                        &lt;c2&gt;081091008X;9780810910089&lt;/c2&gt;
-                        &lt;c3&gt;gothicarchitecture&lt;/c3&gt;
-                        &lt;c4&gt;1977&lt;/c4&gt;
-                        &lt;f1&gt;77004853&lt;/f1&gt;
-                        &lt;f3&gt;081091008X;9780810910089&lt;/f3&gt;
-                        &lt;f5&gt;gothicarchitecture&lt;/f5&gt;
-                        &lt;f6&gt;1977&lt;/f6&gt;
-                        &lt;f7&gt;gothic architecture&lt;/f7&gt;
-                        &lt;f8&gt;nyu&lt;/f8&gt;
-                        &lt;f9&gt;442 p. :&lt;/f9&gt;
-                        &lt;f10&gt;h n abrams&lt;/f10&gt;
-                        &lt;f11&gt;grodecki louis 1910 1982&lt;/f11&gt;
-                      &lt;/dedup&gt;
-                      &lt;frbr&gt;
-                        &lt;t&gt;1&lt;/t&gt;
-                        &lt;k1&gt;$$Kgrodecki louis 1910 1982$$AA&lt;/k1&gt;
-                        &lt;k3&gt;$$Kbookarchitecture gothique$$AT&lt;/k3&gt;
-                        &lt;k3&gt;$$Kbookgothic architecture$$AT&lt;/k3&gt;
-                      &lt;/frbr&gt;
-                      &lt;delivery&gt;
-                        &lt;institution&gt;NYU&lt;/institution&gt;
-                        &lt;institution&gt;CU&lt;/institution&gt;
-                        &lt;institution&gt;NS&lt;/institution&gt;
-                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
-                        &lt;delcategory&gt;Physical Item$$ICU&lt;/delcategory&gt;
-                        &lt;delcategory&gt;Physical Item$$INS&lt;/delcategory&gt;
-                      &lt;/delivery&gt;
-                      &lt;enrichment&gt;
-                        &lt;classificationlcc&gt;NA480&lt;/classificationlcc&gt;
-                      &lt;/enrichment&gt;
-                      &lt;ranking&gt;
-                        &lt;booster1&gt;1&lt;/booster1&gt;
-                        &lt;booster2&gt;1&lt;/booster2&gt;
-                      &lt;/ranking&gt;
-                      &lt;addata&gt;
-                        &lt;aufirst&gt;Louis,&lt;/aufirst&gt;
-                        &lt;au&gt;Grodecki, Louis, 1910-1982&lt;/au&gt;
-                        &lt;addau&gt;Recht, Roland&lt;/addau&gt;
-                        &lt;addau&gt;Prache, Anne&lt;/addau&gt;
-                        &lt;btitle&gt;Gothic architecture&lt;/btitle&gt;
-                        &lt;seriestitle&gt;History of world architecture&lt;/seriestitle&gt;
-                        &lt;date&gt;1977&lt;/date&gt;
-                        &lt;risdate&gt;1977, c1976.&lt;/risdate&gt;
-                        &lt;isbn&gt;081091008X&lt;/isbn&gt;
-                        &lt;isbn&gt;9780810910089&lt;/isbn&gt;
-                        &lt;format&gt;book&lt;/format&gt;
-                        &lt;genre&gt;book&lt;/genre&gt;
-                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
-                        &lt;notes&gt;Bibliography: p. 423-427.&lt;/notes&gt;
-                        &lt;cop&gt;New York&lt;/cop&gt;
-                        &lt;pub&gt;H. N. Abrams&lt;/pub&gt;
-                        &lt;lccn&gt;77004853&lt;/lccn&gt;
-                        &lt;lad01&gt;BOBSTBOBSTNIFACUTNSGI&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item$$ICU&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item$$INS&lt;/lad01&gt;
-                      &lt;/addata&gt;
-                      &lt;browse&gt;
-                        &lt;author&gt;$$DGrodecki, Louis, 1910-1982$$EGrodecki, Louis, 1910-1982$$INYU10000152593$$PY&lt;/author&gt;
-                        &lt;author&gt;$$DRecht, Roland$$ERecht, Roland$$INYU10000202229$$PY&lt;/author&gt;
-                        &lt;author&gt;$$DPrache, Anne$$EPrache, Anne$$INYU10000215119$$PY&lt;/author&gt;
-                        &lt;title&gt;$$DGothic architecture$$EGothic architecture&lt;/title&gt;
-                        &lt;title&gt;$$DArchitecture gothique. English$$EArchitecture gothique. English&lt;/title&gt;
-                        &lt;title&gt;$$DHistory of world architecture series$$EHistory of world architecture series&lt;/title&gt;
-                        &lt;title&gt;$$DHistory of world architecture$$EHistory of world architecture&lt;/title&gt;
-                        &lt;subject&gt;$$DArchitecture, Gothic$$EArchitecture, Gothic$$INYU10001466029$$PY&lt;/subject&gt;
-                        &lt;subject&gt;$$DGothic architecture$$EGothic architecture$$INYU10001466029$$PN&lt;/subject&gt;
-                        &lt;callnumber&gt;$$IPRIMO$$DNA480 .G7613 1977$$E0na   00480.g  76130  1977$$T0&lt;/callnumber&gt;
-                        &lt;callnumber&gt;$$IPRIMO$$DNA480 .G7613 1977 Non-circulating$$E0na   00480.g  76130  1977 non-circulating$$T0&lt;/callnumber&gt;
-                        &lt;institution&gt;NYU&lt;/institution&gt;
-                        &lt;institution&gt;CU&lt;/institution&gt;
-                        &lt;institution&gt;NS&lt;/institution&gt;
-                      &lt;/browse&gt;
-                    &lt;/record&gt;
-                  &lt;/PrimoNMBib&gt;
-                &lt;/DOC&gt;
-              &lt;/DOCSET&gt;
-            &lt;/RESULT&gt;
-          &lt;/JAGROOT&gt;
-        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;002517067&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph002517067&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01002517067&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;Gothic architecture&lt;/title&gt;\n                &lt;creator&gt;Louis
+        \ Grodecki  1910-1982.&lt;/creator&gt;\n                &lt;contributor&gt;Roland
+        Recht; Anne Prache&lt;/contributor&gt;\n                &lt;publisher&gt;New
+        York : H. N. Abrams&lt;/publisher&gt;\n                &lt;creationdate&gt;1977,
+        c1976&lt;/creationdate&gt;\n                &lt;format&gt;442 p. : ill. ;
+        29 cm.&lt;/format&gt;\n                &lt;identifier&gt;$$Cisbn$$V081091008X;
+        $$Cisbn$$V9780810910089&lt;/identifier&gt;\n                &lt;subject&gt;Architecture,
+        Gothic&lt;/subject&gt;\n                &lt;language&gt;eng;fre&lt;/language&gt;\n
+        \               &lt;relation&gt;$$Cseries $$VHistory of world architecture.&lt;/relation&gt;\n
+        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main
+        Collection$$2(NA480 .G7613 1977 )$$Savailable$$32$$40$$5N$$66$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$ICU$$LCU$$1Main Collection$$2(NA480
+        .G7613 1977 Non-circulating )$$Savailable$$31$$40$$5N$$60$$XNYU50$$YCU$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$INYU$$LIFA$$1Main Collection$$2(NA480
+        .G7613 1977 Non-circulating )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YNIFA$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;availlibrary&gt;$$INS$$LNSGI$$1Main Collection$$2(NA480
+        .G7613 1977 )$$Savailable$$31$$40$$5N$$64$$XNYU50$$YTNSGI$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;unititle&gt;Architecture gothique.&lt;/unititle&gt;\n
+        \               &lt;lds02&gt;nyu_aleph002517067&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;lds01&gt;CU&lt;/lds01&gt;\n                &lt;lds01&gt;NS&lt;/lds01&gt;\n
+        \               &lt;availinstitution&gt;$$INS$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availinstitution&gt;$$ICU$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;available&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
+        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;Louis,
+        \ Grodecki  1910-1982.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Grodecki,
+        Louis, 1910-1982.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Grodecki,
+        L&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Louis Grodecki,
+        in collaboration with Anne Prache and Roland Recht ; translated from the French
+        by I. Mark Paris.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Roland
+        \ Recht&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Anne
+        \ Prache&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Recht,
+        R&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Prache, A&lt;/creatorcontrib&gt;\n
+        \               &lt;title&gt;Gothic architecture /&lt;/title&gt;\n                &lt;subject&gt;Architecture,
+        Gothic&lt;/subject&gt;\n                &lt;subject&gt;Gothic architecture&lt;/subject&gt;\n
+        \               &lt;general&gt;H. N. Abrams,&lt;/general&gt;\n                &lt;general&gt;Translation
+        of L'architecture gothique.&lt;/general&gt;\n                &lt;general&gt;Includes
+        index.&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph002517067&lt;/recordid&gt;\n                &lt;isbn&gt;081091008X&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780810910089&lt;/isbn&gt;\n                &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n
+        \               &lt;creationdate&gt;1977&lt;/creationdate&gt;\n                &lt;creationdate&gt;1976&lt;/creationdate&gt;\n
+        \               &lt;addtitle&gt;History of world architecture series&lt;/addtitle&gt;\n
+        \               &lt;addtitle&gt;History of world architecture.&lt;/addtitle&gt;\n
+        \               &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n                &lt;searchscope&gt;BOBST
+        Main Collection&lt;/searchscope&gt;\n                &lt;searchscope&gt;CU&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;CU Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NIFA&lt;/searchscope&gt;\n                &lt;searchscope&gt;NIFA
+        Main Collection&lt;/searchscope&gt;\n                &lt;searchscope&gt;TNSGI&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;TNSGI Main Collection&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n                &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NS&lt;/searchscope&gt;\n                &lt;searchscope&gt;IFA&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NSGI&lt;/searchscope&gt;\n                &lt;searchscope&gt;CGEN&lt;/searchscope&gt;\n
+        \               &lt;scope&gt;BOBST&lt;/scope&gt;\n                &lt;scope&gt;BOBST
+        Main Collection&lt;/scope&gt;\n                &lt;scope&gt;CU&lt;/scope&gt;\n
+        \               &lt;scope&gt;CU Main Collection&lt;/scope&gt;\n                &lt;scope&gt;NIFA&lt;/scope&gt;\n
+        \               &lt;scope&gt;NIFA Main Collection&lt;/scope&gt;\n                &lt;scope&gt;TNSGI&lt;/scope&gt;\n
+        \               &lt;scope&gt;TNSGI Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;scope&gt;NS&lt;/scope&gt;\n
+        \               &lt;scope&gt;IFA&lt;/scope&gt;\n                &lt;scope&gt;NSGI&lt;/scope&gt;\n
+        \               &lt;scope&gt;CGEN&lt;/scope&gt;\n                &lt;alttitle&gt;Architecture
+        gothique. English&lt;/alttitle&gt;\n                &lt;lsr01&gt;NA480 .G7613
+        1977&lt;/lsr01&gt;\n                &lt;lsr01&gt;NA480.G7613 1977&lt;/lsr01&gt;\n
+        \               &lt;lsr02&gt;H. N. Abrams,&lt;/lsr02&gt;\n              &lt;/search&gt;\n
+        \             &lt;sort&gt;\n                &lt;title&gt;Gothic architecture
+        /&lt;/title&gt;\n                &lt;creationdate&gt;1977&lt;/creationdate&gt;\n
+        \               &lt;author&gt;Grodecki, Louis, 1910-1982.&lt;/author&gt;\n
+        \               &lt;lso01&gt;1977&lt;/lso01&gt;\n              &lt;/sort&gt;\n
+        \             &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;language&gt;fre&lt;/language&gt;\n                &lt;creationdate&gt;1977&lt;/creationdate&gt;\n
+        \               &lt;topic&gt;Architecture, Gothic&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
+        \               &lt;collection&gt;CU&lt;/collection&gt;\n                &lt;collection&gt;NIFA&lt;/collection&gt;\n
+        \               &lt;collection&gt;TNSGI&lt;/collection&gt;\n                &lt;toplevel&gt;available&lt;/toplevel&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Grodecki, L&lt;/creatorcontrib&gt;\n
+        \               &lt;creatorcontrib&gt;Recht, R&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Prache,
+        A&lt;/creatorcontrib&gt;\n                &lt;library&gt;BOBST&lt;/library&gt;\n
+        \               &lt;library&gt;IFA&lt;/library&gt;\n                &lt;library&gt;NSGI&lt;/library&gt;\n
+        \               &lt;library&gt;CGEN&lt;/library&gt;\n                &lt;lfc01&gt;Main
+        Collection&lt;/lfc01&gt;\n                &lt;classificationlcc&gt;N - Fine
+        arts.&#x2013;Architecture&#x2013;History&lt;/classificationlcc&gt;\n                &lt;frbrgroupid&gt;104232469&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;5&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c1&gt;77004853&lt;/c1&gt;\n
+        \               &lt;c2&gt;081091008X;9780810910089&lt;/c2&gt;\n                &lt;c3&gt;gothicarchitecture&lt;/c3&gt;\n
+        \               &lt;c4&gt;1977&lt;/c4&gt;\n                &lt;f1&gt;77004853&lt;/f1&gt;\n
+        \               &lt;f3&gt;081091008X;9780810910089&lt;/f3&gt;\n                &lt;f5&gt;gothicarchitecture&lt;/f5&gt;\n
+        \               &lt;f6&gt;1977&lt;/f6&gt;\n                &lt;f7&gt;gothic
+        architecture&lt;/f7&gt;\n                &lt;f8&gt;nyu&lt;/f8&gt;\n                &lt;f9&gt;442
+        p. :&lt;/f9&gt;\n                &lt;f10&gt;h n abrams&lt;/f10&gt;\n                &lt;f11&gt;grodecki
+        louis 1910 1982&lt;/f11&gt;\n              &lt;/dedup&gt;\n              &lt;frbr&gt;\n
+        \               &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Kgrodecki
+        louis 1910 1982$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbookarchitecture
+        gothique$$AT&lt;/k3&gt;\n                &lt;k3&gt;$$Kbookgothic architecture$$AT&lt;/k3&gt;\n
+        \             &lt;/frbr&gt;\n              &lt;delivery&gt;\n                &lt;institution&gt;NYU&lt;/institution&gt;\n
+        \               &lt;institution&gt;CU&lt;/institution&gt;\n                &lt;institution&gt;NS&lt;/institution&gt;\n
+        \               &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n
+        \             &lt;enrichment&gt;\n                &lt;classificationlcc&gt;NA480&lt;/classificationlcc&gt;\n
+        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Grodecki&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Louis,&lt;/aufirst&gt;\n                &lt;au&gt;Grodecki,
+        Louis, 1910-1982&lt;/au&gt;\n                &lt;addau&gt;Recht, Roland&lt;/addau&gt;\n
+        \               &lt;addau&gt;Prache, Anne&lt;/addau&gt;\n                &lt;btitle&gt;Gothic
+        architecture&lt;/btitle&gt;\n                &lt;seriestitle&gt;History of
+        world architecture&lt;/seriestitle&gt;\n                &lt;date&gt;1977&lt;/date&gt;\n
+        \               &lt;risdate&gt;1977, c1976.&lt;/risdate&gt;\n                &lt;isbn&gt;081091008X&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;9780810910089&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;notes&gt;Bibliography: p. 423-427.&lt;/notes&gt;\n                &lt;cop&gt;New
+        York&lt;/cop&gt;\n                &lt;pub&gt;H. N. Abrams&lt;/pub&gt;\n                &lt;lad01&gt;BOBSTBOBSTNIFACUTNSGI&lt;/lad01&gt;\n
+        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n                &lt;lccn&gt;77004853&lt;/lccn&gt;\n
+        \             &lt;/addata&gt;\n            &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n
+        \       &lt;/DOC&gt;\n      &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:43 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:06 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items
@@ -378,11 +311,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -390,22 +323,24 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:07 GMT
     body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000010"></item><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000020"></item><item
-        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000030"></item><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000040"></item><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000030"></item><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000050"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:07 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000010
@@ -414,11 +349,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -426,26 +361,28 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:07 GMT
     body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142007551271</z30-barcode><z30-sub-library>NYU
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142007551271</z30-barcode><z30-sub-library>NYU
         Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20000404</z30-open-date><z30-update-date>20000404</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20120614</z30-date-last-return><z30-hour-last-return>1011</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>006</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
         .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099286</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>003</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20141106</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099286</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>003</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
         Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
         architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>201411061716313</z13-upd-time-stamp></z13><status>On
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:07 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000020
@@ -454,11 +391,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -466,67 +403,28 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:07 GMT
     body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142033436224</z30-barcode><z30-sub-library>NYU
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142033436224</z30-barcode><z30-sub-library>NYU
         Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20030326</z30-open-date><z30-update-date>20120113</z30-update-date><z30-cataloger>DIGARBOB</z30-cataloger><z30-date-last-return>20131114</z30-date-last-return><z30-hour-last-return>1258</z30-hour-last-return><z30-ip-last-return>BOBSTSTACKSLAPTOP</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
         .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099287</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20141106</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099287</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
         Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
         architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>201411061716313</z13-upd-time-stamp></z13><status>On
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000030
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NIFA</z30-sub-library-code><z30-item-process-status-code>OS</z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    3.0</z30-item-sequence><z30-barcode>N10101380</z30-barcode><z30-sub-library>NYU
-        Institute of Fine Arts</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
-        ILL</z30-item-status><z30-open-date>20030701</z30-open-date><z30-update-date>20030701</z30-update-date><z30-cataloger>PECHARIC</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
-        .G7613 1977 Non-circulating</z30-call-no><z30-call-no-key>0 na&quot;480 g7613
-        1977 non circulating 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>On
-        Search</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099288</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20141106</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
-        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
-        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>201411061716313</z13-upd-time-stamp></z13><status>Request
-        ILL</status></item></get-item> '
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:07 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000040
@@ -535,11 +433,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -547,26 +445,72 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:07 GMT
     body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>CU</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    4.0</z30-item-sequence><z30-barcode>31206008156503</z30-barcode><z30-sub-library>Cooper
-        Union Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20001010</z30-open-date><z30-update-date>20141106</z30-update-date><z30-cataloger>GUNNINGC</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>CU</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>04</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    4.0</z30-item-sequence><z30-barcode>31206008156503</z30-barcode><z30-sub-library>Cooper
+        Union Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Library
+        Use Only</z30-item-status><z30-open-date>20001010</z30-open-date><z30-update-date>20001010</z30-update-date><z30-cataloger>GUNNINGC</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
-        .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099289</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201411061715594</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20141106</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        .G7613 1977 Non-circulating</z30-call-no><z30-call-no-key>0 na&quot;480 g7613
+        1977 non circulating 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099289</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
         Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
         architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>201411061716313</z13-upd-time-stamp></z13><status>On
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:08 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000030
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:08 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NIFA</z30-sub-library-code><z30-item-process-status-code>OS</z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    3.0</z30-item-sequence><z30-barcode>N10101380</z30-barcode><z30-sub-library>NYU
+        Institute of Fine Arts</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
+        ILL</z30-item-status><z30-open-date>20030701</z30-open-date><z30-update-date>20030701</z30-update-date><z30-cataloger>PECHARIC</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977 Non-circulating</z30-call-no><z30-call-no-key>0 na&quot;480 g7613
+        1977 non circulating 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>On
+        Search</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099288</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Request
+        ILL</status></item></get-item> '
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 13:30:08 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002517067/items/NYU50002517067000050
@@ -575,11 +519,11 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.1
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -587,37 +531,86 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:08 GMT
     body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSGI</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    5.0</z30-item-sequence><z30-barcode>31207009093398</z30-barcode><z30-sub-library>TNS
-        University Center Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSGI</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    5.0</z30-item-sequence><z30-barcode>31207009093398</z30-barcode><z30-sub-library>New
+        School University Center</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20050601</z30-open-date><z30-update-date>20050601</z30-update-date><z30-cataloger>EDMISTON</z30-cataloger><z30-date-last-return>20120420</z30-date-last-return><z30-hour-last-return>1736</z30-hour-last-return><z30-ip-last-return>149.31.35.46</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
         .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>001099290</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>004</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20141106</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        in Process</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>001099290</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>004</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
         Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
         architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>201411061716313</z13-upd-time-stamp></z13><status>On
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:08 GMT
 - request:
-    method: post
-    uri: https://login.library.edu/pds
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010
     body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
+      encoding: US-ASCII
+      string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:08 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142007551271</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20000404</z30-open-date><z30-update-date>20000404</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20120614</z30-date-last-return><z30-hour-last-return>1011</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>006</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099286</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>003</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/hold"
+        allowed="N"><note type="error">Patron does not have permission to place a
+        hold request for this item.</note></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002517067</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 13:30:09 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Grodecki,%20Louis,%201910-1982%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
       User-Agent:
       - Ruby
   response:
@@ -625,20 +618,40 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
       Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
+      - Apache-Coyote/1.1
+      Content-Location:
+      - /identities/search/PersonalIdentities?query=local.Name+all+%22Grodecki%2C+Louis%2C+1910-1982%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml
       Content-Type:
-      - text/xml; charset=UTF-8
+      - text/xml
+      Content-Length:
+      - '1992'
+      Date:
+      - Wed, 15 Oct 2014 13:30:09 GMT
     body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &amp;#34;Grodecki, Louis, 1910-1982&amp;#34;</query><xQuery><ns2:searchClause
+        xsi:type=\"ns2:searchClauseType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index
+        xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">Grodecki,
+        Louis, 1910-1982</ns2:term></ns2:searchClause></xQuery><maximumRecords xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema
+        xsi:type=\"xsd:string\">default</recordSchema><sortKeys xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:09 GMT
 - request:
     method: get
     uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:77004853
@@ -646,10 +659,8 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -658,39 +669,39 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:09 GMT
       Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.39-0+deb7u2
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u14
       X-Powered-By:
-      - PHP/5.4.39-0+deb7u2
-      Access-Control-Allow-Origin:
-      - "*"
+      - PHP/5.4.4-14+deb7u14
       Content-Length:
       - '774'
       Content-Type:
       - application/json; charset=UTF-8
       Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a423660;expires=Thu, 02-Apr-2015
-        15:25:44 GMT;path=/;httponly
+      - NSC_mchspvq-iu=ffffffff854c63df45525d5f4f58455e445a4a423660;expires=Wed, 15-Oct-2014
+        13:40:09 GMT;path=/;httponly
     body:
-      encoding: UTF-8
-      string: |2-
+      encoding: US-ASCII
+      string: ! '
 
 
-        {"lccn:77004853":{"records":{"000738409":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/000738409","titles":["Gothic architecture \/"],"isbns":["9780810910263","9780810910263"],"issns":[],"oclcs":["2911094"],"lccns":["77004853"],"publishDates":["1977"]}},"items":[{"orig":"University of Michigan","fromRecord":"000738409","htid":"mdp.39015006321163","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015006321163","rightsCode":"ic","lastUpdate":"20140507","enumcron":false,"usRightsString":"Limited (search-only)"},{"orig":"University of Michigan","fromRecord":"000738409","htid":"mdp.39015007699815","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015007699815","rightsCode":"ic","lastUpdate":"20140627","enumcron":false,"usRightsString":"Limited (search-only)"}]}}
+        {"lccn:77004853":{"records":{"000738409":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/000738409","titles":["Gothic
+        architecture \/"],"isbns":["9780810910263","9780810910263"],"issns":[],"oclcs":["2911094"],"lccns":["77004853"],"publishDates":["1977"]}},"items":[{"orig":"University
+        of Michigan","fromRecord":"000738409","htid":"mdp.39015006321163","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015006321163","rightsCode":"ic","lastUpdate":"20140507","enumcron":false,"usRightsString":"Limited
+        (search-only)"},{"orig":"University of Michigan","fromRecord":"000738409","htid":"mdp.39015007699815","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015007699815","rightsCode":"ic","lastUpdate":"20140627","enumcron":false,"usRightsString":"Limited
+        (search-only)"}]}}'
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:09 GMT
 - request:
     method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki,%20louis,%201910%201982)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    uri: http://www.archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -699,38 +710,36 @@ http_interactions:
       message: Moved Temporarily
     headers:
       Server:
-      - nginx/1.4.6 (Ubuntu)
+      - nginx/1.1.19
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:09 GMT
       Content-Type:
       - text/html
       Content-Length:
-      - '169'
+      - '161'
       Connection:
       - keep-alive
       Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22gothic+architecture%22+AND+creator:%28grodecki%2C+louis%2C+1910+1982%29+AND+(mediatype:texts+OR+mediatype:audio)
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22gothic+architecture%22+AND+creator:%28grodecki%29+AND+(mediatype:texts+OR+mediatype:audio)
       Expires:
-      - Thu, 02 Apr 2015 21:15:44 GMT
+      - Wed, 15 Oct 2014 19:30:09 GMT
       Cache-Control:
       - max-age=21600
     body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+      encoding: US-ASCII
+      string: ! "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:44 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:09 GMT
 - request:
     method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki,%20louis,%201910%201982)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    uri: http://archive.org/advancedsearch.php?fl%5B0%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -739,9 +748,9 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx/1.4.6 (Ubuntu)
+      - nginx/1.1.19
       Date:
-      - Thu, 02 Apr 2015 15:15:44 GMT
+      - Wed, 15 Oct 2014 13:30:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -749,406 +758,210 @@ http_interactions:
       Connection:
       - keep-alive
       X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.5
+      - PHP/5.3.10-1ubuntu3.2
     body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":15,"params":{"wt":"json","rows":"999","qin":"title:\"gothic
-        architecture\" AND creator:(grodecki, louis, 1910 1982) AND (mediatype:texts
-        OR mediatype:audio)","fl":"*","start":"0","q":"title:\"gothic architecture\"
-        AND creator:(grodecki, louis, 1910 1982 ) AND ( mediatype:texts OR mediatype:audio
-        )"}},"response":{"numFound":0,"start":0,"docs":[]}}'
+      encoding: US-ASCII
+      string: ! '{"responseHeader":{"status":0,"QTime":237,"params":{"qin":"title:\"gothic
+        architecture\" AND creator:(grodecki) AND (mediatype:texts OR mediatype:audio)","fl":"*","start":"0","q":"title:\"gothic
+        architecture\" AND creator:(grodecki ) AND ( mediatype:texts OR mediatype:audio
+        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
     http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:45 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:45 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:45 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:45 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:45 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:45 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:46 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:46 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:46 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:46 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:46 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:46 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:47 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:47 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:47 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:47 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
-- request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 02 Apr 2015 15:15:47 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8" ?><pds><error>Error User does not
-        exist</error></pds>
-    http_version: 
-  recorded_at: Thu, 02 Apr 2015 15:15:47 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:10 GMT
 - request:
     method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22gothic%20architecture%22%20AND%20creator:(grodecki,%20louis,%201910%201982)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+      - ! '*/*'
   response:
     status:
-      code: 302
-      message: Moved Temporarily
+      code: 200
+      message: OK
     headers:
       Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Fri, 05 Jun 2015 18:31:00 GMT
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
-      - text/html
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22gothic+architecture%22+AND+creator:%28grodecki%2C+louis%2C+1910+1982%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Sat, 06 Jun 2015 00:31:00 GMT
-      Cache-Control:
-      - max-age=21600
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:12 GMT
     body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142007551271</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20000404</z30-open-date><z30-update-date>20000404</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20120614</z30-date-last-return><z30-hour-last-return>1011</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>006</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099286</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>003</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/hold"
+        allowed="N"><note type="error">Patron does not have permission to place a
+        hold request for this item.</note></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002517067</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Fri, 05 Jun 2015 18:31:00 GMT
+  recorded_at: Wed, 15 Oct 2014 13:30:12 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:12 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142033436224</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20030326</z30-open-date><z30-update-date>20120113</z30-update-date><z30-cataloger>DIGARBOB</z30-cataloger><z30-date-last-return>20131114</z30-date-last-return><z30-hour-last-return>1258</z30-hour-last-return><z30-ip-last-return>BOBSTSTACKSLAPTOP</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099287</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000020/hold"
+        allowed="N"><note type="error">Patron does not have permission to place a
+        hold request for this item.</note></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000020/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000020/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002517067</adm-doc-number><item-sequence>000020</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 13:30:12 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000040
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:12 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>CU</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>04</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    4.0</z30-item-sequence><z30-barcode>31206008156503</z30-barcode><z30-sub-library>Cooper
+        Union Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Library
+        Use Only</z30-item-status><z30-open-date>20001010</z30-open-date><z30-update-date>20001010</z30-update-date><z30-cataloger>GUNNINGC</z30-cataloger><z30-date-last-return>00000000</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977 Non-circulating</z30-call-no><z30-call-no-key>0 na&quot;480 g7613
+        1977 non circulating 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001099289</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000040/hold"
+        allowed="N"><note type="error">Item cannot be requested (tab15).</note></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000040/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000040/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002517067</adm-doc-number><item-sequence>000040</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 13:30:12 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000050
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Powered-By:
+      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Oct 2014 13:30:12 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSGI</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002517067</z30-doc-number><z30-item-sequence>    5.0</z30-item-sequence><z30-barcode>31207009093398</z30-barcode><z30-sub-library>New
+        School University Center</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20050601</z30-open-date><z30-update-date>20050601</z30-update-date><z30-cataloger>EDMISTON</z30-cataloger><z30-date-last-return>20120420</z30-date-last-return><z30-hour-last-return>1736</z30-hour-last-return><z30-ip-last-return>149.31.35.46</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>NA480
+        .G7613 1977</z30-call-no><z30-call-no-key>0 na&quot;480 g7613 1977</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id>1</z30-copy-id><z30-hol-doc-number>001099290</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>004</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002517067</z13-doc-number><z13-year>1977</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>NA480</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Grodecki,
+        Louis, 1910-1982.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Gothic
+        architecture /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York : H. N. Abrams, 1977, c1976.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>081091008X</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000050/hold"
+        allowed="N"><note type="error">Patron does not have permission to place a
+        hold request for this item.</note></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000050/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002517067/items/NYU50002517067000050/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>002517067</adm-doc-number><item-sequence>000050</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Wed, 15 Oct 2014 13:30:13 GMT
 recorded_with: VCR 2.9.3

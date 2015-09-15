@@ -7,7 +7,7 @@
   <%- # Link to login screen -%>
   <strong>
     <%= link_to(t('resolve.holdings.login_text'),
-      login_url({origin: url_for_request(service_response.request)}),
+      login_url,
       class: "request-login-link") %>
   </strong>
 <% end %>

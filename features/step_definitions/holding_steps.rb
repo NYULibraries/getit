@@ -30,11 +30,3 @@ end
 Then(/^I should see "(.*?)" in a copy's coverage statement$/) do |coverage_statement|
   expect(page).to have_css(holding_coverage_row_css << ' ul li', text: coverage_statement)
 end
-
-Then(/^I should see a "Schedule" button$/) do
-  expect(page).to have_css(holding_information_row_css << ' a.afc-schedule-link', text: 'Schedule')
-end
-
-Then(/^I should not see a "Schedule" button$/) do
-  expect(page).to_not have_css(holding_information_row_css << ' a.afc-schedule-link', text: 'Schedule')
-end
