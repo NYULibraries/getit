@@ -56,12 +56,11 @@ Rails.application.routes.draw do
 
   Umlaut::Routes.new(self).draw
 
-  get 'login' => 'user_sessions#new', as: :login
-  get 'logout' => 'user_sessions#destroy', as: :logout
-  get 'validate' => 'user_sessions#validate', as: :validate
-
-  # Probably should remove this in a future iteration
-  resources :user_sessions
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_scope :user do
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+    get 'login', to: redirect("#{Rails.application.config.relative_url_root}/users/auth/nyulibraries"), as: :login
+  end
 
   # GET a new holding request form
   get 'holding_requests/new/:service_response_id' => 'holding_requests#new',

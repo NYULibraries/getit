@@ -5,7 +5,7 @@ Feature: Schedule link for an AFC item
 
   @user/afc
   Scenario: A user with permissions to AFC viewing a videorecording will see a Schedule option
-    Given I am logged in
+    Given I am logged in as an AFC user
     And I am on the GetIt page for the title "To kill a mockingbird [videorecording]"
     Then I should see a "Schedule" button
 
@@ -17,6 +17,12 @@ Feature: Schedule link for an AFC item
 
   @user/checked_out
   Scenario: A user with permissions to AFC viewing an item not in AFC will not see a Schedule option
-    Given I am logged in
+    Given I am logged in as an AFC user
     And I am on the GetIt page for a "checked out" holding
+    Then I should not see a "Schedule" button
+
+  @user/afc
+  Scenario: A user with permissions to AFC viewing a videorecording will see a Schedule option
+    Given I am logged in as a non-AFC user
+    And I am on the GetIt page for the title "To kill a mockingbird [videorecording]"
     Then I should not see a "Schedule" button

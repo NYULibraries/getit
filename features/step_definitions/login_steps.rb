@@ -1,9 +1,25 @@
+Around('@omniauth_test') do |scenario, block|
+  OmniAuth.config.test_mode = true
+  block.call
+  OmniAuth.config.test_mode = false
+end
+
 Given(/^I am logged in$/) do
-  ENV['PDS_HANDLE'] = 'PDS_HANDLE'
+  OmniAuth.config.mock_auth[:nyulibraries] = omniauth_hash
+  visit '/login'
+end
+
+Given(/^I am logged in as a non-AFC user$/) do
+  step "I am logged in"
+end
+
+Given(/^I am logged in as an AFC user$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = afc_omniauth_hash
+  visit '/login'
 end
 
 Given(/^I am not logged in$/) do
-  ENV['PDS_HANDLE'] = nil
+  OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
 
 Then(/^I should see a login link$/) do
@@ -28,7 +44,13 @@ end
 
 Then(/^I should see the login page in the current window$/) do
   pending
-  # Poltergiest can't always redirect to external HTTPS page
-  # Will change with OAuth2
-  # expect(page).to have_text 'Login with an NYU NetID'
+  expect(page).to have_text 'Select your affiliation'
+end
+
+Then(/^I should be logged out$/) do
+  expect(page).to have_text 'Almost logged out'
+end
+
+Given(/^I click the logout link$/) do
+  find('.nyu-login a.logout').click
 end

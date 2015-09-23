@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.0'
+gem 'rails', '~> 4.1.11'
 
 # Use MySQL for the database
 gem 'mysql2', '~> 0.3.13'
@@ -30,7 +30,7 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.3.1'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.4.3'
 # gem 'nyulibraries-assets', path: '/apps/nyulibraries-assets'
 
 # Deploy the application with Formaggio deploy recipes
@@ -79,7 +79,10 @@ gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
 gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.2.0'
-gem 'authpds-nyu', github: 'NYULibraries/authpds-nyu', tag: 'v2.0.1'
+
+# Use omniauth strategy for login with devise
+gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag: 'v2.0.0'
+gem 'devise', '~> 3.4.1'
 
 # New Relic performance monitoring
 gem 'newrelic_rpm', '~> 3.9.0'

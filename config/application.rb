@@ -28,5 +28,7 @@ module GetIt
 
     # Autoload the lib path
     config.autoload_paths += %W(#{config.root}/lib)
+
+    config.force_ssl = true
   end
 end

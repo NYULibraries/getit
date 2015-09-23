@@ -1,38 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://login.library.edu/pds
-    body:
-      encoding: UTF-8
-      string: func=get-attribute&attribute=bor_info&calling_system=getit&pds_handle=PDS_HANDLE
-    headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 24 Jun 2014 16:50:52 GMT
-      Server:
-      - Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y mod_perl/2.0.5 Perl/v5.8.9
-      Transfer-Encoding:
-      - chunked
-      Content-Type:
-      - text/xml; charset=UTF-8
-    body:
-      encoding: US-ASCII
-      string: <?xml version="1.0" encoding="UTF-8"?><bor-info><id>BOR_ID</id><exl_id>BOR_ID</exl_id><nyuidn>BOR_ID</nyuidn><barcode>BARCODE</barcode><bor-status>55</bor-status><expiry-date>20141031</expiry-date><name>Dev</name><uid>dev123</uid><email>dev.eloper@library.edu</email><email_address>dev.eloper@library.edu</email_address><institute>NYU</institute><cn>Dev
-        Eloper</cn><givenname>Dev</givenname><sn>Eloper</sn><verification>VERIFICATION</verification><opensso>true</opensso><nyu_shibboleth>true</nyu_shibboleth><entitlements>urn:mace:nyu.edu:entl:its:smtpauth;urn:mace:nyu.edu:entl:its:wikispriv;urn:mace:nyu.edu:entl:its:classes;urn:mace:nyu.edu:entl:lib:eresources;urn:mace:nyu.edu:entl:its:qualtrics;urn:mace:nyu.edu:entl:its:wikispub;urn:mace:nyu.edu:entl:its:lynda;urn:mace:nyu.edu:entl:its:webspace;urn:mace:nyu.edu:entl:lib:ideaexchange;urn:mace:nyu.edu:entl:its:projmgmt;urn:mace:nyu.edu:entl:its:files;urn:mace:incommon:entitlement:common:1</entitlements><edupersonentitlement><value>urn:mace:nyu.edu:entl:its:smtpauth</value><value>urn:mace:nyu.edu:entl:its:wikispriv</value><value>urn:mace:nyu.edu:entl:its:classes</value><value>urn:mace:nyu.edu:entl:lib:eresources</value><value>urn:mace:nyu.edu:entl:its:qualtrics</value><value>urn:mace:nyu.edu:entl:its:wikispub</value><value>urn:mace:nyu.edu:entl:its:lynda</value><value>urn:mace:nyu.edu:entl:its:webspace</value><value>urn:mace:nyu.edu:entl:lib:ideaexchange</value><value>urn:mace:nyu.edu:entl:its:projmgmt</value><value>urn:mace:nyu.edu:entl:its:files</value><value>urn:mace:incommon:entitlement:common:1</value></edupersonentitlement><ill-permission>Y</ill-permission><college_name>GA</college_name><dept_code>Graduate
-        School of Arts and Science</dept_code><dept_name>CSCI</dept_name><major_code>DIVISION
-        OF LIBRARIES</major_code><major>GACSCIMS</major></bor-info>
-    http_version: 
-  recorded_at: Tue, 24 Jun 2014 16:50:52 GMT
-- request:
     method: get
     uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-06-24T09:56:14-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003562911&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
@@ -42,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -60,7 +28,7 @@ http_interactions:
       - chunked
     body:
       encoding: US-ASCII
-      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
         \ &lt;item key=\"ctx_tim\"&gt;2014-06-24T09:56:14-04:00&lt;/item&gt;\n  &lt;item
         key=\"sfx.request_id\"&gt;7318804&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
@@ -123,7 +91,7 @@ http_interactions:
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:53 GMT
 - request:
     method: post
@@ -137,13 +105,13 @@ http_interactions:
         xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph003562911</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"getRecord"'
+      - ! '"getRecord"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
       - '843'
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -163,172 +131,164 @@ http_interactions:
       - Tue, 24 Jun 2014 16:50:54 GMT
     body:
       encoding: US-ASCII
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
-          &lt;JAGROOT&gt;
-            &lt;RESULT&gt;
-              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
-                &lt;DOC LOCAL=&quot;true&quot;&gt;
-                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
-                    &lt;record&gt;
-                      &lt;control&gt;
-                        &lt;sourcerecordid&gt;003562911&lt;/sourcerecordid&gt;
-                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
-                        &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;
-                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
-                        &lt;ilsapiid&gt;NYU01003562911&lt;/ilsapiid&gt;
-                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
-                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
-                      &lt;/control&gt;
-                      &lt;display&gt;
-                        &lt;type&gt;book&lt;/type&gt;
-                        &lt;title&gt;South Africa's World Cup : a legacy for whom?&lt;/title&gt;
-                        &lt;contributor&gt;Eddie Cottle&lt;/contributor&gt;
-                        &lt;publisher&gt;Scottsville, South Africa : University of KwaZulu-Natal Press&lt;/publisher&gt;
-                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
-                        &lt;format&gt;xvii, 349 p. : ill. ; 24 cm.&lt;/format&gt;
-                        &lt;identifier&gt;$$Cisbn$$V9781869142162; $$Cisbn$$V1869142160&lt;/identifier&gt;
-                        &lt;subject&gt;Fussballweltmeisterschaft (2010); World Cup (Soccer) (2010)--Economic aspects; Soccer -- Tournaments -- Economic aspects -- South Africa; Sozio&#xF6;konomischer Wandel; Aufsatzsammlung&lt;/subject&gt;
-                        &lt;description&gt;$$Ccontents$$VFIFA and the sports-accumulation complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup : international solidarity revitalised / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall tales : dissecting the urban legend of the developmental legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false promises and resistance / Dale T. McKinley (with African Eye News Service) -- Building coliseums, living in shacks : construction workers in the shadow of the world-class city / Tony Roshan Samara.&lt;/description&gt;
-                        &lt;description&gt;$$Csummary$$V&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/description&gt;
-                        &lt;language&gt;eng&lt;/language&gt;
-                        &lt;source&gt;nyu_aleph&lt;/source&gt;
-                        &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(GV943.5 2010 S68 2011 )$$Sunavailable$$31$$41$$5N$$64$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;
-                        &lt;lds02&gt;nyu_aleph003562911&lt;/lds02&gt;
-                        &lt;lds01&gt;NYU&lt;/lds01&gt;
-                        &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;
-                        &lt;availpnx&gt;unavailable&lt;/availpnx&gt;
-                      &lt;/display&gt;
-                      &lt;links&gt;
-                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
-                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
-                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
-                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
-                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
-                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
-                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
-                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
-                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
-                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
-                      &lt;/links&gt;
-                      &lt;search&gt;
-                        &lt;creatorcontrib&gt;edited by Eddie Cottle.&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Eddie  Cottle&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;
-                        &lt;title&gt;South Africa's World Cup : a legacy for whom? /&lt;/title&gt;
-                        &lt;description&gt;&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/description&gt;
-                        &lt;subject&gt;Fussballweltmeisterschaft (2010)&lt;/subject&gt;
-                        &lt;subject&gt;World Cup (Soccer) (2010)  Economic aspects&lt;/subject&gt;
-                        &lt;subject&gt;Soccer  Tournaments Economic aspects South Africa&lt;/subject&gt;
-                        &lt;subject&gt;Sozio&#xF6;konomischer Wandel&lt;/subject&gt;
-                        &lt;subject&gt;Aufsatzsammlung&lt;/subject&gt;
-                        &lt;subject&gt;European football&lt;/subject&gt;
-                        &lt;subject&gt;Association football&lt;/subject&gt;
-                        &lt;subject&gt;Football (Soccer)&lt;/subject&gt;
-                        &lt;subject&gt;English football&lt;/subject&gt;
-                        &lt;general&gt;University of KwaZulu-Natal Press,&lt;/general&gt;
-                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
-                        &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;
-                        &lt;isbn&gt;9781869142162&lt;/isbn&gt;
-                        &lt;isbn&gt;1869142160&lt;/isbn&gt;
-                        &lt;toc&gt;FIFA and the sports-accumulation complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup : international solidarity revitalised / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall tales : dissecting the urban legend of the developmental legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false promises and resistance / Dale T. McKinley (with African Eye News Service) -- Building coliseums, living in shacks : construction workers in the shadow of the world-class city / Tony Roshan Samara.&lt;/toc&gt;
-                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
-                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
-                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
-                        &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;
-                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
-                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
-                        &lt;scope&gt;BOBST&lt;/scope&gt;
-                        &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;
-                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
-                        &lt;scope&gt;NYU&lt;/scope&gt;
-                        &lt;lsr01&gt;GV943.5 2010 S68 2011&lt;/lsr01&gt;
-                        &lt;lsr02&gt;University of KwaZulu-Natal Press,&lt;/lsr02&gt;
-                      &lt;/search&gt;
-                      &lt;sort&gt;
-                        &lt;title&gt;South Africa's World Cup : a legacy for whom? /&lt;/title&gt;
-                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
-                        &lt;author&gt;Cottle, Eddie.&lt;/author&gt;
-                        &lt;lso01&gt;2011&lt;/lso01&gt;
-                      &lt;/sort&gt;
-                      &lt;facets&gt;
-                        &lt;language&gt;eng&lt;/language&gt;
-                        &lt;creationdate&gt;2011&lt;/creationdate&gt;
-                        &lt;topic&gt;Fussballweltmeisterschaft (2010)&lt;/topic&gt;
-                        &lt;topic&gt;World Cup (Soccer) (2010)&#x2013;Economic aspects&lt;/topic&gt;
-                        &lt;topic&gt;Soccer&#x2013;Tournaments&#x2013;Economic aspects&#x2013;South Africa&lt;/topic&gt;
-                        &lt;topic&gt;Sozio&#xF6;konomischer Wandel&lt;/topic&gt;
-                        &lt;collection&gt;BOBST&lt;/collection&gt;
-                        &lt;prefilter&gt;books&lt;/prefilter&gt;
-                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
-                        &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;
-                        &lt;genre&gt;Aufsatzsammlung&lt;/genre&gt;
-                        &lt;library&gt;BOBST&lt;/library&gt;
-                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
-                        &lt;classificationlcc&gt;G - Geography. Anthropology. Recreation.&#x2013;Recreation. Leisure&#x2013;Sports&#x2013;Ball games: Baseball, football, golf, etc.&lt;/classificationlcc&gt;
-                        &lt;frbrgroupid&gt;65470126&lt;/frbrgroupid&gt;
-                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
-                      &lt;/facets&gt;
-                      &lt;dedup&gt;
-                        &lt;t&gt;1&lt;/t&gt;
-                        &lt;c1&gt;2012371683&lt;/c1&gt;
-                        &lt;c2&gt;9781869142162;1869142160&lt;/c2&gt;
-                        &lt;c3&gt;southafricasworldcupacyforwhom&lt;/c3&gt;
-                        &lt;c4&gt;2011&lt;/c4&gt;
-                        &lt;f1&gt;2012371683&lt;/f1&gt;
-                        &lt;f3&gt;9781869142162;1869142160&lt;/f3&gt;
-                        &lt;f5&gt;southafricasworldcupacyforwhom&lt;/f5&gt;
-                        &lt;f6&gt;2011&lt;/f6&gt;
-                        &lt;f7&gt;south africas world cup a legacy for whom&lt;/f7&gt;
-                        &lt;f8&gt;sa&lt;/f8&gt;
-                        &lt;f9&gt;xvii, 349 p. :&lt;/f9&gt;
-                        &lt;f10&gt;university of kwazulu natal press&lt;/f10&gt;
-                      &lt;/dedup&gt;
-                      &lt;frbr&gt;
-                        &lt;t&gt;1&lt;/t&gt;
-                        &lt;k1&gt;$$Kcottle eddie$$AA&lt;/k1&gt;
-                        &lt;k3&gt;$$Kbooksouth africa's world cup a legacy for whom$$AT&lt;/k3&gt;
-                      &lt;/frbr&gt;
-                      &lt;delivery&gt;
-                        &lt;institution&gt;NYU&lt;/institution&gt;
-                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
-                      &lt;/delivery&gt;
-                      &lt;enrichment&gt;
-                        &lt;classificationlcc&gt;GV943.5 2010&lt;/classificationlcc&gt;
-                      &lt;/enrichment&gt;
-                      &lt;ranking&gt;
-                        &lt;booster1&gt;1&lt;/booster1&gt;
-                        &lt;booster2&gt;1&lt;/booster2&gt;
-                      &lt;/ranking&gt;
-                      &lt;addata&gt;
-                        &lt;aulast&gt;Cottle&lt;/aulast&gt;
-                        &lt;aufirst&gt;Eddie&lt;/aufirst&gt;
-                        &lt;addau&gt;Cottle, Eddie&lt;/addau&gt;
-                        &lt;btitle&gt;South Africa's World Cup : a legacy for whom?&lt;/btitle&gt;
-                        &lt;date&gt;2011&lt;/date&gt;
-                        &lt;risdate&gt;2011.&lt;/risdate&gt;
-                        &lt;isbn&gt;9781869142162&lt;/isbn&gt;
-                        &lt;isbn&gt;1869142160&lt;/isbn&gt;
-                        &lt;format&gt;book&lt;/format&gt;
-                        &lt;genre&gt;book&lt;/genre&gt;
-                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
-                        &lt;notes&gt;Includes bibliographical references and index.&lt;/notes&gt;
-                        &lt;abstract&gt;&quot;This groundbreaking book provides a critically informed analysis of the impact and legacy of mega-sporting events through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated developmental paradigm. It challenges mainstream thinking and mega-event praise singers by providing concrete evidence to show that this sporting spectacular was little more than a front for massive accumulation and extraction of wealth, alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/abstract&gt;
-                        &lt;cop&gt;Scottsville, South Africa&lt;/cop&gt;
-                        &lt;pub&gt;University of KwaZulu-Natal Press&lt;/pub&gt;
-                        &lt;oclcid&gt;749853403&lt;/oclcid&gt;
-                        &lt;lccn&gt;2012371683&lt;/lccn&gt;
-                        &lt;lad01&gt;BOBST&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
-                      &lt;/addata&gt;
-                    &lt;/record&gt;
-                  &lt;/PrimoNMBib&gt;
-                &lt;/DOC&gt;
-              &lt;/DOCSET&gt;
-            &lt;/RESULT&gt;
-          &lt;/JAGROOT&gt;
-        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
-    http_version: 
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?><soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><soapenv:Body><ns1:getRecordResponse
+        soapenv:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:ns1=\"http://primo.library.edu/PrimoWebServices/services/searcher\"><getRecordReturn
+        xsi:type=\"soapenc:string\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\">&lt;SEGMENTS
+        xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;\n  &lt;JAGROOT&gt;\n
+        \   &lt;RESULT&gt;\n      &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;\n        &lt;DOC
+        LOCAL=&quot;true&quot;&gt;\n          &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;\n
+        \           &lt;record&gt;\n              &lt;control&gt;\n                &lt;sourcerecordid&gt;003562911&lt;/sourcerecordid&gt;\n
+        \               &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n                &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;\n
+        \               &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;\n                &lt;ilsapiid&gt;NYU01003562911&lt;/ilsapiid&gt;\n
+        \               &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;\n                &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;\n
+        \             &lt;/control&gt;\n              &lt;display&gt;\n                &lt;type&gt;book&lt;/type&gt;\n
+        \               &lt;title&gt;South Africa's World Cup : a legacy for whom?&lt;/title&gt;\n
+        \               &lt;contributor&gt;Eddie Cottle&lt;/contributor&gt;\n                &lt;publisher&gt;Scottsville,
+        South Africa : University of KwaZulu-Natal Press&lt;/publisher&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
+        \               &lt;format&gt;xvii, 349 p. : ill. ; 24 cm.&lt;/format&gt;\n
+        \               &lt;identifier&gt;$$Cisbn$$V9781869142162; $$Cisbn$$V1869142160&lt;/identifier&gt;\n
+        \               &lt;subject&gt;Fussballweltmeisterschaft (2010); World Cup
+        (Soccer) (2010)--Economic aspects; Soccer -- Tournaments -- Economic aspects
+        -- South Africa; Sozio&#xF6;konomischer Wandel; Aufsatzsammlung&lt;/subject&gt;\n
+        \               &lt;description&gt;$$Ccontents$$VFIFA and the sports-accumulation
+        complex / Dale T. McKinley -- Economic promises and pitfalls of South Africa's
+        World Cup / Patrick Bond and Eddie Cottle -- Their cup runneth over : construction
+        companies and the 2010 FIFA World Cup / Michelle Taal -- Scoring an own goal?
+        : the construction workers' 2010 World Cup strike / Eddie Cottle -- The trade
+        union legacy of the 2010 World Cup : international solidarity revitalised
+        / Vasco Pedrina and Joachim Merz -- Informal traders and the struggle to trade
+        / Pat Horn -- Lies, misrepresentation and unfulfilled expectations : sex work
+        and the 2010 Soccer World Cup / Vivienne Mentor-Lalu -- Washing FIFA green
+        : the World Cup and global warming / Tristen Taylor -- Soccer City : who drank
+        all the beer from the calabash? / Mondi Hlatshwayo -- Green Point Stadium
+        : FIFA's legacy of unfair play / Monli Mhatshwayo and Michael Blake -- Tall
+        tales : dissecting the urban legend of the developmental legacy of Durban's
+        Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption, murder, false
+        promises and resistance / Dale T. McKinley (with African Eye News Service)
+        -- Building coliseums, living in shacks : construction workers in the shadow
+        of the world-class city / Tony Roshan Samara.&lt;/description&gt;\n                &lt;description&gt;$$Csummary$$V&quot;This
+        groundbreaking book provides a critically informed analysis of the impact
+        and legacy of mega-sporting events through the lens of South Africa's 2010
+        FIFA Soccer World Cup and its associated developmental paradigm. It challenges
+        mainstream thinking and mega-event praise singers by providing concrete evidence
+        to show that this sporting spectacular was little more than a front for massive
+        accumulation and extraction of wealth, alongside increased sporting and socio-economic
+        inequality.&quot;--Back cover.&lt;/description&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;source&gt;nyu_aleph&lt;/source&gt;\n                &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main
+        Collection$$2(GV943.5 2010 S68 2011 )$$Sunavailable$$31$$41$$5N$$64$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;\n
+        \               &lt;lds02&gt;nyu_aleph003562911&lt;/lds02&gt;\n                &lt;lds01&gt;NYU&lt;/lds01&gt;\n
+        \               &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;\n
+        \               &lt;availpnx&gt;unavailable&lt;/availpnx&gt;\n              &lt;/display&gt;\n
+        \             &lt;links&gt;\n                &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;\n
+        \               &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;\n
+        \               &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;\n                &lt;linktotoc&gt;$$Tamazon_toc$$DCheck
+        for Amazon Search Inside&lt;/linktotoc&gt;\n                &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;\n
+        \               &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;\n
+        \               &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;\n
+        \               &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;\n
+        \               &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;\n
+        \               &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;\n
+        \             &lt;/links&gt;\n              &lt;search&gt;\n                &lt;creatorcontrib&gt;edited
+        by Eddie Cottle.&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Eddie
+        \ Cottle&lt;/creatorcontrib&gt;\n                &lt;creatorcontrib&gt;Cottle,
+        E&lt;/creatorcontrib&gt;\n                &lt;title&gt;South Africa's World
+        Cup : a legacy for whom? /&lt;/title&gt;\n                &lt;description&gt;&quot;This
+        groundbreaking book provides a critically informed analysis of the impact
+        and legacy of mega-sporting events through the lens of South Africa's 2010
+        FIFA Soccer World Cup and its associated developmental paradigm. It challenges
+        mainstream thinking and mega-event praise singers by providing concrete evidence
+        to show that this sporting spectacular was little more than a front for massive
+        accumulation and extraction of wealth, alongside increased sporting and socio-economic
+        inequality.&quot;--Back cover.&lt;/description&gt;\n                &lt;subject&gt;Fussballweltmeisterschaft
+        (2010)&lt;/subject&gt;\n                &lt;subject&gt;World Cup (Soccer)
+        (2010)  Economic aspects&lt;/subject&gt;\n                &lt;subject&gt;Soccer
+        \ Tournaments Economic aspects South Africa&lt;/subject&gt;\n                &lt;subject&gt;Sozio&#xF6;konomischer
+        Wandel&lt;/subject&gt;\n                &lt;subject&gt;Aufsatzsammlung&lt;/subject&gt;\n
+        \               &lt;subject&gt;European football&lt;/subject&gt;\n                &lt;subject&gt;Association
+        football&lt;/subject&gt;\n                &lt;subject&gt;Football (Soccer)&lt;/subject&gt;\n
+        \               &lt;subject&gt;English football&lt;/subject&gt;\n                &lt;general&gt;University
+        of KwaZulu-Natal Press,&lt;/general&gt;\n                &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;\n
+        \               &lt;recordid&gt;nyu_aleph003562911&lt;/recordid&gt;\n                &lt;isbn&gt;9781869142162&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;1869142160&lt;/isbn&gt;\n                &lt;toc&gt;FIFA
+        and the sports-accumulation complex / Dale T. McKinley -- Economic promises
+        and pitfalls of South Africa's World Cup / Patrick Bond and Eddie Cottle --
+        Their cup runneth over : construction companies and the 2010 FIFA World Cup
+        / Michelle Taal -- Scoring an own goal? : the construction workers' 2010 World
+        Cup strike / Eddie Cottle -- The trade union legacy of the 2010 World Cup
+        : international solidarity revitalised / Vasco Pedrina and Joachim Merz --
+        Informal traders and the struggle to trade / Pat Horn -- Lies, misrepresentation
+        and unfulfilled expectations : sex work and the 2010 Soccer World Cup / Vivienne
+        Mentor-Lalu -- Washing FIFA green : the World Cup and global warming / Tristen
+        Taylor -- Soccer City : who drank all the beer from the calabash? / Mondi
+        Hlatshwayo -- Green Point Stadium : FIFA's legacy of unfair play / Monli Mhatshwayo
+        and Michael Blake -- Tall tales : dissecting the urban legend of the developmental
+        legacy of Durban's Moses Madhida Stadium / Aisha Bahadur -- Mbombela : corruption,
+        murder, false promises and resistance / Dale T. McKinley (with African Eye
+        News Service) -- Building coliseums, living in shacks : construction workers
+        in the shadow of the world-class city / Tony Roshan Samara.&lt;/toc&gt;\n
+        \               &lt;rsrctype&gt;book&lt;/rsrctype&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
+        \               &lt;searchscope&gt;BOBST&lt;/searchscope&gt;\n                &lt;searchscope&gt;BOBST
+        Main Collection&lt;/searchscope&gt;\n                &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;\n
+        \               &lt;searchscope&gt;NYU&lt;/searchscope&gt;\n                &lt;scope&gt;BOBST&lt;/scope&gt;\n
+        \               &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;\n                &lt;scope&gt;nyu_aleph&lt;/scope&gt;\n
+        \               &lt;scope&gt;NYU&lt;/scope&gt;\n                &lt;lsr01&gt;GV943.5
+        2010 S68 2011&lt;/lsr01&gt;\n                &lt;lsr02&gt;University of KwaZulu-Natal
+        Press,&lt;/lsr02&gt;\n              &lt;/search&gt;\n              &lt;sort&gt;\n
+        \               &lt;title&gt;South Africa's World Cup : a legacy for whom?
+        /&lt;/title&gt;\n                &lt;creationdate&gt;2011&lt;/creationdate&gt;\n
+        \               &lt;author&gt;Cottle, Eddie.&lt;/author&gt;\n                &lt;lso01&gt;2011&lt;/lso01&gt;\n
+        \             &lt;/sort&gt;\n              &lt;facets&gt;\n                &lt;language&gt;eng&lt;/language&gt;\n
+        \               &lt;creationdate&gt;2011&lt;/creationdate&gt;\n                &lt;topic&gt;Fussballweltmeisterschaft
+        (2010)&lt;/topic&gt;\n                &lt;topic&gt;World Cup (Soccer) (2010)&#x2013;Economic
+        aspects&lt;/topic&gt;\n                &lt;topic&gt;Soccer&#x2013;Tournaments&#x2013;Economic
+        aspects&#x2013;South Africa&lt;/topic&gt;\n                &lt;topic&gt;Sozio&#xF6;konomischer
+        Wandel&lt;/topic&gt;\n                &lt;collection&gt;BOBST&lt;/collection&gt;\n
+        \               &lt;prefilter&gt;books&lt;/prefilter&gt;\n                &lt;rsrctype&gt;books&lt;/rsrctype&gt;\n
+        \               &lt;creatorcontrib&gt;Cottle, E&lt;/creatorcontrib&gt;\n                &lt;genre&gt;Aufsatzsammlung&lt;/genre&gt;\n
+        \               &lt;library&gt;BOBST&lt;/library&gt;\n                &lt;lfc01&gt;Main
+        Collection&lt;/lfc01&gt;\n                &lt;classificationlcc&gt;G - Geography.
+        Anthropology. Recreation.&#x2013;Recreation. Leisure&#x2013;Sports&#x2013;Ball
+        games: Baseball, football, golf, etc.&lt;/classificationlcc&gt;\n                &lt;frbrgroupid&gt;65470126&lt;/frbrgroupid&gt;\n
+        \               &lt;frbrtype&gt;6&lt;/frbrtype&gt;\n              &lt;/facets&gt;\n
+        \             &lt;dedup&gt;\n                &lt;t&gt;1&lt;/t&gt;\n                &lt;c1&gt;2012371683&lt;/c1&gt;\n
+        \               &lt;c2&gt;9781869142162;1869142160&lt;/c2&gt;\n                &lt;c3&gt;southafricasworldcupacyforwhom&lt;/c3&gt;\n
+        \               &lt;c4&gt;2011&lt;/c4&gt;\n                &lt;f1&gt;2012371683&lt;/f1&gt;\n
+        \               &lt;f3&gt;9781869142162;1869142160&lt;/f3&gt;\n                &lt;f5&gt;southafricasworldcupacyforwhom&lt;/f5&gt;\n
+        \               &lt;f6&gt;2011&lt;/f6&gt;\n                &lt;f7&gt;south
+        africas world cup a legacy for whom&lt;/f7&gt;\n                &lt;f8&gt;sa&lt;/f8&gt;\n
+        \               &lt;f9&gt;xvii, 349 p. :&lt;/f9&gt;\n                &lt;f10&gt;university
+        of kwazulu natal press&lt;/f10&gt;\n              &lt;/dedup&gt;\n              &lt;frbr&gt;\n
+        \               &lt;t&gt;1&lt;/t&gt;\n                &lt;k1&gt;$$Kcottle
+        eddie$$AA&lt;/k1&gt;\n                &lt;k3&gt;$$Kbooksouth africa's world
+        cup a legacy for whom$$AT&lt;/k3&gt;\n              &lt;/frbr&gt;\n              &lt;delivery&gt;\n
+        \               &lt;institution&gt;NYU&lt;/institution&gt;\n                &lt;delcategory&gt;Physical
+        Item&lt;/delcategory&gt;\n              &lt;/delivery&gt;\n              &lt;enrichment&gt;\n
+        \               &lt;classificationlcc&gt;GV943.5 2010&lt;/classificationlcc&gt;\n
+        \             &lt;/enrichment&gt;\n              &lt;ranking&gt;\n                &lt;booster1&gt;1&lt;/booster1&gt;\n
+        \               &lt;booster2&gt;1&lt;/booster2&gt;\n              &lt;/ranking&gt;\n
+        \             &lt;addata&gt;\n                &lt;aulast&gt;Cottle&lt;/aulast&gt;\n
+        \               &lt;aufirst&gt;Eddie&lt;/aufirst&gt;\n                &lt;addau&gt;Cottle,
+        Eddie&lt;/addau&gt;\n                &lt;btitle&gt;South Africa's World Cup
+        : a legacy for whom?&lt;/btitle&gt;\n                &lt;date&gt;2011&lt;/date&gt;\n
+        \               &lt;risdate&gt;2011.&lt;/risdate&gt;\n                &lt;isbn&gt;9781869142162&lt;/isbn&gt;\n
+        \               &lt;isbn&gt;1869142160&lt;/isbn&gt;\n                &lt;format&gt;book&lt;/format&gt;\n
+        \               &lt;genre&gt;book&lt;/genre&gt;\n                &lt;ristype&gt;BOOK&lt;/ristype&gt;\n
+        \               &lt;notes&gt;Includes bibliographical references and index.&lt;/notes&gt;\n
+        \               &lt;abstract&gt;&quot;This groundbreaking book provides a
+        critically informed analysis of the impact and legacy of mega-sporting events
+        through the lens of South Africa's 2010 FIFA Soccer World Cup and its associated
+        developmental paradigm. It challenges mainstream thinking and mega-event praise
+        singers by providing concrete evidence to show that this sporting spectacular
+        was little more than a front for massive accumulation and extraction of wealth,
+        alongside increased sporting and socio-economic inequality.&quot;--Back cover.&lt;/abstract&gt;\n
+        \               &lt;cop&gt;Scottsville, South Africa&lt;/cop&gt;\n                &lt;pub&gt;University
+        of KwaZulu-Natal Press&lt;/pub&gt;\n                &lt;oclcid&gt;749853403&lt;/oclcid&gt;\n
+        \               &lt;lccn&gt;2012371683&lt;/lccn&gt;\n                &lt;lad01&gt;BOBST&lt;/lad01&gt;\n
+        \               &lt;lad01&gt;Physical Item&lt;/lad01&gt;\n              &lt;/addata&gt;\n
+        \           &lt;/record&gt;\n          &lt;/PrimoNMBib&gt;\n        &lt;/DOC&gt;\n
+        \     &lt;/DOCSET&gt;\n    &lt;/RESULT&gt;\n  &lt;/JAGROOT&gt;\n&lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>"
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:54 GMT
 - request:
     method: get
@@ -342,7 +302,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -362,7 +322,7 @@ http_interactions:
       encoding: US-ASCII
       string: <?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01003562911/items/NYU50003562911000010"></item></items></get-item-list>
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:55 GMT
 - request:
     method: get
@@ -376,7 +336,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -394,7 +354,7 @@ http_interactions:
       - Tue, 24 Jun 2014 16:50:56 GMT
     body:
       encoding: US-ASCII
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
         Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20120121</z30-open-date><z30-update-date>20120406</z30-update-date><z30-cataloger>KAUFFMANR</z30-cataloger><z30-date-last-return>20121213</z30-date-last-return><z30-hour-last-return>1132</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>GV943.5
@@ -403,7 +363,7 @@ http_interactions:
         2010</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>South
         Africa&apos;s World Cup :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Scottsville,
         South Africa : University of KwaZulu-Natal Press, 2011.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9781869142162</z13-isbn-issn></z13><status>10/11/14</status></item></get-item>'
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:56 GMT
 - request:
     method: get
@@ -417,7 +377,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -435,7 +395,7 @@ http_interactions:
       - Tue, 24 Jun 2014 16:50:57 GMT
     body:
       encoding: US-ASCII
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
         Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20120121</z30-open-date><z30-update-date>20120406</z30-update-date><z30-cataloger>KAUFFMANR</z30-cataloger><z30-date-last-return>20121213</z30-date-last-return><z30-hour-last-return>1132</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>GV943.5
@@ -469,7 +429,7 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv>'
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:57 GMT
 - request:
     method: get
@@ -483,7 +443,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -501,7 +461,7 @@ http_interactions:
       - Tue, 24 Jun 2014 16:50:58 GMT
     body:
       encoding: US-ASCII
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003562911</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142052922559</z30-barcode><z30-sub-library>NYU
         Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
         loan</z30-item-status><z30-open-date>20120121</z30-open-date><z30-update-date>20120406</z30-update-date><z30-cataloger>KAUFFMANR</z30-cataloger><z30-date-last-return>20121213</z30-date-last-return><z30-hour-last-return>1132</z30-hour-last-return><z30-ip-last-return>128.122.88.168</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
         Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>GV943.5
@@ -535,7 +495,7 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003562911</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv>'
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:58 GMT
 - request:
     method: put
@@ -550,7 +510,7 @@ http_interactions:
       Content-Type:
       - application/x-www-form-urlencoded
       Accept:
-      - "*/*"
+      - ! '*/*'
   response:
     status:
       code: 200
@@ -568,9 +528,9 @@ http_interactions:
       - Tue, 24 Jun 2014 16:50:59 GMT
     body:
       encoding: US-ASCII
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><put-item-hold><reply-text>ok</reply-text><reply-code>0000</reply-code><create-hold><note
+      string: ! '<?xml version = "1.0" encoding = "UTF-8"?><put-item-hold><reply-text>ok</reply-text><reply-code>0000</reply-code><create-hold><note
         type="info">Action Succeeded</note></create-hold></put-item-hold> '
-    http_version: 
+    http_version:
   recorded_at: Tue, 24 Jun 2014 16:50:59 GMT
 - request:
     method: get
@@ -580,7 +540,7 @@ http_interactions:
       string: ''
     headers:
       Accept:
-      - "*/*"
+      - ! '*/*'
       User-Agent:
       - Ruby
   response:
@@ -602,48 +562,10 @@ http_interactions:
       - PHP/5.3.10-1ubuntu3.2
     body:
       encoding: US-ASCII
-      string: '{"responseHeader":{"status":0,"QTime":640,"params":{"json.wrf":"","qin":"title:\"south
+      string: ! '{"responseHeader":{"status":0,"QTime":640,"params":{"json.wrf":"","qin":"title:\"south
         africa''s world cup\" AND creator:(cottle) AND (mediatype:texts OR mediatype:audio)","fl":"*","indent":"","start":"0","q":"title:\"south
         africa''s world cup\" AND creator:(cottle ) AND ( mediatype:texts OR mediatype:audio
         )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 31 Jul 2014 15:56:14 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001624317/items/NYU50001624317000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Wed, 22 Jul 2015 14:33:09 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BAFC</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>02</z30-item-status-code><z30-collection-code>AFC</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001624317</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142029200758</z30-barcode><z30-sub-library>NYU
-        Bobst Avery Fisher Center</z30-sub-library><z30-material>Videos</z30-material><z30-item-status>Offsite
-        Available</z30-item-status><z30-open-date>20000629</z30-open-date><z30-update-date>20150203</z30-update-date><z30-cataloger>BROWNB</z30-cataloger><z30-date-last-return>20091029</z30-date-last-return><z30-hour-last-return>1640</z30-hour-last-return><z30-ip-last-return>128.122.91.15</z30-ip-last-return><z30-no-loans>004</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>4</z30-call-no-type><z30-call-no>VCA
-        9649</z30-call-no><z30-call-no-key>4 $$jvca 9649</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>129.00</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001647433</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>20150203</z30-process-status-date><z30-upd-time-stamp>201502031632059</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001624317</z13-doc-number><z13-year>1999</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC4</z13-call-no-code><z13-call-no></z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>To
-        kill a mockingbird</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Princeton,
-        N.J. : Films for the Humanities &amp; Sciences, c1999.</z13-imprint><z13-isbn-issn-code></z13-isbn-issn-code><z13-isbn-issn></z13-isbn-issn><z13-upd-time-stamp>201412071437547</z13-upd-time-stamp></z13><status>Offsite
-        Available</status></item></get-item> '
-    http_version: 
-  recorded_at: Wed, 22 Jul 2015 14:33:11 GMT
-recorded_with: VCR 2.9.3
+recorded_with: VCR 2.9.2
