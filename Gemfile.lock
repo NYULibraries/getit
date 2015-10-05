@@ -160,6 +160,7 @@ GEM
       mime-types (>= 1.16, < 3)
       nokogiri (~> 1.5)
       rails (>= 3, < 5)
+    dalli (2.7.4)
     database_cleaner (1.3.0)
     debug_inspector (0.0.2)
     devise (3.4.1)
@@ -450,6 +451,7 @@ DEPENDENCIES
   compass-rails (~> 2.0.0)
   coveralls (~> 0.7.11)
   cucumber-rails (~> 1.4.0)
+  dalli (~> 2.7.4)
   database_cleaner (~> 1.3.0)
   devise (~> 3.4.1)
   exlibris-nyu!
