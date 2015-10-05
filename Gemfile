@@ -40,6 +40,8 @@ gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.4.0'
 gem 'umlaut', '~> 4.1.0'
 gem 'umlaut-primo', '~> 1.0.0'
 
+gem 'dalli', '~> 2.7.4'
+
 # Development gems
 group :development do
   gem 'progress_bar', '~> 1.0.0'

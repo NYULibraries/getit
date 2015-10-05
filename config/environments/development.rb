@@ -10,7 +10,7 @@ Rails.application.configure do
   #
   # UMLAUT: Umlaut's use of threading makes Rails dev-mode class reloading tricky
   # It seems to be be mostly okay with cache_classes=false AND eager_load=true
-  # but beware of editing files while background requests are running. 
+  # but beware of editing files while background requests are running.
   config.eager_load = true
 
   # Show full error reports and disable caching.
@@ -35,6 +35,8 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+
+  config.force_ssl = false
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
