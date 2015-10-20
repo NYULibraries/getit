@@ -359,7 +359,7 @@ http_interactions:
         : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
         Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
         allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        code="TNSFO">TNS List Center Library</pickup-location></pickup-locations><note
         type="info"></note><note type="info">Item status: Offsite Available&lt;br
         /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
         usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
@@ -413,7 +413,7 @@ http_interactions:
         : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
         Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
         allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        code="TNSFO">TNS List Center Library</pickup-location></pickup-locations><note
         type="info"></note><note type="info">Item status: Offsite Available&lt;br
         /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
         usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
@@ -467,7 +467,7 @@ http_interactions:
         : E.J. Brill, 1987.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>9004081755</z13-isbn-issn></z13><status>Offsite
         Available</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002928667/items/NYU50002928667000010/hold"
         allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="TNSFO">New School Fogelman Library</pickup-location></pickup-locations><note
+        code="TNSFO">TNS List Center Library</pickup-location></pickup-locations><note
         type="info"></note><note type="info">Item status: Offsite Available&lt;br
         /&gt; Call number: HM221 .M35 1987&lt;br /&gt;</note><note type="info"></note><last-interest-date
         usage="Optional">20140922</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author

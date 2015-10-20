@@ -24,6 +24,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/new_yorker'
   t.tag '@guest/vogue'
   t.tag '@guest/not_by_reason_alone'
+  t.tag '@user/not_by_reason_alone'
   t.tag '@guest/the_body_as_home'
   t.tag '@user/the_body_as_home'
   t.tag '@user/overcoming_trauma_through_yoga'
@@ -52,6 +53,8 @@ VCR.cucumber_tags do |t|
   t.tag '@user/ill'
   t.tag '@user/afc'
   t.tag '@guest/afc'
+  t.tag '@user/franny_and_zooey'
+  t.tag '@user/the_catcher_in_the_rye'
   t.tag '@logout'
   # Disallowed not in use
   t.tags '@disallowed', record: :none

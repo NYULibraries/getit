@@ -26,3 +26,9 @@ Feature: "Map" button for a Copy in Library
     Given I am logged in
     And I am on the GetIt page for the title "El Croquis"
     Then I should see a blue "Map" button
+
+  @user/the_catcher_in_the_rye
+  Scenario: A user viewing a TNS List Center Library Main Collection holding
+    Given I am logged in
+    And I am on the GetIt page for the title "The catcher in the rye"
+    Then I should see a blue "Map" button
