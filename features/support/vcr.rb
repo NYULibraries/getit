@@ -20,6 +20,8 @@ VCR.configure do |c|
 end
 
 VCR.cucumber_tags do |t|
+  # Catch-all if we don't care about the results
+  t.tag '@vcr', record: :new_episodes
   # Uses default record mode since no options are given
   t.tag '@guest/new_yorker'
   t.tag '@guest/vogue'

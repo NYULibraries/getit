@@ -5,4 +5,9 @@ describe ApplicationController  do
     subject { controller.url_for_request(request) }
     it { should eq "http://test.host/resolve?umlaut.request_id=#{request.id}"}
   end
+
+  describe '#institution_param' do
+    subject { controller.send(:institution_param) }
+    it { should eql nil }
+  end
 end
