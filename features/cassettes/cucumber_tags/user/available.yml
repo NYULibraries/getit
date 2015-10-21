@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2014-10-30T13:03:53-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001102376&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-10-21T14:15:27-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph001102376&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 30 Oct 2014 17:03:53 GMT
+      - Wed, 21 Oct 2015 18:15:32 GMT
       Server:
       - Apache
       Content-Type:
@@ -30,8 +30,8 @@ http_interactions:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2014-10-30T13:03:53-04:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;8092829&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2015-10-21T14:15:27-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;10437259&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
         \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001102376&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
@@ -44,13 +44,24 @@ http_interactions:
         \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
         \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
         key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
-        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;20430000000000002&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sBA2C8D4E-6056-11E4-BA88-3A82FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sB7971BE4-781F-11E5-B42B-53BBFE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph001102376&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
-        \  <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n    <target_public_name>Ask
-        a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph001102376%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
         \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
         \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
         \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
@@ -59,8 +70,8 @@ http_interactions:
         \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:53 GMT
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 18:15:28 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -73,11 +84,11 @@ http_interactions:
         xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph001102376</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.5.1, ruby 2.1.3 (2014-09-19))
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.1.5 (2014-11-13))
       Accept:
       - "*/*"
       Date:
-      - Thu, 30 Oct 2014 17:03:53 GMT
+      - Wed, 21 Oct 2015 18:15:28 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -95,8 +106,10 @@ http_interactions:
       - text/xml;charset=utf-8
       Transfer-Encoding:
       - chunked
+      Vary:
+      - Accept-Encoding
       Date:
-      - Thu, 30 Oct 2014 17:03:56 GMT
+      - Wed, 21 Oct 2015 18:15:28 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -151,31 +164,20 @@ http_interactions:
                         &lt;creatorcontrib&gt;editors, Kenneth Keniston and Deepak Kumar.&lt;/creatorcontrib&gt;
                         &lt;creatorcontrib&gt;Kenneth  Keniston&lt;/creatorcontrib&gt;
                         &lt;creatorcontrib&gt;Deepak,  Kumar  1952-&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Deepak Kumar,  1952-&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;D&#x12B;paka,  Kum&#x101;ra  1952-&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;D&#x12B;paka Kum&#x101;ra,  1952-&lt;/creatorcontrib&gt;
                         &lt;creatorcontrib&gt;Keniston, K&lt;/creatorcontrib&gt;
                         &lt;creatorcontrib&gt;Kumar, D&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Deepak Kumar, 1952-&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;Kum&#x101;ra, D&#x12B;paka, 1952-&lt;/creatorcontrib&gt;
-                        &lt;creatorcontrib&gt;D&#x12B;paka Kum&#x101;ra, 1952-&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Deepak Kumar&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Kum&#x101;ra, D&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;D&#x12B;paka Kum&#x101;ra&lt;/creatorcontrib&gt;
                         &lt;title&gt;IT experience in India : bridging the digital divide /&lt;/title&gt;
                         &lt;subject&gt;Digital divide  India Congresses&lt;/subject&gt;
                         &lt;subject&gt;Information technology  Social aspects India Congresses&lt;/subject&gt;
                         &lt;subject&gt;Telecommunication  Social aspects India Congresses&lt;/subject&gt;
                         &lt;subject&gt;Equality  India Congresses&lt;/subject&gt;
                         &lt;subject&gt;Economic development projects  India Congresses&lt;/subject&gt;
-                        &lt;subject&gt;Projects, Economic development&lt;/subject&gt;
-                        &lt;subject&gt;Development projects, Economic&lt;/subject&gt;
-                        &lt;subject&gt;Telecommunications&lt;/subject&gt;
-                        &lt;subject&gt;Electric communication&lt;/subject&gt;
-                        &lt;subject&gt;Telecom&lt;/subject&gt;
-                        &lt;subject&gt;Telecommunication industry&lt;/subject&gt;
-                        &lt;subject&gt;Divide, Digital&lt;/subject&gt;
-                        &lt;subject&gt;Global digital divide&lt;/subject&gt;
-                        &lt;subject&gt;GDD (Global digital divide)&lt;/subject&gt;
-                        &lt;subject&gt;IT (Information technology)&lt;/subject&gt;
-                        &lt;subject&gt;Inequality&lt;/subject&gt;
-                        &lt;subject&gt;Social equality&lt;/subject&gt;
-                        &lt;subject&gt;Social inequality&lt;/subject&gt;
-                        &lt;subject&gt;Egalitarianism&lt;/subject&gt;
                         &lt;general&gt;SAGE Publications,&lt;/general&gt;
                         &lt;general&gt;Papers from a &quot;Workshop on 'Equity, Diversity, and Information Technology?', held at the National Institute of Advanced Studies at the Indian Institute of Science in Bangalore.&lt;/general&gt;
                         &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
@@ -227,7 +229,7 @@ http_interactions:
                         &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
                         &lt;lfc01&gt;Internet Resources&lt;/lfc01&gt;
                         &lt;classificationlcc&gt;H - Social sciences.&#x2013;Social history and conditions. Social problems. Social reform&#x2013;By region or country&lt;/classificationlcc&gt;
-                        &lt;frbrgroupid&gt;50126663&lt;/frbrgroupid&gt;
+                        &lt;frbrgroupid&gt;136052019&lt;/frbrgroupid&gt;
                         &lt;frbrtype&gt;6&lt;/frbrtype&gt;
                       &lt;/facets&gt;
                       &lt;dedup&gt;
@@ -253,7 +255,7 @@ http_interactions:
                       &lt;/frbr&gt;
                       &lt;delivery&gt;
                         &lt;institution&gt;NYU&lt;/institution&gt;
-                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
+                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
                       &lt;/delivery&gt;
                       &lt;enrichment&gt;
                         &lt;classificationlcc&gt;HN690.I56&lt;/classificationlcc&gt;
@@ -263,7 +265,6 @@ http_interactions:
                         &lt;booster2&gt;1&lt;/booster2&gt;
                       &lt;/ranking&gt;
                       &lt;addata&gt;
-                        &lt;aulast&gt;Keniston&lt;/aulast&gt;
                         &lt;aufirst&gt;Kenneth&lt;/aufirst&gt;
                         &lt;addau&gt;Keniston, Kenneth&lt;/addau&gt;
                         &lt;addau&gt;Kumar, Deepak, 1952-&lt;/addau&gt;
@@ -278,10 +279,26 @@ http_interactions:
                         &lt;notes&gt;Includes bibliographical references and index.&lt;/notes&gt;
                         &lt;cop&gt;New Delhi %3B Thousand Oaks, Calif.&lt;/cop&gt;
                         &lt;pub&gt;SAGE Publications&lt;/pub&gt;
-                        &lt;lad01&gt;BOBSTWEB&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
                         &lt;lccn&gt;2003026836&lt;/lccn&gt;
+                        &lt;lad01&gt;BOBSTWEB&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
                       &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DKeniston, Kenneth$$EKeniston, Kenneth$$INYU10000060071$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DKumar, Deepak, 1952-$$EKumar, Deepak, 1952-$$INYU10000651796$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DDeepak Kumar, 1952-$$EDeepak Kumar, 1952-$$INYU10000651796$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DKum&#x101;ra, D&#x12B;paka, 1952-$$EKum&#x101;ra, D&#x12B;paka, 1952-$$INYU10000651796$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DD&#x12B;paka Kum&#x101;ra, 1952-$$ED&#x12B;paka Kum&#x101;ra, 1952-$$INYU10000651796$$PN&lt;/author&gt;
+                        &lt;title&gt;$$DIT experience in India : bridging the digital divide$$EIT experience in India : bridging the digital divide&lt;/title&gt;
+                        &lt;subject&gt;$$DDigital divide -- India -- Congresses$$EDigital divide India Congresses&lt;/subject&gt;
+                        &lt;subject&gt;$$DInformation technology -- Social aspects -- India -- Congresses$$EInformation technology Social aspects India Congresses&lt;/subject&gt;
+                        &lt;subject&gt;$$DTelecommunication -- Social aspects -- India -- Congresses$$ETelecommunication Social aspects India Congresses&lt;/subject&gt;
+                        &lt;subject&gt;$$DEquality -- India -- Congresses$$EEquality India Congresses&lt;/subject&gt;
+                        &lt;subject&gt;$$DEconomic development projects -- India -- Congresses$$EEconomic development projects India Congresses&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DHN690.I56 I84 2004$$E0hn   00690.i  56000  i84 2004$$T0&lt;/callnumber&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DElectronic access$$Eelectronic access&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                      &lt;/browse&gt;
                     &lt;/record&gt;
                   &lt;/PrimoNMBib&gt;
                 &lt;/DOC&gt;
@@ -289,8 +306,8 @@ http_interactions:
             &lt;/RESULT&gt;
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:56 GMT
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 18:15:28 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items
@@ -299,7 +316,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.0
+      - Faraday v0.9.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -311,351 +328,16 @@ http_interactions:
     headers:
       Server:
       - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 30 Oct 2014 17:03:57 GMT
+      - Wed, 21 Oct 2015 18:15:28 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items/NYU50001102376000010"></item></items></get-item-list> '
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01001102376/items/NYU50001102376000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 30 Oct 2014 17:03:57 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20040714</z30-open-date><z30-update-date>20040714</z30-update-date><z30-cataloger>SANTIAGO</z30-cataloger><z30-date-last-return>20110507</z30-date-last-return><z30-hour-last-return>1559</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HN690.I56
-        I84 2004</z30-call-no><z30-call-no-key>0 hn&quot;690 i56 i84 2004</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>36.86</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>003495079</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001102376</z13-doc-number><z13-year>2004</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HN690.I56</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>IT
-        experience in India :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        Delhi ; Thousand Oaks, Calif. : SAGE Publications, 2004.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0761998306
-        (Cloth)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
-        Shelf</status></item></get-item> '
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Kenneth%20Keniston%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Location:
-      - "/identities/search/PersonalIdentities?query=local.Name+all+%22Kenneth+Keniston%22&sortKeys=holdingscount&maximumRecords=1&httpAccept=text/xml"
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '1972'
-      Date:
-      - Thu, 30 Oct 2014 17:03:57 GMT
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
-        all &amp;#34;Kenneth Keniston&amp;#34;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
-        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
-        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
-        xsi:type=\"xsd:string\">Kenneth Keniston</ns2:term></ns2:searchClause></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 30 Oct 2014 17:03:57 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20040714</z30-open-date><z30-update-date>20040714</z30-update-date><z30-cataloger>SANTIAGO</z30-cataloger><z30-date-last-return>20110507</z30-date-last-return><z30-hour-last-return>1559</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HN690.I56
-        I84 2004</z30-call-no><z30-call-no-key>0 hn&quot;690 i56 i84 2004</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>36.86</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>003495079</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001102376</z13-doc-number><z13-year>2004</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HN690.I56</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>IT
-        experience in India :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        Delhi ; Thousand Oaks, Calif. : SAGE Publications, 2004.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0761998306
-        (Cloth)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
-        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/hold"
-        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="BOBST">NYU Bobst</pickup-location><pickup-location code="NCOUR">NYU
-        Courant</pickup-location><pickup-location code="NIFA">NYU Institute of Fine
-        Arts</pickup-location><pickup-location code="NISAW">NYU Inst Study Ancient
-        World</pickup-location><pickup-location code="NREI">NYU Jack Brause</pickup-location><pickup-location
-        code="NPOLY">NYU Poly</pickup-location><pickup-location code="NYUAB">NYU Abu
-        Dhabi Library (UAE)</pickup-location><pickup-location code="NYUSX">NYU Shanghai
-        Library (China)</pickup-location></pickup-locations><note type="info"></note><note
-        type="info">Item status: Regular loan&lt;br /&gt; Call number: HN690.I56 I84
-        2004&lt;br /&gt;</note><last-interest-date usage="Optional">20150128</last-interest-date><start-interest-date
-        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
-        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
-        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
-        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/shortLoan"
-        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
-        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/photo"
-        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
-        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
-        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2003026836
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 30 Oct 2014 17:03:57 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.4-14+deb7u14
-      X-Powered-By:
-      - PHP/5.4.4-14+deb7u14
-      Content-Length:
-      - '47'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a423660;expires=Thu, 30-Oct-2014
-        17:13:57 GMT;path=/;httponly
-    body:
-      encoding: UTF-8
-      string: |2-
-
-
-        {"lccn:2003026836":{"records":[],"items":[]}}
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:03:57 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22it%20experience%20in%20india%22%20AND%20creator:(keniston)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Thu, 30 Oct 2014 17:04:20 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '161'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22it+experience+in+india%22+AND+creator:%28keniston%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Thu, 30 Oct 2014 23:04:20 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.1.19</center>\r\n</body>\r\n</html>\r\n"
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:04:20 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      X-Powered-By:
-      - Servlet 2.5; JBoss-5.0/JBossWeb-2.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 30 Oct 2014 17:04:21 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>001102376</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142040142435</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
-        loan</z30-item-status><z30-open-date>20040714</z30-open-date><z30-update-date>20040714</z30-update-date><z30-cataloger>SANTIAGO</z30-cataloger><z30-date-last-return>20110507</z30-date-last-return><z30-hour-last-return>1559</z30-hour-last-return><z30-ip-last-return>128.122.88.169</z30-ip-last-return><z30-no-loans>003</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>HN690.I56
-        I84 2004</z30-call-no><z30-call-no-key>0 hn&quot;690 i56 i84 2004</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price>36.86</z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Not
-        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>003495079</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>002</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>200001011200000</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>001102376</z13-doc-number><z13-year>2004</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>HN690.I56</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24500</z13-title-code><z13-title>IT
-        experience in India :</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        Delhi ; Thousand Oaks, Calif. : SAGE Publications, 2004.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0761998306
-        (Cloth)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>On
-        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/hold"
-        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
-        code="BOBST">NYU Bobst</pickup-location><pickup-location code="NCOUR">NYU
-        Courant</pickup-location><pickup-location code="NIFA">NYU Institute of Fine
-        Arts</pickup-location><pickup-location code="NISAW">NYU Inst Study Ancient
-        World</pickup-location><pickup-location code="NREI">NYU Jack Brause</pickup-location><pickup-location
-        code="NPOLY">NYU Poly</pickup-location><pickup-location code="NYUAB">NYU Abu
-        Dhabi Library (UAE)</pickup-location><pickup-location code="NYUSX">NYU Shanghai
-        Library (China)</pickup-location></pickup-locations><note type="info"></note><note
-        type="info">Item status: Regular loan&lt;br /&gt; Call number: HN690.I56 I84
-        2004&lt;br /&gt;</note><last-interest-date usage="Optional">20150128</last-interest-date><start-interest-date
-        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
-        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
-        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
-        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/shortLoan"
-        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
-        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01001102376/items/NYU50001102376000010/photo"
-        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
-        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
-        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>001102376</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:04:21 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22it%20experience%20in%20india%22%20AND%20creator:(keniston)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.1.19
-      Date:
-      - Thu, 30 Oct 2014 17:04:21 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.3.10-1ubuntu3.2
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":6,"params":{"qin":"title:\"it
-        experience in india\" AND creator:(keniston) AND (mediatype:texts OR mediatype:audio)","fl":"*","start":"0","q":"title:\"it
-        experience in india\" AND creator:(keniston ) AND ( mediatype:texts OR mediatype:audio
-        )","wt":"json","rows":"999"}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version:
-  recorded_at: Thu, 30 Oct 2014 17:04:21 GMT
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 18:15:28 GMT
 recorded_with: VCR 2.9.3
