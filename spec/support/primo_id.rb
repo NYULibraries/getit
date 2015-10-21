@@ -17,7 +17,9 @@ class PrimoId
     'Overcoming trauma through yoga' => 'dedupmrg200192935',
     'Gothic architecture' => 'nyu_aleph002517067',
     'El Croquis' => 'nyu_aleph002106230',
-    'To kill a mockingbird [videorecording]' => 'nyu_aleph001624317'
+    'To kill a mockingbird [videorecording]' => 'nyu_aleph001624317',
+    'Franny and Zooey' => 'nyu_aleph000679305',
+    'The catcher in the rye' => 'nyu_aleph002268410'
   }
   attr_reader :id, :state
   def initialize(state)

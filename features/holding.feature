@@ -29,7 +29,7 @@ Feature: Copies in Library
     And I am on the GetIt page for the title "Not by Reason Alone"
     Then I should see the "Copies in Library" section
     And I should the link to the call number maps
-    And I should see "New School Fogelman Library" as the copy's location
+    And I should see "TNS List Center Library" as the copy's location
     And I should see "(JA81 .M54 1993)" as the copy's call number
     And I should see the "More Info" button for the copy
 
