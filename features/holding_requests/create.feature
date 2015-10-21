@@ -20,10 +20,10 @@ Feature: Place a hold on a Copy in Library
     And I am on the GetIt page for an "offsite" holding
     And I click the "Request" button
     And I choose "Request this item to be delivered to the pickup location of your choice."
-    And I accept "New School Fogelman Library" as my pickup location
+    And I accept "TNS List Center Library" as my pickup location
     And I click the "Submit" button in the modal footer
     Then I should see a confirmation that my request has been processed
-    And I should see a message that I will be notified when my item is available to pick up at "New School Fogelman Library"
+    And I should see a message that I will be notified when my item is available to pick up at "TNS List Center Library"
 
   @user/ill
   Scenario: A user with request permissions places a request to ILL an "ILL" holding
