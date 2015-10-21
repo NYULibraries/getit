@@ -16,7 +16,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('NYU_SCOPUS_CITATIONS_JSON_API_KEY') { ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] }
   c.filter_sensitive_data('NS_BX_TOKEN') { ENV['NS_BX_TOKEN'] }
   c.filter_sensitive_data('BOR_ID') { ENV['BOR_ID'] }
-  c.default_cassette_options = {match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
+  c.default_cassette_options = {allow_playback_repeats: true, match_requests_on: [:method, VCR.request_matchers.uri_without_param(:ctx_tim)]}
 end
 
 VCR.cucumber_tags do |t|
@@ -48,7 +48,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/offsite'
   t.tag '@user/offsite'
   t.tag '@guest/available'
-  t.tag '@user/available'
+  t.tag '@user/available'#, allow_playback_repeats: true, record: :new_episodes
   t.tag '@guest/ill'
   t.tag '@user/ill'
   t.tag '@user/afc'
@@ -58,4 +58,6 @@ VCR.cucumber_tags do |t|
   t.tag '@logout'
   # Disallowed not in use
   t.tags '@disallowed', record: :none
+  # Catch all if we don't care about the exact content
+  t.tag '@vcr', allow_playback_repeats: true, record: :all
 end
