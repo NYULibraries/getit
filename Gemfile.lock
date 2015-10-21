@@ -35,8 +35,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: d492b8da0bbfc5821e3a326e699981502ee662d0
-  branch: feature/fix_ip_views
+  revision: 1bccc1c982f14a8177880e403355296f3983e528
   specs:
     nyulibraries-assets (4.6.1)
       bootstrap-sass (~> 3.2.0.2)
