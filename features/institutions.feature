@@ -1,4 +1,4 @@
-@vcr
+@vcr @wip-travis
 Feature: Institution views by IP location
   In order to keep consistency of visual identity
   As a user
@@ -73,9 +73,3 @@ Feature: Institution views by IP location
     Given I am at Cooper Union
     And I am on the GetIt page for "The New Yorker"
     Then I should see the Cooper Union view
-
-  @wip
-  Scenario: Viewing the resolve page from NYSID
-    Given I am at NYSID
-    And I am on the GetIt search page
-    Then I should see the NYSID view

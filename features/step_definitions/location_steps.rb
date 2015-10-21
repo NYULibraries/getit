@@ -42,3 +42,7 @@ end
 Then(/^I should see the Cooper Union view$/) do
   expect(html).to have_content "Cooper Union Library"
 end
+
+Then(/^I should see the NYSID view$/) do
+  expect(html).to have_content "New York School of Interior Design Library"
+end
