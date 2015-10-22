@@ -30,7 +30,7 @@ gem 'mustache', '0.99.4'
 gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.6.0'
+gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.6.1'
 # gem 'nyulibraries-assets', path: '/apps/nyulibraries-assets'
 
 # Deploy the application with Formaggio deploy recipes
@@ -71,7 +71,7 @@ group :test, :cucumber do
   # Use DatabaseCleaner for clearing the test database
   gem 'database_cleaner', '~> 1.3.0'
   # Use Selenium as the web driver for Cucumber
-  gem 'selenium-webdriver', '~> 2.43.0'
+  gem 'selenium-webdriver', '~> 2.48.0'
   # Use Cucumber for integration testing
   gem 'cucumber-rails', '~> 1.4.0', require: false
 end

@@ -35,10 +35,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: ce922a88a9ecb74ace6962bc861851bf52839e62
-  tag: v4.6.0
+  revision: 468a665b9048e9c02ad394cddf4d4619fd72d201
+  tag: v4.6.1
   specs:
-    nyulibraries-assets (4.6.0)
+    nyulibraries-assets (4.6.1)
       bootstrap-sass (~> 3.2.0.2)
       compass (~> 1.0.1)
       font-awesome-rails (~> 4.2.0.0)
@@ -360,7 +360,7 @@ GEM
       uuid (~> 2.3.7)
       wasabi (= 3.3.0)
     scrub_rb (1.0.1)
-    selenium-webdriver (2.43.0)
+    selenium-webdriver (2.48.1)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
@@ -471,7 +471,7 @@ DEPENDENCIES
   rails (~> 4.1.11)
   rspec-rails (~> 3.1.0)
   sass-rails (= 5.0.0.beta1)
-  selenium-webdriver (~> 2.43.0)
+  selenium-webdriver (~> 2.48.0)
   sunspot_rails (~> 2.1.0)
   therubyracer (~> 0.12.0)
   uglifier (~> 2.7.0)
