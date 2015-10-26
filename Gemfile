@@ -34,7 +34,7 @@ gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.
 # gem 'nyulibraries-assets', path: '/apps/nyulibraries-assets'
 
 # Deploy the application with Formaggio deploy recipes
-gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.4.0'
+gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.5.1'
 
 # Umlaut
 gem 'umlaut', '~> 4.1.0'
