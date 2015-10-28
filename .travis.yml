@@ -13,11 +13,11 @@ before_script:
   - RAILS_ENV=test bundle exec rake db:schema:load
 
 rvm:
-  - 1.9.3
   # - jruby-19mode # JRuby (1.9)
   # - rbx-19mode
   - 2.0.0
   - 2.1.3
+  - 2.2.3
 
 git:
   submodules: false
