@@ -61,7 +61,7 @@ class UmlautController < ApplicationController
     link_img_url "http://library.nyu.edu/getit.gif"
 
     # Sometimes Umlaut sends out email, what email addr should it be from?
-    from_email_addr 'no-reply@library.nyu.edu'
+    from_email_addr 'lib-no-reply@nyu.edu'
 
     # Local layout for UmlautController's, instead of
     # built in 'umlaut' layout?

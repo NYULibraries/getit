@@ -135,9 +135,9 @@ default:
     # Thomson JCR LAMR api has no api key, but your
     # IP needs to be registered with them. Same registraiton
     # as for ISI WoK generally.
-    Jcr:
-      type: Jcr
-      priority: c
+    # Jcr:
+    #   type: Jcr
+    #   priority: c
 
     # Priority d: Background
     # Email Export
