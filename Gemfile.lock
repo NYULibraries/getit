@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/formaggio.git
-  revision: d4fec112a7535dd10e59acc78ece59aa63800dff
-  tag: v1.5.1
+  revision: 05290d119a0f9f15df12206c798494d1554c4c58
+  tag: v1.5.2
   specs:
-    formaggio (1.5.1)
+    formaggio (1.5.2)
       cap_git_tools (~> 0.9)
       capistrano (~> 2.15)
       figs (~> 2.0)
