@@ -1,10 +1,10 @@
 module InstitutionsHelper
   include Nyulibraries::Assets::InstitutionsHelper
 
-  # Override default institution_param from nyulibraries-assets helper
-  def institution_param
-    params['umlaut.institution'].upcase.to_sym if params['umlaut.institution'].present?
+  # Override default institution_param_name from nyulibraries-assets helper
+  # default is 'institution'
+  def institution_param_name
+    'umlaut.institution'
   end
-  private :institution_param
 
 end
