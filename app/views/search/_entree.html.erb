@@ -61,7 +61,7 @@ available_text = (current_primary_institution.nil? || current_primary_institutio
   <%= content_tag(:div, "Publisher: #{publisher}", class: 'publisher')  %>
 <%- end -%>
 <%- if available_text.present? -%>
-  <%= content_tag(:div, class: 'delivery') do 
+  <%= content_tag(:div, class: 'delivery') do
     link_to(available_text, url_for_with_co({controller: 'resolve'}, record), {target: '_blank', class: 'text-success'})
   end %>
 <%- end -%>
