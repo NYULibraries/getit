@@ -5,6 +5,9 @@ class HoldingRequestsController < UmlautController
   # E-ZBorrow URL
   EZBORROW_BASE_URL = (ENV['EZBORROW_BASE_URL'] || 'https://pds.library.nyu.edu')
 
+  # E-ZBorrow LS function map
+  EZBORROW_FUNCTIONS = { NS: 'THENEWSCHOOL', NYU: 'NYU' }
+
   # Valid holding request types
   WHITELISTED_TYPES = %w[available ill processing offsite on_order recall ezborrow]
 
@@ -29,7 +32,7 @@ class HoldingRequestsController < UmlautController
             redirect_to "#{ILLIAD_BASE_URL}/illiad/illiad.dll/OpenURL?#{service_response.request.to_context_object.kev}"
           elsif valid_type == 'ezborrow'
             # If we're E-ZBorrowing, send them to E-ZBorrow (via PDS)
-            redirect_to "#{EZBORROW_BASE_URL}/ezborrow?query=ti=#{escaped_holding_title}"
+            redirect_to "#{EZBORROW_BASE_URL}/ezborrow?ls=#{ezborrow_institution_function}&query=ti=#{escaped_holding_title}"
           else
             # Otherwise, create the hold
             create_hold = holding_request.create_hold(creation_parameters)
@@ -163,5 +166,9 @@ class HoldingRequestsController < UmlautController
 
   def escaped_holding_title
     CGI::escape(holding.title)
+  end
+
+  def ezborrow_institution_function
+    EZBORROW_FUNCTIONS[current_primary_institution] || 'NYU'
   end
 end
