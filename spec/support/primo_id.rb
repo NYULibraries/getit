@@ -19,7 +19,9 @@ class PrimoId
     'El Croquis' => 'nyu_aleph002106230',
     'To kill a mockingbird [videorecording]' => 'nyu_aleph001624317',
     'Franny and Zooey' => 'nyu_aleph000679305',
-    'The catcher in the rye' => 'nyu_aleph002268410'
+    'The catcher in the rye' => 'nyu_aleph002268410',
+    'The eye of the shah' => 'nyu_aleph004197500',
+    'Stolen glimpses, captive shadows' => 'nyu_aleph003774543'
   }
   attr_reader :id, :state
   def initialize(state)
