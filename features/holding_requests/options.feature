@@ -80,3 +80,12 @@ Feature: Holding request options for a Copy in Library
     And I should see an option to recall the holding from a fellow library patron
     But I should not see an option to request the holding from E-ZBorrow
     And I should not see an option to request the holding from another library via Interlibrary Loan (ILL)
+
+  @newschool_user/checked_out
+  Scenario: A New School user sees E-ZBorrow permissions
+    Given I am logged in as a New School user
+    And I am on the GetIt page for the title "Stolen glimpses, captive shadows"
+    And I click the "Request" button
+    Then I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option to recall the holding from a fellow library patron

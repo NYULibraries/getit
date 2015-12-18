@@ -37,6 +37,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/checked_out'
   t.tag '@user/checked_out'
   t.tag '@consortium_user/checked_out'
+  t.tag '@newschool_user/checked_out'#, allow_playback_repeats: true, record: :all
   t.tag '@guest/requested'
   t.tag '@user/requested'
   t.tag '@guest/recalled'
@@ -48,7 +49,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/offsite'
   t.tag '@user/offsite'
   t.tag '@guest/available'
-  t.tag '@user/available'#, allow_playback_repeats: true, record: :new_episodes
+  t.tag '@user/available'
   t.tag '@guest/ill'
   t.tag '@user/ill'
   t.tag '@user/afc'
