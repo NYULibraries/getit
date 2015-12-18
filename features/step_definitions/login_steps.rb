@@ -18,6 +18,11 @@ Given(/^I am logged in as an AFC user$/) do
   visit '/login'
 end
 
+Given(/^I am logged in as a New School user$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = ns_omniauth_hash
+  visit '/login'
+end
+
 Given(/^I am not logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
