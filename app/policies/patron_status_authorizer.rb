@@ -16,7 +16,7 @@ class PatronStatusAuthorizer
     authorized_bor_statuses.include?(aleph_patron.bor_status)
   end
 
-  private
+  protected
   def aleph_patron
     @aleph_patron ||= GetIt::AlephPatron.new(user)
   end
