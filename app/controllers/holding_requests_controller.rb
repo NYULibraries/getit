@@ -128,7 +128,7 @@ class HoldingRequestsController < UmlautController
 
   def authorizer
     if holding_request.present?
-      @authorizer ||= HoldingRequest::Authorizer.new(holding_request)
+      @authorizer ||= HoldingRequest::Authorizer.new(holding_request, current_primary_institution.code)
     end
   end
 
