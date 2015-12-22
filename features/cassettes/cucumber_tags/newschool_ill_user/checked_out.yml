@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T14:25:54-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:53:46-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -19,246 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Dec 2015 19:25:57 GMT
-      Server:
-      - Apache
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
-        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2015-12-22T14:25:54-05:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;10948339&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
-        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
-        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
-        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
-        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
-        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
-        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
-        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
-        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
-        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
-        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
-        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
-        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
-        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
-        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sD3BCC1AA-A8E1-11E5-ABB2-B097FE4C1AE4&lt;/item&gt;\n
-        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
-        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
-        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
-        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
-        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
-        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
-        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
-        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
-        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
-        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003774543%20(Via%20SFX)&amp;genre=journal</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
-        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
-        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
-        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
-        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
-        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
-        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
-        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
-        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
-        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 19:25:55 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22stolen%20glimpses%20captive%20shadows%22%20AND%20creator:(o'brien,%20geoffrey,%201948%20)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Tue, 22 Dec 2015 19:40:16 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22stolen+glimpses+captive+shadows%22+AND+creator:%28o%27brien%2C+geoffrey%2C+1948+%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Wed, 23 Dec 2015 01:40:16 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 19:40:18 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22stolen%20glimpses%20captive%20shadows%22%20AND%20creator:(o'brien,%20geoffrey,%201948%20)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Tue, 22 Dec 2015 19:40:17 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.14
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":6,"params":{"q":"title:\"stolen
-        glimpses captive shadows\" AND creator:(o\\''brien, geoffrey, 1948 ) AND (
-        mediatype:texts OR mediatype:audio )","qin":"title:\"stolen glimpses captive
-        shadows\" AND creator:(o''brien, geoffrey, 1948 ) AND (mediatype:texts OR
-        mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 19:40:19 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22O'Brien,%20Geoffrey,%201948-%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '1983'
-      Date:
-      - Tue, 22 Dec 2015 19:40:17 GMT
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
-        all &quot;O'Brien, Geoffrey, 1948-&quot;</query><xQuery><ns2:searchClause
-        xsi:type=\"ns2:searchClauseType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index
-        xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
-        xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">O'Brien,
-        Geoffrey, 1948-</ns2:term></ns2:searchClause></xQuery><maximumRecords xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema
-        xsi:type=\"xsd:string\">default</recordSchema><sortKeys xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/16</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 19:40:20 GMT
-- request:
-    method: get
-    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T14:45:12-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O'Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.aulast=O'Brien&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.genre=journal&rft.jtitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Powered-By:
-      - Exlibris
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Tue, 22 Dec 2015 19:45:09 GMT
-      Server:
-      - bX recommender
-      Vary:
-      - Accept-encoding
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
-        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
-        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
-        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 19:45:12 GMT
-- request:
-    method: get
-    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:16:41-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 22 Dec 2015 20:16:38 GMT
+      - Tue, 22 Dec 2015 20:53:44 GMT
       Server:
       - Apache
       Content-Type:
@@ -274,8 +35,8 @@ http_interactions:
          <ctx_obj identifier="">
           <ctx_obj_attributes>&lt;perldata&gt;
          &lt;hash&gt;
-          &lt;item key="ctx_tim"&gt;2015-12-22T15:16:41-05:00&lt;/item&gt;
-          &lt;item key="sfx.request_id"&gt;3783210&lt;/item&gt;
+          &lt;item key="ctx_tim"&gt;2015-12-22T15:53:46-05:00&lt;/item&gt;
+          &lt;item key="sfx.request_id"&gt;3783286&lt;/item&gt;
           &lt;item key="rft.genre"&gt;journal&lt;/item&gt;
           &lt;item key="sfx.show_availability"&gt;1&lt;/item&gt;
           &lt;item key="sfx.ignore_date_threshold"&gt;1&lt;/item&gt;
@@ -291,7 +52,7 @@ http_interactions:
            &lt;/hash&gt;
           &lt;/item&gt;
           &lt;item key="ctx_ver"&gt;Z39.88-2004&lt;/item&gt;
-          &lt;item key="sfx.openurl"&gt;http://sfx4.library.newschool.edu/ns?url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;amp;ctx_ver=Z39.88-2004&amp;amp;ctx_tim=2015-12-22T15%3A16%3A41-05%3A00&amp;amp;ctx_id=&amp;amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;amp;req.ip=127.0.0.1&amp;amp;rfr_id=info%3Asid%2Fprimo.exlibrisgroup.com%3Aprimo-nyu_aleph003774543&amp;amp;sfx.response_type=multi_obj_xml&amp;amp;sfx.ignore_date_threshold=1&amp;amp;sfx.show_availability=1&lt;/item&gt;
+          &lt;item key="sfx.openurl"&gt;http://sfx4.library.newschool.edu/ns?url_ver=Z39.88-2004&amp;amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;amp;ctx_ver=Z39.88-2004&amp;amp;ctx_tim=2015-12-22T15%3A53%3A46-05%3A00&amp;amp;ctx_id=&amp;amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;amp;req.ip=127.0.0.1&amp;amp;rfr_id=info%3Asid%2Fprimo.exlibrisgroup.com%3Aprimo-nyu_aleph003774543&amp;amp;sfx.response_type=multi_obj_xml&amp;amp;sfx.ignore_date_threshold=1&amp;amp;sfx.show_availability=1&lt;/item&gt;
           &lt;item key="@rfr_id"&gt;
            &lt;array&gt;
             &lt;item key="0"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;
@@ -318,7 +79,7 @@ http_interactions:
             &lt;item key="4"&gt;32520000019000060&lt;/item&gt;
            &lt;/array&gt;
           &lt;/item&gt;
-          &lt;item key="req.session_id"&gt;sE873E43C-A8E8-11E5-8801-23684D147D3E&lt;/item&gt;
+          &lt;item key="req.session_id"&gt;s1723A6E6-A8EE-11E5-B083-80674D147D3E&lt;/item&gt;
           &lt;item key="sfx.sid"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;
           &lt;item key="url_ver"&gt;Z39.88-2004&lt;/item&gt;
           &lt;item key="ctx_enc"&gt;UTF-8&lt;/item&gt;
@@ -460,7 +221,7 @@ http_interactions:
          </ctx_obj>
         </ctx_obj_set>
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:42 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:47 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -477,7 +238,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 22 Dec 2015 20:16:42 GMT
+      - Tue, 22 Dec 2015 20:53:47 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -498,7 +259,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Tue, 22 Dec 2015 20:16:40 GMT
+      - Tue, 22 Dec 2015 20:53:45 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -676,7 +437,7 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:42 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:47 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003774543/items
@@ -702,13 +463,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 20:16:40 GMT
+      - Tue, 22 Dec 2015 20:53:45 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01003774543/items/NYU50003774543000010"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:42 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:47 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003774543/items/NYU50003774543000010
@@ -734,7 +495,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 20:16:40 GMT
+      - Tue, 22 Dec 2015 20:53:45 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003774543</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142053933365</z30-barcode><z30-sub-library>NYU
@@ -748,10 +509,48 @@ http_interactions:
         (hardback)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>12/28/15
         10:30 PM</status></item></get-item> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:42 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:47 GMT
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:16:43-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O'Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.genre=journal&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:53:47-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O'Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.genre=journal&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Exlibris
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 20:53:45 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
+        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
+        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
+        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 20:53:48 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:53:48-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O'Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.genre=journal&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -768,7 +567,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Dec 2015 20:16:46 GMT
+      - Tue, 22 Dec 2015 20:53:51 GMT
       Server:
       - Apache
       Content-Type:
@@ -780,10 +579,10 @@ http_interactions:
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
         \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;G&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2015-12-22T15:16:43-05:00&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2015-12-22T15:53:48-05:00&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;10948675&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n
+        key=\"sfx.request_id\"&gt;10948941&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
         \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
         \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
@@ -802,7 +601,7 @@ http_interactions:
         \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.jtitle\"&gt;Stolen
         glimpses, captive shadows : writing on film, 2002-2012&lt;/item&gt;\n  &lt;item
         key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
-        \ &lt;item key=\"req.session_id\"&gt;sECB7FBBE-A8E8-11E5-8A9B-EBC5FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"req.session_id\"&gt;s1AFADAB4-A8EE-11E5-82B1-CB59FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
         \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003774543&lt;/item&gt;\n
@@ -834,86 +633,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:43 GMT
-- request:
-    method: get
-    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T15:16:42-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O'Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.genre=journal&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      X-Powered-By:
-      - Exlibris
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Tue, 22 Dec 2015 20:16:41 GMT
-      Server:
-      - bX recommender
-      Vary:
-      - Accept-encoding
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
-        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
-        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
-        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:44 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2013002370
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 22 Dec 2015 20:16:42 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
-      X-Powered-By:
-      - PHP/5.4.45-0+deb7u2
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '47'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a423660;expires=Tue, 22-Dec-2015
-        20:26:42 GMT;path=/;httponly
-    body:
-      encoding: UTF-8
-      string: |2-
-
-
-        {"lccn:2013002370":{"records":[],"items":[]}}
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:44 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:48 GMT
 - request:
     method: get
     uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22stolen%20glimpses%20captive%20shadows%22%20AND%20creator:(o'brien)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
@@ -935,7 +655,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Tue, 22 Dec 2015 20:16:42 GMT
+      - Tue, 22 Dec 2015 20:53:46 GMT
       Content-Type:
       - text/html
       Content-Length:
@@ -945,7 +665,7 @@ http_interactions:
       Location:
       - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22stolen+glimpses+captive+shadows%22+AND+creator:%28o%27brien%29+AND+(mediatype:texts+OR+mediatype:audio)
       Expires:
-      - Wed, 23 Dec 2015 02:16:42 GMT
+      - Wed, 23 Dec 2015 02:53:46 GMT
       Cache-Control:
       - max-age=21600
     body:
@@ -953,7 +673,48 @@ http_interactions:
       string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
         Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:44 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:49 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:2013002370
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 20:53:47 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u2
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '47'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ea245525d5f4f58455e445a4a423660;expires=Tue, 22-Dec-2015
+        21:03:47 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"lccn:2013002370":{"records":[],"items":[]}}
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 20:53:49 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003774543/items/NYU50003774543000010
@@ -979,7 +740,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 20:16:42 GMT
+      - Tue, 22 Dec 2015 20:53:47 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>003774543</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142053933365</z30-barcode><z30-sub-library>NYU
@@ -1009,5 +770,5 @@ http_interactions:
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003774543</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 20:16:44 GMT
+  recorded_at: Tue, 22 Dec 2015 20:53:49 GMT
 recorded_with: VCR 2.9.3
