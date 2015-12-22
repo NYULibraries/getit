@@ -1,9 +1,0 @@
-<%- # Never  show this for now -%>
-<% if false && can_ezborrow? && holding.bobst_reserve? %>
-  <%- # Link for "E-ZBorrow" action with class "ajax_window" for unobtrusive JS. -%>
-  <%= link_to(
-    t('resolve.holdings.ezborrow_text'),
-    ezborrow_url(holding),
-    target: "_blank",
-    class: "btn btn-primary ezborrow-link") %>
-<% end %>
