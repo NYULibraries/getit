@@ -2,7 +2,52 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T13:19:24-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 19:03:16 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
+        allowed="N"><note type="error">Item cannot be requested (tab15).</note></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 19:03:18 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T14:04:02-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +64,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 22 Dec 2015 18:19:26 GMT
+      - Tue, 22 Dec 2015 19:04:05 GMT
       Server:
       - Apache
       Content-Type:
@@ -30,8 +75,8 @@ http_interactions:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2015-12-22T13:19:24-05:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;10947966&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2015-12-22T14:04:02-05:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;10948242&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
         \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
@@ -46,7 +91,7 @@ http_interactions:
         key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
         \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
-        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s8901B124-A8D8-11E5-B1F0-0680FE4C1AE4&lt;/item&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sC55C4EB2-A8DE-11E5-A7B0-1195FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
@@ -71,7 +116,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:02 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -88,7 +133,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Tue, 22 Dec 2015 18:19:24 GMT
+      - Tue, 22 Dec 2015 19:04:02 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -109,7 +154,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:00 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -321,7 +366,7 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:02 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items
@@ -347,13 +392,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:00 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010
@@ -379,7 +424,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:00 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
@@ -391,48 +436,7 @@ http_interactions:
         eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:925497538
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
-      X-Powered-By:
-      - PHP/5.4.45-0+deb7u2
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '46'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 22-Dec-2015
-        18:29:22 GMT;path=/;httponly
-    body:
-      encoding: UTF-8
-      string: |2-
-
-
-        {"oclc:925497538":{"records":[],"items":[]}}
-    http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
 - request:
     method: get
     uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
@@ -454,7 +458,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:01 GMT
       Content-Type:
       - text/html
       Content-Length:
@@ -464,7 +468,7 @@ http_interactions:
       Location:
       - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+eye+of+the+shah%22+AND+creator:%28p%C3%A9rez+gonz%C3%A1lez%29+AND+(mediatype:texts+OR+mediatype:audio)
       Expires:
-      - Wed, 23 Dec 2015 00:19:22 GMT
+      - Wed, 23 Dec 2015 01:04:01 GMT
       Cache-Control:
       - max-age=21600
     body:
@@ -472,7 +476,7 @@ http_interactions:
       string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
         Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
 - request:
     method: get
     uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
@@ -494,7 +498,7 @@ http_interactions:
       Server:
       - nginx/1.4.6 (Ubuntu)
       Date:
-      - Tue, 22 Dec 2015 18:19:23 GMT
+      - Tue, 22 Dec 2015 19:04:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -502,15 +506,101 @@ http_interactions:
       Connection:
       - keep-alive
       X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.13
+      - PHP/5.5.9-1ubuntu4.11
     body:
       encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":61,"params":{"q":"title:\"the
+      string: '{"responseHeader":{"status":0,"QTime":7,"params":{"q":"title:\"the
         eye of the shah\" AND creator:(p\u00e9rez gonz\u00e1lez ) AND ( mediatype:texts
         OR mediatype:audio )","qin":"title:\"the eye of the shah\" AND creator:(p\u00e9rez
         gonz\u00e1lez) AND (mediatype:texts OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:925497538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 19:04:01 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u2
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '46'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a423660;expires=Tue, 22-Dec-2015
+        19:14:01 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"oclc:925497538":{"records":[],"items":[]}}
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 19:04:00 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
+        allowed="N"><note type="error">Item cannot be requested (tab15).</note></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 19:04:03 GMT
 - request:
     method: get
     uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22P%C3%A9rez%20Gonz%C3%A1lez%22%20and%20local.OCLCNumber%20=%20%22925497538%22&sortKeys=holdingscount
@@ -536,7 +626,7 @@ http_interactions:
       Content-Length:
       - '2541'
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:01 GMT
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
@@ -566,7 +656,7 @@ http_interactions:
         xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
         Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:04 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
@@ -592,7 +682,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 22 Dec 2015 18:19:22 GMT
+      - Tue, 22 Dec 2015 19:04:02 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
@@ -611,5 +701,5 @@ http_interactions:
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+  recorded_at: Tue, 22 Dec 2015 19:04:04 GMT
 recorded_with: VCR 2.9.3
