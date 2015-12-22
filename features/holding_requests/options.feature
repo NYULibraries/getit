@@ -89,3 +89,10 @@ Feature: Holding request options for a Copy in Library
     Then I should see an option to request the holding from E-ZBorrow
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option to recall the holding from a fellow library patron
+
+  @wip @user/isaw_available
+  Scenario: A user with request privileges viewing options for an item in the ISAW library
+    Given I am logged in
+    And I am on the GetIt page for the title "The eye of the shah"
+    And I click the "Request" button
+    Then I should see an option to request a scan of a portion of the holding to be delivered to me electronically
