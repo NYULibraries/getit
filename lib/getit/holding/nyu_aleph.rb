@@ -39,7 +39,7 @@ module GetIt
       end
 
       def scannable?
-        from_aleph? && sub_library.code == 'NISAW'
+        from_aleph? && ['NISAW'].include?(sub_library.code)
       end
 
       def offsite?
