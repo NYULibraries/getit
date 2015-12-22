@@ -23,6 +23,28 @@ describe EZBorrowAuthorizer do
       it { should be false }
     end
   end
+  describe '#ns_ezborrow?' do
+    subject { authorizer.ns_ezborrow? }
+    context 'when user is a New School E-ZBorrow user' do
+      let(:user) { build(:ezborrow_ns_user) }
+      it { should be true }
+    end
+    context 'when user is an NYU E-ZBorrow user' do
+      let(:user) { build(:ezborrow_user) }
+      it { should be false }
+    end
+  end
+  describe '#nyu_ezborrow?' do
+    subject { authorizer.nyu_ezborrow? }
+    context 'when user is a New School E-ZBorrow user' do
+      let(:user) { build(:ezborrow_ns_user) }
+      it { should be false }
+    end
+    context 'when user is an NYU E-ZBorrow user' do
+      let(:user) { build(:ezborrow_user) }
+      it { should be true }
+    end
+  end
 
   context 'when initialized with a user argument' do
     context 'but the user is not a User' do
