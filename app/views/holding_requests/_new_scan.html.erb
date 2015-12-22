@@ -1,14 +1,8 @@
 <%-
-# The 'available' request form offers the following options:
-#   - If the holding is from an NYU sublibrary,
-#     - Entire item request
-#     - Scanned portion
-#   - Otherwise set the appropriate request text for the sublibrary
-#     - only offer the entire item option
+# The 'scan' request form offers the following options:
+#   - Scanned portion
 -%>
 <%= request_form(:scan) do %>
-  <% if (["NISAW"].include?(holding.sub_library.code)) %>
-    <%= scan_request_option(:scan) %>
-  <% end %>
+  <%= scan_request_option(:scan) %>
   <%= submit_tag 'Submit' %>
 <% end %>
