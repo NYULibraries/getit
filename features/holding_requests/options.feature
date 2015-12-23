@@ -99,7 +99,7 @@ Feature: Holding request options for a Copy in Library
     And I should see an option to recall the holding from a fellow library patron
     But I should not see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @wip @user/isaw_available
+  @user/isaw_available
   Scenario: A user with request privileges viewing options for an item in the ISAW library
     Given I am logged in
     And I am on the GetIt page for the title "The eye of the shah"
