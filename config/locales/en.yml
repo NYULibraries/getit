@@ -42,6 +42,9 @@ en:
       scan: Your scan request has been processed. You will receive an email when the item is available.
       default: Your request has been processed. You will be notified when this item is available to pick up at %{pickup_location}.
     new:
+      scan:
+        scan:
+          default: Request that a portion of the item be scanned and delivered electronically.
       available:
         entire:
           default: Request this item to be delivered to the pickup location of your choice.
