@@ -17,8 +17,12 @@ FactoryGirl.define do
     trait :ns_aleph_attributes do
       patron_status '37'
     end
+    trait :ns_ezborrow_aleph_attributes do
+      patron_status '33'
+    end
     factory :aleph_user, traits: [:nyu_aleph_attributes]
     factory :ezborrow_user, traits: [:nyu_aleph_attributes]
+    factory :ezborrow_ns_user, traits: [:ns_ezborrow_aleph_attributes]
     factory :ill_user, traits: [:ns_aleph_attributes]
     factory :non_ezborrow_user, traits: [:cooper_union_aleph_attributes]
     factory :non_ill_user, traits: [:cooper_union_aleph_attributes]

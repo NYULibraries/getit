@@ -10,7 +10,7 @@ describe EZBorrowAuthorizer do
   end
   describe '#authorized_bor_statuses' do
     subject { authorizer.authorized_bor_statuses }
-    it { should eq %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82} }
+    it { should eq %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82 30 31 32 33 34 35 36 37 38 39 40 41} }
   end
   describe '#authorized?' do
     subject { authorizer.authorized? }
@@ -21,6 +21,28 @@ describe EZBorrowAuthorizer do
     context 'when the user is not authorized' do
       let(:user) { build(:non_ezborrow_user) }
       it { should be false }
+    end
+  end
+  describe '#ns_ezborrow?' do
+    subject { authorizer.ns_ezborrow? }
+    context 'when user is a New School E-ZBorrow user' do
+      let(:user) { build(:ezborrow_ns_user) }
+      it { should be true }
+    end
+    context 'when user is an NYU E-ZBorrow user' do
+      let(:user) { build(:ezborrow_user) }
+      it { should be false }
+    end
+  end
+  describe '#nyu_ezborrow?' do
+    subject { authorizer.nyu_ezborrow? }
+    context 'when user is a New School E-ZBorrow user' do
+      let(:user) { build(:ezborrow_ns_user) }
+      it { should be false }
+    end
+    context 'when user is an NYU E-ZBorrow user' do
+      let(:user) { build(:ezborrow_user) }
+      it { should be true }
     end
   end
 

@@ -1,7 +1,11 @@
 require 'rails_helper'
 describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
+  let(:current_primary_institution) { Institutions.institutions[:NYU] }
   let(:service_response) { create(:nyu_aleph_service_response) }
   let(:user) { build(:aleph_user) }
+  before {
+    allow(controller).to receive(:current_primary_institution).and_return(current_primary_institution)
+  }
   describe 'WHITELISTED_TYPES' do
     subject { HoldingRequestsController::WHITELISTED_TYPES }
     it { should be_an Array }
@@ -131,8 +135,16 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       let(:type) { 'ezborrow' }
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
-      it 'should redirect to ILL' do
-        expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?query=/
+      context 'when institution is NYU' do
+        it 'should redirect to EZborrow script in PDS' do
+          expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?ls=NYU&query=/
+        end
+      end
+      context 'when institution is NS' do
+        let(:current_primary_institution) { Institutions.institutions[:NS] }
+        it 'should redirect to EZborrow script in PDS' do
+          expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?ls=THENEWSCHOOL&query=/
+        end
       end
     end
   end
