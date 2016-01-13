@@ -10,11 +10,11 @@ class HoldingRequest
     end
 
     # Status is requestable if the Holding is in an
-    # ILL state or the combination of User and Holding
-    # is requestable
+    # ILL state, Ezborrow state or the combination
+    # of User and Holding is requestable
     def requestable?
       (ill? || available? || recallable? ||
-        processing? || on_order? || offsite?)
+        processing? || on_order? || offsite? || ezborrow?)
     end
 
     def ezborrow?
@@ -30,7 +30,7 @@ class HoldingRequest
     end
 
     def recallable?
-      (holding.checked_out? || holding.requested?) && privileges.hold_request? && !ill? && !ezborrow?
+      (holding.checked_out? || holding.requested?) && privileges.hold_request? && recall_authorizer.authorized?
     end
     alias_method :recall?, :recallable?
 
@@ -65,6 +65,10 @@ class HoldingRequest
 
     def ill_authorizer
       @ill_authorizer ||= ILLAuthorizer.new(user)
+    end
+
+    def recall_authorizer
+      @recall_authorizer ||= RecallAuthorizer.new(user)
     end
   end
 end

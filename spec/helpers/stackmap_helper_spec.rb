@@ -1,5 +1,5 @@
 require "rails_helper"
-describe EZBorrowHelper do
+describe StackMapHelper do
   let(:service_response) { build(:nyu_aleph_service_response) }
   let(:holding) { GetIt::HoldingManager.new(service_response).holding }
   describe '#stackmap_policy' do
