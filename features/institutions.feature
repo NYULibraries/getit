@@ -1,4 +1,4 @@
-@institutions_views @wip-travis
+@guest/institutions @wip-travis
 Feature: Institution views by IP location
   In order to keep consistency of visual identity
   As a user
