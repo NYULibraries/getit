@@ -62,5 +62,5 @@ VCR.cucumber_tags do |t|
   # Disallowed not in use
   t.tags '@disallowed', record: :none
   # Catch all if we don't care about the exact content
-  t.tag '@vcr', allow_playback_repeats: true, record: :all
+  t.tag '@vcr', allow_playback_repeats: true, record: :new_episodes
 end
