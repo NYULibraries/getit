@@ -7587,4 +7587,908 @@ http_interactions:
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60000358496"></holding></holdings></get-hol-list> '
     http_version: 
   recorded_at: Mon, 25 Jan 2016 21:36:59 GMT
+- request:
+    method: head
+    uri: http://www.extranet.elsevier.com/inca_covers_store/issn/0028792X.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Length:
+      - '1635'
+      Content-Type:
+      - text/html
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 29 Feb 2016 21:52:27 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 21:52:28 GMT
+- request:
+    method: head
+    uri: http://images.serialssolutions.com/ulrichs/0028792X.gif
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Length:
+      - '1635'
+      Content-Type:
+      - text/html
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 29 Feb 2016 21:52:28 GMT
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 21:52:28 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:1760231;lccn:2011201780
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 29 Feb 2016 21:52:29 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u2
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '60'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ea245525d5f4f58455e445a4a423660;expires=Mon, 29-Feb-2016
+        22:02:29 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"oclc:1760231;lccn:2011201780":{"records":[],"items":[]}}
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 21:52:29 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/Identities?maximumRecords=1&query=local.OCLCNumber%20=%20%221760231%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 29 Feb 2016 21:52:29 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">4</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">info:srw/schema/1/Identities</recordSchema><recordPacking
+        xsi:type=\"xsd:string\">xml</recordPacking><recordData xsi:type=\"ns1:stringOrXmlFragment\"><Identity
+        type=\"personal\" xmlns=\"\"><creationtime>Mon Nov 30 19:06:44 2015 UTC</creationtime><pnkey>lccn-n79054648</pnkey><audLevel><min><level>0.01</level><title>In
+        the words of E. B. White : quotations from America's most companionable of
+        writers /</title></min><avg><level>0.17</level></avg><max><level>0.39</level><title>E.B.
+        White--a bibliography /</title></max></audLevel><authorityInfo><viafid>66475004</viafid><wikidataid>Q361617</wikidataid><wikiLink>E._B._White</wikiLink><lccn>n
+        \ 79054648</lccn><arn>287774</arn><x400><rawName><suba>Baite, E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>Brooks
+        White, Elwyn</suba></rawName></x400><x400><rawName><suba>Brooks White, Elwyn
+        1899-1985</suba></rawName></x400><x400><rawName><suba>E. B. Huai te 1899-1985</suba></rawName></x400><x400><rawName><suba>E.B.
+        White Amerikaans schrijver</suba></rawName></x400><x400><rawName><suba>E.
+        B. White e&#x301;crivain ame&#x301;ricain</suba></rawName></x400><x400><rawName><suba>E&#x30FB;B&#x30FB;&#x30DB;&#x30EF;&#x30A4;&#x30C8;</suba></rawName></x400><x400><rawName><suba>E.B.&#x61F7;&#x7279;
+        1899-1985</suba></rawName></x400><x400><rawName><suba>E WHITE</suba></rawName></x400><x400><rawName><suba>Elvin
+        Uayt</suba></rawName></x400><x400><rawName><suba>Elwyn Brooks White</suba></rawName></x400><x400><rawName><suba>Elwyn
+        Brooks White scrittore statunitense</suba></rawName></x400><x400><rawName><suba>Elwyn
+        Brooks White US-amerikanischer Autor</suba></rawName></x400><x400><rawName><suba>Howaito,
+        E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>Huai te, E. B.
+        1899-1985</suba></rawName></x400><x400><rawName><suba>Ua&#x221E;it, E. M.
+        1899-1985</suba></rawName></x400><x400><rawName><suba>Vait, E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>Vaits,
+        E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>Vajt, I. B.</suba></rawName></x400><x400><rawName><suba>Vayit,
+        E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>White, E.</suba></rawName></x400><x400><rawName><suba>White,
+        E. B.</suba></rawName></x400><x400><rawName><suba>White E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>White,
+        E. B. (Elwyn Brooks)</suba></rawName></x400><x400><rawName><suba>White, Elwyn
+        Brooks</suba></rawName></x400><x400><rawName><suba>White, Elwyn Brooks 1899-</suba></rawName></x400><x400><rawName><suba>White,
+        Elwyn Brooks 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x423;&#x430;&#x438;&#x306;&#x442;,
+        &#x411; 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x423;&#x430;&#x438;&#x306;&#x442;,
+        &#x42D;&#x43B;&#x432;&#x438;&#x43D; &#x411;&#x440;&#x443;&#x43A;&#x441;</suba></rawName></x400><x400><rawName><suba>&#x537;&#x56C;&#x57E;&#x56B;&#x576;
+        &#x532;&#x580;&#x578;&#x582;&#x584;&#x57D; &#x548;&#x582;&#x561;&#x575;&#x569;</suba></rawName></x400><x400><rawName><suba>&#x5D0;&quot;&#x5D1;
+        &#x5D5;&#x5D9;&#x5D9;&#x5D8;</suba></rawName></x400><x400><rawName><suba>&#x5D5;&#x5D5;&#x5D9;&#x5D8;,
+        &#x5D0;&#x5DC;&#x5D5;&#x5D9;&#x5DF; &#x5D1;&#x5E8;&#x5D5;&#x5E7;&#x5E1; 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x5D5;&#x5D9;&#x5D8;,
+        &#x5D0;&#x5DC;&#x5D5;&#x5D9;&#x5DF; &#x5D1;&#x5E8;&#x5D5;&#x5E7;&#x5E1; 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x5D5;&#x5D9;&#x5D9;&#x5D8;,
+        &#x5D0;&#x5DC;&#x5D5;&#x5D9;&#x5DF; &#x5D1;&#x5E8;&#x5D5;&#x5E7;&#x5E1; 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x64A;&#x654;&#x6CC;
+        &#x628;&#x6CC; &#x648;&#x627;&#x6CC;&#x62A; &#x634;&#x627;&#x639;&#x631; &#x648;
+        &#x646;&#x648;&#x6CC;&#x633;&#x646;&#x62F;&#x647; &#x627;&#x653;&#x645;&#x631;&#x6CC;&#x6A9;&#x627;&#x6CC;&#x6CC;</suba></rawName></x400><x400><rawName><suba>&#xE2D;&#xE35;.&#xE1A;&#xE35;.
+        &#xE44;&#xE27;&#xE17;&#xE4C;</suba></rawName></x400><x400><rawName><suba>&#x110B;&#x1166;&#x11AF;&#x110B;&#x1171;&#x11AB;
+        &#x1107;&#x1173;&#x1105;&#x116E;&#x11A8;&#x1109;&#x1173; &#x1112;&#x116A;&#x110B;&#x1175;&#x1110;&#x1173;</suba></rawName></x400><x400><rawName><suba>&#x30DB;&#x30EF;&#x30A4;&#x30C8;,
+        E. B</suba></rawName></x400><x400><rawName><suba>&#x30DB;&#x30EF;&#x30A4;&#x30C8;,
+        E. B. 1899-1985</suba></rawName></x400><x400><rawName><suba>&#x57C3;&#x723E;&#x6587;&#xB7;&#x5E03;&#x9B6F;&#x514B;&#x65AF;&#xB7;&#x61F7;&#x7279;</suba></rawName></x400><x400><rawName><suba>&#x61F7;&#x7279;,
+        E. B. 1899-1985</suba></rawName></x400></authorityInfo><associatedNames><name
+        count=\"20247\"><normName>lccn-n80019612</normName><rawName><suba>Williams,
+        Garth</suba></rawName><relator count=\"1\">oth</relator><relator count=\"562\">ill</relator></name><name
+        count=\"16029\"><normName>lccn-nr94031524</normName><rawName><suba>Strunk,
+        William</suba><subd>1869-1946</subd></rawName><relator count=\"2\">hnr</relator><relator
+        count=\"15789\">aut</relator></name><name count=\"7912\"><normName>lccn-n79043666</normName><rawName><suba>White,
+        Katharine Sergeant Angell</suba></rawName><relator count=\"283\">aut</relator><relator
+        count=\"6726\">edt</relator></name><name count=\"5103\"><normName>lccn-n79022099</normName><rawName><suba>Frascino,
+        Edward</suba></rawName><relator count=\"27\">ill</relator><relator count=\"1\">aut</relator></name><name
+        count=\"4491\"><normName>lccn-n83301641</normName><rawName><suba>Ross, Harold
+        Wallace</suba><subd>1892-1951</subd></rawName><relator count=\"4485\">edt</relator></name><name
+        count=\"4485\"><normName>lccn-nr94026392</normName><rawName><suba>Irvin, Rea</suba><subd>1881-1972</subd></rawName></name><name
+        count=\"2860\"><normName>lccn-n85137014</normName><rawName><suba>Rosenwald,
+        Edith Goodkind</suba></rawName></name><name count=\"2860\"><normName>lccn-n90717238</normName><rawName><suba>Lessing
+        J. Rosenwald Collection (Library of Congress)</suba></rawName></name><name
+        count=\"2738\"><normName>lccn-n88099450</normName><rawName><suba>Guth, Dorothy
+        Lobrano</suba></rawName><relator count=\"2\">aut</relator><relator count=\"4\">edt</relator></name><name
+        count=\"2562\"><normName>lccn-no2005056934</normName><rawName><suba>Sagittarius
+        Productions (Firm)</suba></rawName></name></associatedNames><nameInfo type=\"personal\"><rawName><suba>White,
+        E. B.</suba><subq>(Elwyn Brooks)</subq><subd>1899-1985</subd></rawName><genres><genre
+        count=\"39395\" norm=\"1411637\">Juvenile works</genre><genre count=\"34668\"
+        norm=\"1423787\">Fiction</genre><genre count=\"8918\" norm=\"1423879\">Drama</genre><genre
+        count=\"8769\" norm=\"1920781\">Children's films</genre><genre count=\"6241\"
+        norm=\"1423917\">Records and correspondence</genre><genre count=\"5946\" norm=\"1411641\">Periodicals</genre><genre
+        count=\"5785\" norm=\"1726127\">Animated films</genre><genre count=\"4931\"
+        norm=\"1710491\">Film adaptations</genre><genre count=\"4835\" norm=\"1423796\">Directories</genre><genre
+        count=\"3165\" norm=\"1710273\">Musical films</genre></genres><fastHeadings><fast
+        count=\"24861\" norm=\"35391\" size=\"5\" tag=\"600\">White, E. B.--(Elwyn
+        Brooks),</fast><fast count=\"20332\" norm=\"1129749\" size=\"5\" tag=\"650\">Spiders</fast><fast
+        count=\"19741\" norm=\"1140419\" size=\"5\" tag=\"650\">Swine</fast><fast
+        count=\"15199\" norm=\"911581\" size=\"5\" tag=\"650\">English language--Rhetoric</fast><fast
+        count=\"14477\" norm=\"1019337\" size=\"5\" tag=\"650\">Mice</fast><fast count=\"14278\"
+        norm=\"911825\" size=\"5\" tag=\"650\">English language--Style</fast><fast
+        count=\"14169\" norm=\"1094836\" size=\"5\" tag=\"650\">Report writing</fast><fast
+        count=\"13304\" norm=\"935174\" size=\"5\" tag=\"650\">Friendship</fast><fast
+        count=\"10894\" norm=\"921052\" size=\"5\" tag=\"650\">Farm life</fast><fast
+        count=\"10881\" norm=\"821764\" size=\"5\" tag=\"650\">Authors, American</fast><fast
+        count=\"9368\" norm=\"1204333\" size=\"4\" tag=\"651\">New York (State)--New
+        York</fast><fast count=\"8303\" norm=\"809468\" size=\"4\" tag=\"650\">Animals</fast><fast
+        count=\"7395\" norm=\"1139938\" size=\"4\" tag=\"650\">Swans</fast><fast count=\"7315\"
+        norm=\"1158137\" size=\"4\" tag=\"650\">Trumpeter swan</fast><fast count=\"6184\"
+        norm=\"896543\" size=\"4\" tag=\"650\">Domestic animals</fast><fast count=\"4955\"
+        norm=\"999953\" size=\"4\" tag=\"650\">Literature</fast><fast count=\"4835\"
+        norm=\"975769\" size=\"4\" tag=\"650\">Intellectual life</fast><fast count=\"4445\"
+        norm=\"807040\" size=\"4\" tag=\"650\">American essays</fast><fast count=\"4395\"
+        norm=\"856632\" size=\"4\" tag=\"650\">Children's stories</fast><fast count=\"4141\"
+        norm=\"807457\" size=\"4\" tag=\"650\">American wit and humor</fast><fast
+        count=\"4080\" norm=\"920687\" size=\"3\" tag=\"650\">Fantasy</fast><fast
+        count=\"3970\" norm=\"1169308\" size=\"3\" tag=\"650\">Voyages and travels</fast><fast
+        count=\"3592\" norm=\"963482\" size=\"3\" tag=\"650\">Human-animal relationships</fast><fast
+        count=\"3078\" norm=\"1000538\" size=\"3\" tag=\"650\">Little, Stuart (Fictitious
+        character)</fast><fast count=\"2927\" norm=\"1059908\" size=\"3\" tag=\"650\">Pets</fast><fast
+        count=\"2794\" norm=\"1063991\" size=\"3\" tag=\"650\">Piglets</fast><fast
+        count=\"2793\" norm=\"1129745\" size=\"3\" tag=\"650\">Spider webs</fast><fast
+        coor=\"w0983000|n0394536\" count=\"2258\" norm=\"1204155\" size=\"3\" tag=\"651\">United
+        States</fast><fast count=\"1789\" norm=\"821688\" size=\"3\" tag=\"650\">Authors</fast><fast
+        count=\"1731\" norm=\"41951\" size=\"3\" tag=\"600\">Cervantes Saavedra, Miguel
+        de,</fast><fast count=\"1731\" norm=\"28181\" size=\"2\" tag=\"600\">London,
+        Jack,</fast><fast count=\"1731\" norm=\"37758\" size=\"2\" tag=\"600\">Singer,
+        Isaac Bashevis,</fast><fast count=\"1731\" norm=\"40307\" size=\"2\" tag=\"600\">Hurston,
+        Zora Neale</fast><fast count=\"1731\" norm=\"32033\" size=\"2\" tag=\"600\">Andersen,
+        H. C.--(Hans Christian),</fast><fast count=\"1731\" norm=\"30664\" size=\"2\"
+        tag=\"600\">Sandburg, Carl,</fast><fast count=\"1731\" norm=\"29048\" size=\"2\"
+        tag=\"600\">Shakespeare, William,</fast><fast count=\"1731\" norm=\"35263\"
+        size=\"2\" tag=\"600\">Bronte&#x308;, Charlotte,</fast><fast count=\"1731\"
+        norm=\"32674\" size=\"2\" tag=\"600\">Poe, Edgar Allan,</fast><fast count=\"1731\"
+        norm=\"31622\" size=\"2\" tag=\"600\">Twain, Mark,</fast><fast count=\"1731\"
+        norm=\"35276\" size=\"2\" tag=\"600\">Dickinson, Emily,</fast><fast count=\"1731\"
+        norm=\"49863\" size=\"1\" tag=\"600\">Hughes, Langston,</fast><fast count=\"1731\"
+        norm=\"31383\" size=\"1\" tag=\"600\">Bronte&#x308;, Emily,</fast><fast count=\"1731\"
+        norm=\"43946\" size=\"1\" tag=\"600\">Alcott, Louisa May,</fast><fast count=\"1731\"
+        norm=\"28294\" size=\"1\" tag=\"600\">Dickens, Charles,</fast><fast count=\"1731\"
+        norm=\"49231\" size=\"1\" tag=\"600\">Burnett, Frances Hodgson,</fast><fast
+        count=\"1731\" norm=\"1836463\" size=\"1\" tag=\"600\">Murasaki Shikibu,</fast><fast
+        count=\"1731\" norm=\"32929\" size=\"1\" tag=\"600\">Austen, Jane,</fast><fast
+        count=\"1682\" norm=\"856634\" size=\"1\" tag=\"650\">Children's stories--Authorship</fast><fast
+        count=\"1636\" norm=\"797076\" size=\"1\" tag=\"650\">Adoption</fast><fast
+        count=\"1620\" norm=\"1217053\" size=\"1\" tag=\"651\">Maine--Somerset County</fast></fastHeadings><languages
+        count=\"38\"><lang code=\"eng\" count=\"1348\"/><lang code=\"spa\" count=\"68\"/><lang
+        code=\"fre\" count=\"40\"/><lang code=\"dut\" count=\"31\"/><lang code=\"ger\"
+        count=\"27\"/><lang code=\"dan\" count=\"13\"/><lang code=\"jpn\" count=\"12\"/><lang
+        code=\"chi\" count=\"11\"/><lang code=\"kor\" count=\"9\"/><lang code=\"vie\"
+        count=\"9\"/><lang code=\"ita\" count=\"8\"/><lang code=\"mul\" count=\"6\"/><lang
+        code=\"fin\" count=\"5\"/><lang code=\"swe\" count=\"4\"/><lang code=\"heb\"
+        count=\"4\"/><lang code=\"lat\" count=\"4\"/><lang code=\"tha\" count=\"4\"/><lang
+        code=\"por\" count=\"3\"/><lang code=\"pol\" count=\"3\"/><lang code=\"gre\"
+        count=\"3\"/><lang code=\"rus\" count=\"3\"/><lang code=\"slv\" count=\"3\"/><lang
+        code=\"hrv\" count=\"2\"/><lang code=\"hin\" count=\"2\"/><lang code=\"lav\"
+        count=\"2\"/><lang code=\"nor\" count=\"2\"/><lang code=\"ben\" count=\"2\"/><lang
+        code=\"cat\" count=\"2\"/><lang code=\"per\" count=\"1\"/><lang code=\"ind\"
+        count=\"1\"/><lang code=\"cze\" count=\"1\"/><lang code=\"ukr\" count=\"1\"/><lang
+        code=\"ice\" count=\"1\"/><lang code=\"wel\" count=\"1\"/><lang code=\"haw\"
+        count=\"1\"/><lang code=\"mar\" count=\"1\"/><lang code=\"mal\" count=\"1\"/><lang
+        code=\"baq\" count=\"1\"/></languages><birthDate>1899</birthDate><deathDate>1985</deathDate><dates><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1909</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1911</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1918</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1920</date><date
+        aboutCount=\"1\" aboutScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1921</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1927</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1928</date><date
+        byCount=\"16\" byScaled=\"4.00\" count=\"16\" scaled=\"4.00\">1929</date><date
+        byCount=\"2\" byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">1930</date><date
+        byCount=\"7\" byScaled=\"2.81\" count=\"7\" scaled=\"2.81\">1931</date><date
+        byCount=\"3\" byScaled=\"1.58\" count=\"3\" scaled=\"1.58\">1932</date><date
+        byCount=\"3\" byScaled=\"1.58\" count=\"3\" scaled=\"1.58\">1933</date><date
+        byCount=\"7\" byScaled=\"2.81\" count=\"7\" scaled=\"2.81\">1934</date><date
+        byCount=\"3\" byScaled=\"1.58\" count=\"3\" scaled=\"1.58\">1935</date><date
+        byCount=\"2\" byScaled=\"1.00\" count=\"2\" scaled=\"1.00\">1936</date><date
+        byCount=\"3\" byScaled=\"1.58\" count=\"3\" scaled=\"1.58\">1937</date><date
+        byCount=\"16\" byScaled=\"4.00\" count=\"16\" scaled=\"4.00\">1938</date><date
+        byCount=\"8\" byScaled=\"3.00\" count=\"8\" scaled=\"3.00\">1939</date><date
+        aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"13\" byScaled=\"3.70\" count=\"16\"
+        scaled=\"4.00\">1941</date><date byCount=\"15\" byScaled=\"3.91\" count=\"15\"
+        scaled=\"3.91\">1942</date><date byCount=\"3\" byScaled=\"1.58\" count=\"3\"
+        scaled=\"1.58\">1943</date><date byCount=\"39\" byScaled=\"5.29\" count=\"39\"
+        scaled=\"5.29\">1944</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"42\"
+        byScaled=\"5.39\" count=\"44\" scaled=\"5.46\">1945</date><date byCount=\"28\"
+        byScaled=\"4.81\" count=\"28\" scaled=\"4.81\">1946</date><date byCount=\"14\"
+        byScaled=\"3.81\" count=\"14\" scaled=\"3.81\">1947</date><date aboutCount=\"1\"
+        aboutScaled=\"0.00\" byCount=\"13\" byScaled=\"3.70\" count=\"14\" scaled=\"3.81\">1948</date><date
+        byCount=\"15\" byScaled=\"3.91\" count=\"15\" scaled=\"3.91\">1949</date><date
+        byCount=\"16\" byScaled=\"4.00\" count=\"16\" scaled=\"4.00\">1950</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">1951</date><date
+        byCount=\"44\" byScaled=\"5.46\" count=\"44\" scaled=\"5.46\">1952</date><date
+        byCount=\"16\" byScaled=\"4.00\" count=\"16\" scaled=\"4.00\">1953</date><date
+        aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"29\" byScaled=\"4.86\" count=\"32\"
+        scaled=\"5.00\">1954</date><date byCount=\"12\" byScaled=\"3.58\" count=\"12\"
+        scaled=\"3.58\">1955</date><date byCount=\"2\" byScaled=\"1.00\" count=\"2\"
+        scaled=\"1.00\">1956</date><date byCount=\"12\" byScaled=\"3.58\" count=\"12\"
+        scaled=\"3.58\">1957</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"1\"
+        byScaled=\"0.00\" count=\"3\" scaled=\"1.58\">1958</date><date aboutCount=\"2\"
+        aboutScaled=\"1.00\" byCount=\"25\" byScaled=\"4.64\" count=\"27\" scaled=\"4.75\">1959</date><date
+        aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"21\" byScaled=\"4.39\" count=\"22\"
+        scaled=\"4.46\">1960</date><date byCount=\"11\" byScaled=\"3.46\" count=\"11\"
+        scaled=\"3.46\">1961</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"34\"
+        byScaled=\"5.09\" count=\"36\" scaled=\"5.17\">1962</date><date aboutCount=\"1\"
+        aboutScaled=\"0.00\" byCount=\"33\" byScaled=\"5.04\" count=\"34\" scaled=\"5.09\">1963</date><date
+        aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"16\" byScaled=\"4.00\" count=\"17\"
+        scaled=\"4.09\">1964</date><date byCount=\"32\" byScaled=\"5.00\" count=\"32\"
+        scaled=\"5.00\">1965</date><date aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"12\"
+        byScaled=\"3.58\" count=\"13\" scaled=\"3.70\">1966</date><date aboutCount=\"1\"
+        aboutScaled=\"0.00\" byCount=\"12\" byScaled=\"3.58\" count=\"13\" scaled=\"3.70\">1967</date><date
+        aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"20\" byScaled=\"4.32\" count=\"22\"
+        scaled=\"4.46\">1968</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"20\"
+        byScaled=\"4.32\" count=\"22\" scaled=\"4.46\">1969</date><date aboutCount=\"2\"
+        aboutScaled=\"1.00\" byCount=\"86\" byScaled=\"6.43\" count=\"88\" scaled=\"6.46\">1970</date><date
+        aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"16\" byScaled=\"4.00\" count=\"18\"
+        scaled=\"4.17\">1971</date><date aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"37\"
+        byScaled=\"5.21\" count=\"38\" scaled=\"5.25\">1972</date><date byCount=\"64\"
+        byScaled=\"6.00\" count=\"64\" scaled=\"6.00\">1973</date><date aboutCount=\"3\"
+        aboutScaled=\"1.58\" byCount=\"11\" byScaled=\"3.46\" count=\"14\" scaled=\"3.81\">1974</date><date
+        byCount=\"15\" byScaled=\"3.91\" count=\"15\" scaled=\"3.91\">1975</date><date
+        aboutCount=\"4\" aboutScaled=\"2.00\" byCount=\"21\" byScaled=\"4.39\" count=\"25\"
+        scaled=\"4.64\">1976</date><date aboutCount=\"4\" aboutScaled=\"2.00\" byCount=\"28\"
+        byScaled=\"4.81\" count=\"32\" scaled=\"5.00\">1977</date><date aboutCount=\"4\"
+        aboutScaled=\"2.00\" byCount=\"31\" byScaled=\"4.95\" count=\"35\" scaled=\"5.13\">1978</date><date
+        aboutCount=\"6\" aboutScaled=\"2.58\" byCount=\"69\" byScaled=\"6.11\" count=\"75\"
+        scaled=\"6.23\">1979</date><date byCount=\"46\" byScaled=\"5.52\" count=\"46\"
+        scaled=\"5.52\">1980</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"16\"
+        byScaled=\"4.00\" count=\"18\" scaled=\"4.17\">1981</date><date byCount=\"13\"
+        byScaled=\"3.70\" count=\"13\" scaled=\"3.70\">1982</date><date aboutCount=\"2\"
+        aboutScaled=\"1.00\" byCount=\"13\" byScaled=\"3.70\" count=\"15\" scaled=\"3.91\">1983</date><date
+        aboutCount=\"7\" aboutScaled=\"2.81\" byCount=\"22\" byScaled=\"4.46\" count=\"29\"
+        scaled=\"4.86\">1984</date><date aboutCount=\"6\" aboutScaled=\"2.58\" byCount=\"13\"
+        byScaled=\"3.70\" count=\"19\" scaled=\"4.25\">1985</date><date aboutCount=\"2\"
+        aboutScaled=\"1.00\" byCount=\"13\" byScaled=\"3.70\" count=\"15\" scaled=\"3.91\">1986</date><date
+        aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"13\" byScaled=\"3.70\" count=\"16\"
+        scaled=\"4.00\">1987</date><date aboutCount=\"6\" aboutScaled=\"2.58\" byCount=\"50\"
+        byScaled=\"5.64\" count=\"56\" scaled=\"5.81\">1988</date><date aboutCount=\"10\"
+        aboutScaled=\"3.32\" byCount=\"17\" byScaled=\"4.09\" count=\"27\" scaled=\"4.75\">1989</date><date
+        aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"44\" byScaled=\"5.46\" count=\"46\"
+        scaled=\"5.52\">1990</date><date aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"39\"
+        byScaled=\"5.29\" count=\"42\" scaled=\"5.39\">1991</date><date aboutCount=\"6\"
+        aboutScaled=\"2.58\" byCount=\"18\" byScaled=\"4.17\" count=\"24\" scaled=\"4.58\">1992</date><date
+        aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"27\" byScaled=\"4.75\" count=\"29\"
+        scaled=\"4.86\">1993</date><date aboutCount=\"6\" aboutScaled=\"2.58\" byCount=\"18\"
+        byScaled=\"4.17\" count=\"24\" scaled=\"4.58\">1994</date><date aboutCount=\"5\"
+        aboutScaled=\"2.32\" byCount=\"12\" byScaled=\"3.58\" count=\"17\" scaled=\"4.09\">1995</date><date
+        aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"18\" byScaled=\"4.17\" count=\"20\"
+        scaled=\"4.32\">1996</date><date aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"27\"
+        byScaled=\"4.75\" count=\"28\" scaled=\"4.81\">1997</date><date aboutCount=\"3\"
+        aboutScaled=\"1.58\" byCount=\"18\" byScaled=\"4.17\" count=\"21\" scaled=\"4.39\">1998</date><date
+        aboutCount=\"6\" aboutScaled=\"2.58\" byCount=\"78\" byScaled=\"6.29\" count=\"84\"
+        scaled=\"6.39\">1999</date><date aboutCount=\"2\" aboutScaled=\"1.00\" byCount=\"121\"
+        byScaled=\"6.92\" count=\"123\" scaled=\"6.94\">2000</date><date aboutCount=\"9\"
+        aboutScaled=\"3.17\" byCount=\"50\" byScaled=\"5.64\" count=\"59\" scaled=\"5.88\">2001</date><date
+        aboutCount=\"4\" aboutScaled=\"2.00\" byCount=\"54\" byScaled=\"5.75\" count=\"58\"
+        scaled=\"5.86\">2002</date><date aboutCount=\"8\" aboutScaled=\"3.00\" byCount=\"50\"
+        byScaled=\"5.64\" count=\"58\" scaled=\"5.86\">2003</date><date aboutCount=\"5\"
+        aboutScaled=\"2.32\" byCount=\"38\" byScaled=\"5.25\" count=\"43\" scaled=\"5.43\">2004</date><date
+        aboutCount=\"13\" aboutScaled=\"3.70\" byCount=\"46\" byScaled=\"5.52\" count=\"59\"
+        scaled=\"5.88\">2005</date><date aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"88\"
+        byScaled=\"6.46\" count=\"91\" scaled=\"6.51\">2006</date><date aboutCount=\"7\"
+        aboutScaled=\"2.81\" byCount=\"89\" byScaled=\"6.48\" count=\"96\" scaled=\"6.58\">2007</date><date
+        aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"18\" byScaled=\"4.17\" count=\"19\"
+        scaled=\"4.25\">2008</date><date aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"23\"
+        byScaled=\"4.52\" count=\"24\" scaled=\"4.58\">2009</date><date aboutCount=\"1\"
+        aboutScaled=\"0.00\" byCount=\"18\" byScaled=\"4.17\" count=\"19\" scaled=\"4.25\">2010</date><date
+        aboutCount=\"15\" aboutScaled=\"3.91\" byCount=\"23\" byScaled=\"4.52\" count=\"38\"
+        scaled=\"5.25\">2011</date><date aboutCount=\"8\" aboutScaled=\"3.00\" byCount=\"9\"
+        byScaled=\"3.17\" count=\"17\" scaled=\"4.09\">2012</date><date aboutCount=\"9\"
+        aboutScaled=\"3.17\" byCount=\"20\" byScaled=\"4.32\" count=\"29\" scaled=\"4.86\">2013</date><date
+        aboutCount=\"3\" aboutScaled=\"1.58\" byCount=\"22\" byScaled=\"4.46\" count=\"25\"
+        scaled=\"4.64\">2014</date><date aboutCount=\"1\" aboutScaled=\"0.00\" byCount=\"19\"
+        byScaled=\"4.25\" count=\"20\" scaled=\"4.32\">2015</date><date aboutCount=\"1\"
+        aboutScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2016</date></dates><totalHoldings>112904</totalHoldings><workCount>671</workCount><recordCount>2640</recordCount><ddc
+        ident=\"[FIC]\">[FIC]</ddc><lcc ident=\"PS3545.H5187\">PS3545.H5187</lcc><relators><relator
+        code=\"aut\" count=\"54048\"><oclcnum count=\"3398\">ocn000087808</oclcnum><oclcnum
+        count=\"2859\">ocn000225924</oclcnum><oclcnum count=\"2636\">ocn002558907</oclcnum><oclcnum
+        count=\"2479\">ocn003003158</oclcnum><oclcnum count=\"2153\">ocn016653807</oclcnum><oclcnum
+        count=\"1932\">ocn000305785</oclcnum><oclcnum count=\"1276\">ocn000483698</oclcnum><oclcnum
+        count=\"1271\">ocn763161308</oclcnum><oclcnum count=\"935\">ocn000501652</oclcnum><oclcnum
+        count=\"832\">ocn021441253</oclcnum></relator><relator code=\"edt\" count=\"832\"><oclcnum
+        count=\"249\">ocn001646887</oclcnum><oclcnum count=\"156\">ocn002549739</oclcnum><oclcnum
+        count=\"117\">ocn009170170</oclcnum><oclcnum count=\"103\">ocn881858959</oclcnum><oclcnum
+        count=\"80\">ocn001134506</oclcnum><oclcnum count=\"54\">ocn007457059</oclcnum><oclcnum
+        count=\"21\">ocn893389721</oclcnum><oclcnum count=\"19\">ocn004401818</oclcnum><oclcnum
+        count=\"8\">ocn799146961</oclcnum><oclcnum count=\"6\">ocn468488428</oclcnum></relator><relator
+        code=\"ant\" count=\"152\"><oclcnum count=\"20\">ocn800050629</oclcnum><oclcnum
+        count=\"18\">ocn868947986</oclcnum><oclcnum count=\"18\">ocn868947985</oclcnum><oclcnum
+        count=\"13\">ocn799588654</oclcnum><oclcnum count=\"6\">ocn800041570</oclcnum><oclcnum
+        count=\"6\">ocn800437319</oclcnum><oclcnum count=\"6\">ocn800436452</oclcnum><oclcnum
+        count=\"5\">ocn799961964</oclcnum><oclcnum count=\"5\">ocn781470696</oclcnum><oclcnum
+        count=\"4\">ocn780657326</oclcnum></relator><relator code=\"nrt\" count=\"53\"><oclcnum
+        count=\"25\">ocn024580723</oclcnum><oclcnum count=\"11\">ocn904548363</oclcnum><oclcnum
+        count=\"8\">ocn900494963</oclcnum><oclcnum count=\"4\">ocn911057571</oclcnum><oclcnum
+        count=\"3\">ocn907840527</oclcnum><oclcnum count=\"1\">ocn904290028</oclcnum><oclcnum
+        count=\"1\">ocn904290030</oclcnum></relator><relator code=\"aus\" count=\"21\"><oclcnum
+        count=\"21\">ocn085825871</oclcnum></relator><relator code=\"aui\" count=\"13\"><oclcnum
+        count=\"4\">ocn456181897</oclcnum><oclcnum count=\"2\">ocn450872316</oclcnum><oclcnum
+        count=\"2\">ocn450354982</oclcnum><oclcnum count=\"2\">ocn755164073</oclcnum><oclcnum
+        count=\"1\">ocn452891742</oclcnum><oclcnum count=\"1\">ocn453062895</oclcnum><oclcnum
+        count=\"1\">ocn441163755</oclcnum><oclcnum count=\"0\">ocn813641778</oclcnum></relator><relator
+        code=\"oth\" count=\"7\"><oclcnum count=\"3\">ocn185430790</oclcnum><oclcnum
+        count=\"2\">ocn185442205</oclcnum><oclcnum count=\"1\">ocn725309126</oclcnum><oclcnum
+        count=\"1\">ocn924867527</oclcnum></relator><relator code=\"cre\" count=\"5\"><oclcnum
+        count=\"2\">ocn764412139</oclcnum><oclcnum count=\"1\">ocn723784663</oclcnum><oclcnum
+        count=\"1\">ocn723617409</oclcnum><oclcnum count=\"1\">ocn723107209</oclcnum></relator><relator
+        code=\"ccp\" count=\"2\"><oclcnum count=\"1\">ocn762253230</oclcnum><oclcnum
+        count=\"1\">ocn762250366</oclcnum></relator><relator code=\"hnr\" count=\"2\"><oclcnum
+        count=\"2\">ocn837031416</oclcnum></relator><relator code=\"ive\" count=\"1\"><oclcnum
+        count=\"1\">ocn501073255</oclcnum></relator><relator code=\"ctb\" count=\"1\"><oclcnum
+        count=\"1\">ocn858676730</oclcnum></relator><relator code=\"ins\" count=\"1\"><oclcnum
+        count=\"1\">ocn064008939</oclcnum></relator><relator code=\"sgn\" count=\"1\"><oclcnum
+        count=\"1\">ocn083868417</oclcnum></relator><relator code=\"crp\" count=\"1\"><oclcnum
+        count=\"1\">ocn798949261</oclcnum></relator><relator code=\"adp\" count=\"1\"><oclcnum
+        count=\"1\">ocn313335618</oclcnum></relator></relators></nameInfo><biogSHs><biogSH
+        count=\"1099\" id=\"821768\">Authors, American</biogSH></biogSHs><by><citation
+        ident=\"newwork13059989\"><holdings>14946</holdings><numEditions>230</numEditions><oclcnum>ocn004004812</oclcnum><recordType>book</recordType><languages
+        count=\"6\"><lang code=\"eng\" count=\"217\"/><lang code=\"chi\" count=\"4\"/><lang
+        code=\"jpn\" count=\"3\"/><lang code=\"und\" count=\"3\"/><lang code=\"spa\"
+        count=\"2\"/><lang code=\"kor\" count=\"1\"/></languages><date>1959</date><dates
+        different=\"39\" first=\"1959\" last=\"2014\"/><audLevel>0.26</audLevel><creator
+        ident=\"27216212,nr94031524\">Strunk, William</creator><title>The elements
+        of style</title><genres><genre count=\"47\" norm=\"style manuals\">Style manuals</genre><genre
+        count=\"2338\" norm=\"reference works\">Reference works</genre><genre count=\"2\"
+        norm=\"braille books\">Braille books</genre></genres><summary>Whether you
+        write letters, term papers, or novels, this famous manual can help you communicate
+        more effectively</summary><cover isbn=\"0024181900\" oclc=\"ocn257159998\"
+        type=\"isbn\">+-+5546369755</cover></citation><citation ident=\"newwork10030152\"><holdings>14797</holdings><numEditions>354</numEditions><oclcnum>ocn000225924</oclcnum><recordType>book</recordType><languages
+        count=\"28\"><lang code=\"eng\" count=\"219\"/><lang code=\"spa\" count=\"36\"/><lang
+        code=\"fre\" count=\"17\"/><lang code=\"dut\" count=\"15\"/><lang code=\"und\"
+        count=\"9\"/><lang code=\"dan\" count=\"7\"/><lang code=\"kor\" count=\"6\"/><lang
+        code=\"chi\" count=\"4\"/><lang code=\"vie\" count=\"4\"/><lang code=\"lat\"
+        count=\"4\"/><lang code=\"jpn\" count=\"3\"/><lang code=\"por\" count=\"3\"/><lang
+        code=\"gre\" count=\"3\"/><lang code=\"heb\" count=\"3\"/><lang code=\"fin\"
+        count=\"3\"/><lang code=\"rus\" count=\"3\"/><lang code=\"tha\" count=\"3\"/><lang
+        code=\"hin\" count=\"2\"/><lang code=\"cze\" count=\"1\"/><lang code=\"ukr\"
+        count=\"1\"/><lang code=\"per\" count=\"1\"/><lang code=\"wel\" count=\"1\"/><lang
+        code=\"nor\" count=\"1\"/><lang code=\"haw\" count=\"1\"/><lang code=\"mar\"
+        count=\"1\"/><lang code=\"lav\" count=\"1\"/><lang code=\"ben\" count=\"1\"/><lang
+        code=\"baq\" count=\"1\"/></languages><date>1952</date><dates different=\"55\"
+        first=\"1952\" last=\"2015\"/><audLevel>0.16</audLevel><creator ident=\"66475004,n79054648\">White,
+        E. B</creator><title>Charlotte's Web</title><genres><genre count=\"12473\"
+        norm=\"juvenile works\">Juvenile works</genre><genre count=\"2863\" norm=\"folklore\">Folklore</genre><genre
+        count=\"13021\" norm=\"fiction\">Fiction</genre><genre count=\"7\" norm=\"drama\">Drama</genre></genres><summary>When
+        he discovers that he is destined to be someone's dinner, Wilbur the pig is
+        desolate until his spider friend Charlotte decides to help him</summary><cover
+        isbn=\"0064400557\" oclc=\"ocn471039432\" type=\"isbn\">+-+2005599155</cover></citation><citation
+        ident=\"newwork12460186\"><holdings>8938</holdings><numEditions>223</numEditions><oclcnum>ocn002558907</oclcnum><recordType>book</recordType><languages
+        count=\"21\"><lang code=\"eng\" count=\"144\"/><lang code=\"ger\" count=\"13\"/><lang
+        code=\"fre\" count=\"11\"/><lang code=\"spa\" count=\"11\"/><lang code=\"ita\"
+        count=\"8\"/><lang code=\"dut\" count=\"8\"/><lang code=\"swe\" count=\"4\"/><lang
+        code=\"und\" count=\"4\"/><lang code=\"chi\" count=\"3\"/><lang code=\"hrv\"
+        count=\"2\"/><lang code=\"jpn\" count=\"2\"/><lang code=\"pol\" count=\"2\"/><lang
+        code=\"cat\" count=\"2\"/><lang code=\"fin\" count=\"2\"/><lang code=\"kor\"
+        count=\"1\"/><lang code=\"vie\" count=\"1\"/><lang code=\"tha\" count=\"1\"/><lang
+        code=\"ben\" count=\"1\"/><lang code=\"lav\" count=\"1\"/><lang code=\"mal\"
+        count=\"1\"/><lang code=\"nor\" count=\"1\"/></languages><date>1945</date><dates
+        different=\"46\" first=\"1945\" last=\"2015\"/><audLevel>0.13</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Stuart Little</title><genres><genre
+        count=\"7649\" norm=\"juvenile works\">Juvenile works</genre><genre count=\"8103\"
+        norm=\"fiction\">Fiction</genre><genre count=\"1\" norm=\"drama\">Drama</genre><genre
+        count=\"20\" norm=\"adventure stories\">Adventure stories</genre></genres><summary>The
+        adventures of the debonair mouse Stuart Little as he sets out in the world
+        to seek out his dearest friend, a little bird who stayed a few days in his
+        family's garden</summary><cover isbn=\"0060263954\" oclc=\"ocn470375634\"
+        type=\"isbn\">+-+9048175155</cover></citation><citation ident=\"newwork123096753\"><holdings>7126</holdings><numEditions>126</numEditions><oclcnum>ocn000087808</oclcnum><recordType>book</recordType><languages
+        count=\"12\"><lang code=\"eng\" count=\"89\"/><lang code=\"spa\" count=\"11\"/><lang
+        code=\"ger\" count=\"4\"/><lang code=\"jpn\" count=\"4\"/><lang code=\"fre\"
+        count=\"4\"/><lang code=\"vie\" count=\"4\"/><lang code=\"dut\" count=\"3\"/><lang
+        code=\"slv\" count=\"2\"/><lang code=\"dan\" count=\"2\"/><lang code=\"heb\"
+        count=\"1\"/><lang code=\"ind\" count=\"1\"/><lang code=\"kor\" count=\"1\"/></languages><date>1070</date><dates
+        different=\"35\" first=\"1070\" last=\"2015\"/><audLevel>0.10</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The trumpet of the
+        swan</title><genres><genre count=\"5217\" norm=\"juvenile works\">Juvenile
+        works</genre><genre count=\"6945\" norm=\"fiction\">Fiction</genre><genre
+        count=\"30\" norm=\"fantasy fiction\">Fantasy fiction</genre><genre count=\"12\"
+        norm=\"fantasy fiction, american\">Fantasy fiction, American</genre></genres><summary>Louis,
+        a voiceless Trumpeter swan, finds himself far from his wilderness home when
+        he determines to communicate by learning to play a stolen trumpet</summary><cover
+        isbn=\"006028935X\" oclc=\"ocn904571932\" type=\"isbn\">+-+K084375155</cover></citation><citation
+        ident=\"newwork173860331\"><holdings>4488</holdings><numEditions>2</numEditions><oclcnum>ocn001760231</oclcnum><recordType>serial</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><audLevel>0.02</audLevel><creator
+        ident=\"uncontrolled\">The Yorker Magazine</creator><title>The New Yorker</title><genres><genre
+        count=\"5946\" norm=\"periodicals\">Periodicals</genre><genre count=\"4835\"
+        norm=\"directories\">Directories</genre></genres><summary>DVD-ROMS covers
+        all contents contained in folding case. Book has title: Highlights from The
+        complete New Yorker</summary></citation><citation ident=\"newwork124054638\"><holdings>4045</holdings><numEditions>111</numEditions><oclcnum>ocn049919570</oclcnum><recordType>rcrd</recordType><languages
+        count=\"3\"><lang code=\"eng\" count=\"106\"/><lang code=\"dut\" count=\"3\"/><lang
+        code=\"zxx\" count=\"2\"/></languages><date>1952</date><dates different=\"20\"
+        first=\"1952\" last=\"2015\"/><audLevel>0.14</audLevel><creator ident=\"66475004,n79054648\">White,
+        E. B</creator><title>Charlotte's web</title><genres><genre count=\"3653\"
+        norm=\"juvenile works\">Juvenile works</genre><genre count=\"3691\" norm=\"fiction\">Fiction</genre><genre
+        count=\"24\" norm=\"fantasy fiction\">Fantasy fiction</genre><genre count=\"2\"
+        norm=\"children's sound recordings\">Children's sound recordings</genre><genre
+        count=\"544\" norm=\"children's audiobooks\">Children's audiobooks</genre></genres><summary>Wilbur,
+        the pig, is desolate when he discovers that he is destined to be the farmer's
+        Christmas dinner until his spider friend, Charlotte, decides to help him</summary><cover
+        isbn=\"0807208523\" oclc=\"ocn813035982\" type=\"isbn\">+-+8703572535</cover></citation><citation
+        ident=\"newwork10240997\"><holdings>3001</holdings><numEditions>85</numEditions><oclcnum>ocn000483698</oclcnum><recordType>book</recordType><languages
+        count=\"5\"><lang code=\"eng\" count=\"69\"/><lang code=\"fre\" count=\"6\"/><lang
+        code=\"ger\" count=\"5\"/><lang code=\"und\" count=\"4\"/><lang code=\"pol\"
+        count=\"1\"/></languages><date>1938</date><dates different=\"18\" first=\"1938\"
+        last=\"1997\"/><audLevel>0.23</audLevel><creator ident=\"66475004,n79054648\">White,
+        E. B</creator><title>One man's meat</title><summary>First published in 1942,
+        this collection of essays on Maine life has been in print almost without interruption.
+        The author began this collection as a series of pieces for Harper's Magazine
+        when he left New York City and moved to a saltwater farm in Brooklin, Maine.
+        His observations on town meetings, poultry, the weather, songbirds, compost,
+        taxes, war, winter, and much more will resonate just as strongly today, to
+        anyone attuned to Maine life, as they did half a century ago</summary><cover
+        isbn=\"0884481921\" oclc=\"ocn036909081\" type=\"isbn\">+-+6746399335</cover></citation><citation
+        ident=\"newwork123202381\"><holdings>2998</holdings><numEditions>27</numEditions><oclcnum>ocn003003158</oclcnum><recordType>book</recordType><languages
+        count=\"2\"><lang code=\"eng\" count=\"26\"/><lang code=\"und\" count=\"1\"/></languages><date>1975</date><dates
+        different=\"8\" first=\"1975\" last=\"2009\"/><audLevel>0.17</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Essays of E.B. White</title><summary>Thirty-one
+        of E.B. White's essays grouped under such headings as &quot;The Farm,&quot;
+        &quot;The Planet,&quot; &quot;Memories,&quot; and &quot;Books, Men, and Writing.&quot;</summary><cover
+        isbn=\"0060932236\" oclc=\"ocn468484981\" type=\"isbn\">+-+1877845155</cover></citation><citation
+        ident=\"newwork123097297\"><holdings>2369</holdings><numEditions>77</numEditions><oclcnum>ocn047090679</oclcnum><recordType>rcrd</recordType><languages
+        count=\"3\"><lang code=\"eng\" count=\"74\"/><lang code=\"und\" count=\"2\"/><lang
+        code=\"zxx\" count=\"1\"/></languages><date>1945</date><dates different=\"17\"
+        first=\"1945\" last=\"2015\"/><audLevel>0.13</audLevel><creator ident=\"66475004,n79054648\">White,
+        E. B</creator><title>Stuart Little</title><genres><genre count=\"1552\" norm=\"juvenile
+        works\">Juvenile works</genre><genre count=\"1156\" norm=\"fiction\">Fiction</genre><genre
+        count=\"674\" norm=\"children's audiobooks\">Children's audiobooks</genre></genres><summary>The
+        adventures of the debonair mouse Stuart Little as he sets out in the world
+        to seek out his dearest friend, a little bird that stayed for a few days in
+        his family's garden.--</summary><cover isbn=\"0807286060\" oclc=\"ocn904290029\"
+        type=\"isbn\">+-+5151372535</cover></citation><citation ident=\"newwork10210286\"><holdings>1475</holdings><numEditions>77</numEditions><oclcnum>ocn001348046</oclcnum><recordType>book</recordType><languages
+        count=\"6\"><lang code=\"eng\" count=\"66\"/><lang code=\"ger\" count=\"3\"/><lang
+        code=\"spa\" count=\"3\"/><lang code=\"dan\" count=\"2\"/><lang code=\"und\"
+        count=\"2\"/><lang code=\"fre\" count=\"1\"/></languages><date>1929</date><dates
+        different=\"26\" first=\"1929\" last=\"2004\"/><audLevel>0.34</audLevel><creator
+        ident=\"22149445,n80036584\">Thurber, James</creator><title>Is sex necessary?
+        or, Why you feel the way you do</title><genres><genre count=\"1366\" norm=\"humor\">Humor</genre><genre
+        count=\"21\" norm=\"anecdotes\">Anecdotes</genre></genres><summary>The first
+        book of prose published by either James Thurber or E.B. White, this book combines
+        the humor and genius of both authors to examine those great mysteries of life:
+        romance, love, and marriage</summary><cover isbn=\"0060733144\" oclc=\"ocn055870926\"
+        type=\"isbn\">+-+9968825155</cover></citation><citation ident=\"newwork17731481\"><holdings>1426</holdings><numEditions>27</numEditions><oclcnum>ocn000501652</oclcnum><recordType>book</recordType><languages
+        count=\"4\"><lang code=\"eng\" count=\"22\"/><lang code=\"spa\" count=\"3\"/><lang
+        code=\"ger\" count=\"1\"/><lang code=\"und\" count=\"1\"/></languages><date>1949</date><dates
+        different=\"8\" first=\"1949\" last=\"2011\"/><audLevel>0.29</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Here is New York</title><summary>What
+        is most amazing about E.B. White's &quot;Here Is New York,&quot; This book
+        written in 1948 says: &quot;A single flight planes no bigger than a wedge
+        of geese can quickly end t his island fantasy, burn the towers, crumble the
+        bridges, turn the underground passages into lethal chambers, cremate the millions.&quot;
+        The city is both the perfect target and the perfect demonstration of nonviolence.
+        White says, &quot;This is why it is a capital of the world</summary><cover
+        isbn=\"1892145022\" oclc=\"ocn906778143\" type=\"isbn\">+-+7750967436</cover></citation><citation
+        ident=\"newwork137292945\"><holdings>1356</holdings><numEditions>41</numEditions><oclcnum>ocn025405588</oclcnum><recordType>rcrd</recordType><languages
+        count=\"2\"><lang code=\"eng\" count=\"40\"/><lang code=\"zxx\" count=\"1\"/></languages><date>1970</date><dates
+        different=\"12\" first=\"1970\" last=\"2015\"/><audLevel>0.15</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The trumpet of the
+        swan</title><genres><genre count=\"832\" norm=\"juvenile works\">Juvenile
+        works</genre><genre count=\"932\" norm=\"fiction\">Fiction</genre></genres><summary>Louis,
+        a voiceless Trumpeter swan, finds himself far from his wilderness home when
+        he determines to communicate by learning to play a stolen trumpet</summary><cover
+        isbn=\"0807286079\" oclc=\"ocn904290030\" type=\"isbn\">+-+4251372535</cover></citation><citation
+        ident=\"newwork124511868\"><holdings>1303</holdings><numEditions>29</numEditions><oclcnum>ocn047197788</oclcnum><recordType>visu</recordType><languages
+        count=\"5\"><lang code=\"eng\" count=\"25\"/><lang code=\"mul\" count=\"1\"/><lang
+        code=\"slv\" count=\"1\"/><lang code=\"dut\" count=\"1\"/><lang code=\"und\"
+        count=\"1\"/></languages><date>1972</date><dates different=\"8\" first=\"1972\"
+        last=\"2013\"/><audLevel>0.09</audLevel><creator ident=\"100914297,n91074080\">Roberts,
+        Julia</creator><title>Charlotte's web</title><genres><genre count=\"3008\"
+        norm=\"juvenile works\">Juvenile works</genre><genre count=\"5\" norm=\"fiction\">Fiction</genre><genre
+        count=\"3763\" norm=\"drama\">Drama</genre><genre count=\"1303\" norm=\"musical
+        films\">Musical films</genre><genre count=\"822\" norm=\"comedy films\">Comedy
+        films</genre><genre count=\"864\" norm=\"fantasy films\">Fantasy films</genre><genre
+        count=\"2992\" norm=\"film adaptations\">Film adaptations</genre><genre count=\"822\"
+        norm=\"action and adventure films\">Action and adventure films</genre><genre
+        count=\"2100\" norm=\"animated films\">Animated films</genre><genre count=\"35\"
+        norm=\"animal films\">Animal films</genre><genre count=\"1162\" norm=\"motion
+        pictures\">Motion pictures</genre><genre count=\"3\" norm=\"live-action/animation
+        films\">Live-action/animation films</genre><genre count=\"3313\" norm=\"children's
+        films\">Children's films</genre></genres><summary>The story of Wilbur the
+        pig and how, through his friendship with Charlotte the spider, he became famous
+        and learned about life and death</summary><cover isbn=\"0792174720\" oclc=\"ocn659947475\"
+        type=\"isbn\">+-+5729267425</cover></citation><citation ident=\"newwork137304092\"><holdings>1046</holdings><numEditions>38</numEditions><oclcnum>ocn043889608</oclcnum><recordType>visu</recordType><languages
+        count=\"10\"><lang code=\"eng\" count=\"23\"/><lang code=\"mul\" count=\"5\"/><lang
+        code=\"dan\" count=\"2\"/><lang code=\"spa\" count=\"2\"/><lang code=\"ger\"
+        count=\"1\"/><lang code=\"fre\" count=\"1\"/><lang code=\"zxx\" count=\"1\"/><lang
+        code=\"ice\" count=\"1\"/><lang code=\"und\" count=\"1\"/><lang code=\"dut\"
+        count=\"1\"/></languages><date>1999</date><dates different=\"9\" first=\"1999\"
+        last=\"2015\"/><audLevel>0.09</audLevel><creator ident=\"150486,n95014751\">Minkoff,
+        Rob</creator><title>Stuart Little 2</title><genres><genre count=\"3712\" norm=\"juvenile
+        works\">Juvenile works</genre><genre count=\"44\" norm=\"fiction\">Fiction</genre><genre
+        count=\"4588\" norm=\"drama\">Drama</genre><genre count=\"1948\" norm=\"comedy
+        films\">Comedy films</genre><genre count=\"76\" norm=\"film adaptations\">Film
+        adaptations</genre><genre count=\"20\" norm=\"action and adventure films\">Action
+        and adventure films</genre><genre count=\"1822\" norm=\"animated films\">Animated
+        films</genre><genre count=\"1630\" norm=\"motion pictures\">Motion pictures</genre><genre
+        count=\"3593\" norm=\"children's films\">Children's films</genre></genres><summary>The
+        Little family adopts a spunky boy-mouse named Stuart</summary><cover isbn=\"9780767852906\"
+        oclc=\"ocn704896795\" type=\"isbn\">+-+1547032125324</cover></citation><citation
+        ident=\"newwork21441253\"><holdings>955</holdings><numEditions>7</numEditions><oclcnum>ocn021441253</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"7\"/></languages><date>1990</date><dates
+        different=\"3\" first=\"1990\" last=\"2006\"/><audLevel>0.23</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Writings from the
+        New Yorker : 1927-1976</title><genres><genre count=\"947\" norm=\"essays\">Essays</genre></genres><cover
+        isbn=\"9780060921231\" oclc=\"ocn437599106\" type=\"isbn\">+-+6876745155324</cover></citation><citation
+        ident=\"newwork156177621\"><holdings>953</holdings><numEditions>12</numEditions><oclcnum>ocn035617632</oclcnum><recordType>visu</recordType><languages
+        count=\"2\"><lang code=\"eng\" count=\"11\"/><lang code=\"und\" count=\"1\"/></languages><date>1972</date><dates
+        different=\"11\" first=\"1972\" last=\"2014\"/><audLevel>0.09</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>E.B. White's Charlotte's
+        web</title><genres><genre count=\"553\" norm=\"juvenile works\">Juvenile works</genre><genre
+        count=\"22\" norm=\"fiction\">Fiction</genre><genre count=\"559\" norm=\"drama\">Drama</genre><genre
+        count=\"1862\" norm=\"musical films\">Musical films</genre><genre count=\"1863\"
+        norm=\"film adaptations\">Film adaptations</genre><genre count=\"1863\" norm=\"animated
+        films\">Animated films</genre><genre count=\"14\" norm=\"motion pictures\">Motion
+        pictures</genre><genre count=\"1863\" norm=\"children's films\">Children's
+        films</genre></genres><summary>Story of Wilbur the pig and his friendship
+        with Charlotte the spider. A tale of friendship and salvation; a story of
+        the miracles of birth, friendship and death</summary></citation><citation
+        ident=\"newwork1134506\"><holdings>787</holdings><numEditions>44</numEditions><oclcnum>ocn001646887</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"44\"/></languages><date>1941</date><dates
+        different=\"9\" first=\"1941\" last=\"1984\"/><audLevel>0.23</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>A subtreasury of
+        American humor:</title></citation><citation ident=\"newwork427643797\"><holdings>749</holdings><numEditions>3</numEditions><oclcnum>ocn069593876</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>2007</date><dates
+        different=\"2\" first=\"2007\" last=\"2009\"/><audLevel>0.09</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Some pig! : a Charlotte's
+        web picture book</title><genres><genre count=\"746\" norm=\"juvenile works\">Juvenile
+        works</genre><genre count=\"749\" norm=\"fiction\">Fiction</genre></genres><summary>Relates
+        the special relationship between a young girl named Fern and Wilbur, the spring
+        pig she raises and loves</summary><cover isbn=\"0060781610\" oclc=\"ocn069593876\"
+        type=\"isbn\">+-+5616325155</cover></citation><citation ident=\"newwork22920063\"><holdings>716</holdings><numEditions>12</numEditions><oclcnum>ocn000504888</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"12\"/></languages><date>1943</date><dates
+        different=\"2\" first=\"1943\" last=\"1946\"/><audLevel>0.32</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The wild flag, editorials
+        from The New Yorker on federal world government and other matters</title></citation><citation
+        ident=\"newwork10711490\"><holdings>509</holdings><numEditions>31</numEditions><oclcnum>ocn010711490</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"31\"/></languages><date>1935</date><dates
+        different=\"8\" first=\"1935\" last=\"1989\"/><audLevel>0.20</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The second tree from
+        the corner</title><genres><genre count=\"1879\" norm=\"records and correspondence\">Records
+        and correspondence</genre></genres><summary>This book contains a collection
+        of essays, poems, and stories by the author. Most of the items originally
+        appeared in The New Yorker magazine</summary><cover isbn=\"9780060915162\"
+        oclc=\"ocn731267448\" type=\"isbn\">+-+7160645155324</cover></citation></by><about><citation
+        ident=\"newwork13803684\"><holdings>2696</holdings><numEditions>11</numEditions><oclcnum>ocn002330306</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"11\"/></languages><date>1976</date><dates
+        different=\"5\" first=\"1976\" last=\"2007\"/><audLevel>0.22</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Letters of E.B. White</title><genres><genre
+        count=\"2604\" norm=\"records and correspondence\">Records and correspondence</genre></genres><summary>An
+        updated volume that includes newly released letters written between 1976 and
+        1985 shares the author's thoughts about the uncertainty of the future and
+        his relationships with such colleagues as James Thurber, Groucho Marx, and
+        John Updike</summary><cover isbn=\"0060757086\" oclc=\"ocn255479894\" type=\"isbn\">+-+1352025155</cover></citation><citation
+        ident=\"newwork12978232\"><holdings>1966</holdings><numEditions>6</numEditions><oclcnum>ocn009325096</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"6\"/></languages><date>1984</date><dates
+        different=\"3\" first=\"1984\" last=\"1986\"/><audLevel>0.20</audLevel><creator
+        ident=\"27149187,n83022338\">Elledge, Scott</creator><title>E.B. White : a
+        biography</title><genres><genre count=\"1967\" norm=\"biography\">Biography</genre></genres><summary>Contains
+        unpublished letters and essays by the author of &quot;Charlotte's web,&quot;
+        &quot;The trumpet of the swan,&quot; and &quot;Stuart Little,&quot; giving
+        insight to the man and his work</summary><cover isbn=\"0393303055\" oclc=\"ocn186503867\"
+        type=\"isbn\">+-+0058588485</cover></citation><citation ident=\"newwork10711490\"><holdings>1879</holdings><numEditions>3</numEditions><oclcnum>ocn000290779</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>1954</date><dates
+        different=\"1\" first=\"1954\" last=\"1954\"/><audLevel>0.20</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The second tree from
+        the corner</title><genres><genre count=\"1879\" norm=\"records and correspondence\">Records
+        and correspondence</genre></genres><summary>This book contains a collection
+        of essays, poems, and stories by the author. Most of the items originally
+        appeared in The New Yorker magazine</summary></citation><citation ident=\"newwork431864000\"><holdings>1831</holdings><numEditions>2</numEditions><oclcnum>ocn007460324</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>1981</date><dates
+        different=\"1\" first=\"1981\" last=\"1981\"/><audLevel>0.18</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>Poems and sketches
+        of E.B. White</title><summary>Offers a collection of approximately fifty poems
+        and thirty-five sketches, stories, parodies, and commentary, selected by the
+        author from a lifetime of writing</summary></citation><citation ident=\"newwork11501279\"><holdings>1759</holdings><numEditions>3</numEditions><oclcnum>ocn000185055</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>1962</date><dates
+        different=\"2\" first=\"1962\" last=\"1963\"/><audLevel>0.20</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>The points of my
+        compass; letters from the East, the West, the North, the South</title><genres><genre
+        count=\"1758\" norm=\"records and correspondence\">Records and correspondence</genre></genres><summary>A
+        collection of eighteen essays, reports and reminiscences (all but one of which
+        have previously appeared in The New Yorker as a &quot;Letter from the East&quot;
+        or some other compass point). Author writes of coons, and how a swallow builds
+        a nest, and the way a Maine fire department attends a fire, and also of fallout,
+        disarmament and the United Nations</summary></citation><citation ident=\"newwork247460162\"><holdings>1731</holdings><numEditions>1</numEditions><oclcnum>ocn029025194</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>1994</date><dates
+        different=\"1\" first=\"1994\" last=\"1994\"/><audLevel>0.09</audLevel><creator
+        ident=\"76420053,n80045563\">Krull, Kathleen</creator><title>Lives of the
+        writers : comedies, tragedies (and what the neighbors thought)</title><genres><genre
+        count=\"1789\" norm=\"juvenile works\">Juvenile works</genre><genre count=\"21\"
+        norm=\"biography\">Biography</genre></genres><summary>The lives of twenty
+        writers, ranging from Dickens and Poe to Twain, Sandburg, and Langston Hughes,
+        are profiled in this humorous and informative collection</summary><cover isbn=\"081725739X\"
+        oclc=\"ocn029025194\" type=\"isbn\">+-+K482072635</cover></citation><citation
+        ident=\"newwork1134506\"><holdings>1710</holdings><numEditions>3</numEditions><oclcnum>ocn000336431</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>1941</date><dates
+        different=\"2\" first=\"1941\" last=\"1948\"/><audLevel>0.23</audLevel><creator
+        ident=\"66475004,n79054648\">White, E. B</creator><title>A subtreasury of
+        American humor:</title></citation><citation ident=\"newwork124511868\"><holdings>1617</holdings><numEditions>5</numEditions><oclcnum>ocn082144464</oclcnum><recordType>visu</recordType><languages
+        count=\"2\"><lang code=\"eng\" count=\"4\"/><lang code=\"zxx\" count=\"1\"/></languages><date>2001</date><dates
+        different=\"3\" first=\"2001\" last=\"2007\"/><audLevel>0.09</audLevel><creator
+        ident=\"100914297,n91074080\">Roberts, Julia</creator><title>Charlotte's web</title><genres><genre
+        count=\"3008\" norm=\"juvenile works\">Juvenile works</genre><genre count=\"5\"
+        norm=\"fiction\">Fiction</genre><genre count=\"3763\" norm=\"drama\">Drama</genre><genre
+        count=\"1303\" norm=\"musical films\">Musical films</genre><genre count=\"822\"
+        norm=\"comedy films\">Comedy films</genre><genre count=\"864\" norm=\"fantasy
+        films\">Fantasy films</genre><genre count=\"2992\" norm=\"film adaptations\">Film
+        adaptations</genre><genre count=\"822\" norm=\"action and adventure films\">Action
+        and adventure films</genre><genre count=\"2100\" norm=\"animated films\">Animated
+        films</genre><genre count=\"35\" norm=\"animal films\">Animal films</genre><genre
+        count=\"1162\" norm=\"motion pictures\">Motion pictures</genre><genre count=\"3\"
+        norm=\"live-action/animation films\">Live-action/animation films</genre><genre
+        count=\"3313\" norm=\"children's films\">Children's films</genre></genres><summary>Wilbur
+        the pig is scared of the end of the season, because he knows that some time,
+        he will end up on the dinner table. He hatches a plan with Charlotte, a spider
+        that lives in his pen, to ensure that this will never happen</summary></citation><citation
+        ident=\"newwork676728647\"><holdings>1194</holdings><numEditions>2</numEditions><oclcnum>ocn676728647</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>2011</date><dates
+        different=\"1\" first=\"2011\" last=\"2011\"/><audLevel>0.15</audLevel><creator
+        ident=\"100598257,n96056420\">Sims, Michael</creator><title>The story of Charlotte's
+        web : E.B. White's eccentric life in nature and the birth of an American classic</title><genres><genre
+        count=\"1199\" norm=\"biography\">Biography</genre></genres><summary>As he
+        was composing what was to become his most enduring and popular book, E.B.
+        White was obeying that oft repeated maxim: &quot;Write what you know.&quot;
+        Helpless pigs, silly geese, clever spiders, greedy rats, White knew all of
+        these characters in the barns and stables where he spent his favorite hours.
+        Painfully shy his entire life, &quot;this boy,&quot; White once wrote of himself,
+        &quot;felt for animals a kinship he never felt for people.&quot; It is all
+        the more impressive, therefore, how many people have felt a kinship with E.B.
+        White. With Charlotte's Web, which has gone on to sell more than 45 million
+        copies, the man William Shawn called &quot;the most companionable of writers&quot;
+        lodged his own character, the avuncular author, into the hearts of generations
+        of readers. In this book the author shows how White solved what critic Clifton
+        Fadiman once called &quot;the standing problem of the juvenile fantasy writer:
+        how to find, not another Alice, but another rabbit hole&quot; by mining the
+        raw ore of his childhood friendship with animals in Mount Vernon, New York,
+        translating his own passions and contradictions, delights and fears, into
+        an all time classic. Blending White's correspondence with the likes of Ursula
+        Nordstrom, James Thurber, and Harold Ross, the E.B. White papers at Cornell,
+        and the archives of HarperCollins and the New Yorker into his own narrative,
+        the author brings to life the shy boy whose animal stories, real and imaginery,
+        made him famous around the world</summary><cover isbn=\"0802777546\" oclc=\"ocn676728647\"
+        type=\"isbn\">+-+1902227535</cover></citation><citation ident=\"newwork185863752\"><holdings>1060</holdings><numEditions>5</numEditions><oclcnum>ocn000763677</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"5\"/></languages><date>1974</date><dates
+        different=\"3\" first=\"1974\" last=\"1999\"/><audLevel>0.24</audLevel><creator
+        ident=\"60696476,n89666512\">Sampson, Edward C</creator><title>E.B. White</title><genres><genre
+        count=\"1060\" norm=\"criticism, interpretation, etc\">Criticism, interpretation,
+        etc</genre></genres><summary>Provides in-depth analysis of the life, works,
+        career, and critical importance of E.B. White</summary></citation><citation
+        ident=\"newwork23900580\"><holdings>922</holdings><numEditions>3</numEditions><oclcnum>ocn023900580</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>1992</date><dates
+        different=\"2\" first=\"1992\" last=\"1994\"/><audLevel>0.15</audLevel><creator
+        ident=\"43275059,n85141933\">Gherman, Beverly</creator><title>E.B. White :
+        some writer!</title><genres><genre count=\"922\" norm=\"juvenile works\">Juvenile
+        works</genre><genre count=\"126\" norm=\"biography\">Biography</genre></genres><summary>Describes
+        the life of the popular author of poems, essays, short stories for adults,
+        and books for children</summary><cover isbn=\"0689316720\" oclc=\"ocn023900580\"
+        type=\"isbn\">+-+5721684315</cover></citation><citation ident=\"newwork18415092\"><holdings>883</holdings><numEditions>5</numEditions><oclcnum>ocn018415092</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"5\"/></languages><date>1989</date><dates
+        different=\"3\" first=\"1989\" last=\"1997\"/><audLevel>0.10</audLevel><creator
+        ident=\"30826726,n79149069\">Collins, David R</creator><title>To the point
+        : a story about E.B. White</title><genres><genre count=\"883\" norm=\"juvenile
+        works\">Juvenile works</genre><genre count=\"883\" norm=\"biography\">Biography</genre></genres><summary>Follows
+        the life of the popular author of essays, poems, and children's books, from
+        his childhood in rural New York State to his death at the age of eighty-six</summary><cover
+        isbn=\"0876143451\" oclc=\"ocn018415092\" type=\"isbn\">+-+6098961235</cover></citation><citation
+        ident=\"newwork16352981\"><holdings>650</holdings><numEditions>3</numEditions><oclcnum>ocn016352981</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>1987</date><dates
+        different=\"3\" first=\"1987\" last=\"1990\"/><audLevel>0.26</audLevel><creator
+        ident=\"70456379,n87872588\">Russell, Isabel</creator><title>Katharine and
+        E.B. White : an affectionate memoir</title><genres><genre count=\"650\" norm=\"biography\">Biography</genre></genres><cover
+        isbn=\"0393306380\" oclc=\"ocn021371189\" type=\"isbn\">+-+5381588485</cover></citation><citation
+        ident=\"newwork246441992\"><holdings>636</holdings><numEditions>2</numEditions><oclcnum>ocn032240885</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>1995</date><dates
+        different=\"1\" first=\"1995\" last=\"1995\"/><audLevel>0.29</audLevel><creator
+        ident=\"44321224,n85361299\">Agosta, Lucien L</creator><title>E.B. White :
+        the children's books</title><genres><genre count=\"636\" norm=\"history\">History</genre><genre
+        count=\"636\" norm=\"criticism, interpretation, etc\">Criticism, interpretation,
+        etc</genre></genres><summary>Lucien L. Agosta's lively and comprehensive analysis
+        of White's writings for children is the first full-length study to address
+        the works themselves, their reception by critics, and White's views on children's
+        literature. Beginning with a biographical sketch of White, Agosta looks at
+        the places and events of the author's youth and later life - the wilds of
+        Canada and the Edenic simplicity of Maine - that influenced his creation of
+        Arcadian worlds in his fiction</summary><cover isbn=\"0805746315\" oclc=\"ocn032240885\"
+        type=\"isbn\">+-+0681920535</cover></citation><citation ident=\"newwork245986688\"><holdings>553</holdings><numEditions>2</numEditions><oclcnum>ocn040255964</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>1999</date><dates
+        different=\"1\" first=\"1999\" last=\"1999\"/><audLevel>0.05</audLevel><creator
+        ident=\"91833570,n80085591\">Root, Robert L</creator><title>E.B. White : the
+        emergence of an essayist</title><genres><genre count=\"553\" norm=\"criticism,
+        interpretation, etc\">Criticism, interpretation, etc</genre></genres><summary>&quot;Robert
+        Root explores the milieu in which White began writing the &quot;Notes and
+        Comments&quot; section of the New Yorker and puts in perspective the influence
+        of popular &quot;colyumists&quot; like Don Marquis and Christopher Morley
+        on the tone and form of White's work as a &quot;paragrapher.&quot; He examines
+        White's persistent disaffection with the demands and limitations inherent
+        in his &quot;Comment&quot; pieces for the New Yorker and his experiences as
+        a columnist for Harper's Magazine, where his &quot;One Man's Meat&quot; feature
+        produced his most enduring essay, &quot;Once More to the Lake,&quot; and took
+        the segmented column form to new levels of accomplishment. Drawing on White's
+        manuscripts, Root's literary analysis of early drafts demonstrates how unique
+        White's essays were.&quot;--Jacket</summary><cover isbn=\"0877456674\" oclc=\"ocn040255964\"
+        type=\"isbn\">+-+9211092235</cover></citation><citation ident=\"newwork260179171\"><holdings>517</holdings><numEditions>2</numEditions><oclcnum>ocn029031847</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>1994</date><dates
+        different=\"1\" first=\"1994\" last=\"1994\"/><audLevel>0.30</audLevel><title>Critical
+        essays on E.B. White</title><genres><genre count=\"517\" norm=\"criticism,
+        interpretation, etc\">Criticism, interpretation, etc</genre></genres><cover
+        isbn=\"9780816173211\" oclc=\"ocn029031847\" type=\"isbn\">+-+6678261635324</cover></citation><citation
+        ident=\"newwork3707905\"><holdings>508</holdings><numEditions>2</numEditions><oclcnum>ocn003707905</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>1978</date><dates
+        different=\"1\" first=\"1978\" last=\"1978\"/><audLevel>0.39</audLevel><creator
+        ident=\"94323933,n81043237\">Anderson, A. J</creator><title>E.B. White--a
+        bibliography</title><genres><genre count=\"508\" norm=\"bibliography\">Bibliography</genre></genres></citation><citation
+        ident=\"newwork332868930\"><holdings>491</holdings><numEditions>3</numEditions><oclcnum>ocn043615401</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"3\"/></languages><date>2000</date><dates
+        different=\"2\" first=\"2000\" last=\"2001\"/><audLevel>0.08</audLevel><creator
+        ident=\"103491266,n2009081732\">Ward, Stephen</creator><title>Meet E.B. White</title><genres><genre
+        count=\"491\" norm=\"juvenile works\">Juvenile works</genre><genre count=\"491\"
+        norm=\"biography\">Biography</genre></genres><summary>A simple biography of
+        the multitalented author who wrote the well-known children's books, &quot;Charlotte's
+        Web&quot; and &quot;Stuart Little.&quot;</summary><cover isbn=\"0823957136\"
+        oclc=\"ocn045316683\" type=\"isbn\">+-+1862048735</cover></citation><citation
+        ident=\"newwork247160421\"><holdings>483</holdings><numEditions>1</numEditions><oclcnum>ocn033333316</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>1996</date><dates
+        different=\"1\" first=\"1996\" last=\"1996\"/><audLevel>0.18</audLevel><creator
+        ident=\"5649459,n81046404\">Rylant, Cynthia</creator><title>Margaret, Frank,
+        and Andy : three writers' stories</title><genres><genre count=\"483\" norm=\"juvenile
+        works\">Juvenile works</genre><genre count=\"483\" norm=\"biography\">Biography</genre></genres><summary>Stories
+        about the lives of 3 well-loved authors</summary><cover isbn=\"0152010831\"
+        oclc=\"ocn033333316\" type=\"isbn\">+-+6835657065</cover></citation><citation
+        ident=\"newwork5802005605\"><holdings>414</holdings><numEditions>4</numEditions><oclcnum>ocn679935652</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><date>2011</date><dates
+        different=\"2\" first=\"2011\" last=\"2013\"/><audLevel>0.07</audLevel><creator
+        ident=\"179998397,n2009049123\">Stuckey-French, Ned</creator><title>The American
+        essay in the American century</title><genres><genre count=\"8\" norm=\"history\">History</genre><genre
+        count=\"414\" norm=\"criticism, interpretation, etc\">Criticism, interpretation,
+        etc</genre></genres><summary>&quot;With extensive research and a cultural
+        context, Stuckey-French describes the many reasons essays grew in appeal and
+        importance for Americans. He also explores the rise of E.B. White, considered
+        by many the greatest American essayist of the first half of the twentieth
+        century... This book is one of the first to consider and reflect on the contributions
+        of E.B. White to the personal essay tradition and American culture more generally.&quot;--Book
+        jacket</summary><cover isbn=\"082621925X\" oclc=\"ocn775757581\" type=\"isbn\">+-+K074671735</cover></citation></about><bestCover
+        oclc=\"ocn071374487\" type=\"isbn\">+-+2005599155</bestCover><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Tue
+        Dec 01 10:48:35 EST 2015</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>70751</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><nextRecordPosition
+        xsi:type=\"xsd:positiveInteger\">2</nextRecordPosition><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.OCLCNumber
+        = &quot;1760231&quot;</query><xQuery><ns3:searchClause xsi:type=\"ns3:searchClauseType\"
+        xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:index xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation
+        xsi:type=\"ns3:relationType\"><ns3:value xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term
+        xsi:type=\"xsd:string\">1760231</ns3:term></ns3:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 21:52:29 GMT
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-02-29T16:52:51-05:00&ctx_ver=Z39.88-2004&req.ip=149.31.0.0&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rft.aufirst=Harold%20Wallace,&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.language=eng&rft.lccn=%20%202011201780&rft.object_id=110975413975944&rft.oclcnum=1760231&rft.place=New%20York&rft.pub=F-R%20Pub.%20Corp.&rft.stitle=NEW%20YORKER&rft.title=The%20New%20Yorker&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Exlibris
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 29 Feb 2016 21:52:51 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
+        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
+        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
+        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 21:52:52 GMT
 recorded_with: VCR 2.9.3
