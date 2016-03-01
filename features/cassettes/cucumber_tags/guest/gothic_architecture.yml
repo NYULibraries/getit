@@ -706,4 +706,45 @@ http_interactions:
         Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
     http_version: 
   recorded_at: Thu, 02 Apr 2015 15:15:03 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/lccn:77004853
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Mar 2016 17:06:44 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u2
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '774'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a423660;expires=Tue, 01-Mar-2016
+        17:16:44 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"lccn:77004853":{"records":{"000738409":{"recordURL":"http:\/\/catalog.hathitrust.org\/Record\/000738409","titles":["Gothic architecture \/"],"isbns":["9780810910263","9780810910263"],"issns":[],"oclcs":["2911094"],"lccns":["77004853"],"publishDates":["1977"]}},"items":[{"orig":"University of Michigan","fromRecord":"000738409","htid":"mdp.39015006321163","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015006321163","rightsCode":"ic","lastUpdate":"20140507","enumcron":false,"usRightsString":"Limited (search-only)"},{"orig":"University of Michigan","fromRecord":"000738409","htid":"mdp.39015007699815","itemURL":"http:\/\/hdl.handle.net\/2027\/mdp.39015007699815","rightsCode":"ic","lastUpdate":"20140627","enumcron":false,"usRightsString":"Limited (search-only)"}]}}
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 17:06:48 GMT
 recorded_with: VCR 2.9.3
