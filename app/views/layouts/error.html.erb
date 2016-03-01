@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GetIt | Error</title>
+    <%= meta %>
+    <%= resolve_stylesheets %>
+    <%= resolve_javascripts %>
+  </head>
+  <body>
+    <header class="header">
+      <h1><%= current_primary_institution.name %></h1>
+      <div class="institution"></div>
+    </header>
+    <div class="umlaut-container">
+      <div class="umlaut-main-container-fluid container-fluid umlaut-resolve-container">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

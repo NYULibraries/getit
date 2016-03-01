@@ -4,6 +4,17 @@ class ApplicationController < ActionController::Base
   helper :institutions
   include InstitutionsHelper
 
+  def routing_error
+    if request.format.html?
+      render 'errors/404', layout: 'error', status: 404
+    elsif request.format.xml?
+      render xml: {file: request.path_info, error: "does not exist"}, status: 404
+    else
+      render json: {file: request.path_info, error: "does not exist"}.to_json, status: 404
+    end
+    return
+  end
+
   prepend_before_filter :passive_login
   def passive_login
     if !cookies[:_check_passive_login]
