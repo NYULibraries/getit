@@ -9,6 +9,7 @@ env:
     - ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf
     - PRIMO_BASE_URL=http://primo.library.edu
     - LOGIN_URL=https://dev.login.library.nyu.edu
+    - PASSIVE_LOGIN_PATH=/login/passive
     - SSO_LOGOUT_PATH=/logout
     - NS_BX_TOKEN=NS_BX_TOKEN
 
@@ -19,12 +20,14 @@ before_script:
   - mysql -e 'create database getit_test;'
   - RAILS_ENV=test bundle exec rake db:schema:load
 
+script: "RAILS_ENV=test bundle exec rake"
+
 rvm:
   # - jruby-19mode # JRuby (1.9)
   # - rbx-19mode
-  - 2.0.0
   - 2.1.3
   - 2.2.3
+  - 2.3.0
 
 git:
   submodules: false
