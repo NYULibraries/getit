@@ -3,7 +3,15 @@ language: ruby
 bundler_args: --without development
 
 env:
-  - ILL_PATRON_STATUSES=[51,37,55] ALEPH_BASE_URL=http://aleph.library.edu ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf PRIMO_BASE_URL=http://primo.library.edu LOGIN_URL=https://dev.login.library.nyu.edu SSO_LOGOUT_PATH=/logout
+  global:
+    - ILL_PATRON_STATUSES=[51,37,55,31]
+    - ALEPH_BASE_URL=http://aleph.library.edu
+    - ALEPH_REST_URL=http://aleph.library.edu:1891/rest-dlf
+    - PRIMO_BASE_URL=http://primo.library.edu
+    - LOGIN_URL=https://dev.login.library.nyu.edu
+    - PASSIVE_LOGIN_PATH=/login/passive
+    - SSO_LOGOUT_PATH=/logout
+    - NS_BX_TOKEN=NS_BX_TOKEN
 
 services:
   - memcached
