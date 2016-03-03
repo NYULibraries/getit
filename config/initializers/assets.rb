@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w[
   nyulibraries/nyu/header.png
   nyulibraries/nyush/shanghai.png
   nyulibraries/nyuad/header.png
+  nyulibraries/nysid/header.jpg
   nyu.png
   magnifier.png
 ]

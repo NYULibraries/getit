@@ -74,4 +74,6 @@ Rails.application.routes.draw do
   # GET a holding request (confirmation of creation)
   get 'holding_requests/:service_response_id' => 'holding_requests#show',
     as: :holding_request
+
+  get '*path' => 'application#routing_error'
 end
