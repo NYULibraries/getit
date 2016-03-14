@@ -302,6 +302,20 @@ NYU:
           existing_type: fulltext
       service_types:
           - document_delivery
+    EZBorrow:
+      type: BorrowDirectAdaptor
+      priority: d
+      library_symbol: NYU
+      find_item_patron_barcode: 21142226710882
+      html_query_base_url: https://e-zborrow.relaisd2d.com/search.html
+      #
+      # Optional params
+      # disable BD api entirely:
+      use_bd_api: false
+      # Set timeout for BD api in seconds (default 20 seconds)
+      http_timeout: 10
+      # log all BD API calls for analysis
+      bd_api_log_level: info
 NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU

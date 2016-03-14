@@ -189,11 +189,13 @@ class UmlautController < ApplicationController
     excerpts = resolve_sections.remove_section("excerpts")
     table_of_contents = resolve_sections.remove_section("table_of_contents")
     abstract = resolve_sections.remove_section("abstract")
+    borrow_direct = UmlautBorrowDirect.resolve_section_definition
 
     # And insert them in the desired order
     resolve_sections.insert_section(search_inside, :before => "fulltext")
     resolve_sections.insert_section(holding, :after => "fulltext")
-    resolve_sections.insert_section(document_delivery, :after => "holding")
+    resolve_sections.insert_section(borrow_direct, :after => "holding")
+    resolve_sections.insert_section(document_delivery, :after => "borrow_direct")
     resolve_sections.insert_section(audio, :after => "document_delivery")
     resolve_sections.insert_section(excerpts, :after => "audio")
     resolve_sections.insert_section(table_of_contents, :after => "excerpts")
@@ -202,6 +204,15 @@ class UmlautController < ApplicationController
     # Reorder sidebar sections as well
     wayfinder = resolve_sections.remove_section("wayfinder")
     resolve_sections.insert_section(wayfinder, before: "questions")
+
+    # Supplies logic for when to highlight borrow_direct section
+    add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
+
+    # borrow_direct do
+    #   local_availability_check proc {|request, service|
+    #     true
+    #   }
+    # end
   end
 
   def create_collection
