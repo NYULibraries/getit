@@ -13,8 +13,12 @@ class HoldingRequest
     # ILL state or the combination of User and Holding
     # is requestable
     def requestable?
-      (ill? || available? || recallable? ||
+      (ill? || available? || recallable? || scannable? ||
         processing? || on_order? || offsite?)
+    end
+
+    def scannable?
+      holding.scannable?
     end
 
     def ezborrow?
