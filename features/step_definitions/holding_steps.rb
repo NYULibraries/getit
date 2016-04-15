@@ -1,6 +1,6 @@
 Given(/^I am on the GetIt page for an? "(.*?)" holding$/) do |state|
   pending if ['recalled', 'on order'].include?(state)
-  visit getit_page_for_holdling_state(state)
+  visit getit_page_for_holding_state(state)
 end
 
 Then(/^I should the link to the call number maps$/) do
