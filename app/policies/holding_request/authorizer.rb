@@ -30,7 +30,6 @@ class HoldingRequest
     end
 
     def available?
-
       holding.available? && privileges.hold_request?
     end
 
