@@ -57,9 +57,9 @@ default:
     # Blind link to price comparison site AllBooks.com.
     # just a blind link with no API pre-check, will be near
     # instantaneous to calculate.
-    # AllBooksDotCom:
-    #   type: AllBooksDotCom
-    #   priority: 3
+    AllBooksDotCom:
+      type: AllBooksDotCom
+      priority: 3
 
     # Priority 5
     # Wayfinder to return whence you came
