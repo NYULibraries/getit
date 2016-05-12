@@ -208,11 +208,14 @@ class UmlautController < ApplicationController
     # Supplies logic for when to highlight borrow_direct section
     add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
 
-    # borrow_direct do
-    #   local_availability_check proc {|request, service|
-    #     true
-    #   }
-    # end
+    borrow_direct do
+      local_availability_check proc {|request, service|
+        request.get_service_type(:holding).find do |sr|
+          UmlautController.umlaut_config.holdings.available_statuses.include?(sr.view_data[:status].value) &&
+          sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
+        end.present?
+      }
+    end
   end
 
   def create_collection

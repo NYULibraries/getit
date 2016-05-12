@@ -42,7 +42,7 @@ gem 'umlaut-primo', '~> 1.0.0'
 
 gem 'dalli', '~> 2.7.4'
 
-gem 'umlaut_borrow_direct'
+gem 'umlaut_borrow_direct'#, path: '/apps/umlaut_borrow_direct'
 
 # Development gems
 group :development do

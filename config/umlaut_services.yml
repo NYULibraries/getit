@@ -57,9 +57,9 @@ default:
     # Blind link to price comparison site AllBooks.com.
     # just a blind link with no API pre-check, will be near
     # instantaneous to calculate.
-    AllBooksDotCom:
-      type: AllBooksDotCom
-      priority: 3
+    # AllBooksDotCom:
+    #   type: AllBooksDotCom
+    #   priority: 3
 
     # Priority 5
     # Wayfinder to return whence you came
@@ -152,7 +152,7 @@ default:
       # Uncomment to link through this 'internal' URL instead
       # of following permalinks. jrochkind does this to use
       # a WAYFless shibboleth login with EZProxy.
-      #direct_link_base: 'https://babel.hathitrust.org/shcgi/'
+      # direct_link_base: 'https://babel.hathitrust.org/shcgi/'
       #
       # This next says:
       # Don't add HathiTrust fulltext if there's already a
@@ -306,12 +306,12 @@ NYU:
       type: BorrowDirectAdaptor
       priority: d
       library_symbol: NYU
-      find_item_patron_barcode: 21142226710882
-      html_query_base_url: https://e-zborrow.relaisd2d.com/search.html
+      find_item_patron_barcode: <%= ENV['EZBORROW_NYU_PATRON_BARCODE'] %>
+      html_query_base_url: https://login.library.nyu.edu/ezborrow
       #
       # Optional params
       # disable BD api entirely:
-      use_bd_api: false
+      #use_bd_api: false
       # Set timeout for BD api in seconds (default 20 seconds)
       http_timeout: 10
       # log all BD API calls for analysis
