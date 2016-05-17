@@ -61,8 +61,14 @@ Then(/^I should not see an option for this item to be held for me once processed
   expect(page).not_to have_text 'Request for this item to be held for you once processed.'
 end
 
-Then(/^I should (not )?see an option to request the holding from E\-ZBorrow$/) do |negator|
+Then(/^I should (not )?see an option to request the holding from E\-ZBorrow with NYU language$/) do |negator|
   expectation_verb = (negator.present?) ? :to_not : :to
   expect(page).send(expectation_verb, have_text('Search E-ZBorrow for this item.'))
   expect(page).send(expectation_verb, have_text('If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location.'))
+end
+
+Then(/^I should (not )?see an option to request the holding from E\-ZBorrow with New School language$/) do |negator|
+  expectation_verb = (negator.present?) ? :to_not : :to
+  expect(page).send(expectation_verb, have_text('Search E-ZBorrow for this item.'))
+  expect(page).send(expectation_verb, have_text('If available to request, the item should arrive at your selected pickup location within 3-5 business days for a twelve-week loan.'))
 end
