@@ -81,7 +81,7 @@ Feature: Holding request options for a Copy in Library
     But I should not see an option to request the holding from E-ZBorrow with NYU language
     And I should not see an option to request the holding from another library via Interlibrary Loan (ILL)
 
-  @omniauth_test @newschool_ill_user/checked_out
+  @newschool_ill_user/checked_out
   Scenario: A New School user with ILL privileges see E-ZBorrow options and ILL options
     Given I am logged in as a New School user with ILL privileges
     And I am on the GetIt page for the title "Stolen glimpses, captive shadows"
@@ -90,7 +90,7 @@ Feature: Holding request options for a Copy in Library
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option to recall the holding from a fellow library patron
 
-  @omniauth_test @newschool_ezborrow_user/checked_out
+  @newschool_ezborrow_user/checked_out
   Scenario: A New School user with E-ZBorrow permissions but without ILL privileges sees E-ZBorrow and recall options
     Given I am logged in as a New School user with E-ZBorrow privileges
     And I am on the GetIt page for the title "Stolen glimpses, captive shadows"
