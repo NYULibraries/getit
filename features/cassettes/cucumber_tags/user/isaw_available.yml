@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-23T11:56:06-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-05-20T17:22:13-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 23 Dec 2015 16:56:10 GMT
+      - Fri, 20 May 2016 21:22:13 GMT
       Server:
       - Apache
       Content-Type:
@@ -30,8 +30,8 @@ http_interactions:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
-        \ &lt;item key=\"ctx_tim\"&gt;2015-12-23T11:56:06-05:00&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;10951886&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2016-05-20T17:22:13-04:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;11974678&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
         \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
@@ -46,7 +46,7 @@ http_interactions:
         key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
         \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
         \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
-        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s116654F8-A996-11E5-B5DA-6B7BFE4C1AE4&lt;/item&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sEBB96BAE-1ED0-11E6-893E-C7B8FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
@@ -71,7 +71,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:06 GMT
+  recorded_at: Fri, 20 May 2016 21:22:13 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -84,11 +84,11 @@ http_interactions:
         xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph004197500</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
     headers:
       User-Agent:
-      - HTTPClient/1.0 (2.7.0.1, ruby 2.1.5 (2014-11-13))
+      - HTTPClient/1.0 (2.7.1, ruby 2.1.5 (2014-11-13))
       Accept:
       - "*/*"
       Date:
-      - Wed, 23 Dec 2015 16:56:07 GMT
+      - Fri, 20 May 2016 21:22:13 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -109,7 +109,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Wed, 23 Dec 2015 16:56:06 GMT
+      - Fri, 20 May 2016 21:22:14 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -237,7 +237,7 @@ http_interactions:
                         &lt;library&gt;ISAW&lt;/library&gt;
                         &lt;lfc01&gt;Large Collection&lt;/lfc01&gt;
                         &lt;classificationlcc&gt;D - History (general) and history of europe.&#x2013;History of Asia&#x2013;Iran (Persia)&#x2013;History&lt;/classificationlcc&gt;
-                        &lt;frbrgroupid&gt;179504582&lt;/frbrgroupid&gt;
+                        &lt;frbrgroupid&gt;199355540&lt;/frbrgroupid&gt;
                         &lt;frbrtype&gt;6&lt;/frbrtype&gt;
                       &lt;/facets&gt;
                       &lt;dedup&gt;
@@ -265,7 +265,7 @@ http_interactions:
                       &lt;/frbr&gt;
                       &lt;delivery&gt;
                         &lt;institution&gt;NYU&lt;/institution&gt;
-                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
+                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
                       &lt;/delivery&gt;
                       &lt;enrichment&gt;
                         &lt;classificationlcc&gt;DS307&lt;/classificationlcc&gt;
@@ -275,7 +275,6 @@ http_interactions:
                         &lt;booster2&gt;1&lt;/booster2&gt;
                       &lt;/ranking&gt;
                       &lt;addata&gt;
-                        &lt;aulast&gt;P&#xE9;rez Gonz&#xE1;lez&lt;/aulast&gt;
                         &lt;aufirst&gt;Jennifer Y.,&lt;/aufirst&gt;
                         &lt;addau&gt;Chi, Jennifer Y., editor&lt;/addau&gt;
                         &lt;addau&gt;P&#xE9;rez Gonz&#xE1;lez, Carmen, 1969- contributor&lt;/addau&gt;
@@ -287,10 +286,13 @@ http_interactions:
                         &lt;risdate&gt;[2015].&lt;/risdate&gt;
                         &lt;isbn&gt;0691171580&lt;/isbn&gt;
                         &lt;isbn&gt;9780691171586&lt;/isbn&gt;
+                        &lt;format&gt;book&lt;/format&gt;
                         &lt;ristype&gt;BOOK&lt;/ristype&gt;
                         &lt;oclcid&gt;925497538&lt;/oclcid&gt;
                         &lt;lad01&gt;NISAW&lt;/lad01&gt;
-                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
+                        &lt;aulast&gt;Chi&lt;/aulast&gt;
+                        &lt;genre&gt;book&lt;/genre&gt;
                       &lt;/addata&gt;
                       &lt;browse&gt;
                         &lt;author&gt;$$DChi, Jennifer Y.$$EChi, Jennifer Y.$$INYU10008165293$$PY&lt;/author&gt;
@@ -321,7 +323,7 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:07 GMT
+  recorded_at: Fri, 20 May 2016 21:22:14 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items
@@ -347,13 +349,13 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 23 Dec 2015 16:56:06 GMT
+      - Fri, 20 May 2016 21:22:14 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:07 GMT
+  recorded_at: Fri, 20 May 2016 21:22:14 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010
@@ -379,7 +381,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 23 Dec 2015 16:56:06 GMT
+      - Fri, 20 May 2016 21:22:14 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
@@ -391,182 +393,7 @@ http_interactions:
         eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
         Shelf</status></item></get-item> '
     http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:07 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Wed, 23 Dec 2015 16:56:06 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+eye+of+the+shah%22+AND+creator:%28p%C3%A9rez+gonz%C3%A1lez%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Wed, 23 Dec 2015 22:56:06 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:08 GMT
-- request:
-    method: get
-    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:925497538
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 23 Dec 2015 16:56:07 GMT
-      Server:
-      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
-      X-Powered-By:
-      - PHP/5.4.45-0+deb7u2
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '46'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a423660;expires=Wed, 23-Dec-2015
-        17:06:07 GMT;path=/;httponly
-    body:
-      encoding: UTF-8
-      string: |2-
-
-
-        {"oclc:925497538":{"records":[],"items":[]}}
-    http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:08 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Wed, 23 Dec 2015 16:56:07 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.14
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":7,"params":{"q":"title:\"the
-        eye of the shah\" AND creator:(p\u00e9rez gonz\u00e1lez ) AND ( mediatype:texts
-        OR mediatype:audio )","qin":"title:\"the eye of the shah\" AND creator:(p\u00e9rez
-        gonz\u00e1lez) AND (mediatype:texts OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:08 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22P%C3%A9rez%20Gonz%C3%A1lez%22%20and%20local.OCLCNumber%20=%20%22925497538%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '2541'
-      Date:
-      - Wed, 23 Dec 2015 16:56:07 GMT
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
-        = &quot;P&#xE9;rez Gonz&#xE1;lez&quot; and local.OCLCNumber = &quot;925497538&quot;</query><xQuery><ns2:triple
-        xsi:type=\"ns2:tripleType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:boolean
-        xsi:type=\"ns2:booleanType\"><ns2:value xsi:type=\"xsd:string\">and</ns2:value></ns2:boolean><ns2:leftOperand
-        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
-        xsi:type=\"xsd:string\">local.FamilyName</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
-        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">P&#xE9;rez
-        Gonz&#xE1;lez</ns2:term></ns2:searchClause></ns2:leftOperand><ns2:rightOperand
-        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
-        xsi:type=\"xsd:string\">local.OCLCNumber</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
-        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">925497538</ns2:term></ns2:searchClause></ns2:rightOperand></ns2:triple></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/39</ns4:uri></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:09 GMT
+  recorded_at: Fri, 20 May 2016 21:22:14 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
@@ -592,7 +419,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Wed, 23 Dec 2015 16:56:08 GMT
+      - Fri, 20 May 2016 21:22:14 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
@@ -603,13 +430,503 @@ http_interactions:
         in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
         eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
         Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
-        allowed="N"><note type="error">Item cannot be requested (tab15).</note></info><info
-        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="Y"><hold allowed="Y"><pickup-locations usage="Mandatory"></pickup-locations><note
+        type="info"></note><note type="info">Item status: In house loan&lt;br /&gt;
+        Call number: DS307 .E94 2015&lt;br /&gt;</note><last-interest-date usage="Optional">20160818</last-interest-date><start-interest-date
+        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
+        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
+        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
+        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
         allowed="N"><note type="error">The item has no short loan schedule</note></info><info
         type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
         allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
         type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
     http_version: 
-  recorded_at: Wed, 23 Dec 2015 16:56:09 GMT
+  recorded_at: Fri, 20 May 2016 21:22:15 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(chi)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 20 May 2016 21:22:15 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+eye+of+the+shah%22+AND+creator:%28chi%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Sat, 21 May 2016 03:22:15 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:15 GMT
+- request:
+    method: get
+    uri: https://catalog.hathitrust.org/api/volumes/brief/json/oclc:925497538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 20 May 2016 21:22:15 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '44'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ea245525d5f4f58455e445a4a42378b;expires=Fri, 20-May-2016
+        21:32:15 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: '{"oclc:925497538":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:15 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(chi)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 20 May 2016 21:22:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.16
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":10,"params":{"q":"title:\"the
+        eye of the shah\" AND creator:(chi ) AND ( mediatype:texts OR mediatype:audio
+        )","qin":"title:\"the eye of the shah\" AND creator:(chi) AND (mediatype:texts
+        OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:15 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 20 May 2016 21:22:16 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations usage="Mandatory"></pickup-locations><note
+        type="info"></note><note type="info">Item status: In house loan&lt;br /&gt;
+        Call number: DS307 .E94 2015&lt;br /&gt;</note><last-interest-date usage="Optional">20160818</last-interest-date><start-interest-date
+        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
+        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
+        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
+        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:16 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22Chi%22%20and%20local.OCLCNumber%20=%20%22925497538%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 20 May 2016 21:22:15 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><records xsi:type=\"ns1:recordsType\"
+        xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><record xsi:type=\"ns1:recordType\"><recordSchema
+        xsi:type=\"xsd:string\">info:srw/schema/1/Identities</recordSchema><recordPacking
+        xsi:type=\"xsd:string\">xml</recordPacking><recordData xsi:type=\"ns1:stringOrXmlFragment\"><Identity
+        type=\"personal\" xmlns=\"\"><creationtime>Thu May  5 19:37:00 2016 UTC</creationtime><pnkey>lccn-no2006106412</pnkey><audLevel><min><level>0.55</level><title>The
+        lost world of old Europe : the Danube valley, 5000-3500 BC /</title></min><avg><level>0.62</level></avg><max><level>1.00</level><title>Edge
+        of empires</title></max></audLevel><authorityInfo><viafid>10183759</viafid><lccn>no2006106412</lccn><arn>7072441</arn><x400><rawName><suba>Chi
+        Jennifer</suba></rawName></x400><x400><rawName><suba>Chi, Jennifer Y.</suba></rawName></x400></authorityInfo><associatedNames><name
+        count=\"634\"><normName>lccn-no2008092083</normName><rawName><suba>New York
+        University</suba><subb>Institute for the Study of the Ancient World</subb></rawName><relator
+        count=\"1\">pbl</relator><relator count=\"1\">edt</relator></name><name count=\"298\"><normName>lccn-nr2004033789</normName><rawName><suba>Anthony,
+        David W.</suba></rawName><relator count=\"1\">edt</relator></name><name count=\"282\"><normName>lccn-n95008952</normName><rawName><suba>Bailey,
+        Douglass W.</suba><subq>(Douglass Whitfield)</subq><subd>1963-</subd></rawName></name><name
+        count=\"175\"><normName>lccn-n87822302</normName><rawName><suba>Rubinson,
+        Karen Sydney</suba><subd>1943-</subd></rawName></name><name count=\"175\"><normName>lccn-nb2009005883</normName><rawName><suba>Stark,
+        So&#x308;ren</suba></rawName></name><name count=\"174\"><normName>lccn-n95026124</normName><rawName><suba>Samashev,
+        Z. S.</suba><subq>(Zai&#x306;nolla Samashevich)</subq></rawName></name><name
+        count=\"173\"><normName>lccn-n92049473</normName><rawName><suba>Kvirkvelii&#xFE20;a&#xFE21;,
+        G. T.</suba><subq>(Guram Tengizovich)</subq></rawName></name><name count=\"170\"><normName>lccn-n92049447</normName><rawName><suba>Kacharava,
+        D. D.</suba><subq>(Daredzhan Davidovna)</subq></rawName><relator count=\"167\">aut</relator></name><name
+        count=\"141\"><normName>lccn-n91078050</normName><rawName><suba>Azara, Pedro</suba><subd>1955-</subd></rawName><relator
+        count=\"141\">edt</relator></name><name count=\"138\"><normName>lccn-no2011192508</normName><rawName><suba>Heath,
+        Sebastian</suba><subd>1966-</subd></rawName><relator count=\"3\">edt</relator><relator
+        count=\"10\">cre</relator></name></associatedNames><nameInfo type=\"personal\"><rawName><suba>Chi,
+        Jennifer</suba></rawName><genres><genre count=\"919\" norm=\"1424028\">Exhibition
+        catalogs</genre><genre count=\"206\" norm=\"1411628\">History</genre><genre
+        count=\"38\" norm=\"1423692\">Catalogs</genre><genre count=\"34\" norm=\"1424187\">Exhibition,
+        pictorial works</genre><genre count=\"33\" norm=\"1423874\">Pictorial works</genre><genre
+        count=\"1\" norm=\"1423831\">Portraits</genre></genres><fastHeadings><fast
+        count=\"807\" norm=\"810745\" size=\"5\" tag=\"650\">Antiquities</fast><fast
+        count=\"715\" norm=\"917564\" size=\"5\" tag=\"650\">Excavations (Archaeology)</fast><fast
+        count=\"290\" norm=\"810762\" size=\"5\" tag=\"650\">Antiquities, Prehistoric</fast><fast
+        count=\"285\" norm=\"878433\" size=\"5\" tag=\"650\">Copper age</fast><fast
+        count=\"277\" norm=\"1242332\" size=\"5\" tag=\"651\">Danube River Valley</fast><fast
+        count=\"273\" norm=\"1245064\" size=\"5\" tag=\"651\">Europe</fast><fast coor=\"e0680000|n0480000\"
+        count=\"172\" norm=\"1260664\" size=\"5\" tag=\"651\">Kazakhstan</fast><fast
+        count=\"171\" norm=\"889315\" size=\"5\" tag=\"650\">Decorative arts</fast><fast
+        count=\"164\" norm=\"850521\" size=\"5\" tag=\"650\">Cemeteries</fast><fast
+        count=\"164\" norm=\"1230703\" size=\"5\" tag=\"651\">Georgia (Republic)--Vani</fast><fast
+        count=\"164\" norm=\"946842\" size=\"4\" tag=\"650\">Grave goods</fast><fast
+        count=\"156\" norm=\"944623\" size=\"4\" tag=\"650\">Goldwork, Ancient</fast><fast
+        count=\"142\" norm=\"1896867\" size=\"4\" tag=\"651\">Ur (Extinct city)</fast><fast
+        count=\"142\" norm=\"798763\" size=\"4\" tag=\"650\">Aesthetics, Comparative</fast><fast
+        count=\"142\" norm=\"816926\" size=\"4\" tag=\"650\">Art, Sumerian</fast><fast
+        coor=\"e0440000|n0330000\" count=\"142\" norm=\"1205757\" size=\"4\" tag=\"651\">Iraq</fast><fast
+        count=\"139\" norm=\"1915752\" size=\"4\" tag=\"610\">New York University.--Institute
+        for the Study of the Ancient World</fast><fast count=\"137\" norm=\"1030114\"
+        size=\"4\" tag=\"650\">Museum techniques</fast><fast count=\"137\" norm=\"813003\"
+        size=\"4\" tag=\"650\">Archaeology and art</fast><fast count=\"136\" norm=\"1093763\"
+        size=\"4\" tag=\"650\">Religion</fast><fast count=\"136\" norm=\"1896912\"
+        size=\"3\" tag=\"651\">Syria--Dura-Europos (Extinct city)</fast><fast count=\"34\"
+        norm=\"1204889\" size=\"3\" tag=\"651\">Iran</fast><fast count=\"33\" norm=\"1061714\"
+        size=\"3\" tag=\"650\">Photography</fast><fast coor=\"e0220000|n0390000\"
+        count=\"13\" norm=\"1208380\" size=\"3\" tag=\"651\">Greece</fast><fast count=\"13\"
+        norm=\"269436\" size=\"3\" tag=\"600\">White, Shelby</fast><fast count=\"13\"
+        norm=\"839549\" size=\"3\" tag=\"650\">Bronzes--Private collections</fast><fast
+        count=\"13\" norm=\"839576\" size=\"3\" tag=\"650\">Bronzes, Greek</fast><fast
+        coor=\"w0983000|n0394536\" count=\"13\" norm=\"1204155\" size=\"3\" tag=\"651\">United
+        States</fast><fast count=\"13\" norm=\"1718667\" size=\"3\" tag=\"600\">Levy,
+        Leon,</fast><fast count=\"10\" norm=\"944612\" size=\"3\" tag=\"650\">Goldwork</fast><fast
+        count=\"7\" norm=\"519398\" size=\"2\" tag=\"610\">Mouseio Benake&#x304;</fast><fast
+        count=\"5\" norm=\"1015534\" size=\"2\" tag=\"650\">Megalithic monuments</fast><fast
+        count=\"5\" norm=\"1207170\" size=\"2\" tag=\"651\">Malta</fast><fast count=\"2\"
+        norm=\"1241484\" size=\"2\" tag=\"651\">Balkan Peninsula</fast><fast count=\"2\"
+        norm=\"1245079\" size=\"2\" tag=\"651\">Europe, Eastern</fast><fast count=\"1\"
+        norm=\"1109838\" size=\"2\" tag=\"650\">Sculpture, Roman</fast><fast count=\"1\"
+        norm=\"1011739\" size=\"2\" tag=\"650\">Material culture</fast><fast count=\"1\"
+        norm=\"1132151\" size=\"2\" tag=\"650\">Statues</fast><fast count=\"1\" norm=\"42232\"
+        size=\"2\" tag=\"600\">Na&#x304;s&#x323;ir al-Di&#x304;n Sha&#x304;h,--Shah
+        of Iran,</fast><fast count=\"1\" norm=\"987694\" size=\"2\" tag=\"650\">Kings
+        and rulers</fast><fast coor=\"e0350000|n0390000\" count=\"1\" norm=\"1208963\"
+        size=\"1\" tag=\"651\">Turkey</fast><fast count=\"1\" norm=\"1072259\" size=\"1\"
+        tag=\"650\">Portrait photography</fast><fast count=\"1\" norm=\"1241586\"
+        size=\"1\" tag=\"651\">Middle East</fast></fastHeadings><languages count=\"2\"><lang
+        code=\"eng\" count=\"45\"/><lang code=\"gre\" count=\"3\"/></languages><birthDate>1900</birthDate><dates><date
+        byCount=\"4\" byScaled=\"2.00\" count=\"4\" scaled=\"2.00\">2002</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2005</date><date
+        byCount=\"10\" byScaled=\"3.32\" count=\"10\" scaled=\"3.32\">2008</date><date
+        byCount=\"5\" byScaled=\"2.32\" count=\"5\" scaled=\"2.32\">2009</date><date
+        byCount=\"6\" byScaled=\"2.58\" count=\"6\" scaled=\"2.58\">2010</date><date
+        byCount=\"9\" byScaled=\"3.17\" count=\"9\" scaled=\"3.17\">2011</date><date
+        byCount=\"4\" byScaled=\"2.00\" count=\"4\" scaled=\"2.00\">2012</date><date
+        byCount=\"1\" byScaled=\"0.00\" count=\"1\" scaled=\"0.00\">2013</date><date
+        byCount=\"8\" byScaled=\"3.00\" count=\"8\" scaled=\"3.00\">2015</date></dates><totalHoldings>990</totalHoldings><workCount>12</workCount><recordCount>48</recordCount><ddc
+        ident=\"\">930.15</ddc><lcc ident=\"GN778.2.A1\">GN778.2.A1</lcc><relators><relator
+        code=\"edt\" count=\"190\"><oclcnum count=\"137\">ocn894625505</oclcnum><oclcnum
+        count=\"33\">ocn925497538</oclcnum><oclcnum count=\"3\">ocn907709152</oclcnum><oclcnum
+        count=\"2\">ocn847481695</oclcnum><oclcnum count=\"2\">ocn910505069</oclcnum><oclcnum
+        count=\"2\">ocn780973365</oclcnum><oclcnum count=\"2\">ocn639138991</oclcnum><oclcnum
+        count=\"1\">ocn941069781</oclcnum><oclcnum count=\"1\">ocn940806068</oclcnum><oclcnum
+        count=\"1\">ocn879652637</oclcnum></relator><relator code=\"aut\" count=\"19\"><oclcnum
+        count=\"13\">ocn070663200</oclcnum><oclcnum count=\"2\">ocn475966323</oclcnum><oclcnum
+        count=\"2\">ocn056324100</oclcnum><oclcnum count=\"1\">ocn873971521</oclcnum><oclcnum
+        count=\"1\">ocn695931890</oclcnum></relator><relator code=\"cre\" count=\"10\"><oclcnum
+        count=\"10\">ocn798065747</oclcnum></relator></relators></nameInfo><by><citation
+        ident=\"newwork318874940\"><holdings>294</holdings><numEditions>8</numEditions><oclcnum>ocn318874940</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"8\"/></languages><date>2009</date><dates
+        different=\"2\" first=\"2009\" last=\"2010\"/><audLevel>0.55</audLevel><title>The
+        lost world of old Europe : the Danube valley, 5000-3500 BC</title><genres><genre
+        count=\"279\" norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres><summary>In
+        the prehistoric Copper Age, long before cities, writing, or the invention
+        of the wheel, Old Europe was among the most culturally rich regions in the
+        world. Its inhabitants lived in prosperous agricultural towns. The ubiquitous
+        goddess figurines found in their houses and shrines have triggered intense
+        debates about women's roles. The Lost World of Old Europe is the accompanying
+        catalog for an exhibition at New York University's Institute for the Study
+        of the Ancient World. This superb volume features essays by leading archaeologists
+        as well as breathtaking color photographs cataloguing the objects, some illustrated
+        here for the first time. The heart of Old Europe was in the lower Danube valley,
+        in contemporary Bulgaria and Romania. Old European coppersmiths were the most
+        advanced metal artisans in the world. Their intense interest in acquiring
+        copper, Aegean shells, and other rare valuables gave rise to far-reaching
+        trading networks. In their graves, the bodies of Old European chieftains were
+        adorned with pounds of gold and copper ornaments. Their funerals were without
+        parallel in the Near East or Egypt. The exhibition represents the first time
+        these rare objects have appeared in the United States. An unparalleled introduction
+        to Old Europe's cultural, technological, and artistic legacy, The Lost World
+        of Old Europe includes essays by Douglass Bailey, John Chapman, Cornelia-Magda
+        Lazarovici, Ioan Opris and Catalin Bem, Ernst Pernicka, Dragomir Nicolae Popovici,
+        Michel Seferiades, and Vladimir Slavchev</summary><cover isbn=\"0691143889\"
+        oclc=\"ocn762623165\" type=\"isbn\">+-+4338966415</cover></citation><citation
+        ident=\"newwork761850893\"><holdings>175</holdings><numEditions>4</numEditions><oclcnum>ocn761850893</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><date>2012</date><dates
+        different=\"1\" first=\"2012\" last=\"2012\"/><audLevel>0.59</audLevel><title>Nomads
+        and networks : the ancient art and culture of Kazakhstan</title><genres><genre
+        count=\"171\" norm=\"history\">History</genre><genre count=\"172\" norm=\"exhibition
+        catalogs\">Exhibition catalogs</genre></genres><summary>Presents an unparalleled
+        overview of the sophisticated culture of pastoral nomadic populations who
+        lived on the territory of present-day Kazakhstan from roughly the middle of
+        the first millennium BCE to the early centuries CE.--Jaquette</summary></citation><citation
+        ident=\"newwork223418349\"><holdings>163</holdings><numEditions>9</numEditions><oclcnum>ocn223418349</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"9\"/></languages><date>2008</date><dates
+        different=\"1\" first=\"2008\" last=\"2008\"/><audLevel>0.69</audLevel><creator
+        ident=\"54365540,n92049447\">Kacharava, D. D</creator><title>Wine, worship,
+        and sacrifice : the golden graves of ancient Vani</title><genres><genre count=\"156\"
+        norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres><cover isbn=\"0691138567\"
+        oclc=\"ocn600358695\" type=\"isbn\">+-+2103866415</cover></citation><citation
+        ident=\"newwork894625505\"><holdings>145</holdings><numEditions>6</numEditions><oclcnum>ocn894625505</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"6\"/></languages><date>2015</date><dates
+        different=\"1\" first=\"2015\" last=\"2015\"/><audLevel>0.60</audLevel><creator
+        ident=\"122365087,no2008092083\">New York University</creator><title>From
+        ancient to modern : archaeology and aesthetics</title><genres><genre count=\"143\"
+        norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres><summary>&quot;As
+        archaeologists unearth the past, they seek meaning or purpose for the objects
+        they uncover by looking at the objects themselves and their archaeological
+        context. Art historians, on the other hand, primarily focus on aesthetics,
+        asking why a particular object stimulates our senses, and what that tells
+        us about ourselves. From Ancient to Modern offers a lens for understanding
+        ancient objects through the perspectives and processes of both archaeology
+        and aesthetics, and, in so doing, illuminates the multiple layers of meaning
+        that a single object can take on--sometimes simultaneously--over the course
+        of its existence. This beautifully illustrated volume is the accompanying
+        catalog for the exhibition at New York University's Institute for the Study
+        of the Ancient World and focuses on fifty objects from three iconic sites
+        in the ancient Near East: Ur, Diyala, and Kish. The excavation, unique characteristics,
+        and transformative journey of each object--from archaeological artifact to
+        aesthetic item--are examined. Select contemporary artworks are also considered
+        in the investigation of how ancient objects acquire meaning in the present
+        day.&quot;--Publisher's website</summary></citation><citation ident=\"newwork5623510759\"><holdings>138</holdings><numEditions>8</numEditions><oclcnum>ocn756167091</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"8\"/></languages><date>2011</date><dates
+        different=\"1\" first=\"2011\" last=\"2011\"/><audLevel>0.70</audLevel><title>Edge
+        of empires : pagans, Jews, and Christians at Roman Dura-Europos</title><genres><genre
+        count=\"136\" norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres></citation><citation
+        ident=\"newwork925497538\"><holdings>34</holdings><numEditions>2</numEditions><oclcnum>ocn925497538</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"2\"/></languages><date>2015</date><dates
+        different=\"1\" first=\"2015\" last=\"2015\"/><audLevel>0.66</audLevel><title>The
+        Eye of the Shah : Qajar Court Photography and the Persian past</title><genres><genre
+        count=\"34\" norm=\"history\">History</genre><genre count=\"33\" norm=\"catalogs\">Catalogs</genre><genre
+        count=\"1\" norm=\"portraits\">Portraits</genre><genre count=\"33\" norm=\"pictorial
+        works\">Pictorial works</genre><genre count=\"1\" norm=\"exhibition catalogs\">Exhibition
+        catalogs</genre><genre count=\"34\" norm=\"exhibition, pictorial works\">Exhibition,
+        pictorial works</genre></genres></citation><citation ident=\"newwork70663200\"><holdings>13</holdings><numEditions>1</numEditions><oclcnum>ocn070663200</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>2005</date><dates
+        different=\"1\" first=\"2005\" last=\"2005\"/><audLevel>0.75</audLevel><creator
+        ident=\"10183759,no2006106412\">Chi, Jennifer</creator><title>Greek bronze
+        vessels from the collection of Shelby White &amp; Leon Levy</title><genres><genre
+        count=\"13\" norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres><cover
+        isbn=\"1928917054\" oclc=\"ocn070663200\" type=\"isbn\">+-+9052643746</cover></citation><citation
+        ident=\"newwork428072283\"><holdings>9</holdings><numEditions>3</numEditions><oclcnum>ocn428072283</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"gre\" count=\"3\"/></languages><date>2008</date><dates
+        different=\"2\" first=\"2008\" last=\"2009\"/><audLevel>0.83</audLevel><creator
+        ident=\"54365540,n92049447\">Kacharava, D. D</creator><title>Apo te&#x304;
+        cho&#x304;ra tou chrysomallou deratos : the&#x304;sauroi te&#x304;s archaias
+        Kolchidas</title><genres><genre count=\"8\" norm=\"exhibition catalogs\">Exhibition
+        catalogs</genre></genres></citation><citation ident=\"newwork496097912\"><holdings>6</holdings><numEditions>1</numEditions><oclcnum>ocn496097912</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>2009</date><dates
+        different=\"1\" first=\"2009\" last=\"2009\"/><audLevel>0.72</audLevel><title>The
+        lost world of old Europe</title><genres><genre count=\"6\" norm=\"exhibition
+        catalogs\">Exhibition catalogs</genre></genres><cover isbn=\"0691143889\"
+        oclc=\"ocn496097912\" type=\"isbn\">+-+4338966415</cover></citation><citation
+        ident=\"newwork475966323\"><holdings>6</holdings><numEditions>4</numEditions><oclcnum>ocn475966323</oclcnum><recordType>mix</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"4\"/></languages><date>2002</date><dates
+        different=\"1\" first=\"2002\" last=\"2002\"/><audLevel>0.71</audLevel><creator
+        ident=\"10183759,no2006106412\">Chi, Jennifer</creator><title>Studies in the
+        programmatic statuary of Roman Asia Minor</title><genres><genre count=\"1\"
+        norm=\"history\">History</genre></genres><summary>This dissertation collects
+        and presents the best preserved and published public statuary programs set
+        within columnar facades from Roman Ephesos, Perge, and Side. Of critical importance
+        is the fact that each of the sculptural displays analyzed within this study
+        has a documented architectural context. This study demonstrates that a large
+        part of a program's effect and meaning was gained from its context, from the
+        relationship of the statues to one another and to the architectural setting
+        in which they were erected. Where the evidence permits, reconstructions of
+        the original design and installation of these programs are provided. The aim
+        of this dissertation, however, is not to propose detailed archaeological reconstructions,
+        but to analyze the broad cultural implications projected by these carefully
+        conceived monuments</summary></citation><citation ident=\"newwork839672130\"><holdings>5</holdings><numEditions>1</numEditions><oclcnum>ocn839672130</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>2013</date><dates
+        different=\"1\" first=\"2013\" last=\"2013\"/><audLevel>0.81</audLevel><creator
+        ident=\"122365087,no2008092083\">New York University</creator><title>Temple
+        and tomb : prehistoric Malta, 3600-2500 BCE : exhibition on view at ISAW,
+        March 21-July 7, 2013</title><genres><genre count=\"5\" norm=\"catalogs\">Catalogs</genre><genre
+        count=\"5\" norm=\"exhibition catalogs\">Exhibition catalogs</genre></genres></citation><citation
+        ident=\"newwork768473820\"><holdings>0</holdings><numEditions>1</numEditions><oclcnum>ocn768473820</oclcnum><recordType>book</recordType><languages
+        count=\"1\"><lang code=\"eng\" count=\"1\"/></languages><date>2011</date><dates
+        different=\"1\" first=\"2011\" last=\"2011\"/><audLevel>1.00</audLevel><title>Edge
+        of empires</title></citation></by><bestCover oclc=\"ocn762623165\" type=\"isbn\">+-+4338966415</bestCover><admin:administrativeMetadata
+        xmlns:admin=\"http://viaf.org/xa/administrativeMetadata\"><admin:administrativeMetadataInstance><admin:administrativeMetadataDate>Fri
+        May 06 17:53:28 EDT 2016</admin:administrativeMetadataDate><admin:administrativeMetadataUser>batch</admin:administrativeMetadataUser><admin:administrativeMetadataRecordLength>12724</admin:administrativeMetadataRecordLength></admin:administrativeMetadataInstance></admin:administrativeMetadata></Identity></recordData><recordPosition
+        xsi:type=\"xsd:positiveInteger\">1</recordPosition></record></records><echoedSearchRetrieveRequest
+        xsi:type=\"ns2:echoedSearchRetrieveRequestType\" xmlns:ns2=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &quot;Chi&quot; and local.OCLCNumber = &quot;925497538&quot;</query><xQuery><ns3:triple
+        xsi:type=\"ns3:tripleType\" xmlns:ns3=\"http://www.loc.gov/zing/cql/xcql/\"><ns3:boolean
+        xsi:type=\"ns3:booleanType\"><ns3:value xsi:type=\"xsd:string\">and</ns3:value></ns3:boolean><ns3:leftOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">Chi</ns3:term></ns3:searchClause></ns3:leftOperand><ns3:rightOperand
+        xsi:type=\"ns3:operandType\"><ns3:searchClause xsi:type=\"ns3:searchClauseType\"><ns3:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns3:index><ns3:relation xsi:type=\"ns3:relationType\"><ns3:value
+        xsi:type=\"xsd:string\">=</ns3:value></ns3:relation><ns3:term xsi:type=\"xsd:string\">925497538</ns3:term></ns3:searchClause></ns3:rightOperand></ns3:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><extraResponseData
+        xsi:type=\"ns4:extraDataType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/\"><ns5:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns5=\"http://oclc.org/srw/extraData\"><ns5:databaseTitle>WorldCat
+        Personal Identity Records</ns5:databaseTitle></ns5:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:16 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 20 May 2016 21:22:17 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations usage="Mandatory"></pickup-locations><note
+        type="info"></note><note type="info">Item status: In house loan&lt;br /&gt;
+        Call number: DS307 .E94 2015&lt;br /&gt;</note><last-interest-date usage="Optional">20160818</last-interest-date><start-interest-date
+        usage="Optional"></start-interest-date><sub-author usage="Optional" max_len="50"></sub-author><sub-title
+        usage="Optional" max_len="100"></sub-title><pages usage="Optional" max_len="30"></pages><note-1
+        usage="Optional" max_len="50"></note-1><note-2 usage="Optional" max_len="50"></note-2><rush
+        usage="Optional"></rush></hold></info><info type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Fri, 20 May 2016 21:22:17 GMT
 recorded_with: VCR 2.9.3
