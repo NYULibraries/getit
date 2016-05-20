@@ -255,7 +255,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it { should eq 'Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE).'}
     end
   end
-  describe '#ezborrow_request_text' do
+  xdescribe '#ezborrow_request_text' do
     let(:institution) { 'NYU' }
     subject { helper.ezborrow_request_text }
     before { allow(helper).to receive(:params).and_return( { 'umlaut.institution' => institution }) }
