@@ -1,4 +1,3 @@
-@wip
 Feature: Holding request options for a Copy in Library
   In order to select the appropriate choice
   As a user requesting a Copy in Library
