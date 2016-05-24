@@ -21,7 +21,7 @@ module GetIt
       end
 
       def requestable?
-        (['yes', 'deferred'].include?(requestability) && from_aleph?) || scannable?
+        (['yes', 'deferred'].include?(requestability) && from_aleph?)
       end
 
       def ill?
@@ -36,10 +36,6 @@ module GetIt
 
       def available?
         from_aleph? && status.available?
-      end
-
-      def scannable?
-        from_aleph? && ['NISAW'].include?(sub_library.code)
       end
 
       def offsite?

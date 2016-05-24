@@ -10,15 +10,11 @@ class HoldingRequest
     end
 
     # Status is requestable if the Holding is in an
-    # ILL state, Ezborrow state, scannable state or the combination
+    # ILL state, Ezborrow state, or the combination
     # of User and Holding is requestable
     def requestable?
-      (ill? || available? || recallable? || scannable? ||
+      (ill? || available? || recallable? ||
         processing? || on_order? || offsite? || ezborrow?)
-    end
-
-    def scannable?
-      holding.scannable?
     end
 
     def ezborrow?

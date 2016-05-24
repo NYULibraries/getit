@@ -15,7 +15,6 @@
       <%= render 'new_recall' if @authorizer.recallable? %>
       <%= render 'new_processing' if @authorizer.processing? %>
       <%= render 'new_on_order' if @authorizer.on_order? %>
-      <%#= render 'new_scan' if @authorizer.scannable? %>
     </ol>
     <p style="margin-top: 1em;">
       <strong>
