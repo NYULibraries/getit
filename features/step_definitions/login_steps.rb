@@ -25,7 +25,7 @@ end
 
 Given(/^I am logged in as a New School user with E-ZBorrow privileges$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = ns_ezborrow_omniauth_hash
-  visit '/login'
+  visit login_path
 end
 
 Given(/^I am not logged in$/) do

@@ -148,6 +148,7 @@ default:
     HathiTrust:
       type: HathiTrust
       priority: d
+      api_url: https://catalog.hathitrust.org/api/volumes
       # Uncomment to link through this 'internal' URL instead
       # of following permalinks. jrochkind does this to use
       # a WAYFless shibboleth login with EZProxy.
