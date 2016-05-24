@@ -65,4 +65,8 @@ en:
       ill:
         default: Request a loan of this item via ILL.
       ezborrow:
-        default: Search E-ZBorrow for this item.
+        title:
+          default: Search E-ZBorrow for this item.
+        details:
+          default: If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location.
+          ns: If available to request, the item should arrive at your selected pickup location within 3-5 business days for a twelve-week loan.
