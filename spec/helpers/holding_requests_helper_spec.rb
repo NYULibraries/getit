@@ -255,4 +255,17 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it { should eq 'Request this item for pick up at the Avery Fisher Center on the 2nd floor of the Bobst Library (NYC) or the NYU Abu Dhabi Library (UAE).'}
     end
   end
+  describe '#ezborrow_request_text' do
+    let(:institution) { 'NYU' }
+    subject { helper.ezborrow_request_text }
+    before { allow(helper).to receive(:params).and_return( { 'umlaut.institution' => institution }) }
+    context 'when institution is NS' do
+      let(:institution) { 'NS' }
+      it { should eql 'If available to request, the item should arrive at your selected pickup location within 3-5 business days for a twelve-week loan.' }
+    end
+    context 'when institution is NYU' do
+      let(:institution) { 'NYU' }
+      it { should eql 'If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location.' }
+    end
+  end
 end

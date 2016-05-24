@@ -1,0 +1,615 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2015-12-22T13:19:24-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 18:19:26 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2015-12-22T13:19:24-05:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;10947966&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s8901B124-A8D8-11E5-B1F0-0680FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph004197500&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph004197500%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph004197500</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.7.0.1, ruby 2.1.5 (2014-11-13))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 22 Dec 2015 18:19:24 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;004197500&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph004197500&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01004197500&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;book&lt;/type&gt;
+                        &lt;title&gt;The eye of the shah : Qajar court photography and the Persian past&lt;/title&gt;
+                        &lt;contributor&gt;Jennifer Y. Chi editor.; Carmen P&#xE9;rez Gonz&#xE1;lez 1969- contributor.; Riz&#x324;&#x101; Shaykh contributor.; Judith A. Lerner contributor.; New York University. Institute for the Study of the Ancient World.&lt;/contributor&gt;
+                        &lt;publisher&gt;New York : Institute for the Study of the Ancient World; Princeton, N.J. : Princeton University Press&lt;/publisher&gt;
+                        &lt;creationdate&gt;2015&lt;/creationdate&gt;
+                        &lt;format&gt;198 pages : chiefly color illustrations, color map ; 21 x 28 cm&lt;/format&gt;
+                        &lt;identifier&gt;$$Cisbn$$V0691171580; $$Cisbn$$V9780691171586&lt;/identifier&gt;
+                        &lt;subject&gt;N&#x101;&#x1E63;ir al-D&#x12B;n Sh&#x101;h, Shah of Iran, 1831-1896 -- Exhibitions; Photography -- Iran -- History -- 19th century -- Exhibitions; Photography in archaeology -- Iran -- Exhibitions; Iran -- Social life and customs -- 19th century -- Exhibitions; Iran -- History -- Qajar dynasty, 1794-1925 -- Exhibitions; Iran -- Antiquities -- Exhibitions&lt;/subject&gt;
+                        &lt;description&gt;$$Ccontents$$V1. From the inner sanctum : men who were trusted by the kings / Carmen P&#xE9;rez Gonz&#xE1;lez, Reza Sheikh -- 2. A case of synchronicity : photography and Qajar Iran's discovery of its ancient past / Judith A. Lerner.&lt;/description&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LISAW$$1Large Collection$$2(DS307 .E94 2015 )$$Savailable$$31$$40$$5N$$60$$XNYU50$$YNISAW$$ZLARGE&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph004197500&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYU$$Savailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;available&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
+                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
+                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;edited by Jennifer Y. Chi ; including contributions by Carmen P&#xE9;rez Gonz&#xE1;lez, Judith A. Lerner, and Reza Sheikh.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Carmen P&#xE9;rez Gonz&#xE1;lez, Reza Sheikh -- Judith A. Lerner.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Jennifer Y.,  Chi  editor.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Carmen,  P&#xE9;rez Gonz&#xE1;lez  1969- contributor.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Riz&#x324;&#x101;,  Shaykh  contributor.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Reza  Sheikh&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R.  Sheikh&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;&#x634;&#x64A;&#x62E;&#x60C; &#x631;&#x636;&#x627;&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Judith A.,  Lerner  contributor.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Chi, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;P&#xE9;rez Gonz&#xE1;lez, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Shaykh, R&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Sheikh, R&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Lerner, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;New York University. Institute for the Study of the Ancient World.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Institute for the Study of the Ancient World at New York University&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;ISAW&lt;/creatorcontrib&gt;
+                        &lt;title&gt;The eye of the shah : Qajar court photography and the Persian past /&lt;/title&gt;
+                        &lt;subject&gt;N&#x101;&#x1E63;ir al-D&#x12B;n Sh&#x101;h, Shah of Iran, 1831-1896  Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;Photography  Iran History 19th century Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;Photography in archaeology  Iran Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;Iran  Social life and customs 19th century Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;Iran  History Qajar dynasty, 1794-1925 Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;Iran  Antiquities Exhibitions&lt;/subject&gt;
+                        &lt;general&gt;Institute for the Study of the Ancient World,&lt;/general&gt;
+                        &lt;general&gt;Princeton University Press,&lt;/general&gt;
+                        &lt;general&gt;Catalog of an exhibition held at the Institute for the Study of the Ancient World at New York University, New York, October 22, 2015-January 17, 2016.&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph004197500&lt;/recordid&gt;
+                        &lt;isbn&gt;0691171580&lt;/isbn&gt;
+                        &lt;isbn&gt;9780691171586&lt;/isbn&gt;
+                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;2015&lt;/creationdate&gt;
+                        &lt;addtitle&gt;From the inner sanctum : men who were trusted by the kings / A case of synchronicity : photography and Qajar Iran's discovery of its ancient past /&lt;/addtitle&gt;
+                        &lt;searchscope&gt;NISAW&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NISAW Large Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;searchscope&gt;ISAW&lt;/searchscope&gt;
+                        &lt;scope&gt;NISAW&lt;/scope&gt;
+                        &lt;scope&gt;NISAW Large Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;scope&gt;ISAW&lt;/scope&gt;
+                        &lt;lsr01&gt;DS307 .E94 2015&lt;/lsr01&gt;
+                        &lt;lsr01&gt;DS307.E94 2015&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Institute for the Study of the Ancient World,&lt;/lsr02&gt;
+                        &lt;lsr02&gt;Princeton University Press,&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;eye of the shah : Qajar court photography and the Persian past /&lt;/title&gt;
+                        &lt;creationdate&gt;2015&lt;/creationdate&gt;
+                        &lt;author&gt;Chi, Jennifer Y., editor.&lt;/author&gt;
+                        &lt;lso01&gt;2015&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;2015&lt;/creationdate&gt;
+                        &lt;topic&gt;N&#x101;&#x1E63;ir al-D&#x12B;n Sh&#x101;h, Shah of Iran, 1831-1896&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;topic&gt;Photography&#x2013;Iran&#x2013;History&#x2013;19th century&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;topic&gt;Photography in archaeology&#x2013;Iran&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;topic&gt;Iran&#x2013;Social life and customs&#x2013;19th century&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;topic&gt;Iran&#x2013;History&#x2013;Qajar dynasty, 1794-1925&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;topic&gt;Iran&#x2013;Antiquities&#x2013;Exhibitions&lt;/topic&gt;
+                        &lt;collection&gt;NISAW&lt;/collection&gt;
+                        &lt;toplevel&gt;available&lt;/toplevel&gt;
+                        &lt;prefilter&gt;books&lt;/prefilter&gt;
+                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
+                        &lt;creatorcontrib&gt;Chi, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;P&#xE9;rez Gonz&#xE1;lez, C&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Shaykh, R&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Lerner, J&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;New York University. Institute for the Study of the Ancient World&lt;/creatorcontrib&gt;
+                        &lt;genre&gt;Exhibitions&lt;/genre&gt;
+                        &lt;library&gt;ISAW&lt;/library&gt;
+                        &lt;lfc01&gt;Large Collection&lt;/lfc01&gt;
+                        &lt;classificationlcc&gt;D - History (general) and history of europe.&#x2013;History of Asia&#x2013;Iran (Persia)&#x2013;History&lt;/classificationlcc&gt;
+                        &lt;frbrgroupid&gt;179504582&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c2&gt;0691171580;9780691171586&lt;/c2&gt;
+                        &lt;c3&gt;eyeoftheshahqajarcouersianpast&lt;/c3&gt;
+                        &lt;c4&gt;2015&lt;/c4&gt;
+                        &lt;f3&gt;0691171580;9780691171586&lt;/f3&gt;
+                        &lt;f5&gt;eyeoftheshahqajarcouersianpast&lt;/f5&gt;
+                        &lt;f6&gt;2015&lt;/f6&gt;
+                        &lt;f7&gt;eye of the shah qajar court photography and the persian past&lt;/f7&gt;
+                        &lt;f8&gt;nyu&lt;/f8&gt;
+                        &lt;f9&gt;198 pages :&lt;/f9&gt;
+                        &lt;f10&gt;institute for the study of the ancient world&lt;/f10&gt;
+                        &lt;f20&gt;(OCoLC)925497538&lt;/f20&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kchi jennifer y$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kperez gonzalez carmen 1969$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Kshaykh riza$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Klerner judith a$$AA&lt;/k1&gt;
+                        &lt;k1&gt;$$Knew york university institute for the study of the ancient world$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kbookeye of the shah qajar court photography and the persian past$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item$$INYU&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;enrichment&gt;
+                        &lt;classificationlcc&gt;DS307&lt;/classificationlcc&gt;
+                      &lt;/enrichment&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;P&#xE9;rez Gonz&#xE1;lez&lt;/aulast&gt;
+                        &lt;aufirst&gt;Jennifer Y.,&lt;/aufirst&gt;
+                        &lt;addau&gt;Chi, Jennifer Y., editor&lt;/addau&gt;
+                        &lt;addau&gt;P&#xE9;rez Gonz&#xE1;lez, Carmen, 1969- contributor&lt;/addau&gt;
+                        &lt;addau&gt;Shaykh, Riz&#x324;&#x101;, contributor&lt;/addau&gt;
+                        &lt;addau&gt;Lerner, Judith A., contributor&lt;/addau&gt;
+                        &lt;addau&gt;New York University. Institute for the Study of the Ancient World&lt;/addau&gt;
+                        &lt;btitle&gt;The eye of the shah : Qajar court photography and the Persian past&lt;/btitle&gt;
+                        &lt;date&gt;2015&lt;/date&gt;
+                        &lt;risdate&gt;[2015].&lt;/risdate&gt;
+                        &lt;isbn&gt;0691171580&lt;/isbn&gt;
+                        &lt;isbn&gt;9780691171586&lt;/isbn&gt;
+                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
+                        &lt;oclcid&gt;925497538&lt;/oclcid&gt;
+                        &lt;lad01&gt;NISAW&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item$$INYU&lt;/lad01&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DChi, Jennifer Y.$$EChi, Jennifer Y.$$INYU10008165293$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DP&#xE9;rez Gonz&#xE1;lez, Carmen, 1969-$$EP&#xE9;rez Gonz&#xE1;lez, Carmen, 1969-&lt;/author&gt;
+                        &lt;author&gt;$$DShaykh, Riz&#x324;&#x101;$$EShaykh, Riz&#x324;&#x101;$$INYU10001233731$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DSheikh, Reza$$ESheikh, Reza$$INYU10001233731$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DSheikh, R$$ESheikh, R$$INYU10001233731$$PN&lt;/author&gt;
+                        &lt;author&gt;$$D&#x634;&#x64A;&#x62E;&#x60C; &#x631;&#x636;&#x627;$$E&#x634;&#x64A;&#x62E;&#x60C; &#x631;&#x636;&#x627;$$INYU10001233731$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DLerner, Judith A.$$ELerner, Judith A.$$INYU10001376025$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DNew York University. Institute for the Study of the Ancient World$$ENew York University. Institute for the Study of the Ancient World$$INYU10006566973$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DInstitute for the Study of the Ancient World at New York University$$EInstitute for the Study of the Ancient World at New York University$$INYU10006566973$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DISAW$$EISAW$$INYU10006566973$$PN&lt;/author&gt;
+                        &lt;title&gt;$$DThe eye of the shah : Qajar court photography and the Persian past$$Eeye of the shah : Qajar court photography and the Persian past&lt;/title&gt;
+                        &lt;subject&gt;$$DPhotography -- Iran -- History -- 19th century -- Exhibitions$$EPhotography Iran History 19th century Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;$$DPhotography in archaeology -- Iran -- Exhibitions$$EPhotography in archaeology Iran Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;$$DN&#x101;&#x1E63;ir al-D&#x12B;n Sh&#x101;h, Shah of Iran, 1831-1896 -- Exhibitions$$EN&#x101;&#x1E63;ir al-D&#x12B;n Sh&#x101;h, Shah of Iran, 1831-1896 Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;$$DIran -- Social life and customs -- 19th century -- Exhibitions$$EIran Social life and customs 19th century Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;$$DIran -- History -- Qajar dynasty, 1794-1925 -- Exhibitions$$EIran History Qajar dynasty, 1794-1925 Exhibitions&lt;/subject&gt;
+                        &lt;subject&gt;$$DIran -- Antiquities -- Exhibitions$$EIran Antiquities Exhibitions&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DDS307 .E94 2015$$E0ds   00307.e  94000  2015$$T0&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status></item></get-item> '
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:24 GMT
+- request:
+    method: get
+    uri: http://catalog.hathitrust.org/api/volumes/brief/json/oclc:925497538
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+      Server:
+      - Apache/2.2.22 (Debian) mod_fastcgi/mod_fastcgi-SNAP-0910052141 PHP/5.4.45-0+deb7u2
+      X-Powered-By:
+      - PHP/5.4.45-0+deb7u2
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '46'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed045525d5f4f58455e445a4a423660;expires=Tue, 22-Dec-2015
+        18:29:22 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: |2-
+
+
+        {"oclc:925497538":{"records":[],"items":[]}}
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+eye+of+the+shah%22+AND+creator:%28p%C3%A9rez+gonz%C3%A1lez%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Wed, 23 Dec 2015 00:19:22 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20eye%20of%20the%20shah%22%20AND%20creator:(p%C3%A9rez%20gonz%C3%A1lez)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 22 Dec 2015 18:19:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.13
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":61,"params":{"q":"title:\"the
+        eye of the shah\" AND creator:(p\u00e9rez gonz\u00e1lez ) AND ( mediatype:texts
+        OR mediatype:audio )","qin":"title:\"the eye of the shah\" AND creator:(p\u00e9rez
+        gonz\u00e1lez) AND (mediatype:texts OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.FamilyName%20=%20%22P%C3%A9rez%20Gonz%C3%A1lez%22%20and%20local.OCLCNumber%20=%20%22925497538%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '2541'
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.FamilyName
+        = &quot;P&#xE9;rez Gonz&#xE1;lez&quot; and local.OCLCNumber = &quot;925497538&quot;</query><xQuery><ns2:triple
+        xsi:type=\"ns2:tripleType\" xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:boolean
+        xsi:type=\"ns2:booleanType\"><ns2:value xsi:type=\"xsd:string\">and</ns2:value></ns2:boolean><ns2:leftOperand
+        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
+        xsi:type=\"xsd:string\">local.FamilyName</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">P&#xE9;rez
+        Gonz&#xE1;lez</ns2:term></ns2:searchClause></ns2:leftOperand><ns2:rightOperand
+        xsi:type=\"ns2:operandType\"><ns2:searchClause xsi:type=\"ns2:searchClauseType\"><ns2:index
+        xsi:type=\"xsd:string\">local.OCLCNumber</ns2:index><ns2:relation xsi:type=\"ns2:relationType\"><ns2:value
+        xsi:type=\"xsd:string\">=</ns2:value></ns2:relation><ns2:term xsi:type=\"xsd:string\">925497538</ns2:term></ns2:searchClause></ns2:rightOperand></ns2:triple></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/39</ns4:uri></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Dec 2015 18:19:22 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NISAW</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>14</z30-item-status-code><z30-collection-code>LARGE</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>004197500</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31154050082799</z30-barcode><z30-sub-library>NYU
+        Inst Study Ancient World</z30-sub-library><z30-material>Books</z30-material><z30-item-status>In
+        house loan</z30-item-status><z30-open-date>20151020</z30-open-date><z30-update-date>20151020</z30-update-date><z30-cataloger>MCKEEG</z30-cataloger><z30-date-last-return>20151119</z30-date-last-return><z30-hour-last-return>1305</z30-hour-last-return><z30-ip-last-return>128.122.167.11</z30-ip-last-return><z30-no-loans>000</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Large
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DS307
+        .E94 2015</z30-call-no><z30-call-no-key>0 ds&quot;307 e94 2015</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>005222625</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>20151020</z30-process-status-date><z30-upd-time-stamp>201511191305543</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>004197500</z13-doc-number><z13-year>2015</z13-year><z13-open-date>20151020</z13-open-date><z13-update-date>20151020</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DS307</z13-call-no><z13-author-code></z13-author-code><z13-author></z13-author><z13-title-code>24504</z13-title-code><z13-title>The
+        eye of the shah :</z13-title><z13-imprint-code></z13-imprint-code><z13-imprint></z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0691171580</z13-isbn-issn><z13-upd-time-stamp>201510201236269</z13-upd-time-stamp></z13><status>On
+        Shelf</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/hold"
+        allowed="N"><note type="error">Item cannot be requested (tab15).</note></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01004197500/items/NYU50004197500000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>004197500</adm-doc-number><item-sequence>000010</item-sequence><exact-item>Y</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 18:19:25 GMT
+recorded_with: VCR 2.9.3

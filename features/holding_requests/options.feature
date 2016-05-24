@@ -9,7 +9,7 @@ Feature: Holding request options for a Copy in Library
     And I am on the GetIt page for a "checked out" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is checked out
-    And I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from E-ZBorrow with NYU language
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option to recall the holding from a fellow library patron
 
@@ -28,7 +28,7 @@ Feature: Holding request options for a Copy in Library
     And I am on the GetIt page for a "requested" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is requested
-    And I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from E-ZBorrow with NYU language
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option to be added to the request queue
 
@@ -38,7 +38,7 @@ Feature: Holding request options for a Copy in Library
     And I am on the GetIt page for a "processing" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently being processed by library staff
-    And I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from E-ZBorrow with NYU language
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option for this item to be held for me once processed.
 
@@ -48,7 +48,7 @@ Feature: Holding request options for a Copy in Library
     And I am on the GetIt page for a "on order" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is on order
-    And I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from E-ZBorrow with NYU language
     And I should see an option for this item to be held for me once processed.
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
 
@@ -58,7 +58,7 @@ Feature: Holding request options for a Copy in Library
     And I am on the GetIt page for a "ill" holding
     And I click the "Request" button
     Then I should see a modal indicating that the holding is currently out of circulation
-    And I should see an option to request the holding from E-ZBorrow
+    And I should see an option to request the holding from E-ZBorrow with NYU language
     And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
     But I should not see an option to recall the holding from a fellow library patron
 
@@ -78,5 +78,30 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button
     Then I should see a modal indicating that the holding is checked out
     And I should see an option to recall the holding from a fellow library patron
-    But I should not see an option to request the holding from E-ZBorrow
+    But I should not see an option to request the holding from E-ZBorrow with NYU language
     And I should not see an option to request the holding from another library via Interlibrary Loan (ILL)
+
+  @newschool_ill_user/checked_out
+  Scenario: A New School user with ILL privileges see E-ZBorrow options and ILL options
+    Given I am logged in as a New School user with ILL privileges
+    And I am on the GetIt page for the title "Stolen glimpses, captive shadows"
+    And I click the "Request" button
+    Then I should see an option to request the holding from E-ZBorrow with New School language
+    And I should see an option to request the holding from another library via Interlibrary Loan (ILL)
+    But I should not see an option to recall the holding from a fellow library patron
+
+  @newschool_ezborrow_user/checked_out
+  Scenario: A New School user with E-ZBorrow permissions but without ILL privileges sees E-ZBorrow and recall options
+    Given I am logged in as a New School user with E-ZBorrow privileges
+    And I am on the GetIt page for the title "Stolen glimpses, captive shadows"
+    And I click the "Request" button
+    Then I should see an option to request the holding from E-ZBorrow with New School language
+    And I should see an option to recall the holding from a fellow library patron
+    But I should not see an option to request the holding from another library via Interlibrary Loan (ILL)
+
+  @wip @user/isaw_available
+  Scenario: A user with request privileges viewing options for an item in the ISAW library
+    Given I am logged in
+    And I am on the GetIt page for the title "The eye of the shah"
+    And I click the "Request" button
+    Then I should see an option to request a scan of a portion of the holding to be delivered to me electronically

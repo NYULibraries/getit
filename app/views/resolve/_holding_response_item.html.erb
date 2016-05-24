@@ -24,8 +24,6 @@
         <%= render("stackmap_link", holding: holding) %>
         <%- # Request link -%>
         <%= render("request_link", holding: holding) if requestable?(holding) %>
-        <%- # E-ZBorrow link -%>
-        <%= render("ezborrow_link", holding: holding) %>
         <%- # AFC Schedule link -%>
         <%= render("afc_schedule_link", holding: holding) %>
       </div>

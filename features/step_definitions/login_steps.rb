@@ -18,6 +18,16 @@ Given(/^I am logged in as an AFC user$/) do
   visit '/login'
 end
 
+Given(/^I am logged in as a New School user with ILL privileges$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = ns_ill_omniauth_hash
+  visit '/login'
+end
+
+Given(/^I am logged in as a New School user with E-ZBorrow privileges$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = ns_ezborrow_omniauth_hash
+  visit login_path
+end
+
 Given(/^I am not logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = nil
 end

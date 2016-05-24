@@ -182,6 +182,17 @@ module HoldingRequestsHelper
     end
   end
 
+  def ezborrow_request_text
+    @ezborrow_request_text ||= begin
+      case current_primary_institution.code.to_sym
+      when :NS
+        "#{t('holding_requests.new.ezborrow.details.ns')}"
+      else
+        "#{t('holding_requests.new.ezborrow.details.default')}"
+      end
+    end
+  end
+
   def success_text
     @success_text ||= begin
       if (scan?)
