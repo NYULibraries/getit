@@ -35,8 +35,7 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: 5ed3baf7ad7cd0a62bd3fc791e0ae271e8d343f4
-  tag: v4.6.5
+  revision: 3f99684abdc41a27ca44ee8c44c2d28012a144a8
   specs:
     nyulibraries-assets (4.6.5)
       bootstrap-sass (~> 3.2.0.2)
@@ -244,7 +243,7 @@ GEM
       unf
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile2 (2.0.0)
+    mini_portile2 (2.1.0)
     minitest (5.8.4)
     multi_json (1.11.2)
     multi_test (0.1.2)
@@ -261,8 +260,9 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.11.0)
     newrelic_rpm (3.9.9.275)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     nori (2.6.0)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
@@ -284,6 +284,7 @@ GEM
     options (2.3.2)
     orm_adapter (0.5.0)
     phantomjs (1.9.8.0)
+    pkg-config (1.1.7)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
