@@ -35,8 +35,8 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: 5ed3baf7ad7cd0a62bd3fc791e0ae271e8d343f4
-  tag: v4.6.5
+  revision: 2f35969c461e3fa6c709daf3d599cf69d45a7f93
+  tag: v4.6.6
   specs:
     nyulibraries-assets (4.6.5)
       bootstrap-sass (~> 3.2.0.2)
@@ -113,7 +113,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
-    chunky_png (1.3.5)
+    chunky_png (1.3.6)
     cliver (0.3.2)
     coderay (1.1.0)
     coffee-rails (4.1.1)
@@ -244,9 +244,9 @@ GEM
       unf
     method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile2 (2.0.0)
-    minitest (5.8.4)
-    multi_json (1.11.2)
+    mini_portile2 (2.1.0)
+    minitest (5.9.0)
+    multi_json (1.12.1)
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -261,8 +261,9 @@ GEM
       net-ssh (>= 2.6.5)
     netrc (0.11.0)
     newrelic_rpm (3.9.9.275)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
     nori (2.6.0)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
@@ -284,6 +285,7 @@ GEM
     options (2.3.2)
     orm_adapter (0.5.0)
     phantomjs (1.9.8.0)
+    pkg-config (1.1.7)
     poltergeist (1.5.1)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -317,7 +319,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
     rb-fsevent (0.9.7)
-    rb-inotify (0.9.5)
+    rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     ref (2.0.0)
     require_all (1.3.3)
@@ -349,7 +351,7 @@ GEM
     rvm-capistrano (1.5.6)
       capistrano (~> 2.15.4)
     safe_yaml (1.0.4)
-    sass (3.4.21)
+    sass (3.4.22)
     sass-rails (5.0.0.beta1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.2)

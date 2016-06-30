@@ -256,15 +256,14 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     end
   end
   describe '#ezborrow_request_text' do
-    let(:institution) { 'NYU' }
     subject { helper.ezborrow_request_text }
-    before { allow(helper).to receive(:params).and_return( { 'umlaut.institution' => institution }) }
+    before { allow(helper).to receive(:current_user).and_return(current_user) }
     context 'when institution is NS' do
-      let(:institution) { 'NS' }
+      let(:current_user) { build(:ns_user) }
       it { should eql 'If available to request, the item should arrive at your selected pickup location within 3-5 business days for a twelve-week loan.' }
     end
     context 'when institution is NYU' do
-      let(:institution) { 'NYU' }
+      let(:current_user) { build(:aleph_user) }
       it { should eql 'If available to request, the item should arrive at Bobst Library within 3-5 business days for a twelve-week loan. Please allow additional transit time if you select another library as your pickup location.' }
     end
   end

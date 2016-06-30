@@ -7,6 +7,7 @@ describe 'holding_requests/new', vcr: {cassette_name: 'holding requests'} do
   let(:_authorizer) { HoldingRequest::Authorizer.new(_holding_request) }
   subject { rendered }
   before do
+    allow(view).to receive(:current_user).and_return(_user)
     assign(:holding_request, _holding_request)
     assign(:authorizer, _authorizer)
     render template: '/holding_requests/new'
