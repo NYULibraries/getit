@@ -184,7 +184,7 @@ module HoldingRequestsHelper
 
   def ezborrow_request_text
     @ezborrow_request_text ||= begin
-      case current_primary_institution.code.to_sym
+      case institution_from_current_user.code.to_sym
       when :NS
         "#{t('holding_requests.new.ezborrow.details.ns')}"
       else
