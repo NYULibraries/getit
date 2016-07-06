@@ -28,6 +28,24 @@ class UmlautController < ApplicationController
           sfx_base_url institution.views["sfx_base_url"]
         end
       end
+      # Configure EZBorrow/BorrowDirect
+      if institution and institution.services and institution.services["EZBorrow"]
+        borrow_direct do
+          # Reset BorrowDirect/EZBorrow defaults based on current institution
+          BorrowDirect::Defaults.api_key = institution.services["EZBorrow"]["api_key"]
+          BorrowDirect::Defaults.library_symbol = institution.services["EZBorrow"]["library_symbol"]
+          BorrowDirect::Defaults.find_item_patron_barcode = institution.services["EZBorrow"]["find_item_patron_barcode"]
+          # Ignore local availability check for valid institutions and valid available statuses
+          # Always shows EZBorrow box when available status is not missing
+          local_availability_check proc {|request, service|
+            [:NS, :NYU].exclude?(institution.code.to_sym) || current_user.nil? ||
+            request.get_service_type(:holding).find do |sr|
+              UmlautController.umlaut_config.holdings.available_statuses.include?(sr.view_data[:status].value) &&
+              sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
+            end.present?
+          }
+        end
+      end
     end
   end
 
@@ -208,14 +226,6 @@ class UmlautController < ApplicationController
     # Supplies logic for when to highlight borrow_direct section
     add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
 
-    borrow_direct do
-      local_availability_check proc {|request, service|
-        request.get_service_type(:holding).find do |sr|
-          UmlautController.umlaut_config.holdings.available_statuses.include?(sr.view_data[:status].value) &&
-          sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
-        end.present?
-      }
-    end
   end
 
   def create_collection

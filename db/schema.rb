@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150729181646) do
+ActiveRecord::Schema.define(version: 20160706162031) do
 
   create_table "clickthroughs", force: true do |t|
     t.integer  "request_id",          default: 0, null: false
@@ -132,6 +132,7 @@ ActiveRecord::Schema.define(version: 20150729181646) do
     t.string   "aleph_id"
     t.string   "institution_code"
     t.string   "patron_status"
+    t.string   "barcode"
   end
 
   add_index "users", ["username", "provider"], name: "index_users_on_username_and_provider", unique: true, using: :btree

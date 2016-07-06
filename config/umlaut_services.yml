@@ -305,7 +305,8 @@ NYU:
     EZBorrow:
       type: BorrowDirectAdaptor
       priority: d
-      library_symbol: NYU
+      library_symbol: <%= ENV['EZBORROW_NYU_LIBRARY_SYMBOL'] %>
+      api_key: <%= ENV['EZBORROW_NYU_API_KEY'] %>
       find_item_patron_barcode: <%= ENV['EZBORROW_NYU_PATRON_BARCODE'] %>
       html_query_base_url: https://login.library.nyu.edu/ezborrow
       #
@@ -452,6 +453,21 @@ NS:
       priority: d
       status: active
       base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
+    EZBorrow:
+      type: BorrowDirectAdaptor
+      priority: d
+      library_symbol: <%= ENV['EZBORROW_NS_LIBRARY_SYMBOL'] %>
+      api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
+      find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
+      html_query_base_url: https://login.library.nyu.edu/ezborrow?ls=THENEWSCHOOL
+      #
+      # Optional params
+      # disable BD api entirely:
+      #use_bd_api: false
+      # Set timeout for BD api in seconds (default 20 seconds)
+      http_timeout: 10
+      # log all BD API calls for analysis
+      bd_api_log_level: info
 
 NYSID:
   display_name: New York School of Interior Design Library
