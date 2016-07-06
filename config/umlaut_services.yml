@@ -246,7 +246,7 @@ NYU:
     ScopusCitations:
       type: Scopus2
       priority: c
-      api_key: <%= (ENV['SCOPUS_API_KEY'] %>
+      api_key: <%= ENV['SCOPUS_API_KEY'] %>
     # NYU_RefWorks:
     #   name: RefWorks
     #   type: OpenURLService
@@ -371,7 +371,7 @@ CU:
     ScopusCitations:
       type: Scopus
       priority: c
-      api_key: <%= (ENV['SCOPUS_API_KEY'] %>
+      api_key: <%= ENV['SCOPUS_API_KEY'] %>
 
 NS:
   name: New School Libraries
