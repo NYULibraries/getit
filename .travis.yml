@@ -25,7 +25,7 @@ script: "RAILS_ENV=test bundle exec rake"
 rvm:
   # - jruby-19mode # JRuby (1.9)
   # - rbx-19mode
-  - 2.1.9
+  # - 2.1.9
   - 2.2.5
   - 2.3.1
 
