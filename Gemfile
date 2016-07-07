@@ -57,6 +57,7 @@ group :development, :test, :cucumber do
   gem 'factory_girl_rails', '~> 4.5.0'
   # Use pry as the REPL
   gem 'pry', '~> 0.10.1'
+  gem 'guard-rspec', require: false
 end
 
 group :test, :cucumber do
