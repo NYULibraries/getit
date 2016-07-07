@@ -244,11 +244,9 @@ NYU:
       status: active
       base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
     ScopusCitations:
-      type: Scopus
+      type: Scopus2
       priority: c
-      json_api_key: <%= (ENV['NYU_SCOPUS_CITATIONS_JSON_API_KEY'] || 'NYU_SCOPUS_CITATIONS_JSON_API_KEY') %>
-      # partner_id: YOUR_SCOPUS_PARTNER_ID
-      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
+      api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
     # NYU_RefWorks:
     #   name: RefWorks
     #   type: OpenURLService
@@ -371,11 +369,9 @@ CU:
       extra_targets_of_interest:
           CAPTURE_CITATION: export_citation
     ScopusCitations:
-      type: Scopus
+      type: Scopus2
       priority: c
-      json_api_key: <%= (ENV['CU_SCOPUS_CITATIONS_JSON_API_KEY'] || 'CU_SCOPUS_CITATIONS_JSON_API_KEY') %>
-      # partner_id: YOUR_SCOPUS_PARTNER_ID
-      # link_salt_key: "YOUR_SCOPUS_LINK_SALT_KEY"
+      api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
 
 NS:
   name: New School Libraries
