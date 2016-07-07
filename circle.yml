@@ -4,7 +4,7 @@ machine:
     version: 2.2.5
 
   environment:
-    ILL_PATRON_STATUSES: [51,37,55,31]
+    ILL_PATRON_STATUSES: '[51,37,55,31]'
     ALEPH_BASE_URL: http://aleph.library.edu
     ALEPH_REST_URL: http://aleph.library.edu:1891/rest-dlf
     PRIMO_BASE_URL: http://primo.library.edu
