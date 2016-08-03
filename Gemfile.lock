@@ -52,6 +52,14 @@ GIT
     omniauth-nyulibraries (2.1.0)
       omniauth-oauth2 (~> 1.2.0)
 
+GIT
+  remote: git://github.com/team-umlaut/umlaut_borrow_direct.git
+  revision: 9ca7a2f9807a785447308463251e6ae6aa8bfb82
+  specs:
+    umlaut_borrow_direct (1.0.2)
+      borrow_direct (>= 1.0.4, < 2)
+      umlaut (>= 4.1.0.pre3, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -482,9 +490,6 @@ GEM
     umlaut-primo (1.0.0)
       exlibris-primo (>= 1.0.8)
       require_all (>= 1.2.1)
-    umlaut_borrow_direct (1.0.1)
-      borrow_direct (>= 1.0.4, < 2)
-      umlaut (>= 4.1.0.pre3, < 5)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
@@ -544,7 +549,7 @@ DEPENDENCIES
   uglifier (~> 2.7.0)
   umlaut (~> 4.1.0)
   umlaut-primo (~> 1.0.0)
-  umlaut_borrow_direct (~> 1.0.0)
+  umlaut_borrow_direct!
   vcr (~> 2.9.0)
   webmock (~> 1.19.0)
 
