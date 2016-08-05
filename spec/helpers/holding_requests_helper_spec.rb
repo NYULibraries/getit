@@ -124,7 +124,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
             '<input id="entire_no" name="entire" type="radio" value="no" />' +
             'Request that a portion of the item be scanned and delivered electronically.' +
             '<p class="fair-use-disclaimer">' +
-              '(Requests must be within <a href="http://library.nyu.edu/copyright/#fairuse" target="_blank">fair use guidelines</a>.)' +
+              '(Requests must be within <a href="http://guides.nyu.edu/fairuse" target="_blank">fair use guidelines</a>.)' +
             '</p>' +
           '</label>' +
           '<fieldset style="padding-left: 20px;padding-right: 20px;">' +
@@ -217,7 +217,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     it do
       should eq '<p class="fair-use-disclaimer">' +
         '(Requests must be within ' +
-        '<a href="http://library.nyu.edu/copyright/#fairuse" target="_blank">' +
+        '<a href="http://guides.nyu.edu/fairuse" target="_blank">' +
         'fair use guidelines</a>.)' +
       '</p>'
     end

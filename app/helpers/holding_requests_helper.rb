@@ -158,7 +158,7 @@ module HoldingRequestsHelper
 
   # Fair use link
   def link_to_fair_use_guidelines
-    url = 'http://library.nyu.edu/copyright/#fairuse'
+    url = 'http://guides.nyu.edu/fairuse'
     link_to('fair use guidelines', url, target: "_blank")
   end
 
