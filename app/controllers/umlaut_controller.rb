@@ -58,7 +58,7 @@ class UmlautController < ApplicationController
 
     # URL to image to use for link resolver in some self-links,
     # OR name of image asset in local app.
-    link_img_url "https://s3.amazonaws.com/nyulibraries-www-assets/getit-images/getit.gif"
+    link_img_url "https://s3.amazonaws.com/nyulibraries-www-assets/web-images/getit.gif"
 
     # Sometimes Umlaut sends out email, what email addr should it be from?
     from_email_addr 'lib-no-reply@nyu.edu'
