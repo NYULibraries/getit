@@ -18,14 +18,13 @@ describe 'resolve/_holding_response_item' do
   end
   it { should match /umlaut-holdings/ }
   it { should match /View Maps and Call Number Locations/ }
-  it { should match /href="http:\/\/library\.nyu\.edu\/bobcat\/callno\/"/ }
+  it { should match /href="https:\/\/library\.nyu\.edu\/about\/collections\/search-collections\/call-numbers\/"/ }
   context 'when the holdings are empty' do
     let(:holding) { [] }
     it { should_not match /umlaut-holdings/ }
     it { should_not match /View Maps and Call Number Locations/ }
-    it { should_not match /href="http:\/\/library\.nyu\.edu\/bobcat\/callno\/"/ }
+    it { should_not match /href="https:\/\/library\.nyu\.edu\/about\/collections\/search-collections\/call-numbers\/"/ }
     it { should match /umlaut-unavailable/ }
     it { should match /Not Available/ }
   end
 end
-

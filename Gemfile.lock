@@ -35,10 +35,10 @@ GIT
 
 GIT
   remote: git://github.com/NYULibraries/nyulibraries-assets.git
-  revision: 2f35969c461e3fa6c709daf3d599cf69d45a7f93
-  tag: v4.6.6
+  revision: b397fa2193fa495aefc214f785b3e3b597e47666
+  tag: v4.6.8
   specs:
-    nyulibraries-assets (4.6.5)
+    nyulibraries-assets (4.6.8)
       bootstrap-sass (~> 3.2.0.2)
       compass (~> 1.0.1)
       font-awesome-rails (~> 4.2.0.0)
@@ -202,7 +202,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.10)
+    ffi (1.9.14)
     figs (2.0.3)
       git (~> 1.2.6)
       rake (~> 10.1)
