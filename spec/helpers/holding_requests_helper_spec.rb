@@ -86,7 +86,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
               '<input checked="checked" id="entire_yes" name="entire" type="radio" value="yes" />' +
               'Request this item to be delivered to the pickup location of your choice.' +
               '<p class="delivery-times">' +
-                '<a href="http://library.nyu.edu/services/deliveryservices.html#how_long" target="_blank">' +
+                '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank">' +
                   'See delivery times' +
                 '</a>' +
               '</p>' +
@@ -206,7 +206,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it { should_not be_blank }
       it do
         should eq '<p class="delivery-times">' +
-          '<a href="http://library.nyu.edu/services/deliveryservices.html#how_long" target="_blank">'+
+          '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank">'+
           'See delivery times</a>' +
         '</p>'
       end
@@ -237,7 +237,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         let(:_user) { build(:ezborrow_user) }
         it do
           should eq '<p class="delivery-help">' +
-            '<a href="http://library.nyu.edu/help/requesthelp.html" target="_blank"><i class="icons-famfamfam-information"></i><span>Not sure which option to choose?</span></a>' +
+            '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank"><i class="icons-famfamfam-information"></i><span>Not sure which option to choose?</span></a>' +
           '</p>'
         end
       end

@@ -152,7 +152,7 @@ module HoldingRequestsHelper
 
   # Delivery times link
   def link_to_delivery_times
-    url = 'http://library.nyu.edu/services/deliveryservices.html#how_long'
+    url = 'https://library.nyu.edu/services/borrowing/delivered/'
     link_to('See delivery times', url, target: '_blank')
   end
 
@@ -164,7 +164,7 @@ module HoldingRequestsHelper
 
   # Delivery help link
   def link_to_delivery_help
-    link_to('http://library.nyu.edu/help/requesthelp.html', target: '_blank') do
+    link_to('https://library.nyu.edu/services/borrowing/delivered/', target: '_blank') do
       icon_tag(:info) + content_tag(:span, 'Not sure which option to choose?')
     end
   end
