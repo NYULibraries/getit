@@ -147,5 +147,18 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
         end
       end
     end
+    context 'when the request type is available ' do
+      let(:type) { 'available' }
+      context 'and the request is for a partial scan' do
+        let(:entire) { 'no' }
+        context 'and the pickup location is ISAW' do
+          let(:service_response) { create(:isaw_nyu_aleph_service_response) }
+          let(:pickup_location) do
+            Exlibris::Aleph::PickupLocation.new('NISAW', 'NYU Inst Study Ancient World')
+          end
+          it { should redirect_to(holding_request_url(service_response, entire: 'no', pickup_location: 'NISAW')) }
+        end
+      end
+    end
   end
 end
