@@ -67,12 +67,12 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         should eq '<li id="holding-request-option-available-entire">' +
           '<div class="section">' +
             '<label class="radio" for="entire_yes">' +
-              '<input checked="checked" id="entire_yes" name="entire" type="radio" value="yes" />' +
+              '<input type="radio" name="entire" id="entire_yes" value="yes" checked="checked" />' +
               'Request this item to be delivered to the pickup location of your choice.' +
             '</label>' +
             '<fieldset style="padding-left: 20px;">' +
               '<strong>Pickup location is NYU Bobst.</strong>' +
-              '<input id="pickup_location" name="pickup_location" type="hidden" value="BOBST" />' +
+              '<input type="hidden" name="pickup_location" id="pickup_location" value="BOBST" />' +
             '</fieldset>' +
           '</div>' +
         '</li>'
@@ -83,17 +83,17 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         should eq '<li id="holding-request-option-available-entire">' +
           '<div class="section">' +
             '<label class="radio" for="entire_yes">' +
-              '<input checked="checked" id="entire_yes" name="entire" type="radio" value="yes" />' +
+              '<input type="radio" name="entire" id="entire_yes" value="yes" checked="checked" />' +
               'Request this item to be delivered to the pickup location of your choice.' +
               '<p class="delivery-times">' +
-                '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank">' +
+                '<a target="_blank" href="https://library.nyu.edu/services/borrowing/delivered/">' +
                   'See delivery times' +
                 '</a>' +
               '</p>' +
             '</label>' +
             '<fieldset style="padding-left: 20px;">' +
               '<label for="pickup_location">Select pickup location:</label>' +
-              '<select id="pickup_location" name="pickup_location">' +
+              '<select name="pickup_location" id="pickup_location">' +
               "<option value=\"BOBST\">NYU Bobst</option>\n" +
               "<option value=\"NCOUR\">NYU Courant</option>\n" +
               "<option value=\"NIFA\">NYU Institute of Fine Arts</option>\n" +
@@ -121,21 +121,21 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       should eq '<li id="holding-request-option-available-scan">' +
         '<div class="section">' +
           '<label class="radio" for="entire_no">' +
-            '<input id="entire_no" name="entire" type="radio" value="no" />' +
+            '<input type="radio" name="entire" id="entire_no" value="no" />' +
             'Request that a portion of the item be scanned and delivered electronically.' +
             '<p class="fair-use-disclaimer">' +
-              '(Requests must be within <a href="http://guides.nyu.edu/fairuse" target="_blank">fair use guidelines</a>.)' +
+              '(Requests must be within <a target="_blank" href="http://guides.nyu.edu/fairuse">fair use guidelines</a>.)' +
             '</p>' +
           '</label>' +
           '<fieldset style="padding-left: 20px;padding-right: 20px;">' +
             '<label class="control-label" for="sub_author">Author of part:</label>' +
-            '<input class="form-control" id="sub_author" name="sub_author" type="text" />' +
+            '<input type="text" name="sub_author" id="sub_author" class="form-control" />' +
             '<label class="control-label" for="sub_title">Title of part:</label>' +
-            '<input class="form-control" id="sub_title" name="sub_title" type="text" />' +
+            '<input type="text" name="sub_title" id="sub_title" class="form-control" />' +
             '<label class="control-label" for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
-            '<input class="form-control" id="pages" name="pages" type="text" />' +
+            '<input type="text" name="pages" id="pages" class="form-control" />' +
             '<label class="control-label" for="note_1">Notes:</label>' +
-            '<input class="form-control" id="note_1" maxlength="50" name="note_1" type="text" />' +
+            '<input type="text" name="note_1" id="note_1" maxlength="50" class="form-control" />' +
           '</fieldset>' +
         '</div>' +
       '</li>'
@@ -148,7 +148,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it do
         should eq '<fieldset>' +
           '<strong>Pickup location is NYU Bobst.</strong>' +
-          '<input id="pickup_location" name="pickup_location" type="hidden" value="BOBST" />' +
+          '<input type="hidden" name="pickup_location" id="pickup_location" value="BOBST" />' +
         '</fieldset>'
       end
     end
@@ -157,7 +157,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it do
         should eq '<fieldset>' +
           '<strong>Pickup location is NYU Bobst.</strong>' +
-          '<input id="pickup_location" name="pickup_location" type="hidden" value="BOBST" />' +
+          '<input type="hidden" name="pickup_location" id="pickup_location" value="BOBST" />' +
         '</fieldset>'
       end
     end
@@ -165,7 +165,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it do
         should eq '<fieldset>' +
           '<label for="pickup_location">Select pickup location:</label>' +
-          '<select id="pickup_location" name="pickup_location">' +
+          '<select name="pickup_location" id="pickup_location">' +
             "<option value=\"BOBST\">NYU Bobst</option>\n" +
             "<option value=\"NCOUR\">NYU Courant</option>\n" +
             "<option value=\"NIFA\">NYU Institute of Fine Arts</option>\n" +
@@ -186,13 +186,13 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     it do
       should eq '<fieldset>' +
         '<label class="control-label" for="sub_author">Author of part:</label>' +
-        '<input class="form-control" id="sub_author" name="sub_author" type="text" />' +
+        '<input type="text" name="sub_author" id="sub_author" class="form-control" />' +
         '<label class="control-label" for="sub_title">Title of part:</label>' +
-        '<input class="form-control" id="sub_title" name="sub_title" type="text" />' +
+        '<input type="text" name="sub_title" id="sub_title" class="form-control" />' +
         '<label class="control-label" for="pages">Pages (e.g., 7-12; 5, 6-8, 10-15):</label>' +
-        '<input class="form-control" id="pages" name="pages" type="text" />' +
+        '<input type="text" name="pages" id="pages" class="form-control" />' +
         '<label class="control-label" for="note_1">Notes:</label>' +
-        '<input class="form-control" id="note_1" maxlength="50" name="note_1" type="text" />' +
+        '<input type="text" name="note_1" id="note_1" maxlength="50" class="form-control" />' +
       '</fieldset>'
     end
   end
@@ -206,7 +206,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       it { should_not be_blank }
       it do
         should eq '<p class="delivery-times">' +
-          '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank">'+
+          '<a target="_blank" href="https://library.nyu.edu/services/borrowing/delivered/">'+
           'See delivery times</a>' +
         '</p>'
       end
@@ -217,7 +217,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
     it do
       should eq '<p class="fair-use-disclaimer">' +
         '(Requests must be within ' +
-        '<a href="http://guides.nyu.edu/fairuse" target="_blank">' +
+        '<a target="_blank" href="http://guides.nyu.edu/fairuse">' +
         'fair use guidelines</a>.)' +
       '</p>'
     end
@@ -237,7 +237,7 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
         let(:_user) { build(:ezborrow_user) }
         it do
           should eq '<p class="delivery-help">' +
-            '<a href="https://library.nyu.edu/services/borrowing/delivered/" target="_blank"><i class="icons-famfamfam-information"></i><span>Not sure which option to choose?</span></a>' +
+            '<a target="_blank" href="https://library.nyu.edu/services/borrowing/delivered/"><i class="icons-famfamfam-information"></i><span>Not sure which option to choose?</span></a>' +
           '</p>'
         end
       end
