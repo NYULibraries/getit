@@ -11,5 +11,5 @@ describe 'search/_entree' do
     render '/search/entree', {record: record}
   end
   subject { rendered }
-  it { should match /<h2 class="title"><a href="http:\/\/url\.for\.with\.co" target="_blank">Journal Title/ }
+  it { should match /<h2 class="title"><a target="_blank" href="http:\/\/url\.for\.with\.co">Journal Title/ }
 end
