@@ -1,4 +1,3 @@
-require Rails.root.join('lib','getit','custom_failure.rb')
 Devise.setup do |config|
   config.mailer_sender = 'lib-no-reply@nyu.edu'
   require 'devise/orm/active_record'
@@ -11,7 +10,4 @@ Devise.setup do |config|
   config.reset_password_within = 60.minutes
   config.sign_out_via = :get
   config.omniauth :nyulibraries, ENV['APP_ID'], ENV['APP_SECRET']
-  config.warden do |manager|
-    manager.failure_app = CustomFailure
-  end
 end
