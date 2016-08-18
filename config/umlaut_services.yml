@@ -305,6 +305,8 @@ NYU:
     EZBorrow:
       type: BorrowDirectAdaptor
       priority: d
+      check_library_codes:
+        - BOBST
       library_symbol: <%= ENV['EZBORROW_NYU_LIBRARY_SYMBOL'] %>
       api_key: <%= ENV['EZBORROW_NYU_API_KEY'] %>
       find_item_patron_barcode: <%= ENV['EZBORROW_NYU_PATRON_BARCODE'] %>
@@ -456,6 +458,8 @@ NS:
     EZBorrow:
       type: BorrowDirectAdaptor
       priority: d
+      check_library_codes:
+        - TNSFO
       library_symbol: <%= ENV['EZBORROW_NS_LIBRARY_SYMBOL'] %>
       api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
       find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>

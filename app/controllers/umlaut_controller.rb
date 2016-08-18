@@ -22,6 +22,8 @@ class UmlautController < ApplicationController
   def institutional_config
     # Insitution for the closure.
     institution = current_primary_institution
+    logged_in_user = current_user
+    ezborrow_authorizer = EZBorrowAuthorizer.new(logged_in_user) unless logged_in_user.nil?
     self.umlaut_config.configure do
       if institution and institution.views and institution.views["sfx_base_url"]
         sfx do
@@ -35,14 +37,15 @@ class UmlautController < ApplicationController
           BorrowDirect::Defaults.api_key = institution.services["EZBorrow"]["api_key"]
           BorrowDirect::Defaults.library_symbol = institution.services["EZBorrow"]["library_symbol"]
           BorrowDirect::Defaults.find_item_patron_barcode = institution.services["EZBorrow"]["find_item_patron_barcode"]
-          # Ignore local availability check for valid institutions and valid available statuses
-          # Always shows EZBorrow box when available status is not missing
+          # Should we only rely on a local availability check, or check Ezborrow too?
+          # https://github.com/team-umlaut/umlaut_borrow_direct#local-availability-check
           local_availability_check proc {|request, service|
-            [:NS, :NYU].exclude?(institution.code.to_sym) || current_user.nil? ||
-            request.get_service_type(:holding).find do |sr|
+            available_at_library = request.get_service_type(:holding).find do |sr|
               UmlautController.umlaut_config.holdings.available_statuses.include?(sr.view_data[:status].value) &&
+              institution.services["EZBorrow"]["check_library_codes"].include?(sr.view_data[:library_code]) &&
               sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
-            end.present?
+            end
+            !(logged_in_user.present? && ezborrow_authorizer.authorized?) || available_at_library.present?
           }
         end
       end
@@ -287,4 +290,5 @@ class UmlautController < ApplicationController
     return services
   end
   private :services
+
 end

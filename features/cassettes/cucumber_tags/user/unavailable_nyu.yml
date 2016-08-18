@@ -1,0 +1,845 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 18 Aug 2016 21:05:49 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142001821068</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CHOS</z30-cataloger><z30-date-last-return>20160226</z30-date-last-return><z30-hour-last-return>1024</z30-hour-last-return><z30-ip-last-return>128.122.89.149</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
+        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056125</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>001</z30-maintenance-count><z30-process-status-date>20131209</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
+        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
+        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>10/05/16
+        10:30 PM</status></item></get-item> '
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:05:49 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 18 Aug 2016 21:05:49 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207000347645</z30-barcode><z30-sub-library>TNS
+        List Center Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>OPPUSUNG</z30-cataloger><z30-date-last-return>20010308</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>001</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
+        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056126</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
+        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
+        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:05:49 GMT
+- request:
+    method: head
+    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 18 Aug 2016 21:06:35 GMT
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Location:
+      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
+      Lt-Backend:
+      - 192.168.0.178:80
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?apiKey=3eba7caaa0131a5afb66b9c66926c9a1&query=ISBN(%220064954501%22)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - NO_SEARCH_RESULTS(Result set was empty)
+      X-Els-Reqid:
+      - 00000156822ca755-18e5f16
+      X-Els-Apikey:
+      - 3eba7caaa0131a5afb66b9c66926c9a1
+      X-Els-Transid:
+      - 4529a1ae-35a9-4b13-9b9c-3a0f26c05c5f
+      Allow:
+      - GET
+      Vary:
+      - Origin, Accept-Encoding, User-Agent
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '432'
+      Date:
+      - Thu, 18 Aug 2016 21:06:36 GMT
+      X-Re-Ref:
+      - 1 1471554396362913
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: <search-results xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="ISBN%28%220064954501%22%29" startPage="0"/><link
+        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=ISBN%28%220064954501%22%29&amp;apiKey=3eba7caaa0131a5afb66b9c66926c9a1"
+        type="application/xml"/><entry><error>Result set was empty</error></entry></search-results>
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:36 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 18 Aug 2016 21:06:37 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+language+of+jane+austen%22+AND+creator:%28page%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Fri, 19 Aug 2016 03:06:37 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:37 GMT
+- request:
+    method: get
+    uri: https://catalog.hathitrust.org/api/volumes/brief/json/lccn:72195885
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Aug 2016 21:06:37 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '43'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a42378b;expires=Thu, 18-Aug-2016
+        21:16:37 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: '{"lccn:72195885":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:37 GMT
+- request:
+    method: get
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 18 Aug 2016 21:06:38 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.17
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":1318,"params":{"q":"title:\"the
+        language of jane austen\" AND creator:(page ) AND ( mediatype:texts OR mediatype:audio
+        )","qin":"title:\"the language of jane austen\" AND creator:(page) AND (mediatype:texts
+        OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:38 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Page,%20Norman%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1958'
+      Date:
+      - Thu, 18 Aug 2016 21:06:38 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &quot;Page, Norman&quot;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">Page, Norman</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:38 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-18T17:06:43-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&rft.au=Page,%20Norman&rft.aufirst=Norman.&rft.aulast=Page&rft.btitle=The%20language%20of%20Jane%20Austen.&rft.genre=book&rft.isbn=0064954501&rft.lccn=72195885&rft.place=New%20York&rft.primo=nyu_aleph002422300&rft.private_data=%3Cnyu_aleph%3E002422300%3C/nyu_aleph%3E%3Cgrp_id%3E198226800%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Barnes%20%26%20Noble%20Books&rft.title=The%20language%20of%20Jane%20Austen.&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 18 Aug 2016 21:06:43 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;N&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-08-18T17:06:43-04:00&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.isbn\"&gt;0-06-495450-1&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.place\"&gt;New York&lt;/item&gt;\n
+        \ &lt;item key=\"rft.lccn\"&gt;   72195885 &lt;/item&gt;\n  &lt;item key=\"@rft.auinitm\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sAAB3D100-6587-11E6-BAF4-A75DFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        \ &lt;item key=\"rft.isbn_13\"&gt;978-0-06-495450-1&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;12322266&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
+        key=\"rft.pub\"&gt;Barnes &amp;amp; Noble Books&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n
+        \ &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
+        \ \n  &lt;item key=\"rft.title\"&gt;The language of Jane Austen.&lt;/item&gt;\n
+        \ &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft.aufirst\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Norman&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.isbn_10\"&gt;0-06-495450-1&lt;/item&gt;\n
+        \ &lt;item key=\"@rft.aulast\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Page&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;book&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
+        \ &lt;item key=\"@rft.au\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Page,
+        Norman&lt;/item&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@sfx.searched_by_identifier\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;\n     &lt;hash&gt;\n      &lt;item
+        key=\"VALUE\"&gt;\n       &lt;array&gt;\n        &lt;item key=\"0\"&gt;0-06-495450-1&lt;/item&gt;\n
+        \      &lt;/array&gt;\n      &lt;/item&gt;\n      &lt;item key=\"TYPE\"&gt;ISBN&lt;/item&gt;\n
+        \     &lt;item key=\"SUBTYPE\"&gt;&lt;/item&gt;\n     &lt;/hash&gt;\n    &lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rft.auinit1\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;N&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"rft.btitle\"&gt;The language of Jane Austen.&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <interface_id>111027614344000</interface_id>\n
+        \   <interface_name>DOCDEL_ILLIAD</interface_name>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph002422300%20(Via%20SFX)&amp;isbn=0-06-495450-1&amp;aulast=Page&amp;genre=book&amp;title=The%20language%20of%20Jane%20Austen.&amp;aufirst=Norman</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <interface_id>20430000000000002</interface_id>\n
+        \   <interface_name>ASK_A_LIBRARIAN</interface_name>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:0064954501
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Forwarded-For:
+      - 127.0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Thu, 18 Aug 2016 21:06:44 GMT
+      Date:
+      - Thu, 18 Aug 2016 21:06:44 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"C79asUrpl716RzXEYlKUQUuJjTE/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34,33,32,31,30"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 0
+        }
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:44 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph002422300</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.1, ruby 2.2.5 (2016-04-26))
+      Accept:
+      - "*/*"
+      Date:
+      - Thu, 18 Aug 2016 21:06:44 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Thu, 18 Aug 2016 21:06:44 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;002422300&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph002422300&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01002422300&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;book&lt;/type&gt;
+                        &lt;title&gt;The language of Jane Austen.&lt;/title&gt;
+                        &lt;creator&gt;Norman.  Page&lt;/creator&gt;
+                        &lt;publisher&gt;New York, Barnes &amp;amp; Noble Books&lt;/publisher&gt;
+                        &lt;creationdate&gt;1972&lt;/creationdate&gt;
+                        &lt;format&gt;viii, 208 p. illus. 23 cm.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cisbn$$V0064954501; $$Cisbn$$V9780064954501&lt;/identifier&gt;
+                        &lt;subject&gt;Austen, Jane, 1775-1817 -- Style&lt;/subject&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;relation&gt;$$Cseries $$VLanguage and style series ; 13.&lt;/relation&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(PR4038.S8 P3 )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;
+                        &lt;availlibrary&gt;$$INS$$LNSFO$$1Main Collection$$2(PR4038.S8 P3 )$$Sunavailable$$31$$41$$5N$$60$$XNYU50$$YTNSFO$$ZMAIN&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph002422300&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;lds01&gt;NS&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INS$$Sunavailable&lt;/availinstitution&gt;
+                        &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;unavailable&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
+                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
+                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;Norman.  Page&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Page, Norman.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Page, N&lt;/creatorcontrib&gt;
+                        &lt;title&gt;The language of Jane Austen.&lt;/title&gt;
+                        &lt;subject&gt;Austen, Jane, 1775-1817  Style&lt;/subject&gt;
+                        &lt;general&gt;Barnes &amp;amp; Noble Books&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph002422300&lt;/recordid&gt;
+                        &lt;isbn&gt;0064954501&lt;/isbn&gt;
+                        &lt;isbn&gt;9780064954501&lt;/isbn&gt;
+                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;1972&lt;/creationdate&gt;
+                        &lt;addtitle&gt;Language and style series, 13&lt;/addtitle&gt;
+                        &lt;addtitle&gt;Language and style series ; 13.&lt;/addtitle&gt;
+                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;TNSFO&lt;/searchscope&gt;
+                        &lt;searchscope&gt;TNSFO Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NS&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NSFO&lt;/searchscope&gt;
+                        &lt;scope&gt;BOBST&lt;/scope&gt;
+                        &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;TNSFO&lt;/scope&gt;
+                        &lt;scope&gt;TNSFO Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;scope&gt;NS&lt;/scope&gt;
+                        &lt;scope&gt;NSFO&lt;/scope&gt;
+                        &lt;lsr01&gt;PR4038.S8 P3&lt;/lsr01&gt;
+                        &lt;lsr01&gt;PR4038 .S8 P3&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Barnes &amp;amp; Noble Books&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;language of Jane Austen.&lt;/title&gt;
+                        &lt;creationdate&gt;1972&lt;/creationdate&gt;
+                        &lt;author&gt;Page, Norman.&lt;/author&gt;
+                        &lt;lso01&gt;1972&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;1972&lt;/creationdate&gt;
+                        &lt;topic&gt;Austen, Jane, 1775-1817&#x2013;Style&lt;/topic&gt;
+                        &lt;collection&gt;BOBST&lt;/collection&gt;
+                        &lt;collection&gt;TNSFO&lt;/collection&gt;
+                        &lt;prefilter&gt;books&lt;/prefilter&gt;
+                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
+                        &lt;creatorcontrib&gt;Page, N&lt;/creatorcontrib&gt;
+                        &lt;library&gt;BOBST&lt;/library&gt;
+                        &lt;library&gt;NSFO&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;classificationlcc&gt;P - Language and literature.&#x2013;English literature&lt;/classificationlcc&gt;
+                        &lt;frbrgroupid&gt;198226800&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;5&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c1&gt;72195885&lt;/c1&gt;
+                        &lt;c2&gt;0064954501;9780064954501&lt;/c2&gt;
+                        &lt;c3&gt;languageofjaneausten&lt;/c3&gt;
+                        &lt;c4&gt;1972&lt;/c4&gt;
+                        &lt;f1&gt;72195885&lt;/f1&gt;
+                        &lt;f3&gt;0064954501;9780064954501&lt;/f3&gt;
+                        &lt;f5&gt;languageofjaneausten&lt;/f5&gt;
+                        &lt;f6&gt;1972&lt;/f6&gt;
+                        &lt;f7&gt;language of jane austen&lt;/f7&gt;
+                        &lt;f8&gt;nyu&lt;/f8&gt;
+                        &lt;f9&gt;viii, 208 p.&lt;/f9&gt;
+                        &lt;f10&gt;barnes noble books&lt;/f10&gt;
+                        &lt;f11&gt;page norman&lt;/f11&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kpage norman$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kbooklanguage of jane austen$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;institution&gt;NS&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;enrichment&gt;
+                        &lt;classificationlcc&gt;PR4038.S8&lt;/classificationlcc&gt;
+                      &lt;/enrichment&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;Page&lt;/aulast&gt;
+                        &lt;aufirst&gt;Norman.&lt;/aufirst&gt;
+                        &lt;au&gt;Page, Norman&lt;/au&gt;
+                        &lt;btitle&gt;The language of Jane Austen.&lt;/btitle&gt;
+                        &lt;seriestitle&gt;Language and style series ; 13&lt;/seriestitle&gt;
+                        &lt;date&gt;1972&lt;/date&gt;
+                        &lt;risdate&gt;[1972]&lt;/risdate&gt;
+                        &lt;isbn&gt;0064954501&lt;/isbn&gt;
+                        &lt;isbn&gt;9780064954501&lt;/isbn&gt;
+                        &lt;format&gt;book&lt;/format&gt;
+                        &lt;genre&gt;book&lt;/genre&gt;
+                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
+                        &lt;notes&gt;Bibliography: p. [198]-204.&lt;/notes&gt;
+                        &lt;cop&gt;New York&lt;/cop&gt;
+                        &lt;pub&gt;Barnes &amp;amp; Noble Books&lt;/pub&gt;
+                        &lt;lccn&gt;72195885&lt;/lccn&gt;
+                        &lt;lad01&gt;BOBSTTNSFO&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DPage, Norman$$EPage, Norman&lt;/author&gt;
+                        &lt;title&gt;$$DThe language of Jane Austen$$Elanguage of Jane Austen&lt;/title&gt;
+                        &lt;title&gt;$$DLanguage and style series, 13$$ELanguage and style series, 13&lt;/title&gt;
+                        &lt;title&gt;$$DLanguage and style series$$ELanguage and style series&lt;/title&gt;
+                        &lt;subject&gt;$$DAusten, Jane, 1775-1817 -- Style$$EAusten, Jane, 1775-1817 Style&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DPR4038.S8 P3$$E0pr   04038.s  80000  p3$$T0&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;institution&gt;NS&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:44 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 18 Aug 2016 21:06:44 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010"></item><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:06:44 GMT
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?apiKey=3eba7caaa0131a5afb66b9c66926c9a1&query=ISBN(%220064954501%22)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - NO_SEARCH_RESULTS(Result set was empty)
+      X-Els-Reqid:
+      - 00000156821cc81f-18f6d8e
+      X-Els-Apikey:
+      - 3eba7caaa0131a5afb66b9c66926c9a1
+      X-Els-Transid:
+      - 58cecfff-28e0-4c0c-90fc-45927d3c3aac
+      Allow:
+      - GET
+      Vary:
+      - Origin, Accept-Encoding, User-Agent
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '432'
+      Date:
+      - Thu, 18 Aug 2016 21:08:43 GMT
+      X-Re-Ref:
+      - 1 1471554522959835
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: <search-results xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="ISBN%28%220064954501%22%29" startPage="0"/><link
+        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=ISBN%28%220064954501%22%29&amp;apiKey=3eba7caaa0131a5afb66b9c66926c9a1"
+        type="application/xml"/><entry><error>Result set was empty</error></entry></search-results>
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:08:43 GMT
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?apiKey=3eba7caaa0131a5afb66b9c66926c9a1&query=ISBN(%220064954501%22)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - NO_SEARCH_RESULTS(Result set was empty)
+      X-Els-Reqid:
+      - 00000156822ca755-18e81a0
+      X-Els-Apikey:
+      - 3eba7caaa0131a5afb66b9c66926c9a1
+      X-Els-Transid:
+      - d787adfb-3c5a-40c9-9777-c7fff5cec082
+      Allow:
+      - GET
+      Vary:
+      - Origin, Accept-Encoding, User-Agent
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '432'
+      Date:
+      - Thu, 18 Aug 2016 21:09:08 GMT
+      X-Re-Ref:
+      - 1 1471554547828485
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: <search-results xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="ISBN%28%220064954501%22%29" startPage="0"/><link
+        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=ISBN%28%220064954501%22%29&amp;apiKey=3eba7caaa0131a5afb66b9c66926c9a1"
+        type="application/xml"/><entry><error>Result set was empty</error></entry></search-results>
+    http_version: 
+  recorded_at: Thu, 18 Aug 2016 21:09:08 GMT
+recorded_with: VCR 2.9.3

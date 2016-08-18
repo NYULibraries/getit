@@ -8,10 +8,9 @@ module GetItFeatures
       PrimoId::PRIMO_REFERRER_ID_BASE + primo_id_for_holding_state(state)
     end
 
-    def getit_page_for_holdling_state(state)
+    def getit_page_for_holding_state(state)
       "/resolve?rfr_id=#{primo_referrer_id_for_holding_state(state)}"
     end
-    alias_method :getit_page_for_holdling_title, :getit_page_for_holdling_state
 
     def holding_css
       '#holding .umlaut-holdings .umlaut-holding'

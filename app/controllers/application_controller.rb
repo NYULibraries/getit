@@ -15,6 +15,11 @@ class ApplicationController < ActionController::Base
     return
   end
 
+  def current_user_dev
+    @current_user ||= User.first
+  end
+  alias_method :current_user, :current_user_dev
+
   prepend_before_filter :passive_login
   def passive_login
     if !cookies[:_check_passive_login]

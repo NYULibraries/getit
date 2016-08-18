@@ -58,6 +58,9 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/afc'
   t.tag '@user/franny_and_zooey'
   t.tag '@user/the_catcher_in_the_rye'
+  t.tag '@user/unavailable_newschool'#, record: :new_episodes
+  t.tag '@user/unavailable_nyu'#, record: :new_episodes
+  t.tag '@guest/unavailable_nyu'#, record: :new_episodes
   t.tag '@institutions_views', record: :new_episodes
   t.tag '@logout'
   # Disallowed not in use
