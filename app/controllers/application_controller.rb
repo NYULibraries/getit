@@ -16,9 +16,10 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user_dev
+    # Assuming you have a dev user on your local environment
     @current_user ||= User.first
   end
-  alias_method :current_user, :current_user_dev
+  alias_method :current_user, :current_user_dev if Rails.env.development?
 
   prepend_before_filter :passive_login
   def passive_login
