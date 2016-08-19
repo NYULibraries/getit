@@ -11,6 +11,7 @@ module GetItFeatures
     def getit_page_for_holding_state(state)
       "/resolve?rfr_id=#{primo_referrer_id_for_holding_state(state)}"
     end
+    alias_method :getit_page_for_holding_title, :getit_page_for_holding_state
 
     def holding_css
       '#holding .umlaut-holdings .umlaut-holding'
