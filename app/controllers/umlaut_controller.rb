@@ -227,7 +227,7 @@ class UmlautController < ApplicationController
     resolve_sections.insert_section(wayfinder, before: "questions")
 
     # Supplies logic for when to highlight borrow_direct section
-    add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
+    # add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
 
   end
 
