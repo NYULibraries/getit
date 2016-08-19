@@ -12,6 +12,8 @@ env:
     - PASSIVE_LOGIN_PATH=/login/passive
     - SSO_LOGOUT_PATH=/logout
     - NS_BX_TOKEN=NS_BX_TOKEN
+    - EZBORROW_NS_PATRON_BARCODE=12345
+    - EZBORROW_NS_LIBRARY_SYMBOL=NYU
 
 services:
   - memcached
