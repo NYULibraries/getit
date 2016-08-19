@@ -42,7 +42,7 @@ class UmlautController < ApplicationController
           local_availability_check proc {|request, service|
             available_at_library = request.get_service_type(:holding).find do |sr|
               UmlautController.umlaut_config.holdings.available_statuses.include?(sr.view_data[:status].value) &&
-              institution.services["EZBorrow"]["check_library_codes"].include?(sr.view_data[:library_code]) &&
+              institution.services["EZBorrow"]["check_library_codes"].include?(sr.service_data[:library].code) &&
               sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
             end
             !(logged_in_user.present? && ezborrow_authorizer.authorized?) || available_at_library.present?

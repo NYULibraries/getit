@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 18 Aug 2016 21:05:45 GMT
+      - Fri, 19 Aug 2016 15:25:58 GMT
       Content-Type:
       - text/html; charset=iso-8859-1
       Connection:
@@ -32,10 +32,10 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:45 GMT
+  recorded_at: Fri, 19 Aug 2016 15:25:58 GMT
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-18T17:06:34-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&rft.au=Page,%20Norman&rft.aufirst=Norman.&rft.aulast=Page&rft.btitle=The%20language%20of%20Jane%20Austen.&rft.genre=book&rft.isbn=0064954501&rft.lccn=72195885&rft.place=New%20York&rft.primo=nyu_aleph002422300&rft.private_data=%3Cnyu_aleph%3E002422300%3C/nyu_aleph%3E%3Cgrp_id%3E198226800%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Barnes%20%26%20Noble%20Books&rft.title=The%20language%20of%20Jane%20Austen.&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-19T11:50:37-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&rft.au=Page,%20Norman&rft.aufirst=Norman.&rft.aulast=Page&rft.btitle=The%20language%20of%20Jane%20Austen.&rft.genre=book&rft.isbn=0064954501&rft.lccn=72195885&rft.place=New%20York&rft.primo=nyu_aleph002422300&rft.private_data=%3Cnyu_aleph%3E002422300%3C/nyu_aleph%3E%3Cgrp_id%3E198226800%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Barnes%20%26%20Noble%20Books&rft.title=The%20language%20of%20Jane%20Austen.&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -52,7 +52,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 18 Aug 2016 21:06:34 GMT
+      - Fri, 19 Aug 2016 15:50:37 GMT
       Server:
       - Apache
       Content-Type:
@@ -64,7 +64,7 @@ http_interactions:
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
         \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;N&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-08-18T17:06:34-04:00&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-08-19T11:50:37-04:00&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.isbn\"&gt;0-06-495450-1&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
         \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
@@ -76,10 +76,10 @@ http_interactions:
         \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
-        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sA4FA74B2-6587-11E6-8289-8E8FFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sAC6E356A-6624-11E6-9C7C-4A97FE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         \ &lt;item key=\"rft.isbn_13\"&gt;978-0-06-495450-1&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;12322265&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
+        key=\"sfx.request_id\"&gt;12325051&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
         \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
         key=\"rft.pub\"&gt;Barnes &amp;amp; Noble Books&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n
         \ &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
@@ -126,7 +126,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:34 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:0064954501
@@ -148,9 +148,9 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
@@ -182,7 +182,7 @@ http_interactions:
          "totalItems": 0
         }
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -199,7 +199,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -220,7 +220,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -401,7 +401,7 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items
@@ -427,14 +427,14 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010"></item><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010
@@ -460,7 +460,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142001821068</z30-barcode><z30-sub-library>NYU
@@ -473,7 +473,7 @@ http_interactions:
         York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>10/05/16
         10:30 PM</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020
@@ -499,7 +499,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 18 Aug 2016 21:06:35 GMT
+      - Fri, 19 Aug 2016 15:50:38 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207000347645</z30-barcode><z30-sub-library>TNS
@@ -512,5 +512,5 @@ http_interactions:
         York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
         Available</status></item></get-item> '
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:35 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
 recorded_with: VCR 2.9.3

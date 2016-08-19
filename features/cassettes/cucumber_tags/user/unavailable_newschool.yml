@@ -2,375 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.elsevier.com/content/search/index:SCOPUS?apiKey=3eba7caaa0131a5afb66b9c66926c9a1&query=ISBN(%220064954501%22)
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - api.elsevier.com  9999
-      X-Els-Status:
-      - NO_SEARCH_RESULTS(Result set was empty)
-      X-Els-Reqid:
-      - 00000156821cc81f-18f4609
-      X-Els-Apikey:
-      - 3eba7caaa0131a5afb66b9c66926c9a1
-      X-Els-Transid:
-      - 54de07e3-06e4-4a0c-a62d-41fb393404f6
-      Allow:
-      - GET
-      Vary:
-      - Origin, Accept-Encoding, User-Agent
-      Content-Type:
-      - application/xml;charset=UTF-8
-      Content-Length:
-      - '432'
-      Date:
-      - Thu, 18 Aug 2016 21:05:50 GMT
-      X-Re-Ref:
-      - 1 1471554349979381
-      P3p:
-      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
-        OTC"
-      Connection:
-      - Keep-Alive
-    body:
-      encoding: ASCII-8BIT
-      string: <search-results xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/"><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
-        role="request" searchTerms="ISBN%28%220064954501%22%29" startPage="0"/><link
-        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=ISBN%28%220064954501%22%29&amp;apiKey=3eba7caaa0131a5afb66b9c66926c9a1"
-        type="application/xml"/><entry><error>Result set was empty</error></entry></search-results>
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:50 GMT
-- request:
-    method: get
-    uri: https://catalog.hathitrust.org/api/volumes/brief/json/lccn:72195885
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 18 Aug 2016 21:05:51 GMT
-      Server:
-      - Apache/2.4.10 (Debian)
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Length:
-      - '43'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Set-Cookie:
-      - NSC_mchspvq-iu=ffffffff854c63c145525d5f4f58455e445a4a42378b;expires=Thu, 18-Aug-2016
-        21:15:51 GMT;path=/;httponly
-    body:
-      encoding: UTF-8
-      string: '{"lccn:72195885":{"records":[],"items":[]}}'
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:51 GMT
-- request:
-    method: get
-    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Moved Temporarily
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Thu, 18 Aug 2016 21:05:51 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Location:
-      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+language+of+jane+austen%22+AND+creator:%28page%29+AND+(mediatype:texts+OR+mediatype:audio)
-      Expires:
-      - Fri, 19 Aug 2016 03:05:51 GMT
-      Cache-Control:
-      - max-age=21600
-    body:
-      encoding: UTF-8
-      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
-        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:51 GMT
-- request:
-    method: post
-    uri: https://demo.relais-host.com/portal-service/user/authentication
-    body:
-      encoding: UTF-8
-      string: '{"ApiKey":"1TTmmyDfNoA8tP8RwVbW4lX0TSUizpgSr8JOH0L9K0dxYG2FDpI=","PartnershipId":"DEMO","UserGroup":"patron","LibrarySymbol":"NYU","PatronId":21142226710882}'
-    headers:
-      User-Agent:
-      - ruby borrow_direct gem 1.2.0 (HTTPClient 2.8.1) https://github.com/jrochkind/borrow_direct
-      Accept:
-      - "*/*"
-      Date:
-      - Thu, 18 Aug 2016 21:05:50 GMT
-      Content-Type:
-      - application/json
-      Accept-Language:
-      - en
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.4.1
-      Date:
-      - Thu, 18 Aug 2016 21:05:51 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Content-Length:
-      - '76'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"ApiKeyOk":false,"Problem":{"Code":"PUBAZ006","Message":"Invalid API
-        key"}}'
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:51 GMT
-- request:
-    method: get
-    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx/1.4.6 (Ubuntu)
-      Date:
-      - Thu, 18 Aug 2016 21:05:51 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.17
-    body:
-      encoding: UTF-8
-      string: '{"responseHeader":{"status":0,"QTime":21,"params":{"q":"title:\"the
-        language of jane austen\" AND creator:(page ) AND ( mediatype:texts OR mediatype:audio
-        )","qin":"title:\"the language of jane austen\" AND creator:(page) AND (mediatype:texts
-        OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:51 GMT
-- request:
-    method: get
-    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Page,%20Norman%22&sortKeys=holdingscount
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - text/xml
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - text/xml
-      Content-Length:
-      - '1958'
-      Date:
-      - Thu, 18 Aug 2016 21:05:50 GMT
-    body:
-      encoding: UTF-8
-      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
-        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
-        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
-        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
-        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
-        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
-        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
-        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
-        all &quot;Page, Norman&quot;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
-        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
-        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
-        xsi:type=\"xsd:string\">Page, Norman</ns2:term></ns2:searchClause></xQuery><maximumRecords
-        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
-        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
-        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
-        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
-        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
-        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
-        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
-        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:51 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 18 Aug 2016 21:05:53 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142000940836</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
-        Available</z30-item-status><z30-open-date>19970915</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
-        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.1</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>1</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
-        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
-        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
-        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
-        Available</status></item></get-item> '
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:53 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Thu, 18 Aug 2016 21:05:53 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>XD</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142010273582</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
-        ILL</z30-item-status><z30-open-date>19970902</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
-        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.2</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>SOSS
-        NOS</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>2</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
-        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
-        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
-        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Request
-        ILL</status></item></get-item> '
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:53 GMT
-- request:
-    method: head
-    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 302
-      message: Found
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 18 Aug 2016 21:05:53 GMT
-      Content-Type:
-      - text/html; charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Location:
-      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
-      Lt-Backend:
-      - 192.168.0.178:80
-    body:
-      encoding: UTF-8
-      string: ''
-    http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:05:53 GMT
-- request:
-    method: get
     uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-18T17:05:53-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002390004&rft.au=Edgeworth,%20Richard%20Lovell,%201744-1817&rft.aufirst=Richard%20Lovell,&rft.auinitm=L&rft.aulast=Edgeworth&rft.btitle=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft.genre=book&rft.isbn=0716506041&rft.lccn=75024485&rft.place=Shannon&rft.primo=nyu_aleph002390004&rft.private_data=%3Cnyu_aleph%3E002390004%3C/nyu_aleph%3E%3Cgrp_id%3E197995669%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Irish%20University%20Press&rft.title=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft_val_fmt=info:ofi/fmt:kev:mtx:book&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
@@ -409,6 +40,399 @@ http_interactions:
   recorded_at: Thu, 18 Aug 2016 21:05:53 GMT
 - request:
     method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 19 Aug 2016 15:25:25 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>XD</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142010273582</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
+        ILL</z30-item-status><z30-open-date>19970902</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
+        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.2</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>SOSS
+        NOS</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>2</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
+        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
+        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
+        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Request
+        ILL</status></item></get-item> '
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:25:25 GMT
+- request:
+    method: post
+    uri: https://demo.relais-host.com/portal-service/user/authentication
+    body:
+      encoding: UTF-8
+      string: '{"ApiKey":"1TTmmyDfNoA8tP8RwVbW4lX0TSUizpgSr8JOH0L9K0dxYG2FDpI=","PartnershipId":"DEMO","UserGroup":"patron","LibrarySymbol":"NYU","PatronId":21142226710882}'
+    headers:
+      User-Agent:
+      - ruby borrow_direct gem 1.2.0 (HTTPClient 2.8.1) https://github.com/jrochkind/borrow_direct
+      Accept:
+      - "*/*"
+      Date:
+      - Fri, 19 Aug 2016 15:26:04 GMT
+      Content-Type:
+      - application/json
+      Accept-Language:
+      - en
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.1
+      Date:
+      - Fri, 19 Aug 2016 15:26:05 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '76'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ApiKeyOk":false,"Problem":{"Code":"PUBAZ006","Message":"Invalid API
+        key"}}'
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:26:05 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 19 Aug 2016 15:26:07 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142000940836</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19970915</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
+        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.1</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>1</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
+        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
+        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
+        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:26:07 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 19 Aug 2016 15:26:07 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>XD</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142010273582</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
+        ILL</z30-item-status><z30-open-date>19970902</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
+        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.2</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>SOSS
+        NOS</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>2</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
+        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
+        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
+        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Request
+        ILL</status></item></get-item> '
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:26:07 GMT
+- request:
+    method: head
+    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 19 Aug 2016 15:26:07 GMT
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Location:
+      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
+      Lt-Backend:
+      - 192.168.0.178:80
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:26:07 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 19 Aug 2016 15:50:42 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207000347645</z30-barcode><z30-sub-library>TNS
+        List Center Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>OPPUSUNG</z30-cataloger><z30-date-last-return>20010308</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>001</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
+        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056126</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
+        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
+        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:42 GMT
+- request:
+    method: head
+    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 19 Aug 2016 15:50:43 GMT
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Location:
+      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
+      Lt-Backend:
+      - 192.168.0.178:80
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:43 GMT
+- request:
+    method: get
+    uri: http://api.elsevier.com/content/search/index:SCOPUS?apiKey=3eba7caaa0131a5afb66b9c66926c9a1&query=ISBN(%220064954501%22)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - api.elsevier.com  9999
+      X-Els-Status:
+      - NO_SEARCH_RESULTS(Result set was empty)
+      X-Els-Reqid:
+      - 000001567df2df1d-1fc5c71
+      X-Els-Apikey:
+      - 3eba7caaa0131a5afb66b9c66926c9a1
+      X-Els-Transid:
+      - aa4ae6d3-6453-42bc-ba16-ba631aa04172
+      Allow:
+      - GET
+      Vary:
+      - Origin, Accept-Encoding, User-Agent
+      Content-Type:
+      - application/xml;charset=UTF-8
+      Content-Length:
+      - '432'
+      Date:
+      - Fri, 19 Aug 2016 15:50:42 GMT
+      X-Re-Ref:
+      - 1 1471621843112721
+      P3p:
+      - CP="IDC DSP LAW ADM DEV TAI PSA PSD IVA IVD CON HIS TEL OUR DEL SAM OTR IND
+        OTC"
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: ASCII-8BIT
+      string: <search-results xmlns="http://www.w3.org/2005/Atom" xmlns:atom="http://www.w3.org/2005/Atom"
+        xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"><opensearch:totalResults>0</opensearch:totalResults><opensearch:startIndex>0</opensearch:startIndex><opensearch:itemsPerPage>0</opensearch:itemsPerPage><opensearch:Query
+        role="request" searchTerms="ISBN%28%220064954501%22%29" startPage="0"/><link
+        ref="self" href="http://api.elsevier.com:80/content/search/index:SCOPUS?start=0&amp;count=25&amp;query=ISBN%28%220064954501%22%29&amp;apiKey=3eba7caaa0131a5afb66b9c66926c9a1"
+        type="application/xml"/><entry><error>Result set was empty</error></entry></search-results>
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:43 GMT
+- request:
+    method: get
+    uri: http://www.archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 19 Aug 2016 15:50:44 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Location:
+      - http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&xmlsearch=Search&rows=999&q=title:%22the+language+of+jane+austen%22+AND+creator:%28page%29+AND+(mediatype:texts+OR+mediatype:audio)
+      Expires:
+      - Fri, 19 Aug 2016 21:50:44 GMT
+      Cache-Control:
+      - max-age=21600
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx/1.4.6 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:44 GMT
+- request:
+    method: get
+    uri: https://catalog.hathitrust.org/api/volumes/brief/json/lccn:72195885
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 Aug 2016 15:50:44 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '43'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff854c63df45525d5f4f58455e445a4a42378b;expires=Fri, 19-Aug-2016
+        16:00:44 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: '{"lccn:72195885":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:44 GMT
+- request:
+    method: get
     uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:0716506041
     body:
       encoding: US-ASCII
@@ -428,9 +452,9 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Thu, 18 Aug 2016 21:06:46 GMT
+      - Fri, 19 Aug 2016 15:50:44 GMT
       Date:
-      - Thu, 18 Aug 2016 21:06:46 GMT
+      - Fri, 19 Aug 2016 15:50:44 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
@@ -462,10 +486,98 @@ http_interactions:
          "totalItems": 0
         }
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:46 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:44 GMT
 - request:
     method: get
-    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-18T17:06:46-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002390004&rft.au=Edgeworth,%20Richard%20Lovell,%201744-1817&rft.aufirst=Richard%20Lovell,&rft.auinitm=L&rft.aulast=Edgeworth&rft.btitle=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft.genre=book&rft.isbn=0716506041&rft.lccn=75024485&rft.place=Shannon&rft.primo=nyu_aleph002390004&rft.private_data=%3Cnyu_aleph%3E002390004%3C/nyu_aleph%3E%3Cgrp_id%3E197995669%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Irish%20University%20Press&rft.title=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://archive.org/advancedsearch.php?fl%5B%5D=*&fmt=json&q=title:%22the%20language%20of%20jane%20austen%22%20AND%20creator:(page)%20AND%20(mediatype:texts%20OR%20mediatype:audio)&rows=999&xmlsearch=Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Fri, 19 Aug 2016 15:50:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.17
+    body:
+      encoding: UTF-8
+      string: '{"responseHeader":{"status":0,"QTime":41,"params":{"q":"title:\"the
+        language of jane austen\" AND creator:(page ) AND ( mediatype:texts OR mediatype:audio
+        )","qin":"title:\"the language of jane austen\" AND creator:(page) AND (mediatype:texts
+        OR mediatype:audio)","fl":"*","wt":"json","rows":"999","start":0}},"response":{"numFound":0,"start":0,"docs":[]}}'
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:44 GMT
+- request:
+    method: get
+    uri: http://worldcat.org/identities/search/PersonalIdentities?maximumRecords=1&query=local.Name%20all%20%22Page,%20Norman%22&sortKeys=holdingscount
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/xml
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1958'
+      Date:
+      - Fri, 19 Aug 2016 15:50:44 GMT
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"  encoding=\"UTF-8\"?> \n<searchRetrieveResponse
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xsi:schemaLocation=\"http://www.loc.gov/zing/srw/ http://www.loc.gov/standards/sru/sru1-1archive/xml-files/srw-types.xsd\"
+        xmlns=\"http://www.loc.gov/zing/srw/\"><version xsi:type=\"xsd:string\">1.1</version><numberOfRecords
+        xsi:type=\"xsd:nonNegativeInteger\">0</numberOfRecords><resultSetIdleTime
+        xsi:type=\"xsd:positiveInteger\">1</resultSetIdleTime><echoedSearchRetrieveRequest
+        xsi:type=\"ns1:echoedSearchRetrieveRequestType\" xmlns:ns1=\"http://www.loc.gov/zing/srw/\"><version
+        xsi:type=\"xsd:string\">1.1</version><query xsi:type=\"xsd:string\">local.Name
+        all &quot;Page, Norman&quot;</query><xQuery><ns2:searchClause xsi:type=\"ns2:searchClauseType\"
+        xmlns:ns2=\"http://www.loc.gov/zing/cql/xcql/\"><ns2:index xsi:type=\"xsd:string\">local.Name</ns2:index><ns2:relation
+        xsi:type=\"ns2:relationType\"><ns2:value xsi:type=\"xsd:string\">all</ns2:value></ns2:relation><ns2:term
+        xsi:type=\"xsd:string\">Page, Norman</ns2:term></ns2:searchClause></xQuery><maximumRecords
+        xsi:type=\"xsd:nonNegativeInteger\">1</maximumRecords><recordSchema xsi:type=\"xsd:string\">default</recordSchema><sortKeys
+        xsi:type=\"xsd:string\">holdingscount</sortKeys></echoedSearchRetrieveRequest><diagnostics
+        xsi:type=\"ns3:diagnosticsType\" xmlns:ns3=\"http://www.loc.gov/zing/srw/\"><ns4:diagnostic
+        xsi:type=\"ns4:diagnosticType\" xmlns:ns4=\"http://www.loc.gov/zing/srw/diagnostic/\"><ns4:uri
+        xsi:type=\"xsd:anyURI\">info:srw/diagnostic/1/1</ns4:uri><ns4:details xsi:type=\"xsd:string\">local.Name</ns4:details></ns4:diagnostic></diagnostics><extraResponseData
+        xsi:type=\"ns5:extraDataType\" xmlns:ns5=\"http://www.loc.gov/zing/srw/\"><ns6:extraData
+        xmlns=\"http://oclc.org/srw/extraData\" xmlns:ns6=\"http://oclc.org/srw/extraData\"><ns6:databaseTitle>WorldCat
+        Personal Identity Records</ns6:databaseTitle></ns6:extraData></extraResponseData></searchRetrieveResponse>"
+    http_version: 
+  recorded_at: Fri, 19 Aug 2016 15:50:44 GMT
+- request:
+    method: get
+    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-19T11:50:44-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002390004&rft.au=Edgeworth,%20Richard%20Lovell,%201744-1817&rft.aufirst=Richard%20Lovell,&rft.auinitm=L&rft.aulast=Edgeworth&rft.btitle=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft.genre=book&rft.isbn=0716506041&rft.lccn=75024485&rft.place=Shannon&rft.primo=nyu_aleph002390004&rft.private_data=%3Cnyu_aleph%3E002390004%3C/nyu_aleph%3E%3Cgrp_id%3E197995669%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Irish%20University%20Press&rft.title=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -482,7 +594,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 18 Aug 2016 21:06:29 GMT
+      - Fri, 19 Aug 2016 15:50:27 GMT
       Server:
       - Apache
       Content-Type:
@@ -498,7 +610,7 @@ http_interactions:
         bHQ7aXRlbSBrZXk9IkByZnQuYXVpbml0IiZndDsKICAgJmx0O2FycmF5Jmd0
         OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtSIEwmbHQ7L2l0ZW0mZ3Q7CiAg
         ICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
-        eT0iY3R4X3RpbSImZ3Q7MjAxNi0wOC0xOFQxNzowNjo0Ni0wNDowMCZsdDsv
+        eT0iY3R4X3RpbSImZ3Q7MjAxNi0wOC0xOVQxMTo1MDo0NC0wNDowMCZsdDsv
         aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5zaG93X2F2YWlsYWJpbGl0
         eSImZ3Q7MSZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5pc2Ju
         IiZndDswLTcxNjUtMDYwNC0xJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
@@ -522,13 +634,13 @@ http_interactions:
         eSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngucmVz
         cG9uc2VfdHlwZSImZ3Q7bXVsdGlfb2JqX3htbCZsdDsvaXRlbSZndDsKICAm
         bHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVfY2hhcl9zZXQiJmd0OzEmbHQ7L2l0
-        ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZXEuc2Vzc2lvbl9pZCImZ3Q7c0Ey
-        NTc5RDM0LTY1ODctMTFFNi1BMTJGLTcwNjg0RDE0N0QzRSZsdDsvaXRlbSZn
+        ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZXEuc2Vzc2lvbl9pZCImZ3Q7c0E2
+        NkU0RjU2LTY2MjQtMTFFNi1CN0EyLURBNjg0RDE0N0QzRSZsdDsvaXRlbSZn
         dDsKICAmbHQ7aXRlbSBrZXk9InVybF92ZXIiJmd0O1ozOS44OC0yMDA0Jmx0
         Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iY3R4X2VuYyImZ3Q7VVRGLTgm
         bHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQuaXNibl8xMyImZ3Q7
         OTc4LTAtNzE2NS0wNjA0LTEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5
-        PSJzZngucmVxdWVzdF9pZCImZ3Q7NDM5NjM2MyZsdDsvaXRlbSZndDsKICAm
+        PSJzZngucmVxdWVzdF9pZCImZ3Q7NDM5ODEwNiZsdDsvaXRlbSZndDsKICAm
         bHQ7aXRlbSBrZXk9InJmdC5nZW5yZSImZ3Q7Ym9vayZsdDsvaXRlbSZndDsK
         ICAmbHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVfZGF0ZV90aHJlc2hvbGQiJmd0
         OzEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQucHViIiZndDtJ
@@ -540,7 +652,7 @@ http_interactions:
         eS5uZXdzY2hvb2wuZWR1L25zP3VybF92ZXI9WjM5Ljg4LTIwMDQmYW1wO2Ft
         cDt1cmxfY3R4X2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4JTNB
         Y3R4JmFtcDthbXA7Y3R4X3Zlcj1aMzkuODgtMjAwNCZhbXA7YW1wO2N0eF90
-        aW09MjAxNi0wOC0xOFQxNyUzQTA2JTNBNDYtMDQlM0EwMCZhbXA7YW1wO2N0
+        aW09MjAxNi0wOC0xOVQxMSUzQTUwJTNBNDQtMDQlM0EwMCZhbXA7YW1wO2N0
         eF9pZD0mYW1wO2FtcDtjdHhfZW5jPWluZm8lM0FvZmklMkZlbmMlM0FVVEYt
         OCZhbXA7YW1wO3JmdC5hdT1FZGdld29ydGglMkMlMjBSaWNoYXJkJTIwTG92
         ZWxsJTJDJTIwMTc0NC0xODE3JmFtcDthbXA7cmZ0LmF1Zmlyc3Q9UmljaGFy
@@ -890,7 +1002,7 @@ http_interactions:
         IDwvdGFyZ2V0PgogIDwvY3R4X29ial90YXJnZXRzPgogPC9jdHhfb2JqPgo8
         L2N0eF9vYmpfc2V0Pg==
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:47 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:45 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -907,7 +1019,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Thu, 18 Aug 2016 21:06:47 GMT
+      - Fri, 19 Aug 2016 15:50:45 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -928,7 +1040,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Thu, 18 Aug 2016 21:06:47 GMT
+      - Fri, 19 Aug 2016 15:50:45 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -1131,7 +1243,7 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:47 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:45 GMT
 - request:
     method: get
     uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items
@@ -1157,12 +1269,12 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 18 Aug 2016 21:06:47 GMT
+      - Fri, 19 Aug 2016 15:50:44 GMT
     body:
       encoding: UTF-8
       string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000010"></item><item
         href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Thu, 18 Aug 2016 21:06:47 GMT
+  recorded_at: Fri, 19 Aug 2016 15:50:45 GMT
 recorded_with: VCR 2.9.3
