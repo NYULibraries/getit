@@ -314,7 +314,7 @@ NYU:
       #
       # Optional params
       # disable BD api entirely:
-      #use_bd_api: false
+      # use_bd_api: false
       # Set timeout for BD api in seconds (default 20 seconds)
       http_timeout: 10
       # log all BD API calls for analysis

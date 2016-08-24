@@ -54,7 +54,7 @@ GIT
 
 GIT
   remote: git://github.com/team-umlaut/umlaut_borrow_direct.git
-  revision: 9ca7a2f9807a785447308463251e6ae6aa8bfb82
+  revision: 0aa6b1879d9a294283ff4b95c30412ee7b0348c4
   specs:
     umlaut_borrow_direct (1.0.2)
       borrow_direct (>= 1.0.4, < 2)

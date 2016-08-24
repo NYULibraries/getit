@@ -11,7 +11,18 @@ User.create(
   firstname: 'Charley',
   lastname: 'Matthew',
   provider: 'nyulibraries',
-  aleph_id: 'N000000000',
+  aleph_id: 'N00206454',
+  institution_code: 'NS',
+  patron_status: '41',
+  barcode: '54321'
+)
+User.create(
+  username: 'rdXXX',
+  email: 'rdXXX@nyu.edu',
+  firstname: 'Ryu',
+  lastname: 'Dhalsim',
+  provider: 'nyulibraries',
+  aleph_id: 'N18158418',
   institution_code: 'NYU',
   patron_status: '51',
   barcode: '12345'

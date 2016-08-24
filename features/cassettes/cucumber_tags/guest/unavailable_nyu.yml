@@ -1,41 +1,119 @@
 ---
 http_interactions:
 - request:
-    method: head
-    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
-      code: 302
-      message: Found
+      code: 200
+      message: OK
     headers:
       Server:
-      - nginx
-      Date:
-      - Fri, 19 Aug 2016 15:25:58 GMT
+      - Apache-Coyote/1.1
       Content-Type:
-      - text/html; charset=iso-8859-1
-      Connection:
-      - keep-alive
-      Location:
-      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0064954501
-      Lt-Backend:
-      - 192.168.0.178:80
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:32 GMT
     body:
       encoding: UTF-8
-      string: ''
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010"></item><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020"></item></items></get-item-list> '
     http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:25:58 GMT
+  recorded_at: Wed, 24 Aug 2016 17:54:32 GMT
 - request:
     method: get
-    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-19T11:50:37-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&rft.au=Page,%20Norman&rft.aufirst=Norman.&rft.aulast=Page&rft.btitle=The%20language%20of%20Jane%20Austen.&rft.genre=book&rft.isbn=0064954501&rft.lccn=72195885&rft.place=New%20York&rft.primo=nyu_aleph002422300&rft.private_data=%3Cnyu_aleph%3E002422300%3C/nyu_aleph%3E%3Cgrp_id%3E198226800%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Barnes%20%26%20Noble%20Books&rft.title=The%20language%20of%20Jane%20Austen.&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:32 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142001821068</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CHOS</z30-cataloger><z30-date-last-return>20160226</z30-date-last-return><z30-hour-last-return>1024</z30-hour-last-return><z30-ip-last-return>128.122.89.149</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
+        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056125</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>001</z30-maintenance-count><z30-process-status-date>20131209</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
+        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
+        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>10/05/16
+        10:30 PM</status></item></get-item> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:32 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:32 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207000347645</z30-barcode><z30-sub-library>TNS
+        List Center Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>OPPUSUNG</z30-cataloger><z30-date-last-return>20010308</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>001</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
+        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056126</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
+        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
+        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
+        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:32 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-24T13:58:10-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&rft.au=Page,%20Norman&rft.aufirst=Norman.&rft.aulast=Page&rft.btitle=The%20language%20of%20Jane%20Austen.&rft.genre=book&rft.isbn=0064954501&rft.lccn=72195885&rft.place=New%20York&rft.primo=nyu_aleph002422300&rft.private_data=%3Cnyu_aleph%3E002422300%3C/nyu_aleph%3E%3Cgrp_id%3E198226800%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Barnes%20%26%20Noble%20Books&rft.title=The%20language%20of%20Jane%20Austen.&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
     body:
       encoding: US-ASCII
       string: ''
@@ -52,7 +130,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 19 Aug 2016 15:50:37 GMT
+      - Wed, 24 Aug 2016 17:58:10 GMT
       Server:
       - Apache
       Content-Type:
@@ -64,7 +142,7 @@ http_interactions:
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
         identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
         \ &lt;item key=\"@rft.auinit\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;N&lt;/item&gt;\n
-        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-08-19T11:50:37-04:00&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-08-24T13:58:10-04:00&lt;/item&gt;\n
         \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft.isbn\"&gt;0-06-495450-1&lt;/item&gt;\n
         \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
         \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
@@ -76,10 +154,10 @@ http_interactions:
         \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;&lt;/item&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n
         \ &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
-        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sAC6E356A-6624-11E6-9C7C-4A97FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s5193FC34-6A24-11E6-B246-1F5DFE4C1AE4&lt;/item&gt;\n
         \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
         \ &lt;item key=\"rft.isbn_13\"&gt;978-0-06-495450-1&lt;/item&gt;\n  &lt;item
-        key=\"sfx.request_id\"&gt;12325051&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
+        key=\"sfx.request_id\"&gt;12343892&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;book&lt;/item&gt;\n
         \ &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n  &lt;item
         key=\"rft.pub\"&gt;Barnes &amp;amp; Noble Books&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n
         \ &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph002422300&lt;/item&gt;\n
@@ -126,7 +204,7 @@ http_interactions:
         \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
         \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
+  recorded_at: Wed, 24 Aug 2016 17:58:10 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:0064954501
@@ -148,9 +226,9 @@ http_interactions:
       message: OK
     headers:
       Expires:
-      - Fri, 19 Aug 2016 15:50:38 GMT
+      - Wed, 24 Aug 2016 17:58:10 GMT
       Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
+      - Wed, 24 Aug 2016 17:58:10 GMT
       Cache-Control:
       - private, max-age=0, must-revalidate, no-transform
       Etag:
@@ -182,7 +260,7 @@ http_interactions:
          "totalItems": 0
         }
     http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
+  recorded_at: Wed, 24 Aug 2016 17:58:10 GMT
 - request:
     method: post
     uri: http://primo.library.edu/PrimoWebServices/services/searcher
@@ -199,7 +277,7 @@ http_interactions:
       Accept:
       - "*/*"
       Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
+      - Wed, 24 Aug 2016 17:58:10 GMT
       Soapaction:
       - '"getRecord"'
       Content-Type:
@@ -220,7 +298,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
+      - Wed, 24 Aug 2016 17:58:11 GMT
     body:
       encoding: UTF-8
       string: |-
@@ -401,116 +479,5 @@ http_interactions:
           &lt;/JAGROOT&gt;
         &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
     http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
-        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010"></item><item
-        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020"></item></items></get-item-list> '
-    http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000010
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142001821068</z30-barcode><z30-sub-library>NYU
-        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
-        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CHOS</z30-cataloger><z30-date-last-return>20160226</z30-date-last-return><z30-hour-last-return>1024</z30-hour-last-return><z30-ip-last-return>128.122.89.149</z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
-        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056125</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>001</z30-maintenance-count><z30-process-status-date>20131209</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
-        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
-        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>10/05/16
-        10:30 PM</status></item></get-item> '
-    http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
-- request:
-    method: get
-    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002422300/items/NYU50002422300000020
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - Apache-Coyote/1.1
-      Content-Type:
-      - application/xml
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Fri, 19 Aug 2016 15:50:38 GMT
-    body:
-      encoding: UTF-8
-      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>TNSFO</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002422300</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31207000347645</z30-barcode><z30-sub-library>TNS
-        List Center Library</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
-        Available</z30-item-status><z30-open-date>19940713</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>OPPUSUNG</z30-cataloger><z30-date-last-return>20010308</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>001</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
-        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>PR4038.S8
-        P3</z30-call-no><z30-call-no-key>0 pr#4038 s8 p3</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001056126</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id>TNSRS</z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052118552</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002422300</z13-doc-number><z13-year>1972</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>PR4038.S8</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Page,
-        Norman.</z13-author><z13-title-code>24514</z13-title-code><z13-title>The language
-        of Jane Austen.</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>New
-        York, Barnes &amp; Noble Books [1972]</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0064954501</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
-        Available</status></item></get-item> '
-    http_version: 
-  recorded_at: Fri, 19 Aug 2016 15:50:38 GMT
+  recorded_at: Wed, 24 Aug 2016 17:58:11 GMT
 recorded_with: VCR 2.9.3

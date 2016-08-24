@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def current_user_dev
     # Assuming you have a dev user on your local environment
-    @current_user ||= User.first
+    @current_user ||= User.where(institution_code: :NYU).first
   end
   alias_method :current_user, :current_user_dev if Rails.env.development?
 
