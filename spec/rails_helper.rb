@@ -12,6 +12,7 @@ end
 
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'rspec/its'
 require 'database_cleaner'
 require 'factory_girl'
 require 'pry'
@@ -51,6 +52,10 @@ RSpec.configure do |config|
 
   # Include Factory Girl convenience methods
   config.include FactoryGirl::Syntax::Methods
+
+  # Include the Devise test helpers
+  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :view
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of

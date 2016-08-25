@@ -20,7 +20,13 @@ describe StackMapPresenter do
       let(:service_response) do
         build(:new_school_main_collection_journal_service_response)
       end
-      it { should eq 'TNS University Center Library'}
+      context 'when holding is from aleph' do
+        it { should eq 'TNS University Center Library'}
+      end
+      context 'when holding is not from aleph' do
+        before { allow(presenter).to receive(:from_aleph?).and_return(false) }
+        it { should be_nil }
+      end
     end
   end
   describe '#location' do
@@ -29,7 +35,13 @@ describe StackMapPresenter do
       let(:service_response) do
         build(:available_new_school_main_collection_service_response)
       end
-      it { should eq 'Main Collection'}
+      context 'when holding is from aleph' do
+        it { should eq 'Main Collection'}
+      end
+      context 'when holding is not from aleph' do
+        before { allow(presenter).to receive(:from_aleph?).and_return(false) }
+        it { should eq 'NYU Bobst Main Collection' }
+      end
     end
     context 'when the holding is a journal in the "New School Main Collection"' do
       let(:service_response) do
