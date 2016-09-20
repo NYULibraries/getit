@@ -13,13 +13,13 @@ describe 'resolve/_afc_schedule_link' do
         let(:service_response) { create(:avery_fisher_nyu_aleph_service_response) }
         it { should_not match /afc-schedule-link/ }
         it { should_not match /Schedule/ }
-        it { should_not match(/href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/) }
+        it { should_not match(/href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/) }
       end
       context "and the holding isn't an AFC item" do
         let(:service_response) { create(:nyu_aleph_service_response) }
         it { should_not match /afc-schedule-link/ }
         it { should_not match /Schedule/ }
-        it { should_not match(/href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/) }
+        it { should_not match(/href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/) }
       end
     end
     context "and the user is authorized to request items from AFC" do
@@ -28,13 +28,13 @@ describe 'resolve/_afc_schedule_link' do
         let(:service_response) { create(:avery_fisher_nyu_aleph_service_response) }
         it { should match /afc-schedule-link/ }
         it { should match /Schedule/ }
-        it { should match(/href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/) }
+        it { should match(/href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/) }
       end
       context "and the holding isn't an AFC item" do
         let(:service_response) { create(:nyu_aleph_service_response) }
         it { should_not match /afc-schedule-link/ }
         it { should_not match /Schedule/ }
-        it { should_not match /href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/ }
+        it { should_not match /href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/ }
       end
     end
   end
@@ -44,13 +44,13 @@ describe 'resolve/_afc_schedule_link' do
       let(:service_response) { create(:avery_fisher_nyu_aleph_service_response) }
       it { should_not match /afc-schedule-link/ }
       it { should_not match /Schedule/ }
-      it { should_not match(/href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/) }
+      it { should_not match(/href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/) }
     end
     context "and the holding isn't an AFC item" do
       let(:service_response) { create(:nyu_aleph_service_response) }
       it { should_not match /afc-schedule-link/ }
       it { should_not match /Schedule/ }
-      it { should_not match(/href="http:\/\/library\.nyu\.edu\/forms\/afc\/faculty_loan\.html/) }
+      it { should_not match(/href="https:\/\/nyu\.qualtrics\.com\/jfe\/form\/SV_eKBzul896KmAWVL/) }
     end
   end
 end
