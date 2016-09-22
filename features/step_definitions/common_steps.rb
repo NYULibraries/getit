@@ -7,7 +7,7 @@ Given(/^I am on the GetIt page for "The New Yorker"$/) do
 end
 
 Given(/^I am on the GetIt page for the title "(.*?)"$/) do |title|
-  visit getit_page_for_holdling_title(title)
+  visit getit_page_for_holding_title(title)
 end
 
 Then(/^I should see a blue "(.*?)" button$/) do |text|

@@ -1,0 +1,943 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:10 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>DP</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31142000940836</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Offsite
+        Available</z30-item-status><z30-open-date>19970915</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
+        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.1</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>Depository</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>1</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id>NYURS</z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
+        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
+        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
+        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Offsite
+        Available</status></item></get-item> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:10 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:10 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>BOBST</z30-sub-library-code><z30-item-process-status-code>XD</z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU50</translate-change-active-library><z30-doc-number>002390004</z30-doc-number><z30-item-sequence>    2.0</z30-item-sequence><z30-barcode>31142010273582</z30-barcode><z30-sub-library>NYU
+        Bobst</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Request
+        ILL</z30-item-status><z30-open-date>19970902</z30-open-date><z30-update-date>20160305</z30-update-date><z30-cataloger>CONV</z30-cataloger><z30-date-last-return>20030515</z30-date-last-return><z30-hour-last-return>0000</z30-hour-last-return><z30-ip-last-return></z30-ip-last-return><z30-no-loans>002</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>DA948.3.E2
+        A2 1820a</z30-call-no><z30-call-no-key>0 da&quot;948 3 e2 a2 1820a 0</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description>v.2</z30-description><z30-note-opac></z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic></z30-item-statistic><z30-item-process-status>SOSS
+        NOS</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>001174133</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a>2</z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type>3</z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000001</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>000</z30-maintenance-count><z30-process-status-date>00000000</z30-process-status-date><z30-upd-time-stamp>201603052114264</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU50</translate-change-active-library><z13-doc-number>002390004</z13-doc-number><z13-year>1969</z13-year><z13-open-date>20080618</z13-open-date><z13-update-date>20080618</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>DA948.3.E2</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Edgeworth,
+        Richard Lovell, 1744-1817.</z13-author><z13-title-code>24510</z13-title-code><z13-title>Memoirs
+        of Richard Lovell Edgeworth;</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>Shannon,
+        Irish University Press, 1969.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0716506041</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>Request
+        ILL</status></item></get-item> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:10 GMT
+- request:
+    method: head
+    uri: http://covers.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 24 Aug 2016 17:54:10 GMT
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - keep-alive
+      Location:
+      - http://www.librarything.com/devkey/COVER_THING_DEVELOPER_KEY/medium/isbn/0716506041
+      Lt-Backend:
+      - 192.168.0.178:80
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:10 GMT
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-24T13:54:10-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002390004&rft.au=Edgeworth,%20Richard%20Lovell,%201744-1817&rft.aufirst=Richard%20Lovell,&rft.auinitm=L&rft.aulast=Edgeworth&rft.btitle=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft.genre=book&rft.isbn=0716506041&rft.lccn=75024485&rft.place=Shannon&rft.primo=nyu_aleph002390004&rft.private_data=%3Cnyu_aleph%3E002390004%3C/nyu_aleph%3E%3Cgrp_id%3E197995669%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Irish%20University%20Press&rft.title=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft_val_fmt=info:ofi/fmt:kev:mtx:book&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Exlibris
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:10 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
+        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
+        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
+        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:11 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01002390004/items/NYU50002390004000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:54:10 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>The
+        patron ID is invalid</reply-text><reply-code>0002</reply-code></item-serv> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:54:11 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?key=GOOGLE_BOOK_SEARCH_API_KEY&printType=books&q=isbn:0716506041
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Forwarded-For:
+      - 127.0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Wed, 24 Aug 2016 17:58:18 GMT
+      Date:
+      - Wed, 24 Aug 2016 17:58:18 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"C79asUrpl716RzXEYlKUQUuJjTE/oMWMqbsluP5m2PCo8Y7WmWeHGP4"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '47'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34,33,32,31,30"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "books#volumes",
+         "totalItems": 0
+        }
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:58:18 GMT
+- request:
+    method: get
+    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-08-24T13:58:17-04:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph002390004&rft.au=Edgeworth,%20Richard%20Lovell,%201744-1817&rft.aufirst=Richard%20Lovell,&rft.auinitm=L&rft.aulast=Edgeworth&rft.btitle=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft.genre=book&rft.isbn=0716506041&rft.lccn=75024485&rft.place=Shannon&rft.primo=nyu_aleph002390004&rft.private_data=%3Cnyu_aleph%3E002390004%3C/nyu_aleph%3E%3Cgrp_id%3E197995669%3C/grp_id%3E%3Coa%3E%3C/oa%3E&rft.pub=Irish%20University%20Press&rft.title=Memoirs%20of%20Richard%20Lovell%20Edgeworth&rft_val_fmt=info:ofi/fmt:kev:mtx:book&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 24 Aug 2016 17:58:00 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCjxjdHhf
+        b2JqX3NldD4KIDxjdHhfb2JqIGlkZW50aWZpZXI9IiI+CiAgPGN0eF9vYmpf
+        YXR0cmlidXRlcz4mbHQ7cGVybGRhdGEmZ3Q7CiAmbHQ7aGFzaCZndDsKICAm
+        bHQ7aXRlbSBrZXk9IkByZnQuYXVpbml0IiZndDsKICAgJmx0O2FycmF5Jmd0
+        OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtSIEwmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iY3R4X3RpbSImZ3Q7MjAxNi0wOC0yNFQxMzo1ODoxNy0wNDowMCZsdDsv
+        aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5zaG93X2F2YWlsYWJpbGl0
+        eSImZ3Q7MSZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5pc2Ju
+        IiZndDswLTcxNjUtMDYwNC0xJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iX3N0YXNoIiZndDsKICAgJmx0O2hhc2gmZ3Q7CiAgICAmbHQ7aXRlbSBr
+        ZXk9IkByZnJfaWQiJmd0OwogICAgICZsdDthcnJheSZndDsKICAgICAgJmx0
+        O2l0ZW0ga2V5PSIwIiZndDtpbmZvOnNpZC9wcmltby5leGxpYnJpc2dyb3Vw
+        LmNvbTpwcmltby1ueXVfYWxlcGgwMDIzOTAwMDQmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICAgJmx0Oy9hcnJheSZndDsKICAgICZsdDsvaXRlbSZndDsKICAgJmx0Oy9o
+        YXNoJmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9ImN0eF92
+        ZXIiJmd0O1ozOS44OC0yMDA0Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iQHJmcl9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iMCImZ3Q7aW5mbzpzaWQvcHJpbW8uZXhsaWJyaXNncm91cC5jb206
+        cHJpbW8tbnl1X2FsZXBoMDAyMzkwMDA0Jmx0Oy9pdGVtJmd0OwogICAmbHQ7
+        L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJm
+        dC5wbGFjZSImZ3Q7U2hhbm5vbiZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBr
+        ZXk9InJmdC5sY2NuIiZndDsgICA3NTAyNDQ4NSAmbHQ7L2l0ZW0mZ3Q7CiAg
+        Jmx0O2l0ZW0ga2V5PSJAcmZ0LmF1aW5pdG0iJmd0OwogICAmbHQ7YXJyYXkm
+        Z3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0O0wmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iQHJmdF9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgJmx0Oy9hcnJh
+        eSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngucmVz
+        cG9uc2VfdHlwZSImZ3Q7bXVsdGlfb2JqX3htbCZsdDsvaXRlbSZndDsKICAm
+        bHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVfY2hhcl9zZXQiJmd0OzEmbHQ7L2l0
+        ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZXEuc2Vzc2lvbl9pZCImZ3Q7czRC
+        QUREMjVFLTZBMjQtMTFFNi04QkYxLTRGODg0RDE0N0QzRSZsdDsvaXRlbSZn
+        dDsKICAmbHQ7aXRlbSBrZXk9InVybF92ZXIiJmd0O1ozOS44OC0yMDA0Jmx0
+        Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iY3R4X2VuYyImZ3Q7VVRGLTgm
+        bHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQuaXNibl8xMyImZ3Q7
+        OTc4LTAtNzE2NS0wNjA0LTEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5
+        PSJzZngucmVxdWVzdF9pZCImZ3Q7NDQwOTY5OSZsdDsvaXRlbSZndDsKICAm
+        bHQ7aXRlbSBrZXk9InJmdC5nZW5yZSImZ3Q7Ym9vayZsdDsvaXRlbSZndDsK
+        ICAmbHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVfZGF0ZV90aHJlc2hvbGQiJmd0
+        OzEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQucHViIiZndDtJ
+        cmlzaCBVbml2ZXJzaXR5IFByZXNzJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVt
+        IGtleT0icmVxLmlwIiZndDsxMjcuMC4wLjEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJyZnIucmZyIiZndDtwcmltby5leGxpYnJpc2dyb3VwLmNv
+        bTpwcmltby1ueXVfYWxlcGgwMDIzOTAwMDQmbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJzZngub3BlbnVybCImZ3Q7aHR0cDovL3NmeDQubGlicmFy
+        eS5uZXdzY2hvb2wuZWR1L25zP3VybF92ZXI9WjM5Ljg4LTIwMDQmYW1wO2Ft
+        cDt1cmxfY3R4X2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4JTNB
+        Y3R4JmFtcDthbXA7Y3R4X3Zlcj1aMzkuODgtMjAwNCZhbXA7YW1wO2N0eF90
+        aW09MjAxNi0wOC0yNFQxMyUzQTU4JTNBMTctMDQlM0EwMCZhbXA7YW1wO2N0
+        eF9pZD0mYW1wO2FtcDtjdHhfZW5jPWluZm8lM0FvZmklMkZlbmMlM0FVVEYt
+        OCZhbXA7YW1wO3JmdC5hdT1FZGdld29ydGglMkMlMjBSaWNoYXJkJTIwTG92
+        ZWxsJTJDJTIwMTc0NC0xODE3JmFtcDthbXA7cmZ0LmF1Zmlyc3Q9UmljaGFy
+        ZCUyMExvdmVsbCUyQyZhbXA7YW1wO3JmdC5hdWluaXRtPUwmYW1wO2FtcDty
+        ZnQuYXVsYXN0PUVkZ2V3b3J0aCZhbXA7YW1wO3JmdC5idGl0bGU9TWVtb2ly
+        cyUyMG9mJTIwUmljaGFyZCUyMExvdmVsbCUyMEVkZ2V3b3J0aCZhbXA7YW1w
+        O3JmdC5nZW5yZT1ib29rJmFtcDthbXA7cmZ0LmlzYm49MDcxNjUwNjA0MSZh
+        bXA7YW1wO3JmdC5sY2NuPTc1MDI0NDg1JmFtcDthbXA7cmZ0LnBsYWNlPVNo
+        YW5ub24mYW1wO2FtcDtyZnQucHJpbW89bnl1X2FsZXBoMDAyMzkwMDA0JmFt
+        cDthbXA7cmZ0LnByaXZhdGVfZGF0YT0lM0NueXVfYWxlcGglM0UwMDIzOTAw
+        MDQlM0MlMkZueXVfYWxlcGglM0UlM0NncnBfaWQlM0UxOTc5OTU2NjklM0Ml
+        MkZncnBfaWQlM0UlM0NvYSUzRSUzQyUyRm9hJTNFJmFtcDthbXA7cmZ0LnB1
+        Yj1JcmlzaCUyMFVuaXZlcnNpdHklMjBQcmVzcyZhbXA7YW1wO3JmdC50aXRs
+        ZT1NZW1vaXJzJTIwb2YlMjBSaWNoYXJkJTIwTG92ZWxsJTIwRWRnZXdvcnRo
+        JmFtcDthbXA7cmZ0X3ZhbF9mbXQ9aW5mbyUzQW9maSUyRmZtdCUzQWtldiUz
+        QW10eCUzQWJvb2smYW1wO2FtcDtyZXEuaXA9MTI3LjAuMC4xJmFtcDthbXA7
+        cmZyX2lkPWluZm8lM0FzaWQlMkZwcmltby5leGxpYnJpc2dyb3VwLmNvbSUz
+        QXByaW1vLW55dV9hbGVwaDAwMjM5MDAwNCZhbXA7YW1wO3NmeC5yZXNwb25z
+        ZV90eXBlPW11bHRpX29ial94bWwmYW1wO2FtcDtzZnguaWdub3JlX2RhdGVf
+        dGhyZXNob2xkPTEmYW1wO2FtcDtzZnguc2hvd19hdmFpbGFiaWxpdHk9MSZs
+        dDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC50aXRsZSImZ3Q7TWVt
+        b2lycyBvZiBSaWNoYXJkIExvdmVsbCBFZGdld29ydGgmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJ1cmxfY3R4X2ZtdCImZ3Q7aW5mbzpvZmkvZm10
+        OmtldjptdHg6Y3R4Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iQHJm
+        ZV9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgJmx0Oy9hcnJheSZndDsK
+        ICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJAcmZ0LmF1Zmlyc3Qi
+        Jmd0OwogICAmbHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0
+        O1JpY2hhcmQmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvYXJyYXkmZ3Q7CiAgJmx0
+        Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmZ0LmlzYm5fMTAiJmd0OzAt
+        NzE2NS0wNjA0LTEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJAcmZ0
+        LmF1bGFzdCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iMCImZ3Q7RWRnZXdvcnRoJmx0Oy9pdGVtJmd0OwogICAmbHQ7L2FycmF5
+        Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdF92YWxf
+        Zm10IiZndDtib29rJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iZXhp
+        c3RpbmdfdHNfaWRzIiZndDsKICAgJmx0O2FycmF5Jmd0OwogICAgJmx0O2l0
+        ZW0ga2V5PSIwIiZndDsxMTEwMjc2MTQzNDQwMDEmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICAmbHQ7aXRlbSBrZXk9IjEiJmd0OzExMTA2OTM1NzY3ODAwMSZsdDsvaXRl
+        bSZndDsKICAgICZsdDtpdGVtIGtleT0iMiImZ3Q7MTEwOTc0OTgwNjUwMTAx
+        Jmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIzIiZndDsxMTEwMjY5
+        MjE5NDkwMDEmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjQiJmd0
+        OzMyNTIwMDAwMDAwMDAwMDIxJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0g
+        a2V5PSI1IiZndDsxMDAwMDAwMDAwMDAyNDE1Jmx0Oy9pdGVtJmd0OwogICAg
+        Jmx0O2l0ZW0ga2V5PSI2IiZndDsxMTEwMzIyNzQ1NTUwMDEmbHQ7L2l0ZW0m
+        Z3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjciJmd0OzEwMDAwMDAwMDAwMDAwMDkm
+        bHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjgiJmd0OzMyNTIwMDAw
+        MDAwMDAwMDIwJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSI5IiZn
+        dDszMjUyMDAwMDAxOTAwMDA2MCZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJh
+        eSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZnguc2lk
+        IiZndDtwcmltby5leGxpYnJpc2dyb3VwLmNvbTpwcmltby1ueXVfYWxlcGgw
+        MDIzOTAwMDQmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJAcmZ0LmF1
+        IiZndDsKICAgJmx0O2FycmF5Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZn
+        dDtFZGdld29ydGgsIFJpY2hhcmQgTG92ZWxsJmx0Oy9pdGVtJmd0OwogICAm
+        bHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9
+        IkBzZnguc2VhcmNoZWRfYnlfaWRlbnRpZmllciImZ3Q7CiAgICZsdDthcnJh
+        eSZndDsKICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7CiAgICAgJmx0O2hhc2gm
+        Z3Q7CiAgICAgICZsdDtpdGVtIGtleT0iVkFMVUUiJmd0OwogICAgICAgJmx0
+        O2FycmF5Jmd0OwogICAgICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7MC03MTY1
+        LTA2MDQtMSZsdDsvaXRlbSZndDsKICAgICAgICZsdDsvYXJyYXkmZ3Q7CiAg
+        ICAgICZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJUWVBFIiZn
+        dDtJU0JOJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9IlNVQlRZ
+        UEUiJmd0OyZsdDsvaXRlbSZndDsKICAgICAmbHQ7L2hhc2gmZ3Q7CiAgICAm
+        bHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0
+        OwogICZsdDtpdGVtIGtleT0iQHJmdC5hdWluaXQxIiZndDsKICAgJmx0O2Fy
+        cmF5Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtSJmx0Oy9pdGVtJmd0
+        OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRl
+        bSBrZXk9InJmdC5idGl0bGUiJmd0O01lbW9pcnMgb2YgUmljaGFyZCBMb3Zl
+        bGwgRWRnZXdvcnRoJmx0Oy9pdGVtJmd0OwogJmx0Oy9oYXNoJmd0OwombHQ7
+        L3BlcmxkYXRhJmd0Owo8L2N0eF9vYmpfYXR0cmlidXRlcz4KICA8Y3R4X29i
+        al90YXJnZXRzPgogICA8dGFyZ2V0PgogICAgPHRhcmdldF9uYW1lPk1FU1NB
+        R0VfTk9fRlVMTFRYVDwvdGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1Ymxp
+        Y19uYW1lPiZsdDtzdHJvbmcmZ3Q7Tm8gZnVsbCB0ZXh0IGF2YWlsYWJsZSBp
+        biB0aGUgTmV3IFNjaG9vbCBMaWJyYXJ5J3MgRWxlY3Ryb25pYyBIb2xkaW5n
+        cy4mbHQ7L3N0cm9uZyZndDs8L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxv
+        YmplY3RfcG9ydGZvbGlvX2lkPjwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAg
+        IDx0YXJnZXRfaWQ+MTExMDI2OTIxOTQ5MDAwPC90YXJnZXRfaWQ+CiAgICA8
+        aW50ZXJmYWNlX2lkPjExMTAyNjkyMTk0OTAwMDwvaW50ZXJmYWNlX2lkPgog
+        ICAgPGludGVyZmFjZV9uYW1lPk1FU1NBR0VfTk9fRlVMTFRYVDwvaW50ZXJm
+        YWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTExMDI2OTIxOTQ5
+        MDAxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0
+        TWVzc2FnZU5vRnVsbFR4dDwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj48
+        L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT48L3BhcnNlX3BhcmFtPgogICAg
+        PHByb3h5Pm5vPC9wcm94eT4KICAgIDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+
+        CiAgICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+CiAg
+        ICA8bm90ZT48L25vdGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50
+        aWNhdGlvbj4KICAgIDxjaGFyX3NldD48L2NoYXJfc2V0PgogICAgPGRpc3Bs
+        YXllcj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJsPjwvdGFyZ2V0X3Vy
+        bD4KICAgIDxpc19yZWxhdGVkPm5vPC9pc19yZWxhdGVkPgogICAgPGNvdmVy
+        YWdlPgogICAgIDxjb3ZlcmFnZV90ZXh0PgogICAgICA8dGhyZXNob2xkX3Rl
+        eHQ+PC90aHJlc2hvbGRfdGV4dD4KICAgICAgPGVtYmFyZ29fdGV4dD48L2Vt
+        YmFyZ29fdGV4dD4KICAgICA8L2NvdmVyYWdlX3RleHQ+CiAgICAgPGVtYmFy
+        Z28+PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAg
+        IDx0YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+TE9DQUxfQ0FUQUxPR1VFX0VY
+        X0xJQlJJU19BTEVQSDwvdGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1Ymxp
+        Y19uYW1lPkEgQ29uc29ydGl1bSBMaWJyYXJ5IE1heSBIYXZlIEEgUHJpbnQg
+        VmVyc2lvbiBBdmFpbGFibGU8L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxv
+        YmplY3RfcG9ydGZvbGlvX2lkPjwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAg
+        IDx0YXJnZXRfaWQ+MTEwOTc0OTgwNjUwMTAwPC90YXJnZXRfaWQ+CiAgICA8
+        aW50ZXJmYWNlX2lkPjExMDk3NDk4MDY1MDEwMDwvaW50ZXJmYWNlX2lkPgog
+        ICAgPGludGVyZmFjZV9uYW1lPkxPQ0FMX0NBVEFMT0dVRV9FWF9MSUJSSVNf
+        QUxFUEg8L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lk
+        PjExMDk3NDk4MDY1MDEwMTwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2Vy
+        dmljZV90eXBlPmdldEhvbGRpbmc8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJz
+        ZXI+RXhMaWJyaXM6OkFMRVBIPC9wYXJzZXI+CiAgICA8cGFyc2VfcGFyYW0+
+        dXJsPSAmYW1wO2RhdGFiYXNlPSZhbXA7aXNzbl9pbmRleD0mYW1wO2lzYm5f
+        aW5kZXg9JmFtcDtqdGxfaW5kZXg9JmFtcDtidGxfaW5kZXg9ICZhbXA7dmVy
+        c2lvbj0gJmFtcDsgYXV0aG9yX2luZGV4PSAmYW1wO2xhbmd1YWdlPSAmYW1w
+        O2R1YWxfaXNibj0gJmFtcDsgbG9uZ2VzdF93b3Jkc19zZWFyY2g9ICZhbXA7
+        IGZpbHRlcmVkX3RpdGxlX3NlYXJjaD0gJmFtcDsgaXNibl8xMz08L3BhcnNl
+        X3BhcmFtPgogICAgPHByb3h5Pm5vPC9wcm94eT4KICAgIDxjcm9zc3JlZj5u
+        bzwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZm
+        X3dhcm5pbmc+CiAgICA8bm90ZT48L25vdGU+CiAgICA8YXV0aGVudGljYXRp
+        b24+PC9hdXRoZW50aWNhdGlvbj4KICAgIDxjaGFyX3NldD5VVEY4PC9jaGFy
+        X3NldD4KICAgIDxkaXNwbGF5ZXI+QUxFUEg6OkFMRVBIPC9kaXNwbGF5ZXI+
+        CiAgICA8dGFyZ2V0X3VybD48L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRl
+        ZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJh
+        Z2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xkX3Rl
+        eHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAg
+        PC9jb3ZlcmFnZV90ZXh0PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4KICAg
+        IDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0PgogICAgPHRh
+        cmdldF9uYW1lPlVOSU9OX0NBVEFMT0dVRV9PQ0xDX1dPUkxEQ0FUPC90YXJn
+        ZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+T0NMQyBXb3JsZENh
+        dCDCriBTZXJ2aWNlPC90YXJnZXRfcHVibGljX25hbWU+CiAgICA8b2JqZWN0
+        X3BvcnRmb2xpb19pZD48L29iamVjdF9wb3J0Zm9saW9faWQ+CiAgICA8dGFy
+        Z2V0X2lkPjExMTAzMjI3NDU1NTAwMDwvdGFyZ2V0X2lkPgogICAgPGludGVy
+        ZmFjZV9pZD4xMTEwMzIyNzQ1NTUwMDA8L2ludGVyZmFjZV9pZD4KICAgIDxp
+        bnRlcmZhY2VfbmFtZT5VTklPTl9DQVRBTE9HVUVfT0NMQ19XT1JMRENBVDwv
+        aW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTExMDMy
+        Mjc0NTU1MDAxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5
+        cGU+Z2V0SG9sZGluZzwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj5GaXJz
+        dFNlYXJjaDo6V09STERDQVQ8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT51
+        cmw9aHR0cDovL3d3dy53b3JsZGNhdC5vcmcvc2VhcmNoICZhbXA7cGFydG5l
+        cl9rZXlfY29kZT1leGxpYnJpcyAmYW1wO3djYXV0aG89MTAwMjU5ODg5L3Bp
+        Y2tsZXM1PC9wYXJzZV9wYXJhbT4KICAgIDxwcm94eT5ubzwvcHJveHk+CiAg
+        ICA8Y3Jvc3NyZWY+bm88L2Nyb3NzcmVmPgogICAgPHRpbWVkaWZmX3dhcm5p
+        bmc+PC90aW1lZGlmZl93YXJuaW5nPgogICAgPG5vdGU+PC9ub3RlPgogICAg
+        PGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+CiAgICA8Y2hhcl9z
+        ZXQ+aXNvLTg4NTktMTwvY2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPldvcmxk
+        Y2F0OjpXb3JsZGNhdDwvZGlzcGxheWVyPgogICAgPHRhcmdldF91cmw+aHR0
+        cDovL3d3dy53b3JsZGNhdC5vcmcvc2VhcmNoP3E9aXNibiUzQTA3MTY1MDYw
+        NDE8L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRl
+        ZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAg
+        PHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJh
+        cmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0
+        PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4KICAgIDwvY292ZXJhZ2U+CiAg
+        IDwvdGFyZ2V0PgogICA8dGFyZ2V0PgogICAgPHRhcmdldF9uYW1lPkRPQ0RF
+        TF9BUkVTX0xDTDwvdGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19u
+        YW1lPlB1dCBUaGlzIEl0ZW0gT24gUmVzZXJ2ZSBGb3IgQSBDb3Vyc2U8L3Rh
+        cmdldF9wdWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZvbGlvX2lkPjwv
+        b2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MzI1MjAwMDAw
+        MTkwMDAwNDI8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZhY2VfaWQ+MzI1MjAw
+        MDAwMTkwMDAwNDI8L2ludGVyZmFjZV9pZD4KICAgIDxpbnRlcmZhY2VfbmFt
+        ZT5ET0NERUxfQVJFUzwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3Nl
+        cnZpY2VfaWQ+MzI1MjAwMDAwMTkwMDAwNjA8L3RhcmdldF9zZXJ2aWNlX2lk
+        PgogICAgPHNlcnZpY2VfdHlwZT5nZXREb2N1bWVudERlbGl2ZXJ5PC9zZXJ2
+        aWNlX3R5cGU+CiAgICA8cGFyc2VyPklMTGlhZDo6RERMPC9wYXJzZXI+CiAg
+        ICA8cGFyc2VfcGFyYW0+dXJsPWh0dHA6Ly9hcmVzLmxpYnJhcnkubmV3c2No
+        b29sLmVkdS9hcmVzL2FyZXMuZGxsL09wZW5VUkwgJmFtcDsgaWRfdHlwZT08
+        L3BhcnNlX3BhcmFtPgogICAgPHByb3h5Pm5vPC9wcm94eT4KICAgIDxjcm9z
+        c3JlZj55ZXM8L2Nyb3NzcmVmPgogICAgPHRpbWVkaWZmX3dhcm5pbmc+PC90
+        aW1lZGlmZl93YXJuaW5nPgogICAgPG5vdGU+UGxhY2UgdGhpcyBpdGVtIG9u
+        IHJlc2VydmUgZm9yIGEgY291cnNlIEkgYW0gdGVhY2hpbmcgKGZhY3VsdHkg
+        b25seSk8L25vdGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNh
+        dGlvbj4KICAgIDxjaGFyX3NldD51dGY4PC9jaGFyX3NldD4KICAgIDxkaXNw
+        bGF5ZXI+PC9kaXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwOi8vYXJl
+        cy5saWJyYXJ5Lm5ld3NjaG9vbC5lZHUvYXJlcy9hcmVzLmRsbC9PcGVuVVJM
+        P3JmdC5nZW5yZT1ib29rJmFtcDtyZnQuYXVpbml0PVIrTCZhbXA7cmZ0LnB1
+        Yj1JcmlzaCtVbml2ZXJzaXR5K1ByZXNzJmFtcDtyZnQuaXNibj0wLTcxNjUt
+        MDYwNC0xJmFtcDtyZnQuYXVpbml0bT1MJmFtcDtyZnQucGxhY2U9U2hhbm5v
+        biZhbXA7cmZ0LmF1Zmlyc3Q9UmljaGFyZCZhbXA7bGlua3R5cGU9b3BlbnVy
+        bCZhbXA7cmZ0X3ZhbF9mbXQ9aW5mbyUzQW9maSUyRmZtdCUzQWtldiUzQW10
+        eCUzQWJvb2smYW1wO3JmdC5hdWluaXQxPVImYW1wO3VybF92ZXI9WjM5Ljg4
+        LTIwMDQmYW1wO3JmdC5hdWxhc3Q9RWRnZXdvcnRoJmFtcDtyZnQuYnRpdGxl
+        PU1lbW9pcnMrb2YrUmljaGFyZCtMb3ZlbGwrRWRnZXdvcnRoJmFtcDtyZnJf
+        aWQ9aW5mbyUzQXNpZCUyRnByaW1vLmV4bGlicmlzZ3JvdXAuY29tJTNBcHJp
+        bW8tbnl1X2FsZXBoMDAyMzkwMDA0KFZpYStTRlgpPC90YXJnZXRfdXJsPgog
+        ICAgPGlzX3JlbGF0ZWQ+bm88L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJhZ2U+
+        CiAgICAgPGNvdmVyYWdlX3RleHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4dD48
+        L3RocmVzaG9sZF90ZXh0PgogICAgICA8ZW1iYXJnb190ZXh0PjwvZW1iYXJn
+        b190ZXh0PgogICAgIDwvY292ZXJhZ2VfdGV4dD4KICAgICA8ZW1iYXJnbz48
+        L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAgPHRh
+        cmdldD4KICAgIDx0YXJnZXRfbmFtZT5ET0NERUxfSUxMSUFEPC90YXJnZXRf
+        bmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+UmVxdWVzdCBNYXRlcmlh
+        bHMgZnJvbSBOb24tQ29uc29ydGl1bSBMaWJyYXJpZXM8L3RhcmdldF9wdWJs
+        aWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZvbGlvX2lkPjwvb2JqZWN0X3Bv
+        cnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MTExMDI3NjE0MzQ0MDAwPC90
+        YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjExMTAyNzYxNDM0NDAwMDwv
+        aW50ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9uYW1lPkRPQ0RFTF9JTExJ
+        QUQ8L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjEx
+        MTAyNzYxNDM0NDAwMTwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2Vydmlj
+        ZV90eXBlPmdldERvY3VtZW50RGVsaXZlcnk8L3NlcnZpY2VfdHlwZT4KICAg
+        IDxwYXJzZXI+SUxMaWFkOjpEREw8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJh
+        bT51cmw9aHR0cDovL2lsbC5saWJyYXJ5Lm55dS5lZHUvL2lsbGlhZC9pbGxp
+        YWQuZGxsL09wZW5VUkwgJmFtcDsgaWRfdHlwZT08L3BhcnNlX3BhcmFtPgog
+        ICAgPHByb3h5Pm5vPC9wcm94eT4KICAgIDxjcm9zc3JlZj55ZXM8L2Nyb3Nz
+        cmVmPgogICAgPHRpbWVkaWZmX3dhcm5pbmc+PC90aW1lZGlmZl93YXJuaW5n
+        PgogICAgPG5vdGU+VGhlIEludGVyLUxpYnJhcnkgTG9hbiAoSUxMKSBzZXJ2
+        aWNlIGlzIGN1cnJlbnRseSBleHBlcmllbmNpbmcgdGVjaG5pY2FsIGlzc3Vl
+        cy4gIEluIHRoZSBldmVudCB5b3UgYXJlIG5vdCBsb2dnZWQgaW4gdG8gdGhl
+        IElMTCBzeXN0ZW0sIHBsZWFzZSBwcm92aWRlIGEgZnVsbCBjaXRhdGlvbiBv
+        ZiB5b3VyIHJlcXVlc3QgdG8gJmx0O2EgaHJlZj0ibWFpbCB0bzpsaWItaWxs
+        QG55dS5lZHUgIiZndDtsaWItaWxsQG55dS5lZHUmbHQ7L2EmZ3Q7LiAgPC9u
+        b3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+CiAg
+        ICA8Y2hhcl9zZXQ+dXRmODwvY2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPjwv
+        ZGlzcGxheWVyPgogICAgPHRhcmdldF91cmw+aHR0cDovL2lsbC5saWJyYXJ5
+        Lm55dS5lZHUvL2lsbGlhZC9pbGxpYWQuZGxsL09wZW5VUkw/cmZ0LmdlbnJl
+        PWJvb2smYW1wO3JmdC5hdWluaXQ9UitMJmFtcDtyZnQucHViPUlyaXNoK1Vu
+        aXZlcnNpdHkrUHJlc3MmYW1wO3JmdC5pc2JuPTAtNzE2NS0wNjA0LTEmYW1w
+        O3JmdC5hdWluaXRtPUwmYW1wO3JmdC5wbGFjZT1TaGFubm9uJmFtcDtyZnQu
+        YXVmaXJzdD1SaWNoYXJkJmFtcDtsaW5rdHlwZT1vcGVudXJsJmFtcDtyZnRf
+        dmFsX2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4JTNBYm9vayZh
+        bXA7cmZ0LmF1aW5pdDE9UiZhbXA7dXJsX3Zlcj1aMzkuODgtMjAwNCZhbXA7
+        cmZ0LmF1bGFzdD1FZGdld29ydGgmYW1wO3JmdC5idGl0bGU9TWVtb2lycytv
+        ZitSaWNoYXJkK0xvdmVsbCtFZGdld29ydGgmYW1wO3Jmcl9pZD1pbmZvJTNB
+        c2lkJTJGcHJpbW8uZXhsaWJyaXNncm91cC5jb20lM0Fwcmltby1ueXVfYWxl
+        cGgwMDIzOTAwMDQoVmlhK1NGWCk8L3RhcmdldF91cmw+CiAgICA8aXNfcmVs
+        YXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292
+        ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xk
+        X3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAg
+        ICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4K
+        ICAgIDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0PgogICAg
+        PHRhcmdldF9uYW1lPkdPT0dMRV9CT09LX1NFQVJDSDwvdGFyZ2V0X25hbWU+
+        CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPkdvb2dsZSBCb29rIFNlYXJjaDwv
+        dGFyZ2V0X3B1YmxpY19uYW1lPgogICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+
+        PC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAgPHRhcmdldF9pZD4xMDAwMDAw
+        MDAwMDAxNzYxPC90YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjEwMDAw
+        MDAwMDAwMDE3NjE8L2ludGVyZmFjZV9pZD4KICAgIDxpbnRlcmZhY2VfbmFt
+        ZT5HT09HTEU8L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNl
+        X2lkPjEwMDAwMDAwMDAwMDI0MTU8L3RhcmdldF9zZXJ2aWNlX2lkPgogICAg
+        PHNlcnZpY2VfdHlwZT5nZXRXZWJTZWFyY2g8L3NlcnZpY2VfdHlwZT4KICAg
+        IDxwYXJzZXI+R29vZ2xlQm9va1NlYXJjaDo6VGl0bGVJc2JuPC9wYXJzZXI+
+        CiAgICA8cGFyc2VfcGFyYW0+PC9wYXJzZV9wYXJhbT4KICAgIDxwcm94eT5u
+        bzwvcHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88L2Nyb3NzcmVmPgogICAgPHRp
+        bWVkaWZmX3dhcm5pbmc+PC90aW1lZGlmZl93YXJuaW5nPgogICAgPG5vdGU+
+        PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+
+        CiAgICA8Y2hhcl9zZXQ+aXNvLTg4NTktMTwvY2hhcl9zZXQ+CiAgICA8ZGlz
+        cGxheWVyPkdvb2dsZUJvb2tTZWFyY2g6OlNlYXJjaDwvZGlzcGxheWVyPgog
+        ICAgPHRhcmdldF91cmw+aHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3M/
+        cT08L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRl
+        ZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAg
+        PHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJh
+        cmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0
+        PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4KICAgIDwvY292ZXJhZ2U+CiAg
+        IDwvdGFyZ2V0PgogICA8dGFyZ2V0PgogICAgPHRhcmdldF9uYW1lPkdPT0dM
+        RV9TQ0hPTEFSX0ZSRUU8L3RhcmdldF9uYW1lPgogICAgPHRhcmdldF9wdWJs
+        aWNfbmFtZT5Hb29nbGUgU2Nob2xhcjwvdGFyZ2V0X3B1YmxpY19uYW1lPgog
+        ICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlvX2lk
+        PgogICAgPHRhcmdldF9pZD4xMDAwMDAwMDAwMDAwMDA5PC90YXJnZXRfaWQ+
+        CiAgICA8aW50ZXJmYWNlX2lkPjEwMDAwMDAwMDAwMDE3NjE8L2ludGVyZmFj
+        ZV9pZD4KICAgIDxpbnRlcmZhY2VfbmFtZT5HT09HTEU8L2ludGVyZmFjZV9u
+        YW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjEwMDAwMDAwMDAwMDAwMDk8
+        L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZpY2VfdHlwZT5nZXRXZWJT
+        ZWFyY2g8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+R29vZ2xlU2Nob2xh
+        cjo6U2VhcmNoPC9wYXJzZXI+CiAgICA8cGFyc2VfcGFyYW0+PC9wYXJzZV9w
+        YXJhbT4KICAgIDxwcm94eT5ubzwvcHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88
+        L2Nyb3NzcmVmPgogICAgPHRpbWVkaWZmX3dhcm5pbmc+PC90aW1lZGlmZl93
+        YXJuaW5nPgogICAgPG5vdGU+PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9u
+        PjwvYXV0aGVudGljYXRpb24+CiAgICA8Y2hhcl9zZXQ+aXNvLTg4NTktMTwv
+        Y2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPkdvb2dsZVNjaG9sYXI6OlNlYXJj
+        aDwvZGlzcGxheWVyPgogICAgPHRhcmdldF91cmw+PC90YXJnZXRfdXJsPgog
+        ICAgPGlzX3JlbGF0ZWQ+bm88L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJhZ2U+
+        CiAgICAgPGNvdmVyYWdlX3RleHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4dD48
+        L3RocmVzaG9sZF90ZXh0PgogICAgICA8ZW1iYXJnb190ZXh0PjwvZW1iYXJn
+        b190ZXh0PgogICAgIDwvY292ZXJhZ2VfdGV4dD4KICAgICA8ZW1iYXJnbz48
+        L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAgPHRh
+        cmdldD4KICAgIDx0YXJnZXRfbmFtZT5SRUZXT1JLU19FWFBPUlRfVE9PTDwv
+        dGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPkltcG9ydCBD
+        aXRhdGlvbiBJbnRvIFJlZndvcmtzPC90YXJnZXRfcHVibGljX25hbWU+CiAg
+        ICA8b2JqZWN0X3BvcnRmb2xpb19pZD48L29iamVjdF9wb3J0Zm9saW9faWQ+
+        CiAgICA8dGFyZ2V0X2lkPjExMTA2OTM1NzY3ODAwMDwvdGFyZ2V0X2lkPgog
+        ICAgPGludGVyZmFjZV9pZD4xMTEwNjkzNTc2NzgwMDA8L2ludGVyZmFjZV9p
+        ZD4KICAgIDxpbnRlcmZhY2VfbmFtZT5SRUZXT1JLU19FWFBPUlRfVE9PTDwv
+        aW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTExMDY5
+        MzU3Njc4MDAxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5
+        cGU+Z2V0UmVmZXJlbmNlPC9zZXJ2aWNlX3R5cGU+CiAgICA8cGFyc2VyPlJF
+        RldPUktTOjpSRUZXT1JLUzwvcGFyc2VyPgogICAgPHBhcnNlX3BhcmFtPnJl
+        ZndvcmtzdXJsPWh0dHA6Ly93d3cucmVmd29ya3MuY29tL2V4cHJlc3MvRXhw
+        cmVzc0ltcG9ydC5hc3AgJmFtcDtwcm92aWRlcmlkID0gICZhbXA7c2hpYnVy
+        bCA9IGh0dHBzOi8vd3d3LnJlZndvcmtzLmNvbS9SV1NoaWJib2xldGgvU2hp
+        YmJvbGV0aEF1dGhlbnRpY2F0ZS5hc3AgJmFtcDsgZXhwb3J0dXJsPWh0dHA6
+        Ly9zZngubGlicmFyeS5uZXdzY2hvb2wuZWR1L25zL2NnaS9wdWJsaWMvcmVm
+        d29ya3MuY2dpPC9wYXJzZV9wYXJhbT4KICAgIDxwcm94eT55ZXM8L3Byb3h5
+        PgogICAgPGNyb3NzcmVmPnllczwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZf
+        d2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8bm90ZT48L25vdGU+
+        CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAgIDxj
+        aGFyX3NldD51dGY4PC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+PC9kaXNw
+        bGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwczovL2xvZ2luLmxpYnByb3h5
+        Lm5ld3NjaG9vbC5lZHUvbG9naW4/dXJsPWh0dHA6Ly93d3cucmVmd29ya3Mu
+        Y29tL2V4cHJlc3MvRXhwcmVzc0ltcG9ydC5hc3A/ZmlsdGVyPVJlZldvcmtz
+        K1RhZ2dlZCtGb3JtYXQmYW1wO3VybD1odHRwJTNBJTJGJTJGc2Z4LmxpYnJh
+        cnkubmV3c2Nob29sLmVkdSUyRm5zJTJGY2dpJTJGcHVibGljJTJGcmVmd29y
+        a3MuY2dpJTNGUlQlM0RCb29rJTI1MjUyQyUyQldob2xlJTI2UEIlM0RJcmlz
+        aCUyQlVuaXZlcnNpdHklMkJQcmVzcyUyNlBQJTNEU2hhbm5vbiUyNkExJTNE
+        RWRnZXdvcnRoJTI1MjUyQyUyQlJpY2hhcmQlMkIlMjZUMSUzRE1lbW9pcnMl
+        MkJvZiUyQlJpY2hhcmQlMkJMb3ZlbGwlMkJFZGdld29ydGglMjZTTiUzRDAt
+        NzE2NS0wNjA0LTEmYW1wO3ZlbmRvcj1TRlg8L3RhcmdldF91cmw+CiAgICA8
+        aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4KICAg
+        ICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0PjwvdGhy
+        ZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3Rl
+        eHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxlbWJhcmdvPjwvZW1i
+        YXJnbz4KICAgIDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0
+        PgogICAgPHRhcmdldF9uYW1lPkNPTU1FTlRTX0FCT1VUX0JPQkNBVF9MQ0w8
+        L3RhcmdldF9uYW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5Cb2JDYXQg
+        Q29tbWVudHM8L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9y
+        dGZvbGlvX2lkPjwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRf
+        aWQ+MzI1MjAwMDAwMDAwMDAwMTY8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZh
+        Y2VfaWQ+MzI1MjAwMDAwMDAwMDAwMTY8L2ludGVyZmFjZV9pZD4KICAgIDxp
+        bnRlcmZhY2VfbmFtZT5DT01NRU5UU19BQk9VVF9CT0JDQVQ8L2ludGVyZmFj
+        ZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjMyNTIwMDAwMDAwMDAw
+        MDIxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0
+        V2ViU2VydmljZTwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj5HZW5lcmlj
+        PC9wYXJzZXI+CiAgICA8cGFyc2VfcGFyYW0+SUYgKCkgImh0dHA6Ly93d3cu
+        bGlicmFyeS5ueXUuZWR1L2JvYmNhdC9jb21tZW50cyI8L3BhcnNlX3BhcmFt
+        PgogICAgPHByb3h5Pm5vPC9wcm94eT4KICAgIDxjcm9zc3JlZj5ubzwvY3Jv
+        c3NyZWY+CiAgICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5p
+        bmc+CiAgICA8bm90ZT48L25vdGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9h
+        dXRoZW50aWNhdGlvbj4KICAgIDxjaGFyX3NldD48L2NoYXJfc2V0PgogICAg
+        PGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJsPmh0dHA6
+        Ly93d3cubGlicmFyeS5ueXUuZWR1L2JvYmNhdC9jb21tZW50czwvdGFyZ2V0
+        X3VybD4KICAgIDxpc19yZWxhdGVkPm5vPC9pc19yZWxhdGVkPgogICAgPGNv
+        dmVyYWdlPgogICAgIDxjb3ZlcmFnZV90ZXh0PgogICAgICA8dGhyZXNob2xk
+        X3RleHQ+PC90aHJlc2hvbGRfdGV4dD4KICAgICAgPGVtYmFyZ29fdGV4dD48
+        L2VtYmFyZ29fdGV4dD4KICAgICA8L2NvdmVyYWdlX3RleHQ+CiAgICAgPGVt
+        YmFyZ28+PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+
+        CiAgIDx0YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+QVNLX0FfTElCUkFSSUFO
+        X0xDTDwvdGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPlN1
+        Ym1pdCBZb3VyIFF1ZXN0aW9uIE9ubGluZTwvdGFyZ2V0X3B1YmxpY19uYW1l
+        PgogICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlv
+        X2lkPgogICAgPHRhcmdldF9pZD4zMjUyMDAwMDAwMDAwMDAxNTwvdGFyZ2V0
+        X2lkPgogICAgPGludGVyZmFjZV9pZD4zMjUyMDAwMDAwMDAwMDAxNTwvaW50
+        ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9uYW1lPkFTS19BX0xJQlJBUklB
+        TjwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MzI1
+        MjAwMDAwMDAwMDAwMjA8L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZp
+        Y2VfdHlwZT5nZXRXZWJTZXJ2aWNlPC9zZXJ2aWNlX3R5cGU+CiAgICA8cGFy
+        c2VyPkdlbmVyaWM8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT5JRiAoKSAi
+        aHR0cDovL2Fuc3dlcnMubGlicmFyeS5uZXdzY2hvb2wuZWR1IjwvcGFyc2Vf
+        cGFyYW0+CiAgICA8cHJveHk+bm88L3Byb3h5PgogICAgPGNyb3NzcmVmPm5v
+        PC9jcm9zc3JlZj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZf
+        d2FybmluZz4KICAgIDxub3RlPjwvbm90ZT4KICAgIDxhdXRoZW50aWNhdGlv
+        bj48L2F1dGhlbnRpY2F0aW9uPgogICAgPGNoYXJfc2V0Pmlzby04ODU5LTE8
+        L2NoYXJfc2V0PgogICAgPGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0
+        YXJnZXRfdXJsPmh0dHA6Ly9hbnN3ZXJzLmxpYnJhcnkubmV3c2Nob29sLmVk
+        dS88L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRl
+        ZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAg
+        PHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJh
+        cmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0
+        PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4KICAgIDwvY292ZXJhZ2U+CiAg
+        IDwvdGFyZ2V0PgogIDwvY3R4X29ial90YXJnZXRzPgogPC9jdHhfb2JqPgo8
+        L2N0eF9vYmpfc2V0Pg==
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:58:18 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph002390004</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.1, ruby 2.2.5 (2016-04-26))
+      Accept:
+      - "*/*"
+      Date:
+      - Wed, 24 Aug 2016 17:58:18 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 24 Aug 2016 17:58:18 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;002390004&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph002390004&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01002390004&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;book&lt;/type&gt;
+                        &lt;title&gt;Memoirs of Richard Lovell Edgeworth&lt;/title&gt;
+                        &lt;creator&gt;Richard Lovell  Edgeworth  1744-1817.&lt;/creator&gt;
+                        &lt;contributor&gt;Maria Edgeworth 1767-1849&lt;/contributor&gt;
+                        &lt;publisher&gt;Shannon, Irish University Press&lt;/publisher&gt;
+                        &lt;creationdate&gt;1969&lt;/creationdate&gt;
+                        &lt;format&gt;2 v. illus., ports. 23 cm.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cisbn$$V0716506041; $$Cisbn$$V9780716506041&lt;/identifier&gt;
+                        &lt;subject&gt;Edgeworth, Richard Lovell, 1744-1817&lt;/subject&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYU$$LBOBST$$1Main Collection$$2(DA948.3.E2 A2 1820a )$$Sunavailable$$32$$42$$5Y$$60$$XNYU50$$YBOBST$$ZMAIN&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph002390004&lt;/lds02&gt;
+                        &lt;lds01&gt;NYU&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYU$$Sunavailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;unavailable&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
+                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
+                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;Richard Lovell,  Edgeworth  1744-1817.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R. L.  Edgeworth  (Richard Lovell), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R. L. E.  (Richard Lovell Edgeworth), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R. L.  E.  (Richard Lovell Edgeworth), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, Richard Lovell, 1744-1817.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, R&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, R. L. (Richard Lovell), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R. L. E. (Richard Lovell Edgeworth), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;R. L. E.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;E., R. L. (Richard Lovell Edgeworth), 1744-1817&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;E.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;begun by himself and concluded by his daughter Maria Edgeworth. With an introd. by Desmond Clarke.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Maria,  Edgeworth  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of,  Practical education  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Eliza,  Edgeworth  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of,  Letters for literary ladies  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of Practical education,  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth,  Miss, 1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of Letters for literary ladies,  1767-1849&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, M&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Practical education, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, E&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Letters for literary ladies, A&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of Practical education&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Author of Letters for literary ladies&lt;/creatorcontrib&gt;
+                        &lt;title&gt;Memoirs of Richard Lovell Edgeworth;&lt;/title&gt;
+                        &lt;subject&gt;Edgeworth, Richard Lovell, 1744-1817&lt;/subject&gt;
+                        &lt;subject&gt;Edgeworth, R. L. (Richard Lovell), 1744-1817&lt;/subject&gt;
+                        &lt;subject&gt;R. L. E. (Richard Lovell Edgeworth), 1744-1817&lt;/subject&gt;
+                        &lt;subject&gt;E., R. L. (Richard Lovell Edgeworth), 1744-1817&lt;/subject&gt;
+                        &lt;general&gt;Irish University Press,&lt;/general&gt;
+                        &lt;general&gt;Facsim. of the 1820 ed., with a new introd.&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph002390004&lt;/recordid&gt;
+                        &lt;isbn&gt;0716506041&lt;/isbn&gt;
+                        &lt;isbn&gt;9780716506041&lt;/isbn&gt;
+                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;1969&lt;/creationdate&gt;
+                        &lt;creationdate&gt;1820&lt;/creationdate&gt;
+                        &lt;searchscope&gt;BOBST&lt;/searchscope&gt;
+                        &lt;searchscope&gt;BOBST Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYU&lt;/searchscope&gt;
+                        &lt;scope&gt;BOBST&lt;/scope&gt;
+                        &lt;scope&gt;BOBST Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYU&lt;/scope&gt;
+                        &lt;lsr01&gt;DA948.3.E2 A2 1820a&lt;/lsr01&gt;
+                        &lt;lsr01&gt;DA948 .3 .E2 A2 1820a&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Irish University Press,&lt;/lsr02&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;Memoirs of Richard Lovell Edgeworth;&lt;/title&gt;
+                        &lt;creationdate&gt;1969&lt;/creationdate&gt;
+                        &lt;author&gt;Edgeworth, Richard Lovell, 1744-1817.&lt;/author&gt;
+                        &lt;lso01&gt;1969&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;1969&lt;/creationdate&gt;
+                        &lt;topic&gt;Edgeworth, Richard Lovell, 1744-1817&lt;/topic&gt;
+                        &lt;collection&gt;BOBST&lt;/collection&gt;
+                        &lt;prefilter&gt;books&lt;/prefilter&gt;
+                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, R&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Edgeworth, M&lt;/creatorcontrib&gt;
+                        &lt;library&gt;BOBST&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;classificationlcc&gt;D - History (general) and history of europe.&#x2013;History of Great Britain&#x2013;Ireland&#x2013;History&#x2013;By period&#x2013;Modern, 1603-&lt;/classificationlcc&gt;
+                        &lt;frbrgroupid&gt;197995669&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c1&gt;75024485&lt;/c1&gt;
+                        &lt;c2&gt;0716506041;9780716506041&lt;/c2&gt;
+                        &lt;c3&gt;memoirsofrichardloveledgeworth&lt;/c3&gt;
+                        &lt;c4&gt;1969&lt;/c4&gt;
+                        &lt;f1&gt;75024485&lt;/f1&gt;
+                        &lt;f3&gt;0716506041;9780716506041&lt;/f3&gt;
+                        &lt;f5&gt;memoirsofrichardloveledgeworth&lt;/f5&gt;
+                        &lt;f6&gt;1969&lt;/f6&gt;
+                        &lt;f7&gt;memoirs of richard lovell edgeworth&lt;/f7&gt;
+                        &lt;f8&gt;ie&lt;/f8&gt;
+                        &lt;f9&gt;2 v.&lt;/f9&gt;
+                        &lt;f10&gt;irish university press&lt;/f10&gt;
+                        &lt;f11&gt;edgeworth richard lovell 1744 1817&lt;/f11&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Kedgeworth richard lovell 1744 1817$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kbookmemoirs of richard lovell edgeworth$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;enrichment&gt;
+                        &lt;classificationlcc&gt;DA948.3.E2&lt;/classificationlcc&gt;
+                      &lt;/enrichment&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aufirst&gt;Richard Lovell,&lt;/aufirst&gt;
+                        &lt;au&gt;Edgeworth, Richard Lovell, 1744-1817&lt;/au&gt;
+                        &lt;addau&gt;Edgeworth, Maria, 1767-1849&lt;/addau&gt;
+                        &lt;btitle&gt;Memoirs of Richard Lovell Edgeworth&lt;/btitle&gt;
+                        &lt;date&gt;1969&lt;/date&gt;
+                        &lt;risdate&gt;1969.&lt;/risdate&gt;
+                        &lt;isbn&gt;0716506041&lt;/isbn&gt;
+                        &lt;isbn&gt;9780716506041&lt;/isbn&gt;
+                        &lt;format&gt;book&lt;/format&gt;
+                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
+                        &lt;cop&gt;Shannon&lt;/cop&gt;
+                        &lt;pub&gt;Irish University Press&lt;/pub&gt;
+                        &lt;lccn&gt;75024485&lt;/lccn&gt;
+                        &lt;lad01&gt;BOBST&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
+                        &lt;aulast&gt;Edgeworth&lt;/aulast&gt;
+                        &lt;genre&gt;book&lt;/genre&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DEdgeworth, Richard Lovell, 1744-1817$$EEdgeworth, Richard Lovell, 1744-1817$$INYU10000118071$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DEdgeworth, R. L. (Richard Lovell), 1744-1817$$EEdgeworth, R. L. (Richard Lovell), 1744-1817$$INYU10000118071$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DR. L. E. (Richard Lovell Edgeworth), 1744-1817$$ER. L. E. (Richard Lovell Edgeworth), 1744-1817$$INYU10000118071$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DE., R. L. (Richard Lovell Edgeworth), 1744-1817$$EE., R. L. (Richard Lovell Edgeworth), 1744-1817$$INYU10000118071$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DEdgeworth, Maria, 1767-1849$$EEdgeworth, Maria, 1767-1849$$INYU10000118070$$PY&lt;/author&gt;
+                        &lt;author&gt;$$DPractical education, Author of, 1767-1849$$EPractical education, Author of, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DEdgeworth, Eliza, 1767-1849$$EEdgeworth, Eliza, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DLetters for literary ladies, Author of, 1767-1849$$ELetters for literary ladies, Author of, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DAuthor of Practical education, 1767-1849$$EAuthor of Practical education, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DEdgeworth, Miss, 1767-1849$$EEdgeworth, Miss, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;author&gt;$$DAuthor of Letters for literary ladies, 1767-1849$$EAuthor of Letters for literary ladies, 1767-1849$$INYU10000118070$$PN&lt;/author&gt;
+                        &lt;title&gt;$$DMemoirs of Richard Lovell Edgeworth$$EMemoirs of Richard Lovell Edgeworth&lt;/title&gt;
+                        &lt;subject&gt;$$DEdgeworth, Richard Lovell, 1744-1817$$EEdgeworth, Richard Lovell, 1744-1817$$INYU10000118071$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DEdgeworth, R. L. (Richard Lovell), 1744-1817$$EEdgeworth, R. L. (Richard Lovell), 1744-1817$$INYU10000118071$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DR. L. E. (Richard Lovell Edgeworth), 1744-1817$$ER. L. E. (Richard Lovell Edgeworth), 1744-1817$$INYU10000118071$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DE., R. L. (Richard Lovell Edgeworth), 1744-1817$$EE., R. L. (Richard Lovell Edgeworth), 1744-1817$$INYU10000118071$$PN&lt;/subject&gt;
+                        &lt;callnumber&gt;$$IPRIMO$$DDA948.3.E2 A2 1820a$$E0da   0094830000.e  20000  a2 1820a$$T0&lt;/callnumber&gt;
+                        &lt;institution&gt;NYU&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:58:18 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 24 Aug 2016 17:58:18 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000010"></item><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002390004/items/NYU50002390004000020"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Wed, 24 Aug 2016 17:58:18 GMT
+recorded_with: VCR 2.9.3

@@ -23,13 +23,49 @@ en:
   application:
     title_html: BobCat
   umlaut:
+    service_type_names:
+      bd_link_to_search:
+        one: E-ZBorrow Availability
+        other: E-ZBorrow Availability
+      bd_request_prompt:
+        one: E-ZBorrow Availability
+        other: E-ZBorrow Availability
+      bd_not_available:
+        one: E-ZBorrow Availability
+        other: E-ZBorrow Availability
+      bd_request_status:
+        one: E-ZBorrow Availability
+        other: E-ZBorrow Availability
     display_sections:
       bib_tool:
         title: Citation Management Tools
       holding:
         title: Copies in Library
+      borrow_direct:
+        title: "Request a copy from E-ZBorrow"
+        prompt: "Get item from one of our partner libraries in 3-6 days. Checkout period is 12 weeks, with no renewals."
+        error: Unable to automatically determine E-ZBorrow availability for this edition.
+        workaround_link: Please check E-ZBorrow for this item.
     permalink:
       name: Create a stable link to this page
+    services:
+      borrow_direct_adaptor:
+        bd_link_to_search:
+          display_text: Check E-ZBorrow
+          notes: ""
+        bd_request_prompt:
+          pickup_prompt: "Please select a pickup location"
+          request: Request
+          pickup_validation: "You must choose a pickup location"
+          progress: "Checking E-ZBorrow availability for you"
+          direct_link: "You can also check E-ZBorrow for other editions."
+        bd_not_available:
+          display_text: "This edition is not available via E-ZBorrow."
+          workaround_link: "You can check E-ZBorrow for other editions."
+        bd_request_status:
+          progress: "Placing the request to E-ZBorrow"
+          error:  "There was a problem submitting your request to E-ZBorrow."
+          confirmation: "Your request has been submitted to E-ZBorrow.  You will receive email confirmation shortly. Request number:"
   resolve:
     holdings:
       request_text: Request
