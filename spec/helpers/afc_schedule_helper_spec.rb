@@ -20,7 +20,7 @@ describe AFCScheduleHelper do
   end
   describe "#afc_schedule_url" do
     subject { helper.afc_schedule_url }
-    it { should eql "http://library.nyu.edu/forms/afc/faculty_loan.html" }
+    it { should eql "https://nyu.qualtrics.com/jfe/form/SV_eKBzul896KmAWVL" }
   end
   describe "#afc_schedule_authorizer" do
     subject { helper.send(:afc_schedule_authorizer) }
