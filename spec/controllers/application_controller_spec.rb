@@ -1,6 +1,14 @@
 require 'rails_helper'
 describe ApplicationController  do
   let(:request) { create(:available_request) }
+
+  describe "#current_user_dev" do
+    subject { controller.current_user_dev }
+    it "should not raise any errors" do
+      expect { subject }.to_not raise_error
+    end
+  end
+
   describe '#url_for_request' do
     subject { controller.url_for_request(request) }
     it { should eq "http://test.host/resolve?umlaut.request_id=#{request.id}"}

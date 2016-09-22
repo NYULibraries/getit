@@ -152,7 +152,7 @@ default:
       # Uncomment to link through this 'internal' URL instead
       # of following permalinks. jrochkind does this to use
       # a WAYFless shibboleth login with EZProxy.
-      #direct_link_base: 'https://babel.hathitrust.org/shcgi/'
+      # direct_link_base: 'https://babel.hathitrust.org/shcgi/'
       #
       # This next says:
       # Don't add HathiTrust fulltext if there's already a
@@ -302,6 +302,23 @@ NYU:
           existing_type: fulltext
       service_types:
           - document_delivery
+    EZBorrow:
+      type: BorrowDirectAdaptor
+      priority: d
+      check_library_codes:
+        - BOBST
+      library_symbol: <%= ENV['EZBORROW_NYU_LIBRARY_SYMBOL'] %>
+      api_key: <%= ENV['EZBORROW_NYU_API_KEY'] %>
+      find_item_patron_barcode: <%= ENV['EZBORROW_NYU_PATRON_BARCODE'] %>
+      html_query_base_url: https://login.library.nyu.edu/ezborrow
+      #
+      # Optional params
+      # disable BD api entirely:
+      # use_bd_api: false
+      # Set timeout for BD api in seconds (default 20 seconds)
+      http_timeout: 60
+      # log all BD API calls for analysis
+      bd_api_log_level: info
 NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU
@@ -438,6 +455,23 @@ NS:
       priority: d
       status: active
       base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
+    EZBorrow:
+      type: BorrowDirectAdaptor
+      priority: d
+      check_library_codes:
+        - TNSFO
+      library_symbol: <%= ENV['EZBORROW_NS_LIBRARY_SYMBOL'] %>
+      api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
+      find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
+      html_query_base_url: https://login.library.nyu.edu/ezborrow?ls=THENEWSCHOOL
+      #
+      # Optional params
+      # disable BD api entirely:
+      #use_bd_api: false
+      # Set timeout for BD api in seconds (default 20 seconds)
+      http_timeout: 60
+      # log all BD API calls for analysis
+      bd_api_log_level: info
 
 NYSID:
   display_name: New York School of Interior Design Library

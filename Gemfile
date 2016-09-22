@@ -42,6 +42,8 @@ gem 'umlaut-primo', '~> 1.0.0'
 
 gem 'dalli', '~> 2.7.4'
 
+gem 'umlaut_borrow_direct', '~> 1.0.2'
+
 # Development gems
 group :development do
   gem 'progress_bar', '~> 1.0.0'
@@ -58,6 +60,7 @@ group :development, :test, :cucumber do
   # Use pry as the REPL
   gem 'pry', '~> 0.10.1'
   gem 'guard-rspec', require: false
+  gem 'rspec-its', '~> 1.2.0'
 end
 
 group :test, :cucumber do

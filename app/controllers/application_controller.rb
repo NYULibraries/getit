@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
     return
   end
 
+  def current_user_dev
+    # Assuming you have a dev user on your local environment
+    @current_user ||= User.where(institution_code: :NYU).first
+  end
+  alias_method :current_user, :current_user_dev if Rails.env.development?
+
   prepend_before_filter :passive_login
   def passive_login
     if !cookies[:_check_passive_login]
