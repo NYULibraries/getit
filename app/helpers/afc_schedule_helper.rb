@@ -4,7 +4,7 @@ module AFCScheduleHelper
   end
 
   def afc_schedule_url
-    @afc_schedule_url ||= 'http://library.nyu.edu/forms/afc/faculty_loan.html'
+    @afc_schedule_url ||= 'https://nyu.qualtrics.com/jfe/form/SV_eKBzul896KmAWVL'
   end
 
   private
