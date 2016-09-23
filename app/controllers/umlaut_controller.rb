@@ -22,10 +22,38 @@ class UmlautController < ApplicationController
   def institutional_config
     # Insitution for the closure.
     institution = current_primary_institution
+    logged_in_user = current_user
+    logged_in_user_institution = institution_from_current_user
+    ezborrow_authorizer = EZBorrowAuthorizer.new(logged_in_user) unless current_user.nil?
     self.umlaut_config.configure do
       if institution and institution.views and institution.views["sfx_base_url"]
         sfx do
           sfx_base_url institution.views["sfx_base_url"]
+        end
+      end
+      # Configure EZBorrow/BorrowDirect
+      borrow_direct do
+        # Reset BorrowDirect/EZBorrow defaults based on current institution
+        if logged_in_user_institution.try(:services).try(:[], "EZBorrow")
+          BorrowDirect::Defaults.api_key = logged_in_user_institution.services["EZBorrow"]["api_key"]
+          # Should we only rely on a local availability check, or check Ezborrow too?
+          # https://github.com/team-umlaut/umlaut_borrow_direct#local-availability-check
+          local_availability_check proc {|request, service|
+            # Display the EZBorrow check availability if:
+            # => 1. There are not any holdings that match an available status at the current institution library
+            # => 2. The user is logged in
+            # => 3. The logged in use is authorized to use ezborrow for their institution
+            available_at_library = request.get_service_type(:holding).find do |sr|
+              UmlautController.umlaut_config.holdings.available_statuses.include?((sr.view_data[:status].is_a?(Exlibris::Nyu::Aleph::Status)) ? sr.view_data[:status].value : sr.view_data[:status]) &&
+              logged_in_user_institution.services["EZBorrow"]["check_library_codes"].include?(sr.service_data[:library].code) &&
+              sr.view_data[:match_reliability] != ServiceResponse::MatchUnsure
+            end
+            !(logged_in_user.present? && ezborrow_authorizer.authorized?) || available_at_library.present?
+          }
+        else
+          local_availability_check proc {|request, service|
+            true
+          }
         end
       end
     end
@@ -189,11 +217,13 @@ class UmlautController < ApplicationController
     excerpts = resolve_sections.remove_section("excerpts")
     table_of_contents = resolve_sections.remove_section("table_of_contents")
     abstract = resolve_sections.remove_section("abstract")
+    borrow_direct = UmlautBorrowDirect.resolve_section_definition
 
     # And insert them in the desired order
     resolve_sections.insert_section(search_inside, :before => "fulltext")
     resolve_sections.insert_section(holding, :after => "fulltext")
-    resolve_sections.insert_section(document_delivery, :after => "holding")
+    resolve_sections.insert_section(borrow_direct, :after => "holding")
+    resolve_sections.insert_section(document_delivery, :after => "borrow_direct")
     resolve_sections.insert_section(audio, :after => "document_delivery")
     resolve_sections.insert_section(excerpts, :after => "audio")
     resolve_sections.insert_section(table_of_contents, :after => "excerpts")
@@ -202,6 +232,10 @@ class UmlautController < ApplicationController
     # Reorder sidebar sections as well
     wayfinder = resolve_sections.remove_section("wayfinder")
     resolve_sections.insert_section(wayfinder, before: "questions")
+
+    # Supplies logic for when to highlight borrow_direct section
+    # add_section_highlights_filter! UmlautBorrowDirect.section_highlights_filter
+
   end
 
   def create_collection
@@ -263,4 +297,5 @@ class UmlautController < ApplicationController
     return services
   end
   private :services
+
 end

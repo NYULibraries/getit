@@ -51,7 +51,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       lastname: omniauth_lastname,
       institution_code: omniauth_institution,
       aleph_id: omniauth_aleph_id,
-      patron_status: omniauth_patron_status
+      patron_status: omniauth_patron_status,
+      barcode: omniauth_barcode
     }
   end
 
@@ -90,6 +91,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def omniauth_patron_status
     unless omniauth_aleph_identity.blank?
       @omniauth_patron_status ||= omniauth_aleph_identity.properties.patron_status
+    end
+  end
+
+  def omniauth_barcode
+    unless omniauth_aleph_identity.blank?
+      @omniauth_barcode ||= omniauth_aleph_identity.properties.barcode
     end
   end
 end
