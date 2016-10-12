@@ -11,55 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706162031) do
+ActiveRecord::Schema.define(version: 20161012201257) do
 
-  create_table "clickthroughs", force: true do |t|
-    t.integer  "request_id",          default: 0, null: false
-    t.integer  "service_response_id", default: 0, null: false
-    t.datetime "created_at",                      null: false
+  create_table "clickthroughs", force: :cascade do |t|
+    t.integer  "request_id",          limit: 4, default: 0, null: false
+    t.integer  "service_response_id", limit: 4, default: 0, null: false
+    t.datetime "created_at",                                null: false
   end
 
   add_index "clickthroughs", ["created_at"], name: "click_created_idx", using: :btree
   add_index "clickthroughs", ["request_id"], name: "click_req_id", using: :btree
   add_index "clickthroughs", ["service_response_id"], name: "click_serv_resp_idx", using: :btree
 
-  create_table "dispatched_services", force: true do |t|
-    t.integer  "request_id",     default: 0,   null: false
-    t.string   "service_id",     default: "0", null: false
-    t.datetime "updated_at",                   null: false
-    t.text     "exception_info"
-    t.string   "status",                       null: false
+  create_table "dispatched_services", force: :cascade do |t|
+    t.integer  "request_id",     limit: 4,     default: 0,   null: false
+    t.string   "service_id",     limit: 255,   default: "0", null: false
+    t.datetime "updated_at",                                 null: false
+    t.text     "exception_info", limit: 65535
+    t.string   "status",         limit: 255,                 null: false
     t.datetime "created_at"
   end
 
   add_index "dispatched_services", ["request_id", "service_id"], name: "dptch_request_id", using: :btree
 
-  create_table "permalinks", force: true do |t|
-    t.integer "referent_id",                        default: 0
-    t.date    "created_on",                                     null: false
-    t.text    "context_obj_serialized"
+  create_table "permalinks", force: :cascade do |t|
+    t.integer "referent_id",            limit: 4,     default: 0
+    t.date    "created_on",                                       null: false
+    t.text    "context_obj_serialized", limit: 65535
     t.string  "orig_rfr_id",            limit: 256
     t.date    "last_access"
   end
 
   add_index "permalinks", ["referent_id"], name: "plink_referent_idx", using: :btree
 
-  create_table "referent_values", force: true do |t|
-    t.integer  "referent_id",                 default: 0,     null: false
-    t.string   "key_name",         limit: 50, default: "",    null: false
-    t.text     "value"
-    t.string   "normalized_value"
-    t.boolean  "metadata",                    default: false, null: false
-    t.boolean  "private_data",                default: false, null: false
+  create_table "referent_values", force: :cascade do |t|
+    t.integer  "referent_id",      limit: 4,     default: 0,     null: false
+    t.string   "key_name",         limit: 50,    default: "",    null: false
+    t.text     "value",            limit: 65535
+    t.string   "normalized_value", limit: 255
+    t.boolean  "metadata",                       default: false, null: false
+    t.boolean  "private_data",                   default: false, null: false
     t.datetime "created_at"
   end
 
   add_index "referent_values", ["key_name", "normalized_value"], name: "by_name_and_normal_val", using: :btree
   add_index "referent_values", ["referent_id", "key_name", "normalized_value"], name: "rft_val_referent_idx", using: :btree
 
-  create_table "referents", force: true do |t|
-    t.string   "atitle"
-    t.string   "title"
+  create_table "referents", force: :cascade do |t|
+    t.string   "atitle",     limit: 255
+    t.string   "title",      limit: 255
     t.string   "issn",       limit: 10
     t.string   "isbn",       limit: 13
     t.string   "year",       limit: 4
@@ -74,15 +74,15 @@ ActiveRecord::Schema.define(version: 20160706162031) do
   add_index "referents", ["volume"], name: "index_referents_on_volume", using: :btree
   add_index "referents", ["year", "volume"], name: "by_year", using: :btree
 
-  create_table "requests", force: true do |t|
-    t.string   "session_id",             limit: 100, default: "", null: false
-    t.integer  "referent_id",                        default: 0,  null: false
-    t.string   "referrer_id"
-    t.datetime "created_at",                                      null: false
-    t.string   "client_ip_addr"
+  create_table "requests", force: :cascade do |t|
+    t.string   "session_id",             limit: 100,      default: "", null: false
+    t.integer  "referent_id",            limit: 4,        default: 0,  null: false
+    t.string   "referrer_id",            limit: 255
+    t.datetime "created_at",                                           null: false
+    t.string   "client_ip_addr",         limit: 255
     t.boolean  "client_ip_is_simulated"
     t.string   "contextobj_fingerprint", limit: 32
-    t.text     "http_env"
+    t.text     "http_env",               limit: 16777215
   end
 
   add_index "requests", ["client_ip_addr"], name: "index_requests_on_client_ip_addr", using: :btree
@@ -91,48 +91,48 @@ ActiveRecord::Schema.define(version: 20160706162031) do
   add_index "requests", ["referent_id", "referrer_id"], name: "context_object_idx", using: :btree
   add_index "requests", ["session_id"], name: "req_sess_idx", using: :btree
 
-  create_table "service_responses", force: true do |t|
-    t.string   "service_id",              limit: 25,                null: false
-    t.string   "response_key",                         default: ""
-    t.string   "value_string"
-    t.string   "value_alt_string"
-    t.text     "value_text"
-    t.string   "display_text"
+  create_table "service_responses", force: :cascade do |t|
+    t.string   "service_id",              limit: 25,                 null: false
+    t.string   "response_key",            limit: 255,   default: ""
+    t.string   "value_string",            limit: 255
+    t.string   "value_alt_string",        limit: 255
+    t.text     "value_text",              limit: 65535
+    t.string   "display_text",            limit: 255
     t.string   "url",                     limit: 4000
-    t.text     "notes"
-    t.text     "service_data"
+    t.text     "notes",                   limit: 65535
+    t.text     "service_data",            limit: 65535
     t.datetime "created_at"
-    t.string   "service_type_value_name"
-    t.integer  "request_id"
+    t.string   "service_type_value_name", limit: 255
+    t.integer  "request_id",              limit: 4
   end
 
   add_index "service_responses", ["request_id"], name: "index_service_responses_on_request_id", using: :btree
   add_index "service_responses", ["service_id", "response_key", "value_string", "value_alt_string"], name: "svc_resp_service_id", using: :btree
 
-  create_table "sfx_urls", force: true do |t|
-    t.string "url"
+  create_table "sfx_urls", force: :cascade do |t|
+    t.string "url", limit: 255
   end
 
   add_index "sfx_urls", ["url"], name: "index_sfx_urls_on_url", using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "firstname"
-    t.string   "lastname"
+  create_table "users", force: :cascade do |t|
+    t.string   "username",           limit: 255
+    t.string   "email",              limit: 255
+    t.string   "firstname",          limit: 255
+    t.string   "lastname",           limit: 255
     t.datetime "refreshed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sign_in_count",      default: 0,  null: false
+    t.integer  "sign_in_count",      limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "provider",           default: "", null: false
-    t.string   "aleph_id"
-    t.string   "institution_code"
-    t.string   "patron_status"
-    t.string   "barcode"
+    t.string   "current_sign_in_ip", limit: 255
+    t.string   "last_sign_in_ip",    limit: 255
+    t.string   "provider",           limit: 255, default: "", null: false
+    t.string   "aleph_id",           limit: 255
+    t.string   "institution_code",   limit: 255
+    t.string   "patron_status",      limit: 255
+    t.string   "barcode",            limit: 255
   end
 
   add_index "users", ["username", "provider"], name: "index_users_on_username_and_provider", unique: true, using: :btree
