@@ -243,6 +243,7 @@ GEM
     hashie (3.4.4)
     highline (1.7.8)
     hike (1.2.3)
+    honeybadger (2.6.1)
     htmlentities (4.3.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -527,6 +528,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   formaggio!
   guard-rspec
+  honeybadger (~> 2.0)
   jquery-rails (~> 3.1.0)
   mustache (= 0.99.4)
   mustache-rails!
