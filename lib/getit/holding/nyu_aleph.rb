@@ -21,7 +21,7 @@ module GetIt
       end
 
       def requestable?
-        ['yes', 'deferred'].include?(requestability) && from_aleph?
+        (['yes', 'deferred'].include?(requestability) && from_aleph?)
       end
 
       def ill?

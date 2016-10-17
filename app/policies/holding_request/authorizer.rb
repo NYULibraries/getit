@@ -10,7 +10,7 @@ class HoldingRequest
     end
 
     # Status is requestable if the Holding is in an
-    # ILL state, Ezborrow state or the combination
+    # ILL state, Ezborrow state, or the combination
     # of User and Holding is requestable
     def requestable?
       (ill? || available? || recallable? ||
@@ -26,6 +26,7 @@ class HoldingRequest
     end
 
     def available?
+
       holding.available? && privileges.hold_request?
     end
 

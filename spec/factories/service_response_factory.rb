@@ -293,6 +293,16 @@ FactoryGirl.define do
       end
     end
 
+    trait :available_isaw_nyu_aleph do
+      isaw_sub_library = Exlibris::Aleph::SubLibrary.new('NISAW', 'NYU Inst Study Ancient World', admin_library)
+      status = nyu_aleph_status('Available')
+      requestability = 'no'
+      status_hash = {status: status, requestability: requestability, library: isaw_sub_library}
+      service_data do
+        nyu_aleph_service_data.merge(status_hash)
+      end
+    end
+
     trait :avery_fisher_overz_collection do
       avery_fisher_sub_library = Exlibris::Aleph::SubLibrary.new('BAFC', 'NYU Bobst Avery Fisher Center', admin_library)
       collection = Exlibris::Aleph::Collection.new('OVERZ', 'Oversize Collection', sub_library)
@@ -432,6 +442,7 @@ FactoryGirl.define do
     factory :offsite_new_school_oversize_collection_service_response, traits: [:holding, :primo_source, :offsite_new_school_oversize_collection]
     factory :avery_fisher_nyu_aleph_service_response, traits: [:holding, :primo_source, :avery_fisher_nyu_aleph]
     factory :avery_fisher_not_main_nyu_aleph_service_response, traits: [:holding, :primo_source, :avery_fisher_overz_collection]
+    factory :isaw_nyu_aleph_service_response, traits: [:holding, :primo_source, :available_isaw_nyu_aleph]
     factory :on_shelf_nyu_aleph_service_response, traits: [:holding, :primo_source, :on_shelf_nyu_aleph]
     factory :available_nyu_aleph_service_response, traits: [:holding, :primo_source, :available_nyu_aleph]
     factory :checked_out_nyu_aleph_service_response, traits: [:holding, :primo_source, :checked_out_nyu_aleph]

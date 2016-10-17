@@ -3,12 +3,17 @@
 #   - If the holding is from an NYU sublibrary,
 #     - Entire item request
 #     - Scanned portion
+#   - If the holding is from ISAW,
+#     - Scanned portion
 #   - Otherwise set the appropriate request text for the sublibrary
 #     - only offer the entire item option
 -%>
 <%= request_form(:available) do %>
   <% if (["BOBST", "NCOUR"].include?(holding.sub_library.code)) %>
     <%= entire_request_option(:available) %><br />
+    <%= scan_request_option(:available) %>
+  <% elsif ["NISAW"].include?(holding.sub_library.code) %>
+    <%= pickup_locations_field_set %>
     <%= scan_request_option(:available) %>
   <% else %>
     <%= request_option(:available) do %>
