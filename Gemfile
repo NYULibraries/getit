@@ -93,5 +93,3 @@ gem 'devise', '~> 3.5.4'
 
 # New Relic performance monitoring
 gem 'newrelic_rpm', '~> 3.9.0'
-
-gem 'honeybadger', '~> 2.0'
