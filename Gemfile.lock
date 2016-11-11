@@ -25,15 +25,6 @@ GIT
       rvm-capistrano (~> 1.5)
 
 GIT
-  remote: git://github.com/NYULibraries/mustache-rails.git
-  revision: d219b298ddc94ca0c4b749125a803f74157ddd03
-  tag: v0.2.3
-  specs:
-    mustache-rails (0.2.3)
-      actionpack (>= 3.1)
-      mustache (~> 0.99.4)
-
-GIT
   remote: git://github.com/NYULibraries/omniauth-nyulibraries.git
   revision: 7c208c53e18c8140aebff69c3ba0714309b1143f
   tag: v2.1.0
@@ -303,7 +294,6 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mustache (0.99.4)
     mysql2 (0.3.21)
     nenv (0.3.0)
     net-scp (1.2.1)
@@ -543,8 +533,6 @@ DEPENDENCIES
   formaggio!
   guard-rspec
   jquery-rails (~> 3.1.0)
-  mustache (= 0.99.4)
-  mustache-rails!
   mysql2 (~> 0.3.13)
   newrelic_rpm (~> 3.9.0)
   nyulibraries_institutions!
