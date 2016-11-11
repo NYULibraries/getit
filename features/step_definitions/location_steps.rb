@@ -32,7 +32,7 @@ Then(/^I should see the NYU Shanghai view$/) do
 end
 
 Then(/^I should see the NYU Health Science Library view$/) do
-  expect(html).to have_content "NYU Health Sciences Libraries"
+  expect(html).to have_content "NYU Health Sciences Library"
 end
 
 Then(/^I should see the New School view$/) do

@@ -25,7 +25,7 @@
 
 # Ignore public assets and sprites
 /public/assets
-# /app/assets/images/icons-*.png
+app/assets/images/nyulibraries_stylesheets/icons-*.png
 
 # Ignore coverage
 coverage/
