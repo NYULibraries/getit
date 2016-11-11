@@ -121,8 +121,8 @@ ActiveRecord::Schema.define(version: 20161012201257) do
     t.string   "firstname",          limit: 255
     t.string   "lastname",           limit: 255
     t.datetime "refreshed_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
     t.integer  "sign_in_count",      limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

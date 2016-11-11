@@ -1,3 +1,3 @@
 #= require umlaut
-#= require bobcat
+#= require nyulibraries_javascripts/bobcat
 #= require_tree ./search
