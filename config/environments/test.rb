@@ -38,4 +38,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.force_ssl = false
+
+  config.active_support.test_order = :sorted
 end
