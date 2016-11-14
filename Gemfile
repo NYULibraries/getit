@@ -61,8 +61,8 @@ end
 
 group :test, :cucumber do
   # Phantomjs for headless browser testing
-  gem 'phantomjs'#, '>= 1.9.0'
-  gem 'poltergeist'#, '~> 1.5.0'
+  gem 'phantomjs', '~> 2.1.1'
+  gem 'poltergeist', '~> 1.11.0'
   # Use Coveralls.io to track testing coverage
   gem 'coveralls', '~> 0.7.11', require: false
   # Use VCR for testing with deterministic HTTP interactions

@@ -540,8 +540,8 @@ DEPENDENCIES
   nyulibraries_stylesheets!
   nyulibraries_templates!
   omniauth-nyulibraries!
-  phantomjs
-  poltergeist
+  phantomjs (~> 2.1.1)
+  poltergeist (~> 1.11.0)
   progress_bar (~> 1.0.0)
   pry (~> 0.10.1)
   rails (~> 4.2.7.1)
