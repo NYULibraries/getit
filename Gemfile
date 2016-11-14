@@ -21,17 +21,13 @@ gem 'jquery-rails', '~> 3.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', '~> 0.12.0'
 
-# Use the Compass CSS framework for sprites, etc.
-gem 'compass-rails', '~> 2.0.0'
-
-# Use mustache for templating
-# Fix to 0.99.4 cuz 0.99.5 broke my shit.
-gem 'mustache', '0.99.4'
-gem 'mustache-rails', github: 'NYULibraries/mustache-rails', tag: 'v0.2.3', require: 'mustache/railtie'
-
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.6.8'
-# gem 'nyulibraries-assets', path: '/apps/nyulibraries-assets'
+gem 'nyulibraries_stylesheets', git: 'https://github.com/NYULibraries/nyulibraries_stylesheets'
+gem 'nyulibraries_templates', git: 'https://github.com/NYULibraries/nyulibraries_templates'
+gem 'nyulibraries_institutions', git: 'https://github.com/NYULibraries/nyulibraries_institutions'
+gem 'nyulibraries_javascripts', git: 'https://github.com/NYULibraries/nyulibraries_javascripts'
+# Use higher version of Compass CSS framework for sprites, etc.
+gem 'compass-rails', '~> 2.0.0'
 
 # Deploy the application with Formaggio deploy recipes
 gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.5.2'
@@ -65,8 +61,8 @@ end
 
 group :test, :cucumber do
   # Phantomjs for headless browser testing
-  gem 'phantomjs', '>= 1.9.0'
-  gem 'poltergeist', '~> 1.5.0'
+  gem 'phantomjs', '~> 2.1.1'
+  gem 'poltergeist', '~> 1.11.0'
   # Use Coveralls.io to track testing coverage
   gem 'coveralls', '~> 0.7.11', require: false
   # Use VCR for testing with deterministic HTTP interactions

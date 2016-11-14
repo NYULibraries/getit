@@ -7622,4 +7622,42 @@ http_interactions:
         L2N0eF9vYmpfc2V0Pg==
     http_version: 
   recorded_at: Tue, 24 May 2016 22:20:31 GMT
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-10T13:48:04-05:00&ctx_ver=Z39.88-2004&req.ip=149.31.0.0&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rft.aufirst=Harold%20Wallace,&rft.aulast=Ross&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.language=eng&rft.lccn=%20%202011201780&rft.object_id=110975413975944&rft.oclcnum=1760231&rft.place=New%20York&rft.pub=F-R%20Pub.%20Corp.&rft.stitle=NEW%20YORKER&rft.title=The%20New%20Yorker&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Exlibris
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 10 Nov 2016 18:48:04 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
+        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
+        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
+        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Thu, 10 Nov 2016 18:48:04 GMT
 recorded_with: VCR 2.9.3

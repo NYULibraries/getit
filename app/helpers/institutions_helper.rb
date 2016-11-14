@@ -1,5 +1,5 @@
 module InstitutionsHelper
-  include Nyulibraries::Assets::InstitutionsHelper
+  include ::NyulibrariesInstitutions::InstitutionHelper
 
   # Override default institution_param_name from nyulibraries-assets helper
   # default is 'institution'
