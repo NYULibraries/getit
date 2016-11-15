@@ -7660,4 +7660,1782 @@ http_interactions:
         were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
     http_version: 
   recorded_at: Thu, 10 Nov 2016 18:48:04 GMT
+- request:
+    method: post
+    uri: http://solr.library.edu/select?wt=ruby
+    body:
+      encoding: US-ASCII
+      string: fq=type%3ASfx4%5C%3A%5C%3ACu%5C%3A%5C%3AAzTitle&sort=score+desc%2C+title_sort_s+asc&q=NEW+YORKER&fl=*+score&qf=title_text%5E1.0&defType=edismax&bq=title_exact_sm%3ANEW%5C+YORKER%5E10.0&start=0&rows=20
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=UTF-8
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 15 Nov 2016 20:30:25 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{'responseHeader'=>{'status'=>0,'QTime'=>1,'params'=>{'q'=>'NEW YORKER','defType'=>'edismax','qf'=>'title_text^1.0','fl'=>'*
+        score','start'=>'0','fq'=>'type:Sfx4\\\\:\\\\:Cu\\\\:\\\\:AzTitle','sort'=>'score
+        desc, title_sort_s asc','rows'=>'20','wt'=>'ruby','bq'=>'title_exact_sm:NEW\\\\
+        YORKER^10.0'}},'response'=>{'numFound'=>1,'start'=>0,'maxScore'=>12.566096,'docs'=>[{'id'=>'Sfx4::Cu::AzTitle
+        33300','object_id_ss'=>'110975413975944','title_display_ss'=>'The New Yorker','issn_ss'=>'0028-792X','isbn_ss'=>'','lccn_ss'=>'2011201780','_version_'=>1550859505147838465,'timestamp'=>'2016-11-13T05:27:58.34Z','score'=>12.566096}]}}\n"
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:30:26 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxcooper?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:39:02-05:00&ctx_ver=Z39.88-2004&req.ip=199.98.16.0&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:39:03 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCjxjdHhf
+        b2JqX3NldD4KIDxjdHhfb2JqIGlkZW50aWZpZXI9IiI+CiAgPGN0eF9vYmpf
+        YXR0cmlidXRlcz4mbHQ7cGVybGRhdGEmZ3Q7CiAmbHQ7aGFzaCZndDsKICAm
+        bHQ7aXRlbSBrZXk9InJmdC5pc3NuIiZndDswMDI4LTc5MlgmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJjdHhfdGltIiZndDsyMDE2LTExLTE1VDE1
+        OjM5OjAyLTA1OjAwJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4
+        LnNob3dfYXZhaWxhYmlsaXR5IiZndDsxJmx0Oy9pdGVtJmd0OwogICZsdDtp
+        dGVtIGtleT0iX3N0YXNoIiZndDsKICAgJmx0O2hhc2gmZ3Q7CiAgICAmbHQ7
+        aXRlbSBrZXk9IkByZnRfaWQiJmd0OwogICAgICZsdDthcnJheSZndDsKICAg
+        ICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtpbmZvOmxjY24vMjAxMTIwMTc4MCZs
+        dDsvaXRlbSZndDsKICAgICAmbHQ7L2FycmF5Jmd0OwogICAgJmx0Oy9pdGVt
+        Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSJAcmZyX2lkIiZndDsKICAgICAmbHQ7
+        YXJyYXkmZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7aW5mbzpzaWQv
+        c2Z4aXQuY29tOmNpdGF0aW9uJmx0Oy9pdGVtJmd0OwogICAgICZsdDsvYXJy
+        YXkmZ3Q7CiAgICAmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvaGFzaCZndDsKICAm
+        bHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJjdHhfdmVyIiZndDtaMzku
+        ODgtMjAwNCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5laXNz
+        biImZ3Q7MjE2My0zODI3Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        QHJmcl9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iMCImZ3Q7aW5mbzpzaWQvc2Z4aXQuY29tOmNpdGF0aW9uJmx0Oy9pdGVt
+        Jmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7
+        aXRlbSBrZXk9InJmdC5wbGFjZSImZ3Q7TmV3IFlvcmsmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJAc2Z4LnN1YmNhdGVnb3J5IiZndDsKICAgJmx0
+        O2FycmF5Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtDdXJyZW50IEV2
+        ZW50cyAmYW1wO2FtcDsgTmV3cyZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iMSImZ3Q7R2VuZXJhbCBhbmQgT3RoZXJzJmx0Oy9pdGVtJmd0Owog
+        ICAgJmx0O2l0ZW0ga2V5PSIyIiZndDtMaXRlcmF0dXJlJmx0Oy9pdGVtJmd0
+        OwogICAgJmx0O2l0ZW0ga2V5PSIzIiZndDtQZXJmb3JtaW5nIEFydHMsIFRy
+        YXZlbCBhbmQgTGVpc3VyZSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iNCImZ3Q7Q29uc2VydmF0aW9uJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0
+        ZW0ga2V5PSI1IiZndDtKb3VybmFsaXNtLCBNYXNzIENvbW11bmljYXRpb24s
+        IE1lZGlhICZhbXA7YW1wOyBQdWJsaXNoaW5nJmx0Oy9pdGVtJmd0OwogICAm
+        bHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9
+        InJmdC5sY2NuIiZndDsgIDIwMTEyMDE3ODAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJAcmZ0X2lkIiZndDsKICAgJmx0O2FycmF5Jmd0OwogICAg
+        Jmx0O2l0ZW0ga2V5PSIwIiZndDtpbmZvOmxjY24vMjAxMTIwMTc4MCZsdDsv
+        aXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAg
+        Jmx0O2l0ZW0ga2V5PSJzZngucmVzcG9uc2VfdHlwZSImZ3Q7bXVsdGlfb2Jq
+        X3htbCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVf
+        Y2hhcl9zZXQiJmd0OzEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJy
+        ZXEuc2Vzc2lvbl9pZCImZ3Q7czhCQUU2QjEyLUFCNzMtMTFFNi1COUVCLTNG
+        OUFGRTRDMUFFNCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InVybF92
+        ZXIiJmd0O1ozOS44OC0yMDA0Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iY3R4X2VuYyImZ3Q7VVRGLTgmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0g
+        a2V5PSJyZnQub2JqZWN0X3R5cGUiJmd0O0pPVVJOQUwmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJAc2Z4LnJlbGF0ZWRfb2JqZWN0X2lkcyImZ3Q7
+        CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7MTAw
+        MDAwMDAwMDMxNjQ2OSZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsK
+        ICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQubGFuZ3VhZ2Ui
+        Jmd0O2VuZyZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5oYXNf
+        ZnVsbF90ZXh0IiZndDt5ZXMmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5
+        PSJyZnQub2JqZWN0X2lkIiZndDsxMTA5NzU0MTM5NzU5NDQmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngucmVxdWVzdF9pZCImZ3Q7MTY3ODA0
+        Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4Lmlnbm9yZV9kYXRl
+        X3RocmVzaG9sZCImZ3Q7MSZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9
+        InJmdC5nZW5yZSImZ3Q7am91cm5hbCZsdDsvaXRlbSZndDsKICAmbHQ7aXRl
+        bSBrZXk9InJlcS5pcCImZ3Q7MTk5Ljk4LjE2LjAmbHQ7L2l0ZW0mZ3Q7CiAg
+        Jmx0O2l0ZW0ga2V5PSJyZnQucHViIiZndDtGLVIgUHViLiBDb3JwLiZsdDsv
+        aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmci5yZnIiJmd0O3NmeGl0LmNv
+        bTpjaXRhdGlvbiZsdDsvaXRlbSZndDsKICAKICAmbHQ7aXRlbSBrZXk9InJm
+        dC50aXRsZSImZ3Q7VGhlIE5ldyBZb3JrZXImbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJ1cmxfY3R4X2ZtdCImZ3Q7aW5mbzpvZmkvZm10Omtldjpt
+        dHg6Y3R4Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iQHJmdC5zdGl0
+        bGUiJmd0OwogICAmbHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAi
+        Jmd0O05FVyBZT1JLRVImbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9
+        IjEiJmd0O05FVyBZT1JLRVIsIFRIRSZsdDsvaXRlbSZndDsKICAgICZsdDtp
+        dGVtIGtleT0iMiImZ3Q7TkVXIFlPUktFUiAoTkVXIFlPUkssIE4uWS4mbHQ7
+        L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjMiJmd0O05FVyAtIFlPUktF
+        UiZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsKICAmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJAcmZlX2lkIiZndDsKICAgJmx0O2FycmF5
+        Jmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7
+        aXRlbSBrZXk9IkBzZngucmVsYXRlZF9vYmplY3RzIiZndDsKICAgJmx0O2Fy
+        cmF5Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDsKICAgICAmbHQ7aGFz
+        aCZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJjdHhfdGltIiZndDsyMDE2LTEx
+        LTE1VDE1OjM5OjAyLTA1OjAwJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRl
+        bSBrZXk9InJmdC5pc3NuIiZndDsxOTM1LTA5NjEmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICAgICZsdDtpdGVtIGtleT0ic2Z4Lmlnbm9yZV9kYXRlX3RocmVzaG9sZCIm
+        Z3Q7MSZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJzZnguc2hv
+        d19hdmFpbGFiaWxpdHkiJmd0OzEmbHQ7L2l0ZW0mZ3Q7CiAgICAgICZsdDtp
+        dGVtIGtleT0icmVxLmlwIiZndDsxOTkuOTguMTYuMCZsdDsvaXRlbSZndDsK
+        ICAgICAgJmx0O2l0ZW0ga2V5PSJyZnQucHViIiZndDtDb25kZcyBIE5hc3Qm
+        bHQ7L2l0ZW0mZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0iY3R4X3ZlciImZ3Q7
+        WjM5Ljg4LTIwMDQmbHQ7L2l0ZW0mZ3Q7CiAgICAgIAogICAgICAmbHQ7aXRl
+        bSBrZXk9IkByZnJfaWQiJmd0OwogICAgICAgJmx0O2FycmF5Jmd0OwogICAg
+        ICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7c2Z4aXQuY29tOmNpdGF0aW9uJmx0
+        Oy9pdGVtJmd0OwogICAgICAgJmx0Oy9hcnJheSZndDsKICAgICAgJmx0Oy9p
+        dGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InJmdC5wbGFjZSImZ3Q7W05l
+        dyBZb3JrXSZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJyZnQu
+        dGl0bGUiJmd0O0Zhc2hpb24gcm9ja3MmbHQ7L2l0ZW0mZ3Q7CiAgICAgICZs
+        dDtpdGVtIGtleT0idXJsX2N0eF9mbXQiJmd0O2luZm86b2ZpL2ZtdDprZXY6
+        bXR4OmN0eCZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJAc2Z4
+        LnN1YmNhdGVnb3J5IiZndDsKICAgICAgICZsdDthcnJheSZndDsKICAgICAg
+        ICAmbHQ7aXRlbSBrZXk9IjAiJmd0O0FyY2hpdGVjdHVyZSwgRmluZSBhbmQg
+        RGVjb3JhdGl2ZSBBcnRzJmx0Oy9pdGVtJmd0OwogICAgICAgJmx0Oy9hcnJh
+        eSZndDsKICAgICAgJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9
+        InJmdC5sY2NuIiZndDsyMDA2MjA3NDE2Jmx0Oy9pdGVtJmd0OwogICAgICAm
+        bHQ7aXRlbSBrZXk9IkByZnRfaWQiJmd0OwogICAgICAgJmx0O2FycmF5Jmd0
+        OwogICAgICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7bGNjbjoyMDExMjAxNzgw
+        Jmx0Oy9pdGVtJmd0OwogICAgICAgJmx0Oy9hcnJheSZndDsKICAgICAgJmx0
+        Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InNmeC5yZXNwb25zZV90
+        eXBlIiZndDttdWx0aV9vYmpfeG1sJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7
+        aXRlbSBrZXk9InNmeC5zb3VyY2VuYW1lIiZndDtDSVRBVElPTiZsdDsvaXRl
+        bSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJyZnRfdmFsX2ZtdCImZ3Q7am91
+        cm5hbCZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJzZnguaWdu
+        b3JlX2NoYXJfc2V0IiZndDsxJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRl
+        bSBrZXk9InNmeC5zaWQiJmd0O3NmeGl0LmNvbTpjaXRhdGlvbiZsdDsvaXRl
+        bSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJyZXEuc2Vzc2lvbl9pZCImZ3Q7
+        czhCQUU2QjEyLUFCNzMtMTFFNi1COUVCLTNGOUFGRTRDMUFFNCZsdDsvaXRl
+        bSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJjdHhfZW5jIiZndDtVVEYtOCZs
+        dDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJ1cmxfdmVyIiZndDta
+        MzkuODgtMjAwNCZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJA
+        c2Z4LmNhdGVnb3J5IiZndDsKICAgICAgICZsdDthcnJheSZndDsKICAgICAg
+        ICAmbHQ7aXRlbSBrZXk9IjAiJmd0O0FydHMgYW5kIEh1bWFuaXRpZXMmbHQ7
+        L2l0ZW0mZ3Q7CiAgICAgICAmbHQ7L2FycmF5Jmd0OwogICAgICAmbHQ7L2l0
+        ZW0mZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0icmZ0Lm9iamVjdF90eXBlIiZn
+        dDtKT1VSTkFMJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InJm
+        dC5sYW5ndWFnZSImZ3Q7ZW5nJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRl
+        bSBrZXk9InJmdC5vYmplY3RfaWQiJmd0OzEwMDAwMDAwMDAzMTY0NjkmbHQ7
+        L2l0ZW0mZ3Q7CiAgICAgJmx0Oy9oYXNoJmd0OwogICAgJmx0Oy9pdGVtJmd0
+        OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRl
+        bSBrZXk9InJmdC5qdGl0bGUiJmd0O1RoZSBOZXcgWW9ya2VyJmx0Oy9pdGVt
+        Jmd0OwogICZsdDtpdGVtIGtleT0ic2Z4LnNvdXJjZW5hbWUiJmd0O0NJVEFU
+        SU9OJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmZ0X3ZhbF9mbXQi
+        Jmd0O2pvdXJuYWwmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJleGlz
+        dGluZ190c19pZHMiJmd0OwogICAmbHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRl
+        bSBrZXk9IjAiJmd0OzExMTAyMTAzOTc2MDAwMSZsdDsvaXRlbSZndDsKICAg
+        ICZsdDtpdGVtIGtleT0iMSImZ3Q7MTAwMDAwMDAwMDAwMjExMyZsdDsvaXRl
+        bSZndDsKICAgICZsdDtpdGVtIGtleT0iMiImZ3Q7MTEwOTc2MDM5MzgwMjk2
+        Jmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIzIiZndDszNDUwMDAw
+        MDAwMDAwMDYzJmx0Oy9pdGVtJmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZs
+        dDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5zaWQiJmd0O3NmeGl0
+        LmNvbTpjaXRhdGlvbiZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9IkBz
+        ZnguY2F0ZWdvcnkiJmd0OwogICAmbHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRl
+        bSBrZXk9IjAiJmd0O0FydHMgYW5kIEh1bWFuaXRpZXMmbHQ7L2l0ZW0mZ3Q7
+        CiAgICAmbHQ7aXRlbSBrZXk9IjEiJmd0O0FydHMgYW5kIEh1bWFuaXRpZXMm
+        bHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjIiJmd0O0FydHMgYW5k
+        IEh1bWFuaXRpZXMmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjMi
+        Jmd0O0FydHMgYW5kIEh1bWFuaXRpZXMmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7
+        aXRlbSBrZXk9IjQiJmd0O0Vudmlyb25tZW50YWwgU2NpZW5jZXMmbHQ7L2l0
+        ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjUiJmd0O1NvY2lhbCBTY2llbmNl
+        cyZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsKICAmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngucmVsYXRlZF9vYmplY3RzX3JlbGF0
+        aW9ucyImZ3Q7CiAgICZsdDtoYXNoJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIx
+        MDAwMDAwMDAwMzE2NDY5IiZndDtTVVBQTEVNRU5UJmx0Oy9pdGVtJmd0Owog
+        ICAmbHQ7L2hhc2gmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogJmx0Oy9oYXNoJmd0
+        OwombHQ7L3BlcmxkYXRhJmd0Owo8L2N0eF9vYmpfYXR0cmlidXRlcz4KICA8
+        Y3R4X29ial90YXJnZXRzPgogICA8dGFyZ2V0PgogICAgPHRhcmdldF9uYW1l
+        PkVCU0NPSE9TVF9NQVNfVUxUUkFfU0NIT09MX0VESVRJT048L3RhcmdldF9u
+        YW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5FQlNDT2hvc3QgTUFTIFVs
+        dHJhIC0gU2Nob29sIEVkaXRpb248L3RhcmdldF9wdWJsaWNfbmFtZT4KICAg
+        IDxvYmplY3RfcG9ydGZvbGlvX2lkPjEwMDAwMDAwMDAwNjc0MTU8L29iamVj
+        dF9wb3J0Zm9saW9faWQ+CiAgICA8dGFyZ2V0X2lkPjExMDk3NjAzOTM4MDI5
+        NDwvdGFyZ2V0X2lkPgogICAgPGludGVyZmFjZV9pZD4xMTEwODAxNDQyODIw
+        MDA8L2ludGVyZmFjZV9pZD4KICAgIDxpbnRlcmZhY2VfbmFtZT5FQlNDT0hP
+        U1Q8L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjEx
+        MDk3NjAzOTM4MDI5NjwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2Vydmlj
+        ZV90eXBlPmdldEZ1bGxUeHQ8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+
+        RUJTQ09fSE9TVDo6ZWJzY29fYW08L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJh
+        bT5kYl9ob3N0PXVsaCZhbXA7ZWJzY29ob3N0dXJsID0gaHR0cDovL3NlYXJj
+        aC5lYnNjb2hvc3QuY29tICZhbXA7IGxpbmt1cmw9aHR0cDovL29wZW51cmwu
+        ZWJzY29ob3N0LmNvbS9saW5rc3ZjL2xpbmtpbmcuYXNweCAmYW1wOyBzaGli
+        PSAmYW1wOyBjdXN0b21lcl9pZD0gJmFtcDsgYXRoZW5zX2lkPSAgJmFtcDsg
+        dV9zaGliPSZhbXA7amtleT1OWUs8L3BhcnNlX3BhcmFtPgogICAgPHByb3h5
+        PnllczwvcHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88L2Nyb3NzcmVmPgogICAg
+        PG5vdGU+PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGlj
+        YXRpb24+CiAgICA8Y2hhcl9zZXQ+PC9jaGFyX3NldD4KICAgIDxkaXNwbGF5
+        ZXI+PC9kaXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwOi8vcHJveHku
+        bGlicmFyeS5jb29wZXIuZWR1OjIwNDgvbG9naW4/dXJsPWh0dHA6Ly9zZWFy
+        Y2guZWJzY29ob3N0LmNvbS9kaXJlY3QuYXNwP2RiPXVsaCZhbXA7am49TllL
+        JmFtcDtzY29wZT1zaXRlPC90YXJnZXRfdXJsPgogICAgPGlzX3JlbGF0ZWQ+
+        bm88L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJhZ2U+CiAgICAgPGNvdmVyYWdl
+        X3RleHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4dD4KICAgICAgIDxjb3ZlcmFn
+        ZV9zdGF0ZW1lbnQ+QXZhaWxhYmxlIGZyb20gMjAwNDwvY292ZXJhZ2Vfc3Rh
+        dGVtZW50PgogICAgICA8L3RocmVzaG9sZF90ZXh0PgogICAgICA8ZW1iYXJn
+        b190ZXh0PjwvZW1iYXJnb190ZXh0PgogICAgIDwvY292ZXJhZ2VfdGV4dD4K
+        ICAgICA8ZnJvbT4KICAgICAgPHllYXI+MjAwNDwveWVhcj4KICAgICA8L2Zy
+        b20+CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4K
+        ICAgPC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+RUJT
+        Q09IT1NUX1JFQURFUlNfR1VJREVfRlVMTF9URVhUX01FR0FfV0lMU09OPC90
+        YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+RUJTQ09ob3N0
+        IFJlYWRlcidzIEd1aWRlIEZ1bGwgVGV4dCBNZWdhPC90YXJnZXRfcHVibGlj
+        X25hbWU+CiAgICA8b2JqZWN0X3BvcnRmb2xpb19pZD4yNjcwMDAwMDAwNjc5
+        OTIyPC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAgPHRhcmdldF9pZD4zNDUw
+        MDAwMDAwMDAwMDUwPC90YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjEx
+        MTA4MDE0NDI4MjAwMDwvaW50ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9u
+        YW1lPkVCU0NPSE9TVDwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3Nl
+        cnZpY2VfaWQ+MzQ1MDAwMDAwMDAwMDA2MzwvdGFyZ2V0X3NlcnZpY2VfaWQ+
+        CiAgICA8c2VydmljZV90eXBlPmdldEZ1bGxUeHQ8L3NlcnZpY2VfdHlwZT4K
+        ICAgIDxwYXJzZXI+RUJTQ09fSE9TVDo6ZWJzY29fYW08L3BhcnNlcj4KICAg
+        IDxwYXJzZV9wYXJhbT5kYl9ob3N0PXJnbSZhbXA7ZWJzY29ob3N0dXJsID0g
+        aHR0cDovL3NlYXJjaC5lYnNjb2hvc3QuY29tICZhbXA7IGxpbmt1cmw9aHR0
+        cDovL29wZW51cmwuZWJzY29ob3N0LmNvbS9saW5rc3ZjL2xpbmtpbmcuYXNw
+        eCAmYW1wOyBzaGliPSAmYW1wOyBjdXN0b21lcl9pZD0gJmFtcDsgYXRoZW5z
+        X2lkPSAgJmFtcDsgdV9zaGliPSZhbXA7amtleT1OWUs8L3BhcnNlX3BhcmFt
+        PgogICAgPHByb3h5PnllczwvcHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88L2Ny
+        b3NzcmVmPgogICAgPG5vdGU+PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9u
+        PjwvYXV0aGVudGljYXRpb24+CiAgICA8Y2hhcl9zZXQ+aXNvLTg4NTktMTwv
+        Y2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPjwvZGlzcGxheWVyPgogICAgPHRh
+        cmdldF91cmw+aHR0cDovL3Byb3h5LmxpYnJhcnkuY29vcGVyLmVkdToyMDQ4
+        L2xvZ2luP3VybD1odHRwOi8vc2VhcmNoLmVic2NvaG9zdC5jb20vZGlyZWN0
+        LmFzcD9kYj1yZ20mYW1wO2puPU5ZSyZhbXA7c2NvcGU9c2l0ZTwvdGFyZ2V0
+        X3VybD4KICAgIDxpc19yZWxhdGVkPm5vPC9pc19yZWxhdGVkPgogICAgPGNv
+        dmVyYWdlPgogICAgIDxjb3ZlcmFnZV90ZXh0PgogICAgICA8dGhyZXNob2xk
+        X3RleHQ+CiAgICAgICA8Y292ZXJhZ2Vfc3RhdGVtZW50PkF2YWlsYWJsZSBm
+        cm9tIDIwMTE8L2NvdmVyYWdlX3N0YXRlbWVudD4KICAgICAgPC90aHJlc2hv
+        bGRfdGV4dD4KICAgICAgPGVtYmFyZ29fdGV4dD48L2VtYmFyZ29fdGV4dD4K
+        ICAgICA8L2NvdmVyYWdlX3RleHQ+CiAgICAgPGZyb20+CiAgICAgIDx5ZWFy
+        PjIwMTE8L3llYXI+CiAgICAgPC9mcm9tPgogICAgIDxlbWJhcmdvPjwvZW1i
+        YXJnbz4KICAgIDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0
+        PgogICAgPHRhcmdldF9uYW1lPkdBTEVHUk9VUF9BQ0FERU1JQ19PTkVGSUxF
+        PC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+R2FsZSBD
+        ZW5nYWdlIEFjYWRlbWljIE9uZUZpbGU8L3RhcmdldF9wdWJsaWNfbmFtZT4K
+        ICAgIDxvYmplY3RfcG9ydGZvbGlvX2lkPjEwMDAwMDAwMDA2MjI4NTg8L29i
+        amVjdF9wb3J0Zm9saW9faWQ+CiAgICA8dGFyZ2V0X2lkPjEwMDAwMDAwMDAw
+        MDE0NjQ8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZhY2VfaWQ+MTExMDIxMDQw
+        NDMyMDAwPC9pbnRlcmZhY2VfaWQ+CiAgICA8aW50ZXJmYWNlX25hbWU+R0FM
+        RUdST1VQPC9pbnRlcmZhY2VfbmFtZT4KICAgIDx0YXJnZXRfc2VydmljZV9p
+        ZD4xMDAwMDAwMDAwMDAyMTEzPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxz
+        ZXJ2aWNlX3R5cGU+Z2V0RnVsbFR4dDwvc2VydmljZV90eXBlPgogICAgPHBh
+        cnNlcj5HYWxlOjpPcGVuVVJMPC9wYXJzZXI+CiAgICA8cGFyc2VfcGFyYW0+
+        dXJsPSBodHRwOi8vZmluZC5nYWxlZ3JvdXAuY29tL29wZW51cmwvb3BlbnVy
+        bCAmYW1wO2RiYXNlPUFPTkUgJmFtcDtsb2NfaWQ9bnlzbF9tZV9jb29wZXIg
+        JmFtcDthcnQ9ICZhbXA7ICZhbXA7IHVybDI9aHR0cDovL2xpbmsuZ2FsZWdy
+        b3VwLmNvbS9hcHBzL3B1YiZhbXA7bHRpdGxlPVRoZStOZXcrWW9ya2VyICZh
+        bXA7IGprZXkyPTExNjE8L3BhcnNlX3BhcmFtPgogICAgPHByb3h5Pnllczwv
+        cHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88L2Nyb3NzcmVmPgogICAgPG5vdGU+
+        PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+
+        CiAgICA8Y2hhcl9zZXQ+PC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+PC9k
+        aXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwOi8vcHJveHkubGlicmFy
+        eS5jb29wZXIuZWR1OjIwNDgvbG9naW4/dXJsPWh0dHA6Ly9saW5rLmdhbGVn
+        cm91cC5jb20vYXBwcy9wdWIvMTE2MS9BT05FP3U9bnlzbF9tZV9jb29wZXI8
+        L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4K
+        ICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRo
+        cmVzaG9sZF90ZXh0PgogICAgICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFp
+        bGFibGUgZnJvbSAyMDAyPC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAgICAgIDwv
+        dGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdv
+        X3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxmcm9tPgogICAg
+        ICA8eWVhcj4yMDAyPC95ZWFyPgogICAgIDwvZnJvbT4KICAgICA8ZW1iYXJn
+        bz48L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAg
+        PHRhcmdldD4KICAgIDx0YXJnZXRfbmFtZT5HQUxFR1JPVVBfR0VORVJBTF9P
+        TkVGSUxFPC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+
+        R2FsZSBDZW5nYWdlIEdlbmVyYWwgT25lRmlsZTwvdGFyZ2V0X3B1YmxpY19u
+        YW1lPgogICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+MTAwMDAwMDAwMDcxMjQ0
+        Njwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MTExMDIx
+        MDM5NzYwMDAwPC90YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjExMTAy
+        MTA0MDQzMjAwMDwvaW50ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9uYW1l
+        PkdBTEVHUk9VUDwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZp
+        Y2VfaWQ+MTExMDIxMDM5NzYwMDAxPC90YXJnZXRfc2VydmljZV9pZD4KICAg
+        IDxzZXJ2aWNlX3R5cGU+Z2V0RnVsbFR4dDwvc2VydmljZV90eXBlPgogICAg
+        PHBhcnNlcj5HYWxlOjpPcGVuVVJMPC9wYXJzZXI+CiAgICA8cGFyc2VfcGFy
+        YW0+dXJsPWh0dHA6Ly9maW5kLmdhbGVncm91cC5jb20vb3BlbnVybC9vcGVu
+        dXJsICZhbXA7IHVybDI9aHR0cDovL2xpbmsuZ2FsZWdyb3VwLmNvbS9hcHBz
+        L3B1YiAmYW1wO2RiYXNlPUlUT0YgJmFtcDtsb2NfaWQ9bnlzbF9tZV9jb29w
+        ZXIgJmFtcDthcnQ9JmFtcDtsdGl0bGU9VGhlK05ldytZb3JrZXIgJmFtcDsg
+        amtleTI9MTE2MTwvcGFyc2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9wcm94
+        eT4KICAgIDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+CiAgICA8bm90ZT48L25v
+        dGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAg
+        IDxjaGFyX3NldD5pc28tODg1OS0xPC9jaGFyX3NldD4KICAgIDxkaXNwbGF5
+        ZXI+PC9kaXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwOi8vcHJveHku
+        bGlicmFyeS5jb29wZXIuZWR1OjIwNDgvbG9naW4/dXJsPWh0dHA6Ly9saW5r
+        LmdhbGVncm91cC5jb20vYXBwcy9wdWIvMTE2MS9JVE9GP3U9bnlzbF9tZV9j
+        b29wZXI8L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVs
+        YXRlZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAg
+        ICAgPHRocmVzaG9sZF90ZXh0PgogICAgICAgPGNvdmVyYWdlX3N0YXRlbWVu
+        dD5BdmFpbGFibGUgZnJvbSAyMDAyPC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAg
+        ICAgIDwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9l
+        bWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxmcm9t
+        PgogICAgICA8eWVhcj4yMDAyPC95ZWFyPgogICAgIDwvZnJvbT4KICAgICA8
+        ZW1iYXJnbz48L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3Rhcmdl
+        dD4KICA8L2N0eF9vYmpfdGFyZ2V0cz4KIDwvY3R4X29iaj4KPC9jdHhfb2Jq
+        X3NldD4=
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:39:04 GMT
+- request:
+    method: get
+    uri: http://sfx4.library.newschool.edu/ns?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:53:44-05:00&ctx_ver=Z39.88-2004&req.ip=149.31.0.0&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:53:10 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCjxjdHhf
+        b2JqX3NldD4KIDxjdHhfb2JqIGlkZW50aWZpZXI9IiI+CiAgPGN0eF9vYmpf
+        YXR0cmlidXRlcz4mbHQ7cGVybGRhdGEmZ3Q7CiAmbHQ7aGFzaCZndDsKICAm
+        bHQ7aXRlbSBrZXk9InJmdC5pc3NuIiZndDswMDI4LTc5MlgmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJjdHhfdGltIiZndDsyMDE2LTExLTE1VDE1
+        OjUzOjQ0LTA1OjAwJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4
+        LnNob3dfYXZhaWxhYmlsaXR5IiZndDsxJmx0Oy9pdGVtJmd0OwogICZsdDtp
+        dGVtIGtleT0iX3N0YXNoIiZndDsKICAgJmx0O2hhc2gmZ3Q7CiAgICAmbHQ7
+        aXRlbSBrZXk9IkByZnRfaWQiJmd0OwogICAgICZsdDthcnJheSZndDsKICAg
+        ICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtpbmZvOmxjY24vMjAxMTIwMTc4MCZs
+        dDsvaXRlbSZndDsKICAgICAmbHQ7L2FycmF5Jmd0OwogICAgJmx0Oy9pdGVt
+        Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSJAcmZyX2lkIiZndDsKICAgICAmbHQ7
+        YXJyYXkmZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7aW5mbzpzaWQv
+        c2Z4aXQuY29tOmNpdGF0aW9uJmx0Oy9pdGVtJmd0OwogICAgICZsdDsvYXJy
+        YXkmZ3Q7CiAgICAmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvaGFzaCZndDsKICAm
+        bHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJjdHhfdmVyIiZndDtaMzku
+        ODgtMjAwNCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5laXNz
+        biImZ3Q7MjE2My0zODI3Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        QHJmcl9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iMCImZ3Q7aW5mbzpzaWQvc2Z4aXQuY29tOmNpdGF0aW9uJmx0Oy9pdGVt
+        Jmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7
+        aXRlbSBrZXk9InJmdC5wbGFjZSImZ3Q7TmV3IFlvcmsmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJAc2Z4LnN1YmNhdGVnb3J5IiZndDsKICAgJmx0
+        O2FycmF5Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtDdXJyZW50IEV2
+        ZW50cyAmYW1wO2FtcDsgTmV3cyZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iMSImZ3Q7R2VuZXJhbCBhbmQgT3RoZXJzJmx0Oy9pdGVtJmd0Owog
+        ICAgJmx0O2l0ZW0ga2V5PSIyIiZndDtMaXRlcmF0dXJlJmx0Oy9pdGVtJmd0
+        OwogICAgJmx0O2l0ZW0ga2V5PSIzIiZndDtQZXJmb3JtaW5nIEFydHMsIFRy
+        YXZlbCBhbmQgTGVpc3VyZSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iNCImZ3Q7Q29uc2VydmF0aW9uJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0
+        ZW0ga2V5PSI1IiZndDtKb3VybmFsaXNtLCBNYXNzIENvbW11bmljYXRpb24s
+        IE1lZGlhICZhbXA7YW1wOyBQdWJsaXNoaW5nJmx0Oy9pdGVtJmd0OwogICAm
+        bHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9
+        InJmdC5sY2NuIiZndDsgIDIwMTEyMDE3ODAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJAcmZ0X2lkIiZndDsKICAgJmx0O2FycmF5Jmd0OwogICAg
+        Jmx0O2l0ZW0ga2V5PSIwIiZndDtpbmZvOmxjY24vMjAxMTIwMTc4MCZsdDsv
+        aXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAg
+        Jmx0O2l0ZW0ga2V5PSJzZngucmVzcG9uc2VfdHlwZSImZ3Q7bXVsdGlfb2Jq
+        X3htbCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVf
+        Y2hhcl9zZXQiJmd0OzEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJy
+        ZXEuc2Vzc2lvbl9pZCImZ3Q7czg0OTM4RTUwLUFCNzUtMTFFNi04QjM1LThC
+        QUY0RDE0N0QzRSZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InVybF92
+        ZXIiJmd0O1ozOS44OC0yMDA0Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iY3R4X2VuYyImZ3Q7VVRGLTgmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0g
+        a2V5PSJyZnQub2JqZWN0X3R5cGUiJmd0O0pPVVJOQUwmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJyZnQubGFuZ3VhZ2UiJmd0O2VuZyZsdDsvaXRl
+        bSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5oYXNfZnVsbF90ZXh0IiZndDt5
+        ZXMmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQub2JqZWN0X2lk
+        IiZndDsxMTA5NzU0MTM5NzU5NDQmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0g
+        a2V5PSJzZngucmVxdWVzdF9pZCImZ3Q7NDY2OTYyMSZsdDsvaXRlbSZndDsK
+        ICAmbHQ7aXRlbSBrZXk9InNmeC5pZ25vcmVfZGF0ZV90aHJlc2hvbGQiJmd0
+        OzEmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQuZ2VucmUiJmd0
+        O2pvdXJuYWwmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZXEuaXAi
+        Jmd0OzE0OS4zMS4wLjAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJy
+        ZnQucHViIiZndDtGLVIgUHViLiBDb3JwLiZsdDsvaXRlbSZndDsKICAmbHQ7
+        aXRlbSBrZXk9InJmci5yZnIiJmd0O3NmeGl0LmNvbTpjaXRhdGlvbiZsdDsv
+        aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5vcGVudXJsIiZndDtodHRw
+        Oi8vc2Z4NC5saWJyYXJ5Lm5ld3NjaG9vbC5lZHUvbnM/dXJsX3Zlcj1aMzku
+        ODgtMjAwNCZhbXA7YW1wO3VybF9jdHhfZm10PWluZm8lM0FvZmklMkZmbXQl
+        M0FrZXYlM0FtdHglM0FjdHgmYW1wO2FtcDtjdHhfdmVyPVozOS44OC0yMDA0
+        JmFtcDthbXA7Y3R4X3RpbT0yMDE2LTExLTE1VDE1JTNBNTMlM0E0NC0wNSUz
+        QTAwJmFtcDthbXA7Y3R4X2lkPSZhbXA7YW1wO2N0eF9lbmM9aW5mbyUzQW9m
+        aSUyRmVuYyUzQVVURi04JmFtcDthbXA7cmZ0Lmlzc249MDAyOC03OTJYJmFt
+        cDthbXA7cmZ0Lmp0aXRsZT1UaGUlMjBOZXclMjBZb3JrZXImYW1wO2FtcDty
+        ZnQub2JqZWN0X2lkPTExMDk3NTQxMzk3NTk0NCZhbXA7YW1wO3JmdF92YWxf
+        Zm10PWluZm8lM0FvZmklMkZmbXQlM0FrZXYlM0FtdHglM0Fqb3VybmFsJmFt
+        cDthbXA7cmZ0X2lkPWluZm8lM0FsY2NuJTJGMjAxMTIwMTc4MCZhbXA7YW1w
+        O3JlcS5pcD0xNDkuMzEuMC4wJmFtcDthbXA7cmZyX2lkPWluZm8lM0FzaWQl
+        MkZzZnhpdC5jb20lM0FjaXRhdGlvbiZhbXA7YW1wO3NmeC5yZXNwb25zZV90
+        eXBlPW11bHRpX29ial94bWwmYW1wO2FtcDtzZnguaWdub3JlX2RhdGVfdGhy
+        ZXNob2xkPTEmYW1wO2FtcDtzZnguc2hvd19hdmFpbGFiaWxpdHk9MSZsdDsv
+        aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC50aXRsZSImZ3Q7VGhlIE5l
+        dyBZb3JrZXImbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJ1cmxfY3R4
+        X2ZtdCImZ3Q7aW5mbzpvZmkvZm10OmtldjptdHg6Y3R4Jmx0Oy9pdGVtJmd0
+        OwogICZsdDtpdGVtIGtleT0iQHJmdC5zdGl0bGUiJmd0OwogICAmbHQ7YXJy
+        YXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0O05FVyBZT1JLRVImbHQ7
+        L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjEiJmd0O05FVyBZT1JLRVIs
+        IFRIRSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iMiImZ3Q7TkVX
+        IFlPUktFUiAoTkVXIFlPUkssIE4uWS4mbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7
+        aXRlbSBrZXk9IjMiJmd0O05FVyAtIFlPUktFUiZsdDsvaXRlbSZndDsKICAg
+        Jmx0Oy9hcnJheSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5
+        PSJAcmZlX2lkIiZndDsKICAgJmx0O2FycmF5Jmd0OwogICAmbHQ7L2FycmF5
+        Jmd0OwogICZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5qdGl0
+        bGUiJmd0O1RoZSBOZXcgWW9ya2VyJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVt
+        IGtleT0ic2Z4LnNvdXJjZW5hbWUiJmd0O0NJVEFUSU9OJmx0Oy9pdGVtJmd0
+        OwogICZsdDtpdGVtIGtleT0icmZ0X3ZhbF9mbXQiJmd0O2pvdXJuYWwmbHQ7
+        L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJleGlzdGluZ190c19pZHMiJmd0
+        OwogICAmbHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0OzEx
+        MTAyNzYxNDM0NDAwMSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0i
+        MSImZ3Q7MTExMDY5MzU3Njc4MDAxJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0
+        ZW0ga2V5PSIyIiZndDsxMTA5NzQ5ODA2NTAxMDEmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICAmbHQ7aXRlbSBrZXk9IjMiJmd0OzExMTAyNjkyMTk0OTAwMSZsdDsvaXRl
+        bSZndDsKICAgICZsdDtpdGVtIGtleT0iNCImZ3Q7MzI1MjAwMDAwMDAwMDAw
+        MjEmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjUiJmd0OzExMTAz
+        MjI3NDU1NTAwMSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iNiIm
+        Z3Q7MzI1MjAwMDAwMDAwMDAwMjAmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRl
+        bSBrZXk9IjciJmd0OzMyNTIwMDAwMDE5MDAwMDYwJmx0Oy9pdGVtJmd0Owog
+        ICAgJmx0O2l0ZW0ga2V5PSI4IiZndDsxMDAwMDAwMDAwMDAxMjI5Jmx0Oy9p
+        dGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSI5IiZndDszNTgwMDAwMDAwMDAw
+        MDExJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIxMCImZ3Q7MTAw
+        MDAwMDAwMDAwMjE5OSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0i
+        MTEiJmd0OzEwMDAwMDAwMDAwMDIxMTMmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7
+        aXRlbSBrZXk9IjEyIiZndDsyNDAwMDAwMDAwMDAwMDEzJmx0Oy9pdGVtJmd0
+        OwogICAgJmx0O2l0ZW0ga2V5PSIxMyImZ3Q7MTAwMDAwMDAwMDAwMjc1NyZs
+        dDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iMTQiJmd0OzEwMDAwMDAw
+        MDAwMDI2MzMmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjE1IiZn
+        dDsxMTEwOTA2MTA1MDUwMDEmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBr
+        ZXk9IjE2IiZndDsxMDAwMDAwMDAwMDAyMTU5Jmx0Oy9pdGVtJmd0OwogICAg
+        Jmx0O2l0ZW0ga2V5PSIxNyImZ3Q7MzQ1MDAwMDAwMDAwMDAzNCZsdDsvaXRl
+        bSZndDsKICAgICZsdDtpdGVtIGtleT0iMTgiJmd0OzM1ODAwMDAwMDAwMDAw
+        MTcmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjE5IiZndDsyNjEw
+        MDAwMDAwMDAwMDkwJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIy
+        MCImZ3Q7MzQ1MDAwMDAwMDAwMDE1MiZsdDsvaXRlbSZndDsKICAgICZsdDtp
+        dGVtIGtleT0iMjEiJmd0OzI2MTAwMDAwMDAwMDAwOTEmbHQ7L2l0ZW0mZ3Q7
+        CiAgICAmbHQ7aXRlbSBrZXk9IjIyIiZndDsxMTEwMTY4MzMyMDEwMDEmbHQ7
+        L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjIzIiZndDsxMTEwOTA2MTA1
+        MDUwMDEmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9p
+        dGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4LnNpZCImZ3Q7c2Z4aXQuY29t
+        OmNpdGF0aW9uJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iQHNmeC5j
+        YXRlZ29yeSImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iMCImZ3Q7QXJ0cyBhbmQgSHVtYW5pdGllcyZsdDsvaXRlbSZndDsKICAg
+        ICZsdDtpdGVtIGtleT0iMSImZ3Q7QXJ0cyBhbmQgSHVtYW5pdGllcyZsdDsv
+        aXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iMiImZ3Q7QXJ0cyBhbmQgSHVt
+        YW5pdGllcyZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iMyImZ3Q7
+        QXJ0cyBhbmQgSHVtYW5pdGllcyZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iNCImZ3Q7RW52aXJvbm1lbnRhbCBTY2llbmNlcyZsdDsvaXRlbSZn
+        dDsKICAgICZsdDtpdGVtIGtleT0iNSImZ3Q7U29jaWFsIFNjaWVuY2VzJmx0
+        Oy9pdGVtJmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZsdDsvaXRlbSZndDsK
+        ICZsdDsvaGFzaCZndDsKJmx0Oy9wZXJsZGF0YSZndDsKPC9jdHhfb2JqX2F0
+        dHJpYnV0ZXM+CiAgPGN0eF9vYmpfdGFyZ2V0cz4KICAgPHRhcmdldD4KICAg
+        IDx0YXJnZXRfbmFtZT5FQlNDT0hPU1RfQUNBREVNSUNfU0VBUkNIX0NPTVBM
+        RVRFPC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+RUJT
+        Q09ob3N0IEFjYWRlbWljIFNlYXJjaCBDb21wbGV0ZTwvdGFyZ2V0X3B1Ymxp
+        Y19uYW1lPgogICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+MTAwMDAwMDAwMDY3
+        MDU3Njwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MTAw
+        MDAwMDAwMDAwMTUwNTwvdGFyZ2V0X2lkPgogICAgPGludGVyZmFjZV9pZD4x
+        MTEwODAxNDQyODIwMDA8L2ludGVyZmFjZV9pZD4KICAgIDxpbnRlcmZhY2Vf
+        bmFtZT5FQlNDT0hPU1Q8L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9z
+        ZXJ2aWNlX2lkPjEwMDAwMDAwMDAwMDIxNTk8L3RhcmdldF9zZXJ2aWNlX2lk
+        PgogICAgPHNlcnZpY2VfdHlwZT5nZXRGdWxsVHh0PC9zZXJ2aWNlX3R5cGU+
+        CiAgICA8cGFyc2VyPkVCU0NPX0hPU1Q6OmVic2NvX2FtPC9wYXJzZXI+CiAg
+        ICA8cGFyc2VfcGFyYW0+ZGJfaG9zdD1hOWgmYW1wO2Vic2NvaG9zdHVybCA9
+        IGh0dHA6Ly9zZWFyY2guZWJzY29ob3N0LmNvbSAmYW1wOyBsaW5rdXJsPWh0
+        dHA6Ly9vcGVudXJsLmVic2NvaG9zdC5jb20vbGlua3N2Yy9saW5raW5nLmFz
+        cHggJmFtcDsgc2hpYj0gJmFtcDsgY3VzdG9tZXJfaWQ9ICZhbXA7IGF0aGVu
+        c19pZD0gICZhbXA7IHVfc2hpYj0mYW1wO2prZXk9TllLPC9wYXJzZV9wYXJh
+        bT4KICAgIDxwcm94eT55ZXM8L3Byb3h5PgogICAgPGNyb3NzcmVmPm5vPC9j
+        cm9zc3JlZj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZfd2Fy
+        bmluZz4KICAgIDxub3RlPjwvbm90ZT4KICAgIDxhdXRoZW50aWNhdGlvbj48
+        L2F1dGhlbnRpY2F0aW9uPgogICAgPGNoYXJfc2V0PnV0Zjg8L2NoYXJfc2V0
+        PgogICAgPGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJs
+        Pmh0dHBzOi8vbG9naW4ubGlicHJveHkubmV3c2Nob29sLmVkdS9sb2dpbj91
+        cmw9aHR0cDovL3NlYXJjaC5lYnNjb2hvc3QuY29tL2RpcmVjdC5hc3A/ZGI9
+        YTloJmFtcDtqbj1OWUsmYW1wO3Njb3BlPXNpdGU8L3RhcmdldF91cmw+CiAg
+        ICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4K
+        ICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0Pgog
+        ICAgICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFpbGFibGUgZnJvbSAyMDA0
+        PC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAgICAgIDwvdGhyZXNob2xkX3RleHQ+
+        CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9j
+        b3ZlcmFnZV90ZXh0PgogICAgIDxmcm9tPgogICAgICA8eWVhcj4yMDA0PC95
+        ZWFyPgogICAgIDwvZnJvbT4KICAgICA8ZW1iYXJnbz48L2VtYmFyZ28+CiAg
+        ICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAgPHRhcmdldD4KICAgIDx0
+        YXJnZXRfbmFtZT5HQUxFR1JPVVBfQUNBREVNSUNfT05FRklMRTwvdGFyZ2V0
+        X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPkdhbGUgQ2VuZ2FnZSBB
+        Y2FkZW1pYyBPbmVGaWxlPC90YXJnZXRfcHVibGljX25hbWU+CiAgICA8b2Jq
+        ZWN0X3BvcnRmb2xpb19pZD4xMDAwMDAwMDAwNjIyODU4PC9vYmplY3RfcG9y
+        dGZvbGlvX2lkPgogICAgPHRhcmdldF9pZD4xMDAwMDAwMDAwMDAxNDY0PC90
+        YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjExMTAyMTA0MDQzMjAwMDwv
+        aW50ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9uYW1lPkdBTEVHUk9VUDwv
+        aW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTAwMDAw
+        MDAwMDAwMjExMzwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2VydmljZV90
+        eXBlPmdldEZ1bGxUeHQ8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+R2Fs
+        ZTo6T3BlblVSTDwvcGFyc2VyPgogICAgPHBhcnNlX3BhcmFtPnVybD0gaHR0
+        cDovL2ZpbmQuZ2FsZWdyb3VwLmNvbS9vcGVudXJsL29wZW51cmwgJmFtcDtk
+        YmFzZT1BT05FICZhbXA7bG9jX2lkPW55c2xfbWVfbmV3c2NoICZhbXA7YXJ0
+        PXllcyAmYW1wOyAmYW1wOyB1cmwyPWh0dHA6Ly9saW5rLmdhbGVncm91cC5j
+        b20vYXBwcy9wdWImYW1wO2x0aXRsZT1UaGUrTmV3K1lvcmtlciAmYW1wOyBq
+        a2V5Mj0xMTYxPC9wYXJzZV9wYXJhbT4KICAgIDxwcm94eT55ZXM8L3Byb3h5
+        PgogICAgPGNyb3NzcmVmPm5vPC9jcm9zc3JlZj4KICAgIDx0aW1lZGlmZl93
+        YXJuaW5nPjwvdGltZWRpZmZfd2FybmluZz4KICAgIDxub3RlPlJpZ2h0cyBy
+        ZXN0cmljdGlvbnMgZnJvbSBhdXRob3JzIG1pZ2h0IGxpbWl0IHRoZSBhdmFp
+        bGFiaWxpdHkgb2YgZnVsbCB0ZXh0IGluIHRoaXMgcHVibGljYXRpb24uPC9u
+        b3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+CiAg
+        ICA8Y2hhcl9zZXQ+PC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+PC9kaXNw
+        bGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwczovL2xvZ2luLmxpYnByb3h5
+        Lm5ld3NjaG9vbC5lZHUvbG9naW4/dXJsPWh0dHA6Ly9saW5rLmdhbGVncm91
+        cC5jb20vYXBwcy9wdWIvMTE2MS9BT05FP3U9bnlzbF9tZV9uZXdzY2g8L3Rh
+        cmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAg
+        IDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVz
+        aG9sZF90ZXh0PgogICAgICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFpbGFi
+        bGUgZnJvbSAyMDAyPC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAgICAgIDwvdGhy
+        ZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3Rl
+        eHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxmcm9tPgogICAgICA8
+        eWVhcj4yMDAyPC95ZWFyPgogICAgIDwvZnJvbT4KICAgICA8ZW1iYXJnbz48
+        L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAgPHRh
+        cmdldD4KICAgIDx0YXJnZXRfbmFtZT5NSVNDRUxMQU5FT1VTX0VKT1VSTkFM
+        UzwvdGFyZ2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPk1pc2Nl
+        bGxhbmVvdXMgRS1Kb3VybmFsczwvdGFyZ2V0X3B1YmxpY19uYW1lPgogICAg
+        PG9iamVjdF9wb3J0Zm9saW9faWQ+MTAwMDAwMDAwMTIzMTQxNjwvb2JqZWN0
+        X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MTExMDE2ODMzMjAxMDAw
+        PC90YXJnZXRfaWQ+CiAgICA8aW50ZXJmYWNlX2lkPjExMTAxNjgzMzIwMTAw
+        MDwvaW50ZXJmYWNlX2lkPgogICAgPGludGVyZmFjZV9uYW1lPk1JU0NFTExB
+        TkVPVVNfRUpPVVJOQUxTPC9pbnRlcmZhY2VfbmFtZT4KICAgIDx0YXJnZXRf
+        c2VydmljZV9pZD4xMTEwMTY4MzMyMDEwMDE8L3RhcmdldF9zZXJ2aWNlX2lk
+        PgogICAgPHNlcnZpY2VfdHlwZT5nZXRGdWxsVHh0PC9zZXJ2aWNlX3R5cGU+
+        CiAgICA8cGFyc2VyPkJ1bGs6OkJVTEs8L3BhcnNlcj4KICAgIDxwYXJzZV9w
+        YXJhbT5qa2V5PWh0dHA6Ly9hcmNoaXZlcy5uZXd5b3JrZXIuY29tLmxpYnBy
+        b3h5Lm5ld3NjaG9vbC5lZHUvI2ZvbGlvPTBDMTwvcGFyc2VfcGFyYW0+CiAg
+        ICA8cHJveHk+eWVzPC9wcm94eT4KICAgIDxjcm9zc3JlZj55ZXM8L2Nyb3Nz
+        cmVmPgogICAgPHRpbWVkaWZmX3dhcm5pbmc+PC90aW1lZGlmZl93YXJuaW5n
+        PgogICAgPG5vdGU+PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0
+        aGVudGljYXRpb24+CiAgICA8Y2hhcl9zZXQ+PC9jaGFyX3NldD4KICAgIDxk
+        aXNwbGF5ZXI+RlQ6Ok5PX0ZJTExfSU48L2Rpc3BsYXllcj4KICAgIDx0YXJn
+        ZXRfdXJsPmh0dHBzOi8vbG9naW4ubGlicHJveHkubmV3c2Nob29sLmVkdS9s
+        b2dpbj91cmw9aHR0cDovL2FyY2hpdmVzLm5ld3lvcmtlci5jb20ubGlicHJv
+        eHkubmV3c2Nob29sLmVkdS8jZm9saW89MEMxPC90YXJnZXRfdXJsPgogICAg
+        PGlzX3JlbGF0ZWQ+bm88L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJhZ2U+CiAg
+        ICAgPGNvdmVyYWdlX3RleHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4dD4KICAg
+        ICAgIDxjb3ZlcmFnZV9zdGF0ZW1lbnQ+QXZhaWxhYmxlIGZyb20gMTkyNTwv
+        Y292ZXJhZ2Vfc3RhdGVtZW50PgogICAgICA8L3RocmVzaG9sZF90ZXh0Pgog
+        ICAgICA8ZW1iYXJnb190ZXh0PjwvZW1iYXJnb190ZXh0PgogICAgIDwvY292
+        ZXJhZ2VfdGV4dD4KICAgICA8ZnJvbT4KICAgICAgPHllYXI+MTkyNTwveWVh
+        cj4KICAgICA8L2Zyb20+CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdvPgogICAg
+        PC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAgICA8dGFy
+        Z2V0X25hbWU+UFJPUVVFU1RfQ0VOVFJBTDwvdGFyZ2V0X25hbWU+CiAgICA8
+        dGFyZ2V0X3B1YmxpY19uYW1lPlByb1F1ZXN0IENlbnRyYWw8L3RhcmdldF9w
+        dWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZvbGlvX2lkPjI1NTAwMDAw
+        MDAxMzgxOTA8L29iamVjdF9wb3J0Zm9saW9faWQ+CiAgICA8dGFyZ2V0X2lk
+        PjI0MDAwMDAwMDAwMDAwMTM8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZhY2Vf
+        aWQ+MjQwMDAwMDAwMDAwMDAwNjwvaW50ZXJmYWNlX2lkPgogICAgPGludGVy
+        ZmFjZV9uYW1lPlBST1FVRVNUPC9pbnRlcmZhY2VfbmFtZT4KICAgIDx0YXJn
+        ZXRfc2VydmljZV9pZD4yNDAwMDAwMDAwMDAwMDEzPC90YXJnZXRfc2Vydmlj
+        ZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0RnVsbFR4dDwvc2VydmljZV90
+        eXBlPgogICAgPHBhcnNlcj5QUk9RVUVTVDo6b3BlbjwvcGFyc2VyPgogICAg
+        PHBhcnNlX3BhcmFtPnVybD1odHRwOi8vZ2F0ZXdheS5wcm9xdWVzdC5jb20v
+        b3BlbnVybCAmYW1wOyBjbGllbnRpZD0xMjI2MSAmYW1wOyB1cmwyPWh0dHA6
+        Ly9zZWFyY2gucHJvcXVlc3QuY29tJmFtcDtqa2V5PTQxMTMwPC9wYXJzZV9w
+        YXJhbT4KICAgIDxwcm94eT55ZXM8L3Byb3h5PgogICAgPGNyb3NzcmVmPm5v
+        PC9jcm9zc3JlZj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZf
+        d2FybmluZz4KICAgIDxub3RlPjwvbm90ZT4KICAgIDxhdXRoZW50aWNhdGlv
+        bj48L2F1dGhlbnRpY2F0aW9uPgogICAgPGNoYXJfc2V0PnV0Zjg8L2NoYXJf
+        c2V0PgogICAgPGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRf
+        dXJsPmh0dHBzOi8vbG9naW4ubGlicHJveHkubmV3c2Nob29sLmVkdS9sb2dp
+        bj91cmw9aHR0cDovL2dhdGV3YXkucHJvcXVlc3QuY29tL29wZW51cmw/cmZ0
+        X2lkPTQxMTMwJmFtcDtyZXNfZGF0PXhyaSUzQXBxbSZhbXA7cmZ0X3ZhbF9m
+        bXQ9aW5mbyUzQW9maSUyRmZtdCUzQWtldiUzQW10eCUzQWpvdXJuYWwmYW1w
+        O3VybF92ZXI9WjM5Ljg4LTIwMDQmYW1wO2dlbnJlPWpvdXJuYWwmYW1wO3Jl
+        cV9kYXQ9eHJpJTNBcHFpbCUzQWNsbnRpZCUzRDEyMjYxPC90YXJnZXRfdXJs
+        PgogICAgPGlzX3JlbGF0ZWQ+bm88L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJh
+        Z2U+CiAgICAgPGNvdmVyYWdlX3RleHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4
+        dD4KICAgICAgIDxjb3ZlcmFnZV9zdGF0ZW1lbnQ+QXZhaWxhYmxlIGZyb20g
+        MjAwMjwvY292ZXJhZ2Vfc3RhdGVtZW50PgogICAgICA8L3RocmVzaG9sZF90
+        ZXh0PgogICAgICA8ZW1iYXJnb190ZXh0PjwvZW1iYXJnb190ZXh0PgogICAg
+        IDwvY292ZXJhZ2VfdGV4dD4KICAgICA8ZnJvbT4KICAgICAgPHllYXI+MjAw
+        MjwveWVhcj4KICAgICA8L2Zyb20+CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdv
+        PgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAg
+        ICA8dGFyZ2V0X25hbWU+UFJPUVVFU1RfTVVTSUNfUEVSSU9ESUNBTFNfREFU
+        QUJBU0U8L3RhcmdldF9uYW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5Q
+        cm9RdWVzdCBJbnRlcm5hdGlvbmFsIEluZGV4IHRvIE11c2ljIFBlcmlvZGlj
+        YWxzPC90YXJnZXRfcHVibGljX25hbWU+CiAgICA8b2JqZWN0X3BvcnRmb2xp
+        b19pZD4yNTUwMDAwMDAwMTc4MDM3PC9vYmplY3RfcG9ydGZvbGlvX2lkPgog
+        ICAgPHRhcmdldF9pZD4yNjEwMDAwMDAwMDAwMDkwPC90YXJnZXRfaWQ+CiAg
+        ICA8aW50ZXJmYWNlX2lkPjI0MDAwMDAwMDAwMDAwMDY8L2ludGVyZmFjZV9p
+        ZD4KICAgIDxpbnRlcmZhY2VfbmFtZT5QUk9RVUVTVDwvaW50ZXJmYWNlX25h
+        bWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MjYxMDAwMDAwMDAwMDA5MDwv
+        dGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2VydmljZV90eXBlPmdldEZ1bGxU
+        eHQ8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+UFJPUVVFU1Q6Om9wZW48
+        L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT51cmw9aHR0cDovL2dhdGV3YXku
+        cHJvcXVlc3QuY29tL29wZW51cmwgJmFtcDsgY2xpZW50aWQ9MTIyNjEgJmFt
+        cDsgdXJsMj1odHRwOi8vc2VhcmNoLnByb3F1ZXN0LmNvbSZhbXA7amtleT0x
+        NjQ5MzwvcGFyc2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9wcm94eT4KICAg
+        IDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZfd2Fybmlu
+        Zz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8bm90ZT5SaWdodHMgcmVzdHJp
+        Y3Rpb25zIGZyb20gYXV0aG9ycyBtaWdodCBsaW1pdCB0aGUgYXZhaWxhYmls
+        aXR5IG9mIGZ1bGwgdGV4dCBpbiB0aGlzIHB1YmxpY2F0aW9uLjwvbm90ZT4K
+        ICAgIDxhdXRoZW50aWNhdGlvbj48L2F1dGhlbnRpY2F0aW9uPgogICAgPGNo
+        YXJfc2V0Pmlzby04ODU5LTE8L2NoYXJfc2V0PgogICAgPGRpc3BsYXllcj48
+        L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJsPmh0dHBzOi8vbG9naW4ubGli
+        cHJveHkubmV3c2Nob29sLmVkdS9sb2dpbj91cmw9aHR0cDovL2dhdGV3YXku
+        cHJvcXVlc3QuY29tL29wZW51cmw/cmZ0X2lkPTE2NDkzJmFtcDtyZXNfZGF0
+        PXhyaSUzQXBxbSZhbXA7cmZ0X3ZhbF9mbXQ9aW5mbyUzQW9maSUyRmZtdCUz
+        QWtldiUzQW10eCUzQWpvdXJuYWwmYW1wO3VybF92ZXI9WjM5Ljg4LTIwMDQm
+        YW1wO2dlbnJlPWpvdXJuYWwmYW1wO3JlcV9kYXQ9eHJpJTNBcHFpbCUzQWNs
+        bnRpZCUzRDEyMjYxPC90YXJnZXRfdXJsPgogICAgPGlzX3JlbGF0ZWQ+bm88
+        L2lzX3JlbGF0ZWQ+CiAgICA8Y292ZXJhZ2U+CiAgICAgPGNvdmVyYWdlX3Rl
+        eHQ+CiAgICAgIDx0aHJlc2hvbGRfdGV4dD4KICAgICAgIDxjb3ZlcmFnZV9z
+        dGF0ZW1lbnQ+QXZhaWxhYmxlIGZyb20gMTk5ODwvY292ZXJhZ2Vfc3RhdGVt
+        ZW50PgogICAgICA8L3RocmVzaG9sZF90ZXh0PgogICAgICA8ZW1iYXJnb190
+        ZXh0PjwvZW1iYXJnb190ZXh0PgogICAgIDwvY292ZXJhZ2VfdGV4dD4KICAg
+        ICA8ZnJvbT4KICAgICAgPHllYXI+MTk5ODwveWVhcj4KICAgICA8L2Zyb20+
+        CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAg
+        PC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+UFJPUVVF
+        U1RfUEVSRk9STUlOR19BUlRTX1BFUklPRElDQUxTX0RBVEFCQVNFPC90YXJn
+        ZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+UHJvUXVlc3QgSW50
+        ZXJuYXRpb25hbCBJbmRleCB0byBQZXJmb3JtaW5nIEFydHM8L3RhcmdldF9w
+        dWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZvbGlvX2lkPjI1NTAwMDAw
+        MDAxNzgxNTU8L29iamVjdF9wb3J0Zm9saW9faWQ+CiAgICA8dGFyZ2V0X2lk
+        PjI2MTAwMDAwMDAwMDAwOTE8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZhY2Vf
+        aWQ+MjQwMDAwMDAwMDAwMDAwNjwvaW50ZXJmYWNlX2lkPgogICAgPGludGVy
+        ZmFjZV9uYW1lPlBST1FVRVNUPC9pbnRlcmZhY2VfbmFtZT4KICAgIDx0YXJn
+        ZXRfc2VydmljZV9pZD4yNjEwMDAwMDAwMDAwMDkxPC90YXJnZXRfc2Vydmlj
+        ZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0RnVsbFR4dDwvc2VydmljZV90
+        eXBlPgogICAgPHBhcnNlcj5QUk9RVUVTVDo6b3BlbjwvcGFyc2VyPgogICAg
+        PHBhcnNlX3BhcmFtPnVybD1odHRwOi8vZ2F0ZXdheS5wcm9xdWVzdC5jb20v
+        b3BlbnVybCAmYW1wOyBjbGllbnRpZD0xMjI2MSAmYW1wOyB1cmwyPWh0dHA6
+        Ly9zZWFyY2gucHJvcXVlc3QuY29tJmFtcDtqa2V5PTE2NDkzPC9wYXJzZV9w
+        YXJhbT4KICAgIDxwcm94eT55ZXM8L3Byb3h5PgogICAgPGNyb3NzcmVmPm5v
+        PC9jcm9zc3JlZj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZf
+        d2FybmluZz4KICAgIDxub3RlPlJpZ2h0cyByZXN0cmljdGlvbnMgZnJvbSBh
+        dXRob3JzIG1pZ2h0IGxpbWl0IHRoZSBhdmFpbGFiaWxpdHkgb2YgZnVsbCB0
+        ZXh0IGluIHRoaXMgcHVibGljYXRpb24uPC9ub3RlPgogICAgPGF1dGhlbnRp
+        Y2F0aW9uPjwvYXV0aGVudGljYXRpb24+CiAgICA8Y2hhcl9zZXQ+aXNvLTg4
+        NTktMTwvY2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPjwvZGlzcGxheWVyPgog
+        ICAgPHRhcmdldF91cmw+aHR0cHM6Ly9sb2dpbi5saWJwcm94eS5uZXdzY2hv
+        b2wuZWR1L2xvZ2luP3VybD1odHRwOi8vZ2F0ZXdheS5wcm9xdWVzdC5jb20v
+        b3BlbnVybD9yZnRfaWQ9MTY0OTMmYW1wO3Jlc19kYXQ9eHJpJTNBcHFtJmFt
+        cDtyZnRfdmFsX2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4JTNB
+        am91cm5hbCZhbXA7dXJsX3Zlcj1aMzkuODgtMjAwNCZhbXA7Z2VucmU9am91
+        cm5hbCZhbXA7cmVxX2RhdD14cmklM0FwcWlsJTNBY2xudGlkJTNEMTIyNjE8
+        L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4K
+        ICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRo
+        cmVzaG9sZF90ZXh0PgogICAgICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFp
+        bGFibGUgZnJvbSAxOTk4PC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAgICAgIDwv
+        dGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdv
+        X3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxmcm9tPgogICAg
+        ICA8eWVhcj4xOTk4PC95ZWFyPgogICAgIDwvZnJvbT4KICAgICA8ZW1iYXJn
+        bz48L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAg
+        PHRhcmdldD4KICAgIDx0YXJnZXRfbmFtZT5MT0NBTF9DQVRBTE9HVUVfRVhf
+        TElCUklTX0FMRVBIPC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGlj
+        X25hbWU+QSBDb25zb3J0aXVtIExpYnJhcnkgTWF5IEhhdmUgQSBQcmludCBW
+        ZXJzaW9uIEF2YWlsYWJsZTwvdGFyZ2V0X3B1YmxpY19uYW1lPgogICAgPG9i
+        amVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAg
+        PHRhcmdldF9pZD4xMTA5NzQ5ODA2NTAxMDA8L3RhcmdldF9pZD4KICAgIDxp
+        bnRlcmZhY2VfaWQ+MTEwOTc0OTgwNjUwMTAwPC9pbnRlcmZhY2VfaWQ+CiAg
+        ICA8aW50ZXJmYWNlX25hbWU+TE9DQUxfQ0FUQUxPR1VFX0VYX0xJQlJJU19B
+        TEVQSDwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+
+        MTEwOTc0OTgwNjUwMTAxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2
+        aWNlX3R5cGU+Z2V0SG9sZGluZzwvc2VydmljZV90eXBlPgogICAgPHBhcnNl
+        cj5FeExpYnJpczo6QUxFUEg8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT51
+        cmw9ICZhbXA7ZGF0YWJhc2U9JmFtcDtpc3NuX2luZGV4PSZhbXA7aXNibl9p
+        bmRleD0mYW1wO2p0bF9pbmRleD0mYW1wO2J0bF9pbmRleD0gJmFtcDt2ZXJz
+        aW9uPSAmYW1wOyBhdXRob3JfaW5kZXg9ICZhbXA7bGFuZ3VhZ2U9ICZhbXA7
+        ZHVhbF9pc2JuPSAmYW1wOyBsb25nZXN0X3dvcmRzX3NlYXJjaD0gJmFtcDsg
+        ZmlsdGVyZWRfdGl0bGVfc2VhcmNoPSAmYW1wOyBpc2JuXzEzPTwvcGFyc2Vf
+        cGFyYW0+CiAgICA8cHJveHk+bm88L3Byb3h5PgogICAgPGNyb3NzcmVmPm5v
+        PC9jcm9zc3JlZj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZf
+        d2FybmluZz4KICAgIDxub3RlPjwvbm90ZT4KICAgIDxhdXRoZW50aWNhdGlv
+        bj48L2F1dGhlbnRpY2F0aW9uPgogICAgPGNoYXJfc2V0PlVURjg8L2NoYXJf
+        c2V0PgogICAgPGRpc3BsYXllcj5BTEVQSDo6QUxFUEg8L2Rpc3BsYXllcj4K
+        ICAgIDx0YXJnZXRfdXJsPjwvdGFyZ2V0X3VybD4KICAgIDxpc19yZWxhdGVk
+        Pm5vPC9pc19yZWxhdGVkPgogICAgPGNvdmVyYWdlPgogICAgIDxjb3ZlcmFn
+        ZV90ZXh0PgogICAgICA8dGhyZXNob2xkX3RleHQ+PC90aHJlc2hvbGRfdGV4
+        dD4KICAgICAgPGVtYmFyZ29fdGV4dD48L2VtYmFyZ29fdGV4dD4KICAgICA8
+        L2NvdmVyYWdlX3RleHQ+CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdvPgogICAg
+        PC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAgICA8dGFy
+        Z2V0X25hbWU+VU5JT05fQ0FUQUxPR1VFX09DTENfV09STERDQVQ8L3Rhcmdl
+        dF9uYW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5PQ0xDIFdvcmxkQ2F0
+        IMKuIFNlcnZpY2U8L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxvYmplY3Rf
+        cG9ydGZvbGlvX2lkPjwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJn
+        ZXRfaWQ+MTExMDMyMjc0NTU1MDAwPC90YXJnZXRfaWQ+CiAgICA8aW50ZXJm
+        YWNlX2lkPjExMTAzMjI3NDU1NTAwMDwvaW50ZXJmYWNlX2lkPgogICAgPGlu
+        dGVyZmFjZV9uYW1lPlVOSU9OX0NBVEFMT0dVRV9PQ0xDX1dPUkxEQ0FUPC9p
+        bnRlcmZhY2VfbmFtZT4KICAgIDx0YXJnZXRfc2VydmljZV9pZD4xMTEwMzIy
+        NzQ1NTUwMDE8L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZpY2VfdHlw
+        ZT5nZXRIb2xkaW5nPC9zZXJ2aWNlX3R5cGU+CiAgICA8cGFyc2VyPkZpcnN0
+        U2VhcmNoOjpXT1JMRENBVDwvcGFyc2VyPgogICAgPHBhcnNlX3BhcmFtPnVy
+        bD1odHRwOi8vd3d3LndvcmxkY2F0Lm9yZy9zZWFyY2ggJmFtcDtwYXJ0bmVy
+        X2tleV9jb2RlPWV4bGlicmlzICZhbXA7d2NhdXRobz0xMDAyNTk4ODkvcGlj
+        a2xlczU8L3BhcnNlX3BhcmFtPgogICAgPHByb3h5Pm5vPC9wcm94eT4KICAg
+        IDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZfd2Fybmlu
+        Zz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8bm90ZT48L25vdGU+CiAgICA8
+        YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAgIDxjaGFyX3Nl
+        dD5pc28tODg1OS0xPC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+V29ybGRj
+        YXQ6OldvcmxkY2F0PC9kaXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRw
+        Oi8vd3d3LndvcmxkY2F0Lm9yZy9zZWFyY2g/cT10aSUzQVRoZStOZXcrWW9y
+        a2VyJTJCaXNzbiUzQTAwMjgtNzkyWDwvdGFyZ2V0X3VybD4KICAgIDxpc19y
+        ZWxhdGVkPm5vPC9pc19yZWxhdGVkPgogICAgPGNvdmVyYWdlPgogICAgIDxj
+        b3ZlcmFnZV90ZXh0PgogICAgICA8dGhyZXNob2xkX3RleHQ+PC90aHJlc2hv
+        bGRfdGV4dD4KICAgICAgPGVtYmFyZ29fdGV4dD48L2VtYmFyZ29fdGV4dD4K
+        ICAgICA8L2NvdmVyYWdlX3RleHQ+CiAgICAgPGVtYmFyZ28+PC9lbWJhcmdv
+        PgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0YXJnZXQ+CiAg
+        ICA8dGFyZ2V0X25hbWU+RE9DREVMX0FSRVNfTENMPC90YXJnZXRfbmFtZT4K
+        ICAgIDx0YXJnZXRfcHVibGljX25hbWU+UHV0IFRoaXMgSXRlbSBPbiBSZXNl
+        cnZlIEZvciBBIENvdXJzZTwvdGFyZ2V0X3B1YmxpY19uYW1lPgogICAgPG9i
+        amVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAg
+        PHRhcmdldF9pZD4zMjUyMDAwMDAxOTAwMDA0MjwvdGFyZ2V0X2lkPgogICAg
+        PGludGVyZmFjZV9pZD4zMjUyMDAwMDAxOTAwMDA0MjwvaW50ZXJmYWNlX2lk
+        PgogICAgPGludGVyZmFjZV9uYW1lPkRPQ0RFTF9BUkVTPC9pbnRlcmZhY2Vf
+        bmFtZT4KICAgIDx0YXJnZXRfc2VydmljZV9pZD4zMjUyMDAwMDAxOTAwMDA2
+        MDwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2VydmljZV90eXBlPmdldERv
+        Y3VtZW50RGVsaXZlcnk8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+SUxM
+        aWFkOjpEREw8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT51cmw9aHR0cDov
+        L2FyZXMubGlicmFyeS5uZXdzY2hvb2wuZWR1L2FyZXMvYXJlcy5kbGwvT3Bl
+        blVSTCAmYW1wOyBpZF90eXBlPTwvcGFyc2VfcGFyYW0+CiAgICA8cHJveHk+
+        bm88L3Byb3h5PgogICAgPGNyb3NzcmVmPnllczwvY3Jvc3NyZWY+CiAgICA8
+        dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8bm90
+        ZT5QbGFjZSB0aGlzIGl0ZW0gb24gcmVzZXJ2ZSBmb3IgYSBjb3Vyc2UgSSBh
+        bSB0ZWFjaGluZyAoZmFjdWx0eSBvbmx5KTwvbm90ZT4KICAgIDxhdXRoZW50
+        aWNhdGlvbj48L2F1dGhlbnRpY2F0aW9uPgogICAgPGNoYXJfc2V0PnV0Zjg8
+        L2NoYXJfc2V0PgogICAgPGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0
+        YXJnZXRfdXJsPmh0dHA6Ly9hcmVzLmxpYnJhcnkubmV3c2Nob29sLmVkdS9h
+        cmVzL2FyZXMuZGxsL09wZW5VUkw/cmZ0Lmlzc249MDAyOC03OTJYJmFtcDty
+        ZnQuZ2VucmU9am91cm5hbCZhbXA7cmZ0LnB1Yj1GLVIrUHViLitDb3JwLiZh
+        bXA7cmZ0LnN0aXRsZT1ORVcrWU9SS0VSJmFtcDtyZnQuZWlzc249MjE2My0z
+        ODI3JmFtcDtyZnQucGxhY2U9TmV3K1lvcmsmYW1wO3JmdC50aXRsZT1UaGUr
+        TmV3K1lvcmtlciZhbXA7bGlua3R5cGU9b3BlbnVybCZhbXA7cmZ0X3ZhbF9m
+        bXQ9aW5mbyUzQW9maSUyRmZtdCUzQWtldiUzQW10eCUzQWpvdXJuYWwmYW1w
+        O3VybF92ZXI9WjM5Ljg4LTIwMDQmYW1wO3Jmcl9pZD1pbmZvJTNBc2lkJTJG
+        c2Z4aXQuY29tJTNBY2l0YXRpb24oVmlhK1NGWCk8L3RhcmdldF91cmw+CiAg
+        ICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4K
+        ICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0Pjwv
+        dGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdv
+        X3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxlbWJhcmdvPjwv
+        ZW1iYXJnbz4KICAgIDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFy
+        Z2V0PgogICAgPHRhcmdldF9uYW1lPkRPQ0RFTF9JTExJQUQ8L3RhcmdldF9u
+        YW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5SZXF1ZXN0IE1hdGVyaWFs
+        cyBmcm9tIE5vbi1Db25zb3J0aXVtIExpYnJhcmllczwvdGFyZ2V0X3B1Ymxp
+        Y19uYW1lPgogICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9y
+        dGZvbGlvX2lkPgogICAgPHRhcmdldF9pZD4xMTEwMjc2MTQzNDQwMDA8L3Rh
+        cmdldF9pZD4KICAgIDxpbnRlcmZhY2VfaWQ+MTExMDI3NjE0MzQ0MDAwPC9p
+        bnRlcmZhY2VfaWQ+CiAgICA8aW50ZXJmYWNlX25hbWU+RE9DREVMX0lMTElB
+        RDwvaW50ZXJmYWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTEx
+        MDI3NjE0MzQ0MDAxPC90YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNl
+        X3R5cGU+Z2V0RG9jdW1lbnREZWxpdmVyeTwvc2VydmljZV90eXBlPgogICAg
+        PHBhcnNlcj5JTExpYWQ6OkRETDwvcGFyc2VyPgogICAgPHBhcnNlX3BhcmFt
+        PnVybD1odHRwOi8vaWxsLmxpYnJhcnkubnl1LmVkdS8vaWxsaWFkL2lsbGlh
+        ZC5kbGwvT3BlblVSTCAmYW1wOyBpZF90eXBlPTwvcGFyc2VfcGFyYW0+CiAg
+        ICA8cHJveHk+bm88L3Byb3h5PgogICAgPGNyb3NzcmVmPnllczwvY3Jvc3Ny
+        ZWY+CiAgICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+
+        CiAgICA8bm90ZT5UaGUgSW50ZXItTGlicmFyeSBMb2FuIChJTEwpIHNlcnZp
+        Y2UgaXMgY3VycmVudGx5IGV4cGVyaWVuY2luZyB0ZWNobmljYWwgaXNzdWVz
+        LiAgSW4gdGhlIGV2ZW50IHlvdSBhcmUgbm90IGxvZ2dlZCBpbiB0byB0aGUg
+        SUxMIHN5c3RlbSwgcGxlYXNlIHByb3ZpZGUgYSBmdWxsIGNpdGF0aW9uIG9m
+        IHlvdXIgcmVxdWVzdCB0byAmbHQ7YSBocmVmPSJtYWlsIHRvOmxpYi1pbGxA
+        bnl1LmVkdSAiJmd0O2xpYi1pbGxAbnl1LmVkdSZsdDsvYSZndDsuICA8L25v
+        dGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAg
+        IDxjaGFyX3NldD51dGY4PC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+PC9k
+        aXNwbGF5ZXI+CiAgICA8dGFyZ2V0X3VybD5odHRwOi8vaWxsLmxpYnJhcnku
+        bnl1LmVkdS8vaWxsaWFkL2lsbGlhZC5kbGwvT3BlblVSTD9yZnQuaXNzbj0w
+        MDI4LTc5MlgmYW1wO3JmdC5nZW5yZT1qb3VybmFsJmFtcDtyZnQucHViPUYt
+        UitQdWIuK0NvcnAuJmFtcDtyZnQuc3RpdGxlPU5FVytZT1JLRVImYW1wO3Jm
+        dC5laXNzbj0yMTYzLTM4MjcmYW1wO3JmdC5wbGFjZT1OZXcrWW9yayZhbXA7
+        cmZ0LnRpdGxlPVRoZStOZXcrWW9ya2VyJmFtcDtsaW5rdHlwZT1vcGVudXJs
+        JmFtcDtyZnRfdmFsX2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4
+        JTNBam91cm5hbCZhbXA7dXJsX3Zlcj1aMzkuODgtMjAwNCZhbXA7cmZyX2lk
+        PWluZm8lM0FzaWQlMkZzZnhpdC5jb20lM0FjaXRhdGlvbihWaWErU0ZYKTwv
+        dGFyZ2V0X3VybD4KICAgIDxpc19yZWxhdGVkPm5vPC9pc19yZWxhdGVkPgog
+        ICAgPGNvdmVyYWdlPgogICAgIDxjb3ZlcmFnZV90ZXh0PgogICAgICA8dGhy
+        ZXNob2xkX3RleHQ+PC90aHJlc2hvbGRfdGV4dD4KICAgICAgPGVtYmFyZ29f
+        dGV4dD48L2VtYmFyZ29fdGV4dD4KICAgICA8L2NvdmVyYWdlX3RleHQ+CiAg
+        ICAgPGVtYmFyZ28+PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAgPC90
+        YXJnZXQ+CiAgIDx0YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+RUJTQ09IT1NU
+        X0FSVF9JTkRFWF9SRVRST1NQRUNUSVZFPC90YXJnZXRfbmFtZT4KICAgIDx0
+        YXJnZXRfcHVibGljX25hbWU+RUJTQ09ob3N0IEFydCBJbmRleCBSZXRyb3Nw
+        ZWN0aXZlPC90YXJnZXRfcHVibGljX25hbWU+CiAgICA8b2JqZWN0X3BvcnRm
+        b2xpb19pZD4yNjcwMDAwMDAyMDU2NDI2PC9vYmplY3RfcG9ydGZvbGlvX2lk
+        PgogICAgPHRhcmdldF9pZD4xMTEwOTA2MTA1MDUwMDA8L3RhcmdldF9pZD4K
+        ICAgIDxpbnRlcmZhY2VfaWQ+MTExMDgwMTQ0MjgyMDAwPC9pbnRlcmZhY2Vf
+        aWQ+CiAgICA8aW50ZXJmYWNlX25hbWU+RUJTQ09IT1NUPC9pbnRlcmZhY2Vf
+        bmFtZT4KICAgIDx0YXJnZXRfc2VydmljZV9pZD4xMTEwOTA2MTA1MDUwMDE8
+        L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZpY2VfdHlwZT5nZXRBYnN0
+        cmFjdDwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj5FQlNDT19IT1NUOjpq
+        b3VybjwvcGFyc2VyPgogICAgPHBhcnNlX3BhcmFtPmRiX2hvc3Q9YWlyICZh
+        bXA7ZWJzY29ob3N0dXJsID0gaHR0cDovL3NlYXJjaC5lYnNjb2hvc3QuY29t
+        JmFtcDtqa2V5PU5ZSzwvcGFyc2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9w
+        cm94eT4KICAgIDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+CiAgICA8dGltZWRp
+        ZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8bm90ZT48L25v
+        dGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAg
+        IDxjaGFyX3NldD48L2NoYXJfc2V0PgogICAgPGRpc3BsYXllcj5GVDo6Tk9f
+        RklMTF9JTjwvZGlzcGxheWVyPgogICAgPHRhcmdldF91cmw+aHR0cHM6Ly9s
+        b2dpbi5saWJwcm94eS5uZXdzY2hvb2wuZWR1L2xvZ2luP3VybD1odHRwOi8v
+        c2VhcmNoLmVic2NvaG9zdC5jb20vbG9naW4uYXNweD9kaXJlY3Q9dHJ1ZSZh
+        bXA7ZGI9YWlyJmFtcDtzY29wZT1zaXRlJmFtcDtjbGkwPUFCJmFtcDtjbHYw
+        PVkmYW1wO3R5cGU9MCZhbXA7JmFtcDticXVlcnk9SVMrMDAyODc5Mlg8L3Rh
+        cmdldF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAg
+        IDxjb3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVz
+        aG9sZF90ZXh0PgogICAgICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFpbGFi
+        bGUgZnJvbSAxOTQxICB1bnRpbCAxOTU3PC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+
+        CiAgICAgIDwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+
+        PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxm
+        cm9tPgogICAgICA8eWVhcj4xOTQxPC95ZWFyPgogICAgIDwvZnJvbT4KICAg
+        ICA8dG8+CiAgICAgIDx5ZWFyPjE5NTc8L3llYXI+CiAgICAgPC90bz4KICAg
+        ICA8ZW1iYXJnbz48L2VtYmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3Rh
+        cmdldD4KICAgPHRhcmdldD4KICAgIDx0YXJnZXRfbmFtZT5FQlNDT0hPU1Rf
+        QVJUX0lOREVYX1JFVFJPU1BFQ1RJVkU8L3RhcmdldF9uYW1lPgogICAgPHRh
+        cmdldF9wdWJsaWNfbmFtZT5FQlNDT2hvc3QgQXJ0IEluZGV4IFJldHJvc3Bl
+        Y3RpdmU8L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZv
+        bGlvX2lkPjExMTA5MDYxMzI0OTE4MTwvb2JqZWN0X3BvcnRmb2xpb19pZD4K
+        ICAgIDx0YXJnZXRfaWQ+MTExMDkwNjEwNTA1MDAwPC90YXJnZXRfaWQ+CiAg
+        ICA8aW50ZXJmYWNlX2lkPjExMTA4MDE0NDI4MjAwMDwvaW50ZXJmYWNlX2lk
+        PgogICAgPGludGVyZmFjZV9uYW1lPkVCU0NPSE9TVDwvaW50ZXJmYWNlX25h
+        bWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MTExMDkwNjEwNTA1MDAxPC90
+        YXJnZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0QWJzdHJh
+        Y3Q8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+RUJTQ09fSE9TVDo6am91
+        cm48L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT5kYl9ob3N0PWFpciAmYW1w
+        O2Vic2NvaG9zdHVybCA9IGh0dHA6Ly9zZWFyY2guZWJzY29ob3N0LmNvbTwv
+        cGFyc2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9wcm94eT4KICAgIDxjcm9z
+        c3JlZj5ubzwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZfd2FybmluZz48L3Rp
+        bWVkaWZmX3dhcm5pbmc+CiAgICA8bm90ZT48L25vdGU+CiAgICA8YXV0aGVu
+        dGljYXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAgIDxjaGFyX3NldD48L2No
+        YXJfc2V0PgogICAgPGRpc3BsYXllcj5GVDo6Tk9fRklMTF9JTjwvZGlzcGxh
+        eWVyPgogICAgPHRhcmdldF91cmw+aHR0cHM6Ly9sb2dpbi5saWJwcm94eS5u
+        ZXdzY2hvb2wuZWR1L2xvZ2luP3VybD1odHRwOi8vc2VhcmNoLmVic2NvaG9z
+        dC5jb20vbG9naW4uYXNweD9kaXJlY3Q9dHJ1ZSZhbXA7ZGI9YWlyJmFtcDtz
+        Y29wZT1zaXRlJmFtcDtjbGkwPUFCJmFtcDtjbHYwPVkmYW1wO3R5cGU9MCZh
+        bXA7JmFtcDticXVlcnk9SVMrMDAyODc5Mlg8L3RhcmdldF91cmw+CiAgICA8
+        aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4KICAg
+        ICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0PgogICAg
+        ICAgPGNvdmVyYWdlX3N0YXRlbWVudD5BdmFpbGFibGUgZnJvbSAxOTQxICB1
+        bnRpbCAxOTU3PC9jb3ZlcmFnZV9zdGF0ZW1lbnQ+CiAgICAgIDwvdGhyZXNo
+        b2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+
+        CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxmcm9tPgogICAgICA8eWVh
+        cj4xOTQxPC95ZWFyPgogICAgIDwvZnJvbT4KICAgICA8dG8+CiAgICAgIDx5
+        ZWFyPjE5NTc8L3llYXI+CiAgICAgPC90bz4KICAgICA8ZW1iYXJnbz48L2Vt
+        YmFyZ28+CiAgICA8L2NvdmVyYWdlPgogICA8L3RhcmdldD4KICAgPHRhcmdl
+        dD4KICAgIDx0YXJnZXRfbmFtZT5FQlNDT0hPU1RfT01OSUZJTEVfRlVMTF9U
+        RVhUX01FR0FfV0lMU09OPC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVi
+        bGljX25hbWU+RUJTQ09ob3N0IE9tbmlGaWxlIEZ1bGwgVGV4dCBNZWdhPC90
+        YXJnZXRfcHVibGljX25hbWU+CiAgICA8b2JqZWN0X3BvcnRmb2xpb19pZD4z
+        NDUwMDAwMDAwMDEyMDcxPC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAgPHRh
+        cmdldF9pZD4zNDUwMDAwMDAwMDAwMDM0PC90YXJnZXRfaWQ+CiAgICA8aW50
+        ZXJmYWNlX2lkPjExMTA4MDE0NDI4MjAwMDwvaW50ZXJmYWNlX2lkPgogICAg
+        PGludGVyZmFjZV9uYW1lPkVCU0NPSE9TVDwvaW50ZXJmYWNlX25hbWU+CiAg
+        ICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MzQ1MDAwMDAwMDAwMDAzNDwvdGFyZ2V0
+        X3NlcnZpY2VfaWQ+CiAgICA8c2VydmljZV90eXBlPmdldFRPQzwvc2Vydmlj
+        ZV90eXBlPgogICAgPHBhcnNlcj5FQlNDT19IT1NUOjplYnNjb19hbTwvcGFy
+        c2VyPgogICAgPHBhcnNlX3BhcmFtPmRiX2hvc3Q9b2ZtJmFtcDtlYnNjb2hv
+        c3R1cmwgPSBodHRwOi8vc2VhcmNoLmVic2NvaG9zdC5jb20gJmFtcDsgbGlu
+        a3VybD1odHRwOi8vb3BlbnVybC5lYnNjb2hvc3QuY29tL2xpbmtzdmMvbGlu
+        a2luZy5hc3B4ICZhbXA7IHNoaWI9ICZhbXA7IGN1c3RvbWVyX2lkPSAmYW1w
+        OyBhdGhlbnNfaWQ9ICAmYW1wOyB1X3NoaWI9JmFtcDtqa2V5PU5ZSzwvcGFy
+        c2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9wcm94eT4KICAgIDxjcm9zc3Jl
+        Zj5ubzwvY3Jvc3NyZWY+CiAgICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVk
+        aWZmX3dhcm5pbmc+CiAgICA8bm90ZT48L25vdGU+CiAgICA8YXV0aGVudGlj
+        YXRpb24+PC9hdXRoZW50aWNhdGlvbj4KICAgIDxjaGFyX3NldD5pc28tODg1
+        OS0xPC9jaGFyX3NldD4KICAgIDxkaXNwbGF5ZXI+PC9kaXNwbGF5ZXI+CiAg
+        ICA8dGFyZ2V0X3VybD5odHRwczovL2xvZ2luLmxpYnByb3h5Lm5ld3NjaG9v
+        bC5lZHUvbG9naW4/dXJsPWh0dHA6Ly9zZWFyY2guZWJzY29ob3N0LmNvbS9k
+        aXJlY3QuYXNwP2RiPW9mbSZhbXA7am49TllLJmFtcDtzY29wZT1zaXRlPC90
+        YXJnZXRfdXJsPgogICAgPGlzX3JlbGF0ZWQ+bm88L2lzX3JlbGF0ZWQ+CiAg
+        ICA8Y292ZXJhZ2U+CiAgICAgPGNvdmVyYWdlX3RleHQ+CiAgICAgIDx0aHJl
+        c2hvbGRfdGV4dD4KICAgICAgIDxjb3ZlcmFnZV9zdGF0ZW1lbnQ+QXZhaWxh
+        YmxlIGZyb20gMjAxMTwvY292ZXJhZ2Vfc3RhdGVtZW50PgogICAgICA8L3Ro
+        cmVzaG9sZF90ZXh0PgogICAgICA8ZW1iYXJnb190ZXh0PjwvZW1iYXJnb190
+        ZXh0PgogICAgIDwvY292ZXJhZ2VfdGV4dD4KICAgICA8ZnJvbT4KICAgICAg
+        PHllYXI+MjAxMTwveWVhcj4KICAgICA8L2Zyb20+CiAgICAgPGVtYmFyZ28+
+        PC9lbWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0
+        YXJnZXQ+CiAgICA8dGFyZ2V0X25hbWU+UkVGV09SS1NfRVhQT1JUX1RPT0w8
+        L3RhcmdldF9uYW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5JbXBvcnQg
+        Q2l0YXRpb24gSW50byBSZWZ3b3JrczwvdGFyZ2V0X3B1YmxpY19uYW1lPgog
+        ICAgPG9iamVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlvX2lk
+        PgogICAgPHRhcmdldF9pZD4xMTEwNjkzNTc2NzgwMDA8L3RhcmdldF9pZD4K
+        ICAgIDxpbnRlcmZhY2VfaWQ+MTExMDY5MzU3Njc4MDAwPC9pbnRlcmZhY2Vf
+        aWQ+CiAgICA8aW50ZXJmYWNlX25hbWU+UkVGV09SS1NfRVhQT1JUX1RPT0w8
+        L2ludGVyZmFjZV9uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjExMTA2
+        OTM1NzY3ODAwMTwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2VydmljZV90
+        eXBlPmdldFJlZmVyZW5jZTwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj5S
+        RUZXT1JLUzo6UkVGV09SS1M8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT5y
+        ZWZ3b3Jrc3VybD1odHRwOi8vd3d3LnJlZndvcmtzLmNvbS9leHByZXNzL0V4
+        cHJlc3NJbXBvcnQuYXNwICZhbXA7cHJvdmlkZXJpZCA9ICAmYW1wO3NoaWJ1
+        cmwgPSBodHRwczovL3d3dy5yZWZ3b3Jrcy5jb20vUldTaGliYm9sZXRoL1No
+        aWJib2xldGhBdXRoZW50aWNhdGUuYXNwICZhbXA7IGV4cG9ydHVybD1odHRw
+        Oi8vc2Z4LmxpYnJhcnkubmV3c2Nob29sLmVkdS9ucy9jZ2kvcHVibGljL3Jl
+        ZndvcmtzLmNnaTwvcGFyc2VfcGFyYW0+CiAgICA8cHJveHk+eWVzPC9wcm94
+        eT4KICAgIDxjcm9zc3JlZj55ZXM8L2Nyb3NzcmVmPgogICAgPHRpbWVkaWZm
+        X3dhcm5pbmc+PC90aW1lZGlmZl93YXJuaW5nPgogICAgPG5vdGU+PC9ub3Rl
+        PgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+CiAgICA8
+        Y2hhcl9zZXQ+dXRmODwvY2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVyPjwvZGlz
+        cGxheWVyPgogICAgPHRhcmdldF91cmw+aHR0cHM6Ly9sb2dpbi5saWJwcm94
+        eS5uZXdzY2hvb2wuZWR1L2xvZ2luP3VybD1odHRwOi8vd3d3LnJlZndvcmtz
+        LmNvbS9leHByZXNzL0V4cHJlc3NJbXBvcnQuYXNwP2ZpbHRlcj1SZWZXb3Jr
+        cytUYWdnZWQrRm9ybWF0JmFtcDt1cmw9aHR0cCUzQSUyRiUyRnNmeC5saWJy
+        YXJ5Lm5ld3NjaG9vbC5lZHUlMkZucyUyRmNnaSUyRnB1YmxpYyUyRnJlZndv
+        cmtzLmNnaSUzRlJUJTNESm91cm5hbCUyNTI1MkMlMkJFbGVjdHJvbmljJTI2
+        UEIlM0RGLVIlMkJQdWIuJTJCQ29ycC4lMjZQUCUzRE5ldyUyQllvcmslMjZB
+        MSUzRCUyNkpGJTNEVGhlJTJCTmV3JTJCWW9ya2VyJTI2U04lM0QwMDI4LTc5
+        MlgmYW1wO3ZlbmRvcj1TRlg8L3RhcmdldF91cmw+CiAgICA8aXNfcmVsYXRl
+        ZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxjb3ZlcmFnZT4KICAgICA8Y292ZXJh
+        Z2VfdGV4dD4KICAgICAgPHRocmVzaG9sZF90ZXh0PjwvdGhyZXNob2xkX3Rl
+        eHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+PC9lbWJhcmdvX3RleHQ+CiAgICAg
+        PC9jb3ZlcmFnZV90ZXh0PgogICAgIDxlbWJhcmdvPjwvZW1iYXJnbz4KICAg
+        IDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0PgogICAgPHRh
+        cmdldF9uYW1lPkNPTU1FTlRTX0FCT1VUX0JPQkNBVF9MQ0w8L3RhcmdldF9u
+        YW1lPgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5Cb2JDYXQgQ29tbWVudHM8
+        L3RhcmdldF9wdWJsaWNfbmFtZT4KICAgIDxvYmplY3RfcG9ydGZvbGlvX2lk
+        Pjwvb2JqZWN0X3BvcnRmb2xpb19pZD4KICAgIDx0YXJnZXRfaWQ+MzI1MjAw
+        MDAwMDAwMDAwMTY8L3RhcmdldF9pZD4KICAgIDxpbnRlcmZhY2VfaWQ+MzI1
+        MjAwMDAwMDAwMDAwMTY8L2ludGVyZmFjZV9pZD4KICAgIDxpbnRlcmZhY2Vf
+        bmFtZT5DT01NRU5UU19BQk9VVF9CT0JDQVQ8L2ludGVyZmFjZV9uYW1lPgog
+        ICAgPHRhcmdldF9zZXJ2aWNlX2lkPjMyNTIwMDAwMDAwMDAwMDIxPC90YXJn
+        ZXRfc2VydmljZV9pZD4KICAgIDxzZXJ2aWNlX3R5cGU+Z2V0V2ViU2Vydmlj
+        ZTwvc2VydmljZV90eXBlPgogICAgPHBhcnNlcj5HZW5lcmljPC9wYXJzZXI+
+        CiAgICA8cGFyc2VfcGFyYW0+SUYgKCkgImh0dHA6Ly93d3cubGlicmFyeS5u
+        eXUuZWR1L2JvYmNhdC9jb21tZW50cyI8L3BhcnNlX3BhcmFtPgogICAgPHBy
+        b3h5Pm5vPC9wcm94eT4KICAgIDxjcm9zc3JlZj5ubzwvY3Jvc3NyZWY+CiAg
+        ICA8dGltZWRpZmZfd2FybmluZz48L3RpbWVkaWZmX3dhcm5pbmc+CiAgICA8
+        bm90ZT48L25vdGU+CiAgICA8YXV0aGVudGljYXRpb24+PC9hdXRoZW50aWNh
+        dGlvbj4KICAgIDxjaGFyX3NldD48L2NoYXJfc2V0PgogICAgPGRpc3BsYXll
+        cj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJsPmh0dHA6Ly93d3cubGli
+        cmFyeS5ueXUuZWR1L2JvYmNhdC9jb21tZW50czwvdGFyZ2V0X3VybD4KICAg
+        IDxpc19yZWxhdGVkPm5vPC9pc19yZWxhdGVkPgogICAgPGNvdmVyYWdlPgog
+        ICAgIDxjb3ZlcmFnZV90ZXh0PgogICAgICA8dGhyZXNob2xkX3RleHQ+PC90
+        aHJlc2hvbGRfdGV4dD4KICAgICAgPGVtYmFyZ29fdGV4dD48L2VtYmFyZ29f
+        dGV4dD4KICAgICA8L2NvdmVyYWdlX3RleHQ+CiAgICAgPGVtYmFyZ28+PC9l
+        bWJhcmdvPgogICAgPC9jb3ZlcmFnZT4KICAgPC90YXJnZXQ+CiAgIDx0YXJn
+        ZXQ+CiAgICA8dGFyZ2V0X25hbWU+QVNLX0FfTElCUkFSSUFOX0xDTDwvdGFy
+        Z2V0X25hbWU+CiAgICA8dGFyZ2V0X3B1YmxpY19uYW1lPlN1Ym1pdCBZb3Vy
+        IFF1ZXN0aW9uIE9ubGluZTwvdGFyZ2V0X3B1YmxpY19uYW1lPgogICAgPG9i
+        amVjdF9wb3J0Zm9saW9faWQ+PC9vYmplY3RfcG9ydGZvbGlvX2lkPgogICAg
+        PHRhcmdldF9pZD4zMjUyMDAwMDAwMDAwMDAxNTwvdGFyZ2V0X2lkPgogICAg
+        PGludGVyZmFjZV9pZD4zMjUyMDAwMDAwMDAwMDAxNTwvaW50ZXJmYWNlX2lk
+        PgogICAgPGludGVyZmFjZV9uYW1lPkFTS19BX0xJQlJBUklBTjwvaW50ZXJm
+        YWNlX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MzI1MjAwMDAwMDAw
+        MDAwMjA8L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZpY2VfdHlwZT5n
+        ZXRXZWJTZXJ2aWNlPC9zZXJ2aWNlX3R5cGU+CiAgICA8cGFyc2VyPkdlbmVy
+        aWM8L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT5JRiAoKSAiaHR0cDovL2Fu
+        c3dlcnMubGlicmFyeS5uZXdzY2hvb2wuZWR1IjwvcGFyc2VfcGFyYW0+CiAg
+        ICA8cHJveHk+bm88L3Byb3h5PgogICAgPGNyb3NzcmVmPm5vPC9jcm9zc3Jl
+        Zj4KICAgIDx0aW1lZGlmZl93YXJuaW5nPjwvdGltZWRpZmZfd2FybmluZz4K
+        ICAgIDxub3RlPjwvbm90ZT4KICAgIDxhdXRoZW50aWNhdGlvbj48L2F1dGhl
+        bnRpY2F0aW9uPgogICAgPGNoYXJfc2V0Pmlzby04ODU5LTE8L2NoYXJfc2V0
+        PgogICAgPGRpc3BsYXllcj48L2Rpc3BsYXllcj4KICAgIDx0YXJnZXRfdXJs
+        Pmh0dHA6Ly9hbnN3ZXJzLmxpYnJhcnkubmV3c2Nob29sLmVkdS88L3Rhcmdl
+        dF91cmw+CiAgICA8aXNfcmVsYXRlZD5ubzwvaXNfcmVsYXRlZD4KICAgIDxj
+        b3ZlcmFnZT4KICAgICA8Y292ZXJhZ2VfdGV4dD4KICAgICAgPHRocmVzaG9s
+        ZF90ZXh0PjwvdGhyZXNob2xkX3RleHQ+CiAgICAgIDxlbWJhcmdvX3RleHQ+
+        PC9lbWJhcmdvX3RleHQ+CiAgICAgPC9jb3ZlcmFnZV90ZXh0PgogICAgIDxl
+        bWJhcmdvPjwvZW1iYXJnbz4KICAgIDwvY292ZXJhZ2U+CiAgIDwvdGFyZ2V0
+        PgogIDwvY3R4X29ial90YXJnZXRzPgogPC9jdHhfb2JqPgo8L2N0eF9vYmpf
+        c2V0Pg==
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:53:45 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:55:17-05:00&ctx_ver=Z39.88-2004&req.ip=176.74.48.32&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:55:17 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"rft.issn\"&gt;0028-792X&lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-11-15T15:55:17-05:00&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"_stash\"&gt;\n
+        \  &lt;hash&gt;\n    &lt;item key=\"@rft_id\"&gt;\n     &lt;array&gt;\n      &lt;item
+        key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n     &lt;/array&gt;\n    &lt;/item&gt;\n
+        \   &lt;item key=\"@rfr_id\"&gt;\n     &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"rft.eissn\"&gt;2163-3827&lt;/item&gt;\n
+        \ &lt;item key=\"@rfr_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.place\"&gt;New York&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.subcategory\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Current
+        Events &amp;amp; News&lt;/item&gt;\n    &lt;item key=\"1\"&gt;General and
+        Others&lt;/item&gt;\n    &lt;item key=\"2\"&gt;Literature&lt;/item&gt;\n    &lt;item
+        key=\"3\"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;\n    &lt;item
+        key=\"4\"&gt;Conservation&lt;/item&gt;\n    &lt;item key=\"5\"&gt;Journalism,
+        Mass Communication, Media &amp;amp; Publishing&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"rft.lccn\"&gt;  2011201780&lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sD081E53C-AB75-11E6-9434-3EBEFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        \ &lt;item key=\"rft.object_type\"&gt;JOURNAL&lt;/item&gt;\n  &lt;item key=\"rft.language\"&gt;eng&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.has_full_text\"&gt;yes&lt;/item&gt;\n  &lt;item key=\"rft.object_id\"&gt;110975413975944&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.request_id\"&gt;12964386&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;176.74.48.32&lt;/item&gt;\n
+        \ &lt;item key=\"rft.pub\"&gt;F-R Pub. Corp.&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ \n  &lt;item key=\"rft.title\"&gt;The New Yorker&lt;/item&gt;\n  &lt;item
+        key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n  &lt;item key=\"@rft.stitle\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;NEW YORKER&lt;/item&gt;\n    &lt;item
+        key=\"1\"&gt;NEW YORKER, THE&lt;/item&gt;\n    &lt;item key=\"2\"&gt;NEW YORKER
+        (NEW YORK, N.Y.&lt;/item&gt;\n    &lt;item key=\"3\"&gt;NEW - YORKER&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.jtitle\"&gt;The New
+        Yorker&lt;/item&gt;\n  &lt;item key=\"sfx.sourcename\"&gt;CITATION&lt;/item&gt;\n
+        \ &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"existing_ts_ids\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n    &lt;item key=\"2\"&gt;111021039760001&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;1000000000002159&lt;/item&gt;\n    &lt;item key=\"4\"&gt;3450000000000063&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;111031861479000&lt;/item&gt;\n    &lt;item key=\"6\"&gt;111037301464002&lt;/item&gt;\n
+        \   &lt;item key=\"7\"&gt;1000000000001288&lt;/item&gt;\n    &lt;item key=\"8\"&gt;20430000000000018&lt;/item&gt;\n
+        \   &lt;item key=\"9\"&gt;2610000000000090&lt;/item&gt;\n    &lt;item key=\"10\"&gt;1000000000002113&lt;/item&gt;\n
+        \   &lt;item key=\"11\"&gt;2610000000000091&lt;/item&gt;\n    &lt;item key=\"12\"&gt;111016833201001&lt;/item&gt;\n
+        \   &lt;item key=\"13\"&gt;2560000000000075&lt;/item&gt;\n    &lt;item key=\"14\"&gt;2400000000000013&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.category\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"1\"&gt;Arts and Humanities&lt;/item&gt;\n
+        \   &lt;item key=\"2\"&gt;Arts and Humanities&lt;/item&gt;\n    &lt;item key=\"3\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"4\"&gt;Environmental Sciences&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;Social Sciences&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n
+        \ <ctx_obj_targets>\n   <target>\n    <target_name>Preferred_Links_LCL</target_name>\n
+        \   <target_public_name>E Journal Full Text</target_public_name>\n    <object_portfolio_id>20430000000000647</object_portfolio_id>\n
+        \   <target_id>20430000000000020</target_id>\n    <interface_id>20430000000000020</interface_id>\n
+        \   <interface_name>Preferred_Links</interface_name>\n    <target_service_id>20430000000000018</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULKdoi</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>\n
+        \   <target_public_name>EBSCOhost Academic Search Complete</target_public_name>\n
+        \   <object_portfolio_id>1000000000670576</object_portfolio_id>\n    <target_id>1000000000001505</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>1000000000002159</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=a9h&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=a9h&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2004</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2004</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON</target_name>\n
+        \   <target_public_name>EBSCOhost Reader's Guide Full Text Mega</target_public_name>\n
+        \   <object_portfolio_id>2670000000679922</object_portfolio_id>\n    <target_id>3450000000000050</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>3450000000000063</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=rgm&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=rgm&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2011</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2011</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_ACADEMIC_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage Academic OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000622858</object_portfolio_id>\n    <target_id>1000000000001464</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000002113</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=AONE &amp;loc_id=nysl_me_newyorku  &amp;art=yes  &amp; &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=The+New+Yorker
+        &amp; jkey2=1161</parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication>NovelNY: Only available to users within
+        the NYUNY network.</authentication>\n    <char_set></char_set>\n    <displayer></displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/AONE?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GENERAL_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage General OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000712446</object_portfolio_id>\n    <target_id>111021039760000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111021039760001</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url=http://find.galegroup.com/openurl/openurl
+        &amp; url2=http://link.galegroup.com/apps/pub &amp;dbase=ITOF &amp;loc_id=nysl_me_newyorku
+        \ &amp;art=yes &amp;ltitle=The+New+Yorker &amp; jkey2=1161</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication>NovelNY:
+        Only available to users within the NYUNY network.</authentication>\n    <char_set>iso-8859-1</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/ITOF?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GN_LITERATURE_RESOURCE_CENTER</target_name>\n
+        \   <target_public_name>Gale Cengage Literature Resource Center</target_public_name>\n
+        \   <object_portfolio_id>2550000000651809</object_portfolio_id>\n    <target_id>111031861411000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111031861479000</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;loc_id=new64731 &amp;dbase=LitRC &amp;art=yes &amp; database= &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ALitRC&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI</target_name>\n
+        \   <target_public_name>Gale Cengage Shakespeare Collection Periodicals</target_public_name>\n
+        \   <object_portfolio_id>1000000000211453</object_portfolio_id>\n    <target_id>1000000000000669</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000001288</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=SHAX &amp;loc_id=new64731 &amp; exception=shakespeare &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ASHAX&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>MISCELLANEOUS_EJOURNALS</target_name>\n
+        \   <target_public_name>Miscellaneous Ejournals</target_public_name>\n    <object_portfolio_id>1000000001231416</object_portfolio_id>\n
+        \   <target_id>111016833201000</target_id>\n    <interface_id>111016833201000</interface_id>\n
+        \   <interface_name>MISCELLANEOUS_EJOURNALS</interface_name>\n    <target_service_id>111016833201001</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULK</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>yes</crossref>\n    <note></note>\n
+        \   <authentication></authentication>\n    <char_set></char_set>\n    <displayer>FT::NO_FILL_IN</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_ART_DESIGN_AND_ARCHITECTURE_COLLECTION</target_name>\n
+        \   <target_public_name>ProQuest Art Design and Architecture Collection</target_public_name>\n
+        \   <object_portfolio_id>2560000001234753</object_portfolio_id>\n    <target_id>2560000000000118</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2560000000000075</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp;amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_CENTRAL</target_name>\n
+        \   <target_public_name>ProQuest Central</target_public_name>\n    <object_portfolio_id>2550000000138190</object_portfolio_id>\n
+        \   <target_id>2400000000000013</target_id>\n    <interface_id>2400000000000006</interface_id>\n
+        \   <interface_name>PROQUEST</interface_name>\n    <target_service_id>2400000000000013</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>PROQUEST::open</parser>\n
+        \   <parse_param>url=http://gateway.proquest.com/openurl &amp; clientid= &amp;
+        url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_MUSIC_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Music Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178037</object_portfolio_id>\n    <target_id>2610000000000090</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000090</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_PERFORMING_ARTS_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Performing Arts Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178155</object_portfolio_id>\n    <target_id>2610000000000091</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000091</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>FACTIVA</target_name>\n    <target_public_name>Factiva</target_public_name>\n
+        \   <object_portfolio_id>1000000000776926</object_portfolio_id>\n    <target_id>111037301464000</target_id>\n
+        \   <interface_id>111037301464000</interface_id>\n    <interface_name>FACTIVA</interface_name>\n
+        \   <target_service_id>111037301464002</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>FACTIVA::FACTIVA</parser>\n    <parse_param>url=http://global.factiva.com
+        &amp; user= &amp; password =  &amp; namespace= &amp; sid=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA
+        &amp; filtered_title_search=&amp;jkey=GTNY</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication>Requires
+        NYU NetID.</authentication>\n    <char_set>utf8</char_set>\n    <displayer>FACTIVA::FACTIVA</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://global.factiva.com/en/du/headlines.asp?CurrentSourcesDesc=sc_u_gtny%2CThe+New+Yorker&amp;CurrentSources=U%7Cgtny&amp;XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1992  until 1992</coverage_statement>\n
+        \     </threshold_text>\n      <embargo_text></embargo_text>\n     </coverage_text>\n
+        \    <from>\n      <year>1992</year>\n     </from>\n     <to>\n      <year>1992</year>\n
+        \    </to>\n     <embargo></embargo>\n    </coverage>\n   </target>\n   <target>\n
+        \   <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n    <target_public_name>Ask
+        a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <interface_id>20430000000000002</interface_id>\n
+        \   <interface_name>ASK_A_LIBRARIAN</interface_name>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:55:18 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:55:23-05:00&ctx_ver=Z39.88-2004&req.ip=180.169.77.32&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:55:23 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"rft.issn\"&gt;0028-792X&lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-11-15T15:55:23-05:00&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"_stash\"&gt;\n
+        \  &lt;hash&gt;\n    &lt;item key=\"@rft_id\"&gt;\n     &lt;array&gt;\n      &lt;item
+        key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n     &lt;/array&gt;\n    &lt;/item&gt;\n
+        \   &lt;item key=\"@rfr_id\"&gt;\n     &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"rft.eissn\"&gt;2163-3827&lt;/item&gt;\n
+        \ &lt;item key=\"@rfr_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.place\"&gt;New York&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.subcategory\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Current
+        Events &amp;amp; News&lt;/item&gt;\n    &lt;item key=\"1\"&gt;General and
+        Others&lt;/item&gt;\n    &lt;item key=\"2\"&gt;Literature&lt;/item&gt;\n    &lt;item
+        key=\"3\"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;\n    &lt;item
+        key=\"4\"&gt;Conservation&lt;/item&gt;\n    &lt;item key=\"5\"&gt;Journalism,
+        Mass Communication, Media &amp;amp; Publishing&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"rft.lccn\"&gt;  2011201780&lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sD412B410-AB75-11E6-BC1D-FEC0FE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        \ &lt;item key=\"rft.object_type\"&gt;JOURNAL&lt;/item&gt;\n  &lt;item key=\"rft.language\"&gt;eng&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.has_full_text\"&gt;yes&lt;/item&gt;\n  &lt;item key=\"rft.object_id\"&gt;110975413975944&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.request_id\"&gt;12964388&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;180.169.77.32&lt;/item&gt;\n
+        \ &lt;item key=\"rft.pub\"&gt;F-R Pub. Corp.&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ \n  &lt;item key=\"rft.title\"&gt;The New Yorker&lt;/item&gt;\n  &lt;item
+        key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n  &lt;item key=\"@rft.stitle\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;NEW YORKER&lt;/item&gt;\n    &lt;item
+        key=\"1\"&gt;NEW YORKER, THE&lt;/item&gt;\n    &lt;item key=\"2\"&gt;NEW YORKER
+        (NEW YORK, N.Y.&lt;/item&gt;\n    &lt;item key=\"3\"&gt;NEW - YORKER&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.jtitle\"&gt;The New
+        Yorker&lt;/item&gt;\n  &lt;item key=\"sfx.sourcename\"&gt;CITATION&lt;/item&gt;\n
+        \ &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"existing_ts_ids\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n    &lt;item key=\"2\"&gt;111021039760001&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;1000000000002159&lt;/item&gt;\n    &lt;item key=\"4\"&gt;3450000000000063&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;111031861479000&lt;/item&gt;\n    &lt;item key=\"6\"&gt;111037301464002&lt;/item&gt;\n
+        \   &lt;item key=\"7\"&gt;1000000000001288&lt;/item&gt;\n    &lt;item key=\"8\"&gt;20430000000000018&lt;/item&gt;\n
+        \   &lt;item key=\"9\"&gt;2610000000000090&lt;/item&gt;\n    &lt;item key=\"10\"&gt;1000000000002113&lt;/item&gt;\n
+        \   &lt;item key=\"11\"&gt;2610000000000091&lt;/item&gt;\n    &lt;item key=\"12\"&gt;111016833201001&lt;/item&gt;\n
+        \   &lt;item key=\"13\"&gt;2560000000000075&lt;/item&gt;\n    &lt;item key=\"14\"&gt;2400000000000013&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.category\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"1\"&gt;Arts and Humanities&lt;/item&gt;\n
+        \   &lt;item key=\"2\"&gt;Arts and Humanities&lt;/item&gt;\n    &lt;item key=\"3\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"4\"&gt;Environmental Sciences&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;Social Sciences&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n
+        \ <ctx_obj_targets>\n   <target>\n    <target_name>Preferred_Links_LCL</target_name>\n
+        \   <target_public_name>E Journal Full Text</target_public_name>\n    <object_portfolio_id>20430000000000647</object_portfolio_id>\n
+        \   <target_id>20430000000000020</target_id>\n    <interface_id>20430000000000020</interface_id>\n
+        \   <interface_name>Preferred_Links</interface_name>\n    <target_service_id>20430000000000018</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULKdoi</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>\n
+        \   <target_public_name>EBSCOhost Academic Search Complete</target_public_name>\n
+        \   <object_portfolio_id>1000000000670576</object_portfolio_id>\n    <target_id>1000000000001505</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>1000000000002159</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=a9h&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=a9h&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2004</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2004</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON</target_name>\n
+        \   <target_public_name>EBSCOhost Reader's Guide Full Text Mega</target_public_name>\n
+        \   <object_portfolio_id>2670000000679922</object_portfolio_id>\n    <target_id>3450000000000050</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>3450000000000063</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=rgm&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=rgm&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2011</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2011</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_ACADEMIC_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage Academic OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000622858</object_portfolio_id>\n    <target_id>1000000000001464</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000002113</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=AONE &amp;loc_id=nysl_me_newyorku  &amp;art=yes  &amp; &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=The+New+Yorker
+        &amp; jkey2=1161</parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication>NovelNY: Only available to users within
+        the NYUNY network.</authentication>\n    <char_set></char_set>\n    <displayer></displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/AONE?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GENERAL_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage General OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000712446</object_portfolio_id>\n    <target_id>111021039760000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111021039760001</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url=http://find.galegroup.com/openurl/openurl
+        &amp; url2=http://link.galegroup.com/apps/pub &amp;dbase=ITOF &amp;loc_id=nysl_me_newyorku
+        \ &amp;art=yes &amp;ltitle=The+New+Yorker &amp; jkey2=1161</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication>NovelNY:
+        Only available to users within the NYUNY network.</authentication>\n    <char_set>iso-8859-1</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/ITOF?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GN_LITERATURE_RESOURCE_CENTER</target_name>\n
+        \   <target_public_name>Gale Cengage Literature Resource Center</target_public_name>\n
+        \   <object_portfolio_id>2550000000651809</object_portfolio_id>\n    <target_id>111031861411000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111031861479000</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;loc_id=new64731 &amp;dbase=LitRC &amp;art=yes &amp; database= &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ALitRC&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI</target_name>\n
+        \   <target_public_name>Gale Cengage Shakespeare Collection Periodicals</target_public_name>\n
+        \   <object_portfolio_id>1000000000211453</object_portfolio_id>\n    <target_id>1000000000000669</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000001288</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=SHAX &amp;loc_id=new64731 &amp; exception=shakespeare &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ASHAX&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>MISCELLANEOUS_EJOURNALS</target_name>\n
+        \   <target_public_name>Miscellaneous Ejournals</target_public_name>\n    <object_portfolio_id>1000000001231416</object_portfolio_id>\n
+        \   <target_id>111016833201000</target_id>\n    <interface_id>111016833201000</interface_id>\n
+        \   <interface_name>MISCELLANEOUS_EJOURNALS</interface_name>\n    <target_service_id>111016833201001</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULK</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>yes</crossref>\n    <note></note>\n
+        \   <authentication></authentication>\n    <char_set></char_set>\n    <displayer>FT::NO_FILL_IN</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_ART_DESIGN_AND_ARCHITECTURE_COLLECTION</target_name>\n
+        \   <target_public_name>ProQuest Art Design and Architecture Collection</target_public_name>\n
+        \   <object_portfolio_id>2560000001234753</object_portfolio_id>\n    <target_id>2560000000000118</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2560000000000075</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp;amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_CENTRAL</target_name>\n
+        \   <target_public_name>ProQuest Central</target_public_name>\n    <object_portfolio_id>2550000000138190</object_portfolio_id>\n
+        \   <target_id>2400000000000013</target_id>\n    <interface_id>2400000000000006</interface_id>\n
+        \   <interface_name>PROQUEST</interface_name>\n    <target_service_id>2400000000000013</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>PROQUEST::open</parser>\n
+        \   <parse_param>url=http://gateway.proquest.com/openurl &amp; clientid= &amp;
+        url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_MUSIC_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Music Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178037</object_portfolio_id>\n    <target_id>2610000000000090</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000090</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_PERFORMING_ARTS_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Performing Arts Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178155</object_portfolio_id>\n    <target_id>2610000000000091</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000091</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>FACTIVA</target_name>\n    <target_public_name>Factiva</target_public_name>\n
+        \   <object_portfolio_id>1000000000776926</object_portfolio_id>\n    <target_id>111037301464000</target_id>\n
+        \   <interface_id>111037301464000</interface_id>\n    <interface_name>FACTIVA</interface_name>\n
+        \   <target_service_id>111037301464002</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>FACTIVA::FACTIVA</parser>\n    <parse_param>url=http://global.factiva.com
+        &amp; user= &amp; password =  &amp; namespace= &amp; sid=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA
+        &amp; filtered_title_search=&amp;jkey=GTNY</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication>Requires
+        NYU NetID.</authentication>\n    <char_set>utf8</char_set>\n    <displayer>FACTIVA::FACTIVA</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://global.factiva.com/en/du/headlines.asp?CurrentSourcesDesc=sc_u_gtny%2CThe+New+Yorker&amp;CurrentSources=U%7Cgtny&amp;XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1992  until 1992</coverage_statement>\n
+        \     </threshold_text>\n      <embargo_text></embargo_text>\n     </coverage_text>\n
+        \    <from>\n      <year>1992</year>\n     </from>\n     <to>\n      <year>1992</year>\n
+        \    </to>\n     <embargo></embargo>\n    </coverage>\n   </target>\n   <target>\n
+        \   <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n    <target_public_name>Ask
+        a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <interface_id>20430000000000002</interface_id>\n
+        \   <interface_name>ASK_A_LIBRARIAN</interface_name>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:55:24 GMT
+- request:
+    method: get
+    uri: http://sfx.med.nyu.edu/sfxlcl3?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:55:29-05:00&ctx_ver=Z39.88-2004&req.ip=216.165.125.0&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:55:30 GMT
+      Content-Type:
+      - application/xml
+      Connection:
+      - close
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIj8+Cgo8Y3R4X29ial9zZXQ+CiA8Y3R4X29i
+        aiBpZGVudGlmaWVyPSIiPgogIDxjdHhfb2JqX2F0dHJpYnV0ZXM+Jmx0O3Bl
+        cmxkYXRhJmd0OwogJmx0O2hhc2gmZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQu
+        aXNzbiImZ3Q7MDAyOC03OTJYJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0iY3R4X3RpbSImZ3Q7MjAxNi0xMS0xNVQxNTo1NToyOS0wNTowMCZsdDsv
+        aXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InNmeC5zaG93X2F2YWlsYWJpbGl0
+        eSImZ3Q7MSZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9Il9zdGFzaCIm
+        Z3Q7CiAgICZsdDtoYXNoJmd0OwogICAgJmx0O2l0ZW0ga2V5PSJAcmZ0X2lk
+        IiZndDsKICAgICAmbHQ7YXJyYXkmZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0i
+        MCImZ3Q7aW5mbzpsY2NuLzIwMTEyMDE3ODAmbHQ7L2l0ZW0mZ3Q7CiAgICAg
+        Jmx0Oy9hcnJheSZndDsKICAgICZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iQHJmcl9pZCImZ3Q7CiAgICAgJmx0O2FycmF5Jmd0OwogICAgICAm
+        bHQ7aXRlbSBrZXk9IjAiJmd0O2luZm86c2lkL3NmeGl0LmNvbTpjaXRhdGlv
+        biZsdDsvaXRlbSZndDsKICAgICAmbHQ7L2FycmF5Jmd0OwogICAgJmx0Oy9p
+        dGVtJmd0OwogICAmbHQ7L2hhc2gmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZs
+        dDtpdGVtIGtleT0iY3R4X3ZlciImZ3Q7WjM5Ljg4LTIwMDQmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQuZWlzc24iJmd0OzIxNjMtMzgyNyZs
+        dDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9IkByZnJfaWQiJmd0OwogICAm
+        bHQ7YXJyYXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0O2luZm86c2lk
+        L3NmeGl0LmNvbTpjaXRhdGlvbiZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJh
+        eSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQucGxh
+        Y2UiJmd0O05ldyBZb3JrJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        QHNmeC5zdWJjYXRlZ29yeSImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZs
+        dDtpdGVtIGtleT0iMCImZ3Q7Q3VycmVudCBFdmVudHMgJmFtcDthbXA7IE5l
+        d3MmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjEiJmd0O0dlbmVy
+        YWwgYW5kIE90aGVycyZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0i
+        MiImZ3Q7TGl0ZXJhdHVyZSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtl
+        eT0iMyImZ3Q7UGVyZm9ybWluZyBBcnRzLCBUcmF2ZWwgYW5kIExlaXN1cmUm
+        bHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjQiJmd0O0NvbnNlcnZh
+        dGlvbiZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iNSImZ3Q7Sm91
+        cm5hbGlzbSwgTWFzcyBDb21tdW5pY2F0aW9uLCBNZWRpYSAmYW1wO2FtcDsg
+        UHVibGlzaGluZyZsdDsvaXRlbSZndDsKICAgJmx0Oy9hcnJheSZndDsKICAm
+        bHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQubGNjbiImZ3Q7ICAy
+        MDExMjAxNzgwJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0iQHJmdF9p
+        ZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVtIGtleT0iMCIm
+        Z3Q7aW5mbzpsY2NuLzIwMTEyMDE3ODAmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsv
+        YXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4
+        LnJlc3BvbnNlX3R5cGUiJmd0O211bHRpX29ial94bWwmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJzZnguaWdub3JlX2NoYXJfc2V0IiZndDsxJmx0
+        Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmVxLnNlc3Npb25faWQiJmd0
+        O3NEN0U1MUVGQy1BQjc1LTExRTYtOUEwMy1DQUREOTE2Q0I3ODUmbHQ7L2l0
+        ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJ1cmxfdmVyIiZndDtaMzkuODgtMjAw
+        NCZsdDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9ImN0eF9lbmMiJmd0O1VU
+        Ri04Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmZ0Lm9iamVjdF90
+        eXBlIiZndDtKT1VSTkFMJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        QHNmeC5yZWxhdGVkX29iamVjdF9pZHMiJmd0OwogICAmbHQ7YXJyYXkmZ3Q7
+        CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0OzEwMDAwMDAwMDAzMTY0NjkmbHQ7
+        L2l0ZW0mZ3Q7CiAgICZsdDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0Owog
+        ICZsdDtpdGVtIGtleT0icmZ0Lmxhbmd1YWdlIiZndDtlbmcmbHQ7L2l0ZW0m
+        Z3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZnguaGFzX2Z1bGxfdGV4dCImZ3Q7eWVz
+        Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmZ0Lm9iamVjdF9pZCIm
+        Z3Q7MTEwOTc1NDEzOTc1OTQ0Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtl
+        eT0ic2Z4LnJlcXVlc3RfaWQiJmd0OzE4ODYxMTUmbHQ7L2l0ZW0mZ3Q7CiAg
+        Jmx0O2l0ZW0ga2V5PSJzZnguaWdub3JlX2RhdGVfdGhyZXNob2xkIiZndDsx
+        Jmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmZ0LmdlbnJlIiZndDtq
+        b3VybmFsJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0icmVxLmlwIiZn
+        dDsyMTYuMTY1LjEyNS4wJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        cmZ0LnB1YiImZ3Q7Ri1SIFB1Yi4gQ29ycC4mbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJyZnIucmZyIiZndDtzZnhpdC5jb206Y2l0YXRpb24mbHQ7
+        L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngub3BlbnVybCImZ3Q7aHR0
+        cDovL3NmeC5tZWQubnl1LmVkdS9zZnhsY2wzP3VybF92ZXI9WjM5Ljg4LTIw
+        MDQmYW1wO2FtcDt1cmxfY3R4X2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNBa2V2
+        JTNBbXR4JTNBY3R4JmFtcDthbXA7Y3R4X3Zlcj1aMzkuODgtMjAwNCZhbXA7
+        YW1wO2N0eF90aW09MjAxNi0xMS0xNVQxNSUzQTU1JTNBMjktMDUlM0EwMCZh
+        bXA7YW1wO2N0eF9pZD0mYW1wO2FtcDtjdHhfZW5jPWluZm8lM0FvZmklMkZl
+        bmMlM0FVVEYtOCZhbXA7YW1wO3JmdC5pc3NuPTAwMjgtNzkyWCZhbXA7YW1w
+        O3JmdC5qdGl0bGU9VGhlJTIwTmV3JTIwWW9ya2VyJmFtcDthbXA7cmZ0Lm9i
+        amVjdF9pZD0xMTA5NzU0MTM5NzU5NDQmYW1wO2FtcDtyZnRfdmFsX2ZtdD1p
+        bmZvJTNBb2ZpJTJGZm10JTNBa2V2JTNBbXR4JTNBam91cm5hbCZhbXA7YW1w
+        O3JmdF9pZD1pbmZvJTNBbGNjbiUyRjIwMTEyMDE3ODAmYW1wO2FtcDtyZXEu
+        aXA9MjE2LjE2NS4xMjUuMCZhbXA7YW1wO3Jmcl9pZD1pbmZvJTNBc2lkJTJG
+        c2Z4aXQuY29tJTNBY2l0YXRpb24mYW1wO2FtcDtzZngucmVzcG9uc2VfdHlw
+        ZT1tdWx0aV9vYmpfeG1sJmFtcDthbXA7c2Z4Lmlnbm9yZV9kYXRlX3RocmVz
+        aG9sZD0xJmFtcDthbXA7c2Z4LnNob3dfYXZhaWxhYmlsaXR5PTEmbHQ7L2l0
+        ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJyZnQudGl0bGUiJmd0O1RoZSBOZXcg
+        WW9ya2VyJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0idXJsX2N0eF9m
+        bXQiJmd0O2luZm86b2ZpL2ZtdDprZXY6bXR4OmN0eCZsdDsvaXRlbSZndDsK
+        ICAmbHQ7aXRlbSBrZXk9IkByZnQuc3RpdGxlIiZndDsKICAgJmx0O2FycmF5
+        Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtORVcgWU9SS0VSJmx0Oy9p
+        dGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIxIiZndDtORVcgWU9SS0VSLCBU
+        SEUmbHQ7L2l0ZW0mZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjIiJmd0O05FVyBZ
+        T1JLRVIgKE5FVyBZT1JLLCBOLlkuJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0
+        ZW0ga2V5PSIzIiZndDtORVcgLSBZT1JLRVImbHQ7L2l0ZW0mZ3Q7CiAgICZs
+        dDsvYXJyYXkmZ3Q7CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0i
+        QHJmZV9pZCImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgJmx0Oy9hcnJheSZn
+        dDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJAc2Z4LnJlbGF0
+        ZWRfb2JqZWN0cyImZ3Q7CiAgICZsdDthcnJheSZndDsKICAgICZsdDtpdGVt
+        IGtleT0iMCImZ3Q7CiAgICAgJmx0O2hhc2gmZ3Q7CiAgICAgICZsdDtpdGVt
+        IGtleT0iY3R4X3RpbSImZ3Q7MjAxNi0xMS0xNVQxNTo1NToyOS0wNTowMCZs
+        dDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5PSJyZnQuaXNzbiImZ3Q7
+        MTkzNS0wOTYxJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InNm
+        eC5pZ25vcmVfZGF0ZV90aHJlc2hvbGQiJmd0OzEmbHQ7L2l0ZW0mZ3Q7CiAg
+        ICAgICZsdDtpdGVtIGtleT0ic2Z4LnNob3dfYXZhaWxhYmlsaXR5IiZndDsx
+        Jmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InJlcS5pcCImZ3Q7
+        MjE2LjE2NS4xMjUuMCZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5
+        PSJyZnQucHViIiZndDtDb25kZcyBIE5hc3QmbHQ7L2l0ZW0mZ3Q7CiAgICAg
+        ICZsdDtpdGVtIGtleT0iY3R4X3ZlciImZ3Q7WjM5Ljg4LTIwMDQmbHQ7L2l0
+        ZW0mZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0ic2Z4Lm9wZW51cmwiJmd0O2h0
+        dHA6Ly9zZngubWVkLm55dS5lZHUvc2Z4bGNsMz91cmxfdmVyPVozOS44OC0y
+        MDA0JmFtcDthbXA7dXJsX2N0eF9mbXQ9aW5mbyUzQW9maSUyRmZtdCUzQWtl
+        diUzQW10eCUzQWN0eCZhbXA7YW1wO2N0eF92ZXI9WjM5Ljg4LTIwMDQmYW1w
+        O2FtcDtjdHhfdGltPTIwMTYtMTEtMTVUMTUlM0E1NSUzQTI5LTA1JTNBMDAm
+        YW1wO2FtcDtjdHhfaWQ9JmFtcDthbXA7Y3R4X2VuYz1pbmZvJTNBb2ZpJTJG
+        ZW5jJTNBVVRGLTgmYW1wO2FtcDtyZnQuaXNzbj0wMDI4LTc5MlgmYW1wO2Ft
+        cDtyZnQuanRpdGxlPVRoZSUyME5ldyUyMFlvcmtlciZhbXA7YW1wO3JmdC5v
+        YmplY3RfaWQ9MTEwOTc1NDEzOTc1OTQ0JmFtcDthbXA7cmZ0X3ZhbF9mbXQ9
+        aW5mbyUzQW9maSUyRmZtdCUzQWtldiUzQW10eCUzQWpvdXJuYWwmYW1wO2Ft
+        cDtyZnRfaWQ9aW5mbyUzQWxjY24lMkYyMDExMjAxNzgwJmFtcDthbXA7cmVx
+        LmlwPTIxNi4xNjUuMTI1LjAmYW1wO2FtcDtyZnJfaWQ9aW5mbyUzQXNpZCUy
+        RnNmeGl0LmNvbSUzQWNpdGF0aW9uJmFtcDthbXA7c2Z4LnJlc3BvbnNlX3R5
+        cGU9bXVsdGlfb2JqX3htbCZhbXA7YW1wO3NmeC5pZ25vcmVfZGF0ZV90aHJl
+        c2hvbGQ9MSZhbXA7YW1wO3NmeC5zaG93X2F2YWlsYWJpbGl0eT0xJmx0Oy9p
+        dGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9IkByZnJfaWQiJmd0OwogICAg
+        ICAgJmx0O2FycmF5Jmd0OwogICAgICAgICZsdDtpdGVtIGtleT0iMCImZ3Q7
+        c2Z4aXQuY29tOmNpdGF0aW9uJmx0Oy9pdGVtJmd0OwogICAgICAgJmx0Oy9h
+        cnJheSZndDsKICAgICAgJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBr
+        ZXk9InJmdC5wbGFjZSImZ3Q7W05ldyBZb3JrXSZsdDsvaXRlbSZndDsKICAg
+        ICAgJmx0O2l0ZW0ga2V5PSJyZnQudGl0bGUiJmd0O0Zhc2hpb24gcm9ja3Mm
+        bHQ7L2l0ZW0mZ3Q7CiAgICAgICZsdDtpdGVtIGtleT0idXJsX2N0eF9mbXQi
+        Jmd0O2luZm86b2ZpL2ZtdDprZXY6bXR4OmN0eCZsdDsvaXRlbSZndDsKICAg
+        ICAgJmx0O2l0ZW0ga2V5PSJAc2Z4LnN1YmNhdGVnb3J5IiZndDsKICAgICAg
+        ICZsdDthcnJheSZndDsKICAgICAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0O0Fy
+        Y2hpdGVjdHVyZSwgRmluZSBhbmQgRGVjb3JhdGl2ZSBBcnRzJmx0Oy9pdGVt
+        Jmd0OwogICAgICAgJmx0Oy9hcnJheSZndDsKICAgICAgJmx0Oy9pdGVtJmd0
+        OwogICAgICAmbHQ7aXRlbSBrZXk9InJmdC5sY2NuIiZndDsyMDA2MjA3NDE2
+        Jmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9IkByZnRfaWQiJmd0
+        OwogICAgICAgJmx0O2FycmF5Jmd0OwogICAgICAgICZsdDtpdGVtIGtleT0i
+        MCImZ3Q7bGNjbjoyMDExMjAxNzgwJmx0Oy9pdGVtJmd0OwogICAgICAgJmx0
+        Oy9hcnJheSZndDsKICAgICAgJmx0Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRl
+        bSBrZXk9InNmeC5yZXNwb25zZV90eXBlIiZndDttdWx0aV9vYmpfeG1sJmx0
+        Oy9pdGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InNmeC5zb3VyY2VuYW1l
+        IiZndDtDSVRBVElPTiZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5
+        PSJyZnRfdmFsX2ZtdCImZ3Q7am91cm5hbCZsdDsvaXRlbSZndDsKICAgICAg
+        Jmx0O2l0ZW0ga2V5PSJzZnguaWdub3JlX2NoYXJfc2V0IiZndDsxJmx0Oy9p
+        dGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InNmeC5zaWQiJmd0O3NmeGl0
+        LmNvbTpjaXRhdGlvbiZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5
+        PSJyZXEuc2Vzc2lvbl9pZCImZ3Q7c0Q3RTUxRUZDLUFCNzUtMTFFNi05QTAz
+        LUNBREQ5MTZDQjc4NSZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0ZW0ga2V5
+        PSJjdHhfZW5jIiZndDtVVEYtOCZsdDsvaXRlbSZndDsKICAgICAgJmx0O2l0
+        ZW0ga2V5PSJ1cmxfdmVyIiZndDtaMzkuODgtMjAwNCZsdDsvaXRlbSZndDsK
+        ICAgICAgJmx0O2l0ZW0ga2V5PSJAc2Z4LmNhdGVnb3J5IiZndDsKICAgICAg
+        ICZsdDthcnJheSZndDsKICAgICAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0O0Fy
+        dHMgYW5kIEh1bWFuaXRpZXMmbHQ7L2l0ZW0mZ3Q7CiAgICAgICAmbHQ7L2Fy
+        cmF5Jmd0OwogICAgICAmbHQ7L2l0ZW0mZ3Q7CiAgICAgICZsdDtpdGVtIGtl
+        eT0icmZ0Lm9iamVjdF90eXBlIiZndDtKT1VSTkFMJmx0Oy9pdGVtJmd0Owog
+        ICAgICAmbHQ7aXRlbSBrZXk9InJmdC5sYW5ndWFnZSImZ3Q7ZW5nJmx0Oy9p
+        dGVtJmd0OwogICAgICAmbHQ7aXRlbSBrZXk9InJmdC5vYmplY3RfaWQiJmd0
+        OzEwMDAwMDAwMDAzMTY0NjkmbHQ7L2l0ZW0mZ3Q7CiAgICAgJmx0Oy9oYXNo
+        Jmd0OwogICAgJmx0Oy9pdGVtJmd0OwogICAmbHQ7L2FycmF5Jmd0OwogICZs
+        dDsvaXRlbSZndDsKICAmbHQ7aXRlbSBrZXk9InJmdC5qdGl0bGUiJmd0O1Ro
+        ZSBOZXcgWW9ya2VyJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4
+        LnNvdXJjZW5hbWUiJmd0O0NJVEFUSU9OJmx0Oy9pdGVtJmd0OwogICZsdDtp
+        dGVtIGtleT0icmZ0X3ZhbF9mbXQiJmd0O2pvdXJuYWwmbHQ7L2l0ZW0mZ3Q7
+        CiAgJmx0O2l0ZW0ga2V5PSJleGlzdGluZ190c19pZHMiJmd0OwogICAmbHQ7
+        YXJyYXkmZ3Q7CiAgICAmbHQ7aXRlbSBrZXk9IjAiJmd0OzExMTAyNzYxNDM0
+        NDAwMSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0iMSImZ3Q7MTAw
+        MDAwMDAwMDAwMjE1OSZsdDsvaXRlbSZndDsKICAgICZsdDtpdGVtIGtleT0i
+        MiImZ3Q7MjQwMDAwMDAwMDAwMDAxMyZsdDsvaXRlbSZndDsKICAgJmx0Oy9h
+        cnJheSZndDsKICAmbHQ7L2l0ZW0mZ3Q7CiAgJmx0O2l0ZW0ga2V5PSJzZngu
+        c2lkIiZndDtzZnhpdC5jb206Y2l0YXRpb24mbHQ7L2l0ZW0mZ3Q7CiAgJmx0
+        O2l0ZW0ga2V5PSJAc2Z4LmNhdGVnb3J5IiZndDsKICAgJmx0O2FycmF5Jmd0
+        OwogICAgJmx0O2l0ZW0ga2V5PSIwIiZndDtBcnRzIGFuZCBIdW1hbml0aWVz
+        Jmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIxIiZndDtBcnRzIGFu
+        ZCBIdW1hbml0aWVzJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSIy
+        IiZndDtBcnRzIGFuZCBIdW1hbml0aWVzJmx0Oy9pdGVtJmd0OwogICAgJmx0
+        O2l0ZW0ga2V5PSIzIiZndDtBcnRzIGFuZCBIdW1hbml0aWVzJmx0Oy9pdGVt
+        Jmd0OwogICAgJmx0O2l0ZW0ga2V5PSI0IiZndDtFbnZpcm9ubWVudGFsIFNj
+        aWVuY2VzJmx0Oy9pdGVtJmd0OwogICAgJmx0O2l0ZW0ga2V5PSI1IiZndDtT
+        b2NpYWwgU2NpZW5jZXMmbHQ7L2l0ZW0mZ3Q7CiAgICZsdDsvYXJyYXkmZ3Q7
+        CiAgJmx0Oy9pdGVtJmd0OwogICZsdDtpdGVtIGtleT0ic2Z4LnJlbGF0ZWRf
+        b2JqZWN0c19yZWxhdGlvbnMiJmd0OwogICAmbHQ7aGFzaCZndDsKICAgICZs
+        dDtpdGVtIGtleT0iMTAwMDAwMDAwMDMxNjQ2OSImZ3Q7U1VQUExFTUVOVCZs
+        dDsvaXRlbSZndDsKICAgJmx0Oy9oYXNoJmd0OwogICZsdDsvaXRlbSZndDsK
+        ICZsdDsvaGFzaCZndDsKJmx0Oy9wZXJsZGF0YSZndDsKPC9jdHhfb2JqX2F0
+        dHJpYnV0ZXM+CiAgPGN0eF9vYmpfdGFyZ2V0cz4KICAgPHRhcmdldD4KICAg
+        IDx0YXJnZXRfbmFtZT5FQlNDT0hPU1RfQUNBREVNSUNfU0VBUkNIX0NPTVBM
+        RVRFPC90YXJnZXRfbmFtZT4KICAgIDx0YXJnZXRfcHVibGljX25hbWU+RUJT
+        Q09ob3N0IEFjYWRlbWljIFNlYXJjaCBDb21wbGV0ZTwvdGFyZ2V0X3B1Ymxp
+        Y19uYW1lPgogICAgPHRhcmdldF9zZXJ2aWNlX2lkPjEwMDAwMDAwMDAwMDIx
+        NTk8L3RhcmdldF9zZXJ2aWNlX2lkPgogICAgPHNlcnZpY2VfdHlwZT5nZXRG
+        dWxsVHh0PC9zZXJ2aWNlX3R5cGU+CiAgICA8cGFyc2VyPkVCU0NPX0hPU1Q6
+        OmVic2NvX2FtPC9wYXJzZXI+CiAgICA8cGFyc2VfcGFyYW0+ZGJfaG9zdD1h
+        OWgmYW1wO2Vic2NvaG9zdHVybCA9IGh0dHA6Ly9zZWFyY2guZWJzY29ob3N0
+        LmNvbSAmYW1wOyBsaW5rdXJsPWh0dHA6Ly9vcGVudXJsLmVic2NvaG9zdC5j
+        b20vbGlua3N2Yy9saW5raW5nLmFzcHggJmFtcDsgc2hpYj0gJmFtcDsgY3Vz
+        dG9tZXJfaWQ9ICZhbXA7IGF0aGVuc19pZD0gICZhbXA7IHVfc2hpYj0mYW1w
+        O2prZXk9TllLPC9wYXJzZV9wYXJhbT4KICAgIDxwcm94eT55ZXM8L3Byb3h5
+        PgogICAgPGNyb3NzcmVmPm5vPC9jcm9zc3JlZj4KICAgIDxub3RlPjwvbm90
+        ZT4KICAgIDxhdXRoZW50aWNhdGlvbj48L2F1dGhlbnRpY2F0aW9uPgogICAg
+        PGNoYXJfc2V0PnV0Zjg8L2NoYXJfc2V0PgogICAgPGRpc3BsYXllcj48L2Rp
+        c3BsYXllcj4KICAgIDx0YXJnZXRfdXJsPmh0dHBzOi8vbG9naW4uZXpwcm94
+        eS5tZWQubnl1LmVkdS9sb2dpbj91cmw9aHR0cDovL3NlYXJjaC5lYnNjb2hv
+        c3QuY29tL2RpcmVjdC5hc3A/ZGI9YTloJmFtcDtqbj1OWUsmYW1wO3Njb3Bl
+        PXNpdGU8L3RhcmdldF91cmw+CiAgIDwvdGFyZ2V0PgogICA8dGFyZ2V0Pgog
+        ICAgPHRhcmdldF9uYW1lPlBST1FVRVNUX0NFTlRSQUw8L3RhcmdldF9uYW1l
+        PgogICAgPHRhcmdldF9wdWJsaWNfbmFtZT5Qcm9RdWVzdCBDZW50cmFsPC90
+        YXJnZXRfcHVibGljX25hbWU+CiAgICA8dGFyZ2V0X3NlcnZpY2VfaWQ+MjQw
+        MDAwMDAwMDAwMDAxMzwvdGFyZ2V0X3NlcnZpY2VfaWQ+CiAgICA8c2Vydmlj
+        ZV90eXBlPmdldEZ1bGxUeHQ8L3NlcnZpY2VfdHlwZT4KICAgIDxwYXJzZXI+
+        UFJPUVVFU1Q6Om9wZW48L3BhcnNlcj4KICAgIDxwYXJzZV9wYXJhbT51cmw9
+        aHR0cDovL2dhdGV3YXkucHJvcXVlc3QuY29tL29wZW51cmwgJmFtcDsgY2xp
+        ZW50aWQ9ICZhbXA7IHVybDI9aHR0cDovL3NlYXJjaC5wcm9xdWVzdC5jb20m
+        YW1wO2prZXk9NDExMzA8L3BhcnNlX3BhcmFtPgogICAgPHByb3h5Pnllczwv
+        cHJveHk+CiAgICA8Y3Jvc3NyZWY+bm88L2Nyb3NzcmVmPgogICAgPG5vdGU+
+        PC9ub3RlPgogICAgPGF1dGhlbnRpY2F0aW9uPjwvYXV0aGVudGljYXRpb24+
+        CiAgICA8Y2hhcl9zZXQ+dXRmODwvY2hhcl9zZXQ+CiAgICA8ZGlzcGxheWVy
+        PjwvZGlzcGxheWVyPgogICAgPHRhcmdldF91cmw+aHR0cHM6Ly9sb2dpbi5l
+        enByb3h5Lm1lZC5ueXUuZWR1L2xvZ2luP3VybD1odHRwOi8vZ2F0ZXdheS5w
+        cm9xdWVzdC5jb20vb3BlbnVybD9yZnRfaWQ9NDExMzAmYW1wO3Jlc19kYXQ9
+        eHJpJTNBcHFtJmFtcDtyZnRfdmFsX2ZtdD1pbmZvJTNBb2ZpJTJGZm10JTNB
+        a2V2JTNBbXR4JTNBam91cm5hbCZhbXA7dXJsX3Zlcj1aMzkuODgtMjAwNCZh
+        bXA7Z2VucmU9am91cm5hbDwvdGFyZ2V0X3VybD4KICAgPC90YXJnZXQ+CiAg
+        PC9jdHhfb2JqX3RhcmdldHM+CiA8L2N0eF9vYmo+CjwvY3R4X29ial9zZXQ+
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:55:30 GMT
 recorded_with: VCR 2.9.3
