@@ -99,13 +99,6 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
           it { is_expected.to eq "/resolve?key=value&umlaut.institution=NYUAD" }
         end
 
-        context "with institute_param" do
-          let(:institute_param){ :NYSID }
-          before { allow(helper).to receive(:institute_param).and_return institute_param }
-
-          it { is_expected.to eq "/resolve?institute=NYSID&key=value" }
-        end
-
         context "without either param" do
           it { is_expected.to eq "/resolve?key=value" }
         end
@@ -119,13 +112,6 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
           before { allow(helper).to receive(:institution_param).and_return institution_param }
 
           it { is_expected.to eq "/resolve?umlaut.institution=NYUAD" }
-        end
-
-        context "with institute_param" do
-          let(:institute_param){ :NYSID }
-          before { allow(helper).to receive(:institute_param).and_return institute_param }
-
-          it { is_expected.to eq "/resolve?institute=NYSID" }
         end
 
         context "without either param" do
@@ -147,13 +133,6 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
           it { is_expected.to eq "https://example.com/some/path?key=value&umlaut.institution=NYUAD" }
         end
 
-        context "with institute_param" do
-          let(:institute_param){ :NYSID }
-          before { allow(helper).to receive(:institute_param).and_return institute_param }
-
-          it { is_expected.to eq "https://example.com/some/path?key=value&institute=NYSID" }
-        end
-
         context "without either param" do
           it { is_expected.to eq url }
         end
@@ -167,13 +146,6 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
           before { allow(helper).to receive(:institution_param).and_return institution_param }
 
           it { is_expected.to eq "https://example.com/some/path?umlaut.institution=NYUAD" }
-        end
-
-        context "with institute_param" do
-          let(:institute_param){ :NYSID }
-          before { allow(helper).to receive(:institute_param).and_return institute_param }
-
-          it { is_expected.to eq "https://example.com/some/path?institute=NYSID" }
         end
 
         context "without either param" do

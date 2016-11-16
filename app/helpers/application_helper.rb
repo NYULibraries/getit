@@ -61,13 +61,6 @@ module ApplicationHelper
         options = append_parameter_to_url(options, institution_param_name, institution_param)
       end
     end
-    if institute_param.present?
-      if options.is_a?(Hash)
-        options[:institute] ||= institute_param
-      elsif options.is_a?(String)
-        options = append_parameter_to_url(options, :institute, institute_param)
-      end
-    end
     super(options)
   end
 

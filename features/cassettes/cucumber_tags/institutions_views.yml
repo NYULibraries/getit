@@ -9438,4 +9438,349 @@ http_interactions:
         PC9jdHhfb2JqX3RhcmdldHM+CiA8L2N0eF9vYmo+CjwvY3R4X29ial9zZXQ+
     http_version: 
   recorded_at: Tue, 15 Nov 2016 20:55:30 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-15T15:59:29-05:00&ctx_ver=Z39.88-2004&req.ip=128.122.0.0&rfr_id=info:sid/sfxit.com:citation&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.object_id=110975413975944&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 15 Nov 2016 20:59:29 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"rft.issn\"&gt;0028-792X&lt;/item&gt;\n  &lt;item key=\"ctx_tim\"&gt;2016-11-15T15:59:29-05:00&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"_stash\"&gt;\n
+        \  &lt;hash&gt;\n    &lt;item key=\"@rft_id\"&gt;\n     &lt;array&gt;\n      &lt;item
+        key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n     &lt;/array&gt;\n    &lt;/item&gt;\n
+        \   &lt;item key=\"@rfr_id\"&gt;\n     &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"rft.eissn\"&gt;2163-3827&lt;/item&gt;\n
+        \ &lt;item key=\"@rfr_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/sfxit.com:citation&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.place\"&gt;New York&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.subcategory\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Current
+        Events &amp;amp; News&lt;/item&gt;\n    &lt;item key=\"1\"&gt;General and
+        Others&lt;/item&gt;\n    &lt;item key=\"2\"&gt;Literature&lt;/item&gt;\n    &lt;item
+        key=\"3\"&gt;Performing Arts, Travel and Leisure&lt;/item&gt;\n    &lt;item
+        key=\"4\"&gt;Conservation&lt;/item&gt;\n    &lt;item key=\"5\"&gt;Journalism,
+        Mass Communication, Media &amp;amp; Publishing&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"rft.lccn\"&gt;  2011201780&lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:lccn/2011201780&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;s66B11CF8-AB76-11E6-8002-BEBFFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        \ &lt;item key=\"rft.object_type\"&gt;JOURNAL&lt;/item&gt;\n  &lt;item key=\"rft.language\"&gt;eng&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.has_full_text\"&gt;yes&lt;/item&gt;\n  &lt;item key=\"rft.object_id\"&gt;110975413975944&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.request_id\"&gt;12964455&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"req.ip\"&gt;128.122.0.0&lt;/item&gt;\n
+        \ &lt;item key=\"rft.pub\"&gt;F-R Pub. Corp.&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ \n  &lt;item key=\"rft.title\"&gt;The New Yorker&lt;/item&gt;\n  &lt;item
+        key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n  &lt;item key=\"@rft.stitle\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;NEW YORKER&lt;/item&gt;\n    &lt;item
+        key=\"1\"&gt;NEW YORKER, THE&lt;/item&gt;\n    &lt;item key=\"2\"&gt;NEW YORKER
+        (NEW YORK, N.Y.&lt;/item&gt;\n    &lt;item key=\"3\"&gt;NEW - YORKER&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"rft.jtitle\"&gt;The New
+        Yorker&lt;/item&gt;\n  &lt;item key=\"sfx.sourcename\"&gt;CITATION&lt;/item&gt;\n
+        \ &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n  &lt;item key=\"existing_ts_ids\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n    &lt;item key=\"2\"&gt;111021039760001&lt;/item&gt;\n
+        \   &lt;item key=\"3\"&gt;1000000000002159&lt;/item&gt;\n    &lt;item key=\"4\"&gt;3450000000000063&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;111031861479000&lt;/item&gt;\n    &lt;item key=\"6\"&gt;111037301464002&lt;/item&gt;\n
+        \   &lt;item key=\"7\"&gt;1000000000001288&lt;/item&gt;\n    &lt;item key=\"8\"&gt;20430000000000018&lt;/item&gt;\n
+        \   &lt;item key=\"9\"&gt;2610000000000090&lt;/item&gt;\n    &lt;item key=\"10\"&gt;1000000000002113&lt;/item&gt;\n
+        \   &lt;item key=\"11\"&gt;2610000000000091&lt;/item&gt;\n    &lt;item key=\"12\"&gt;111016833201001&lt;/item&gt;\n
+        \   &lt;item key=\"13\"&gt;2560000000000075&lt;/item&gt;\n    &lt;item key=\"14\"&gt;2400000000000013&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"sfx.sid\"&gt;sfxit.com:citation&lt;/item&gt;\n
+        \ &lt;item key=\"@sfx.category\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"1\"&gt;Arts and Humanities&lt;/item&gt;\n
+        \   &lt;item key=\"2\"&gt;Arts and Humanities&lt;/item&gt;\n    &lt;item key=\"3\"&gt;Arts
+        and Humanities&lt;/item&gt;\n    &lt;item key=\"4\"&gt;Environmental Sciences&lt;/item&gt;\n
+        \   &lt;item key=\"5\"&gt;Social Sciences&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n
+        \ <ctx_obj_targets>\n   <target>\n    <target_name>Preferred_Links_LCL</target_name>\n
+        \   <target_public_name>E Journal Full Text</target_public_name>\n    <object_portfolio_id>20430000000000647</object_portfolio_id>\n
+        \   <target_id>20430000000000020</target_id>\n    <interface_id>20430000000000020</interface_id>\n
+        \   <interface_name>Preferred_Links</interface_name>\n    <target_service_id>20430000000000018</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULKdoi</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_ACADEMIC_SEARCH_COMPLETE</target_name>\n
+        \   <target_public_name>EBSCOhost Academic Search Complete</target_public_name>\n
+        \   <object_portfolio_id>1000000000670576</object_portfolio_id>\n    <target_id>1000000000001505</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>1000000000002159</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=a9h&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=a9h&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2004</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2004</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>EBSCOHOST_READERS_GUIDE_FULL_TEXT_MEGA_WILSON</target_name>\n
+        \   <target_public_name>EBSCOhost Reader's Guide Full Text Mega</target_public_name>\n
+        \   <object_portfolio_id>2670000000679922</object_portfolio_id>\n    <target_id>3450000000000050</target_id>\n
+        \   <interface_id>111080144282000</interface_id>\n    <interface_name>EBSCOHOST</interface_name>\n
+        \   <target_service_id>3450000000000063</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>EBSCO_HOST::ebsco_am</parser>\n    <parse_param>db_host=rgm&amp;ebscohosturl
+        = http://search.ebscohost.com &amp; linkurl=http://openurl.ebscohost.com/linksvc/linking.aspx
+        &amp; shib= &amp; customer_id= &amp; athens_id=  &amp; u_shib=&amp;jkey=NYK</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://search.ebscohost.com/direct.asp?db=rgm&amp;jn=NYK&amp;scope=site</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2011</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2011</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_ACADEMIC_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage Academic OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000622858</object_portfolio_id>\n    <target_id>1000000000001464</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000002113</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=AONE &amp;loc_id=nysl_me_newyorku  &amp;art=yes  &amp; &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=The+New+Yorker
+        &amp; jkey2=1161</parse_param>\n    <proxy>yes</proxy>\n    <crossref>no</crossref>\n
+        \   <note></note>\n    <authentication>NovelNY: Only available to users within
+        the NYUNY network.</authentication>\n    <char_set></char_set>\n    <displayer></displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/AONE?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GENERAL_ONEFILE</target_name>\n
+        \   <target_public_name>Gale Cengage General OneFile</target_public_name>\n
+        \   <object_portfolio_id>1000000000712446</object_portfolio_id>\n    <target_id>111021039760000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111021039760001</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url=http://find.galegroup.com/openurl/openurl
+        &amp; url2=http://link.galegroup.com/apps/pub &amp;dbase=ITOF &amp;loc_id=nysl_me_newyorku
+        \ &amp;art=yes &amp;ltitle=The+New+Yorker &amp; jkey2=1161</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication>NovelNY:
+        Only available to users within the NYUNY network.</authentication>\n    <char_set>iso-8859-1</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://link.galegroup.com/apps/pub/1161/ITOF?u=nysl_me_newyorku</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_GN_LITERATURE_RESOURCE_CENTER</target_name>\n
+        \   <target_public_name>Gale Cengage Literature Resource Center</target_public_name>\n
+        \   <object_portfolio_id>2550000000651809</object_portfolio_id>\n    <target_id>111031861411000</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>111031861479000</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;loc_id=new64731 &amp;dbase=LitRC &amp;art=yes &amp; database= &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ALitRC&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>GALEGROUP_DB_SHAKESPEARE_COLLECTION_PERI</target_name>\n
+        \   <target_public_name>Gale Cengage Shakespeare Collection Periodicals</target_public_name>\n
+        \   <object_portfolio_id>1000000000211453</object_portfolio_id>\n    <target_id>1000000000000669</target_id>\n
+        \   <interface_id>111021040432000</interface_id>\n    <interface_name>GALEGROUP</interface_name>\n
+        \   <target_service_id>1000000000001288</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>Gale::OpenURL</parser>\n    <parse_param>url= http://find.galegroup.com/openurl/openurl
+        &amp;dbase=SHAX &amp;loc_id=new64731 &amp; exception=shakespeare &amp; url2=http://link.galegroup.com/apps/pub&amp;ltitle=New+Yorker</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set></char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://find.galegroup.com/openurl/openurl?res_id=info%3Asid%2Fgale%3ASHAX&amp;rft.issn=0028-792X&amp;req_dat=info%3Asid%2Fgale%3Augnid%3Anew64731&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_enc=info%3Aofi%3Aenc%3AUTF-8&amp;url_ver=Z39.88-2004&amp;rft.jtitle=New+Yorker</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>MISCELLANEOUS_EJOURNALS</target_name>\n
+        \   <target_public_name>Miscellaneous Ejournals</target_public_name>\n    <object_portfolio_id>1000000001231416</object_portfolio_id>\n
+        \   <target_id>111016833201000</target_id>\n    <interface_id>111016833201000</interface_id>\n
+        \   <interface_name>MISCELLANEOUS_EJOURNALS</interface_name>\n    <target_service_id>111016833201001</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>Bulk::BULK</parser>\n
+        \   <parse_param>jkey=http://archives.newyorker.com/#folio=C1</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>yes</crossref>\n    <note></note>\n
+        \   <authentication></authentication>\n    <char_set></char_set>\n    <displayer>FT::NO_FILL_IN</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://archives.newyorker.com/#folio=C1</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1925</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1925</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_ART_DESIGN_AND_ARCHITECTURE_COLLECTION</target_name>\n
+        \   <target_public_name>ProQuest Art Design and Architecture Collection</target_public_name>\n
+        \   <object_portfolio_id>2560000001234753</object_portfolio_id>\n    <target_id>2560000000000118</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2560000000000075</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp;amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_CENTRAL</target_name>\n
+        \   <target_public_name>ProQuest Central</target_public_name>\n    <object_portfolio_id>2550000000138190</object_portfolio_id>\n
+        \   <target_id>2400000000000013</target_id>\n    <interface_id>2400000000000006</interface_id>\n
+        \   <interface_name>PROQUEST</interface_name>\n    <target_service_id>2400000000000013</target_service_id>\n
+        \   <service_type>getFullTxt</service_type>\n    <parser>PROQUEST::open</parser>\n
+        \   <parse_param>url=http://gateway.proquest.com/openurl &amp; clientid= &amp;
+        url2=http://search.proquest.com&amp;jkey=41130</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>utf8</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=41130&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 2002</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>2002</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_MUSIC_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Music Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178037</object_portfolio_id>\n    <target_id>2610000000000090</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000090</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>PROQUEST_PERFORMING_ARTS_PERIODICALS_DATABASE</target_name>\n
+        \   <target_public_name>ProQuest Performing Arts Periodicals Database</target_public_name>\n
+        \   <object_portfolio_id>2550000000178155</object_portfolio_id>\n    <target_id>2610000000000091</target_id>\n
+        \   <interface_id>2400000000000006</interface_id>\n    <interface_name>PROQUEST</interface_name>\n
+        \   <target_service_id>2610000000000091</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>PROQUEST::open</parser>\n    <parse_param>url=http://gateway.proquest.com/openurl
+        &amp; clientid= &amp; url2=http://search.proquest.com&amp;jkey=16493</parse_param>\n
+        \   <proxy>yes</proxy>\n    <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://gateway.proquest.com/openurl?rft_id=16493&amp;res_dat=xri%3Apqm&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;url_ver=Z39.88-2004&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1998</coverage_statement>\n      </threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <from>\n
+        \     <year>1998</year>\n     </from>\n     <embargo></embargo>\n    </coverage>\n
+        \  </target>\n   <target>\n    <target_name>FACTIVA</target_name>\n    <target_public_name>Factiva</target_public_name>\n
+        \   <object_portfolio_id>1000000000776926</object_portfolio_id>\n    <target_id>111037301464000</target_id>\n
+        \   <interface_id>111037301464000</interface_id>\n    <interface_name>FACTIVA</interface_name>\n
+        \   <target_service_id>111037301464002</target_service_id>\n    <service_type>getFullTxt</service_type>\n
+        \   <parser>FACTIVA::FACTIVA</parser>\n    <parse_param>url=http://global.factiva.com
+        &amp; user= &amp; password =  &amp; namespace= &amp; sid=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA
+        &amp; filtered_title_search=&amp;jkey=GTNY</parse_param>\n    <proxy>yes</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication>Requires
+        NYU NetID.</authentication>\n    <char_set>utf8</char_set>\n    <displayer>FACTIVA::FACTIVA</displayer>\n
+        \   <target_url>http://ezproxy.library.nyu.edu:2048/login?url=http://global.factiva.com/en/du/headlines.asp?CurrentSourcesDesc=sc_u_gtny%2CThe+New+Yorker&amp;CurrentSources=U%7Cgtny&amp;XSID=S001dbr5DEs5DEmN9MpMD6mNDVyMHmnRsIuMcNG1pRRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text>\n
+        \      <coverage_statement>Available from 1992  until 1992</coverage_statement>\n
+        \     </threshold_text>\n      <embargo_text></embargo_text>\n     </coverage_text>\n
+        \    <from>\n      <year>1992</year>\n     </from>\n     <to>\n      <year>1992</year>\n
+        \    </to>\n     <embargo></embargo>\n    </coverage>\n   </target>\n   <target>\n
+        \   <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n    <target_public_name>Ask
+        a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <interface_id>20430000000000002</interface_id>\n
+        \   <interface_name>ASK_A_LIBRARIAN</interface_name>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 15 Nov 2016 20:59:30 GMT
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2016-11-16T14:09:06-05:00&ctx_ver=Z39.88-2004&req.ip=149.31.0.0&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/sfxit.com:citation&rft.aufirst=Harold%20Wallace,&rft.aulast=Ross&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.language=eng&rft.lccn=%20%202011201780&rft.object_id=110975413975944&rft.oclcnum=1760231&rft.place=New%20York&rft.pub=F-R%20Pub.%20Corp.&rft.stitle=NEW%20YORKER&rft.title=The%20New%20Yorker&rft_id=info:lccn/2011201780&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Exlibris
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 16 Nov 2016 19:09:06 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<rss xmlns:bx=\"http://bx.exlibrisgroup.com/docs/schema/bx\"
+        version=\"2.0\">\r\n  <channel>\r\n    <title />\r\n    <link />\r\n    <description
+        />\r\n    <bx:statusCode code=\"01\" name=\"emptyList\">no matching documents
+        were found</bx:statusCode>\r\n  </channel>\r\n</rss>\r\n\r\n"
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 19:09:06 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 16 Nov 2016 19:09:08 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-hol-list><reply-text>ok</reply-text><reply-code>0000</reply-code><holdings><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60003807742"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60003807743"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60004671371"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60000358492"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60000358493"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60000358494"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60004982921"></holding><holding
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01002904404/holdings/NYU60000358496"></holding></holdings></get-hol-list> '
+    http_version: 
+  recorded_at: Wed, 16 Nov 2016 19:09:08 GMT
 recorded_with: VCR 2.9.3
