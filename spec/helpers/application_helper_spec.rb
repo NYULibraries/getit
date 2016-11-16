@@ -84,4 +84,74 @@ describe ApplicationHelper, vcr: {cassette_name: 'holdings'} do
       expect(nyu_primo_source_service_responses).to be_empty
     end
   end
+
+  describe "url_for" do
+    context "given options hash" do
+      subject{ helper.url_for(options) }
+
+      context "with query params" do
+        let(:options){ {controller: "resolve", action: "index", key: "value"} }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(helper).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "/resolve?key=value&umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq "/resolve?key=value" }
+        end
+      end
+
+      context "without query params" do
+        let(:options){ {controller: "resolve", action: "index"} }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(helper).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "/resolve?umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq "/resolve" }
+        end
+      end
+    end
+
+    context "given url string" do
+      subject{ helper.url_for(url) }
+
+      context "with query params" do
+        let(:url){ "https://example.com/some/path?key=value" }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(helper).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "https://example.com/some/path?key=value&umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq url }
+        end
+      end
+
+      context "without query params" do
+        let(:url){ "https://example.com/some/path" }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(helper).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "https://example.com/some/path?umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq url }
+        end
+      end
+    end
+  end
 end
