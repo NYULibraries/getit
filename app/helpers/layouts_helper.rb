@@ -9,7 +9,7 @@ module LayoutsHelper
   end
 
   def gauges_tracking_code
-    views["gauges_tracking_code"]
+    institution_views["gauges_tracking_code"]
   end
 
   def google_analytics?
