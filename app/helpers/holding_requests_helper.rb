@@ -63,10 +63,10 @@ module HoldingRequestsHelper
 
   # Request option for a scanned of a portion of the item (with radio button).
   # Request for a portion of the item to scanned and delivered electronically.
-  def scan_request_option(type)
+  def scan_request_option(type, selected: false)
     request_option("#{type}-scan") do
       label_tag(:entire_no, class: 'radio') do
-        radio_button_tag('entire',  'no') +
+        radio_button_tag('entire',  'no', selected) +
         t("holding_requests.new.#{type}.scan.default") +
         fair_use_disclaimer
       end + scan_field_set(style: 'padding-left: 20px;padding-right: 20px;')

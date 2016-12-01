@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/NYULibraries/exlibris-nyu.git
-  revision: 4cb7d2b386d8ee8103313cf3398ea64b38c73e9c
-  branch: feature/add_available_statuses
+  revision: 805144507e4e52fd7a465131c8b2c5f72d8b892a
+  tag: v2.3.0
   specs:
-    exlibris-nyu (3.0.0)
+    exlibris-nyu (2.3.0)
       exlibris-aleph (~> 2.0.4)
       exlibris-primo (~> 1.1.9)
       require_all (~> 1.3)
