@@ -51,4 +51,26 @@ module ApplicationHelper
       end
     end
   end
+
+  # override rails url_for to add institution parameter
+  def url_for(options={})
+    if institution_param.present?
+      if options.is_a?(Hash)
+        options[institution_param_name] ||= institution_param
+      elsif options.is_a?(String)
+        options = append_parameter_to_url(options, institution_param_name, institution_param)
+      end
+    end
+    super(options)
+  end
+
+  private
+  def append_parameter_to_url(url, key, value)
+    if url.include?('?')
+      url += '&'
+    else
+      url += '?'
+    end
+    url += "#{key}=#{URI.encode(value.to_s)}"
+  end
 end

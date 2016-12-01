@@ -80,7 +80,7 @@ end
 gem 'sunspot_rails', '~> 2.1.0'
 
 # NYU customization gems
-gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.2.0'
+gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.3.0'
 # gem 'exlibris-aleph', path: '/apps/exlibris-aleph'
 
 # Use omniauth strategy for login with devise

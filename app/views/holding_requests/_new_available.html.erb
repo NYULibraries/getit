@@ -13,8 +13,8 @@
     <%= entire_request_option(:available) %><br />
     <%= scan_request_option(:available) %>
   <% elsif ["NISAW"].include?(holding.sub_library.code) %>
-    <%= pickup_locations_field_set %>
-    <%= scan_request_option(:available) %>
+    <%= pickup_locations_field_set({hidden: true}) %>
+    <%= scan_request_option(:available, selected: true) %>
   <% else %>
     <%= request_option(:available) do %>
       <%= content_tag(:p, available_request_text) %>
