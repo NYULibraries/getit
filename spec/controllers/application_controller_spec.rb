@@ -79,4 +79,74 @@ describe ApplicationController  do
     end
   end
 
+  describe "#url_for" do
+    context "given options hash" do
+      subject{ controller.url_for(options) }
+
+      context "with query params" do
+        let(:options){ {controller: "resolve", action: "index", key: "value"} }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(controller).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "http://test.host/resolve?key=value&umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq "http://test.host/resolve?key=value" }
+        end
+      end
+
+      context "without query params" do
+        let(:options){ {controller: "resolve", action: "index"} }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(controller).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "http://test.host/resolve?umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq "http://test.host/resolve" }
+        end
+      end
+    end
+
+    context "given url string" do
+      subject{ controller.url_for(url) }
+
+      context "with query params" do
+        let(:url){ "https://example.com/some/path?key=value" }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(controller).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "https://example.com/some/path?key=value&umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq url }
+        end
+      end
+
+      context "without query params" do
+        let(:url){ "https://example.com/some/path" }
+
+        context "with institution_param" do
+          let(:institution_param){ :NYUAD }
+          before { allow(controller).to receive(:institution_param).and_return institution_param }
+
+          it { is_expected.to eq "https://example.com/some/path?umlaut.institution=NYUAD" }
+        end
+
+        context "without either param" do
+          it { is_expected.to eq url }
+        end
+      end
+    end
+  end
+
 end

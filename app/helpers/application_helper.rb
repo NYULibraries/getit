@@ -52,25 +52,16 @@ module ApplicationHelper
     end
   end
 
-  # override rails url_for to add institution parameter
-  def url_for(options={})
-    if institution_param.present?
-      if options.is_a?(Hash)
-        options[institution_param_name] ||= institution_param
-      elsif options.is_a?(String)
-        options = append_parameter_to_url(options, institution_param_name, institution_param)
-      end
-    end
-    super(options)
-  end
-
-  private
-  def append_parameter_to_url(url, key, value)
-    if url.include?('?')
-      url += '&'
-    else
-      url += '?'
-    end
-    url += "#{key}=#{URI.encode(value.to_s)}"
+  # Override the ActionView url_for to call the application-wide controller
+  # override so that we can specify path-only in views
+  #
+  # Ex.
+  # => url_for({controller: 'resolve'}) === '/resolve?umlaut.institution=#{current_institution}'
+  # => url_for('/resolve?rft.object_id=1234') === '/resolve?rft.object_id=1234&umlaut.institution=#{current_institution}'
+  def url_for(options = {})
+    return controller.url_for(options) unless options.is_a? Hash
+    controller.url_for(
+      options.reverse_merge(only_path: true)
+    )
   end
 end
