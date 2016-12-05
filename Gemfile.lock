@@ -34,31 +34,35 @@ GIT
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_institutions
-  revision: d265c2d6924ccbded06ea64993e7ab65d93b2f25
+  revision: 809799538d1e08e6b096da567ec4278a412b8779
+  tag: v1.0.0
   specs:
-    nyulibraries_institutions (0.0.0)
+    nyulibraries_institutions (1.0.0)
       institutions (~> 0.1.3)
       rails (>= 4)
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_javascripts
-  revision: b7391f5bdd52ef2633015e747750369dd7c585e8
+  revision: f2637c4891f273a6227b4f0fed9245a88539f9b2
+  tag: v1.0.0
   specs:
-    nyulibraries_javascripts (0.0.1)
+    nyulibraries_javascripts (1.0.0)
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_stylesheets
-  revision: 4d3586ec74aa0c6895e56febf2078a9025090921
+  revision: 8556ead9e51dc13c4dad883a9c30ea6aed6eaca6
+  tag: v1.0.0
   specs:
-    nyulibraries_stylesheets (0.0.0)
+    nyulibraries_stylesheets (1.0.0)
       bootstrap-sass (~> 3.2)
       compass (>= 1.0.1)
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_templates
-  revision: 438549baeb22d38ee65f41681e2131c74fd3d78e
+  revision: 68466155fbaa21cda97e106a502c90bff4c73c4e
+  tag: v1.0.0
   specs:
-    nyulibraries_templates (0.0.1)
+    nyulibraries_templates (1.0.0)
       rails (>= 4)
 
 GEM
@@ -105,6 +109,8 @@ GEM
       gyoku (>= 0.4.0)
       nokogiri
     arel (6.0.3)
+    autoprefixer-rails (6.5.3.1)
+      execjs
     bcrypt (3.1.11)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -112,8 +118,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     borrow_direct (1.2.0)
       httpclient (~> 2.4)
     builder (3.2.2)

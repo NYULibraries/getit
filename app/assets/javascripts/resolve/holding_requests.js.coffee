@@ -1,6 +1,6 @@
 $ ->
   scan_request_option_id = '#entire_no'
-  scan_request_container_class = '#holding-request-option-offsite-scan'
+  scan_request_container_class = '[id^=holding-request-option][id$=-scan]'
   # Select scan request if any of the text inputs have a value
   $(document).on 'keypress', scan_request_container_class + ' fieldset input', ->
     $(this).closest('fieldset').prev('label').find('input').first().prop('checked', true)

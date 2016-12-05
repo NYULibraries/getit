@@ -15,6 +15,34 @@ class ApplicationController < ActionController::Base
     return
   end
 
+  # Override rails url_for to add institution parameter
+  # This has to be defined in the controller so that controller logic
+  # in Umlaut sees the override functionality.
+  #
+  # Ex.
+  # => url_for({controller: 'resolve'}) === 'http://test.host/resolve?umlaut.insitution=#{current_institution}'
+  # => url_for(http://test.host/resolve?rft.object_id=1234) === 'http://test.host/resolve?rft.object_id=1234&umlaut.insitution=#{current_institution}'
+  def url_for(options={})
+    if institution_param.present?
+      if options.is_a?(Hash)
+        options[institution_param_name] ||= institution_param
+      elsif options.is_a?(String)
+        options = append_parameter_to_url(options, institution_param_name, institution_param)
+      end
+    end
+    super(options)
+  end
+
+  def append_parameter_to_url(url, key, value)
+    if url.include?('?')
+      url += '&'
+    else
+      url += '?'
+    end
+    url += "#{key}=#{URI.encode(value.to_s)}"
+  end
+  private :append_parameter_to_url
+
   def current_user_dev
     # Assuming you have a dev user on your local environment
     @current_user ||= User.where(institution_code: :NYU).first
