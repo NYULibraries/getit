@@ -26,6 +26,7 @@ gem 'nyulibraries_stylesheets', git: 'https://github.com/NYULibraries/nyulibrari
 gem 'nyulibraries_templates', git: 'https://github.com/NYULibraries/nyulibraries_templates', tag: 'v1.0.0'
 gem 'nyulibraries_institutions', git: 'https://github.com/NYULibraries/nyulibraries_institutions', tag: 'v1.0.0'
 gem 'nyulibraries_javascripts', git: 'https://github.com/NYULibraries/nyulibraries_javascripts', tag: 'v1.0.0'
+gem 'nyulibraries_errors', git: 'https://github.com/NYULibraries/nyulibraries_errors', tag: 'v1.0.1'
 # Use higher version of Compass CSS framework for sprites, etc.
 gem 'compass-rails', '~> 2.0.0'
 
@@ -55,6 +56,7 @@ group :development, :test, :cucumber do
   gem 'factory_girl_rails', '~> 4.5.0'
   # Use pry as the REPL
   gem 'pry', '~> 0.10.1'
+  gem 'rb-readline'
   gem 'guard-rspec', require: false
   gem 'rspec-its', '~> 1.2.0'
 end
