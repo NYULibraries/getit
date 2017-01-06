@@ -4,17 +4,6 @@ class ApplicationController < ActionController::Base
   helper :institutions
   include InstitutionsHelper
 
-  def routing_error
-    if request.format.html?
-      render 'errors/404', layout: 'error', status: 404
-    elsif request.format.xml?
-      render xml: {file: request.path_info, error: "does not exist"}, status: 404
-    else
-      render json: {file: request.path_info, error: "does not exist"}.to_json, status: 404
-    end
-    return
-  end
-
   # Override rails url_for to add institution parameter
   # This has to be defined in the controller so that controller logic
   # in Umlaut sees the override functionality.
