@@ -397,6 +397,7 @@ NS:
     gauges_tracking_code: <%= ENV['NS_GAUGES_TRACKING_CODE'] %>
     css: search_ns
     resolve_css: resolve_ns
+    stackmap_css: stackmap.com/integration/newschool/StackMap.css
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
         primo:

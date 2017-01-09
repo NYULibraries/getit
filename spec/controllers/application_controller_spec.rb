@@ -56,29 +56,6 @@ describe ApplicationController  do
     it { should eql nil }
   end
 
-  describe '#routing_error' do
-    let(:format) { nil }
-    let(:path) { 'hack' }
-    before { get :routing_error, path: path, format: format }
-    subject { response.body }
-    context 'when format is not specified' do
-      it { should render_template('errors/404') }
-    end
-    context 'when format is JS' do
-      let(:format) { 'js' }
-      it { should eql '{"file":"/hack.js","error":"does not exist"}' }
-    end
-    context 'when format is JSON' do
-      let(:format) { 'json' }
-      it { should eql '{"file":"/hack.json","error":"does not exist"}' }
-    end
-    context 'when format is XML' do
-      let(:format) { 'xml' }
-      it { should include '<file>/hack.xml</file>' }
-      it { should include '<error>does not exist</error>' }
-    end
-  end
-
   describe "#url_for" do
     context "given options hash" do
       subject{ controller.url_for(options) }
