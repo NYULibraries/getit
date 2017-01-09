@@ -6,4 +6,8 @@ module StackMapHelper
   def stackmap_presenter(holding)
     StackMapPresenter.new(holding)
   end
+
+  def stackmap?(institution)
+    StackMapPolicy.mappable_institution?(institution)
+  end
 end

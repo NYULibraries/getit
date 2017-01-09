@@ -1,6 +1,8 @@
 module ApplicationHelper
-  def resolve_stylesheets
-    stylesheet_link_tag (current_primary_institution.views["resolve_css"] || "resolve")
+  def resolve_stylesheets(stylesheets = [])
+    stylesheets << (current_primary_institution.views["resolve_css"] || "resolve")
+    stylesheets << "#{request.protocol}#{current_primary_institution.views['stackmap_css']}" if stackmap?(current_primary_institution.code.to_s)
+    stylesheet_link_tag *stylesheets
   end
 
   def resolve_javascripts
