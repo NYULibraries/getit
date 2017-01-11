@@ -41,8 +41,7 @@ GIT
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_institutions
-  revision: 809799538d1e08e6b096da567ec4278a412b8779
-  tag: v1.0.0
+  revision: ced76d1d08586eff95d773f9237878327649e1d6
   specs:
     nyulibraries_institutions (1.0.0)
       institutions (~> 0.1.3)
