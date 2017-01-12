@@ -32,8 +32,8 @@ describe LayoutsHelper do
 
   describe '#breadcrumbs' do
     subject { helper.breadcrumbs }
-    it { should include '<a href="http://library.nyu.edu">NYU Libraries</a>' }
-    it { should include '<a href="http://bobcat.library.nyu.edu/nyu">BobCat</a>' }
+    it { should include '<a href="http://dev.library.nyu.edu">NYU Libraries</a>' }
+    it { should include '<a href="http://bobcatdev.library.nyu.edu/nyu">BobCat</a>' }
     it { should include 'Journals' }
   end
 end
