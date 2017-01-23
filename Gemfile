@@ -6,8 +6,7 @@ gem 'rails', '~> 4.2.7.1'
 gem 'mysql2', '~> 0.3.13'
 
 # Use SCSS for stylesheets
-# Locked in at beta1 release because major release doesn't play nice with compass-rails yet
-gem 'sass-rails', '5.0.0.beta1'
+gem 'sass-rails', '~> 5.0.6'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 2.7.0'
