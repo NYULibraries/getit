@@ -15,7 +15,7 @@ class EZBorrowAuthorizer < PatronStatusAuthorizer
  private
 
   def nyu_ezborrow_statuses
-    @nyu_ezborrow_statuses ||= %w{20 21 22 23 50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82}
+    @nyu_ezborrow_statuses ||= %w{50 51 52 53 54 55 56 57 58 60 61 62 63 65 66 80 81 82}
   end
 
   def ns_ezborrow_statuses
