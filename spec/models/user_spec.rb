@@ -10,6 +10,14 @@ describe User do
     it { should include 'NYSID' }
   end
 
+  describe 'scopes' do
+    before { create(:user) }
+    describe 'inactive' do
+      subject { User.inactive.count }
+      it { is_expected.to eql 0 }
+    end
+  end
+
   subject(:user) { build(:user) }
   it { should be_a User }
 

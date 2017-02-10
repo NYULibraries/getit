@@ -8,6 +8,7 @@ FactoryGirl.define do
     institution_code 'NYU'
     aleph_id { (ENV['BOR_ID'] || 'BOR_ID') }
     provider 'nyu_shibboleth'
+    last_sign_in_at Time.now
     trait :nyu_aleph_attributes do
       patron_status '51'
     end

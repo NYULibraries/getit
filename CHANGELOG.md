@@ -1,5 +1,9 @@
 # Change Log
 
+## 2017-02-10
+
+- Setup rake task to clean out old users: `rake getit:cleanup:users`
+
 ## 2014-12-09
 - __Configurable Search Methods__
     Search methods are in configula now so they can change per environment, e.g. reindex :crown:.

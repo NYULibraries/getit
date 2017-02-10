@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
   VALID_INSTITUTION_CODES = Institutions.institutions.keys.map(&:to_s)
 
+  devise :trackable
   devise :omniauthable, omniauth_providers: [:nyulibraries]
+
+  scope :inactive, -> { where("last_sign_in_at IS NULL OR last_sign_in_at < ?", 1.year.ago) }
 
   # Must have a valid institution code
   validates :institution_code, inclusion: {in: VALID_INSTITUTION_CODES},
