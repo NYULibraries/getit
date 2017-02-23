@@ -1,7 +1,8 @@
 # Change Log
 
-## 2017-02-10
+## 2017-02
 
+- Ruby 2.3.3
 - Setup rake task to clean out old users: `rake getit:cleanup:users`
 
 ## 2014-12-09
