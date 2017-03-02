@@ -127,7 +127,7 @@ class SearchControllerTest < ActionController::TestCase
     assert_select "title", "BobCat"
     assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
     assert_select 'div.search div.search-section', 3
-    assert_tabs_header
+    assert_select 'nav#bobcat_tabs div.navbar-header h4', {count: 0}
     assert_template :partial => 'hsl/_sidebar', :count => 1
   end
 

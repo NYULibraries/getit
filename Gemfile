@@ -21,11 +21,11 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'therubyracer', '~> 0.12.0'
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
-gem 'nyulibraries_stylesheets', git: 'https://github.com/NYULibraries/nyulibraries_stylesheets', tag: 'v1.0.0'
-gem 'nyulibraries_templates', git: 'https://github.com/NYULibraries/nyulibraries_templates', tag: 'v1.0.1'
-gem 'nyulibraries_institutions', git: 'https://github.com/NYULibraries/nyulibraries_institutions', tag: 'v1.0.1'
-gem 'nyulibraries_javascripts', git: 'https://github.com/NYULibraries/nyulibraries_javascripts', tag: 'v1.0.0'
-gem 'nyulibraries_errors', git: 'https://github.com/NYULibraries/nyulibraries_errors', tag: 'v1.0.1'
+gem 'nyulibraries_stylesheets', github: 'NYULibraries/nyulibraries_stylesheets', tag: 'v1.0.1'
+gem 'nyulibraries_templates', github: 'NYULibraries/nyulibraries_templates', tag: 'v1.0.1'
+gem 'nyulibraries_institutions', github: 'NYULibraries/nyulibraries_institutions'#, tag: 'v1.0.2'
+gem 'nyulibraries_javascripts', github: 'NYULibraries/nyulibraries_javascripts', tag: 'v1.0.0'
+gem 'nyulibraries_errors', github: 'NYULibraries/nyulibraries_errors', tag: 'v1.0.1'
 # Use higher version of Compass CSS framework for sprites, etc.
 gem 'compass-rails', '~> 2.0.0'
 
