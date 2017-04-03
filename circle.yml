@@ -1,7 +1,7 @@
 machine:
 
   ruby:
-    version: 2.2.5
+    version: 2.3.3
 
   environment:
     ILL_PATRON_STATUSES: '[51,37,55,31]'
