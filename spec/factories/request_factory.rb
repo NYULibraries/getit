@@ -3,7 +3,6 @@
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # Request factory
 FactoryGirl.define do
-  PRIMO_REFERRER = 'info:sid/primo.exlibrisgroup.com:primo-'
   factory :request do
     sequence :session_id do |n| "session-#{n}" end
     referent
