@@ -77,13 +77,13 @@ group :test, :cucumber do
   # Use DatabaseCleaner for clearing the test database
   gem 'database_cleaner', '~> 1.3.0'
   # Use Selenium as the web driver for Cucumber
-  gem 'selenium-webdriver', '~> 2.48.0'
+  gem 'selenium-webdriver', '~> 3.3'
   # Use Cucumber for integration testing
   gem 'cucumber-rails', '~> 1.4.0', require: false
 end
 
 # Use Sunspot for searching journals
-gem 'sunspot_rails', '~> 2.1.0'
+gem 'sunspot_rails', '~> 2.2.7'
 
 # NYU customization gems
 gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.4.0'
