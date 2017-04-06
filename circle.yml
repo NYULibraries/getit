@@ -22,3 +22,10 @@ database:
   override:
     - mysql -e 'create database getit_test;'
     - bundle exec rake db:create db:schema:load
+
+test:
+  override:
+    - RAILS_ENV=test bundle exec rake test
+    - RAILS_ENV=test bundle exec rake spec
+    - RAILS_ENV=test bundle exec rake cucumber
+    - RAILS_ENV=test bundle exec rake coveralls:push

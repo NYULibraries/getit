@@ -1,8 +1,9 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV["RAILS_ENV"] ||= 'test'
 # Wear merged coveralls for rails
 require 'coveralls'
 Coveralls.wear_merged!('rails')
+
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+ENV["RAILS_ENV"] ||= 'test'
 
 require 'exlibris-nyu'
 # Use the included test mnt for testing.
