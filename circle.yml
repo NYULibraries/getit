@@ -28,3 +28,4 @@ test:
     - RAILS_ENV=test bundle exec rake test
     - RAILS_ENV=test bundle exec rake spec
     - RAILS_ENV=test bundle exec rake cucumber
+    - RAILS_ENV=test bundle exec rake coveralls:push
