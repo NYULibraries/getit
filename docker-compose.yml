@@ -1,9 +1,13 @@
-machine:
-
-  ruby:
-    version: 2.3.3
-
+app:
+  build: .
+  ports:
+    - "3000:3000"
+  volumes:
+    - .:/app
+  links:
+    - db
   environment:
+    GETIT_DB_HOST: db
     ILL_PATRON_STATUSES: '[51,37,55,31]'
     ALEPH_BASE_URL: http://aleph.library.edu
     ALEPH_REST_URL: http://aleph.library.edu:1891/rest-dlf
@@ -16,13 +20,13 @@ machine:
     EZBORROW_NYU_PATRON_BARCODE: '12345'
     EZBORROW_NS_PATRON_BARCODE: '12345'
     EZBORROW_NS_LIBRARY_SYMBOL: NEWSCHOOL
-
-## Customize database setup
-database:
-  override:
-    - mysql -e 'create database getit_test;'
-    - bundle exec rake db:create db:schema:load
-
-test:
-  override:
-    - RAILS_ENV=test bundle exec rake
+    CI:
+    CODECLIMATE_REPO_TOKEN:
+    COVERALLS_REPO_TOKEN:
+  entrypoint: "tail -f /dev/null"
+db:
+  image: library/mysql:5.6.22
+  expose:
+    - "3306"
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
