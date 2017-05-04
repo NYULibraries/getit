@@ -1,0 +1,10 @@
+<header id="header" class="header">
+  <div class="parent"><a href="https://hsl.med.nyu.edu/"><span>NYU Health Sciences Library</span></a></div>
+  <div class="institution"></div>
+</header>
+<nav id="nav1">
+  <%= render_umlaut_permalink %>
+  <ul>
+    <li class="nyu-login"><%= login("umlaut.institution" => institution.code ) %></li>
+  </ul>
+</nav>
