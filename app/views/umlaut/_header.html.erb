@@ -1,15 +1,8 @@
 <% # Allow a faux dynamic header override per institution by rescuing when the template is missing %>
-<% begin %>
-<%= render "#{institution.code.downcase}/header" %>
-<% rescue %>
-<header class="header">
-  <h1><%= current_primary_institution.name %></h1>
-  <div class="institution"></div>
-</header>
+<%= render partial: 'common/header' %>
 <nav id="nav1">
   <%= render_umlaut_permalink %>
   <ul>
     <li class="nyu-login"><%= login("umlaut.institution" => institution.code ) %></li>
   </ul>
 </nav>
-<% end %>
