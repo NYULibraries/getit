@@ -1,32 +1,47 @@
-app:
-  build: .
-  ports:
-    - "3000:3000"
-  volumes:
-    - .:/app
-  links:
-    - db
-  environment:
-    GETIT_DB_HOST: db
-    ILL_PATRON_STATUSES: '[51,37,55,31]'
-    ALEPH_BASE_URL: http://aleph.library.edu
-    ALEPH_REST_URL: http://aleph.library.edu:1891/rest-dlf
-    PRIMO_BASE_URL: http://primo.library.edu
-    LOGIN_URL: https://dev.login.library.nyu.edu
-    PASSIVE_LOGIN_PATH: /login/passive
-    SSO_LOGOUT_PATH: /logout
-    NS_BX_TOKEN: NS_BX_TOKEN
-    EZBORROW_NYU_LIBRARY_SYMBOL: NYU
-    EZBORROW_NYU_PATRON_BARCODE: '12345'
-    EZBORROW_NS_PATRON_BARCODE: '12345'
-    EZBORROW_NS_LIBRARY_SYMBOL: NEWSCHOOL
-    CI:
-    CODECLIMATE_REPO_TOKEN:
-    COVERALLS_REPO_TOKEN:
-  entrypoint: "tail -f /dev/null"
-db:
-  image: library/mysql:5.6.22
-  expose:
-    - "3306"
-  environment:
-    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    links:
+      - db
+    environment:
+      GETIT_DB_HOST: db
+      ILL_PATRON_STATUSES: '[51,37,55,31]'
+      ALEPH_BASE_URL: http://aleph.library.edu
+      ALEPH_REST_URL: http://aleph.library.edu:1891/rest-dlf
+      PRIMO_BASE_URL: http://primo.library.edu
+      LOGIN_URL: https://dev.login.library.nyu.edu
+      PASSIVE_LOGIN_PATH: /login/passive
+      SSO_LOGOUT_PATH: /logout
+      NS_BX_TOKEN: NS_BX_TOKEN
+      EZBORROW_NYU_LIBRARY_SYMBOL: NYU
+      EZBORROW_NYU_PATRON_BARCODE: '12345'
+      EZBORROW_NS_PATRON_BARCODE: '12345'
+      EZBORROW_NS_LIBRARY_SYMBOL: NEWSCHOOL
+      CI:
+      CODECLIMATE_REPO_TOKEN:
+      COVERALLS_REPO_TOKEN:
+    entrypoint: "tail -f /dev/null"
+    depends_on:
+      - setup_tests
+  db:
+    image: library/mysql:5.6.22
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  setup_tests:
+    build: .
+    command: rake db:setup
+    volumes:
+      - .:/app
+    environment:
+      GETIT_DB_HOST: db
+    links:
+      - db
+    depends_on:
+      - db
