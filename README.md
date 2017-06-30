@@ -27,3 +27,12 @@ At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic
 
 ## Enabled Services
 Check out our wiki [page on services](http://github.com/NYULibraries/getit/wiki/Services).
+
+## Running tests
+
+### Docker
+
+```
+docker-compose up -d
+docker-compose exec app rake
+```

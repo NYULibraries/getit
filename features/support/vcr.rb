@@ -2,7 +2,7 @@ require 'vcr'
 
 VCR.configure do |c|
   c.hook_into :webmock
-  c.ignore_hosts '127.0.0.1', 'localhost'
+  c.ignore_hosts '127.0.0.1'
   c.cassette_library_dir = 'features/cassettes'
   c.filter_sensitive_data('http://aleph.library.edu') { Exlibris::Aleph::Config.base_url }
   c.filter_sensitive_data('http://primo.library.edu') { Exlibris::Primo::Config.base_url }
@@ -51,7 +51,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/offsite'
   t.tag '@user/offsite'
   t.tag '@guest/available'
-  t.tag '@user/available'
+  t.tag '@user/available'#, record: :new_episodes
   t.tag '@guest/ill'
   t.tag '@user/ill'
   t.tag '@user/afc'
