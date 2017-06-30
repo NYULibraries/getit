@@ -465,6 +465,7 @@ NS:
       api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
       find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
       html_query_base_url: https://login.library.nyu.edu/ezborrow?ls=THENEWSCHOOL
+      prompt: "Get item from one of our partner libraries in 2-4 business days. Checkout period is 12 weeks, with no renewals."
       #
       # Optional params
       # disable BD api entirely:
