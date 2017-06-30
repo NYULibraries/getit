@@ -1,11 +1,6 @@
 Given(/^I am off campus$/) do
-  # When not on travis stub an IP that is always off-campus
-  unless ENV['TRAVIS']
-    ENV['RAILS_TEST_IP_ADDRESS'] = '127.0.0.1'
-  else
-  # When on travis just visit the login page, always off campus
-    visit root_path
-  end
+  # Stub an IP that is always off-campus
+  ENV['RAILS_TEST_IP_ADDRESS'] = '127.0.0.1'
 end
 
 Given(/^I am at (.+)$/) do |location|
@@ -14,7 +9,7 @@ Given(/^I am at (.+)$/) do |location|
   if ip.present?
     ENV['RAILS_TEST_IP_ADDRESS'] = ip
   else
-  # If no IP was found, visit the institution login page
+  # If no IP was found, visit the institution page
     visit root_path('umlaut.institution' => institution_for_location(location))
   end
 end
