@@ -1,4 +1,4 @@
-@institutions_views @wip-ci
+@institutions_views
 Feature: Institution views by IP location
   In order to keep consistency of visual identity
   As a user
