@@ -38,3 +38,5 @@ wiki
 
 # Ignore .powenv
 .powenv
+
+application.yml
