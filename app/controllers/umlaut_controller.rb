@@ -36,7 +36,7 @@ class UmlautController < ApplicationController
         # Reset BorrowDirect/EZBorrow defaults based on current institution
         if logged_in_user_institution.try(:services).try(:[], "EZBorrow")
           BorrowDirect::Defaults.api_key = logged_in_user_institution.services["EZBorrow"]["api_key"]
-          if logged_in_user_institution.try(:services).try(:[], "EZBorrow").try(:[], "api_key")
+          if logged_in_user_institution.try(:services).try(:[], "EZBorrow").try(:[], "api_base")
             BorrowDirect::Defaults.api_base = logged_in_user_institution.services["EZBorrow"]["api_base"]
           end
           # Should we only rely on a local availability check, or check Ezborrow too?
