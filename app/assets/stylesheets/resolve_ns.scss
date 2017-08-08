@@ -6,29 +6,30 @@
 @import "bootstrap";
 @import "resolve/variables";
 @import "nyulibraries_stylesheets/nyulibraries/ns/variables";
+@import "umlaut";
 @import "nyulibraries_stylesheets/nyulibraries/header";
-@import "nyulibraries_stylesheets/nyulibraries/ns/header";
 @import "nyulibraries_stylesheets/nyulibraries/login";
 @import "nyulibraries_stylesheets/nyulibraries/nav";
 @import "nyulibraries_stylesheets/nyulibraries/mixins";
 @import "nyulibraries_stylesheets/nyulibraries/responsive";
-@import "umlaut";
 @import "nyulibraries_stylesheets/nyulibraries/misc";
-@import "nyulibraries_stylesheets/nyulibraries/ns/misc";
 @import "resolve/common";
 @import "resolve/permalink";
+@import "nyulibraries_stylesheets/nyulibraries/ns/misc";
+@import "nyulibraries_stylesheets/nyulibraries/ns/header";
 
-body {
-  background-image: url(http://library.newschool.edu/img/bg.png);
+.header {
+  border-bottom: 2px solid #E8E8E8;
+  background-color: #f9f9f7;
+  background-repeat: no-repeat;
 }
 
 .header, nav {
-  background-color: #f05123;
   h1 {
     font-weight: bold;
   }
 }
 
-.header h1, .login, .logout {
-  color: white;
+.nyu-login {
+  line-height: 20px;
 }

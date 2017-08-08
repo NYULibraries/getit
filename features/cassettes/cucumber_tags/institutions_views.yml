@@ -6707,4 +6707,45 @@ http_interactions:
         \ <ctx_obj_targets></ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
     http_version: 
   recorded_at: Thu, 11 May 2017 16:23:53 GMT
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2017-08-03T13:11:04%2B00:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.8&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rft.aufirst=Harold%20Wallace,&rft.aulast=Ross&rft.eissn=2163-3827&rft.genre=journal&rft.issn=0028-792X&rft.jtitle=The%20New%20Yorker&rft.language=eng&rft.lccn=%20%202011201780&rft.object_id=110975413975944&rft.oclcnum=1760231&rft.place=New%20York&rft.pub=F-R%20Pub.%20Corp.&rft.stitle=NEW%20YORKER&rft.title=The%20New%20Yorker&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: invalid token value
+    headers:
+      Set-Cookie:
+      - JSESSIONID=2E5A8C5A0B65CCEFA649A15AC04EA70F; Path=/
+      Content-Type:
+      - text/html;charset=ISO-8859-1
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Thu, 03 Aug 2017 13:11:03 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<title>Error
+        401</title>\n<link href=\"/service/css/error.css\" rel=\"stylesheet\" type=\"text/css\"
+        />\n</head>\n<body>\n<div id=\"topbarContainer\">\n\t<div id=\"topbar\">\n\t\t<div
+        id=\"logo\" class=\"logo\">\n\t\t\t<a href=\"/service/images/logo.gif\"><img
+        src=\"/service/images/logo.gif\" alt=\"ExLibris Logo\" /></a>\n\t\t</div>\n\t</div>\n</div>\n<br></br><br></br><br></br><br></br><br></br>\n<center><p
+        style=\"padding: 0px 15px 0px 15px\">bX recommender HTTP Error 401 Unauthorized\n</p></center>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Thu, 03 Aug 2017 13:11:04 GMT
 recorded_with: VCR 2.9.3
