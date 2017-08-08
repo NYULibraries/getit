@@ -22,6 +22,11 @@
   border-bottom: 2px solid #E8E8E8;
   background-color: #f9f9f7;
   background-repeat: no-repeat;
+  background-size: contain;
+
+  .institution {
+    display: none;
+  }
 }
 
 .header, nav {
