@@ -1,7 +1,7 @@
 # GetIt @ NYU
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/getit.svg?style=svg)](https://circleci.com/gh/NYULibraries/getit)
-[![Dependency Status](https://gemnasium.com/NYULibraries/getit.png)](https://gemnasium.com/NYULibraries/getit)
+[![Dependency Status](https://gemnasium.com/badges/github.com/NYULibraries/getit.svg)](https://gemnasium.com/github.com/NYULibraries/getit)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/getit.png)](https://codeclimate.com/github/NYULibraries/getit)
 [![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/getit)
 
