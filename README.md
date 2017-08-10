@@ -1,7 +1,7 @@
 # GetIt @ NYU
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/getit.svg?style=svg)](https://circleci.com/gh/NYULibraries/getit)
-[![Dependency Status](https://gemnasium.com/NYULibraries/getit.png)](https://gemnasium.com/NYULibraries/getit)
+[![Dependency Status](https://gemnasium.com/badges/github.com/NYULibraries/getit.svg)](https://gemnasium.com/github.com/NYULibraries/getit)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/getit.png)](https://codeclimate.com/github/NYULibraries/getit)
 [![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/getit)
 
@@ -28,11 +28,20 @@ At NYU we've implemented a few features in GetIt @ NYU that aren't in your basic
 ## Enabled Services
 Check out our wiki [page on services](http://github.com/NYULibraries/getit/wiki/Services).
 
-## Running tests
-
-### Docker
+## Developing
 
 ```
 docker-compose up -d
-docker-compose exec app rake
+```
+
+### Run tests
+
+```
+docker-compose exec test rake
+```
+
+### Run server
+
+```
+docker-compose exec app rails server -b 0.0.0.0
 ```
