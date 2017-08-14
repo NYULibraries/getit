@@ -9,7 +9,7 @@
 #     - only offer the entire item option
 -%>
 <%= request_form(:available) do %>
-  <% if (["BOBST", "NCOUR"].include?(holding.sub_library.code)) %>
+  <% if (["BOBST", "NCOUR", "NDIBN"].include?(holding.sub_library.code)) %>
     <%= entire_request_option(:available) %><br />
     <%= scan_request_option(:available) %>
   <% elsif ["NISAW"].include?(holding.sub_library.code) %>
