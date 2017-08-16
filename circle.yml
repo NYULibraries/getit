@@ -39,11 +39,7 @@ deployment:
     commands:
       - curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20QA%20Deploy/build/api
   development:
-    # branch: /.+/
-    branches:
-      ignore:
-        - master
-        - qa
+    branch: /.+/
     # owner: NYULibraries
     commands:
       - curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Development%20Deploy/build/api
