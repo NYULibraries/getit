@@ -20,6 +20,10 @@ module LayoutsHelper
     ENV['GOOGLE_ANALYTICS_TRACKING_CODE']
   end
 
+  def google_tag_manager_tracking_code
+    ENV['GOOGLE_TAG_MANAGER_TRACKING_CODE']
+  end
+
   def breadcrumbs
     breadcrumbs = super
     unless params["controller"] == "export_email"

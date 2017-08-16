@@ -39,7 +39,7 @@ getit: &getit
   database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit') %>
 
 development: &development
-  <<: *getit
+  <<: *getit  
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
