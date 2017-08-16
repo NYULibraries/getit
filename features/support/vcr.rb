@@ -40,7 +40,7 @@ VCR.cucumber_tags do |t|
   t.tag '@newschool_ezborrow_user/checked_out'
   t.tag '@newschool_ill_user/checked_out'
   t.tag '@user/isaw_available'
-  t.tag '@user/dibner_available', allow_playback_repeats: true, record: :all
+  t.tag '@user/dibner_available'#, allow_playback_repeats: true, record: :all
   t.tag '@guest/requested'
   t.tag '@user/requested'
   t.tag '@guest/recalled'
