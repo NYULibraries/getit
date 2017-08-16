@@ -465,6 +465,7 @@ NS:
       api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
       find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
       html_query_base_url: https://login.library.nyu.edu/ezborrow?ls=THENEWSCHOOL
+      api_base: <%= ENV['EZBORROW_NS_API_BASE'] %>
       #
       # Optional params
       # disable BD api entirely:

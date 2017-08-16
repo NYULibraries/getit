@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <title>GetIt | <%= @page_title %></title>
+    <%= render 'common/google_tag_manager_script' %>
     <%= meta %>
     <%= resolve_stylesheets %>
     <%= resolve_javascripts %>
     <%= render_umlaut_head_content %>
   </head>
   <body class="umlaut no-js">
+    <%= render 'common/google_tag_manager_noscript' %>
     <%= render :partial => "umlaut/header" %>
     <div class="umlaut-container">
       <div class="umlaut-main-container-fluid container-fluid <%= "umlaut-#{params[:controller]}-container" %>">
