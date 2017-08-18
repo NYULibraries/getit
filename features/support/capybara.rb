@@ -37,7 +37,7 @@ else
 end
 
 Before do
-  if Capybara.default_driver == :selenium
-    Capybara.current_session.driver.browser.manage.window.resize_to(1280, 1024)
-  end
+  # if Capybara.default_driver == :selenium
+  #   Capybara.current_session.driver.browser.manage.window.resize_to(1280, 1024)
+  # end
 end
