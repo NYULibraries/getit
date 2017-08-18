@@ -47,17 +47,17 @@ gem 'umlaut_borrow_direct', '~> 1.0.2'
 
 # Development gems
 group :development do
-  gem 'progress_bar', '~> 1.0.0'
-  gem 'better_errors', '~> 2.0.0'
+  gem 'progress_bar', '~> 1.1.0'
+  gem 'better_errors', '~> 2.3.0'
   gem 'binding_of_caller', "~> 0.7.2"
 end
 
 # Testing gems
 group :development, :test, :cucumber do
   # Rspec as the test framework
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '~> 3.6.0'
   # Use factory girl for creating models
-  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'factory_girl_rails', '~> 4.8.0'
   # Use pry as the REPL
   gem 'pry', '~> 0.10.1'
   gem 'rb-readline'
@@ -68,21 +68,22 @@ end
 group :test, :cucumber do
   # Phantomjs for headless browser testing
   gem 'phantomjs', '~> 2.1.1'
-  gem 'poltergeist', '~> 1.11.0'
+  gem 'poltergeist', '~> 1.16.0'
   # Use Coveralls.io to track testing coverage
-  gem 'coveralls', '~> 0.7.11', require: false
+  gem 'coveralls', '~> 0.8', require: false
   # Use VCR for testing with deterministic HTTP interactions
-  gem 'vcr', '~> 2.9.0'
-  gem 'webmock', '~> 1.19.0'
+  gem 'vcr', '~> 3.0'
+  gem 'webmock', '~> 3.0'
   # Use DatabaseCleaner for clearing the test database
   gem 'database_cleaner', '~> 1.3.0'
   # Use Selenium as the web driver for Cucumber
-  gem 'selenium-webdriver', '~> 3.3'
+  gem 'selenium-webdriver', '~> 3.5'
   # Use Cucumber for integration testing
-  gem 'cucumber-rails', '~> 1.4.0', require: false
+  gem 'cucumber-rails', '~> 1.5.0', require: false
 end
 
 # Use Sunspot for searching journals
+gem 'rsolr', '~> 1'
 gem 'sunspot_rails', '~> 2.2.7'
 
 # NYU customization gems
