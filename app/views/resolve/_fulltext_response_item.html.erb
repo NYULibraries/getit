@@ -21,9 +21,7 @@ unless (institution_code.blank? || authentication.present?)
   end
 end
 display_text = view_data[:display_text]
-# Display 'NYU ebrary' if the URL is from NYU's ebrary.
-# Masks the fact that the data does not come correct.
-display_text = (/site.ebrary.com\/lib\/nyulibrary/ =~ view_data[:url]) ? "NYU ebrary" : display_text %>
+%>
 <li class="response_item">
   <%- # Icon for link -%>
   <%= content_tag :i, nil %>
