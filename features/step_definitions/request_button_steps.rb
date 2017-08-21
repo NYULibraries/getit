@@ -4,6 +4,12 @@ Given(/^I click the "Request" button$/) do
   end
 end
 
+Given(/^I click the "Request" button for the first "([^"]*)" holding$/) do |sublibrary|
+  within :xpath, holding_information_row_xpath_for_sublibrary(sublibrary) do
+    click_link 'Request'
+  end
+end
+
 Then(/^I should see a link to login for request options$/) do
   expect(page).to have_css(request_login_link_css, text: 'Login for Request Options')
   request_login_link = find(request_login_link_css)

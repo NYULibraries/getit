@@ -21,6 +21,10 @@ module GetItFeatures
       holding_css << ' div.row'
     end
 
+    def holding_information_row_xpath_for_sublibrary(sublibrary)
+      '(//div[@class="row"]//div[contains(@class,"location")]//*[contains(text(),"'+sublibrary+'")])[1]/parent::*/parent::*'
+    end
+
     def holding_coverage_row_css
       holding_css << ' div.row.coverage'
     end
