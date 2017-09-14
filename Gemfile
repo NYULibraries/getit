@@ -93,5 +93,6 @@ gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.4.0'
 gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag: 'v2.1.1'
 gem 'devise', '~> 3.5.4'
 
-# New Relic performance monitoring
+# APM
 gem 'newrelic_rpm', '~> 3.9.0'
+gem 'rollbar', '~> 2.15.2'
