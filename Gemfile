@@ -94,5 +94,6 @@ gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag:
 gem 'devise', '~> 3.5.4'
 
 # APM
-gem 'newrelic_rpm', '~> 3.9.0'
-gem 'rollbar', '~> 2.15.2'
+gem 'newrelic_rpm'
+gem 'rollbar'
+gem 'scout_apm'
