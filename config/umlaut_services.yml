@@ -127,9 +127,9 @@ default:
     # Web of Knowledge API has no api key, but your
     # IP needs to be registered with them. See source docs
     # for how.
-    IsiCitations:
-      type: Isi
-      priority: c
+    # IsiCitations:
+    #   type: Isi
+    #   priority: c
 
     # Thomson JCR LAMR api has no api key, but your
     # IP needs to be registered with them. Same registraiton
