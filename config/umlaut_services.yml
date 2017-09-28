@@ -162,10 +162,10 @@ default:
       #   existing_service: GoogleBookSearch
       #   existing_type: fulltext
 
-    InternetArchive:
-      display_name: the Internet Archive
-      type: InternetArchive
-      priority: d
+    # InternetArchive:
+    #   display_name: the Internet Archive
+    #   type: InternetArchive
+    #   priority: d
       # disable audio results? uncomment:
       #num_results_for_types:
       #  audio: 0
