@@ -57,7 +57,7 @@ default:
     # Blind link to price comparison site AllBooks.com.
     # just a blind link with no API pre-check, will be near
     # instantaneous to calculate.
-    # AllBooksDotCom:
+    # g:
     #   type: AllBooksDotCom
     #   priority: 3
 
@@ -72,12 +72,7 @@ default:
           name: primo
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
           base_url: http://library.nyu.edu/persistent/lcn/
-          display_text: Back to results
-        -
-          name: xerxes
-          regex: !ruby/regexp '/info:sid\/library\.nyu\.edu:xerxes \((.+)\)/'
-          base_url: "https://arch.library.nyu.edu/databases/alphabetical?base=databases&action=find&query="
-          display_text: Back to database search
+          display_text: Back to this record in the catalog
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
