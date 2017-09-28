@@ -27,10 +27,10 @@ default:
       priority: 1
       api_key: <%= (ENV['GOOGLE_BOOK_SEARCH_API_KEY'] || 'GOOGLE_BOOK_SEARCH_API_KEY') %>
       referent_enhance: true
-      fulltext: true
+      fulltext: false
       cover_image: true
-      abstract: true
-      web_links: true
+      abstract: false
+      web_links: false
 
     # Priority 2
     # Run the Primo service After SFX, to get SFX referent enhancements
