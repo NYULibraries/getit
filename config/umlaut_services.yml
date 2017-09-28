@@ -178,23 +178,23 @@ default:
 
     # Worldcat scraper can be quite slow, move it to wave 'e' to avoid
     # holding up wave 'c'
-    Worldcat:
-      display_name: OCLC Worldcat.org
-      type: Worldcat
-      priority: e
-      # suppress_precheck says don't actually screen-scrape to
-      # see if the link is good, just link blindly. Mostly works
-      # for WorldCat, avoids the performance hit.
-      suppress_precheck: true
+    # Worldcat:
+    #   display_name: OCLC Worldcat.org
+    #   type: Worldcat
+    #   priority: e
+    #   # suppress_precheck says don't actually screen-scrape to
+    #   # see if the link is good, just link blindly. Mostly works
+    #   # for WorldCat, avoids the performance hit.
+    #   suppress_precheck: true
 
-    WorldcatIdentities:
-      type: WorldcatIdentities
-      priority: e
-      # Turn off certain response types:
-      #note_types: false
-      #wikipedia_link: false
-      #openurl_widely_held: false
-      #require_identifier: true
+    # WorldcatIdentities:
+    #   type: WorldcatIdentities
+    #   priority: e
+    #   # Turn off certain response types:
+    #   #note_types: false
+    #   #wikipedia_link: false
+    #   #openurl_widely_held: false
+    #   #require_identifier: true
 
 NYU:
   name: NYU Libraries
