@@ -114,10 +114,14 @@ default:
     ElsevierCover:
       type: ElsevierCover
       priority: b
+      preempted_by:
+        existing_type: cover_image
 
     UlrichsCover:
       type: UlrichsCover
       priority: b
+      preempted_by:
+        existing_type: cover_image
 
     # Priority c: Background
     # Web of Knowledge API has no api key, but your
