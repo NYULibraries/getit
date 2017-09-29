@@ -72,7 +72,7 @@ default:
           name: primo
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
           base_url: http://library.nyu.edu/persistent/lcn/
-          display_text: Back to this record in the catalog
+          display_text: Back to results
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
