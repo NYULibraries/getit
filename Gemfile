@@ -99,4 +99,4 @@ gem 'nokogiri', '~> 1.8.1'
 # APM
 gem 'newrelic_rpm'
 gem 'rollbar'
-gem 'scout_apm'
+gem 'scout_apm', '~> 3.0.x'

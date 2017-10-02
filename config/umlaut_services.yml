@@ -27,10 +27,10 @@ default:
       priority: 1
       api_key: <%= (ENV['GOOGLE_BOOK_SEARCH_API_KEY'] || 'GOOGLE_BOOK_SEARCH_API_KEY') %>
       referent_enhance: true
-      fulltext: true
+      fulltext: false
       cover_image: true
-      abstract: true
-      web_links: true
+      abstract: false
+      web_links: false
 
     # Priority 2
     # Run the Primo service After SFX, to get SFX referent enhancements
@@ -57,9 +57,9 @@ default:
     # Blind link to price comparison site AllBooks.com.
     # just a blind link with no API pre-check, will be near
     # instantaneous to calculate.
-    AllBooksDotCom:
-      type: AllBooksDotCom
-      priority: 3
+    # g:
+    #   type: AllBooksDotCom
+    #   priority: 3
 
     # Priority 5
     # Wayfinder to return whence you came
@@ -73,11 +73,6 @@ default:
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
           base_url: http://library.nyu.edu/persistent/lcn/
           display_text: Back to results
-        -
-          name: xerxes
-          regex: !ruby/regexp '/info:sid\/library\.nyu\.edu:xerxes \((.+)\)/'
-          base_url: "https://arch.library.nyu.edu/databases/alphabetical?base=databases&action=find&query="
-          display_text: Back to database search
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
@@ -119,18 +114,22 @@ default:
     ElsevierCover:
       type: ElsevierCover
       priority: b
+      preempted_by:
+        existing_type: cover_image
 
     UlrichsCover:
       type: UlrichsCover
       priority: b
+      preempted_by:
+        existing_type: cover_image
 
     # Priority c: Background
     # Web of Knowledge API has no api key, but your
     # IP needs to be registered with them. See source docs
     # for how.
-    IsiCitations:
-      type: Isi
-      priority: c
+    # IsiCitations:
+    #   type: Isi
+    #   priority: c
 
     # Thomson JCR LAMR api has no api key, but your
     # IP needs to be registered with them. Same registraiton
@@ -163,10 +162,10 @@ default:
       #   existing_service: GoogleBookSearch
       #   existing_type: fulltext
 
-    InternetArchive:
-      display_name: the Internet Archive
-      type: InternetArchive
-      priority: d
+    # InternetArchive:
+    #   display_name: the Internet Archive
+    #   type: InternetArchive
+    #   priority: d
       # disable audio results? uncomment:
       #num_results_for_types:
       #  audio: 0
@@ -179,23 +178,23 @@ default:
 
     # Worldcat scraper can be quite slow, move it to wave 'e' to avoid
     # holding up wave 'c'
-    Worldcat:
-      display_name: OCLC Worldcat.org
-      type: Worldcat
-      priority: e
-      # suppress_precheck says don't actually screen-scrape to
-      # see if the link is good, just link blindly. Mostly works
-      # for WorldCat, avoids the performance hit.
-      suppress_precheck: true
+    # Worldcat:
+    #   display_name: OCLC Worldcat.org
+    #   type: Worldcat
+    #   priority: e
+    #   # suppress_precheck says don't actually screen-scrape to
+    #   # see if the link is good, just link blindly. Mostly works
+    #   # for WorldCat, avoids the performance hit.
+    #   suppress_precheck: true
 
-    WorldcatIdentities:
-      type: WorldcatIdentities
-      priority: e
-      # Turn off certain response types:
-      #note_types: false
-      #wikipedia_link: false
-      #openurl_widely_held: false
-      #require_identifier: true
+    # WorldcatIdentities:
+    #   type: WorldcatIdentities
+    #   priority: e
+    #   # Turn off certain response types:
+    #   #note_types: false
+    #   #wikipedia_link: false
+    #   #openurl_widely_held: false
+    #   #require_identifier: true
 
 NYU:
   name: NYU Libraries
@@ -236,13 +235,13 @@ NYU:
         # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
-    NYUUlrichsLink:
-      type: UlrichsLink
-      display_name: Ulrich's Directory
-      link_name: Periodical Information
-      priority: c
-      status: active
-      base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
+    # NYUUlrichsLink:
+    #   type: UlrichsLink
+    #   display_name: Ulrich's Directory
+    #   link_name: Periodical Information
+    #   priority: c
+    #   status: active
+    #   base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
     ScopusCitations:
       type: Scopus2
       priority: c
