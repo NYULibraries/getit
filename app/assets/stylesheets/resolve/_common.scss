@@ -80,3 +80,10 @@ nav {
   line-height: $line-height-base;
   margin-top: 0px;
 }
+
+.umlaut-unavailable {
+  @extend .alert;
+  @extend .alert-warning;
+  color: #67512C;
+  background-color: #FCF8E3;
+}
