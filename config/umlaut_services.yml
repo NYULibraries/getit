@@ -242,10 +242,10 @@ NYU:
     #   priority: c
     #   status: active
     #   base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
-    ScopusCitations:
-      type: Scopus2
-      priority: c
-      api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
+    # ScopusCitations:
+    #   type: Scopus2
+    #   priority: c
+    #   api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
     # NYU_RefWorks:
     #   name: RefWorks
     #   type: OpenURLService
@@ -384,10 +384,10 @@ CU:
         - 'GALEGROUP_'
       extra_targets_of_interest:
           CAPTURE_CITATION: export_citation
-    ScopusCitations:
-      type: Scopus2
-      priority: c
-      api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
+    # ScopusCitations:
+    #   type: Scopus2
+    #   priority: c
+    #   api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
 
 NS:
   name: New School Libraries
