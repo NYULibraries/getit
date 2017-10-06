@@ -25,6 +25,8 @@ en:
   application:
     title_html: BobCat
   umlaut:
+    resolve:
+      not_available: Resource Not Found
     service_type_names:
       bd_link_to_search:
         one: E-ZBorrow Availability
