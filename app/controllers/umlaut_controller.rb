@@ -104,6 +104,8 @@ class UmlautController < ApplicationController
     # A help url used on error page and a few other places.
     help_url  "http://library.nyu.edu/ask"
 
+    show_localization_selector true
+
     # If OpenURL came from manual entry of title/ISSN, and no match is found in
     # link resolver knowledge base, display a warning to the user of potential
     # typo?
