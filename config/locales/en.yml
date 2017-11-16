@@ -77,6 +77,7 @@ en:
       afc_schedule_text: Schedule
       map_text: Map
       login_text: Login for Request Options
+    not_available: Resource Not Found
   holding_requests:
     show:
       scan: Your scan request has been processed. You will receive an email when the item is available.

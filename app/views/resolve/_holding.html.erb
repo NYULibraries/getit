@@ -37,10 +37,10 @@ holdings = institutional_holding + other_holding
     <% else %>
       <% if !service_types_in_progress?(['holding', 'holding_search']) %>
         <%-
-        # Display "Not Available" if we've completed our service run and
+        # Display "Resource Not Found" if we've completed our service run and
         # both holdings and holding searches are empty
         -%>
-        <p class="umlaut-unavailable">Not Available</p>
+        <p class="umlaut-unavailable"><%= t('umlaut.resolve.not_available') %></p>
       <% end %>
     <% end %>
   </div>
