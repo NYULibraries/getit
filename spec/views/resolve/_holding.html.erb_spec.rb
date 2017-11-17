@@ -25,6 +25,6 @@ describe 'resolve/_holding_response_item' do
     it { should_not match /View Maps and Call Number Locations/ }
     it { should_not match /href="https:\/\/library\.nyu\.edu\/about\/collections\/search-collections\/call-numbers\/"/ }
     it { should match /umlaut-unavailable/ }
-    it { should match /Not Available/ }
+    it { should match /Resource Not Found/ }
   end
 end
