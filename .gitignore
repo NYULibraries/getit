@@ -40,3 +40,4 @@ wiki
 .powenv
 
 application.yml
+dev.env
