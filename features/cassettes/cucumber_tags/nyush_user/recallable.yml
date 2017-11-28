@@ -1,0 +1,593 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Nov 2017 21:47:05 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NSHNG</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU52</translate-change-active-library><z30-doc-number>003813214</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31124057189608</z30-barcode><z30-sub-library>NYU
+        Shanghai Library (China)</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20130827</z30-open-date><z30-update-date>20131022</z30-update-date><z30-cataloger>GILCHRISTC</z30-cataloger><z30-date-last-return>20170512</z30-date-last-return><z30-hour-last-return>1434</z30-hour-last-return><z30-ip-last-return>NYUSHANG</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>BF637.S4
+        A73 2003</z30-call-no><z30-call-no-key>0 bf&quot;637 s4 a73 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac>From
+        the NYU Shanghai Study Away Collection.</z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004698634</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20130910</z30-process-status-date><z30-upd-time-stamp>201711151112412</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU52</translate-change-active-library><z13-doc-number>003813214</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20130826</z13-open-date><z13-update-date>20170420</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>BF637.S4</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Arden,
+        Paul.</z13-author><z13-title-code>24510</z13-title-code><z13-title>It&apos;s
+        not how good you are, it&apos;s how good you want to be /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>London
+        ; New York : Phaidon, 2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0714843377
+        (pbk.)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>12/22/17
+        06:00 PM</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="NSHNG">NYU Shanghai Library (China)</pickup-location></pickup-locations><note
+        type="info">This item is checked out until 12/22/17 at 06:00 PM.</note><note
+        type="info">The expected date of availability for this item is 12/06/17 at
+        06:00 PM.</note><note type="info"></note><note type="info"></note><note type="info">Item
+        status: Regular loan&lt;br /&gt; Call number: BF637.S4 A73 2003&lt;br /&gt;</note><last-interest-date
+        usage="Optional">20180227</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU52</adm-library><adm-doc-number>003813214</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:05 GMT
+- request:
+    method: get
+    uri: http://sfx.library.nyu.edu/sfxlcl41?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2017-11-28T16:47:34-05:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003813214&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&sfx.ignore_date_threshold=1&sfx.response_type=multi_obj_xml&sfx.show_availability=1&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Nov 2017 21:47:34 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<ctx_obj_set>\n <ctx_obj
+        identifier=\"\">\n  <ctx_obj_attributes>&lt;perldata&gt;\n &lt;hash&gt;\n
+        \ &lt;item key=\"ctx_tim\"&gt;2017-11-28T16:47:34-05:00&lt;/item&gt;\n  &lt;item
+        key=\"sfx.request_id\"&gt;15428933&lt;/item&gt;\n  &lt;item key=\"rft.genre\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.show_availability\"&gt;1&lt;/item&gt;\n  &lt;item key=\"sfx.ignore_date_threshold\"&gt;1&lt;/item&gt;\n
+        \ &lt;item key=\"req.ip\"&gt;127.0.0.1&lt;/item&gt;\n  &lt;item key=\"rfr.rfr\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003813214&lt;/item&gt;\n
+        \ &lt;item key=\"_stash\"&gt;\n   &lt;hash&gt;\n    &lt;item key=\"@rfr_id\"&gt;\n
+        \    &lt;array&gt;\n      &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003813214&lt;/item&gt;\n
+        \    &lt;/array&gt;\n    &lt;/item&gt;\n   &lt;/hash&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"ctx_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  \n  &lt;item key=\"@rfr_id\"&gt;\n
+        \  &lt;array&gt;\n    &lt;item key=\"0\"&gt;info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003813214&lt;/item&gt;\n
+        \  &lt;/array&gt;\n  &lt;/item&gt;\n  &lt;item key=\"url_ctx_fmt\"&gt;info:ofi/fmt:kev:mtx:ctx&lt;/item&gt;\n
+        \ &lt;item key=\"@rfe_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"@rft_id\"&gt;\n   &lt;array&gt;\n   &lt;/array&gt;\n  &lt;/item&gt;\n
+        \ &lt;item key=\"sfx.response_type\"&gt;multi_obj_xml&lt;/item&gt;\n  &lt;item
+        key=\"sfx.ignore_char_set\"&gt;1&lt;/item&gt;\n  &lt;item key=\"rft_val_fmt\"&gt;journal&lt;/item&gt;\n
+        \ &lt;item key=\"existing_ts_ids\"&gt;\n   &lt;array&gt;\n    &lt;item key=\"0\"&gt;111027614344001&lt;/item&gt;\n
+        \   &lt;item key=\"1\"&gt;20430000000000002&lt;/item&gt;\n   &lt;/array&gt;\n
+        \ &lt;/item&gt;\n  &lt;item key=\"req.session_id\"&gt;sBE730328-D485-11E7-85B2-65BDFE4C1AE4&lt;/item&gt;\n
+        \ &lt;item key=\"sfx.sid\"&gt;primo.exlibrisgroup.com:primo-nyu_aleph003813214&lt;/item&gt;\n
+        \ &lt;item key=\"url_ver\"&gt;Z39.88-2004&lt;/item&gt;\n  &lt;item key=\"ctx_enc\"&gt;UTF-8&lt;/item&gt;\n
+        &lt;/hash&gt;\n&lt;/perldata&gt;\n</ctx_obj_attributes>\n  <ctx_obj_targets>\n
+        \  <target>\n    <target_name>DOCDEL_ILLIAD</target_name>\n    <target_public_name>Bobst
+        Library  Interlibrary Loan</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>111027614344000</target_id>\n    <interface_id>111027614344000</interface_id>\n
+        \   <interface_name>DOCDEL_ILLIAD</interface_name>\n    <target_service_id>111027614344001</target_service_id>\n
+        \   <service_type>getDocumentDelivery</service_type>\n    <parser>ILLiad::DDL</parser>\n
+        \   <parse_param>url=http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL
+        &amp; id_type=</parse_param>\n    <proxy>no</proxy>\n    <crossref>yes</crossref>\n
+        \   <note></note>\n    <authentication></authentication>\n    <char_set>utf8</char_set>\n
+        \   <displayer></displayer>\n    <target_url>http://ill.library.nyu.edu/illiad/illiad.dll/OpenURL?sid=primo.exlibrisgroup.com%3Aprimo-nyu_aleph003813214%20(Via%20SFX)&amp;genre=journal</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n   <target>\n    <target_name>ASK_A_LIBRARIAN_LCL</target_name>\n
+        \   <target_public_name>Ask a Librarian</target_public_name>\n    <object_portfolio_id></object_portfolio_id>\n
+        \   <target_id>20430000000000002</target_id>\n    <interface_id>20430000000000002</interface_id>\n
+        \   <interface_name>ASK_A_LIBRARIAN</interface_name>\n    <target_service_id>20430000000000002</target_service_id>\n
+        \   <service_type>getWebService</service_type>\n    <parser>Generic</parser>\n
+        \   <parse_param>IF () \"http://library.nyu.edu/ask/\"</parse_param>\n    <proxy>no</proxy>\n
+        \   <crossref>no</crossref>\n    <note></note>\n    <authentication></authentication>\n
+        \   <char_set>iso-8859-1</char_set>\n    <displayer></displayer>\n    <target_url>http://library.nyu.edu/ask/</target_url>\n
+        \   <is_related>no</is_related>\n    <coverage>\n     <coverage_text>\n      <threshold_text></threshold_text>\n
+        \     <embargo_text></embargo_text>\n     </coverage_text>\n     <embargo></embargo>\n
+        \   </coverage>\n   </target>\n  </ctx_obj_targets>\n </ctx_obj>\n</ctx_obj_set>"
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:35 GMT
+- request:
+    method: post
+    uri: http://primo.library.edu/PrimoWebServices/services/searcher
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://primo.library.edu/PrimoWebServices/services/searcher"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><wsdl:getRecord><request><![CDATA[<fullViewRequest
+        xmlns="http://www.exlibris.com/primo/xsd/wsRequest" xmlns:uic="http://www.exlibris.com/primo/xsd/primoview/uicomponents"><PrimoSearchRequest
+        xmlns="http://www.exlibris.com/primo/xsd/search/request"><QueryTerms><BoolOpeator>AND</BoolOpeator></QueryTerms><StartIndex>1</StartIndex><BulkSize>5</BulkSize><DidUMeanEnabled>false</DidUMeanEnabled></PrimoSearchRequest><institution>NYU</institution><docId>nyu_aleph003813214</docId></fullViewRequest>]]></request></wsdl:getRecord></env:Body></env:Envelope>
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.8.3, ruby 2.3.3 (2016-11-21))
+      Accept:
+      - "*/*"
+      Date:
+      - Tue, 28 Nov 2017 21:47:35 GMT
+      Soapaction:
+      - '"getRecord"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '846'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Tue, 28 Nov 2017 21:47:37 GMT
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:getRecordResponse soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://primo.library.edu/PrimoWebServices/services/searcher"><getRecordReturn xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">&lt;SEGMENTS xmlns=&quot;http://www.exlibrisgroup.com/xsd/jaguar/search&quot;&gt;
+          &lt;JAGROOT&gt;
+            &lt;RESULT&gt;
+              &lt;DOCSET TOTALHITS=&quot;1&quot;&gt;
+                &lt;DOC LOCAL=&quot;true&quot;&gt;
+                  &lt;PrimoNMBib xmlns=&quot;http://www.exlibrisgroup.com/xsd/primo/primo_nm_bib&quot;&gt;
+                    &lt;record&gt;
+                      &lt;control&gt;
+                        &lt;sourcerecordid&gt;003813214&lt;/sourcerecordid&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph003813214&lt;/recordid&gt;
+                        &lt;originalsourceid&gt;NYU01&lt;/originalsourceid&gt;
+                        &lt;ilsapiid&gt;NYU01003813214&lt;/ilsapiid&gt;
+                        &lt;sourceformat&gt;MARC21&lt;/sourceformat&gt;
+                        &lt;sourcesystem&gt;Aleph&lt;/sourcesystem&gt;
+                      &lt;/control&gt;
+                      &lt;display&gt;
+                        &lt;type&gt;book&lt;/type&gt;
+                        &lt;title&gt;It's not how good you are, it's how good you want to be&lt;/title&gt;
+                        &lt;creator&gt;Paul.  Arden&lt;/creator&gt;
+                        &lt;publisher&gt;London ; New York : Phaidon&lt;/publisher&gt;
+                        &lt;creationdate&gt;2003&lt;/creationdate&gt;
+                        &lt;format&gt;128 p. : ill. (some col.) ; 18 cm.&lt;/format&gt;
+                        &lt;identifier&gt;$$Cisbn$$V0714843377 (pbk.); $$Cisbn$$V9780714843377 (pbk.)&lt;/identifier&gt;
+                        &lt;subject&gt;Success; Reclame&lt;/subject&gt;
+                        &lt;description&gt;$$Ccontents$$VWhy do we strive for excellence when mediocrity is required? -- So how good do you want to be? -- You can achieve the unachievable -- 'I want to be as famous as Persil Automatic' -- Have you noticed how the cleverest people at school are not those who make it in life? -- The fundamentals -- Energy -- Do not seek praise, seek criticism -- It's all my fault -- Do not covet your ideas -- Don't look for the next opportunity. The one you have in hand is the opportunity -- Accentuate the positive -- Eliminate the negative -- Do not put your cleverness in front of the communication -- Don't promise what you can't deliver -- Know your client's aims -- What do you do when your client won't buy -- Don't take no for an answer -- When it can't be done, do it. If you don't do it, it doesn't exist -- If you can't solve a problem, it's because you're playing by the rules -- The person who doesn't make mistakes, is unlikely to make anything -- 'Fail, fail again. Fail better' -- It's wrong to be right -- It's right to be wrong -- Don't be afraid of silly ideas -- Give yourself some spin -- Play your cards right -- It's not what you know -- It's who you know -- Don't give a speech. Put on a show -- Getting fired can be a positive career move -- And now for a commercial break -- Doing a layout means having an idea -- Compose your aid from the weakest point -- Rough layouts sell the idea better than polished ones -- If you get stuck, draw with a different pen -- Suppliers are only as good as you are -- Don't be afraid to work with the best -- Get out of advertising -- Do not try to win awards -- You don't have to be creative to be creative -- How you can make your company great -- How a senior manager can make a big difference -- How a junior account handler can make a big difference -- How a media buyer can make a big difference -- New business -- What is meant by the word 'creative'? -- How to improve your strike rate -- Final thoughts -- My finest hour.&lt;/description&gt;
+                        &lt;description&gt;$$Csummary$$V&quot;It's Not How Good You Are... is a concise guide to making the most of yourself -- a pocket 'bible' for the talented and timid to make the unthinkable thinkable and the impossible possible. After decades at the top of one of the world's most competitive industries, Paul Arden offers insights into such diverse subjects as the value of being fired and why it's often better to be wrong than to be right. He gives original and logical answers to everyday questions. Much of it appears obvious when you read it, but aren't all questions easy when you know the answers? Whether you are a school-leaver, self-employed or a managing director, this book is invaluable for everyone who aspires to succeed. Book jacket.&quot;--BOOK JACKET.&lt;/description&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;source&gt;nyu_aleph&lt;/source&gt;
+                        &lt;availlibrary&gt;$$INYUSH$$LNSHNG$$1Main Collection$$2(BF637.S4 A73 2003 )$$Sunavailable$$31$$41$$5N$$64$$XNYU52$$YNSHNG$$ZMAIN&lt;/availlibrary&gt;
+                        &lt;lds02&gt;nyu_aleph003813214&lt;/lds02&gt;
+                        &lt;lds01&gt;NYUSH&lt;/lds01&gt;
+                        &lt;availinstitution&gt;$$INYUSH$$Sunavailable&lt;/availinstitution&gt;
+                        &lt;availpnx&gt;unavailable&lt;/availpnx&gt;
+                      &lt;/display&gt;
+                      &lt;links&gt;
+                        &lt;openurl&gt;$$Topenurl_journal&lt;/openurl&gt;
+                        &lt;backlink&gt;$$Taleph_backlink$$DMore bibliographic information&lt;/backlink&gt;
+                        &lt;thumbnail&gt;$$Tamazon_thumb&lt;/thumbnail&gt;
+                        &lt;linktotoc&gt;$$Tamazon_toc$$DCheck for Amazon Search Inside&lt;/linktotoc&gt;
+                        &lt;openurlfulltext&gt;$$Topenurlfull_journal&lt;/openurlfulltext&gt;
+                        &lt;linktoholdings&gt;$$Taleph_holdings&lt;/linktoholdings&gt;
+                        &lt;linktoreview&gt;$$TpersistentUrl$$DCopy item link&lt;/linktoreview&gt;
+                        &lt;linktouc&gt;$$Tamazon_uc$$DCheck Amazon&lt;/linktouc&gt;
+                        &lt;linktouc&gt;$$Tworldcat_isbn$$DCheck other libraries (WorldCat&#xAE;)&lt;/linktouc&gt;
+                        &lt;linktoexcerpt&gt;$$Tsyndetics_excerpt$$DExcerpt from item&lt;/linktoexcerpt&gt;
+                        &lt;lln02&gt;$$V$$Tnyugetit&lt;/lln02&gt;
+                        &lt;lln10&gt;$$Tnyugetit&lt;/lln10&gt;
+                      &lt;/links&gt;
+                      &lt;search&gt;
+                        &lt;creatorcontrib&gt;Paul.  Arden&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Arden, Paul.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;Arden, P&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;by Paul Arden.&lt;/creatorcontrib&gt;
+                        &lt;creatorcontrib&gt;NYU Shanghai Study Away Collection (Shanghai, China) former owner.&lt;/creatorcontrib&gt;
+                        &lt;title&gt;It's not how good you are, it's how good you want to be /&lt;/title&gt;
+                        &lt;description&gt;&quot;It's Not How Good You Are... is a concise guide to making the most of yourself -- a pocket 'bible' for the talented and timid to make the unthinkable thinkable and the impossible possible. After decades at the top of one of the world's most competitive industries, Paul Arden offers insights into such diverse subjects as the value of being fired and why it's often better to be wrong than to be right. He gives original and logical answers to everyday questions. Much of it appears obvious when you read it, but aren't all questions easy when you know the answers? Whether you are a school-leaver, self-employed or a managing director, this book is invaluable for everyone who aspires to succeed. Book jacket.&quot;--BOOK JACKET.&lt;/description&gt;
+                        &lt;subject&gt;Self-actualization (Psychology)&lt;/subject&gt;
+                        &lt;subject&gt;Self-realization (Psychology)&lt;/subject&gt;
+                        &lt;subject&gt;Growth, Personal&lt;/subject&gt;
+                        &lt;subject&gt;Self-improvement&lt;/subject&gt;
+                        &lt;subject&gt;Personal growth&lt;/subject&gt;
+                        &lt;subject&gt;Success.&lt;/subject&gt;
+                        &lt;subject&gt;Growth (Psychology)&lt;/subject&gt;
+                        &lt;subject&gt;Personal development&lt;/subject&gt;
+                        &lt;subject&gt;Reclame.&lt;/subject&gt;
+                        &lt;general&gt;Phaidon,&lt;/general&gt;
+                        &lt;general&gt;Cover title.&lt;/general&gt;
+                        &lt;general&gt;51841543&lt;/general&gt;
+                        &lt;sourceid&gt;nyu_aleph&lt;/sourceid&gt;
+                        &lt;recordid&gt;nyu_aleph003813214&lt;/recordid&gt;
+                        &lt;isbn&gt;0714843377&lt;/isbn&gt;
+                        &lt;isbn&gt;9780714843377&lt;/isbn&gt;
+                        &lt;toc&gt;Why do we strive for excellence when mediocrity is required? -- So how good do you want to be? -- You can achieve the unachievable -- 'I want to be as famous as Persil Automatic' -- Have you noticed how the cleverest people at school are not those who make it in life? -- The fundamentals -- Energy -- Do not seek praise, seek criticism -- It's all my fault -- Do not covet your ideas -- Don't look for the next opportunity. The one you have in hand is the opportunity -- Accentuate the positive -- Eliminate the negative -- Do not put your cleverness in front of the communication -- Don't promise what you can't deliver -- Know your client's aims -- What do you do when your client won't buy -- Don't take no for an answer -- When it can't be done, do it. If you don't do it, it doesn't exist -- If you can't solve a problem, it's because you're playing by the rules -- The person who doesn't make mistakes, is unlikely to make anything -- 'Fail, fail again. Fail better' -- It's wrong to be right -- It's right to be wrong -- Don't be afraid of silly ideas -- Give yourself some spin -- Play your cards right -- It's not what you know -- It's who you know -- Don't give a speech. Put on a show -- Getting fired can be a positive career move -- And now for a commercial break -- Doing a layout means having an idea -- Compose your aid from the weakest point -- Rough layouts sell the idea better than polished ones -- If you get stuck, draw with a different pen -- Suppliers are only as good as you are -- Don't be afraid to work with the best -- Get out of advertising -- Do not try to win awards -- You don't have to be creative to be creative -- How you can make your company great -- How a senior manager can make a big difference -- How a junior account handler can make a big difference -- How a media buyer can make a big difference -- New business -- What is meant by the word 'creative'? -- How to improve your strike rate -- Final thoughts -- My finest hour.&lt;/toc&gt;
+                        &lt;rsrctype&gt;book&lt;/rsrctype&gt;
+                        &lt;creationdate&gt;2003&lt;/creationdate&gt;
+                        &lt;searchscope&gt;NSHNG&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NSHNG Main Collection&lt;/searchscope&gt;
+                        &lt;searchscope&gt;nyu_aleph&lt;/searchscope&gt;
+                        &lt;searchscope&gt;NYUSH&lt;/searchscope&gt;
+                        &lt;scope&gt;NSHNG&lt;/scope&gt;
+                        &lt;scope&gt;NSHNG Main Collection&lt;/scope&gt;
+                        &lt;scope&gt;nyu_aleph&lt;/scope&gt;
+                        &lt;scope&gt;NYUSH&lt;/scope&gt;
+                        &lt;lsr01&gt;BF637.S4 A73 2003&lt;/lsr01&gt;
+                        &lt;lsr01&gt;BF637 .S4 A73 2003&lt;/lsr01&gt;
+                        &lt;lsr02&gt;Phaidon,&lt;/lsr02&gt;
+                        &lt;lsr10&gt;0714843377&lt;/lsr10&gt;
+                        &lt;lsr10&gt;9780714843377&lt;/lsr10&gt;
+                      &lt;/search&gt;
+                      &lt;sort&gt;
+                        &lt;title&gt;It's not how good you are, it's how good you want to be /&lt;/title&gt;
+                        &lt;creationdate&gt;2003&lt;/creationdate&gt;
+                        &lt;author&gt;Arden, Paul.&lt;/author&gt;
+                        &lt;lso01&gt;2003&lt;/lso01&gt;
+                      &lt;/sort&gt;
+                      &lt;facets&gt;
+                        &lt;language&gt;eng&lt;/language&gt;
+                        &lt;creationdate&gt;2003&lt;/creationdate&gt;
+                        &lt;topic&gt;Success&lt;/topic&gt;
+                        &lt;topic&gt;Reclame&lt;/topic&gt;
+                        &lt;collection&gt;NYUSHNSHNGMain Collection&lt;/collection&gt;
+                        &lt;prefilter&gt;books&lt;/prefilter&gt;
+                        &lt;rsrctype&gt;books&lt;/rsrctype&gt;
+                        &lt;creatorcontrib&gt;Arden, P&lt;/creatorcontrib&gt;
+                        &lt;library&gt;NYUSH&lt;/library&gt;
+                        &lt;lfc01&gt;Main Collection&lt;/lfc01&gt;
+                        &lt;newrecords&gt;20171014_776&lt;/newrecords&gt;
+                        &lt;classificationlcc&gt;B - Philosophy. Psychology. Religion&#x2013;Psychology&#x2013;Applied psychology&lt;/classificationlcc&gt;
+                        &lt;frbrgroupid&gt;301433324&lt;/frbrgroupid&gt;
+                        &lt;frbrtype&gt;6&lt;/frbrtype&gt;
+                      &lt;/facets&gt;
+                      &lt;dedup&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;c1&gt;2004271080&lt;/c1&gt;
+                        &lt;c2&gt;0714843377;9780714843377&lt;/c2&gt;
+                        &lt;c3&gt;itsnothowgoodyouareiouwanttobe&lt;/c3&gt;
+                        &lt;c4&gt;2003&lt;/c4&gt;
+                        &lt;f1&gt;2004271080&lt;/f1&gt;
+                        &lt;f3&gt;0714843377;9780714843377&lt;/f3&gt;
+                        &lt;f5&gt;itsnothowgoodyouareiouwanttobe&lt;/f5&gt;
+                        &lt;f6&gt;2003&lt;/f6&gt;
+                        &lt;f7&gt;its not how good you are its how good you want to be&lt;/f7&gt;
+                        &lt;f8&gt;enk&lt;/f8&gt;
+                        &lt;f9&gt;128 p. :&lt;/f9&gt;
+                        &lt;f10&gt;phaidon&lt;/f10&gt;
+                        &lt;f11&gt;arden paul&lt;/f11&gt;
+                        &lt;f20&gt;(OCoLC)51841543&lt;/f20&gt;
+                      &lt;/dedup&gt;
+                      &lt;frbr&gt;
+                        &lt;t&gt;1&lt;/t&gt;
+                        &lt;k1&gt;$$Karden paul$$AA&lt;/k1&gt;
+                        &lt;k3&gt;$$Kbookit's not how good you are it's how good you want to be$$AT&lt;/k3&gt;
+                      &lt;/frbr&gt;
+                      &lt;delivery&gt;
+                        &lt;institution&gt;NYUSH&lt;/institution&gt;
+                        &lt;delcategory&gt;Physical Item&lt;/delcategory&gt;
+                      &lt;/delivery&gt;
+                      &lt;enrichment&gt;
+                        &lt;classificationlcc&gt;BF637.S4&lt;/classificationlcc&gt;
+                      &lt;/enrichment&gt;
+                      &lt;ranking&gt;
+                        &lt;booster1&gt;1&lt;/booster1&gt;
+                        &lt;booster2&gt;1&lt;/booster2&gt;
+                      &lt;/ranking&gt;
+                      &lt;addata&gt;
+                        &lt;aulast&gt;Arden&lt;/aulast&gt;
+                        &lt;aufirst&gt;Paul.&lt;/aufirst&gt;
+                        &lt;au&gt;Arden, Paul&lt;/au&gt;
+                        &lt;btitle&gt;It's not how good you are, it's how good you want to be&lt;/btitle&gt;
+                        &lt;date&gt;2003&lt;/date&gt;
+                        &lt;risdate&gt;2003.&lt;/risdate&gt;
+                        &lt;isbn&gt;0714843377&lt;/isbn&gt;
+                        &lt;isbn&gt;9780714843377&lt;/isbn&gt;
+                        &lt;format&gt;book&lt;/format&gt;
+                        &lt;genre&gt;book&lt;/genre&gt;
+                        &lt;ristype&gt;BOOK&lt;/ristype&gt;
+                        &lt;abstract&gt;&quot;It's Not How Good You Are... is a concise guide to making the most of yourself -- a pocket 'bible' for the talented and timid to make the unthinkable thinkable and the impossible possible. After decades at the top of one of the world's most competitive industries, Paul Arden offers insights into such diverse subjects as the value of being fired and why it's often better to be wrong than to be right. He gives original and logical answers to everyday questions. Much of it appears obvious when you read it, but aren't all questions easy when you know the answers? Whether you are a school-leaver, self-employed or a managing director, this book is invaluable for everyone who aspires to succeed. Book jacket.&quot;--BOOK JACKET.&lt;/abstract&gt;
+                        &lt;cop&gt;London %3B New York&lt;/cop&gt;
+                        &lt;pub&gt;Phaidon&lt;/pub&gt;
+                        &lt;oclcid&gt;51841543&lt;/oclcid&gt;
+                        &lt;lccn&gt;2004271080&lt;/lccn&gt;
+                        &lt;lad01&gt;NSHNG&lt;/lad01&gt;
+                        &lt;lad01&gt;Physical Item&lt;/lad01&gt;
+                      &lt;/addata&gt;
+                      &lt;browse&gt;
+                        &lt;author&gt;$$DArden, Paul$$EArden, Paul$$INYU10003127860$$PY&lt;/author&gt;
+                        &lt;title&gt;$$DIt's not how good you are, it's how good you want to be$$EIt's not how good you are, it's how good you want to be&lt;/title&gt;
+                        &lt;subject&gt;$$DSelf-actualization (Psychology)$$ESelf-actualization (Psychology)$$INYU10001518031$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DSelf-realization (Psychology)$$ESelf-realization (Psychology)$$INYU10001518031$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DGrowth, Personal$$EGrowth, Personal$$INYU10001518031$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DSelf-improvement$$ESelf-improvement$$INYU10001518031$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DPersonal growth$$EPersonal growth$$INYU10001518031$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DSuccess$$ESuccess$$INYU10001522785$$PY&lt;/subject&gt;
+                        &lt;subject&gt;$$DSelf-improvement$$ESelf-improvement$$INYU10001522785$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DGrowth (Psychology)$$EGrowth (Psychology)$$INYU10001522785$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DPersonal development$$EPersonal development$$INYU10001522785$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DPersonal growth$$EPersonal growth$$INYU10001522785$$PN&lt;/subject&gt;
+                        &lt;subject&gt;$$DReclame$$EReclame$$TGTT&lt;/subject&gt;
+                        &lt;callnumber&gt;$$INYUSH$$DBF637.S4 A73 2003$$E0bf   00637.s  40000  a73 2003$$T0&lt;/callnumber&gt;
+                        &lt;institution&gt;NYUSH&lt;/institution&gt;
+                      &lt;/browse&gt;
+                    &lt;/record&gt;
+                  &lt;/PrimoNMBib&gt;
+                &lt;/DOC&gt;
+              &lt;/DOCSET&gt;
+            &lt;/RESULT&gt;
+          &lt;/JAGROOT&gt;
+        &lt;/SEGMENTS&gt;</getRecordReturn></ns1:getRecordResponse></soapenv:Body></soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:37 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003813214/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Nov 2017 21:47:37 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item-list><reply-text>ok</reply-text><reply-code>0000</reply-code><items><item
+        href="http://aleph.library.edu:1891/rest-dlf/record/NYU01003813214/items/NYU52003813214000010"></item></items></get-item-list> '
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:37 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/record/NYU01003813214/items/NYU52003813214000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Nov 2017 21:47:37 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><get-item><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NSHNG</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU52</translate-change-active-library><z30-doc-number>003813214</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31124057189608</z30-barcode><z30-sub-library>NYU
+        Shanghai Library (China)</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20130827</z30-open-date><z30-update-date>20131022</z30-update-date><z30-cataloger>GILCHRISTC</z30-cataloger><z30-date-last-return>20170512</z30-date-last-return><z30-hour-last-return>1434</z30-hour-last-return><z30-ip-last-return>NYUSHANG</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>BF637.S4
+        A73 2003</z30-call-no><z30-call-no-key>0 bf&quot;637 s4 a73 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac>From
+        the NYU Shanghai Study Away Collection.</z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004698634</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20130910</z30-process-status-date><z30-upd-time-stamp>201711151112412</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU52</translate-change-active-library><z13-doc-number>003813214</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20130826</z13-open-date><z13-update-date>20170420</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>BF637.S4</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Arden,
+        Paul.</z13-author><z13-title-code>24510</z13-title-code><z13-title>It&apos;s
+        not how good you are, it&apos;s how good you want to be /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>London
+        ; New York : Phaidon, 2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0714843377
+        (pbk.)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>12/22/17
+        06:00 PM</status></item></get-item> '
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:37 GMT
+- request:
+    method: get
+    uri: https://catalog.hathitrust.org/api/volumes/brief/json/oclc:51841543;lccn:2004271080
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 28 Nov 2017 21:47:38 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '59'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Set-Cookie:
+      - NSC_mchspvq-iu=ffffffff8edd9ed145525d5f4f58455e445a4a42378b;expires=Tue, 28-Nov-2017
+        21:57:38 GMT;path=/;httponly
+    body:
+      encoding: UTF-8
+      string: '{"oclc:51841543;lccn:2004271080":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:38 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Nov 2017 21:47:38 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NSHNG</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU52</translate-change-active-library><z30-doc-number>003813214</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31124057189608</z30-barcode><z30-sub-library>NYU
+        Shanghai Library (China)</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20130827</z30-open-date><z30-update-date>20131022</z30-update-date><z30-cataloger>GILCHRISTC</z30-cataloger><z30-date-last-return>20170512</z30-date-last-return><z30-hour-last-return>1434</z30-hour-last-return><z30-ip-last-return>NYUSHANG</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>BF637.S4
+        A73 2003</z30-call-no><z30-call-no-key>0 bf&quot;637 s4 a73 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac>From
+        the NYU Shanghai Study Away Collection.</z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004698634</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20130910</z30-process-status-date><z30-upd-time-stamp>201711151112412</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU52</translate-change-active-library><z13-doc-number>003813214</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20130826</z13-open-date><z13-update-date>20170420</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>BF637.S4</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Arden,
+        Paul.</z13-author><z13-title-code>24510</z13-title-code><z13-title>It&apos;s
+        not how good you are, it&apos;s how good you want to be /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>London
+        ; New York : Phaidon, 2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0714843377
+        (pbk.)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>12/22/17
+        06:00 PM</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="NSHNG">NYU Shanghai Library (China)</pickup-location></pickup-locations><note
+        type="info">This item is checked out until 12/22/17 at 06:00 PM.</note><note
+        type="info">The expected date of availability for this item is 12/06/17 at
+        06:00 PM.</note><note type="info"></note><note type="info"></note><note type="info">Item
+        status: Regular loan&lt;br /&gt; Call number: BF637.S4 A73 2003&lt;br /&gt;</note><last-interest-date
+        usage="Optional">20180227</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU52</adm-library><adm-doc-number>003813214</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:39 GMT
+- request:
+    method: get
+    uri: http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 28 Nov 2017 21:47:38 GMT
+    body:
+      encoding: UTF-8
+      string: '<?xml version = "1.0" encoding = "UTF-8"?><item-serv><reply-text>ok</reply-text><reply-code>0000</reply-code><item><z30-sub-library-code>NSHNG</z30-sub-library-code><z30-item-process-status-code></z30-item-process-status-code><z30-item-status-code>01</z30-item-status-code><z30-collection-code>MAIN</z30-collection-code><queue></queue><z30><translate-change-active-library>NYU52</translate-change-active-library><z30-doc-number>003813214</z30-doc-number><z30-item-sequence>    1.0</z30-item-sequence><z30-barcode>31124057189608</z30-barcode><z30-sub-library>NYU
+        Shanghai Library (China)</z30-sub-library><z30-material>Books</z30-material><z30-item-status>Regular
+        loan</z30-item-status><z30-open-date>20130827</z30-open-date><z30-update-date>20131022</z30-update-date><z30-cataloger>GILCHRISTC</z30-cataloger><z30-date-last-return>20170512</z30-date-last-return><z30-hour-last-return>1434</z30-hour-last-return><z30-ip-last-return>NYUSHANG</z30-ip-last-return><z30-no-loans>005</z30-no-loans><z30-alpha>L</z30-alpha><z30-collection>Main
+        Collection</z30-collection><z30-call-no-type>0</z30-call-no-type><z30-call-no>BF637.S4
+        A73 2003</z30-call-no><z30-call-no-key>0 bf&quot;637 s4 a73 2003</z30-call-no-key><z30-call-no-2-type></z30-call-no-2-type><z30-call-no-2></z30-call-no-2><z30-call-no-2-key></z30-call-no-2-key><z30-description></z30-description><z30-note-opac>From
+        the NYU Shanghai Study Away Collection.</z30-note-opac><z30-note-circulation></z30-note-circulation><z30-note-internal></z30-note-internal><z30-order-number></z30-order-number><z30-inventory-number></z30-inventory-number><z30-inventory-number-date>00000000</z30-inventory-number-date><z30-last-shelf-report-date>00000000</z30-last-shelf-report-date><z30-price></z30-price><z30-shelf-report-number></z30-shelf-report-number><z30-on-shelf-date>00000000</z30-on-shelf-date><z30-on-shelf-seq>000000</z30-on-shelf-seq><z30-doc-number-2>000000000</z30-doc-number-2><z30-schedule-sequence-2>00000</z30-schedule-sequence-2><z30-copy-sequence-2>00000</z30-copy-sequence-2><z30-vendor-code></z30-vendor-code><z30-invoice-number></z30-invoice-number><z30-line-number>00000</z30-line-number><z30-pages></z30-pages><z30-issue-date>00000000</z30-issue-date><z30-expected-arrival-date>00000000</z30-expected-arrival-date><z30-arrival-date>00000000</z30-arrival-date><z30-item-statistic>c</z30-item-statistic><z30-item-process-status>Not
+        in Process</z30-item-process-status><z30-copy-id></z30-copy-id><z30-hol-doc-number>004698634</z30-hol-doc-number><z30-temp-location>No</z30-temp-location><z30-enumeration-a></z30-enumeration-a><z30-enumeration-b></z30-enumeration-b><z30-enumeration-c></z30-enumeration-c><z30-enumeration-d></z30-enumeration-d><z30-enumeration-e></z30-enumeration-e><z30-enumeration-f></z30-enumeration-f><z30-enumeration-g></z30-enumeration-g><z30-enumeration-h></z30-enumeration-h><z30-chronological-i></z30-chronological-i><z30-chronological-j></z30-chronological-j><z30-chronological-k></z30-chronological-k><z30-chronological-l></z30-chronological-l><z30-chronological-m></z30-chronological-m><z30-supp-index-o></z30-supp-index-o><z30-85x-type></z30-85x-type><z30-depository-id></z30-depository-id><z30-linking-number>000000000</z30-linking-number><z30-gap-indicator></z30-gap-indicator><z30-maintenance-count>005</z30-maintenance-count><z30-process-status-date>20130910</z30-process-status-date><z30-upd-time-stamp>201711151112412</z30-upd-time-stamp><z30-ip-last-return-v6></z30-ip-last-return-v6></z30><z13><translate-change-active-library>NYU52</translate-change-active-library><z13-doc-number>003813214</z13-doc-number><z13-year>2003</z13-year><z13-open-date>20130826</z13-open-date><z13-update-date>20170420</z13-update-date><z13-call-no-key></z13-call-no-key><z13-call-no-code>LOC0</z13-call-no-code><z13-call-no>BF637.S4</z13-call-no><z13-author-code>1001</z13-author-code><z13-author>Arden,
+        Paul.</z13-author><z13-title-code>24510</z13-title-code><z13-title>It&apos;s
+        not how good you are, it&apos;s how good you want to be /</z13-title><z13-imprint-code>260</z13-imprint-code><z13-imprint>London
+        ; New York : Phaidon, 2003.</z13-imprint><z13-isbn-issn-code>020</z13-isbn-issn-code><z13-isbn-issn>0714843377
+        (pbk.)</z13-isbn-issn><z13-upd-time-stamp>200001011200000</z13-upd-time-stamp></z13><status>12/22/17
+        06:00 PM</status><info type="HoldRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/hold"
+        allowed="Y"><hold allowed="Y"><pickup-locations default="Y" usage="Mandatory"><pickup-location
+        code="NSHNG">NYU Shanghai Library (China)</pickup-location></pickup-locations><note
+        type="info">This item is checked out until 12/22/17 at 06:00 PM.</note><note
+        type="info">The expected date of availability for this item is 12/06/17 at
+        06:00 PM.</note><note type="info"></note><note type="info"></note><note type="info">Item
+        status: Regular loan&lt;br /&gt; Call number: BF637.S4 A73 2003&lt;br /&gt;</note><last-interest-date
+        usage="Optional">20180227</last-interest-date><start-interest-date usage="Optional"></start-interest-date><sub-author
+        usage="Optional" max_len="50"></sub-author><sub-title usage="Optional" max_len="100"></sub-title><pages
+        usage="Optional" max_len="30"></pages><note-1 usage="Optional" max_len="50"></note-1><note-2
+        usage="Optional" max_len="50"></note-2><rush usage="Optional"></rush></hold></info><info
+        type="ShortLoan" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/shortLoan"
+        allowed="N"><note type="error">The item has no short loan schedule</note></info><info
+        type="PhotoRequest" href="http://aleph.library.edu:1891/rest-dlf/patron/BOR_ID/record/NYU01003813214/items/NYU52003813214000010/photo"
+        allowed="N"><note type="error">Item cannot be photocopied (tab15).</note></info><info
+        type="BookingRequest" allowed="N"><note type="error">Item cannot be booked
+        (tab15).</note><adm-library>NYU52</adm-library><adm-doc-number>003813214</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
+    http_version: 
+  recorded_at: Tue, 28 Nov 2017 21:47:39 GMT
+recorded_with: VCR 3.0.3

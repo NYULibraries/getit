@@ -113,3 +113,10 @@ Feature: Holding request options for a Copy in Library
     And I click the "Request" button for the first "NYU Dibner Library Main Collection" holding
     Then I should see an option to request a scan of a portion of the holding to be delivered to me electronically
     And I should see an option to request the holding to be delivered to the pickup location of my choice
+
+  @nyush_user/recallable
+  Scenario: A user with recall privileges viewing options for an item in NYUSH library
+    Given I am logged in as an NYUSH user
+    And I am on the GetIt page for an "unavailable at NYUSH" holding
+    And I click the "Request" button for the first "NYU Shanghai Library (China) Main Collection" holding
+    Then I should see an option to recall the holding from a fellow library patron
