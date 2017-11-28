@@ -30,16 +30,16 @@ test:
 deployment:
   production:
     branch: master
-    # owner: NYULibraries
+    owner: Jenkins-NYULib
     commands:
       - curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Production%20Deploy/build/api
   qa:
     branch: qa
-    # owner: NYULibraries
+    owner: Jenkins-NYULib
     commands:
       - curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20QA%20Deploy/build/api
   development:
     branch: /.+/
-    # owner: NYULibraries
+    owner: Jenkins-NYULib
     commands:
       - curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Development%20Deploy/build/api
