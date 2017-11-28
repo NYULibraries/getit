@@ -84,12 +84,12 @@ default:
           name: worldcat1
           regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
           base_url: http://www.worldcat.org
-          display_text: Back to WorldCat
+          display_text: Back to search
         -
           name: worldcat2
           regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
           base_url: http://www.worldcat.org/search?qt=worldcat_org_all
-          display_text: Back to WorldCat
+          display_text: Back to search
           querystring_metadata:
             q: title
 
