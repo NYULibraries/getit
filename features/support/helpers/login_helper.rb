@@ -16,6 +16,10 @@ module GetItFeatures
       ns_omniauth_hash(ns_ezborrow_identities)
     end
 
+    def nyush_omniauth_hash
+      default_omniauth_hash(nyush_identities)
+    end
+
     def default_omniauth_hash(identities)
       hash = OmniAuth::AuthHash.new(provider: :nyulibraries, uid: 'dev123')
       hash.info = omniauth_info
@@ -68,6 +72,10 @@ module GetItFeatures
       [new_school_ldap_identity, ns_ezborrow_aleph_identity]
     end
 
+    def nyush_identities
+      [nyu_shibboleth_identity, nyush_aleph_identity]
+    end
+
     def nyu_shibboleth_identity
       {provider: 'nyu_shibboleth', uid: 'dev123'}
     end
@@ -82,6 +90,16 @@ module GetItFeatures
         uid: (ENV['BOR_ID'] || 'BOR_ID'),
         properties: {
           patron_status: '51'
+        }
+      }
+    end
+
+    def nyush_aleph_identity
+      {
+        provider: 'aleph',
+        uid: (ENV['BOR_ID'] || 'BOR_ID'),
+        properties: {
+          patron_status: '20'
         }
       }
     end

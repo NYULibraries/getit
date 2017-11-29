@@ -71,23 +71,25 @@ default:
         -
           name: primo
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
-          base_url: http://library.nyu.edu/persistent/lcn/
-          display_text: Back to results
+          base_url: http://bobcat.library.nyu.edu
+          display_text: Back to search
+          return_to_base_url: true
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
           base_url: https://getit.library.nyu.edu
-          display_text: Back to e-journal search
+          display_text: Back to search
+          return_to_base_url: true
         -
           name: worldcat1
           regex: !ruby/regexp '/info:sid\/firstsearch\.oclc\.org:WorldCat/'
           base_url: http://www.worldcat.org
-          display_text: Back to WorldCat
+          display_text: Back to search
         -
           name: worldcat2
           regex: !ruby/regexp '/info:sid\/FirstSearch:WorldCat/'
           base_url: http://www.worldcat.org/search?qt=worldcat_org_all
-          display_text: Back to WorldCat
+          display_text: Back to search
           querystring_metadata:
             q: title
 

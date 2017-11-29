@@ -27,3 +27,14 @@ User.create(
   patron_status: '51',
   barcode: '12345'
 )
+User.create(
+  username: 'dt0000',
+  email: 'dt0000@nyu.edu',
+  firstname: 'Dan',
+  lastname: 'Theman',
+  provider: 'nyulibraries',
+  aleph_id: 'N123456678',
+  institution_code: 'NYUSH',
+  patron_status: '20',
+  barcode: '12345'
+)
