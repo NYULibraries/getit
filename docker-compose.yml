@@ -5,10 +5,12 @@ services:
     build: .
     volumes:
       - .:/app
+      # - ~/mnt/aleph_stage_tab:/mnt/aleph_stage_tab
     ports:
       - "3000:3000"
     env_file:
       - test.env
+      # - dev.env
     command: "tail -f /dev/null"
     depends_on:
       - setup_dbs

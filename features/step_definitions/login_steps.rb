@@ -28,6 +28,11 @@ Given(/^I am logged in as a New School user with E-ZBorrow privileges$/) do
   visit login_path
 end
 
+Given(/^I am logged in as an NYUSH user$/) do
+  OmniAuth.config.mock_auth[:nyulibraries] = nyush_omniauth_hash
+  visit '/login'
+end
+
 Given(/^I am not logged in$/) do
   OmniAuth.config.mock_auth[:nyulibraries] = nil
 end
