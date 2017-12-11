@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       end
     end
     super(options)
-  rescue
+  rescue URI::InvalidURIError => e
     super(options)
   end
 
