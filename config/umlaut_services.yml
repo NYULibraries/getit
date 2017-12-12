@@ -206,6 +206,11 @@ NYU:
     gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
     resolve_css: resolve
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?vid=NYU"
+      umlaut:
+        url_suffix: "?umlaut.institution=NYU"
   controllers:
     searcher: <%= ENV['DEFAULT_SEARCH_METHOD'] || 'Sfx4Solr::Local' %>
   services:
