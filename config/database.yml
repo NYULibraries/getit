@@ -30,16 +30,21 @@ mysql: &mysql
 
 getit: &getit
   <<: *mysql
-  reconnect: false
-  pool: 12
-  checkout_timeout: 2
   host: <%= (ENV['GETIT_DB_HOST'] || 'localhost') %>
   username: <%= (ENV['GETIT_DB_USER'] || 'root') %>
   password: <%= (ENV['GETIT_DB_PASSWORD'] || '') %>
   database: <%= (ENV['GETIT_DB_DATABASE'] || 'getit') %>
+  reconnect: false
+  pool: 20
+  checkout_timeout: 5
+  reaping_frequency: 10
+  # connect_timeout: 2
+  # keepalives_idle: 30
+  # keepalives_interval: 10
+  # keepalives_count: 2
 
 development: &development
-  <<: *getit  
+  <<: *getit
   pool: 5
 
 # Warning: The database defined as "test" will be erased and
