@@ -95,13 +95,13 @@ describe ApplicationController  do
       subject{ controller.url_for(url) }
 
       context "with query params" do
-        let(:url){ "https://example.com/some/path?key=value" }
+        let(:url){ "http://test.host/some/path?key=value" }
 
         context "with institution_param" do
           let(:institution_param){ :NYUAD }
           before { allow(controller).to receive(:institution_param).and_return institution_param }
 
-          it { is_expected.to eq "https://example.com/some/path?key=value&umlaut.institution=NYUAD" }
+          it { is_expected.to eq "http://test.host/some/path?key=value&umlaut.institution=NYUAD" }
         end
 
         context "without either param" do
@@ -110,18 +110,23 @@ describe ApplicationController  do
       end
 
       context "without query params" do
-        let(:url){ "https://example.com/some/path" }
+        let(:url){ "http://test.host/some/path" }
 
         context "with institution_param" do
           let(:institution_param){ :NYUAD }
           before { allow(controller).to receive(:institution_param).and_return institution_param }
 
-          it { is_expected.to eq "https://example.com/some/path?umlaut.institution=NYUAD" }
+          it { is_expected.to eq "http://test.host/some/path?umlaut.institution=NYUAD" }
         end
 
         context "without either param" do
           it { is_expected.to eq url }
         end
+      end
+
+      context "where url points to generic URI" do
+        let(:url){ "generic-uri" }
+        it { is_expected.to eq "generic-uri" }
       end
     end
   end

@@ -16,9 +16,16 @@ class ApplicationController < ActionController::Base
       if options.is_a?(Hash)
         options[institution_param_name] ||= institution_param
       elsif options.is_a?(String)
-        options = append_parameter_to_url(options, institution_param_name, institution_param)
+        current_host = URI.parse(request.url).host
+        url_host = URI.parse(options).host
+        # Only do it for internal requests
+        if current_host == url_host
+          options = append_parameter_to_url(options, institution_param_name, institution_param)
+        end
       end
     end
+    super(options)
+  rescue URI::InvalidURIError => e
     super(options)
   end
 

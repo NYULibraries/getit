@@ -71,13 +71,13 @@ default:
         -
           name: primo
           regex: !ruby/regexp '/info:sid\/primo\.exlibrisgroup\.com:primo-(.+)/'
-          base_url: http://bobcat.library.nyu.edu
+          base_url: http://bobcat.library.nyu.edu/primo_library/libweb/action/search.do
           display_text: Back to search
           return_to_base_url: true
         -
           name: umlaut
           regex: !ruby/regexp '/info:sid\/sfxit\.com:citation/'
-          base_url: https://getit.library.nyu.edu
+          base_url: https://getit.library.nyu.edu/
           display_text: Back to search
           return_to_base_url: true
         -
@@ -206,6 +206,11 @@ NYU:
     gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
     resolve_css: resolve
+    wayfinder_attributes:
+      primo:
+        url_suffix: "?vid=NYU"
+      umlaut:
+        url_suffix: "?umlaut.institution=NYU"
   controllers:
     searcher: <%= ENV['DEFAULT_SEARCH_METHOD'] || 'Sfx4Solr::Local' %>
   services:
@@ -329,11 +334,9 @@ NYUAD:
     resolve_css: resolve_nyuad
     wayfinder_attributes:
       primo:
-        url_suffix: "?institution=nyuad"
-      xerxes:
-        url_suffix: "&institution=nyuad"
+        url_suffix: "?vid=NYUAD"
       umlaut:
-        url_suffix: "/nyuad"
+        url_suffix: "?umlaut.institution=NYUAD"
 NYUSH:
   name: NYU Shanghai Library
   parent_code: NYU
@@ -343,11 +346,9 @@ NYUSH:
     resolve_css: resolve_nyush
     wayfinder_attributes:
       primo:
-        url_suffix: "?institution=nyush"
-      xerxes:
-        url_suffix: "&institution=nyush"
+        url_suffix: "?vid=NYUSH"
       umlaut:
-        url_suffix: "/nyush"
+        url_suffix: "?umlaut.institution=NYUSH"
 CU:
   name: The Cooper Union Library
   active_tab: journals
@@ -357,12 +358,10 @@ CU:
     resolve_css: resolve_cu
     sfx_base_url: http://sfx.library.nyu.edu/sfxcooper?
     wayfinder_attributes:
-        primo:
-          url_suffix: "?institution=cu"
-        xerxes:
-          url_suffix: "&institution=cu"
-        umlaut:
-          url_suffix: "/cu"
+      primo:
+        url_suffix: "?vid=CU"
+      umlaut:
+        url_suffix: "?umlaut.institution=CU"
   controllers:
     searcher: <%= ENV['CU_SEARCH_METHOD'] || 'Sfx4Solr::Cu' %>
   services:
@@ -401,12 +400,10 @@ NS:
     stackmap_css: stackmap.com/integration/newschool/StackMap.css
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
-        primo:
-          url_suffix: "?institution=ns"
-        xerxes:
-          url_suffix: "&institution=ns"
-        umlaut:
-          url_suffix: "/ns"
+      primo:
+        url_suffix: "?vid=NS"
+      umlaut:
+        url_suffix: "?umlaut.institution=NS"
   controllers:
     searcher: <%= ENV['NS_SEARCH_METHOD'] || 'Sfx4Solr::Ns' %>
   services:
@@ -489,11 +486,11 @@ HSL:
     gauges_tracking_code: <%= ENV['HSL_GAUGES_TRACKING_CODE'] %>
     css: search_hsl
     resolve_css: resolve_hsl
-  wayfinder_attributes:
-      primo:
-        url_suffix: "?institution=hsl"
-      umlaut:
-        url_suffix: "/hsl"
+    wayfinder_attributes:
+        primo:
+          url_suffix: "?vid=HSL"
+        umlaut:
+          url_suffix: "?umlaut.institution=HSL"
   services:
     HSL_SFX:
       name: SFX @ NYU Health Sciences Libraries
