@@ -426,33 +426,3 @@ NYSID:
     gauges_tracking_code: <%= ENV['NYSID_GAUGES_TRACKING_CODE'] %>
     css: search_nysid
     resolve_css: resolve_nysid
-
-HSL:
-  active_tab: journals
-  views:
-    gauges_tracking_code: <%= ENV['HSL_GAUGES_TRACKING_CODE'] %>
-    css: search_hsl
-    resolve_css: resolve_hsl
-    wayfinder_attributes:
-        primo:
-          url_suffix: "?vid=HSL"
-        umlaut:
-          url_suffix: "?umlaut.institution=HSL"
-  services:
-    HSL_SFX:
-      name: SFX @ NYU Health Sciences Libraries
-      display_name: SFX @ NYU Health Sciences Libraries
-      type: Sfx
-      base_url: http://sfx.med.nyu.edu/sfxlcl3
-      priority: 1
-      click_passthrough: true
-      sfx_requests_expire_crontab: '00 00 * * 00'
-      sfx_timeout: 9
-      roll_up_prefixes:
-        - 'EBSCOHOST_'
-        - 'JSTOR_'
-        - 'PROQUEST_'
-        - 'SPRINGER_LINK_'
-        - 'ELSEVIER_SD_'
-        - 'HIGHWIRE_'
-        - 'GALEGROUP_'
