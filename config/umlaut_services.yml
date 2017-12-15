@@ -238,61 +238,8 @@ NYU:
         getAbstract: abstract
         getTOC: table_of_contents
       extra_targets_of_interest:
-        # ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
-        # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
-    # NYUUlrichsLink:
-    #   type: UlrichsLink
-    #   display_name: Ulrich's Directory
-    #   link_name: Periodical Information
-    #   priority: c
-    #   status: active
-    #   base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
-    # ScopusCitations:
-    #   type: Scopus2
-    #   priority: c
-    #   api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
-    # NYU_RefWorks:
-    #   name: RefWorks
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=refworks&"
-    #   display_text: Push to RefWorks
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_Endnote:
-    #   name: EndNoteWeb
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=endnote&"
-    #   display_text: Push to EndNote Web
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_EASYBIB:
-    #   name: EasyBib
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=easybibpush&"
-    #   display_text: Push to EasyBib
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_RIS:
-    #   name: RIS
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=ris&"
-    #   display_text: Download as RIS
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_BIBTEX:
-    #   name: BibTeX
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=bibtex&"
-    #   display_text: Download as BibTeX
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
