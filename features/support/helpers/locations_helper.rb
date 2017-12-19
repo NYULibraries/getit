@@ -28,8 +28,6 @@ module GetItFeatures
           :NYUAD
         when /Shanghai/
           :NYUSH
-        when /Health Sciences/
-          :HSL
         end
       when /New School/
         :NS
