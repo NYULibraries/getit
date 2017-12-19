@@ -120,17 +120,6 @@ class SearchControllerTest < ActionController::TestCase
     assert_template :partial => 'nyuad/_tip1', :count => 1
   end
 
-
-  test "index not logged in HSL" do
-    get :index, "umlaut.institution" => "HSL"
-    assert_response :success
-    assert_select "title", "BobCat"
-    assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-    assert_select 'div.search div.search-section', 3
-    assert_select 'nav#bobcat_tabs div.navbar-header h4', {count: 0}
-    assert_template :partial => 'hsl/_sidebar', :count => 1
-  end
-
   test "journal search logged in" do
     sign_in user
     VCR.use_cassette('search journal search logged in') do

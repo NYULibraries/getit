@@ -238,61 +238,8 @@ NYU:
         getAbstract: abstract
         getTOC: table_of_contents
       extra_targets_of_interest:
-        # ISI_RESEARCHSOFT_EXPORT_TOOL: export_citation
-        # REFWORKS_EXPORT_TOOL: export_citation
         ASK_A_LIBRARIAN_LCL: help
         COMMENTS_ABOUT_BOBCAT_LCL: help
-    # NYUUlrichsLink:
-    #   type: UlrichsLink
-    #   display_name: Ulrich's Directory
-    #   link_name: Periodical Information
-    #   priority: c
-    #   status: active
-    #   base_url: <%= (ENV['NYU_ULRICHS_LINK_BASE_URL'] || 'NYU_ULRICHS_LINK_BASE_URL') %>
-    # ScopusCitations:
-    #   type: Scopus2
-    #   priority: c
-    #   api_key: <%= (ENV['SCOPUS_API_KEY'] || 'SCOPUS_API_KEY') %>
-    # NYU_RefWorks:
-    #   name: RefWorks
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=refworks&"
-    #   display_text: Push to RefWorks
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_Endnote:
-    #   name: EndNoteWeb
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=endnote&"
-    #   display_text: Push to EndNote Web
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_EASYBIB:
-    #   name: EasyBib
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=easybibpush&"
-    #   display_text: Push to EasyBib
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_RIS:
-    #   name: RIS
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=ris&"
-    #   display_text: Download as RIS
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
-    # NYU_BIBTEX:
-    #   name: BibTeX
-    #   type: OpenURLService
-    #   base_url: "<%= ENV['EXPORT_CITATIONS_BASE_URL'] %>?to_format=bibtex&"
-    #   display_text: Download as BibTeX
-    #   priority: 4
-    #   service_types:
-    #       - bib_tool
     NYU_ILLiad:
       name: ILLiad
       type: OpenURLService
@@ -479,33 +426,3 @@ NYSID:
     gauges_tracking_code: <%= ENV['NYSID_GAUGES_TRACKING_CODE'] %>
     css: search_nysid
     resolve_css: resolve_nysid
-
-HSL:
-  active_tab: journals
-  views:
-    gauges_tracking_code: <%= ENV['HSL_GAUGES_TRACKING_CODE'] %>
-    css: search_hsl
-    resolve_css: resolve_hsl
-    wayfinder_attributes:
-        primo:
-          url_suffix: "?vid=HSL"
-        umlaut:
-          url_suffix: "?umlaut.institution=HSL"
-  services:
-    HSL_SFX:
-      name: SFX @ NYU Health Sciences Libraries
-      display_name: SFX @ NYU Health Sciences Libraries
-      type: Sfx
-      base_url: http://sfx.med.nyu.edu/sfxlcl3
-      priority: 1
-      click_passthrough: true
-      sfx_requests_expire_crontab: '00 00 * * 00'
-      sfx_timeout: 9
-      roll_up_prefixes:
-        - 'EBSCOHOST_'
-        - 'JSTOR_'
-        - 'PROQUEST_'
-        - 'SPRINGER_LINK_'
-        - 'ELSEVIER_SD_'
-        - 'HIGHWIRE_'
-        - 'GALEGROUP_'

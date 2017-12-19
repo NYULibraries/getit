@@ -7,7 +7,6 @@
 @import "resolve/variables";
 @import "nyulibraries_stylesheets/nyulibraries/cu/variables";
 @import "nyulibraries_stylesheets/nyulibraries/header";
-@import "nyulibraries_stylesheets/nyulibraries/cu/header";
 @import "nyulibraries_stylesheets/nyulibraries/login";
 @import "nyulibraries_stylesheets/nyulibraries/nav";
 @import "nyulibraries_stylesheets/nyulibraries/mixins";
@@ -16,9 +15,11 @@
 @import "nyulibraries_stylesheets/nyulibraries/misc";
 @import "resolve/common";
 @import "resolve/permalink";
+@import "nyulibraries_stylesheets/nyulibraries/cu/header";
 
 .header {
   h1 {
     color: #560d06;
   }
+  border-bottom: 1px solid #c7c7c7;
 }

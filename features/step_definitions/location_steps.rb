@@ -26,10 +26,6 @@ Then(/^I should see the NYU Shanghai view$/) do
   expect(html).to have_content "NYU Shanghai Library"
 end
 
-Then(/^I should see the NYU Health Science Library view$/) do
-  expect(html).to have_content "NYU Health Sciences Library"
-end
-
 Then(/^I should see the New School view$/) do
   expect(html).to have_content "New School Libraries"
 end
