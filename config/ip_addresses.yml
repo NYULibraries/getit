@@ -15,9 +15,6 @@ NYUSH:
 NYSID:
   ip_addresses:
     - 127.0.0.5
-HSL:
-  ip_addresses:
-    - 127.0.0.6
 CU:
   ip_addresses:
     - 127.0.0.7
