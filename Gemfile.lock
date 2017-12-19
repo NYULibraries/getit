@@ -49,10 +49,10 @@ GIT
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_stylesheets.git
-  revision: b248f9a0dfcd99576478bf5d4e19ddf1fa1af600
-  tag: v1.0.4
+  revision: 7635383d77ac815f4a28219138c75f8971f680f6
+  tag: v1.0.5
   specs:
-    nyulibraries_stylesheets (1.0.4)
+    nyulibraries_stylesheets (1.0.5)
       bootstrap-sass (~> 3.2)
       compass (>= 1.0.1)
 
@@ -574,4 +574,4 @@ DEPENDENCIES
   webmock (~> 3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
