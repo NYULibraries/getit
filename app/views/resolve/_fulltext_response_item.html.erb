@@ -14,7 +14,6 @@ authentication = view_data[:authentication]
 unless (institution_code.blank? || authentication.present?)
   authentication = case institution_code
     when "NYU" then "NYU access only"
-    when "HSL" then "HSL access only"
     when "CU" then "Cooper Union access only"
     when "NS" then "New School access only"
     when "NYSID" then "NYSID access only"
