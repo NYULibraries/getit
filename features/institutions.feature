@@ -62,22 +62,6 @@ Feature: Institution views by IP location
     When I search for the journal title "the new yorker"
     Then I should see the NYU Shanghai view
 
-  Scenario: Viewing the search page from NYU Health Science Library
-    Given I am at NYU Health Sciences
-    And I am on the GetIt search page
-    Then I should see the NYU Health Science Library view
-
-  Scenario: Viewing the resolve page from NYU Health Science Library
-    Given I am at NYU Health Sciences
-    And I am on the GetIt page for "The New Yorker"
-    Then I should see the NYU Health Science Library view
-
-  Scenario: Arriving at resolve page from search page for NYU Health Science Library
-    Given I am at NYU Health Sciences
-    And I am on the GetIt search page
-    When I search for the journal title "the new yorker"
-    Then I should see the NYU Health Science Library view
-
   Scenario: Viewing the search page from The New School
     Given I am at the New School
     And I am on the GetIt search page
