@@ -41,14 +41,14 @@ describe HoldingRequestsHelper, vcr: {cassette_name: 'holding requests'} do
       #it should return with a link to the holding's sub library
       it { should match /href="http:\/\/test.host\/holding_requests\/#{_service_response.id}\/available\/BOBST"/ }
       it { should match /class="ajax_window"/ }
-      it { should match /target="_blank"/ }
+      it { should match /data-remote="true"/ }
       it { should match /text/ }
     end
     context 'when there is only one pickup location' do
       let(:_service_response) { create(:single_pickup_location_nyu_aleph_service_response) }
       it { should match /href="http:\/\/test.host\/holding_requests\/#{_service_response.id}\/available\/BOBST"/ }
       it { should match /class="ajax_window"/ }
-      it { should match /target="_blank"/ }
+      it { should match /data-remote="true"/ }
       it { should match /text/ }
     end
     context 'when there are multiple pickup locations' do

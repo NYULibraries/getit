@@ -43,7 +43,7 @@ module HoldingRequestsHelper
       text.html_safe
     else
       content_tag(:p) do
-        options = {target: '_blank', class: 'ajax_window'}
+        options = {class: 'ajax_window', remote: true}
         link_to_create_holding_request(text, type, options)
       end
     end

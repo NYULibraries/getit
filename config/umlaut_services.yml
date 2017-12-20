@@ -426,3 +426,10 @@ NYSID:
     gauges_tracking_code: <%= ENV['NYSID_GAUGES_TRACKING_CODE'] %>
     css: search_nysid
     resolve_css: resolve_nysid
+
+HSL:
+  parent_code: NYU
+  views:
+    gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
+    css: search
+    resolve_css: resolve
