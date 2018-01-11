@@ -34,6 +34,7 @@ gem 'formaggio', github: 'NYULibraries/formaggio' , tag: 'v1.5.2'
 
 # Umlaut
 gem 'umlaut', '~> 4.1.0'
+# gem 'umlaut', path: '/apps/umlaut'
 gem 'umlaut-primo', '~> 1.0.0'
 # Lock hashie in at 3.4.4 because > 3.4.5 breaks umlaut
 # confstruct, a dependency of umlaut, has hashie as a dependency
@@ -99,4 +100,3 @@ gem 'nokogiri', '~> 1.8.1'
 # APM
 gem 'newrelic_rpm'
 gem 'rollbar'
-gem 'scout_apm', '~> 3.0.x'
