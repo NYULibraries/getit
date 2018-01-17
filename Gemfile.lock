@@ -307,7 +307,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.21)
+    mysql2 (0.4.10)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -541,7 +541,7 @@ DEPENDENCIES
   guard-rspec
   hashie (= 3.4.4)
   jquery-rails (~> 3.1.0)
-  mysql2 (~> 0.3.13)
+  mysql2 (~> 0.4.10)
   newrelic_rpm
   nokogiri (~> 1.8.1)
   nyulibraries_errors!
