@@ -95,7 +95,7 @@ gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag:
 gem 'devise', '~> 3.5.4'
 
 # Nokogiri
-gem 'nokogiri', '~> 1.8.1'
+gem 'nokogiri', '~> 1.8.2'
 
 # APM
 gem 'newrelic_rpm'
