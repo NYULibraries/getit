@@ -1,11 +1,11 @@
 version: '3'
 services:
 
-  dev:
+  app:
     build: .
     volumes:
       - .:/app
-      - ./vendor:/app/vendor
+      # - ~/mnt/aleph_stage_tab:/mnt/aleph_stage_tab
     ports:
       - "3000:3000"
     env_file:
@@ -14,6 +14,13 @@ services:
     command: "tail -f /dev/null"
     depends_on:
       - setup_dbs
+
+  db:
+    image: library/mysql:5.6.22
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
 
   test:
     build: .
@@ -36,10 +43,3 @@ services:
     command: bash -c "sleep 5; rake db:setup"
     depends_on:
       - db
-
-  db:
-    image: library/mysql:5.6.22
-    expose:
-      - "3306"
-    environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'

@@ -33,8 +33,8 @@ GIT
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_institutions.git
-  revision: ab397d1d3ab0c0e8a730fc7bedb482bf8538de0f
-  branch: chore/bobcat_beta_tab
+  revision: edae9f19758afe73686571d8e444e35dfe65cedf
+  tag: v1.0.3
   specs:
     nyulibraries_institutions (1.0.3)
       institutions (~> 0.1.3)
