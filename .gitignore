@@ -36,8 +36,9 @@ coverage/
 # Ignore the wiki directory
 wiki
 
-# Ignore .powenv
-.powenv
-
+# Ignore local configs
 application.yml
 dev.env
+
+# Ignore vendor directory
+vendor
