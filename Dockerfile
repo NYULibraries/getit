@@ -1,6 +1,6 @@
 FROM nyulibraries/rails
 
-COPY vendor ./vendor
+#COPY vendor ./vendor
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle config --global github.https true
