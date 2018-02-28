@@ -24,6 +24,7 @@ services:
     command: "tail -f /dev/null"
     depends_on:
       - setup_dbs
+      - phantomjs
 
   setup_dbs:
     build: .
@@ -39,3 +40,10 @@ services:
       - "3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  # Use an external PhantomJS service for running tests
+  # https://github.com/teampoltergeist/poltergeist#customization
+  phantomjs:
+    image: wernight/phantomjs:2.1.1
+    expose:
+      - "8910"
