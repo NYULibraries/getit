@@ -1,7 +1,7 @@
 FROM ruby:2.3.6
 
 ENV INSTALL_PATH /app
-ENV PHANTOMJS_VERSION 2.1.3
+ENV PHANTOMJS_VERSION 2.1.1
 
 # Essential dependencies
 RUN apt-get update -qq && apt-get install -y build-essential vim mysql-client
