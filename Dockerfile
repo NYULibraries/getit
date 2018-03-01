@@ -7,15 +7,6 @@ ENV PHANTOMJS_VERSION 2.1.1
 RUN apt-get update -qq && apt-get install -y build-essential vim mysql-client
 
 # Install PhantomJS
-FROM ruby:2.3.6
-
-ENV INSTALL_PATH /app
-ENV PHANTOMJS_VERSION 2.1.1
-
-# Essential dependencies
-RUN apt-get update -qq && apt-get install -y build-essential vim mysql-client
-
-# Install PhantomJS
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
