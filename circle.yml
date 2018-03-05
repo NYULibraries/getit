@@ -1,7 +1,7 @@
 machine:
 
   ruby:
-    version: 2.3.3
+    version: 2.3.6
 
   environment:
     ILL_PATRON_STATUSES: '[51,37,55,31]'
@@ -17,11 +17,9 @@ machine:
     EZBORROW_NS_PATRON_BARCODE: '12345'
     EZBORROW_NS_LIBRARY_SYMBOL: NEWSCHOOL
 
-## Customize database setup
 database:
   override:
-    - mysql -e 'create database getit_test;'
-    - bundle exec rake db:create db:schema:load
+    - bundle exec rake db:setup
 
 test:
   override:
