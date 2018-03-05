@@ -5,7 +5,7 @@ services:
     build: .
     volumes:
       - .:/app
-      - ./vendor:/app/vendor
+      # - ./vendor:/app/vendor
     ports:
       - "3000:3000"
     env_file:
@@ -17,8 +17,6 @@ services:
 
   test:
     build: .
-    volumes:
-      - .:/app
     environment:
       RAILS_ENV: test
     env_file:
@@ -26,11 +24,10 @@ services:
     command: "tail -f /dev/null"
     depends_on:
       - setup_dbs
+      # - phantomjs
 
   setup_dbs:
     build: .
-    volumes:
-      - .:/app
     environment:
       GETIT_DB_HOST: db
     command: bash -c "sleep 5; rake db:setup"
@@ -43,3 +40,11 @@ services:
       - "3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  # Use an external PhantomJS service for running tests
+  # https://github.com/teampoltergeist/poltergeist#customization
+  phantomjs:
+    image: wernight/phantomjs:2.1.1
+    expose:
+      - "8910"
+    command: phantomjs --webdriver 8910
