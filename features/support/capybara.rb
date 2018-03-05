@@ -29,9 +29,9 @@ else
     window_size: [1280, 1024],
     timeout: 500,
     debug: false,
-    js_errors: false
-    #port: 8910,
-    #host: 'http://phantomjs'
+    js_errors: false,
+    port: 8910,
+    host: 'http://phantomjs'
     )
   end
   Capybara.default_driver    = :poltergeist
