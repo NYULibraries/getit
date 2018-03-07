@@ -15,16 +15,10 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
 
-      # - run:
-      #     name: Start container and run tests
-      #     command: |
-      #       docker-compose run test rake
-
       - run:
-          name: Start container and verify it's working
+          name: Start container and run tests
           command: |
-            set -x
-            docker-compose up -d
+            docker-compose run test rake
 
       - deploy:
           name: Deploy

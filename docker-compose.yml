@@ -40,11 +40,3 @@ services:
       - "3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-
-  # Use an external PhantomJS service for running tests
-  # https://github.com/teampoltergeist/poltergeist#customization
-  phantomjs:
-    image: wernight/phantomjs:2.1.1
-    expose:
-      - "8910"
-    command: phantomjs --webdriver 8910
