@@ -24,7 +24,6 @@ services:
     command: "tail -f /dev/null"
     depends_on:
       - setup_dbs
-      - phantomjs
 
   setup_dbs:
     build: .
