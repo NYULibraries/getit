@@ -1,24 +1,14 @@
 FROM ruby:2.3.6
 
 ENV INSTALL_PATH /app
-ENV PHANTOMJS_VERSION 2.1.1
 
 # Essential dependencies
-RUN apt-get update -qq && apt-get install -y build-essential vim mysql-client
+RUN apt-get update -qq && apt-get install -y build-essential vim mysql-client git wget libfreetype6 libfontconfig bzip2
 
-# Install PhantomJS
-RUN \
-  apt-get update && \
-  apt-get upgrade -y && \
-  apt-get install -y git wget libfreetype6 libfontconfig bzip2 && \
-  mkdir -p /srv/var && \
-  wget -q --no-check-certificate -O /tmp/phantomjs-2.1.1-linux-x86_64.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-  tar -xjf /tmp/phantomjs-2.1.1-linux-x86_64.tar.bz2 -C /tmp && \
-  rm -f /tmp/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-  mv /tmp/phantomjs-2.1.1-linux-x86_64/ /srv/var/phantomjs && \
-  ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs && \
-  apt-get autoremove -y && \
-  apt-get clean all
+# PhantomJS
+#ENV PHANTOMJS_VERSION 2.1.1
+#RUN wget --no-check-certificate -q -O - https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 | tar xjC /opt
+#RUN ln -s /opt/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 # Setup working directory
 RUN mkdir -p $INSTALL_PATH
