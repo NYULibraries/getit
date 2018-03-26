@@ -17,7 +17,7 @@ services:
 
   test:
     # build: .
-    image: nyulibraries/getit
+    image: nyulibraries/getit:dev
     environment:
       RAILS_ENV: test
     env_file:
@@ -28,7 +28,7 @@ services:
 
   setup_dbs:
     # build: .
-    image: nyulibraries/getit
+    image: nyulibraries/getit:dev
     environment:
       GETIT_DB_HOST: db
     command: bash -c "sleep 5; rake db:setup"
