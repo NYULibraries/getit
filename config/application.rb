@@ -4,8 +4,10 @@ require 'rails/all'
 
 # Load the figs variables before the rest of the bundle
 # so we can use env vars in other gems
-require 'figs'
-Figs.load(stage: Rails.env)
+unless Rails.env.test?
+  require 'figs'
+  Figs.load(stage: Rails.env)
+end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
