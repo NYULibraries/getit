@@ -11,27 +11,41 @@ services:
     env_file:
       - test.env
       # - dev.env
-    command: "tail -f /dev/null"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "tail", "-f", "/dev/null"]
     depends_on:
       - setup_dbs
 
   test:
-    # build: .
-    image: nyulibraries/getit:dev
+    build:
+      context: .
+      dockerfile: Dockerfile.test
     environment:
       RAILS_ENV: test
+      CI:
+      CODECLIMATE_REPO_TOKEN:
+      COVERALLS_REPO_TOKEN:
     env_file:
       - test.env
-    command: "tail -f /dev/null"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake"]
     depends_on:
-      - setup_dbs
+      - setup_test_dbs
+
+  setup_test_dbs:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    environment:
+      RAILS_ENV: test
+      GETIT_DB_HOST: db
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake", "db:setup"]
+    depends_on:
+      - db
 
   setup_dbs:
-    # build: .
-    image: nyulibraries/getit:dev
+    build: .
     environment:
       GETIT_DB_HOST: db
-    command: bash -c "sleep 5; rake db:setup"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake", "db:setup"]
     depends_on:
       - db
 
