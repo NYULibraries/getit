@@ -98,5 +98,4 @@ gem 'devise', '~> 3.5.4'
 gem 'nokogiri', '~> 1.8.2'
 
 # APM
-gem 'newrelic_rpm'
 gem 'rollbar'
