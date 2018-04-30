@@ -97,6 +97,6 @@ gem 'devise', '~> 3.5.4'
 # Nokogiri
 gem 'nokogiri', '~> 1.8.2'
 
-# APM
-gem 'newrelic_rpm'
+# Monitoring
 gem 'rollbar'
+gem 'raygun4ruby'
