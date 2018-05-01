@@ -3,27 +3,26 @@ docker-defaults: &docker-defaults
     - image: docker:18.03.0-ce-git
   working_directory: ~/app
 
-dc-setup: &dc-setup
-  run:
-    name: Setup docker-compose dependency
-    command: |
-      apk add --no-cache python3
-      pip3 install docker-compose==1.20.1
-
-test: &test
-  run:
-    name: Test
-    command: docker-compose run test
-
 version: 2
 jobs:
-  deploy-dev:
+  test:
     <<: *docker-defaults
     steps:
       - checkout
       - setup_remote_docker
-      - <<: *dc-setup
-      - <<: *test
+      - run:
+          name: Setup docker-compose dependency
+          command: |
+            apk add --no-cache python3
+            pip3 install docker-compose==1.20.1
+      - run:
+          name: Test
+          command: docker-compose run test
+
+  deploy-dev:
+    <<: *docker-defaults
+    steps:
+      - setup_remote_docker
       - run:
           name: Deploy into staging via Jenkins
           command: |
@@ -32,10 +31,7 @@ jobs:
   deploy-qa:
     <<: *docker-defaults
     steps:
-      - checkout
       - setup_remote_docker
-      - <<: *dc-setup
-      - <<: *test
       - run:
           name: Deploy into QA via Jenkins
           command: |
@@ -44,10 +40,7 @@ jobs:
   deploy-prod:
     <<: *docker-defaults
     steps:
-      - checkout
       - setup_remote_docker
-      - <<: *dc-setup
-      - <<: *test
       - run:
           name: Deploy into production via Jenkins
           command: |
@@ -57,17 +50,24 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
+      - test
       - deploy-dev:
+          requires:
+              - test
           filters:
             branches:
               ignore:
                 - master
                 - qa
       - deploy-qa:
+          requires:
+              - test
           filters:
             branches:
               only: qa
       - deploy-prod:
+          requires:
+              - test
           filters:
             branches:
               only: master
