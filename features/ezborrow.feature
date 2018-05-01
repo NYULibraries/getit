@@ -15,7 +15,7 @@ Feature: E-ZBorrow web services
     And I am on the GetIt page for an "unavailable at NYU" holding
     Then I should see an embedded option to request this item from E-ZBorrow
 
-  @user/unavailable_newschool
+  @wip @user/unavailable_newschool
   Scenario: New School user viewing an unavailable item
     Given I am logged in as a New School user with E-ZBorrow privileges
     And I am on the GetIt page for an "unavailable at New School" holding
