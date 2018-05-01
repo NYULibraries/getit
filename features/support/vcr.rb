@@ -59,7 +59,7 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/afc'
   t.tag '@user/franny_and_zooey'
   t.tag '@user/the_catcher_in_the_rye'
-  t.tag '@user/unavailable_newschool'
+  t.tag '@user/unavailable_newschool', record: :new_episodes
   t.tag '@user/unavailable_nyu'
   t.tag '@guest/unavailable_nyu'
   t.tag '@nyush_user/recallable'#, allow_playback_repeats: true, record: :all
