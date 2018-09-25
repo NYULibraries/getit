@@ -130,6 +130,9 @@ class UmlautController < ApplicationController
     # services?
     poll_wait_seconds 2
 
+    # Bump this up from the default 30 secs because of EZBorrow API slowness
+    background_service_timeout 45
+
     # Configuration for the 'search' functions -- A-Z lookup
     # and citation entry.
     search do
