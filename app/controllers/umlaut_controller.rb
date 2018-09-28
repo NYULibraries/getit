@@ -245,7 +245,7 @@ class UmlautController < ApplicationController
   end
 
   def create_collection
-    return Collection.new(@user_request, services(institutions_in_play(params['umlaut.institution'])))
+    return Collection.new(@user_request, services(institutions_in_play(params['umlaut.institution'])), self.umlaut_config)
   end
   protected :create_collection
 
