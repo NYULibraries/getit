@@ -63,6 +63,7 @@ group :development, :test do
   gem 'rb-readline'
   gem 'guard-rspec', require: false
   gem 'rspec-its', '~> 1.2.0'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
 end
 
 group :test do
