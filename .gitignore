@@ -42,3 +42,5 @@ dev.env
 
 # Ignore vendor directory
 vendor
+
+test-results/

@@ -1,7 +1,16 @@
 docker-defaults: &docker-defaults
   docker:
     - image: nyulibraries/circleci_docker:18.06.1-ce-git-compose-1.22.0
+      environment:
+        - IMAGE_NAME=getit
+        - COMPOSE_PROJECT_NAME=getit
   working_directory: ~/app
+
+auth_ecr: &auth_ecr
+  run:
+    name: Authenticate ECR
+    command: |
+      eval $(aws ecr get-login --no-include-email --region us-east-1)
 
 build_docker: &build_docker
   run:
@@ -9,6 +18,23 @@ build_docker: &build_docker
     command: |
       export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
       docker-compose build dev
+      docker-compose -f docker-compose.build.yml build
+
+pull_docker: &pull_docker
+  run:
+    name: Pull Docker
+    command: |
+      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+      docker pull ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH} || docker pull ${ECR_DOMAIN}/${IMAGE_NAME}:latest
+
+push_docker: &push_docker
+  run:
+    name: Push Docker
+    command: |
+      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:latest
+      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}
+      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 version: 2
 jobs:
@@ -17,10 +43,23 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - <<: *auth_ecr
+      - <<: *pull_docker
       - <<: *build_docker
+      - <<: *push_docker
       - run:
-          name: Test
-          command: docker-compose run test
+          name: Run tests
+          command: |
+            export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+            docker-compose run test
+      - run:
+          name: Get Junit tests from stopped container
+          when: always
+          command: docker cp getit_test_run_1:/app/test-results .
+      - store_test_results:
+          path: ~/app/test-results
+      - store_artifacts:
+          path: ~/app/test-results
 
   deploy-dev:
     <<: *docker-defaults
