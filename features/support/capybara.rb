@@ -1,6 +1,3 @@
-# Configure Capybara
-require 'capybara/poltergeist'
-
 Capybara.default_max_wait_time = 30
 
 if ENV['IN_BROWSER']
@@ -19,25 +16,14 @@ if ENV['IN_BROWSER']
     sleep (ENV['PAUSE'] || 0).to_i
   end
 else
-  # DEFAULT: headless tests with poltergeist/PhantomJS
-  Capybara.register_driver :poltergeist do |app|
-    Capybara::Poltergeist::Driver.new(
-    app,
-    # Found a fix to redirecting to SSL pages
-    # https://github.com/teampoltergeist/poltergeist/issues/121#issuecomment-49891097
-    phantomjs_options: ['--debug=no', '--load-images=no', '--ignore-ssl-errors=yes', '--ssl-protocol=any'],
-    window_size: [1280, 1024],
-    timeout: 500,
-    debug: false,
-    js_errors: false
+  # DEFAULT: Headless tests with chrome headless
+  Capybara.register_driver :chrome_headless do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+      chromeOptions: {
+        args: %w[ no-sandbox headless disable-gpu window-size=1280,1024]
+      }
     )
-  end
-  Capybara.default_driver    = :poltergeist
-  Capybara.javascript_driver = :poltergeist
-end
 
-Before do
-  # if Capybara.default_driver == :selenium
-  #   Capybara.current_session.driver.browser.manage.window.resize_to(1280, 1024)
-  # end
+    Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+  end
 end

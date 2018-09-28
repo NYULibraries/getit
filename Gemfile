@@ -53,7 +53,7 @@ group :development do
 end
 
 # Testing gems
-group :development, :test, :cucumber do
+group :development, :test do
   # Rspec as the test framework
   gem 'rspec-rails', '~> 3.6.0'
   # Use factory girl for creating models
@@ -65,10 +65,7 @@ group :development, :test, :cucumber do
   gem 'rspec-its', '~> 1.2.0'
 end
 
-group :test, :cucumber do
-  # Phantomjs for headless browser testing
-  gem 'phantomjs', '~> 2.1.1'
-  gem 'poltergeist', '~> 1.16.0'
+group :test do
   # Use Coveralls.io to track testing coverage
   gem 'coveralls', '~> 0.8', require: false
   # Use VCR for testing with deterministic HTTP interactions
