@@ -97,4 +97,4 @@ gem 'devise', '~> 3.5.4'
 # Nokogiri
 gem 'nokogiri', '~> 1.8.2'
 
-gem 'sentry-raven'
+gem 'sentry-raven', '~> 2'
