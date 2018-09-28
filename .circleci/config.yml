@@ -3,15 +3,15 @@ docker-defaults: &docker-defaults
     - image: nyulibraries/circleci_docker:18.06.1-ce-git-compose-1.22.0
   working_directory: ~/app
 
-version: 2
-jobs:
-  build_docker: &build_docker
+build_docker: &build_docker
   run:
     name: Build Docker
     command: |
       export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
       docker-compose build dev
 
+version: 2
+jobs:
   test:
     <<: *docker-defaults
     steps:
