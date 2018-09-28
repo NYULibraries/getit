@@ -6,7 +6,7 @@ x-build: &build
       - getit
       - nyulibraries/getit
       - nyulibraries/getit:$BRANCH_NO_SLASH
-  image: getut
+  image: getit
 x-test-env: &test-env
   <<: *build
   environment:
@@ -27,6 +27,7 @@ services:
     stdin_open: true
     volumes:
       - ./app:/app/app
+      - ./vendor:/app/vendor
     ports:
       - "3000:3000"
     command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
@@ -36,7 +37,7 @@ services:
   setup_dev:
     <<: *dev-env
     command: >
-      bash -c "bundle exec rake db:setup"
+      bash -c "sleep 5; rake db:setup"
     depends_on:
       - db
 
