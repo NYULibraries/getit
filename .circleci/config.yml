@@ -1,20 +1,23 @@
 docker-defaults: &docker-defaults
   docker:
-    - image: docker:18.03.0-ce-git
+    - image: nyulibraries/circleci_docker:18.06.1-ce-git-compose-1.22.0
   working_directory: ~/app
 
 version: 2
 jobs:
+  build_docker: &build_docker
+  run:
+    name: Build Docker
+    command: |
+      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+      docker-compose build dev
+
   test:
     <<: *docker-defaults
     steps:
       - checkout
       - setup_remote_docker
-      - run:
-          name: Setup docker-compose dependency
-          command: |
-            apk add --no-cache python3
-            pip3 install docker-compose==1.20.1
+      - <<: *build_docker
       - run:
           name: Test
           command: docker-compose run test
