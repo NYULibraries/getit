@@ -1,51 +1,56 @@
-version: '3'
-services:
+version: '3.7'
+x-build: &build
+  build:
+    context: .
+    cache_from:
+      - getit
+      - nyulibraries/getit
+      - nyulibraries/getit:$BRANCH_NO_SLASH
+  image: getit
+x-test-env: &test-env
+  <<: *build
+  environment:
+    RAILS_ENV: test
+    GETIT_DB_DATABASE: getit_test
+    BRANCH_NO_SLASH:
+  env_file:
+    - test.env
+x-dev-env: &dev-env
+  <<: *build
+  env_file:
+    - test.env
 
+services:
   dev:
-    build: .
+    <<: *dev-env
+    tty: true
+    stdin_open: true
     volumes:
-      - .:/app
-      # - ./vendor:/app/vendor
+      - ./app:/app/app
+      - ./vendor:/app/vendor
     ports:
       - "3000:3000"
-    env_file:
-      - test.env
-      # - dev.env
-    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "tail", "-f", "/dev/null"]
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
     depends_on:
-      - setup_dbs
+      - setup_dev
 
-  test:
-    build:
-      context: .
-      dockerfile: Dockerfile.test
-    environment:
-      RAILS_ENV: test
-      CI:
-      CODECLIMATE_REPO_TOKEN:
-      COVERALLS_REPO_TOKEN:
-    env_file:
-      - test.env
-    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake"]
-    depends_on:
-      - setup_test_dbs
-
-  setup_test_dbs:
-    build:
-      context: .
-      dockerfile: Dockerfile.test
-    environment:
-      RAILS_ENV: test
-      GETIT_DB_HOST: db
-    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake", "db:setup"]
+  setup_dev:
+    <<: *dev-env
+    command: >
+      bash -c "sleep 5; rake db:setup"
     depends_on:
       - db
 
-  setup_dbs:
-    build: .
-    environment:
-      GETIT_DB_HOST: db
-    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "rake", "db:setup"]
+  test:
+    <<: *test-env
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake"]
+    depends_on:
+      - setup_test
+
+  setup_test:
+    <<: *test-env
+    command: >
+      bash -c "sleep 5; rake db:setup"
     depends_on:
       - db
 
