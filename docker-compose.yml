@@ -36,8 +36,7 @@ services:
 
   setup_dev:
     <<: *dev-env
-    command: >
-      bash -c "sleep 5; rake db:setup"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake", "db:setup"]
     depends_on:
       - db
 
@@ -49,8 +48,7 @@ services:
 
   setup_test:
     <<: *test-env
-    command: >
-      bash -c "sleep 5; rake db:setup"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake", "db:setup"]
     depends_on:
       - db
 
