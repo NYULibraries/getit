@@ -18,7 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 3.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', '~> 0.12.0'
+group :non_docker do
+  gem 'therubyracer', '~> 0.12.0'
+end
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
 gem 'nyulibraries_stylesheets', github: 'NYULibraries/nyulibraries_stylesheets', tag: 'v1.1.0'
@@ -78,6 +80,8 @@ group :test do
   gem 'selenium-webdriver', '~> 3.5'
   # Use Cucumber for integration testing
   gem 'cucumber-rails', '~> 1.5.0', require: false
+  gem 'phantomjs', '~> 2.1.1'
+  gem 'poltergeist', '~>1.18.1'
 end
 
 # Use Sunspot for searching journals
