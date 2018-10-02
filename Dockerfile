@@ -1,7 +1,7 @@
-FROM nyulibraries/selenium_chrome_headless_ruby:2.3.7-slim
+FROM ruby:2.3.6-alpine
 
-ENV RUN_PACKAGES bash ca-certificates git nodejs default-libmysqlclient-dev ruby-mysql2
-ENV BUILD_PACKAGES curl libcurl4-gnutls-dev build-essential zlib1g-dev wget
+ENV RUN_PACKAGES bash ca-certificates fontconfig git mariadb-dev nodejs tzdata
+ENV BUILD_PACKAGES build-base curl-dev linux-headers ruby-dev wget
 
 # Env
 ENV INSTALL_PATH /app
@@ -11,21 +11,24 @@ ENV BUNDLE_PATH=/usr/local/bundle \
 ENV PATH="${BUNDLE_BIN}:${PATH}"
 ENV USER docker
 
-RUN groupadd -g 1000 $USER -r && \
-    useradd -u 1000 -r --no-log-init -m -d $INSTALL_PATH -g $USER $USER
+RUN addgroup -g 2000 $USER && \
+    adduser -D -h $INSTALL_PATH -u 1000 -G $USER $USER
 
 WORKDIR $INSTALL_PATH
 
+# Bundle install
 COPY Gemfile Gemfile.lock ./
-RUN apt-get update && apt-get -y --no-install-recommends install $BUILD_PACKAGES $RUN_PACKAGES \
+RUN apk add --no-cache $BUILD_PACKAGES $RUN_PACKAGES \
   && bundle config --local github.https true \
   && gem install bundler && bundle install --without non_docker --jobs 20 --retry 5 \
   && chown -R docker:docker $BUNDLE_PATH \
   && wget --no-check-certificate -q -O - https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > /tmp/wait-for-it.sh \
+  && wget --no-check-certificate -q -O - https://github.com/dustinblackman/phantomized/releases/download/2.1.1a/dockerized-phantomjs.tar.gz | tar xz -C / \
+  && npm config set user 0 \
+  && npm install -g phantomjs-prebuilt \
   && chmod a+x /tmp/wait-for-it.sh \
   && chown -R docker:docker /tmp/wait-for-it.sh \
-  && apt-get --purge -y autoremove $BUILD_PACKAGES \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* \
+&& apk del $BUILD_PACKAGES
 USER $USER
 
 COPY --chown=docker:docker . .
