@@ -36,6 +36,23 @@ push_docker: &push_docker
       docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}
       docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
+run_tests: &run_tests
+  run:
+    name: Run tests
+    command: |
+      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+      docker-compose run test
+
+junit_reports: &junit_reports
+  - run:
+      name: Get Junit tests from stopped container
+      when: always
+      command: docker cp getit_test_run_1:/app/test-results .
+  - store_test_results:
+      path: ~/app/test-results
+  - store_artifacts:
+      path: ~/app/test-results
+
 version: 2
 jobs:
   test:
@@ -47,19 +64,8 @@ jobs:
       - <<: *pull_docker
       - <<: *build_docker
       - <<: *push_docker
-      - run:
-          name: Run tests
-          command: |
-            export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-            docker-compose run test
-      - run:
-          name: Get Junit tests from stopped container
-          when: always
-          command: docker cp getit_test_run_1:/app/test-results .
-      - store_test_results:
-          path: ~/app/test-results
-      - store_artifacts:
-          path: ~/app/test-results
+      - <<: *run_tests
+      - <: *junit_reports
 
   deploy-dev:
     <<: *docker-defaults
@@ -122,9 +128,3 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-reindex:
-          requires:
-              - test
-          filters:
-            branches:
-              only: nobranchnameever
