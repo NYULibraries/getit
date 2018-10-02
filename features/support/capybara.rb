@@ -1,4 +1,3 @@
-# Configure Capybara
 require 'capybara/poltergeist'
 
 Capybara.default_max_wait_time = 30
@@ -34,10 +33,4 @@ else
   end
   Capybara.default_driver    = :poltergeist
   Capybara.javascript_driver = :poltergeist
-end
-
-Before do
-  # if Capybara.default_driver == :selenium
-  #   Capybara.current_session.driver.browser.manage.window.resize_to(1280, 1024)
-  # end
 end

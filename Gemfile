@@ -18,7 +18,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 3.1.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', '~> 0.12.0'
+group :non_docker do
+  gem 'therubyracer', '~> 0.12.0'
+end
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
 gem 'nyulibraries_stylesheets', github: 'NYULibraries/nyulibraries_stylesheets', tag: 'v1.1.0'
@@ -53,7 +55,7 @@ group :development do
 end
 
 # Testing gems
-group :development, :test, :cucumber do
+group :development, :test do
   # Rspec as the test framework
   gem 'rspec-rails', '~> 3.6.0'
   # Use factory girl for creating models
@@ -63,12 +65,10 @@ group :development, :test, :cucumber do
   gem 'rb-readline'
   gem 'guard-rspec', require: false
   gem 'rspec-its', '~> 1.2.0'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
 end
 
-group :test, :cucumber do
-  # Phantomjs for headless browser testing
-  gem 'phantomjs', '~> 2.1.1'
-  gem 'poltergeist', '~> 1.16.0'
+group :test do
   # Use Coveralls.io to track testing coverage
   gem 'coveralls', '~> 0.8', require: false
   # Use VCR for testing with deterministic HTTP interactions
@@ -80,6 +80,8 @@ group :test, :cucumber do
   gem 'selenium-webdriver', '~> 3.5'
   # Use Cucumber for integration testing
   gem 'cucumber-rails', '~> 1.5.0', require: false
+  gem 'phantomjs', '~> 2.1.1'
+  gem 'poltergeist', '~>1.18.1'
 end
 
 # Use Sunspot for searching journals

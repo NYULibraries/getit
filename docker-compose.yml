@@ -4,8 +4,8 @@ x-build: &build
     context: .
     cache_from:
       - getit
-      - nyulibraries/getit
-      - nyulibraries/getit:$BRANCH_NO_SLASH
+      - $ECR_DOMAIN/getit
+      - $ECR_DOMAIN/getit:$BRANCH_NO_SLASH
   image: getit
 x-test-env: &test-env
   <<: *build
@@ -25,9 +25,9 @@ services:
     <<: *dev-env
     tty: true
     stdin_open: true
-    volumes:
-      - ./app:/app/app
-      - ./vendor:/app/vendor
+    # volumes:
+    #   - ./app:/app/app
+    #   - ./vendor:/app/vendor
     ports:
       - "3000:3000"
     command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
@@ -36,8 +36,7 @@ services:
 
   setup_dev:
     <<: *dev-env
-    command: >
-      bash -c "sleep 5; rake db:setup"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake", "db:setup"]
     depends_on:
       - db
 
@@ -49,8 +48,7 @@ services:
 
   setup_test:
     <<: *test-env
-    command: >
-      bash -c "sleep 5; rake db:setup"
+    command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake", "db:setup"]
     depends_on:
       - db
 
