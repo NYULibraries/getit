@@ -128,7 +128,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
       it 'should redirect to ILL' do
-        expect(subject.location).to match /^http:\/\/ill(dev)?\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
+        expect(subject.location).to match /^http:\/\/(dev\.)?ill\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
       end
     end
     context 'when the request type is E-ZBorrow' do
@@ -136,14 +136,14 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
       context 'when institution is NYU' do
-        it 'should redirect to EZborrow script in PDS' do
-          expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?ls=NYU&query=/
+        it 'should redirect to EZborrow script in Login' do
+          expect(subject.location).to match /^https:\/\/(dev\.)?login\.library\.nyu\.edu\/ezborrow\?query=ti%3D/
         end
       end
       context 'when institution is NS' do
         let(:current_primary_institution) { Institutions.institutions[:NS] }
-        it 'should redirect to EZborrow script in PDS' do
-          expect(subject.location).to match /^https:\/\/pds(dev)?\.library\.nyu\.edu\/ezborrow\?ls=THENEWSCHOOL&query=/
+        it 'should redirect to EZborrow script in Login' do
+          expect(subject.location).to match /^https:\/\/(dev\.)?login\.library\.nyu\.edu\/ezborrow\/ns\?query=ti%3D/
         end
       end
     end
