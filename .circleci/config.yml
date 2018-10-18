@@ -42,6 +42,13 @@ junit_reports: &junit_reports
     when: always
     command: docker cp getit_test_run_1:/app/test-results .
 
+run_tests: &run_tests
+  run:
+    name: Run tests
+    command: |
+      export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
+      docker-compose run test
+
 version: 2
 jobs:
   test:
@@ -53,11 +60,7 @@ jobs:
       - <<: *pull_docker
       - <<: *build_docker
       - <<: *push_docker
-      - run:
-          name: Run tests
-          command: |
-            export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-            docker-compose run test
+      - <<: *run_tests
       - <<: *junit_reports
       - store_test_results:
           path: ~/app/test-results
@@ -91,25 +94,25 @@ jobs:
           command: |
             docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Production%20Deploy/build/api
 
-  # deploy-reindex:
-  #   <<: *docker-defaults
-  #   steps:
-  #     - checkout
-  #     - setup_remote_docker
-  #     - <<: *auth_ecr
-  #     - <<: *pull_docker
-  #     - <<: *build_docker
-  #     - <<: *push_docker
-  #     - <<: *run_tests
-  #     - <<: *junit_reports
-  #     - store_test_results:
-  #         path: ~/app/test-results
-  #     - store_artifacts:
-  #         path: ~/app/test-results
-  #     - run:
-  #         name: Deploy into reindex environment via Jenkins
-  #         command: |
-  #           docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Reindex%20Deploy/build/api
+  deploy-reindex:
+    <<: *docker-defaults
+    steps:
+      - checkout
+      - setup_remote_docker
+      - <<: *auth_ecr
+      - <<: *pull_docker
+      - <<: *build_docker
+      - <<: *push_docker
+      - <<: *run_tests
+      - <<: *junit_reports
+      - store_test_results:
+          path: ~/app/test-results
+      - store_artifacts:
+          path: ~/app/test-results
+      - run:
+          name: Deploy into reindex environment via Jenkins
+          command: |
+            docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Reindex%20Deploy/build/api
 
 workflows:
   version: 2
