@@ -13,6 +13,8 @@ x-test-env: &test-env
     RAILS_ENV: test
     GETIT_DB_DATABASE: getit_test
     BRANCH_NO_SLASH:
+    CI:
+    COVERALLS_REPO_TOKEN:
   env_file:
     - test.env
 x-dev-env: &dev-env
