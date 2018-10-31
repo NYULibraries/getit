@@ -1,8 +1,8 @@
 # GetIt @ NYU
 
 [![CircleCI](https://circleci.com/gh/NYULibraries/getit.svg?style=svg)](https://circleci.com/gh/NYULibraries/getit)
-[![Code Climate](https://codeclimate.com/github/NYULibraries/getit.png)](https://codeclimate.com/github/NYULibraries/getit)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/getit/badge.png?branch=master)](https://coveralls.io/r/NYULibraries/getit)
+[![Maintainability](https://api.codeclimate.com/v1/badges/08eaeef7455153839f6e/maintainability)](https://codeclimate.com/github/NYULibraries/getit/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/NYULibraries/getit/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/getit?branch=master)
 
 The GetIt application at NYU leverages [`Umlaut`](http://github.com/team-umlaut/umlaut) to provide just in time OpenURL resolution.
 This means that GetIt should only display services that will result in useful delivery options based on the context of the current request.
