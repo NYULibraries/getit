@@ -94,26 +94,6 @@ jobs:
           command: |
             docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Production%20Deploy/build/api
 
-  deploy-reindex:
-    <<: *docker-defaults
-    steps:
-      - checkout
-      - setup_remote_docker
-      - <<: *auth_ecr
-      - <<: *pull_docker
-      - <<: *build_docker
-      - <<: *push_docker
-      - <<: *run_tests
-      - <<: *junit_reports
-      - store_test_results:
-          path: ~/app/test-results
-      - store_artifacts:
-          path: ~/app/test-results
-      - run:
-          name: Deploy into reindex environment via Jenkins
-          command: |
-            docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Reindex%20Deploy/build/api
-
 workflows:
   version: 2
   build-test-and-deploy:
