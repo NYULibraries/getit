@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/NYULibraries/exlibris-nyu.git
-  revision: f33707f00327899af2519ecd028fde88f13c6bf9
-  tag: v2.4.0
+  revision: 48675a20bba35ee661a9af57be7f523beb6c7a9e
+  branch: master
   specs:
     exlibris-nyu (2.4.0)
       exlibris-aleph (~> 2.0.4)
