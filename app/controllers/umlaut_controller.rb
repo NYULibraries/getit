@@ -170,7 +170,7 @@ class UmlautController < ApplicationController
     end
 
     holdings do
-      available_statuses ["Available", "Check Availability", "Offsite Available"]
+      available_statuses ["Available", "Check Availability", "Offsite Available", "Offsite"]
     end
 
     # Advanced topic, you can declaratively configure
