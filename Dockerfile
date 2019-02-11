@@ -19,8 +19,9 @@ WORKDIR $INSTALL_PATH
 # Bundle install
 COPY Gemfile Gemfile.lock ./
 RUN apk add --no-cache $BUILD_PACKAGES $RUN_PACKAGES \
+  && gem install bundler -v '2.0.1' \
   && bundle config --local github.https true \
-  && gem install bundler && bundle install --without non_docker --jobs 20 --retry 5 \
+  && bundle install --without no_docker --jobs 20 --retry 5 \
   && chown -R docker:docker $BUNDLE_PATH \
   && wget --no-check-certificate -q -O - https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > /tmp/wait-for-it.sh \
   && wget --no-check-certificate -q -O - https://github.com/dustinblackman/phantomized/releases/download/2.1.1a/dockerized-phantomjs.tar.gz | tar xz -C / \
