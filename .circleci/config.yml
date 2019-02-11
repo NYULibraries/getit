@@ -12,7 +12,6 @@ auth_quay: &auth_quay
     command: |
       docker login -u "$QUAY_USERNAME" --password "$QUAY_PASSWORD" quay.io
 
-
 build_docker: &build_docker
   run:
     name: Build Docker
