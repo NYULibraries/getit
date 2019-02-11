@@ -4,8 +4,8 @@ x-build: &build
     context: .
     cache_from:
       - getit
-      - $ECR_DOMAIN/getit
-      - $ECR_DOMAIN/getit:$BRANCH_NO_SLASH
+      - quay.io/nyulibraries/getit
+      - quay.io/nyulibraries/getit:$BRANCH_NO_SLASH
   image: getit
 x-test-env: &test-env
   <<: *build

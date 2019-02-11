@@ -146,6 +146,12 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
           expect(subject.location).to match /^https:\/\/(dev\.)?login\.library\.nyu\.edu\/ezborrow\/ns\?query=ti%3D/
         end
       end
+      context 'when institution is NYUAD' do
+        let(:current_primary_institution) { Institutions.institutions[:NYUAD] }
+        it 'should redirect to EZborrow script in Login' do
+          expect(subject.location).to match /^https:\/\/(dev\.)?login\.library\.nyu\.edu\/ezborrow\?query=ti%3D/
+        end
+      end
     end
     context 'when the request type is available ' do
       let(:type) { 'available' }

@@ -169,6 +169,6 @@ class HoldingRequestsController < UmlautController
   end
 
   def ezborrow_institution_path
-    EZBORROW_FUNCTIONS[current_primary_institution.code] || 'NYU'
+    EZBORROW_FUNCTIONS[current_primary_institution.code] || EZBORROW_FUNCTIONS[:NYU]
   end
 end
