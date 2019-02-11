@@ -4,8 +4,8 @@ x-build-image: &build-image
     context: .
     cache_from:
       - getit
-      - $ECR_DOMAIN/getit
-      - $ECR_DOMAIN/getit:$BRANCH_NO_SLASH
+      - quay.io/nyulibraries/getit
+      - quay.io/nyulibraries/getit:$BRANCH_NO_SLASH
   environment:
     BRANCH_NO_SLASH:
 
@@ -15,16 +15,16 @@ services:
     image: getit
   getit_2:
     <<: *build-image
-    image: "${ECR_DOMAIN}/getit:latest"
+    image: "quay.io/nyulibraries/getit:latest"
     depends_on:
       - getit_1
   getit_3:
     <<: *build-image
-    image: "${ECR_DOMAIN}/getit:${BRANCH_NO_SLASH}"
+    image: "quay.io/nyulibraries/getit:${BRANCH_NO_SLASH}"
     depends_on:
       - getit_2
   getit_4:
     <<: *build-image
-    image: "${ECR_DOMAIN}/getit:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}"
+    image: "quay.io/nyulibraries/getit:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}"
     depends_on:
       - getit_3

@@ -6,11 +6,12 @@ docker-defaults: &docker-defaults
         - COMPOSE_PROJECT_NAME=getit
   working_directory: ~/app
 
-auth_ecr: &auth_ecr
+auth_quay: &auth_quay
   run:
-    name: Authenticate ECR
+    name: Authenticate Quay
     command: |
-      eval $(aws ecr get-login --no-include-email --region us-east-1)
+      docker login -u "$QUAY_USERNAME" --password "$QUAY_PASSWORD" quay.io
+
 
 build_docker: &build_docker
   run:
@@ -25,16 +26,16 @@ pull_docker: &pull_docker
     name: Pull Docker
     command: |
       export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-      docker pull ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH} || docker pull ${ECR_DOMAIN}/${IMAGE_NAME}:latest
+      docker pull quay.io/nyulibraries/${IMAGE_NAME}:${BRANCH_NO_SLASH} || docker pull quay.io/nyulibraries/${IMAGE_NAME}:latest
 
 push_docker: &push_docker
   run:
     name: Push Docker
     command: |
       export BRANCH_NO_SLASH=${CIRCLE_BRANCH//\//_}
-      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:latest
-      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}
-      docker push ${ECR_DOMAIN}/${IMAGE_NAME}:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
+      docker push quay.io/nyulibraries/${IMAGE_NAME}:latest
+      docker push quay.io/nyulibraries/${IMAGE_NAME}:${BRANCH_NO_SLASH}
+      docker push quay.io/nyulibraries/${IMAGE_NAME}:${BRANCH_NO_SLASH}-${CIRCLE_SHA1}
 
 junit_reports: &junit_reports
   run:
@@ -56,7 +57,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - <<: *auth_ecr
+      - <<: *auth_quay
       - <<: *pull_docker
       - <<: *build_docker
       - <<: *push_docker
