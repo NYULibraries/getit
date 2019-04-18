@@ -5,7 +5,7 @@ class SearchControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   def user
-    FactoryGirl.create(:user)
+    FactoryBot.create(:user)
   end
 
   setup do

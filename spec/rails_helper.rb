@@ -15,7 +15,6 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/its'
 require 'database_cleaner'
-require 'factory_girl'
 require 'pry'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -52,7 +51,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Include Factory Girl convenience methods
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   # Include the Devise test helpers
   config.include Devise::TestHelpers, type: :controller
@@ -84,7 +83,7 @@ RSpec.configure do |config|
     # Run factory girl lint before the suite
     begin
       DatabaseCleaner.start
-      # FactoryGirl.lint
+      # FactoryBot.lint
     ensure
       DatabaseCleaner.clean
     end

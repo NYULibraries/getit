@@ -69,7 +69,7 @@ def nyu_aleph_service_data
   }
 end
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :service_response do
     service_id 'NYU_SFX'
     display_text 'Dummy Service'

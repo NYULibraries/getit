@@ -56,19 +56,20 @@ end
 
 # Testing gems
 group :development, :test do
-  # Rspec as the test framework
-  gem 'rspec-rails', '~> 3.6.0'
-  # Use factory girl for creating models
-  gem 'factory_girl_rails', '~> 4.8.0'
   # Use pry as the REPL
   gem 'pry', '~> 0.10.1'
   gem 'rb-readline'
-  gem 'guard-rspec', require: false
-  gem 'rspec-its', '~> 1.2.0'
-  gem 'rspec_junit_formatter', '~> 0.4.1'
 end
 
 group :test do
+  # Rspec as the test framework
+  gem 'rspec-rails', '~> 3.6.0'
+  # Use factory girl for creating models
+  # Lock into 4.x because https://github.com/thoughtbot/factory_bot_rails/issues/247
+  gem 'factory_bot_rails', '~> 4.10.0'
+  gem 'guard-rspec', require: false
+  gem 'rspec-its', '~> 1.2.0'
+  gem 'rspec_junit_formatter', '~> 0.4.1'
   # Use Coveralls.io to track testing coverage
   gem 'coveralls', '~> 0.8', require: false
   # Use VCR for testing with deterministic HTTP interactions
