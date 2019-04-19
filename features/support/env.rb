@@ -55,6 +55,10 @@ end
 #     DatabaseCleaner.strategy = :transaction
 #   end
 #
+Before do
+  # Don't report thread failures in testing
+  Thread.report_on_exception = false
+end
 
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.

@@ -12,11 +12,10 @@ end
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'factory_girl'
 require 'pry'
 
 # Make sure all Factories are loaded and actually work
-FactoryGirl.reload
+FactoryBot.reload
 
 class ActionController::TestRequest
   def performed?; end
