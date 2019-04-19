@@ -54,9 +54,9 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 
   # Include the Devise test helpers
-  config.include Devise::TestHelpers, type: :controller
-  config.include Devise::TestHelpers, type: :view
-  config.include Devise::TestHelpers, type: :helper
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::Test::ControllerHelpers, type: :helper
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -75,6 +75,8 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.before(:suite) do
+    # Don't report thread failures in testing
+    Thread.report_on_exception = false
     # Startout by trucating all the tables
     DatabaseCleaner.clean_with :truncation
     # Then use truncation to handle other changes
