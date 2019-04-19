@@ -1,5 +1,5 @@
 # ReferentValue factory
-FactoryGirl.define do
+FactoryBot.define do
   factory :referent_value do
     key_name 'key'
     value 'Value'
