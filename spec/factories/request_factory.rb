@@ -2,7 +2,7 @@
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # Request factory
-FactoryGirl.define do
+FactoryBot.define do
   factory :request do
     sequence :session_id do |n| "session-#{n}" end
     referent

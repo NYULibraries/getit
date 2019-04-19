@@ -1,5 +1,5 @@
 # Referent factory
-FactoryGirl.define do
+FactoryBot.define do
   factory :referent do
     title 'Title'
     issn '1234-6789'
