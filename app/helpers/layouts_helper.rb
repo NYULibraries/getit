@@ -26,13 +26,7 @@ module LayoutsHelper
 
   def breadcrumbs
     breadcrumbs = super
-    unless params["controller"] == "export_email"
-      if params["action"].eql?("journal_list") or params["action"].eql?("journal_search")
-        breadcrumbs << link_to('E-Journals', :controller=>'search')
-        breadcrumbs << "Results"
-      else
-        breadcrumbs << "Journals"
-      end
-    end
+    breadcrumbs.pop
+    breadcrumbs << link_to('Catalog', bobcat_breadcrumb_root)
   end
 end
