@@ -14,7 +14,7 @@ describe 'layouts/resolve' do
   end
   subject { rendered }
   it { should match /<title>GetIt | Page Title<title>/ }
-  it { should match /class="umlaut no-js"/ }
+  it { should match /class="umlaut no-js resolve"/ }
   it { should match /class="umlaut-container"/ }
   it { should match /class="umlaut-main-container-fluid container-fluid umlaut-resolve-container/ }
   it { should match /Log-out Dev/ }
