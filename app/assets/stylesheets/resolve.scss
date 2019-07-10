@@ -14,6 +14,7 @@
 @import "nyulibraries_stylesheets/nyulibraries/misc";
 @import "resolve/common";
 @import "resolve/permalink";
+@import "alerts";
 
 .help-text-icon {
   display: none;
@@ -36,3 +37,4 @@
     @extend .invisible;
   }
 }
+
