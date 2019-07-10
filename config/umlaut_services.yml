@@ -201,7 +201,7 @@ default:
 NYU:
   name: NYU Libraries
   parent_code: default
-  active_tab: journals
+  active_tab: all
   views:
     gauges_tracking_code: <%= ENV['NYU_GAUGES_TRACKING_CODE'] %>
     css: search
@@ -298,7 +298,7 @@ NYUSH:
         url_suffix: "?umlaut.institution=NYUSH"
 CU:
   name: The Cooper Union Library
-  active_tab: journals
+  active_tab: all
   views:
     gauges_tracking_code: <%= ENV['CU_GAUGES_TRACKING_CODE'] %>
     css: search_cu
@@ -339,7 +339,7 @@ CU:
 
 NS:
   name: New School Libraries
-  active_tab: journals
+  active_tab: all
   views:
     gauges_tracking_code: <%= ENV['NS_GAUGES_TRACKING_CODE'] %>
     css: search_ns
