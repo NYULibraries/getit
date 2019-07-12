@@ -27,14 +27,13 @@ services:
     <<: *dev-env
     tty: true
     stdin_open: true
-    # volumes:
-    #   - ./app:/app/app
-    #   - ./vendor:/app/vendor
     ports:
       - "3000:3000"
     command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
     depends_on:
       - setup_dev
+    # volumes:
+    #   - .:/app
 
   setup_dev:
     <<: *dev-env
@@ -47,6 +46,8 @@ services:
     command: ["/tmp/wait-for-it.sh", "db:3306", "--", "bundle", "exec", "rake"]
     depends_on:
       - setup_test
+    # volumes:
+    #   - .:/app
 
   setup_test:
     <<: *test-env

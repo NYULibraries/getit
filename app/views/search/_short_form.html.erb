@@ -1,3 +1,4 @@
+
 <%= form_tag({:controller=>'search', :action=>'journal_search'}, {:method => "get", :class => "form-inline form-very-inline", :name => "OpenURL", :id=>"OpenURL"}) do %>
   <%= hidden_field_tag "umlaut.institution", "#{(current_primary_institution.nil?) ? "NYU" : current_primary_institution.code}" %>
   <%= hidden_field_tag "rfr_id", "info:sid/sfxit.com:citation" %>
