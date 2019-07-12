@@ -8,9 +8,11 @@
     <%= resolve_javascripts %>
     <%= render_umlaut_head_content %>
   </head>
-  <body class="umlaut no-js">
+  <body class="umlaut no-js resolve">
     <%= render 'common/google_tag_manager_noscript' %>
     <%= render :partial => "umlaut/header" %>
+    <main>
+    <%= render "common/persistent_alert" %>
     <div class="umlaut-container">
       <div class="umlaut-main-container-fluid container-fluid <%= "umlaut-#{params[:controller]}-container" %>">
         <%= yield %>
@@ -32,5 +34,6 @@
       })();
     </script>
     <% end %>
+    </main>
   </body>
 </html>

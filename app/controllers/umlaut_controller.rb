@@ -183,7 +183,7 @@ class UmlautController < ApplicationController
       partial "wayfinder"
       show_heading false
       show_spinner false
-      visibility :responses_exist
+      visibility true
     end
 
     # Removing bib_tool from sidebar

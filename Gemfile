@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jQuery as the JavaScript library
 gem 'jquery-rails', '~> 3.1.0'
 
+gem 'bootstrap-sass', '= 3.3.7'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 group :non_docker do
   gem 'therubyracer', '~> 0.12.0'
@@ -24,8 +26,9 @@ end
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
 gem 'nyulibraries_stylesheets', github: 'NYULibraries/nyulibraries_stylesheets', tag: 'v1.1.0'
-gem 'nyulibraries_templates', github: 'NYULibraries/nyulibraries_templates', tag: 'v1.2.0'
-gem 'nyulibraries_institutions', github: 'NYULibraries/nyulibraries_institutions', tag: 'v1.0.3'
+gem 'nyulibraries_templates', github: 'NYULibraries/nyulibraries_templates', tag: 'v1.3.0'
+# gem 'nyulibraries_institutions', github: 'NYULibraries/nyulibraries_institutions', tag: 'v1.0.3'
+gem 'nyulibraries_institutions', github: 'NYULibraries/nyulibraries_institutions', branch: 'feature/remove_journals'
 gem 'nyulibraries_javascripts', github: 'NYULibraries/nyulibraries_javascripts', tag: 'v1.0.0'
 gem 'nyulibraries_errors', github: 'NYULibraries/nyulibraries_errors', tag: 'v1.0.1'
 # Use higher version of Compass CSS framework for sprites, etc.

@@ -19,7 +19,7 @@ WORKDIR $INSTALL_PATH
 # Bundle install
 COPY Gemfile Gemfile.lock ./
 RUN apk add --no-cache $BUILD_PACKAGES $RUN_PACKAGES \
-  && gem install bundler -v '2.0.1' \
+  && gem install bundler -v '1.17.3' \
   && bundle config --local github.https true \
   && bundle install --without no_docker --jobs 20 --retry 5 \
   && chown -R docker:docker $BUNDLE_PATH \

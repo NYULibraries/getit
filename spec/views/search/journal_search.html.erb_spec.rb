@@ -13,8 +13,6 @@ describe 'search/journal_search' do
   end
   subject { rendered }
   it { should match /<div class="search with-tabs">/ }
-  it { should render_template 'search/_short_form' }
-  it { should render_template 'search/_browse' }
   it { should render_template 'search/_pager' }
   context 'when there are no results' do
     let(:hits) { 0 }
