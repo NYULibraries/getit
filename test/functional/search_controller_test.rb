@@ -127,7 +127,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -141,7 +141,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -155,7 +155,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -169,7 +169,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -184,7 +184,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -198,7 +198,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -215,7 +215,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header
@@ -232,7 +232,7 @@ class SearchControllerTest < ActionController::TestCase
       assert_response :success
       assert_select "title", "BobCat"
       assert_select 'head link[rel="stylesheet"]', {:count => 1, :href => "/assets/search.css"}
-      assert_select 'div.search div.search-section', 2
+      assert_select 'div.search div.search-section', 0
       assert_select 'div.pagination', 2
       assert_select 'div.results div.result', 20
       assert_tabs_header

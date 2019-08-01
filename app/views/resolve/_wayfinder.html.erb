@@ -1,23 +1,5 @@
-<%
-wayfinders = get_service_type('wayfinder') # Get all wayfinders for display.
-unless wayfinders.empty? %>
-  <ul><%
-    wayfinders.each do |wayfinder|
-      view_data = wayfinder.view_data %>
-      <li><%
-        rfr_name = wayfinder.view_data[:rfr_name]
-        wayfinder_attributes =
-          (current_primary_institution.views.nil? or
-            current_primary_institution.views["wayfinder_attributes"].nil? or
-              current_primary_institution.views["wayfinder_attributes"][rfr_name].nil?) ?
-                {} : current_primary_institution.views["wayfinder_attributes"][rfr_name]
-        display_text = (wayfinder_attributes["display_text"].nil?) ?
-          view_data[:display_text] : wayfinder_attributes["display_text"]
-        url = (wayfinder_attributes["url_suffix"].nil?) ?
-          view_data[:url] : "#{view_data[:url]}#{wayfinder_attributes["url_suffix"]}" %><%=
-        content_tag "i", nil, :class => "icons-famfamfam-arrow_undo" %><%=
-        link_to display_text, url %>
-      </li><%
-    end %>
-  </ul><%
-end %>
+<ul>
+  <li><a href="<%= bobcat_breadcrumb_root %>" target="_blank">Catalog Search <span class="sr-only">(opens in new window)</span>
+  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+  </a>
+</ul>
