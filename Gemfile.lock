@@ -58,8 +58,8 @@ GIT
 
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_templates.git
-  revision: 83019ee32587314faee75edb0cc291985ad01418
-  tag: v1.3.0
+  revision: 9aa40cb3937ce52c696f3df3ddb36ab762acce6e
+  branch: feature/link_active_tab_to_arbitrary_url
   specs:
     nyulibraries_templates (1.3.0)
       rails (>= 4)
