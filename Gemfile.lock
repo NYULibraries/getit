@@ -34,7 +34,7 @@ GIT
 GIT
   remote: https://github.com/NYULibraries/nyulibraries_institutions.git
   revision: d9c4a643b6f2c17e6d2ba96ca2fc456fd27433cd
-  branch: feature/remove_journals
+  branch: feature/fix_default_bobcat_url
   specs:
     nyulibraries_institutions (1.0.4)
       institutions (~> 0.1.3)
