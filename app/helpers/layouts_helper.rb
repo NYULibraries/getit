@@ -27,6 +27,6 @@ module LayoutsHelper
   def breadcrumbs
     breadcrumbs = super
     breadcrumbs.pop
-    breadcrumbs << link_to('Catalog', bobcat_breadcrumb_root)
+    breadcrumbs << link_to('Catalog', bobcat_breadcrumb_base_url)
   end
 end
