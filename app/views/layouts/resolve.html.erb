@@ -19,21 +19,6 @@
       </div>
     </div>
     <%= render :partial => "umlaut/footer" %>
-    <% if Rails.env.production? %>
-    <script type="text/javascript">
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '<%= current_primary_institution.views["gauges_tracking_code"] %>');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-    <% end %>
     </main>
   </body>
 </html>

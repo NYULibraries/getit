@@ -5,11 +5,7 @@ module LayoutsHelper
   end
 
   def gauges?
-    Rails.env.production?
-  end
-
-  def gauges_tracking_code
-    institution_views["gauges_tracking_code"]
+    false
   end
 
   def google_analytics?
