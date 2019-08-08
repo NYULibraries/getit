@@ -5,7 +5,7 @@ module LayoutsHelper
   end
 
   def gauges?
-    Rails.env.production?
+    false
   end
 
   def google_analytics?
