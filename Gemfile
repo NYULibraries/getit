@@ -99,6 +99,6 @@ gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag:
 gem 'devise', '~> 4.6.0'
 
 # Nokogiri
-gem 'nokogiri', '~> 1.8.2'
+gem 'nokogiri', '~> 1.10.4'
 
 gem 'sentry-raven', '~> 2'
