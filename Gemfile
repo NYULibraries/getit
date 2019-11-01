@@ -96,7 +96,7 @@ gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.4.1'
 
 # Use omniauth strategy for login with devise
 gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag: 'v2.1.1'
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 
 # Nokogiri
 gem 'nokogiri', '~> 1.10.4'
