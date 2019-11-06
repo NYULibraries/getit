@@ -29,7 +29,7 @@ else
     timeout: 500,
     debug: false,
     js_errors: false,
-    follow_redirect: false
+    follow_redirect: true
     )
   end
   Capybara.default_driver    = :poltergeist
