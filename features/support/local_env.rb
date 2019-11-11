@@ -2,6 +2,8 @@ require 'coveralls'
 Coveralls.wear_merged!('rails')
 
 require 'pry'
+Pry.config.input = STDIN
+Pry.config.output = STDOUT
 
 # Require support classes in spec/support and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each do |helper|
