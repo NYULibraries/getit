@@ -22,6 +22,7 @@ gem 'bootstrap-sass', '= 3.3.7'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 group :non_docker do
   gem 'therubyracer', '~> 0.12.0'
+  gem 'rb-readline', '~> 0.5.5'
 end
 
 # Use the NYU Libraries assets gem for shared NYU Libraries assets
@@ -59,8 +60,7 @@ end
 # Testing gems
 group :development, :test do
   # Use pry as the REPL
-  gem 'pry', '~> 0.10.1'
-  gem 'rb-readline'
+  gem 'pry', '~> 0.12.2'
 end
 
 group :test do
@@ -96,7 +96,7 @@ gem 'exlibris-nyu', github: 'NYULibraries/exlibris-nyu', tag: 'v2.4.1'
 
 # Use omniauth strategy for login with devise
 gem 'omniauth-nyulibraries', github: 'NYULibraries/omniauth-nyulibraries',  tag: 'v2.1.1'
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 
 # Nokogiri
 gem 'nokogiri', '~> 1.10.4'
