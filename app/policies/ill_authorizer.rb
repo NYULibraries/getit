@@ -5,22 +5,7 @@ class ILLAuthorizer < PatronStatusAuthorizer
   end
 
   private
-  # Get list of patron statuses from environment
-  #
-  # The figs version of these environment variables will be an evaluated Hash or Array
-  # If it's a Hash from configula the expected form is:
-  # => {
-  #     ILL_PATRON_STATUSES:
-  #       - name: "Master's Student"
-  #         code: "51"
-  #    }
-  # If it's an Array sent in from the environment, just make sure to map it to string:
-  # =>  ILL_PATRON_STATUSES=[01,02,03] => ["01","02","03"]
   def patron_statuses
-    if Figs.env.ill_patron_statuses.try(:first).is_a? Hash
-      Figs.env.ill_patron_statuses.map {|status| status["code"]}
-    else
-      Figs.env.ill_patron_statuses.try(:map) {|status| status.to_s} || []
-    end
+    @patron_statuses ||= ["20", "21", "22", "23", "30", "31", "32", "34", "35", "37", "50", "51", "52", "53", "54", "55", "56", "57", "58", "60", "61", "62", "63", "65", "66", "80", "81", "82", "89"]
   end
 end
