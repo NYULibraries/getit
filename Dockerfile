@@ -1,4 +1,4 @@
-FROM ruby:2.5.5-alpine
+FROM ruby:2.5-alpine
 
 # Env
 ENV INSTALL_PATH /app
@@ -8,7 +8,7 @@ ENV BUNDLE_PATH=/usr/local/bundle \
 ENV PATH="${BUNDLE_BIN}:${PATH}"
 ENV USER docker
 
-ENV RUN_PACKAGES bash ca-certificates fontconfig git mariadb-dev nodejs nodejs-npm tzdata 
+ENV RUN_PACKAGES bash ca-certificates coreutils fontconfig git mariadb-dev nodejs nodejs-npm tzdata 
 ENV BUILD_PACKAGES build-base curl curl-dev linux-headers ruby-dev wget
 
 RUN addgroup -g 2000 $USER && \
