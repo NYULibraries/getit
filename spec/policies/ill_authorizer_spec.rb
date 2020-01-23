@@ -26,7 +26,7 @@ describe ILLAuthorizer do
   end
   describe '#patron_statuses' do
     subject { authorizer.send(:patron_statuses) }
-    it { is_expected.to include "20" }
+    it { is_expected.to include "30" }
   end
 
   context 'when initialized with a user argument' do
