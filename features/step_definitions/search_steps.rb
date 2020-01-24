@@ -14,6 +14,6 @@ When(/^I search for the journal title "(.+)"$/) do |search_text|
 end
 
 When(/^I should be redirected to the Citation Linker for the (.+) view$/) do  |view|
-  expect(page.driver.current_url).to include "http://bobcatdev.library.nyu.edu/primo-explore"
+  expect(page.driver.current_url).to include "https://bobcatdev.library.nyu.edu/primo-explore"
 end
 
