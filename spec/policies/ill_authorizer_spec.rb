@@ -26,19 +26,7 @@ describe ILLAuthorizer do
   end
   describe '#patron_statuses' do
     subject { authorizer.send(:patron_statuses) }
-    let(:patron_statuses) { [{"name" => "Master's Student", "code" => "51"}] }
-    before { allow(Figs).to receive_message_chain(:env, :ill_patron_statuses).and_return(patron_statuses) }
-    context 'when patron statuses are a hash from a config' do
-      it { should eql ["51"] }
-    end
-    context 'when patron statuses are an array from an environment variable' do
-      let(:patron_statuses) { ["51"] }
-      it { should eql ["51"] }
-    end
-    context 'when patron statuses are empty' do
-      let(:patron_statuses) { nil }
-      it { should be_empty }
-    end
+    it { is_expected.to include "30" }
   end
 
   context 'when initialized with a user argument' do
