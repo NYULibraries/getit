@@ -340,7 +340,7 @@ NS:
     css: search_ns
     resolve_css: resolve_ns
     stackmap_css: stackmap.com/integration/newschool/StackMap.css
-    sfx_base_url: http://sfx4.library.newschool.edu/ns?
+    sfx_base_url: https://sfx.library.newschool.edu/ns?
     wayfinder_attributes:
       primo:
         url_suffix: "?vid=NS"
@@ -353,7 +353,7 @@ NS:
       name: SFX @ New School Libraries
       display_name: SFX @ New School Libraries
       type: Sfx
-      base_url: http://sfx4.library.newschool.edu/ns
+      base_url: https://sfx.library.newschool.edu/ns
       priority: 1
       click_passthrough: true
       sfx_requests_expire_crontab: '00 00 * * 00'
