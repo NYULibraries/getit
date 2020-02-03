@@ -44,3 +44,4 @@ dev.env
 vendor
 
 test-results/
+.local/

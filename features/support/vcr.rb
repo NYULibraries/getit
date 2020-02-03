@@ -38,8 +38,8 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/checked_out'
   t.tag '@user/checked_out'
   t.tag '@consortium_user/checked_out'
-  t.tag '@newschool_ezborrow_user/checked_out'#,  record: :new_episodes
-  t.tag '@newschool_ill_user/checked_out'#,  record: :new_episodes
+  t.tag '@newschool_ezborrow_user/checked_out',  record: :new_episodes
+  t.tag '@newschool_ill_user/checked_out', record: :new_episodes
   t.tag '@user/isaw_available'
   t.tag '@user/dibner_available'#, allow_playback_repeats: true, record: :all
   t.tag '@guest/requested'
@@ -60,11 +60,11 @@ VCR.cucumber_tags do |t|
   t.tag '@guest/afc'
   t.tag '@user/franny_and_zooey'
   t.tag '@user/the_catcher_in_the_rye'
-  t.tag '@user/unavailable_newschool'#, record: :new_episodes
+  t.tag '@user/unavailable_newschool', record: :new_episodes
   t.tag '@user/unavailable_nyu'
   t.tag '@guest/unavailable_nyu'
   t.tag '@nyush_user/recallable'#, allow_playback_repeats: true, record: :all
-  t.tag '@institutions_views'#, record: :new_episodes
+  t.tag '@institutions_views', record: :new_episodes
   t.tag '@logout'
   # Disallowed not in use
   t.tags '@disallowed', record: :none
