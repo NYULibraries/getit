@@ -771,4 +771,84 @@ http_interactions:
         (tab15).</note><adm-library>NYU50</adm-library><adm-doc-number>003774543</adm-doc-number><item-sequence>000010</item-sequence><exact-item>N</exact-item></info></item></item-serv> '
     http_version: 
   recorded_at: Tue, 22 Dec 2015 20:53:49 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: http://recommender.service.exlibrisgroup.com/service/recommender/openurl?ctx_enc=info:ofi/enc:UTF-8&ctx_id=&ctx_tim=2020-02-03T18:28:46%2B00:00&ctx_ver=Z39.88-2004&req.ip=127.0.0.1&res_dat=format=rss%26source=global%26token=NS_BX_TOKEN%26maxRecords=2%26threshold=50%26baseUrl=/ns/resolve?&rfr_id=info:sid/primo.exlibrisgroup.com:primo-nyu_aleph003774543&rft.au=O%27Brien,%20Geoffrey,%201948-&rft.aufirst=Geoffrey,&rft.btitle=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft.lccn=2013002370&rft.title=Stolen%20glimpses,%20captive%20shadows%20:%20writing%20on%20film,%202002-2012&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ver=Z39.88-2004
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: invalid token value
+    headers:
+      Set-Cookie:
+      - JSESSIONID=793842B9ABB621367C1B1F8BFE062FE9; Path=/
+      Content-Type:
+      - text/html;charset=ISO-8859-1
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 03 Feb 2020 18:28:45 GMT
+      Server:
+      - bX recommender
+      Vary:
+      - Accept-encoding
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<title>Error
+        401</title>\n<link href=\"/service/css/error.css\" rel=\"stylesheet\" type=\"text/css\"
+        />\n</head>\n<body>\n<div id=\"topbarContainer\">\n\t<div id=\"topbar\">\n\t\t<div
+        id=\"logo\" class=\"logo\">\n\t\t\t<a href=\"/service/images/logo.gif\"><img
+        src=\"/service/images/logo.gif\" alt=\"ExLibris Logo\" /></a>\n\t\t</div>\n\t</div>\n</div>\n<br></br><br></br><br></br><br></br><br></br>\n<center><p
+        style=\"padding: 0px 15px 0px 15px\">bX recommender HTTP Error 401 Unauthorized\n</p></center>\n</body>\n</html>"
+    http_version: 
+  recorded_at: Mon, 03 Feb 2020 18:28:46 GMT
+- request:
+    method: get
+    uri: https://catalog.hathitrust.org/api/volumes/brief/json/lccn:2013002370
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 03 Feb 2020 18:28:46 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - STICKY=s212; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: UTF-8
+      string: '{"lccn:2013002370":{"records":[],"items":[]}}'
+    http_version: 
+  recorded_at: Mon, 03 Feb 2020 18:28:46 GMT
+recorded_with: VCR 3.0.3

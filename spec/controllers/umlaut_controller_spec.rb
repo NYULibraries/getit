@@ -22,7 +22,7 @@ describe UmlautController  do
     end
     context 'when the current primary institution is NS' do
       let(:current_primary_institution) { Institutions.institutions[:NS] }
-      its([:sfx,:sfx_base_url]) { should eql 'http://sfx4.library.newschool.edu/ns?' }
+      its([:sfx,:sfx_base_url]) { should eql 'https://sfx.library.newschool.edu/ns?' }
     end
     context 'when the current primary institution is CU' do
       let(:current_primary_institution) { Institutions.institutions[:CU] }
