@@ -13,7 +13,7 @@ describe LayoutsHelper do
 
   describe '#google_analytics?' do
     subject { helper.google_analytics? }
-    it { should be false }
+    it { should be true }
   end
 
   describe '#google_analytics_tracking_code' do

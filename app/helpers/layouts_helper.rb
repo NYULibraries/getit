@@ -9,7 +9,7 @@ module LayoutsHelper
   end
 
   def google_analytics?
-    gauges?
+    google_analytics_tracking_code.present?
   end
 
   def google_analytics_tracking_code
