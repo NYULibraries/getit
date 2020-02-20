@@ -17,6 +17,7 @@ x-test-env: &test-env
     COVERALLS_REPO_TOKEN:
     TERM: xterm
     PAGER: more
+    GOOGLE_ANALYTICS_TRACKING_CODE: '12345'
   env_file:
     - test.env
 x-dev-env: &dev-env
