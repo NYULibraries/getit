@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/NYULibraries/exlibris-nyu.git
+  remote: git://github.com/NYULibraries/exlibris-nyu.git
   revision: 00a188757b9a7a69b51886b944aac6fb88292aab
   tag: v2.4.1
   specs:
@@ -9,7 +9,7 @@ GIT
       require_all (~> 1.3)
 
 GIT
-  remote: https://github.com/NYULibraries/formaggio.git
+  remote: git://github.com/NYULibraries/formaggio.git
   revision: 05290d119a0f9f15df12206c798494d1554c4c58
   tag: v1.5.2
   specs:
@@ -25,14 +25,14 @@ GIT
       rvm-capistrano (~> 1.5)
 
 GIT
-  remote: https://github.com/NYULibraries/nyulibraries_errors.git
+  remote: git://github.com/NYULibraries/nyulibraries_errors.git
   revision: 16c7a14892e439c48e6fc1f8ce261c3cbe635e4c
   tag: v1.0.1
   specs:
     nyulibraries_errors (1.0.1)
 
 GIT
-  remote: https://github.com/NYULibraries/nyulibraries_institutions.git
+  remote: git://github.com/NYULibraries/nyulibraries_institutions.git
   revision: 1b4e3254dfcc3d8300b601ab62e917ccd7846af8
   tag: v1.1.0
   specs:
@@ -41,14 +41,14 @@ GIT
       rails (>= 4)
 
 GIT
-  remote: https://github.com/NYULibraries/nyulibraries_javascripts.git
+  remote: git://github.com/NYULibraries/nyulibraries_javascripts.git
   revision: f2637c4891f273a6227b4f0fed9245a88539f9b2
   tag: v1.0.0
   specs:
     nyulibraries_javascripts (1.0.0)
 
 GIT
-  remote: https://github.com/NYULibraries/nyulibraries_stylesheets.git
+  remote: git://github.com/NYULibraries/nyulibraries_stylesheets.git
   revision: d9b05d41fadc3e23216b50f23f24137aa27cf1ef
   tag: v1.1.0
   specs:
@@ -57,7 +57,7 @@ GIT
       compass (>= 1.0.1)
 
 GIT
-  remote: https://github.com/NYULibraries/nyulibraries_templates.git
+  remote: git://github.com/NYULibraries/nyulibraries_templates.git
   revision: d5e120823d70469e9cd281930ab5f63632cf3f8c
   tag: v1.3.1
   specs:
@@ -65,7 +65,7 @@ GIT
       rails (>= 4)
 
 GIT
-  remote: https://github.com/NYULibraries/omniauth-nyulibraries.git
+  remote: git://github.com/NYULibraries/omniauth-nyulibraries.git
   revision: 7e8e8285d1c6bf201f0338e50399c55cdd4feeca
   tag: v2.1.1
   specs:
@@ -248,7 +248,8 @@ GEM
       rake (~> 10.1)
     formatador (0.2.5)
     gherkin (5.1.0)
-    git (1.5.0)
+    git (1.7.0)
+      rchardet (~> 1.8)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     guard (2.15.0)
@@ -287,7 +288,7 @@ GEM
     jquery-rails (3.1.5)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (2.2.0)
+    json (2.3.1)
     jwt (2.2.1)
     libv8 (3.16.14.19)
     listen (3.1.5)
@@ -317,11 +318,11 @@ GEM
     multipart-post (2.1.1)
     mysql2 (0.4.10)
     nenv (0.3.0)
-    net-scp (2.0.0)
-      net-ssh (>= 2.6.5, < 6.0.0)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (5.2.0)
+    net-scp (3.0.0)
+      net-ssh (>= 2.6.5, < 7.0.0)
+    net-sftp (3.0.0)
+      net-ssh (>= 5.0.0, < 7.0.0)
+    net-ssh (6.1.0)
     net-ssh-gateway (2.0.0)
       net-ssh (>= 4.0.0)
     newrelic_rpm (3.18.1.330)
@@ -331,8 +332,8 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    oauth2 (1.4.1)
-      faraday (>= 0.8, < 0.16.0)
+    oauth2 (1.4.4)
+      faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
@@ -395,6 +396,7 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     rb-readline (0.5.5)
+    rchardet (1.8.0)
     ref (2.0.0)
     require_all (1.3.3)
     responders (2.4.1)
