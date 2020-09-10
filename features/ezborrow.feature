@@ -1,3 +1,4 @@
+@wip
 Feature: E-ZBorrow web services
   In order to know the availability of an item in E-ZBorrow
   As an authorized user
