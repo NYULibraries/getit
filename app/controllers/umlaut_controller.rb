@@ -176,15 +176,15 @@ class UmlautController < ApplicationController
     # Advanced topic, you can declaratively configure
     # what sections of the resolve page are output where
     # and how using resolve_sections and add_resolve_sections!
-    add_resolve_sections! do
-      div_id "wayfinder"
-      html_area :sidebar
-      bg_update false
-      partial "wayfinder"
-      show_heading false
-      show_spinner false
-      visibility true
-    end
+    # add_resolve_sections! do
+    #   div_id "wayfinder"
+    #   html_area :sidebar
+    #   bg_update false
+    #   partial "wayfinder"
+    #   show_heading false
+    #   show_spinner false
+    #   visibility true
+    # end
 
     # Removing bib_tool from sidebar
     # add_resolve_sections! do
