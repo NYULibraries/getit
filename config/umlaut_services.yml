@@ -48,10 +48,10 @@ default:
       ez_proxy: !ruby/regexp '/https\:\/\/(ez)?proxy\.library\.nyu\.edu\/login\?url=/'
       service_types:
         - referent_enhance
-        # - primo_source
-        # - holding_search
-        # - fulltext
-        # - table_of_contents
+        - primo_source
+        - holding_search
+        - fulltext
+        - table_of_contents
 
     # Priority 3
     # Blind link to price comparison site AllBooks.com.
@@ -103,7 +103,6 @@ default:
       source_attributes:
         - from_aleph
         - requestability
-      disabled: true
 
     CoverThing:
       type: CoverThing
@@ -255,7 +254,6 @@ NYU:
           existing_type: fulltext
       service_types:
           - document_delivery
-      disabled: true
     EZBorrow:
       type: BorrowDirectAdaptor
       priority: d
