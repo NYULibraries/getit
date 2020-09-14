@@ -47,11 +47,11 @@ default:
       suppress_urls: [ !ruby/regexp '/getit\.library\.nyu\.edu/', !ruby/regexp '/www\.loc\.gov\/catdir\/toc/']
       ez_proxy: !ruby/regexp '/https\:\/\/(ez)?proxy\.library\.nyu\.edu\/login\?url=/'
       service_types:
+        - referent_enhance
         - primo_source
         - holding_search
         - fulltext
         - table_of_contents
-        - referent_enhance
 
     # Priority 3
     # Blind link to price comparison site AllBooks.com.
@@ -271,6 +271,7 @@ NYU:
       http_timeout: 60
       # log all BD API calls for analysis
       bd_api_log_level: info
+      disabled: true
 NYUAD:
   name: NYU Abu Dhabi Library
   parent_code: NYU

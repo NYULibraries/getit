@@ -1,3 +1,4 @@
+@wip
 Feature: availability status of a Copy in Library
   In order to know the availability of a Copy in Library
   As a user
