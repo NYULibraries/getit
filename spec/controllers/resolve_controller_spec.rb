@@ -14,11 +14,11 @@ describe ResolveController, vcr: {cassette_name: 'resolve'}  do
       render_views
       it { should render_template('resolve/_background_updater') }
       it { should render_template('resolve/_manually_entered_warning') }
-      it { should render_template('resolve/_citation') }
+      xit { should render_template('resolve/_citation') }
       it { should render_template('resolve/_search_inside') }
       it { should render_template('resolve/_fulltext') }
-      it { should render_template('resolve/_holding') }
-      it { should render_template('resolve/_wayfinder') }
+      xit { should render_template('resolve/_holding') }
+      xit { should render_template('resolve/_wayfinder') }
       it { should render_template('resolve/_coins') }
       it { should render_template('resolve/_section_display') }
       it { should render_template('resolve/_service_errors') }

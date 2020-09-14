@@ -1,3 +1,4 @@
+@wip
 Feature: coverage statement for a Copy in Library
   In order to know what coverage a Copy in Library has
   As a user
