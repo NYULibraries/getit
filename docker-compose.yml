@@ -72,6 +72,7 @@ services:
     tty: true
     stdin_open: true
     command: "bundle exec cap staging deploy:setup && bundle exec cap staging deploy"
+    user: root
     environment:
       GIT_BRANCH: "$GIT_BRANCH"
       SSH_AUTH_SOCK: '/ssh-agent'
