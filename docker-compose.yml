@@ -77,4 +77,4 @@ services:
       GIT_BRANCH: "$GIT_BRANCH"
       SSH_AUTH_SOCK: '/ssh-agent'
     volumes:
-      - "${SSH_AUTH_SOCK}:/ssh-agent"
+      - "${HOST_SSH_AUTH_SOCK}:/ssh-agent"
