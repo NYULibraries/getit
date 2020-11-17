@@ -71,7 +71,8 @@ services:
     <<: *test-env
     tty: true
     stdin_open: true
-    command: "bundle exec cap staging deploy:setup && bundle exec cap staging deploy"
+    command: "mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts && \
+              bundle exec cap staging deploy:setup && bundle exec cap staging deploy"
     user: root
     environment:
       GIT_BRANCH: "$GIT_BRANCH"
