@@ -66,3 +66,16 @@ services:
       - "3306"
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
+  deploy:
+    <<: *test-env
+    tty: true
+    stdin_open: true
+    command: "mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts && \
+              bundle exec cap staging deploy:setup && bundle exec cap staging deploy"
+    user: root
+    environment:
+      GIT_BRANCH: "$GIT_BRANCH"
+      SSH_AUTH_SOCK: '/ssh-agent'
+    volumes:
+      - "${HOST_SSH_AUTH_SOCK}:/ssh-agent"
