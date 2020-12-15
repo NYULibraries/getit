@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.5
 
 # Env
 ENV INSTALL_PATH /app
@@ -8,33 +8,43 @@ ENV BUNDLE_PATH=/usr/local/bundle \
 ENV PATH="${BUNDLE_BIN}:${PATH}"
 ENV USER docker
 
-ENV RUN_PACKAGES bash ca-certificates coreutils fontconfig git mariadb-dev nodejs nodejs-npm tzdata 
-ENV BUILD_PACKAGES build-base curl curl-dev linux-headers ruby-dev wget
-
-RUN addgroup -g 2000 $USER && \
-    adduser -D -h $INSTALL_PATH -u 1000 -G $USER $USER
+RUN groupadd -g 2000 docker -r && \
+    useradd -u 1000 -r --no-log-init -m -d $INSTALL_PATH -g docker docker
 
 WORKDIR $INSTALL_PATH
 
-# Bundle install
-COPY Gemfile Gemfile.lock ./
-RUN apk add --no-cache $BUILD_PACKAGES $RUN_PACKAGES \
-  && gem install bundler -v '1.17.3' \
-  && bundle config --local github.https true \
-  && bundle install --without no_docker --jobs 20 --retry 5 \
-  && chown -R docker:docker $BUNDLE_PATH \
-  && wget --no-check-certificate -q -O - https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > /tmp/wait-for-it.sh \
-  && wget --no-check-certificate -q -O - https://github.com/dustinblackman/phantomized/releases/download/2.1.1a/dockerized-phantomjs.tar.gz | tar xz -C / \
+# install phantomjs
+RUN apt-get update -y && apt-get install -y --no-install-recommends npm \
   && npm config set user 0 \
   && npm install -g phantomjs-prebuilt \
   && npm cache clean --force \
+  && apt-get clean && rm -rf /var/lib/apt/lists/* 
+
+# install wait-for-it script
+RUN wget -q -O - https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > /tmp/wait-for-it.sh \
   && chmod a+x /tmp/wait-for-it.sh \
-  && chown -R docker:docker /tmp/wait-for-it.sh \
-&& apk del $BUILD_PACKAGES
+  && chown -R docker:docker /tmp/wait-for-it.sh 
+
+# Bundle install
+COPY Gemfile Gemfile.lock ./
+RUN gem install bundler -v '1.17.3' \
+  && bundle config --local github.https true \
+  && bundle install --without no_docker --jobs 20 --retry 5 \
+  && chown -R docker:docker $BUNDLE_PATH \
+  && rm -rf /root/.bundle && rm -rf /root/.gem \
+  && rm -rf /usr/local/bundle/cache
+
 USER $USER
+
+# needed for phantomjs: https://stackoverflow.com/questions/53355217/genymotion-throws-libssl-conf-so-cannot-open-shared-object-file-no-such-file-o
+ENV OPENSSL_CONF=/etc/ssl/
+
+# avoid ssh key verification failures on runtime
+RUN mkdir ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 COPY --chown=docker:docker . .
 
 EXPOSE 3000
+
 
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
