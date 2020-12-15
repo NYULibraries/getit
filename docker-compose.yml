@@ -76,5 +76,6 @@ services:
     user: root
     environment:
       SSH_AUTH_SOCK: '/ssh-agent'
+      GIT_COMMIT: "$GIT_COMMIT"
     volumes:
       - "${HOST_SSH_AUTH_SOCK}:/ssh-agent"
