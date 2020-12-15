@@ -72,7 +72,7 @@ services:
     tty: true
     stdin_open: true
     command: "mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan github.com >> ~/.ssh/known_hosts && \
-              bundle exec cap $DEPLOY_ENV deploy:setup && bundle exec cap $DEPLOY_ENV -S $GIT_COMMIT deploy"
+              bundle exec cap $DEPLOY_ENV deploy:setup && bundle exec cap $DEPLOY_ENV deploy"
     user: root
     environment:
       SSH_AUTH_SOCK: '/ssh-agent'
