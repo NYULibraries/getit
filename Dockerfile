@@ -27,9 +27,10 @@ RUN wget -q -O - https://raw.githubusercontent.com/vishnubob/wait-for-it/master/
 
 # Bundle install
 COPY Gemfile Gemfile.lock ./
-RUN gem install bundler -v '1.17.3' \
+RUN gem install bundler -v '2.2.3' \
   && bundle config --local github.https true \
-  && bundle install --without no_docker --jobs 20 --retry 5 \
+  && bundle config set without 'no_docker' \
+  && bundle install --jobs 20 --retry 5 \
   && chown -R docker:docker $BUNDLE_PATH \
   && rm -rf /root/.bundle && rm -rf /root/.gem \
   && rm -rf /usr/local/bundle/cache
