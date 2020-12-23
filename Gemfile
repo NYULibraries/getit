@@ -20,7 +20,7 @@ gem 'jquery-rails', '~> 3.1.0'
 gem 'bootstrap-sass', '= 3.3.7'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-group :non_docker do
+group :no_docker do
   gem 'therubyracer', '~> 0.12.0'
   gem 'rb-readline', '~> 0.5.5'
 end

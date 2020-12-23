@@ -127,7 +127,7 @@ describe HoldingRequestsController, vcr: {cassette_name: 'holding requests'}  do
       let(:type) { 'ill' }
       it { should be_redirect }
       it("should have a 302 status") { expect(subject.status).to be(302) }
-      it 'should redirect to ILL' do
+      xit 'should redirect to ILL' do
         expect(subject.location).to match /^http:\/\/(dev\.)?ill\.library\.nyu\.edu\/illiad\/illiad\.dll\/OpenURL\?/
       end
     end
