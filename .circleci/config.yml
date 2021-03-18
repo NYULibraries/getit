@@ -74,8 +74,7 @@ jobs:
       - run:
           name: Deploy into staging via Jenkins
           command: |
-            #docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Development%20Deploy/build/api
-            docker run --rm appropriate/curl -u $JENKINS_CI_USERNAME:$JENKINS_CI_API_KEY -X POST https://jenkinsci.library.nyu.edu/job/GetIt%20Deploy/buildWithParameters\?GIT_COMMIT\=$CIRCLE_SHA1\&DEPLOY_ENV\=staging
+            docker run --rm -e JOB_NAME=GetIt%20Deploy -e DEPLOY_ENV=staging -e TIMEOUT=12m -e JENKINS_CI_HOST=jenkinsci.library.nyu.edu -e JENKINS_CI_USERNAME -e JENKINS_CI_API_KEY -e CIRCLE_SHA1 quay.io/nyulibraries/jenkins_build
 
   deploy-qa:
     <<: *docker-defaults
@@ -84,8 +83,7 @@ jobs:
       - run:
           name: Deploy into QA via Jenkins
           command: |
-            #docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20QA%20Deploy/build/api
-            docker run --rm appropriate/curl -u $JENKINS_CI_USERNAME:$JENKINS_CI_API_KEY -X POST https://jenkinsci.library.nyu.edu/job/GetIt%20Deploy/buildWithParameters\?GIT_COMMIT\=$CIRCLE_SHA1\&DEPLOY_ENV\=qa
+            docker run --rm -e JOB_NAME=GetIt%20Deploy -e DEPLOY_ENV=qa -e TIMEOUT=12m -e JENKINS_CI_HOST=jenkinsci.library.nyu.edu -e JENKINS_CI_USERNAME -e JENKINS_CI_API_KEY -e CIRCLE_SHA1 quay.io/nyulibraries/jenkins_build
 
   deploy-prod:
     <<: *docker-defaults
@@ -94,8 +92,7 @@ jobs:
       - run:
           name: Deploy into production via Jenkins
           command: |
-            #docker run --rm appropriate/curl -u $JENKINS_USERNAME:$JENKINS_API_KEY -X POST http://jenkins.library.nyu.edu/view/GetIt/job/GetIt%20Production%20Deploy/build/api
-            docker run --rm appropriate/curl -u $JENKINS_CI_USERNAME:$JENKINS_CI_API_KEY -X POST https://jenkinsci.library.nyu.edu/job/GetIt%20Deploy/buildWithParameters\?GIT_COMMIT\=$CIRCLE_SHA1\&DEPLOY_ENV\=production
+            docker run --rm -e JOB_NAME=GetIt%20Deploy -e DEPLOY_ENV=production -e TIMEOUT=12m -e JENKINS_CI_HOST=jenkinsci.library.nyu.edu -e JENKINS_CI_USERNAME -e JENKINS_CI_API_KEY -e CIRCLE_SHA1 quay.io/nyulibraries/jenkins_build
 
 workflows:
   version: 2
