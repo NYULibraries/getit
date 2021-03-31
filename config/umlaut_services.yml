@@ -397,6 +397,21 @@ NS:
       priority: d
       status: active
       base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
+    NS_ILLiad:
+      name: ILLiad
+      type: OpenURLService
+      base_url: <%= (ENV['ILLIAD_BASE_URL'] || 'https://ill.library.nyu.edu/illiad/ZMU/illiad.dll/OpenURL') %>
+      display_text: New School Interlibrary Loan
+      priority: c
+      preempted_by:
+        -
+          existing_service: NYU_Primo_Source
+          existing_type: holding
+        -
+          existing_service: NS_SFX
+          existing_type: fulltext
+      service_types:
+          - document_delivery
     EZBorrow:
       type: BorrowDirectAdaptor
       priority: d
