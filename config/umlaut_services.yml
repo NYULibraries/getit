@@ -340,7 +340,7 @@ NS:
   views:
     css: search_ns
     resolve_css: resolve_ns
-    stackmap_css: stackmap.com/integration/newschool/StackMap.css
+#     stackmap_css: stackmap.com/integration/newschool/StackMap.css
     sfx_base_url: http://sfx4.library.newschool.edu/ns?
     wayfinder_attributes:
       primo:
@@ -368,7 +368,7 @@ NS:
         - 'HIGHWIRE_'
         - 'GALEGROUP_'
       extra_targets_of_interest:
-        ISI_RESEARCHSOFT_EXPORT_TOOL: bib_tool
+#        ISI_RESEARCHSOFT_EXPORT_TOOL: bib_tool
         REFWORKS_EXPORT_TOOL: bib_tool
         DOCDEL_ARES_LCL: export_citation
         # ISI_WEB_OF_SCIENCE: export_citation
@@ -389,32 +389,47 @@ NS:
       priority: c
       token: <%= ENV['NS_BX_TOKEN'] %>
       openurl_base: "/ns/resolve?"
-      max_records: 2
-    NSUlrichsLink:
-      type: UlrichsLink
-      display_name: Ulrich's Directory
-      link_name: Periodical Information
-      priority: d
-      status: active
-      base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
-    EZBorrow:
-      type: BorrowDirectAdaptor
-      priority: d
-      check_library_codes:
-        - TNSFO
-      library_symbol: <%= ENV['EZBORROW_NS_LIBRARY_SYMBOL'] %>
-      api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
-      find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
-      html_query_base_url: https://login.library.nyu.edu/ezborrow/ns
-      api_base: <%= ENV['EZBORROW_NS_API_BASE'] %>
+      max_records: 3
+    NS_ILLiad:
+      name: ILLiad
+      type: OpenURLService
+      base_url: <%= (ENV['ILLIAD_BASE_URL'] || 'https://ill.library.nyu.edu/illiad/ZMU/illiad.dll/OpenURL') %>
+      display_text: New School Interlibrary Loan
+      priority: c
+      preempted_by:
+        -
+          existing_service: NYU_Primo_Source
+          existing_type: holding
+        -
+          existing_service: NS_SFX
+          existing_type: fulltext
+      service_types:
+          - document_delivery
+ #   NSUlrichsLink:
+ #     type: UlrichsLink
+ #     display_name: Ulrich's Directory
+ #     link_name: Periodical Information
+ #     priority: d
+ #     status: active
+ #     base_url: https://login.libproxy.newschool.edu/login?url=https://ulrichsweb.serialssolutions.com/api/openurl?issn=
+ #   EZBorrow:
+ #     type: BorrowDirectAdaptor
+ #     priority: d
+ #     check_library_codes:
+ #       - TNSFO
+ #     library_symbol: <%= ENV['EZBORROW_NS_LIBRARY_SYMBOL'] %>
+ #     api_key: <%= ENV['EZBORROW_NS_API_KEY'] %>
+ #     find_item_patron_barcode: <%= ENV['EZBORROW_NS_PATRON_BARCODE'] %>
+ #     html_query_base_url: https://login.library.nyu.edu/ezborrow/ns
+ #     api_base: <%= ENV['EZBORROW_NS_API_BASE'] %>
       #
       # Optional params
       # disable BD api entirely:
       #use_bd_api: false
       # Set timeout for BD api in seconds (default 20 seconds)
-      http_timeout: 60
+ #     http_timeout: 60
       # log all BD API calls for analysis
-      bd_api_log_level: info
+#      bd_api_log_level: info
 
 NYSID:
   display_name: New York School of Interior Design Library
