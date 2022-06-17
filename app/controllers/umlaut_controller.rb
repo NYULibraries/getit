@@ -124,7 +124,7 @@ class UmlautController < ApplicationController
     # Turn off permalink-generation? If you don't want it at all, or
     # don't want it temporarily because you are pointing at a database
     # that won't last.
-    # create_permalinks false
+    create_permalinks false
 
     # How many seconds between updates of the background updater for background
     # services?
