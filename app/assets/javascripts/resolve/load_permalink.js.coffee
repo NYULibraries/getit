@@ -15,8 +15,8 @@ reformatPermalink = (event) ->
 	originalLink   = $(this)
 	valueContainer = $("#umlaut-permalink-container")
 
-	loadedLink = $(".umlaut-permalink-container a")
-	url = loadedLink.attr("href")
+  #loadedLink = $(".umlaut-permalink-container a")
+	url = window.location.href #loadedLink.attr("href")
 	input = $("<input />")
 	input.attr("value", url)
 	input.attr("readonly", "true")
