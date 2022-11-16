@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   Umlaut::Routes.new(self).draw
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-  devise_scope :user do
-    get 'logout', to: 'devise/sessions#destroy', as: :logout
-    get 'login' => redirect{ |params, request| "#{Rails.application.config.relative_url_root}/users/auth/nyulibraries?#{request.query_string}" }, as: :login
-  end
+  #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  #devise_scope :user do
+  #  get 'logout', to: 'devise/sessions#destroy', as: :logout
+  #  get 'login' => redirect{ |params, request| "#{Rails.application.config.relative_url_root}/users/auth/nyulibraries?#{request.query_string}" }, as: :login
+  #end
 
   # GET a new holding request form
   get 'holding_requests/new/:service_response_id' => 'holding_requests#new',

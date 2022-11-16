@@ -3,6 +3,12 @@ module ApplicationHelper
   def login(params={})
     ""
   end
+  def login_url
+    ""
+  end
+  def current_user
+    nil
+  end
 
   def resolve_stylesheets(stylesheets = [])
     stylesheets << (current_primary_institution.views["resolve_css"] || "resolve")
