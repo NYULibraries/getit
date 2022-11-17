@@ -32,7 +32,8 @@ describe ApplicationController  do
 
   describe '#new_session_path' do
     subject { controller.send(:new_session_path, :user) }
-    it { should eql '/login' }
+    it { should eql nil }
+    #it { should eql '/login' }
   end
 
   describe '#after_sign_in_path_for' do

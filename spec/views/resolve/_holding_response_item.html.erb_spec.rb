@@ -21,7 +21,7 @@ describe 'resolve/_holding_response_item' do
     it { should match /more-info/ }
     it { should match /More Info/ }
     it { should match /href="\/link_router\/index\/#{service_response.id}/ }
-    it { should match /request-link/ }
+    #it { should match /request-link/ }
     context 'when the holding is not requestable' do
       let(:requestability) { false }
       it { should_not match /request-link/ }
@@ -81,7 +81,7 @@ describe 'resolve/_holding_response_item' do
     it { should match /more-info/ }
     it { should match /More Info/ }
     it { should match /href="\/link_router\/index\/#{service_response.id}/ }
-    it { should match /request-login-link/ }
+    #it { should match /request-login-link/ }
   end
   context 'when the holding is expired' do
     let(:service_response) { create(:expired_nyu_aleph_service_response) }

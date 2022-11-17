@@ -61,7 +61,8 @@ class ApplicationController < ActionController::Base
 
   # Alias new_session_path as login_path for default devise config
   def new_session_path(scope)
-    login_path
+    #login_path
+    nil
   end
 
   def after_sign_in_path_for(resource)
@@ -71,11 +72,12 @@ class ApplicationController < ActionController::Base
   # After signing out from the local application,
   # redirect to the logout path for the Login app
   def after_sign_out_path_for(resource_or_scope)
-    if logout_path.present?
-      logout_path
-    else
-      super(resource_or_scope)
-    end
+    nil
+    #if logout_path.present?
+    #  logout_path
+    #else
+    #  super(resource_or_scope)
+    #end
   end
 
   private
@@ -92,6 +94,10 @@ class ApplicationController < ActionController::Base
 
   def request_url_escaped
     CGI::escape(request.url)
+  end
+  
+  def current_user
+    nil
   end
 
 end
