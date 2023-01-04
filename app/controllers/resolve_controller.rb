@@ -1,3 +1,10 @@
+# This is based on Umlaut ResolveController from https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/controllers/resolve_controller.rb
+# This file is identical to the source file but with two methods added:
+#     - calculate_url_for_response (copied from LinkRouterController - https://github.com/team-umlaut/umlaut/blob/b954895e0aa0a7cd0a9ec6bb716c1886c813601e/app/controllers/link_router_controller.rb)
+#     - direct_url
+# For motivation, see this comment in monday.com ticket:
+#     https://nyu-lib.monday.com/boards/765008773/pulses/3386819884/posts/1897865218
+
 # Requests to the Resolve controller are OpenURLs.
 # There is one exception: Instead of an OpenURL, you can include the
 # parameter umlaut.request_id=[some id] to hook up to a pre-existing
