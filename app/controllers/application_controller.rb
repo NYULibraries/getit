@@ -45,13 +45,13 @@ class ApplicationController < ActionController::Base
   end
   alias_method :current_user, :current_user_dev if Rails.env.development?
 
-  prepend_before_filter :passive_login
-  def passive_login
-    if !cookies[:_check_passive_login]
-      cookies[:_check_passive_login] = true
-      redirect_to passive_login_url
-    end
-  end
+  #prepend_before_filter :passive_login
+  #def passive_login
+  #  if !cookies[:_check_passive_login]
+  #    cookies[:_check_passive_login] = true
+  #    redirect_to passive_login_url
+  #  end
+  #end
 
   def url_for_request(request)
     url_for(controller: :resolve, action: :index, only_path: false,

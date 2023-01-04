@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # override login function in nyulibraries_templates to erase login button
+  def login(params={})
+    ""
+  end
+
   def resolve_stylesheets(stylesheets = [])
     stylesheets << (current_primary_institution.views["resolve_css"] || "resolve")
     stylesheets << "#{request.protocol}#{current_primary_institution.views['stackmap_css']}" if stackmap?(current_primary_institution.code.to_s)
