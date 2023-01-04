@@ -40,11 +40,10 @@ display_text = view_data[:display_text]
     end %>
   <% else %>
     <%- # Ordinary href link, with coverage roll up -%>
-    <%= link_to({controller: 'link_router', id: service_response.id},
-      {id: "svctype_link_#{service_response.id}", target: "_blank"}) do %>
-       <%= coverage_summary(view_data) %>
-       <%= display_text %>
-    <% end %>
+    <a id="svctype_link_<%= service_response.id %>" target="_blank" href="<%= direct_url(service_response.id) %>">
+      <%= coverage_summary(view_data) %>
+      <%= display_text %>
+    </a>
   <% end %>
   <%- # Which service did this come from? -%>
   <% if show_source %>
