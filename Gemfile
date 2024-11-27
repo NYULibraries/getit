@@ -46,7 +46,7 @@ gem 'umlaut-primo', '~> 1.0.0'
 # https://github.com/team-umlaut/umlaut/pull/58
 gem 'hashie', '3.4.4'
 
-gem 'dalli', '~> 2.7.4'
+gem 'dalli', '~> 3.2.3'
 
 gem 'umlaut_borrow_direct', '~> 1.0.2'
 
